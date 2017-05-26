@@ -1,8 +1,8 @@
 $( document ).ready(function() {
 $(".top-nav nav ul").clone().prependTo(".main-mnu.hidden-mnu");
-$(".aside-2 .aside-nav  ").clone().appendTo(".toogle-1  ").removeClass("hidden-sm").removeClass(" hidden-xs");
 $(".aside-2 .aside-filter  ").clone().appendTo(".toogle-2  ").removeClass("hidden-sm").removeClass(" hidden-xs").find("h3.hidden-nav ").removeClass("hidden-nav");
-
+    // $(".aside-2 .aside-nav  ").clone().appendTo(".toogle-1  ").removeClass("hidden-sm").removeClass(" hidden-xs");
+// тут
    var toggMnu = $(".top-nav .toggle-mnu").click(function () {
     
     $(this).toggleClass("on");
@@ -21,6 +21,8 @@ $(function () {
  
 
  var toggMnu2 = $(".katalog-btn .toggle-mnu-1").click(function () {
+
+
     $("body").toggleClass("fixed");
     $(" .toogle-1").toggleClass("on");
     $(".katalog-btn-2  .toggle-mnu").addClass("on");
@@ -104,7 +106,7 @@ $('.prod-tabs-wrap div.tabs__content:first-child()').addClass("active");
 
     $(this)
       .addClass('active').siblings().removeClass('active')
-      .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+      .closest('div.tabs').find('div.tabs__content').hide().removeClass('active').eq($(this).index()).fadeIn().addClass('active');
       heightses();
   });
 // footerToBottom();
@@ -299,30 +301,34 @@ $('.gal-big').magnificPopup({
     
   });
 
+
+// тут
   // карусель - С этим товаром покупают
   $('.carusel-prod').slick({  
   speed: 600,
-  slidesToShow: 1,
+  slidesToShow: 4,
+  slidesToScroll: 1,
   arrows: true,
-  draggable: false,
-  prevArrow: ' <div><i class="demo-icon icon-angle-up"> </i></div>',
-  nextArrow: '   <div><i class="demo-icon icon-angle-down"> </i></div> ',
-  fade: true
+  // adaptiveHeight: true,
+  // draggable: false,
+  prevArrow: ' <div class="slick-arrow l"><i class="demo-icon icon-angle-left"> </i></div>',
+  nextArrow: '   <div class="slick-arrow r"><i class="demo-icon icon-angle-right"> </i></div> ',
+  // fade: true
 });
 
 
-  
-    $(".carusel-prod-wrap .item-prod-absolute").hover(function(){
+  // тут
+    // $(".carusel-prod-wrap .item-prod-absolute").hover(function(){
 
-      $(this).parents(".carusel-prod-wrap").find(".slick-arrow").css({"z-index": "-1"});
+    //   $(this).parents(".carusel-prod-wrap").find(".slick-arrow").css({"z-index": "-1"});
 
-    },
-    function(){
+    // },
+    // function(){
 
-      $(this).parents(".carusel-prod-wrap").find(".slick-arrow").css({"z-index": "1"});
+    //   $(this).parents(".carusel-prod-wrap").find(".slick-arrow").css({"z-index": "1"});
 
-    }
-    )
+    // }
+    // )
 
 
       $_parModal = {
