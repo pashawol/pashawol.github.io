@@ -34,7 +34,7 @@ slidesNavigation:true,
 navigationPosition:'right',
 
 slidesNavPosition:'top',
-responsiveWidth:992,
+responsiveWidth:767,
 responsiveHeight: 630,
 	});
 //  var SECTION_DEFAULT_SEL = '.section';
@@ -47,12 +47,21 @@ responsiveHeight: 630,
 // var TABLE_CELL_SEL = '.' + TABLE_CELL;
 // var AUTO_HEIGHT = 'fp-auto-height';
 // var AUTO_HEIGHT_SEL = '.fp-auto-height';
+$(".link-wrap a").attr("href", ".block-form")
 $(".link-wrap a").click(function(){
-	 var elementClick = $(".block-form");
+	 var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         
             $('html, body').animate({ scrollTop: destination }, 1100);
-        
+    $("#fp-nav li:last-child a").click();    
         return false; 
 })
+
+
+$(window).on('load', function() {
+  $('.preloader').delay(2000).fadeOut('slow');
+
+ 
+});
+
 });
