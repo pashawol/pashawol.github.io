@@ -25,7 +25,7 @@ $(".link-wrap a").click(function(){
 
 
 $(window).on('load', function() {
-  $('.preloader').delay(2000).fadeOut('slow');
+  $('.preloader').delay(3000).fadeOut('slow');
 
  
 });
