@@ -5,8 +5,8 @@ $('.slider').slick({
 	  slidesToScroll: 1,
 	  dots: false,
 	  speed: 600,
-	   
-	  infinite: false,
+	   // autoplay: true,
+  autoplaySpeed: 4000,
 	   prevArrow: ' <div class="l"><i class="demo-icon icon-left-open-mini"></i></div>',
   nextArrow: '   <div class="r"><i class="demo-icon icon-right-open-mini"></i></div> ',
 	});
