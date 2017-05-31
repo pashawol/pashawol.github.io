@@ -11,15 +11,25 @@
     <link rel="stylesheet" href="fonts/fontello/css/fontello.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
-  <body><img class="main" src="main.png" alt="">
-    <div class="wrapper">
-      <div class="top_line"> 
+  <body>
+    <div class="wrapper"><a class="toggle-mnu toggle-mnu-1 hidden-lg hidden-md" href="#"><span></span></a>
+      <div class="trop main-mnu hidden-mnu hidden-lg hidden-md landingMenu2">
+        <div class="mnu-wrap">
+          <div class="link-wrap"><a class="tel" href="tel:+375 99 123-45-67 "><span class="gray">+375 99  </span>123-45-67</a><a class="tel" href="tel:+375 11 987-65-43 "><span class="gray">+375 11  </span>987-65-43</a><br/><a class="btn-modal" href="">Заказать звонок</a></div>
+          <ul>
+            <li class="main-nav__item"><a class="main-nav__item-link" href="index1.html">О нас</a></li>
+            <li class="main-nav__item"><a class="main-nav__item-link" href="index2.html"> Окна </a></li>
+            <li class="main-nav__item"><a class="main-nav__item-link" href="index3.html">Двери</a></li>
+            <li class="main-nav__item"><a class="main-nav__item-link" href="index4.html">Деревянные полы</a></li>
+            <li class="main-nav__item"><a class="main-nav__item-link" href="index4.html">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="top_line">
         <div class="container">
           <div class="row">
-            <div class="col-md-3">
-              <div class="logo"><img class="res-i" src="img/logo.png" alt=""/></div>
-            </div>
-            <div class="col-md-7"> 
+            <div class="col-lg-3 col-md-2 col-sm-4"><a class="logo"><img class="res-i" src="img/logo.png" alt=""/></a></div>
+            <div class="col-lg-7 col-md-8 hidden-sm hidden-xs">
               <nav class="top-mav">                 
                 <ul>
                   <li class="main-nav__item"><a class="main-nav__item-link" href="index1.html">О нас</a></li>
@@ -30,8 +40,8 @@
                 </ul>
               </nav>
             </div>
-            <div class="col-md-2">
-              <div class="link-wrap"><a class="tel" href="tel:+375 99 123-45-67 "><span class="gray">+375 99  </span>123-45-67</a><br/><a class="tel" href="tel:+375 11 987-65-43 "><span class="gray">+375 11  </span>987-65-43</a><br/><a class="btn-modal" href="">Заказать звонок</a></div>
+            <div class="col-md-2 col-sm-8 hidden-xs">
+              <div class="link-wrap"><a class="tel" href="tel:+375 99 123-45-67 "><span class="gray">+375 99  </span>123-45-67</a><a class="tel" href="tel:+375 11 987-65-43 "><span class="gray">+375 11  </span>987-65-43</a><a class="btn-modal" href="">Заказать звонок</a></div>
             </div>
           </div>
         </div>
@@ -99,15 +109,803 @@
                 </div>
               </div>
               <!-- .slide-->
+              <div class="slide">
+                <div class="item">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="img-wrap text-center"><img class="res-i" src="img/slide-1.png" alt=""/></div>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="text-wrap">
+                        <h4 class="accent">Деревянные окна из сосны</h4>
+                        <ul>
+                          <li>Сосна - трехслойный клееный брус</li>
+                          <li>Функциональный стеклопакет</li>
+                          <li>Фурнитура SIEGENIA AUBI</li>
+                          <li>Водоотливная шина</li>
+                          <li>Профиль 78 * 82 мм.</li>
+                        </ul>
+                        <p>Окна из сосны завоевали заслуженное признание среди хозяев квартир и частных домов. Они отличаются яркими годичными кольцами, которые отлично вписываются в интерьер и придают ему современный вид. Даже спустя десятки лет использования первоначальный цвет изделия сохранится и будет иметь идеальную гладкую поверхность.</p>
+                        <p>Сосна устойчивый материал к различным внешним неблагоприятным воздействиям, при этом легко поддающийся обработке. Также брус из сосны характеризуется довольно привлекательным видом. Структура сосны порадует Ваш взгляд не один раз. Она обладает превосходными тепло-, а также звукоизолирующими свойствами, весьма высокой прочностью, но небольшой массой. Деревянные окна из сосны отличный выбор за оптимальную стоимость.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- .slide-->
             </div>
           </div>
         </div>
       </section>
       <!-- section.s-slider-->
-      <div class="content">content1233</div>
-      <div class="footer"></div>
+      <section class="s-form" style="background-image: url(img/bg-form-1.jpg);">
+        <div class="container">
+          <form method="post" action="action.php">
+            <h2 class="small">Оставьте заявку</h2>
+            <p class="gray">и мы позвоним Вам и поможем подобрать окно, какое нужно именно Вам!</p>
+            <!-- Hidden Required Fields-->
+            <input type="hidden" name="project_name" value="Заявка с сайта"/>
+            <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
+            <input class="order" type="hidden" name="form_subject" value="На подбор окон"/>
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <input type="text" name="Имя" placeholder="Ваше имя *" required="required"/>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <input type="tel" name="Телефон" placeholder="Ваш телефон *" required="required"/>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <button class="btn-submit">Оставить заявку</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- section.s-form-->
+      <section class="s-opis">
+        <div class="container">
+          <h2 class="small">Производство окон</h2>
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-1-1.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent"> Склейка бруса</h4>
+                  <p>Посредством склеивания получают изделия с лучшими, чем у массивных, параметрами. В процессе склейки подбирают подходящие по фактуре и оттенкам элементы, отбраковывают поврежденные, треснутые и сучковатые участки. В результате у склеенных деталей прочность больше, чем у обычного дерева, а посредством наклеивания на лицевые поверхности тончайшего шпона изделиям придают вид ценнейших пород. Кроме того, склеенная древесина гораздо меньше коробится, трескается и рассыхается, чем массив.</p>
+                  <p>Прочность правильно выполненного шва превышает прочность самой древесины, при тестировании на излом деталь ломается не в месте склейки, а по цельному дереву.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-1-2.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent"> Фрезеровка</h4>
+                  <p>Деревянная доска фрезеруется (снимается тонкий верхний слой древесины). Эта операция необходима для выявления дефектов – сучков, смоляных карманов, трещин и т.д.</p>
+                  <p>Проблемные места вырезаются вручную либо помечаются специальным маркером и отправляются в обрезной станок, где машина с помощью фотоэлементов распознает метки, удаляет дефекты и сортирует готовые бруски по длине. Мелкие отрезы идут на простое сращивание, а длинные – на эстетически-ответственные изделия, в которых не допускается наличие изъянов или швов.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-1-3.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent"> Сборка</h4>
+                  <p>После изготовления заготовок, они поступают на следующий этап производства деревянных окон — сборку. Собирают деревянные окна в единое целое на специальном станке.</p>
+                  <p>На нем происходит сборка коробки, створок, сажаются на клей угловые соединения шип-проушина и пазы. После склеивания окна должны просохнуть в течении 24 часов. На этом же этапе врезают импост – деревянный элемент окна, разделяющий стеклопакет на отдельные части.</p>
+                  <p>Импост врезается в створку или коробку окна для глухого изделия или витража. Процесс изготовления и сборки деревянной части окна на этом заканчивается.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-1-4.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent">Шлифовка</h4>
+                  <p>Деревянные части окна подвергаются шлифовке несколько раз. Первая шлифовка производится калибровочном станке, затем шлифуется вручную с помощью пневмо шлифовальных орбитальных машин.</p>
+                  <p>Требуется индивидуальный подход к каждому труднодоступному месту, так как профиль деревянного окна, независимо створка это или коробка, имеет сложное сечение.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-1-5.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent">Покраска</h4>
+                  <p>В технологию покраски деревянного окна входит обработка его наружной части специальным средством, как антисептическая пропитка. Подоконник желательно красить алкидной краской, она придает защиту от механических повреждений.</p>
+                  <p>Деревянные окна красят дважды. Изделия могут покрывать специальным прозрачным лаком или вскрывать укрывными красками. Подобные процедуры выполняют при помощи пистолета пульверизаторного типа. Закончив покраску, деревянные окна оставляют сохнуть на двое суток.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-1-6.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent">Комплектация фурнитуры</h4>
+                  <p>В своей работе мы используем фурнитуру ведущих немецких концернов в данной сфере Siegenia и Roto. На счету Siegenia и Roto десятки запатентованных решений и уникальных разработок. Данные компании ставят перед собой только самые высокие требования к соблюдению всех стандартов качества, что обеспечивается современным оборудованием и интенсивным и регулярным контролем производства. Стабильное качество фурнитуры гарантируется соблюдением квалифицированного стандарта DIN V ENV 1627-30.</p>
+                  <p>Благодаря использованию фурнитуры вышеназванных производителей мы можем предложить своим клиентам широкий спектр выбора в сфере механизмов для открывания окон и дверей.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-1-7.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent">Установка стеклопакетов</h4>
+                  <p>После изготовления заготовок, они поступают на следующий этап производства деревянных окон — сборку. Собирают деревянные окна в единое целое на специальном станке.</p>
+                  <p>На нем происходит сборка коробки, створок, сажаются на клей угловые соединения шип-проушина и пазы. После склеивания окна должны просохнуть в течении 24 часов. На этом же этапе врезают импост – деревянный элемент окна, разделяющий стеклопакет на отдельные части.</p>
+                  <p>Импост врезается в створку или коробку окна для глухого изделия или витража. Процесс изготовления и сборки деревянной части окна на этом заканчивается.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+        </div>
+      </section>
+      <!--  section.s-opis-->
+      <section class="s-calc">
+        <div class="container">
+          <h2 class="small">Калькулятор окон</h2>
+          <form>
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="variant text-center">
+                  <h5>1. Выберите окно</h5>
+                  <div class="variant-wrap">
+                    <div class="variant-item text-center">
+                      <div class="img-wrap"><img class="res-i" src="img/calc-1-1.png" alt=""/></div>
+                      <p>Поворотно-откидное<br/>одностворчатое окно</p>
+                    </div>
+                    <!-- variant-item-->
+                    <div class="variant-item text-center">
+                      <div class="img-wrap"><img class="res-i" src="img/calc-1-2.png" alt=""/></div>
+                      <p>Двухстворчатое окно<br/>с поворотно-окидной <br/>створкой</p>
+                    </div>
+                    <!-- variant-item-->
+                    <div class="variant-item text-center">
+                      <div class="img-wrap"><img class="res-i" src="img/calc-1-3.png" alt=""/></div>
+                      <p>Трехстворчатое окно с двумя<br/>створками</p>
+                    </div>
+                    <!-- variant-item-->
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="variant">
+                  <h5>2. Выберите размеры и материал</h5>
+                  <div class="input-wrap"><strong>Размеры</strong>
+                    <input type="text" name="Высота окна " placeholder="Высота окна, см"/>
+                    <input type="text" name="Ширина окна" placeholder="Ширина окна, см"/>
+                  </div>
+                  <div class="input-wrap input-radio-wrap"><strong>Материал</strong>
+                    <label>
+                      <input type="radio" name="Материал"/><span class="lab"></span>Сосна
+                    </label>
+                    <!-- label    -->
+                    <label>
+                      <input type="radio" name="Материал"/><span class="lab"></span>Лиственница
+                    </label>
+                    <!-- label    -->
+                    <label>
+                      <input type="radio" name="Материал"/><span class="lab"></span>Дуб
+                    </label>
+                    <!-- label    -->
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-xs-12">
+                <div class="variant">
+                  <div class="row">
+                    <div class="col-lg-12 col-sm-6">
+                      <h5>3. Получите примерную стоимость</h5><strong>Ориенитировачная стоимость Вашего окна составляет</strong>
+                      <div class="price"><span class="big">135 </span><small>руб.</small></div>
+                    </div>
+                    <div class="col-lg-12 col-sm-6">
+                      <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
+                      <div class="form-wrap">
+                        <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
+                        <button class="btn-submit">Отправить </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- section.s-calc-->
+      <section class="s-text">
+        <div class="container">
+          <h2> <img class="res-i" src="img/yarlyk-2.png" alt=""/><span>Двери, входные группы</span></h2>
+          <div class="gal zoom-gallery">
+            <div class="row"><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-1.jpg" title="title-1"><img class="res-i" src="img/img-1.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6--><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-2.jpg" title="title-2"><img class="res-i" src="img/img-2.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6--><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-3.jpg" title="title-3"><img class="res-i" src="img/img-3.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6--><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-4.jpg" title="title-4"><img class="res-i" src="img/img-4.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6--><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-5.jpg" title="title-5"><img class="res-i" src="img/img-5.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6--><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-6.jpg" title="title-6"><img class="res-i" src="img/img-6.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6-->
+            </div>
+          </div>
+          <div class="text-wrap">
+            <h5 class="accent">Двери из натурального дерева имеют следующие преимущества:</h5>
+            <ul>
+              <li>Экологичность и безопасность для людей, проживающих в доме или квартире.</li>
+              <li>Красота и стиль.</li>
+              <li>Возможность создавать различные формы и очертания, вплоть до фигурной резьбы, инкрустаций и маркетри.</li>
+              <li>Благородные природные цвета.</li>
+              <li>Богатый, роскошный облик. Межкомнатные двери из массива служат настоящим украшением помещений.</li>
+              <li>Долговечность и практичность — достаточно обновить покрытие, и двери как новые.</li>
+              <li>Использование различных методов отделки дает возможность получить матовые и глянцевые покрытия, а также тонировать древесину в любой цвет. Дерево отлично   сочетается со стеклом, витражами, зеркалом, металлами и натуральным камнем.</li>
+            </ul>
+            <h5 class="accent"> Изготовление дверей по индивидуальному заказу</h5>
+            <p>В компании «ЛидерСтрой» можно купить двери из массива. Клиент может создать собственный дизайн или же воспользоваться фотографиями из интернета и печатных изданий. Мы предлагаем заказчикам огромный выбор из более чем 500 разнообразных моделей, а также более 100 оттенков цвета на любой вкус.</p>
+            <p>У нас можно выбрать эконом-вариант — двери из массива сосны или микрошипа, которые ничем не уступают более дорогим образцам. Кроме этого, у нас есть универсальные и всегда популярные двери из массива дуба, ясеня, клена, бука. У нас есть и новинки — ставшие очень модными в последнее время красивые двери из массива ольхи. У этой древесины приятная текстура и красивый неброский рисунок, выглядят они очень стильно, элегантно и благородно.</p>
+            <p>Межкомнатные двери нашего производства могут быть глухими и остекленными, с разной отделкой и фурнитурой. По телефону вы можете уточнить любой интересующий вас вопрос.</p>
+          </div>
+        </div>
+      </section>
+      <!-- section.s-text-->
+      <section class="s-form" style="background-image: url(img/bg-form-2.jpg);">
+        <div class="container">
+          <form method="post" action="action.php">
+            <h2 class="small">Оставьте заявку</h2>
+            <p class="gray">и мы позвоним Вам и поможем подобрать дверь, которая подойдет именно Вам!</p>
+            <!-- Hidden Required Fields-->
+            <input type="hidden" name="project_name" value="Заявка с сайта"/>
+            <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
+            <input class="order" type="hidden" name="form_subject" value="На подбор двери"/>
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <input type="text" name="Имя" placeholder="Ваше имя *" required="required"/>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <input type="tel" name="Телефон" placeholder="Ваш телефон *" required="required"/>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <button class="btn-submit">Оставить заявку</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- section.s-form-->
+      <section class="s-opis">
+        <div class="container">
+          <h2 class="small">Производство дверей и входных групп</h2>
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-2-1.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent"> Склейка бруса</h4>
+                  <p>Посредством склеивания получают изделия с лучшими, чем у массивных, параметрами. В процессе склейки подбирают подходящие по фактуре и оттенкам элементы, отбраковывают поврежденные, треснутые и сучковатые участки. В результате у склеенных деталей прочность больше, чем у обычного дерева, а посредством наклеивания на лицевые поверхности тончайшего шпона изделиям придают вид ценнейших пород. Кроме того, склеенная древесина гораздо меньше коробится, трескается и рассыхается, чем массив.</p>
+                  <p>Прочность правильно выполненного шва превышает прочность самой древесины, при тестировании на излом деталь ломается не в месте склейки, а по цельному дереву.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-2-2.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent"> Фрезеровка</h4>
+                  <p>Деревянная доска фрезеруется (снимается тонкий верхний слой древесины). Эта операция необходима для выявления дефектов – сучков, смоляных карманов, трещин и т.д.</p>
+                  <p>Проблемные места вырезаются вручную либо помечаются специальным маркером и отправляются в обрезной станок, где машина с помощью фотоэлементов распознает метки, удаляет дефекты и сортирует готовые бруски по длине. Мелкие отрезы идут на простое сращивание, а длинные – на эстетически-ответственные изделия, в которых не допускается наличие изъянов или швов.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-2-3.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent"> Сборка</h4>
+                  <p> После изготовления заготовок, они поступают на следующий этап производства деревянных окон — сборку. Собирают деревянные окна в единое целое на специальном станке.</p>
+                  <p>На нем происходит сборка коробки, створок, сажаются на клей угловые соединения шип-проушина и пазы. После склеивания окна должны просохнуть в течении 24 часов. На этом же этапе врезают импост – деревянный элемент окна, разделяющий стеклопакет на отдельные части.</p>
+                  <p>Импост врезается в створку или коробку окна для глухого изделия или витража. Процесс изготовления и сборки деревянной части окна на этом заканчивается.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-2-4.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent">Шлифовка</h4>
+                  <p>Деревянные части окна подвергаются шлифовке несколько раз. Первая шлифовка производится калибровочном станке, затем шлифуется вручную с помощью пневмо шлифовальных орбитальных машин.</p>
+                  <p>Требуется индивидуальный подход к каждому труднодоступному месту, так как профиль деревянного окна, независимо створка это или коробка, имеет сложное сечение.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-2-5.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent">Покраска</h4>
+                  <p>В технологию покраски деревянного окна входит обработка его наружной части специальным средством, как антисептическая пропитка. Подоконник желательно красить алкидной краской, она придает защиту от механических повреждений.</p>
+                  <p>Деревянные окна красят дважды. Изделия могут покрывать специальным прозрачным лаком или вскрывать укрывными красками. Подобные процедуры выполняют при помощи пистолета пульверизаторного типа. Закончив покраску, деревянные окна оставляют сохнуть на двое суток.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-2-6.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent">Комплектация фурнитуры</h4>
+                  <p>В своей работе мы используем фурнитуру ведущих немецких концернов в данной сфере Siegenia и Roto. На счету Siegenia и Roto десятки запатентованных решений и уникальных разработок. Данные компании ставят перед собой только самые высокие требования к соблюдению всех стандартов качества, что обеспечивается современным оборудованием и интенсивным и регулярным контролем производства. Стабильное качество фурнитуры гарантируется соблюдением квалифицированного стандарта DIN V ENV 1627-30.</p>
+                  <p>Благодаря использованию фурнитуры вышеназванных производителей мы можем предложить своим клиентам широкий спектр выбора в сфере механизмов для открывания окон и дверей.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+          <div class="s-opis_plitka">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrap"><img class="res-i" src="img/proizv-2-7.jpg" alt=""/></div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-wrap">
+                  <h4 class="accent">Установка входных групп</h4>
+                  <p>После изготовления заготовок, они поступают на следующий этап производства деревянных окон — сборку. Собирают деревянные окна в единое целое на специальном станке.</p>
+                  <p>На нем происходит сборка коробки, створок, сажаются на клей угловые соединения шип-проушина и пазы. После склеивания окна должны просохнуть в течении 24 часов. На этом же этапе врезают импост – деревянный элемент окна, разделяющий стеклопакет на отдельные части.</p>
+                  <p>Импост врезается в створку или коробку окна для глухого изделия или витража. Процесс изготовления и сборки деревянной части окна на этом заканчивается.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .s-opis_plitka-->
+        </div>
+      </section>
+      <!--  section.s-opis-->
+      <section class="s-calc">
+        <div class="container">
+          <h2 class="small">Калькулятор дверей и входных групп</h2>
+          <form>
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="variant text-center">
+                  <h5>1. Выберите дверь</h5>
+                  <div class="variant-wrap">
+                    <div class="variant-item text-center">
+                      <div class="img-wrap"><img class="res-i" src="img/calc-2-1.png" alt=""/></div>
+                      <p>Однопольная<br/>распашная дверь</p>
+                    </div>
+                    <!-- variant-item-->
+                    <div class="variant-item text-center">
+                      <div class="img-wrap"><img class="res-i" src="img/calc-2-2.png" alt=""/></div>
+                      <p>Двупольная<br/>распашная дверь</p>
+                    </div>
+                    <!-- variant-item-->
+                    <div class="variant-item text-center">
+                      <div class="img-wrap"><img class="res-i" src="img/calc-2-3.png" alt=""/></div>
+                      <p>Однопольная<br/>распашная дверь</p>
+                    </div>
+                    <!-- variant-item-->
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="variant var-column">
+                  <h5>2. Выберите размеры и материал</h5>
+                  <div class="input-wrap"><strong>Размеры</strong>
+                    <input type="text" name="Высота двери " placeholder="Высота двери, см"/>
+                    <input type="text" name="Ширина двери" placeholder="Ширина двери, см"/>
+                  </div>
+                  <div class="input-wrap input-radio-wrap"><strong>Материал </strong>
+                    <div class="lab-wrap">
+                      <label>
+                        <input type="radio" name="Материал"/><span class="lab"></span>Дуб
+                      </label>
+                      <!-- label-->
+                    </div>
+                  </div>
+                  <div class="input-wrap input-radio-wrap"><strong>Витраж</strong>
+                    <div class="lab-wrap">
+                      <label>
+                        <input type="radio" name="Витраж"/><span class="lab"></span>Да
+                      </label>
+                      <!-- label-->
+                      <label>
+                        <input type="radio" name="Витраж"/><span class="lab"></span>Нет
+                      </label>
+                      <!-- label-->
+                    </div>
+                  </div>
+                  <div class="input-wrap input-radio-wrap"><strong>Витраж</strong>
+                    <div class="lab-wrap">
+                      <label>
+                        <input type="radio" name="Витраж"/><span class="lab"></span>Пленочный
+                      </label>
+                      <!-- label-->
+                      <label>
+                        <input type="radio" name="Витраж"/><span class="lab"></span>Паяный
+                      </label>
+                      <!-- label -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-xs-12">
+                <div class="variant">
+                  <div class="row">
+                    <div class="col-lg-12 col-sm-6">
+                      <h5>3. Получите примерную стоимость</h5><strong>Ориенитировачная стоимость Вашей двери составляет</strong>
+                      <div class="price"><span class="big">135 </span><small>руб.</small></div>
+                    </div>
+                    <div class="col-lg-12 col-sm-6">
+                      <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
+                      <div class="form-wrap">
+                        <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
+                        <button class="btn-submit">Отправить </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- section.s-calc-->
+      <section class="s-text">
+        <div class="container">
+          <h2> <img class="res-i" src="img/yarlyk-3.png" alt=""/><span>Деревянные полы для Вашего дома</span></h2>
+          <div class="gal zoom-gallery">
+            <div class="row"><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-2-1.jpg" title="title-2-1"><img class="res-i" src="img/img-2-1.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6--><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-2-2.jpg" title="title-2-2"><img class="res-i" src="img/img-2-2.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6--><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-2-3.jpg" title="title-2-3"><img class="res-i" src="img/img-2-3.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6--><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-2-4.jpg" title="title-2-4"><img class="res-i" src="img/img-2-4.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6--><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-2-5.jpg" title="title-2-5"><img class="res-i" src="img/img-2-5.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6--><a class="col-md-4 col-xs-6 col-480 item" href="img/img-big-2-6.jpg" title="title-2-6"><img class="res-i" src="img/img-2-6.jpg" alt=""/></a>
+              <!-- .col-md-4.col-xs-6-->
+            </div>
+          </div>
+          <div class="text-wrap">
+            <h5 class="accent">Технология устройства деревянного пола: конструкция несущего пола</h5>
+            <p>Достоинств у деревянных полов – немало: их отличает упругость, бесшумность, теплота. Они привлекательны на вид, нескользкие и легко ремонтируются, что совсем немаловажно, так как немалое количество швов и риск появления трещин – их постоянные «попутчики». Залогом долговечности, прочности и ровности является грамотная и качественная подготовка основания.</p>
+            <p>Технология устройства деревянного пола в первую очередь определяется несущей конструкцией. При всем разнообразии их можно классифицировать на два типа: по стяжкам (монолитные или сборные) или раздельные по лагам.</p>
+            <p>Для оценки степени влажности бетона существуют специальные портативные приборы. Однако проверить состояние стяжки, хоть и с некоторой погрешностью, можно очень простым способом. Полиэтиленовую пленку (1х1 м) или квадрат из прозрачного пластика (30х30 см) герметично приклеивают скотчем к ее поверхности и по прошествии 24-48 часов проверяют на наличие конденсата на внутренней стороне или темного влажного пятна на бетоне. Незначительный конденсат или его отсутствие, как и пятна, позволяют приступать к укладке пола.</p>
+            <p><strong>Выравнивание основы</strong></p>
+            <p>Неровность поверхности может стать причиной скрипа или проседания половиц. Для проверки уровня наклона и ровности используют 2-метровую рейку и строительный уровень, которые прикладывают к поверхности бетона в нескольких местах. Уровень укажет на уклон, а просветы под рейкой – на низкие участки.</p>
+            <p>Небольшие дефекты, возвышения и впадины устраняются очень просто:</p>
+            <ul>
+              <li> низкие – выравнивают наливными смесями;</li>
+              <li> высокие участки снимают шлифованием.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- section.s-text-->
+      <section class="s-form" style="background-image: url(img/bg-form-3.jpg);">
+        <div class="container">
+          <form method="post" action="action.php">
+            <h2 class="small">Оставьте заявку</h2>
+            <p class="gray">и мы позвоним Вам и поможем подобрать полы, которые нужны именно Вам!</p>
+            <!-- Hidden Required Fields-->
+            <input type="hidden" name="project_name" value="Заявка с сайта"/>
+            <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
+            <input class="order" type="hidden" name="form_subject" value="На подбор двери"/>
+            <div class="row">
+              <div class="col-md-4 col-sm-6">
+                <input type="text" name="Имя" placeholder="Ваше имя *" required="required"/>
+              </div>
+              <div class="col-md-4 col-sm-6">
+                <input type="tel" name="Телефон" placeholder="Ваш телефон *" required="required"/>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <button class="btn-submit">Оставить заявку</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- section.s-form-->
+      <section class="s-carusel">
+        <div class="container">
+          <h2 class="small">Полы в интерьере</h2>
+          <div class="carusel zoom-gallery">
+            <div class="item"><a class="img-wrap" href="img/img-big-1.jpg" title="title"><img src="img/img-1.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-2.jpg" title="title"><img src="img/img-2.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-3.jpg" title="title"><img src="img/img-3.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-4.jpg" title="title"><img src="img/img-4.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-5.jpg" title="title"><img src="img/img-5.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-6.jpg" title="title"><img src="img/img-6.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-2-1.jpg" title="title"><img src="img/img-2-1.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-2-2.jpg" title="title"><img src="img/img-2-2.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-2-3.jpg" title="title"><img src="img/img-2-3.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-2-4.jpg" title="title"><img src="img/img-2-4.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-2-5.jpg" title="title"><img src="img/img-2-5.jpg" alt=""/></a></div>
+            <!-- .item-->
+            <div class="item"><a class="img-wrap" href="img/img-big-2-6.jpg" title="title"><img src="img/img-2-6.jpg" alt=""/></a></div>
+            <!-- .item-->
+          </div>
+        </div>
+      </section>
+      <section class="s-calc">
+        <div class="container">
+          <h2 class="small">Калькулятор полов</h2>
+          <form>
+            <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="variant text-center">
+                  <h5>1. Выберите пол</h5>
+                  <div class="variant-wrap">
+                    <div class="variant-item text-center">
+                      <div class="img-wrap"><img class="res-i" src="img/calc-3-1.png" alt=""/></div>
+                      <p>Однопольная<br/>распашная дверь</p>
+                    </div>
+                    <!-- variant-item-->
+                    <div class="variant-item text-center">
+                      <div class="img-wrap"><img class="res-i" src="img/calc-3-2.png" alt=""/></div>
+                      <p>Двупольная<br/>распашная дверь</p>
+                    </div>
+                    <!-- variant-item-->
+                    <div class="variant-item text-center">
+                      <div class="img-wrap"><img class="res-i" src="img/calc-3-3.png" alt=""/></div>
+                      <p>Однопольная<br/>распашная дверь</p>
+                    </div>
+                    <!-- variant-item-->
+                    <div class="variant-item text-center">
+                      <div class="img-wrap"><img class="res-i" src="img/calc-3-4.png" alt=""/></div>
+                      <p>Однопольная<br/>распашная дверь</p>
+                    </div>
+                    <!-- variant-item-->
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="variant var-column">
+                  <h5>2. Выберите размеры и материал</h5>
+                  <div class="input-wrap"><strong>Размеры</strong>
+                    <input type="text" name="Размеры" placeholder="Размеры, м2"/>
+                  </div>
+                  <div class="input-wrap input-radio-wrap"><strong>Материал </strong>
+                    <div class="lab-wrap">
+                      <label>
+                        <input type="radio" name="Материал"/><span class="lab"></span>Сосна
+                      </label>
+                      <!-- label-->
+                      <label>
+                        <input type="radio" name="Материал"/><span class="lab"></span>Дуб
+                      </label>
+                      <!-- label-->
+                      <label>
+                        <input type="radio" name="Материал"/><span class="lab"></span>Лиственница
+                      </label>
+                      <!-- label-->
+                    </div>
+                  </div>
+                  <div class="input-wrap input-radio-wrap"><strong>Покрытие</strong>
+                    <div class="lab-wrap">
+                      <label>
+                        <input type="radio" name="Покрытие"/><span class="lab"></span>Воск
+                      </label>
+                      <label>
+                        <input type="radio" name="Покрытие"/><span class="lab"></span>Без покрытия
+                      </label>
+                      <label>
+                        <input type="radio" name="Покрытие"/><span class="lab"></span>Лак
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-xs-12">
+                <div class="variant">
+                  <div class="row">
+                    <div class="col-lg-12 col-sm-6">
+                      <h5>3. Получите примерную стоимость</h5><strong>Ориенитировачная стоимость Вашего пола составляет</strong>
+                      <div class="price"><span class="big">135 </span><small>руб.</small></div>
+                    </div>
+                    <div class="col-lg-12 col-sm-6">
+                      <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
+                      <div class="form-wrap">
+                        <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
+                        <button class="btn-submit">Отправить </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- section.s-calc-->
+      <div class="s-contact">
+        <div class="container">
+          <h2 class="small">Контакты</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="text-wrap">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="item">
+                      <h3>ООО “СЛАВНЫЕ ОКНА”</h3>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <p><strong>Адрес</strong></p>
+                          <p>г. Гомель, Речицкий район, д. Борщевка 10</p>
+                        </div>
+                        <div class="col-sm-4">
+                          <p><strong>Телефон</strong></p>
+                          <p><a href="tel:+375 44 500-23-37">+375 44 500-23-37</a></p>
+                        </div>
+                        <div class="col-sm-4">
+                          <p><strong>Мобильный</strong></p>
+                          <p><a href="tel:+375 29 657-16-42">+375 29 657-16-42</a></p>
+                        </div>
+                        <div class="col-sm-4">
+                          <p><strong>E-mail</strong></p>
+                          <p><a href="mailto:slavnye-okna@mail.ru">slavnye-okna@mail.ru</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .col-xs-12-->
+                  <div class="col-xs-12">
+                    <div class="item">
+                      <h3>Региональные представители</h3>
+                      <h4>г. Орел, Орловская область и Центрально-Чернозёмный район</h4>
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <p> Контактное лицо: Ольга</p>
+                          <p>E-mail: <a href="mailto: als1579@mail.ru">als1579@mail.ru</a></p>
+                          <p>Сайт: <a href="www.orel-781579" target="_blank">www.orel-781579</a></p>
+                        </div>
+                        <div class="col-xs-6">
+                          <p>Контактные телефоны:</p>
+                          <p> <a href="tel:8 (4862) 78-15-79">8 (4862) 78-15-79</a>; <a href="tel: 8 (4862) 78-15-79"> 8 (4862) 78-15-79</a>; </p>
+                          <p><a href="tel: 8 (4862) 78-15-79">8 (4862) 78-15-79</a>; <a href="tel: 8 (4862) 78-15-79">8 (4862) 78-15-79</a></p>
+                        </div>
+                        <div class="col-xs-12"><a class="modal-btn" href=""> Связаться</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12">
+                    <div class="item">
+                      <div class="row">
+                        <div class="col-xs-6">
+                          <h4>г. Гомель</h4>
+                          <p> Контактное лицо: Андрей</p>
+                          <p>Контактный телефон:<a href="tel: +375 29 122-79-25">+375 29 122-79-25</a></p>
+                          <p>E-mail: <a href="mailto:andrey_koz2009@mail.ru">andrey_koz2009@mail.ru</a></p><a class="modal-btn" href=""> Связаться</a>
+                        </div>
+                        <div class="col-xs-6">
+                          <h4>г. Жлобин и Гомельская область</h4>
+                          <p> Контактное лицо: Андрей</p>
+                          <p>Контактный телефон:<a href="tel: +375 29 122-79-25">+375 29 122-79-25</a></p>
+                          <p>E-mail: <a href="mailto: Dap-ess@yandex.ru"> Dap-ess@yandex.ru</a></p><a class="modal-btn" href=""> Связаться</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-3"><a class="logo"><img class="res-i" src="img/logo.png" alt=""/>
+                <p class="gray">© ООО «Славные окна»  2017г.</p></a></div>
+            <div class="col-md-5 col-sm-7">
+              <div class="foot-item">
+                <p class="gray">Адрес</p>
+                <p>г. Гомель, Речицкий район, д. Борщевка 10</p>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <p class="gray">Телефон</p>
+                    <p><a href="tel:+375 44 500-23-37">+375 44 500-23-37</a></p>
+                  </div>
+                  <div class="col-xs-4">
+                    <p class="gray">Мобильный</p>
+                    <p><a href="tel: +375 29 657-16-42">+375 29 657-16-42</a></p>
+                  </div>
+                  <div class="col-xs-4">
+                    <p class="gray">E-mail</p>
+                    <p><a href="mailto: slavnye-okna@mail.ru">slavnye-okna@mail.ru</a></p>
+                  </div>
+                </div><a class="modal-btn" href=""> Заказать звонок </a>
+              </div>
+            </div>
+            <div class="col-md-2 hidden-xs hidden-sm">
+              <nav class="foot-nav">
+                <ul>
+                  <li class="main-nav__item"><a class="main-nav__item-link" href="index1.html">О нас</a></li>
+                  <li class="main-nav__item"><a class="main-nav__item-link" href="index2.html"> Окна </a></li>
+                  <li class="main-nav__item"><a class="main-nav__item-link" href="index3.html">Двери</a></li>
+                  <li class="main-nav__item"><a class="main-nav__item-link" href="index4.html">Деревянные полы</a></li>
+                  <li class="main-nav__item"><a class="main-nav__item-link" href="index4.html">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-sm-2">
+              <div class="soc-wrap">
+                <p class="gray">найди нас</p>
+                <div class="link-wrap"><a href="#" target="_blank"><i class="demo-icon icon-soc-1"> </i></a><a href="#" target="_blank"><i class="demo-icon icon-soc-2"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="js/scripts.min.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
