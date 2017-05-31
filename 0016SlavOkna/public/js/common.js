@@ -143,6 +143,18 @@ function heightses() {
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   }); 
+
+
+// прокрутка к якорям
+$(" .top_line li a, .logo, footer li a, .landingMenu2 a").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top - 80;
+        
+            $('html, body').animate({ scrollTop: destination }, 1100);
+        
+        return false; 
+    });
+
 });
 ymaps.ready(init);
         var myMap, 
