@@ -8,16 +8,14 @@
     <meta name="theme-color" content="#000">
     <meta name="msapplication-navbutton-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-    <link rel="stylesheet" href="fonts/fontello/css/fontello.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
     <div class="wrapper"><a class="toggle-mnu toggle-mnu-1 hidden-lg hidden-md" href="#"><span></span></a>
       <div class="trop main-mnu hidden-mnu hidden-lg hidden-md landingMenu2">
         <div class="mnu-wrap">
-          <div class="link-wrap"><a class="tel" href="tel:+375 99 123-45-67 "><span class="gray">+375 99  </span>123-45-67</a><a class="tel" href="tel:+375 11 987-65-43 "><span class="gray">+375 11  </span>987-65-43</a><br/><a class="btn-modal" href="">Заказать звонок</a></div>
+          <div class="link-wrap"><a class="tel" href="tel:+375 99 123-45-67 "><span class="gray">+375 99  </span>123-45-67</a><a class="tel" href="tel:+375 11 987-65-43 "><span class="gray">+375 11  </span>987-65-43</a><br/><a class="btn-modal" href="#small-dialog">Заказать звонок</a></div>
           <ul>
-            <li class="main-nav__item"><a class="main-nav__item-link" href="index1.html">О нас</a></li>
             <li class="main-nav__item"><a class="main-nav__item-link" href=".s-slider"> Окна </a></li>
             <li class="main-nav__item"><a class="main-nav__item-link" href="#doors">Двери</a></li>
             <li class="main-nav__item"><a class="main-nav__item-link" href="#floor">Деревянные полы</a></li>
@@ -32,7 +30,6 @@
             <div class="col-lg-7 col-md-8 hidden-sm hidden-xs">
               <nav class="top-mav">                 
                 <ul>
-                  <li class="main-nav__item"><a class="main-nav__item-link" href="index1.html">О нас</a></li>
                   <li class="main-nav__item"><a class="main-nav__item-link" href=".s-slider"> Окна </a></li>
                   <li class="main-nav__item"><a class="main-nav__item-link" href="#doors">Двери</a></li>
                   <li class="main-nav__item"><a class="main-nav__item-link" href="#floor">Деревянные полы</a></li>
@@ -41,7 +38,7 @@
               </nav>
             </div>
             <div class="col-md-2 col-sm-8 hidden-xs">
-              <div class="link-wrap"><a class="tel" href="tel:+375 99 123-45-67 "><span class="gray">+375 99  </span>123-45-67</a><a class="tel" href="tel:+375 11 987-65-43 "><span class="gray">+375 11  </span>987-65-43</a><a class="btn-modal" href="">Заказать звонок</a></div>
+              <div class="link-wrap"><a class="tel" href="tel:+375 99 123-45-67 "><span class="gray">+375 99  </span>123-45-67</a><a class="tel" href="tel:+375 11 987-65-43 "><span class="gray">+375 11  </span>987-65-43</a><a class="btn-modal" href="#small-dialog">Заказать звонок</a></div>
             </div>
           </div>
         </div>
@@ -58,7 +55,7 @@
               </div>
             </div>
           </div>
-          <div class="head-slide" style="background-image: url(img/main-1.jpg);">
+          <div class="head-slide" style="background-image: url(img/main-2.jpg);">
             <div class="container">
               <div class="table">
                 <div class="td">
@@ -68,7 +65,7 @@
               </div>
             </div>
           </div>
-          <div class="head-slide" style="background-image: url(img/main-1.jpg);">
+          <div class="head-slide" style="background-image: url(img/main-3.jpg);">
             <div class="container">
               <div class="table">
                 <div class="td">
@@ -275,78 +272,81 @@
         </div>
       </section>
       <!--  section.s-opis-->
-      <section class="s-calc">
-        <div class="container">
-          <h2 class="small">Калькулятор окон</h2>
-          <form>
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="variant text-center">
-                  <h5>1. Выберите окно</h5>
-                  <div class="variant-wrap">
-                    <div class="variant-item text-center">
-                      <div class="img-wrap"><img class="res-i" src="img/calc-1-1.png" alt=""/></div>
-                      <p>Поворотно-откидное<br/>одностворчатое окно</p>
+      <div class="s-calc_1">
+        <section class="s-calc">
+          <div class="container">
+            <h2 class="small">Калькулятор окон</h2>
+            <form>
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="variant text-center">
+                    <h5>1. Выберите окно</h5>
+                    <div class="variant-wrap">
+                      <input class="variunt-count" type="hidden"/>
+                      <div class="variant-item text-center" data-price="1">
+                        <div class="img-wrap"><img class="res-i" src="img/calc-1-1.png" alt=""/></div>
+                        <p>Поворотно-откидное<br/>одностворчатое окно</p>
+                      </div>
+                      <!-- variant-item-->
+                      <div class="variant-item text-center" data-price="2">
+                        <div class="img-wrap"><img class="res-i" src="img/calc-1-2.png" alt=""/></div>
+                        <p>Двухстворчатое окно<br/>с поворотно-окидной <br/>створкой</p>
+                      </div>
+                      <!-- variant-item-->
+                      <div class="variant-item text-center" data-price="3">
+                        <div class="img-wrap"><img class="res-i" src="img/calc-1-3.png" alt=""/></div>
+                        <p>Трехстворчатое окно с двумя<br/>створками</p>
+                      </div>
+                      <!-- variant-item-->
                     </div>
-                    <!-- variant-item-->
-                    <div class="variant-item text-center">
-                      <div class="img-wrap"><img class="res-i" src="img/calc-1-2.png" alt=""/></div>
-                      <p>Двухстворчатое окно<br/>с поворотно-окидной <br/>створкой</p>
-                    </div>
-                    <!-- variant-item-->
-                    <div class="variant-item text-center">
-                      <div class="img-wrap"><img class="res-i" src="img/calc-1-3.png" alt=""/></div>
-                      <p>Трехстворчатое окно с двумя<br/>створками</p>
-                    </div>
-                    <!-- variant-item-->
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="variant">
-                  <h5>2. Выберите размеры и материал</h5>
-                  <div class="input-wrap"><strong>Размеры</strong>
-                    <input type="text" name="Высота окна " placeholder="Высота окна, см"/>
-                    <input type="text" name="Ширина окна" placeholder="Ширина окна, см"/>
-                  </div>
-                  <div class="input-wrap input-radio-wrap"><strong>Материал</strong>
-                    <label>
-                      <input type="radio" name="Материал"/><span class="lab"></span>Сосна
-                    </label>
-                    <!-- label    -->
-                    <label>
-                      <input type="radio" name="Материал"/><span class="lab"></span>Лиственница
-                    </label>
-                    <!-- label    -->
-                    <label>
-                      <input type="radio" name="Материал"/><span class="lab"></span>Дуб
-                    </label>
-                    <!-- label    -->
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="variant">
+                    <h5>2. Выберите размеры и материал</h5>
+                    <div class="input-wrap input-number"><strong>Размеры</strong>
+                      <input class="height" type="number" name="Высота окна " placeholder="Высота окна, см"/>
+                      <input class="width" type="number" name="Ширина окна" placeholder="Ширина окна, см"/>
+                    </div>
+                    <div class="input-wrap input-radio-wrap"><strong>Материал</strong>
+                      <label>
+                        <input type="radio" name="Материал" data-price="1"/><span class="lab"></span>Сосна
+                      </label>
+                      <!-- label--><br/>
+                      <label>
+                        <input type="radio" name="Материал" data-price="2"/><span class="lab"></span>Лиственница
+                      </label>
+                      <!-- label--><br/>
+                      <label>
+                        <input type="radio" name="Материал" data-price="3"/><span class="lab"></span>Дуб
+                      </label>
+                      <!-- label--><br/>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-4 col-xs-12">
-                <div class="variant">
-                  <div class="row">
-                    <div class="col-lg-12 col-sm-6">
-                      <h5>3. Получите примерную стоимость</h5><strong>Ориенитировачная стоимость Вашего окна составляет</strong>
-                      <div class="price"><span class="big">135 </span><small>руб.</small></div>
-                    </div>
-                    <div class="col-lg-12 col-sm-6">
-                      <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
-                      <div class="form-wrap">
-                        <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
-                        <button class="btn-submit">Отправить </button>
+                <div class="col-lg-4 col-xs-12">
+                  <div class="variant">
+                    <div class="row">
+                      <div class="col-lg-12 col-sm-6">
+                        <h5>3. Получите примерную стоимость</h5><strong>Ориенитировачная стоимость Вашего окна составляет</strong>
+                        <div class="price"><span class="big">0</span><small>руб.</small></div>
+                      </div>
+                      <div class="col-lg-12 col-sm-6">
+                        <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
+                        <div class="form-wrap">
+                          <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
+                          <button class="btn-submit">Отправить</button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </form>
-        </div>
-      </section>
-      <!-- section.s-calc-->
+            </form>
+          </div>
+        </section>
+        <!-- section.s-calc-->
+      </div>
       <div id="doors">
         <section class="s-text">
           <div class="container">
@@ -518,96 +518,99 @@
         </div>
       </section>
       <!--  section.s-opis-->
-      <section class="s-calc">
-        <div class="container">
-          <h2 class="small">Калькулятор дверей и входных групп</h2>
-          <form>
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="variant text-center">
-                  <h5>1. Выберите дверь</h5>
-                  <div class="variant-wrap">
-                    <div class="variant-item text-center">
-                      <div class="img-wrap"><img class="res-i" src="img/calc-2-1.png" alt=""/></div>
-                      <p>Однопольная<br/>распашная дверь</p>
-                    </div>
-                    <!-- variant-item-->
-                    <div class="variant-item text-center">
-                      <div class="img-wrap"><img class="res-i" src="img/calc-2-2.png" alt=""/></div>
-                      <p>Двупольная<br/>распашная дверь</p>
-                    </div>
-                    <!-- variant-item-->
-                    <div class="variant-item text-center">
-                      <div class="img-wrap"><img class="res-i" src="img/calc-2-3.png" alt=""/></div>
-                      <p>Однопольная<br/>распашная дверь</p>
-                    </div>
-                    <!-- variant-item-->
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="variant var-column">
-                  <h5>2. Выберите размеры и материал</h5>
-                  <div class="input-wrap"><strong>Размеры</strong>
-                    <input type="text" name="Высота двери " placeholder="Высота двери, см"/>
-                    <input type="text" name="Ширина двери" placeholder="Ширина двери, см"/>
-                  </div>
-                  <div class="input-wrap input-radio-wrap"><strong>Материал </strong>
-                    <div class="lab-wrap">
-                      <label>
-                        <input type="radio" name="Материал"/><span class="lab"></span>Дуб
-                      </label>
-                      <!-- label-->
-                    </div>
-                  </div>
-                  <div class="input-wrap input-radio-wrap"><strong>Витраж</strong>
-                    <div class="lab-wrap">
-                      <label>
-                        <input type="radio" name="Витраж"/><span class="lab"></span>Да
-                      </label>
-                      <!-- label-->
-                      <label>
-                        <input type="radio" name="Витраж"/><span class="lab"></span>Нет
-                      </label>
-                      <!-- label-->
-                    </div>
-                  </div>
-                  <div class="input-wrap input-radio-wrap"><strong>Витраж</strong>
-                    <div class="lab-wrap">
-                      <label>
-                        <input type="radio" name="Витраж"/><span class="lab"></span>Пленочный
-                      </label>
-                      <!-- label-->
-                      <label>
-                        <input type="radio" name="Витраж"/><span class="lab"></span>Паяный
-                      </label>
-                      <!-- label -->
+      <div class="s-calc_2">
+        <section class="s-calc">
+          <div class="container">
+            <h2 class="small">Калькулятор дверей и входных групп</h2>
+            <form>
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="variant text-center">
+                    <h5>1. Выберите дверь</h5>
+                    <div class="variant-wrap">
+                      <input class="variunt-count" type="hidden"/>
+                      <div class="variant-item text-center" data-price="1">
+                        <div class="img-wrap"><img class="res-i" src="img/calc-2-1.png" alt=""/></div>
+                        <p>Однопольная<br/>распашная дверь</p>
+                      </div>
+                      <!-- variant-item-->
+                      <div class="variant-item text-center" data-price="2">
+                        <div class="img-wrap"><img class="res-i" src="img/calc-2-2.png" alt=""/></div>
+                        <p>Двупольная<br/>распашная дверь</p>
+                      </div>
+                      <!-- variant-item-->
+                      <div class="variant-item text-center" data-price="3">
+                        <div class="img-wrap"><img class="res-i" src="img/calc-2-3.png" alt=""/></div>
+                        <p>Однопольная<br/>распашная дверь</p>
+                      </div>
+                      <!-- variant-item-->
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-4 col-xs-12">
-                <div class="variant">
-                  <div class="row">
-                    <div class="col-lg-12 col-sm-6">
-                      <h5>3. Получите примерную стоимость</h5><strong>Ориенитировачная стоимость Вашей двери составляет</strong>
-                      <div class="price"><span class="big">135 </span><small>руб.</small></div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="variant var-column">
+                    <h5>2. Выберите размеры и материал</h5>
+                    <div class="input-wrap input-number"><strong>Размеры</strong>
+                      <input type="number" name="Высота двери " placeholder="Высота двери, см"/>
+                      <input type="number" name="Ширина двери" placeholder="Ширина двери, см"/>
                     </div>
-                    <div class="col-lg-12 col-sm-6">
-                      <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
-                      <div class="form-wrap">
-                        <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
-                        <button class="btn-submit">Отправить </button>
+                    <div class="input-wrap input-radio-wrap"><strong>Материал </strong>
+                      <div class="lab-wrap">
+                        <label>
+                          <input type="radio" name="Материал" data-price="1"/><span class="lab"></span>Дуб
+                        </label>
+                        <!-- label--><br/>
+                      </div>
+                    </div>
+                    <div class="input-wrap input-radio-wrap"><strong>Витраж</strong>
+                      <div class="lab-wrap">
+                        <label>
+                          <input type="radio" name="Наличие витража" data-price="1"/><span class="lab"></span>Да
+                        </label>
+                        <!-- label--><br/>
+                        <label>
+                          <input type="radio" name="Наличие витража" data-price="2"/><span class="lab"></span>Нет
+                        </label>
+                        <!-- label--><br/>
+                      </div>
+                    </div>
+                    <div class="input-wrap input-radio-wrap"><strong>Витраж</strong>
+                      <div class="lab-wrap">
+                        <label>
+                          <input type="radio" name="Вид витража" data-price="1"/><span class="lab"></span>Пленочный
+                        </label>
+                        <!-- label--><br/>
+                        <label>
+                          <input type="radio" name="Вид витража" data-price="2"/><span class="lab"></span>Паяный
+                        </label>
+                        <!-- label--><br/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                  <div class="variant">
+                    <div class="row">
+                      <div class="col-lg-12 col-sm-6">
+                        <h5>3. Получите примерную стоимость</h5><strong>Ориенитировачная стоимость Вашей двери составляет</strong>
+                        <div class="price"><span class="big">0</span><small>руб.</small></div>
+                      </div>
+                      <div class="col-lg-12 col-sm-6">
+                        <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
+                        <div class="form-wrap">
+                          <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
+                          <button class="btn-submit">Отправить</button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </form>
-        </div>
-      </section>
-      <!-- section.s-calc-->
+            </form>
+          </div>
+        </section>
+        <!-- section.s-calc-->
+      </div>
       <div id="floor">
         <section class="s-text">
           <div class="container">
@@ -694,97 +697,100 @@
           </div>
         </div>
       </section>
-      <section class="s-calc">
-        <div class="container">
-          <h2 class="small">Калькулятор полов</h2>
-          <form>
-            <div class="row">
-              <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="variant text-center">
-                  <h5>1. Выберите пол</h5>
-                  <div class="variant-wrap">
-                    <div class="variant-item text-center">
-                      <div class="img-wrap"><img class="res-i" src="img/calc-3-1.png" alt=""/></div>
-                      <p>Однопольная<br/>распашная дверь</p>
-                    </div>
-                    <!-- variant-item-->
-                    <div class="variant-item text-center">
-                      <div class="img-wrap"><img class="res-i" src="img/calc-3-2.png" alt=""/></div>
-                      <p>Двупольная<br/>распашная дверь</p>
-                    </div>
-                    <!-- variant-item-->
-                    <div class="variant-item text-center">
-                      <div class="img-wrap"><img class="res-i" src="img/calc-3-3.png" alt=""/></div>
-                      <p>Однопольная<br/>распашная дверь</p>
-                    </div>
-                    <!-- variant-item-->
-                    <div class="variant-item text-center">
-                      <div class="img-wrap"><img class="res-i" src="img/calc-3-4.png" alt=""/></div>
-                      <p>Однопольная<br/>распашная дверь</p>
-                    </div>
-                    <!-- variant-item-->
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="variant var-column">
-                  <h5>2. Выберите размеры и материал</h5>
-                  <div class="input-wrap"><strong>Размеры</strong>
-                    <input type="text" name="Размеры" placeholder="Размеры, м2"/>
-                  </div>
-                  <div class="input-wrap input-radio-wrap"><strong>Материал </strong>
-                    <div class="lab-wrap">
-                      <label>
-                        <input type="radio" name="Материал"/><span class="lab"></span>Сосна
-                      </label>
-                      <!-- label-->
-                      <label>
-                        <input type="radio" name="Материал"/><span class="lab"></span>Дуб
-                      </label>
-                      <!-- label-->
-                      <label>
-                        <input type="radio" name="Материал"/><span class="lab"></span>Лиственница
-                      </label>
-                      <!-- label-->
-                    </div>
-                  </div>
-                  <div class="input-wrap input-radio-wrap"><strong>Покрытие</strong>
-                    <div class="lab-wrap">
-                      <label>
-                        <input type="radio" name="Покрытие"/><span class="lab"></span>Воск
-                      </label>
-                      <label>
-                        <input type="radio" name="Покрытие"/><span class="lab"></span>Без покрытия
-                      </label>
-                      <label>
-                        <input type="radio" name="Покрытие"/><span class="lab"></span>Лак
-                      </label>
+      <div class="s-calc_3">
+        <section class="s-calc">
+          <div class="container">
+            <h2 class="small">Калькулятор полов</h2>
+            <form>
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="variant text-center">
+                    <h5>1. Выберите пол</h5>
+                    <div class="variant-wrap">
+                      <input class="variunt-count" type="hidden"/>
+                      <div class="variant-item text-center" data-price="1">
+                        <div class="img-wrap"><img class="res-i" src="img/calc-3-1.png" alt=""/></div>
+                        <p>Однопольная<br/>распашная дверь</p>
+                      </div>
+                      <!-- variant-item-->
+                      <div class="variant-item text-center" data-price="2">
+                        <div class="img-wrap"><img class="res-i" src="img/calc-3-2.png" alt=""/></div>
+                        <p>Двупольная<br/>распашная дверь</p>
+                      </div>
+                      <!-- variant-item-->
+                      <div class="variant-item text-center" data-price="3">
+                        <div class="img-wrap"><img class="res-i" src="img/calc-3-3.png" alt=""/></div>
+                        <p>Однопольная<br/>распашная дверь</p>
+                      </div>
+                      <!-- variant-item-->
+                      <div class="variant-item text-center" data-price="4">
+                        <div class="img-wrap"><img class="res-i" src="img/calc-3-4.png" alt=""/></div>
+                        <p>Однопольная<br/>распашная дверь</p>
+                      </div>
+                      <!-- variant-item-->
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-4 col-xs-12">
-                <div class="variant">
-                  <div class="row">
-                    <div class="col-lg-12 col-sm-6">
-                      <h5>3. Получите примерную стоимость</h5><strong>Ориенитировачная стоимость Вашего пола составляет</strong>
-                      <div class="price"><span class="big">135 </span><small>руб.</small></div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                  <div class="variant var-column">
+                    <h5>2. Выберите размеры и материал</h5>
+                    <div class="input-wrap input-number"><strong>Размеры</strong>
+                      <input type="number" name="Размеры" placeholder="Размеры, м2"/>
                     </div>
-                    <div class="col-lg-12 col-sm-6">
-                      <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
-                      <div class="form-wrap">
-                        <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
-                        <button class="btn-submit">Отправить </button>
+                    <div class="input-wrap input-radio-wrap"><strong>Материал </strong>
+                      <div class="lab-wrap">
+                        <label>
+                          <input type="radio" name="Материал" data-price="1" value=""/><span class="lab"></span>Сосна
+                        </label>
+                        <!-- label--><br/>
+                        <label>
+                          <input type="radio" name="Материал" data-price="2" value=""/><span class="lab"></span>Дуб
+                        </label>
+                        <!-- label--><br/>
+                        <label>
+                          <input type="radio" name="Материал" data-price="3" value=""/><span class="lab"></span>Лиственница
+                        </label>
+                        <!-- label--><br/>
+                      </div>
+                    </div>
+                    <div class="input-wrap input-radio-wrap"><strong>Покрытие</strong>
+                      <div class="lab-wrap">
+                        <label>
+                          <input type="radio" name="Покрытие" data-price="1" value=""/><span class="lab"></span>Воск
+                        </label>
+                        <label>
+                          <input type="radio" name="Покрытие" data-price="2" value=""/><span class="lab"></span>Без покрытия
+                        </label>
+                        <label>
+                          <input type="radio" name="Покрытие" data-price="3" value=""/><span class="lab"></span>Лак
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                  <div class="variant">
+                    <div class="row">
+                      <div class="col-lg-12 col-sm-6">
+                        <h5>3. Получите примерную стоимость</h5><strong>Ориенитировачная стоимость Вашего пола составляет</strong>
+                        <div class="price"><span class="big">0</span><small>руб.</small></div>
+                      </div>
+                      <div class="col-lg-12 col-sm-6">
+                        <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
+                        <div class="form-wrap">
+                          <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
+                          <button class="btn-submit">Отправить</button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </form>
-        </div>
-      </section>
-      <!-- section.s-calc-->
+            </form>
+          </div>
+        </section>
+        <!-- section.s-calc-->
+      </div>
       <div class="s-contact">
         <div class="container">
           <h2 class="small">Контакты</h2>
@@ -831,24 +837,26 @@
                           <p> <a href="tel:8 (4862) 78-15-79">8 (4862) 78-15-79</a>; <a href="tel: 8 (4862) 78-15-79"> 8 (4862) 78-15-79</a>; </p>
                           <p><a href="tel: 8 (4862) 78-15-79">8 (4862) 78-15-79</a>; <a href="tel: 8 (4862) 78-15-79">8 (4862) 78-15-79</a></p>
                         </div>
-                        <div class="col-xs-12"><a class="modal-btn" href=""> Связаться</a></div>
+                        <div class="col-xs-12"><a class="modal-btn" href="#small-dialog"> Связаться</a></div>
                       </div>
                     </div>
                   </div>
                   <div class="col-xs-12">
-                    <div class="item">
-                      <div class="row">
-                        <div class="col-xs-6">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <div class="item">
                           <h4>г. Гомель</h4>
                           <p> Контактное лицо: Андрей</p>
                           <p>Контактный телефон:<a href="tel: +375 29 122-79-25">+375 29 122-79-25</a></p>
-                          <p>E-mail: <a href="mailto:andrey_koz2009@mail.ru">andrey_koz2009@mail.ru</a></p><a class="modal-btn" href=""> Связаться</a>
+                          <p>E-mail: <a href="mailto:andrey_koz2009@mail.ru">andrey_koz2009@mail.ru</a></p><a class="modal-btn" href="#small-dialog"> Связаться</a>
                         </div>
-                        <div class="col-xs-6">
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="item">
                           <h4>г. Жлобин и Гомельская область</h4>
                           <p> Контактное лицо: Андрей</p>
                           <p>Контактный телефон:<a href="tel: +375 29 122-79-25">+375 29 122-79-25</a></p>
-                          <p>E-mail: <a href="mailto: Dap-ess@yandex.ru"> Dap-ess@yandex.ru</a></p><a class="modal-btn" href=""> Связаться</a>
+                          <p>E-mail: <a href="mailto: Dap-ess@yandex.ru"> Dap-ess@yandex.ru</a></p><a class="modal-btn" href="#small-dialog"> Связаться</a>
                         </div>
                       </div>
                     </div>
@@ -884,13 +892,12 @@
                     <p class="gray">E-mail</p>
                     <p><a href="mailto: slavnye-okna@mail.ru">slavnye-okna@mail.ru</a></p>
                   </div>
-                </div><a class="modal-btn" href=""> Заказать звонок </a>
+                </div><a class="modal-btn" href="#small-dialog"> Заказать звонок </a>
               </div>
             </div>
             <div class="col-md-2 hidden-xs hidden-sm">
               <nav class="foot-nav">
                 <ul>
-                  <li class="main-nav__item"><a class="main-nav__item-link" href="index1.html">О нас</a></li>
                   <li class="main-nav__item"><a class="main-nav__item-link" href=".s-slider"> Окна </a></li>
                   <li class="main-nav__item"><a class="main-nav__item-link" href="#doors">Двери</a></li>
                   <li class="main-nav__item"><a class="main-nav__item-link" href="#floor">Деревянные полы</a></li>
@@ -907,7 +914,39 @@
           </div>
         </div>
       </footer>
+      <div class="zoom-anim-dialog mfp-hide modal-window" id="small-dialog">
+        <p class="h3">Связаться с региональным представителем</p>
+        <p class="text">Введите Ваши данные и мы Вам<br/>перезвоним в течении часа</p>
+        <form>
+          <input type="hidden" name="project_name" value="Заявка с сайта"/>
+          <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
+          <input class="order" type="hidden" name="form_subject" value=""/>
+          <div class="row">
+            <div class="col-sm-6 col-xs-12">
+              <div class="input-wrap">
+                <input type="text" name="Имя" placeholder="Ваше имя"/>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12">
+              <div class="input-wrap">
+                <input type="tel" name="Телефон" placeholder="№ телефона"/>
+              </div>
+            </div>
+          </div>
+          <div class="input-wrap">
+            <textarea name="Сообщение" placeholder="Сообщение... "></textarea>
+          </div>
+          <div class="input-wrap">
+            <button class="btn-submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+      <div class="zoom-anim-dialog mfp-hide modal-window" id="thanks">
+        <p class="h3">СПАСИБО,</p>
+        <p class="text">Мы скоро с вами свяжемся</p>
+      </div>
     </div>
+    <link rel="stylesheet" href="fonts/fontello/css/fontello.css">
     <script src="js/scripts.min.js"></script>
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/common.js"></script>

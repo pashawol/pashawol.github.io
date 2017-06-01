@@ -1,5 +1,5 @@
 $(function() {
-
+// слайдер в шапке и  под ним
 	$('.slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -38,20 +38,6 @@ $('.carusel').slick({
       } 
     ]
 	});
-
-
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: $("form").attr("action"), //Change
-      data: th.serialize()
-    }).done(function() {
-       $(".otvet-ok").animate({"opacity":" 1"},"slow");
-    
-    });
-    return false;
-  });
 
  // всповаща галл
 $("section").each(function(){
@@ -126,9 +112,22 @@ function heightses() {
       $(".toggle-mnu-1").click();
     });
  
+$('.s-contact .modal-btn').click(function(){
+    
+    $("#small-dialog .text").text($(this).parents(".item").find("h4").text())
+    $("#small-dialog .h3").text("Связаться с региональным  представителем");
+    $("#small-dialog .order").val($("#small-dialog .h3 ").text())
+})
+
+$('footer a, .top_line a, .trop a ').click(function(){
+   // var  t_h4= $(this).parents("item").find("h4").text();
+    $("#small-dialog .text").text("и мы с Вами свяжемся в ближайшее время")
+    $("#small-dialog .h3").text("Заполните форму");
+    $("#small-dialog .order").val($(".modal-window .h3 ").text())
+})
 
  // модальльное окно для форм
- $('.btn-modal').magnificPopup({
+ $('.modal-btn, .btn-modal').magnificPopup({
     type: 'inline',
 
     fixedContentPos: true,
@@ -144,6 +143,29 @@ function heightses() {
     mainClass: 'my-mfp-zoom-in'
   }); 
 
+// форма
+$("form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: $("form").attr("action"), //Change
+      data: th.serialize()
+    }).done(function() {
+          // $.magnificPopup.close();
+         $.magnificPopup.open({
+        items: {
+          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
+          type: 'inline'
+        }
+      })
+       setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+        // $.magnificPopup.close();
+      }, 4000);
+    });
+    return false;
+  });
 
 // прокрутка к якорям
 $(" .top_line li a, .logo, footer li a, .landingMenu2 a").click(function () {
@@ -154,8 +176,42 @@ $(" .top_line li a, .logo, footer li a, .landingMenu2 a").click(function () {
         
         return false; 
     });
+function calc_1(a,b, c,d){
+  return 100;
+}
+// калькулятор
+$(".s-calc_1").each(function(){
+
+    var th = $(this),
+      summ = 0,
+      var_price = parseInt(th.find(".variunt-count").val()),
+      input_price_height = parseInt(th.find('.input-number input.height').val()), 
+      input_price_width = parseInt(th.find('.input-number input.width').val()),
+      var_radio = parseInt(th.find(".input-radio-wrap input:checked").data("price"));
+      th.find(".big").text(summ);
+     
+    $(".variant-item").click(function(){
+      $(this).parents(".variant").addClass("active").find(".variant-item").removeClass("active");
+      $(this).addClass("active");
+      th.find(".col-lg-4:nth-child(2)").addClass("active");
+      summ += calc_1(var_price,input_price_height,input_price_width ,var_radio);
+       th.find(".big").text(summ);
+    })
+
+    th.find("form").change(function() { 
+     
+      summ += calc_1(var_price,input_price_height,input_price_width ,var_radio);
+
+
+      th.find(".big").text(summ);
+
+
+   })
+
+  })
 
 });
+// карта
 ymaps.ready(init);
         var myMap, 
             myPlacemark;
