@@ -1,3 +1,37 @@
+// карта
+ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+           
+                center: [52.34624838674198,30.701533637939377],
+
+                behaviors: ['drag'],
+                zoom: 11,
+                controls: ["zoomControl", "fullscreenControl"]
+
+            });   
+            myPlacemark = new ymaps.Placemark([52.34144520792636,30.65230165561091], {
+                hintContent: 'г. Гомель, Речицкий район, д. Борщевка 10',
+                balloonContent: 'г. Гомель, Речицкий район, д. Борщевка 10'
+            }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/map-metka.png',
+            // Размеры метки.
+            iconImageSize: [265, 76],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [0, -90]
+        });
+            myMap.geoObjects.add(myPlacemark);
+          }
+
+
+
 $(function() {
 // слайдер в шапке и  под ним
 	$('.slider').slick({
@@ -130,7 +164,7 @@ $('footer a, .top_line a, .trop a ').click(function(){
  $('.modal-btn, .btn-modal').magnificPopup({
     type: 'inline',
 
-    fixedContentPos: true,
+    fixedContentPos: false,
     fixedBgPos: true,
 
     overflowY: 'auto',
@@ -176,70 +210,122 @@ $(" .top_line li a, .logo, footer li a, .landingMenu2 a").click(function () {
         
         return false; 
     });
-function calc_1(a,b, c,d){
-  return 100;
-}
-// калькулятор
-$(".s-calc_1").each(function(){
 
-    var th = $(this),
-      summ = 0,
-      var_price = parseInt(th.find(".variunt-count").val()),
-      input_price_height = parseInt(th.find('.input-number input.height').val()), 
-      input_price_width = parseInt(th.find('.input-number input.width').val()),
-      var_radio = parseInt(th.find(".input-radio-wrap input:checked").data("price"));
-      th.find(".big").text(summ);
-     
-    $(".variant-item").click(function(){
+
+
+
+  $(".s-calc").each(function(){
+    var th= $(this);
+    th.find(".variant-item").click(function(){ 
       $(this).parents(".variant").addClass("active").find(".variant-item").removeClass("active");
       $(this).addClass("active");
-      th.find(".col-lg-4:nth-child(2)").addClass("active");
-      summ += calc_1(var_price,input_price_height,input_price_width ,var_radio);
-       th.find(".big").text(summ);
+      th.find(".col-lg-4:nth-child(2)").addClass("active").find(".input-number").find("input:first-of-type").focus();
+      th.find(".variunt-count").val($(this).data("price")); 
+    
     })
+    th.find(' .input-wrap input').change(function(){
+      th.find(".variant").addClass("active");
+    })
+    th.find(".yes").click(function(){
+      $(this).parents(".input-radio-wrap").next().removeClass("disabled");
+    })
+    th.find(".no").click(function(){
+      $(this).parents(".input-radio-wrap").next(".input-radio-wrap").addClass("disabled")
+      .find("input").each(function(){
+        $(this).removeAttr("checked");
+      })
 
-    th.find("form").change(function() { 
-     
-      summ += calc_1(var_price,input_price_height,input_price_width ,var_radio);
-
-
-      th.find(".big").text(summ);
-
-
-   })
+    })
 
   })
 
+// калькулятор 1
+function calc_1(a,b, c,d){
+  return 101;
+}
+ 
+    var th_1 = $(".s-calc_1"),
+        summ_1 = 0,
+        var_price_1 = parseInt(th_1.find(".variunt-count").val()),
+        input_h_1 = parseInt(th_1.find('input.height').val()), 
+        input_w_1 = parseInt(th_1.find('input.width').val()),
+        var_mater_1 = parseInt(th_1.find(".mater:checked").data("price"));
+        th_1.find(".big").text(summ_1);
+        summ_1 = calc_1(var_price_1,input_h_1,input_w_1 ,var_mater_1);
+    th_1.find(".variant-item").click(function(){
+      
+      th_1.find(".big").text(summ_1);
+    })
+
+    th_1.find(".variunt-count, .input-wrap input").change(function() { 
+      th_1.find(".big").text(summ_1);
+    });
+  
+
+
+ 
+// калькулятор 2
+function calc_2(a,b, c,d,e,f){
+  return 102;
+}
+    var th_2 = $(".s-calc_2"),
+        summ_2 = 0,
+        var_price_2 = parseInt(th_2.find(".variunt-count").val()),
+        input_h_2 = parseInt(th_2.find('input.height').val()), 
+        input_w_2 = parseInt(th_2.find('input.width').val()),
+        var_mater_2 = parseInt(th_2.find(".mater:checked").data("price"));
+        var_vitraj_2 = parseInt(th_2.find(".vitraj:checked").data("price"));
+        var_vVitraj_2 = parseInt(th_2.find(".vVitraj:checked").data("price"));
+        th_2.find(".big").text(summ_2);
+      summ_2 = calc_2(var_price_2,input_h_2,input_w_2 ,var_mater_2, var_vitraj_2, var_vVitraj_2);
+    th_2.find(".variant-item").click(function(){
+      th_2.find(".big").text(summ_2);
+    })
+    th_2.find("  .variunt-count, .input-wrap input ").change(function() { 
+      th_2.find(".big").text(summ_2);
+    });
+ 
+ 
+// калькулятор 3
+function calc_3(a,b,c,d){
+  return 103;
+}
+ 
+    var th_3 = $(".s-calc_3"),
+        summ_3 = 0,
+        var_price_3 = parseInt(th_3.find(".variunt-count").val()),
+        input_sq_3 = parseInt(th_3.find('input.sq').val()),
+        var_mater_3 = parseInt(th_3.find(".mater:checked").data("price"));
+        var_coat_3 = parseInt(th_3.find(".coat:checked").data("price"));
+        th_3.find(".big").text(summ_3);
+        summ_3 = calc_3(var_price_3 , input_sq_3 ,var_mater_3, var_coat_3);
+      th_3.find(".variant-item").click(function(){
+      th_3.find(".big").text(summ_3);
+    })
+
+    th_3.find(".variunt-count, .input-wrap input").change(function() { 
+      th_3.find(".big").text(summ_3);
+    });
+  
+ 
+$("input[type='tel']").inputmask("8-999-999-99-99");
+
+
+// $(".s-opis_plitka").each(function(i){ 
+//   $(".s-opis_plitka").eq(i).find(".col-md-6").each(function(){ 
+//   $(this).attr("data-wow-delay", i*.1*2 + "s"); 
+//   }) 
+// })
+
+
+
+$(".s-opis_plitka:nth-child(odd) .col-md-6:first-child").addClass("wow slideInRight");
+$(".s-opis_plitka:nth-child(odd) .col-md-6:last-child").addClass("wow slideInLeft");
+$(".s-opis_plitka:nth-child(even) .col-md-6:first-child").addClass("wow slideInLeft");
+$(".s-opis_plitka:nth-child(even) .col-md-6:last-child").addClass("wow slideInRight");
+
+
+
+new WOW().init({mobile:  false,   });
+
 });
-// карта
-ymaps.ready(init);
-        var myMap, 
-            myPlacemark;
-        function init(){ 
-            myMap = new ymaps.Map("map", {
-           
-                center: [52.34624838674198,30.701533637939377],
-
-                behaviors: ['drag'],
-                zoom: 11,
-                controls: ["zoomControl", "fullscreenControl"]
-
-            });   
-            myPlacemark = new ymaps.Placemark([52.34144520792636,30.65230165561091], {
-                hintContent: 'г. Гомель, Речицкий район, д. Борщевка 10',
-                balloonContent: 'г. Гомель, Речицкий район, д. Борщевка 10'
-            }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/map-metka.png',
-            // Размеры метки.
-            iconImageSize: [265, 76],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [0, -90]
-        });
-            myMap.geoObjects.add(myPlacemark);
-          }
-

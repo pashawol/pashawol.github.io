@@ -160,7 +160,7 @@ $(".select-color .jq-selectbox__dropdown li").each(function(){
 function heightses() {
 
 
-     $('.cat-wrap .main-wrap,.favorites-wrap .main-wrap, .s-rec').each(function(){
+     $('.cat-wrap .main-wrap,.favorites-wrap .main-wrap, .s-rec, .carusel-prod').each(function(){
         var highestBox = 0;
         $('.item-prod-wrap ', this).each(function(){
             if($(this).height() > highestBox) {
@@ -314,6 +314,31 @@ $('.gal-big').magnificPopup({
   prevArrow: ' <div class="slick-arrow l"><i class="demo-icon icon-angle-left"> </i></div>',
   nextArrow: '   <div class="slick-arrow r"><i class="demo-icon icon-angle-right"> </i></div> ',
   // fade: true
+  responsive: [
+      
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+        
+        }
+      },
+       {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        
+        }
+      },
+
+      {
+        breakpoint: 490,
+        settings: {
+          slidesToShow: 1,
+         
+        }
+      } 
+    ]
 });
 
 

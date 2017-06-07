@@ -137,19 +137,19 @@
       <!-- section.s-slider-->
       <section class="s-form" style="background-image: url(img/bg-form-1.jpg);">
         <div class="container">
+          <h2 class="small">Оставьте заявку</h2>
+          <p class="gray">и мы позвоним Вам и поможем подобрать окно, какое нужно именно Вам!</p>
           <form method="post" action="action.php">
-            <h2 class="small">Оставьте заявку</h2>
-            <p class="gray">и мы позвоним Вам и поможем подобрать окно, какое нужно именно Вам!</p>
             <!-- Hidden Required Fields-->
             <input type="hidden" name="project_name" value="Заявка с сайта"/>
             <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
-            <input class="order" type="hidden" name="form_subject" value="На подбор окон"/>
+            <input class="order" type="hidden" name="form_subject" value="Заявка на подбор окон"/>
             <div class="row">
               <div class="col-md-4 col-sm-6">
                 <input type="text" name="Имя" placeholder="Ваше имя *" required="required"/>
               </div>
               <div class="col-md-4 col-sm-6">
-                <input type="tel" name="Телефон" placeholder="Ваш телефон *" required="required"/>
+                <input type="tel" name="Телефон" placeholder="Ваш телефон *" pattern="^d{1}-d{3}-d{3}-d{2}-d{2}$" required="required"/>
               </div>
               <div class="col-md-4 col-sm-12">
                 <button class="btn-submit">Оставить заявку</button>
@@ -276,7 +276,7 @@
         <section class="s-calc">
           <div class="container">
             <h2 class="small">Калькулятор окон</h2>
-            <form>
+            <form method="post" action="action.php">
               <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                   <div class="variant text-center">
@@ -305,20 +305,20 @@
                   <div class="variant">
                     <h5>2. Выберите размеры и материал</h5>
                     <div class="input-wrap input-number"><strong>Размеры</strong>
-                      <input class="height" type="number" name="Высота окна " placeholder="Высота окна, см"/>
-                      <input class="width" type="number" name="Ширина окна" placeholder="Ширина окна, см"/>
+                      <input type="number" name="Высота двери " placeholder="Высота двери, мм" required="required"/>
+                      <input type="number" name="Ширина двери" placeholder="Ширина двери, мм" required="required"/>
                     </div>
                     <div class="input-wrap input-radio-wrap"><strong>Материал</strong>
                       <label>
-                        <input type="radio" name="Материал" data-price="1"/><span class="lab"></span>Сосна
+                        <input type="radio" name="Материал" data-price="1" value="Сосна"/><span class="lab"></span>Сосна
                       </label>
                       <!-- label--><br/>
                       <label>
-                        <input type="radio" name="Материал" data-price="2"/><span class="lab"></span>Лиственница
+                        <input type="radio" name="Материал" data-price="2" value="Лиственница"/><span class="lab"></span>Лиственница
                       </label>
                       <!-- label--><br/>
                       <label>
-                        <input type="radio" name="Материал" data-price="3"/><span class="lab"></span>Дуб
+                        <input type="radio" name="Материал" data-price="3" value="Дуб"/><span class="lab"></span>Дуб
                       </label>
                       <!-- label--><br/>
                     </div>
@@ -334,6 +334,10 @@
                       <div class="col-lg-12 col-sm-6">
                         <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
                         <div class="form-wrap">
+                          <!-- Hidden Required Fields-->
+                          <input type="hidden" name="project_name" value="Заявка с сайта"/>
+                          <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
+                          <input class="order" type="hidden" name="form_subject"/>
                           <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
                           <button class="btn-submit">Отправить</button>
                         </div>
@@ -383,19 +387,19 @@
       </div>
       <section class="s-form" style="background-image: url(img/bg-form-2.jpg);">
         <div class="container">
+          <h2 class="small">Оставьте заявку</h2>
+          <p class="gray">и мы позвоним Вам и поможем подобрать дверь, которая подойдет именно Вам!</p>
           <form method="post" action="action.php">
-            <h2 class="small">Оставьте заявку</h2>
-            <p class="gray">и мы позвоним Вам и поможем подобрать дверь, которая подойдет именно Вам!</p>
             <!-- Hidden Required Fields-->
             <input type="hidden" name="project_name" value="Заявка с сайта"/>
             <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
-            <input class="order" type="hidden" name="form_subject" value="На подбор двери"/>
+            <input class="order" type="hidden" name="form_subject" value="Заявка на подбор двери"/>
             <div class="row">
               <div class="col-md-4 col-sm-6">
                 <input type="text" name="Имя" placeholder="Ваше имя *" required="required"/>
               </div>
               <div class="col-md-4 col-sm-6">
-                <input type="tel" name="Телефон" placeholder="Ваш телефон *" required="required"/>
+                <input type="tel" name="Телефон" placeholder="Ваш телефон *" pattern="^d{1}-d{3}-d{3}-d{2}-d{2}$" required="required"/>
               </div>
               <div class="col-md-4 col-sm-12">
                 <button class="btn-submit">Оставить заявку</button>
@@ -522,7 +526,7 @@
         <section class="s-calc">
           <div class="container">
             <h2 class="small">Калькулятор дверей и входных групп</h2>
-            <form>
+            <form method="post" action="action.php">
               <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                   <div class="variant text-center">
@@ -551,8 +555,8 @@
                   <div class="variant var-column">
                     <h5>2. Выберите размеры и материал</h5>
                     <div class="input-wrap input-number"><strong>Размеры</strong>
-                      <input type="number" name="Высота двери " placeholder="Высота двери, см"/>
-                      <input type="number" name="Ширина двери" placeholder="Ширина двери, см"/>
+                      <input type="number" name="Высота двери " placeholder="Высота двери, мм" required="required"/>
+                      <input type="number" name="Ширина двери" placeholder="Ширина двери, мм" required="required"/>
                     </div>
                     <div class="input-wrap input-radio-wrap"><strong>Материал </strong>
                       <div class="lab-wrap">
@@ -565,23 +569,23 @@
                     <div class="input-wrap input-radio-wrap"><strong>Витраж</strong>
                       <div class="lab-wrap">
                         <label>
-                          <input type="radio" name="Наличие витража" data-price="1"/><span class="lab"></span>Да
+                          <input class="vitraj yes" type="radio" name="Наличие витража" data-price="1" value="Да"/><span class="lab"></span>Да
                         </label>
                         <!-- label--><br/>
                         <label>
-                          <input type="radio" name="Наличие витража" data-price="2"/><span class="lab"></span>Нет
+                          <input class="vitraj  no" type="radio" name="Наличие витража" data-price="2" value="нет"/><span class="lab"></span>Нет
                         </label>
                         <!-- label--><br/>
                       </div>
                     </div>
-                    <div class="input-wrap input-radio-wrap"><strong>Витраж</strong>
+                    <div class="input-wrap input-radio-wrap disabled"><strong>Тип витража</strong>
                       <div class="lab-wrap">
                         <label>
-                          <input type="radio" name="Вид витража" data-price="1"/><span class="lab"></span>Пленочный
+                          <input class="vVitraj" type="radio" name="Тип витража" data-price="1" value="Пленочный"/><span class="lab"></span>Пленочный
                         </label>
                         <!-- label--><br/>
                         <label>
-                          <input type="radio" name="Вид витража" data-price="2"/><span class="lab"></span>Паяный
+                          <input class="vVitraj" type="radio" name="Тип витража" data-price="2" value="Паяный"/><span class="lab"></span>Паяный
                         </label>
                         <!-- label--><br/>
                       </div>
@@ -598,6 +602,10 @@
                       <div class="col-lg-12 col-sm-6">
                         <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
                         <div class="form-wrap">
+                          <!-- Hidden Required Fields-->
+                          <input type="hidden" name="project_name" value="Заявка с сайта"/>
+                          <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
+                          <input class="order" type="hidden" name="form_subject"/>
                           <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
                           <button class="btn-submit">Отправить</button>
                         </div>
@@ -644,19 +652,19 @@
       </div>
       <section class="s-form" style="background-image: url(img/bg-form-3.jpg);">
         <div class="container">
+          <h2 class="small">Оставьте заявку</h2>
+          <p class="gray">и мы позвоним Вам и поможем подобрать полы, которые нужны именно Вам!</p>
           <form method="post" action="action.php">
-            <h2 class="small">Оставьте заявку</h2>
-            <p class="gray">и мы позвоним Вам и поможем подобрать полы, которые нужны именно Вам!</p>
             <!-- Hidden Required Fields-->
             <input type="hidden" name="project_name" value="Заявка с сайта"/>
             <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
-            <input class="order" type="hidden" name="form_subject" value="На подбор двери"/>
+            <input class="order" type="hidden" name="form_subject" value="Заявка на подбор двери"/>
             <div class="row">
               <div class="col-md-4 col-sm-6">
                 <input type="text" name="Имя" placeholder="Ваше имя *" required="required"/>
               </div>
               <div class="col-md-4 col-sm-6">
-                <input type="tel" name="Телефон" placeholder="Ваш телефон *" required="required"/>
+                <input type="tel" name="Телефон" placeholder="Ваш телефон *" pattern="^d{1}-d{3}-d{3}-d{2}-d{2}$" required="required"/>
               </div>
               <div class="col-md-4 col-sm-12">
                 <button class="btn-submit">Оставить заявку</button>
@@ -701,7 +709,7 @@
         <section class="s-calc">
           <div class="container">
             <h2 class="small">Калькулятор полов</h2>
-            <form>
+            <form method="post" action="action.php">
               <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                   <div class="variant text-center">
@@ -735,20 +743,20 @@
                   <div class="variant var-column">
                     <h5>2. Выберите размеры и материал</h5>
                     <div class="input-wrap input-number"><strong>Размеры</strong>
-                      <input type="number" name="Размеры" placeholder="Размеры, м2"/>
+                      <input class="sq" type="number" name="Размеры" placeholder="Размеры, м2" required="required"/>
                     </div>
                     <div class="input-wrap input-radio-wrap"><strong>Материал </strong>
                       <div class="lab-wrap">
                         <label>
-                          <input type="radio" name="Материал" data-price="1" value=""/><span class="lab"></span>Сосна
+                          <input class="mater" type="radio" name="Материал" data-price="1" value="Сосна"/><span class="lab"></span>Сосна
                         </label>
                         <!-- label--><br/>
                         <label>
-                          <input type="radio" name="Материал" data-price="2" value=""/><span class="lab"></span>Дуб
+                          <input class="mater" type="radio" name="Материал" data-price="2" value="Дуб"/><span class="lab"></span>Дуб
                         </label>
                         <!-- label--><br/>
                         <label>
-                          <input type="radio" name="Материал" data-price="3" value=""/><span class="lab"></span>Лиственница
+                          <input class="mater" type="radio" name="Материал" data-price="3" value="Лиственница"/><span class="lab"></span>Лиственница
                         </label>
                         <!-- label--><br/>
                       </div>
@@ -756,13 +764,13 @@
                     <div class="input-wrap input-radio-wrap"><strong>Покрытие</strong>
                       <div class="lab-wrap">
                         <label>
-                          <input type="radio" name="Покрытие" data-price="1" value=""/><span class="lab"></span>Воск
+                          <input class="coat" type="radio" name="Покрытие" data-price="1" value="Воск"/><span class="lab"></span>Воск
                         </label>
                         <label>
-                          <input type="radio" name="Покрытие" data-price="2" value=""/><span class="lab"></span>Без покрытия
+                          <input class="coat" type="radio" name="Покрытие" data-price="2" value="Без покрытия"/><span class="lab"></span>Без покрытия
                         </label>
                         <label>
-                          <input type="radio" name="Покрытие" data-price="3" value=""/><span class="lab"></span>Лак
+                          <input class="coat" type="radio" name="Покрытие" data-price="3" value="Лак"/><span class="lab"></span>Лак
                         </label>
                       </div>
                     </div>
@@ -778,6 +786,10 @@
                       <div class="col-lg-12 col-sm-6">
                         <p>Оставьте Ваш номер телефона или e-mail и наш менеджер свяжется с Вами</p>
                         <div class="form-wrap">
+                          <!-- Hidden Required Fields-->
+                          <input type="hidden" name="project_name" value="Заявка с сайта"/>
+                          <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
+                          <input class="order" type="hidden" name="form_subject"/>
                           <input type="text" name="Имя" placeholder="Ваш № телефона или e-mail" required="required"/>
                           <button class="btn-submit">Отправить</button>
                         </div>
@@ -917,19 +929,20 @@
       <div class="zoom-anim-dialog mfp-hide modal-window" id="small-dialog">
         <p class="h3">Связаться с региональным представителем</p>
         <p class="text">Введите Ваши данные и мы Вам<br/>перезвоним в течении часа</p>
-        <form>
+        <form method="post" action="action.php">
+          <!-- Hidden Required Fields-->
           <input type="hidden" name="project_name" value="Заявка с сайта"/>
           <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
           <input class="order" type="hidden" name="form_subject" value=""/>
           <div class="row">
             <div class="col-sm-6 col-xs-12">
               <div class="input-wrap">
-                <input type="text" name="Имя" placeholder="Ваше имя"/>
+                <input type="text" name="Имя" placeholder="Ваше имя" required="required"/>
               </div>
             </div>
             <div class="col-sm-6 col-xs-12">
               <div class="input-wrap">
-                <input type="tel" name="Телефон" placeholder="№ телефона"/>
+                <input type="tel" name="Телефон" placeholder="Ваш телефон *" pattern="^d{1}-d{3}-d{3}-d{2}-d{2}$" required="required"/>
               </div>
             </div>
           </div>
@@ -947,6 +960,7 @@
       </div>
     </div>
     <link rel="stylesheet" href="fonts/fontello/css/fontello.css">
+    <link rel="stylesheet" href="//code.cdn.mozilla.net/fonts/fira.css">
     <script src="js/scripts.min.js"></script>
     <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/common.js"></script>
