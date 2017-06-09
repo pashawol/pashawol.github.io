@@ -27,4 +27,16 @@ $( window ).on( "load", function() {
 
  heightses();
 
+
+
+// листалка по стр
+ $(" header a.btn, .stock a.btn ").click(function () {
+        var elementClick = $(".catalog");
+        var destination = $(elementClick).offset().top;
+        
+            $('html, body').animate({ scrollTop: destination }, 1100);
+        
+        return false; 
+    });
+
 });
