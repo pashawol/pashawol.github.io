@@ -97,4 +97,109 @@ $('.patner__slider').slick({
       } 
     ]
   });
+// слайдер с миниатюрами
+ $('.otz-slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  // arrows: false, 
+  asNavFor: '.slider-nav',
+  dots: false,
+  prevArrow: ' <div class="l"></div>',
+  nextArrow: '   <div class="r"></div> ',
+  adaptiveHeight: true,
+
+  // draggable: false 
+
+});
+$('.slider-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.otz-slider',
+  dots: false,  
+  // centerMode: true,
+  focusOnSelect: true,
+  // vertical: false,
+  arrows: true,
+  prevArrow: ' <div class="l"><i class="fa fa-angle-left" aria-hidden="true"> </i></div>',
+  nextArrow: '   <div class="r"><i class="fa fa-angle-right" aria-hidden="true"> </i></div> ',
+  // draggable: false 
+
+  responsive: [
+      {
+        breakpoint:992,
+        settings: {
+          slidesToShow: 2,
+          
+        }
+      },
+      
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+         
+        }
+      }
+     
+    ]
+});
+
+$('.zoom-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    mainClass: 'mfp-with-zoom mfp-img-mobile',
+    image: {
+      // verticalFit: true,
+      
+    },
+    gallery: {
+      enabled: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300, // don't foget to change the duration also in CSS
+       
+    }
+    
+  });
+
+// aккорион
+$("p.toogle").click(function(){
+  $(this).next(".hide-toogle").slideToggle().toggleClass("active");
+  $(this).toggleClass("active");
+})
+
+
+
+$('.slide-project__carusel').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: false,
+    speed: 900,
+    infinite: true,  
+    arrows: true,
+    focusOnSelect: true,
+   useTransform:false,
+    prevArrow: ' <div class="l"><i class="fa fa-angle-left" aria-hidden="true"> </i></div>',
+  nextArrow: '   <div class="r"><i class="fa fa-angle-right" aria-hidden="true"> </i></div> ',
+      responsive: [
+      
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        
+        }
+      },
+      {
+        breakpoint: 690,
+        settings: {
+          slidesToShow: 1,
+         
+        }
+      } 
+    ]
+  });
 });
