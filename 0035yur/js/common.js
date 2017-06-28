@@ -65,7 +65,7 @@ $( window ).on( "load", function() {
       
      
       {
-        breakpoint: 640,
+        breakpoint: 992,
         settings: {
           slidesToShow: 1,
         
