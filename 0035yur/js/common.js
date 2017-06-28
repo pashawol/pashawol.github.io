@@ -51,5 +51,26 @@ $( window ).on( "load", function() {
       th.hide();
   })
 
- 
+  $('section.otz .row.slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
+    speed: 900,
+    infinite: false,
+    loop: false,  
+    arrows: true,
+     prevArrow: ' <div class="l"><i class="fa fa-angle-left" aria-hidden="true"> </i></div>',
+    nextArrow: '   <div class="r"><i class="fa fa-angle-right" aria-hidden="true"> </i></div> ',
+        responsive: [
+      
+     
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        
+        }
+      }
+    ]
+  });
 });
