@@ -6,6 +6,7 @@ $(function() {
    
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
    $(".problem").height('auto').equalHeights();
+   $(".when__item").height('auto').equalHeights();
     
   }
 
@@ -50,6 +51,34 @@ $( window ).on( "load", function() {
       th.next().slideUp().next().show();
       th.hide();
   })
+
+
+
+  $(".our__open").click(function(){
+      $(".our__item ul").slideUp();
+
+      $(".open").removeClass("hidden");
+      $(".our__open").removeClass("active");
+      $(".close").addClass("hidden");
+      
+      var th = $(this);
+      th.prev().slideToggle();
+      th.toggleClass("active");
+      th.find(".open").toggleClass("hidden");
+      th.find(".close").toggleClass("hidden");
+  })
+  
+  $(".our__open.active").click(function(){
+      $(".our__item ul").slideUp();
+
+      $(".open").removeClass("hidden");
+      $(".our__open").removeClass("active");
+      $(".close").addClass("hidden");
+
+      
+  })
+  
+ 
 
   $('section.otz .row.slider').slick({
     slidesToShow: 2,
