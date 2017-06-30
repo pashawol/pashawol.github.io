@@ -54,30 +54,36 @@ $( window ).on( "load", function() {
 
 
 
-  $(".our__open").click(function(){
-      $(".our__item ul").slideUp();
-
-      $(".open").removeClass("hidden");
-      $(".our__open").removeClass("active");
-      $(".close").addClass("hidden");
+  $(".hidd").click(function(){
       
       var th = $(this);
-      th.prev().slideToggle();
-      th.toggleClass("active");
-      th.find(".open").toggleClass("hidden");
-      th.find(".close").toggleClass("hidden");
-  })
-  
-  $(".our__open.active").click(function(){
-      $(".our__item ul").slideUp();
-
-      $(".open").removeClass("hidden");
-      $(".our__open").removeClass("active");
-      $(".close").addClass("hidden");
-
+      var par= th.parents(".our__item")
+     
+            $(".our__item ul").slideUp(); 
+            $(".open").removeClass("hidden");
+            $(".our__open").removeClass("active__open");
+            $(".close").addClass("hidden");
+          
       
+      if(par.find("ul").is(":visible") ==true){
+            $(".our__item ul").slideUp(); 
+            $(".open").removeClass("hidden");
+            $(".our__open").removeClass("active__open");
+            $(".close").addClass("hidden");
+          
+      }
+
+      else{
+            par.find("ul").slideDown();
+      
+            th.removeClass("hidd");
+            th.find(".open").addClass("hidden");
+            th.find(".close").removeClass("hidden");
+            th.addClass("active__open");
+          }
   })
   
+
  
 
   $('section.otz .row.slider').slick({
