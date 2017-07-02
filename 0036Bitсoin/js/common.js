@@ -21,7 +21,18 @@ $(function() {
  
 
  // heightses();
-
+ // ценник в карточках
+ $(".prod__price").each(function(){
+  var th = $(this)
+  th.text(th.parents(".prod__item").find(".prod__currency-item.active").data("bit"));
+ })
+ $(".prod__currency-item").click(function(){
+  var th = $(this);
+  var par = th.parents(".prod__item");
+  par.find(".prod__currency-item").removeClass("active");
+  th.addClass("active");
+  par.find(".prod__price").text(th.data("bit"));
+ })
 
   $('.prod .row').slick({
       slidesToShow: 4,
