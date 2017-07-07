@@ -39,4 +39,30 @@ $( window ).on( "load", function() {
         return false; 
     });
 
+
+// табы
+$(function() {
+// $(' .tabs__caption   .tab-btn:first-child  ').addClass("active")
+ // $('.tabs__content:first-child ').addClass("active");
+$(' .tabs__caption').on('click', '.tab-btn:not(.active)', function(e) {
+
+  $(this)
+    .addClass('active').addClass('current').siblings().removeClass('active')
+    .closest('div.tabs').find('div.tabs__content').hide().removeClass('active')
+    .eq($(this).index()).fadeIn().addClass('active');
+   
+    // $('.slider-small, .slider-big').slick('unslick');
+    //  section_slider();
+    return false;
+});
+});
+$(".btn-next").click(function(){
+  $(this).parents(".tabs").find(".tab-btn.active").next().click();
+  return false;
+})
+$(".back-link").click(function(){
+  $(this).parents(".tabs").find(".tab-btn.active").prev().click();
+  return false;
+})
+
 });
