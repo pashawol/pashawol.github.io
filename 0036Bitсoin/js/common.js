@@ -119,7 +119,7 @@ function heightses() {
       $('.prod__btn').each(function(){
         var th = $(this),
             th2= th.parents(".prod__item");
-        th.attr("href","#small-dialog")
+        $('.prod__btn').attr("href","#small-dialog")
         .click(function(){
             // ценник в модалке
           $(".modal-form ").each(function(){
@@ -159,5 +159,20 @@ function heightses() {
   par.find(".currency__price").val(th.data("bit")).text(th.data("bit"));
  })
 
+ $(".btn__modal").magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: true,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+      
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    }); 
 
 });
