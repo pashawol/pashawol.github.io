@@ -89,7 +89,7 @@ $( window ).on( "load", function() {
     });
     // $( ".filter__distance " ).text( $( ".filter__custom-handle-distance   " ).slider( "value" )+" км" );
     
-     th.find(".calc__range").draggable();
+     // th.find(".calc__range").draggable();
 });
  // видео в мод окне
  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
