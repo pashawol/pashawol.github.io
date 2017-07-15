@@ -22,7 +22,7 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- $(".top-nav a").click(function () {
+ $(".top-nav a, .trop.main-mnu a").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         
