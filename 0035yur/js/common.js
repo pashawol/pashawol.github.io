@@ -108,4 +108,66 @@ $( window ).on( "load", function() {
       }
     ]
   });
+
+  $(".header__btn").each(function(event){
+    $(this).attr("href", "#small-dialog");
+    // event.preventDefault();
+    return false;
+
+  })
+   // модалка
+   $('.header__btn, .btn-modal').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: true,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
+  }); 
+
+
+  $("section").each(function(){
+    $(this).find(".gal__row  ").magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        closeOnContentClick: false,
+        closeBtnInside: false,
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+          // verticalFit: true,
+          
+        },
+        gallery: {
+          enabled: true
+        },
+        zoom: {
+          enabled: true,
+          duration: 300, // don't foget to change the duration also in CSS
+           
+        }
+        
+      });
+
+  }) 
+
+  // переход в форме на стр dispute
+  $(".form-debt__wrap .custom-label__input").click(function(){
+    var th= $(this);
+    th.parents(".form-debt__wrap").find(".form-debt__btn.disabled")
+    .removeClass("disabled");
+
+  })
+  $(".form-debt__btn.next").click(function(e){
+    var th= $(this);
+    th.parents(".form-debt__item.form-debt__item-active").removeClass("form-debt__item-active").next("").fadeIn();
+    return false;
+  })
+
 });
