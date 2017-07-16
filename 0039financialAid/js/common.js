@@ -46,7 +46,6 @@ $( window ).on( "load", function() {
     });
 
     // маска на инпут
-    $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
      // модалка
   $(".btn-modal").each(function(){
     $(this).attr("href", "#small-dialog")
@@ -57,6 +56,7 @@ $( window ).on( "load", function() {
     // })
   })
 
+    $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 
     // модалка
    $('.btn-modal').magnificPopup({
@@ -89,8 +89,8 @@ $( window ).on( "load", function() {
     });
     // $( ".filter__distance " ).text( $( ".filter__custom-handle-distance   " ).slider( "value" )+" км" );
     
-     th.find(".calc__range").draggable();
 });
+    // $(".ui-slider-range").draggable();
  // видео в мод окне
  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
     // disableOn: 700,
