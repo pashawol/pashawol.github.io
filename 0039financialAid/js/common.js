@@ -102,4 +102,38 @@ $( window ).on( "load", function() {
     fixedContentPos: false
   });
  
+
+ 
+ function heightses() {
+    var w = $(window).width();
+     var topH=$("header ").innerHeight();  
+  if($(this).scrollTop()>topH){
+                  $('.top-nav  ').addClass('fixed');
+                  
+              }
+              else if ($(this).scrollTop()<topH){
+                  $('.top-nav  ').removeClass('fixed');
+                 
+              }
+  $(window).scroll(function(){
+              if($(this).scrollTop()>topH){
+                  $('.top-nav  ').addClass('fixed');
+               
+              }
+              else if ($(this).scrollTop()<topH){
+                  $('.top-nav  ').removeClass('fixed');
+                
+              }
+          });
+      
+  }
+
+  $(window).resize(function() {
+    heightses();
+  });
+
+  $( window ).on( "load", function() {
+ heightses();
+})
+  heightses();
 });
