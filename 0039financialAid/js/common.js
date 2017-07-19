@@ -103,10 +103,10 @@ $( window ).on( "load", function() {
   });
  
 
- 
+
  function heightses() {
     var w = $(window).width();
-     var topH=$("header ").innerHeight();  
+     var topH=$(".top-line ").innerHeight();  
   if($(this).scrollTop()>topH){
                   $('.top-nav  ').addClass('fixed');
                   
