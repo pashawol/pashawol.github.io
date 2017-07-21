@@ -71,21 +71,13 @@ $(function() {
     
 });
     // $(".ui-slider-range").draggable();
- // видео в мод окне
- $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    // disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-
-    fixedContentPos: false
-  });
  
 
 
  function heightses() {
     var w = $(window).width();
+     $(".offers h3 ").height('auto').equalHeights();
+     
      var topH=$(".top-line ").innerHeight();  
   if($(this).scrollTop()>topH){
                   $('.top-nav  ').addClass('fixed');
@@ -117,45 +109,18 @@ $(function() {
 })
   heightses();
 
-$("section").each(function(){
-  var th = $(this);
-
-  var $gallery = th.find('.slider');
-  $gallery.slick({
+$('.slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
     speed: 450,
     infinite: false,  
     arrows: true,
-     prevArrow: ' <div class="l"><i class="icon-back" aria-hidden="true"> </i></div>',
-      nextArrow: '   <div class="r"><i class="icon-back" aria-hidden="true"> </i></div> ',
+     prevArrow: ' <div class="l"><i class="fa fa-angle-left" aria-hidden="true"> </i></div>',
+      nextArrow: '   <div class="r"><i class="fa fa-angle-right" aria-hidden="true"> </i></div> ',
  
   });
-  var $sl_l= th.find('.slider__slide').length;
-  th.find(".slide-count-wrap .total-c").text( "0" + $sl_l);
 
-
-
-$gallery.on('init', function(event, slick){
-  slideCount = slick.slideCount;
-  setSlideCount();
-  setCurrentSlideNumber(slick.currentSlide);
-});
-
-$gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  setCurrentSlideNumber(nextSlide);
-});
-
-function setSlideCount() {
-  var $el = th.find('.slide-count-wrap').find('.total');
-  $el.text(  slideCount);
-}
-
-function setCurrentSlideNumber(currentSlide) {
-  var $el = th.find('.slide-count-wrap').find('.current');
-  $el.text( currentSlide + 1);
-}
-})
+ 
 
 });
