@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <meta name="description" content="о чем страница">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#3361d8">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#3361d8">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3361d8">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <header class="header"><a class="toggle-mnu toggle-mnu-1 hidden-lg" href="#"><span></span></a>
+      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2">
+        <ul> 
+          <li class="top-nav__item"><a class="top-nav__item-link" href="header">Новый Ford Kuga</a></li>
+          <li class="top-nav__item"><a class="top-nav__item-link" href=".client">Спецпредложения</a></li>
+          <li class="top-nav__item"><a class="top-nav__item-link" href=".traid">Trade-In</a></li>
+          <li class="top-nav__item"><a class="top-nav__item-link" href=".prog">Ford Credit</a></li>
+          <li class="top-nav__item"><a class="top-nav__item-link" href=".pride">О компании</a></li>
+          <li class="top-nav__item"><a class="top-nav__item-link" href=".contact">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="top-nav">
+        <div class="container"><a class="top-nav__logo"> <img class="res-i" src="img/logo.png" alt=""/></a>
+          <ul class="top-nav__nav hidden-sm hidden-xs hidden-md">
+            <li class="top-nav__item"><a class="top-nav__link" href="header">Новый Ford Kuga</a>
+            </li>
+            <li class="top-nav__item"><a class="top-nav__link" href=".client">Спецпредложения</a>
+            </li>
+            <li class="top-nav__item"><a class="top-nav__link" href=".traid">Trade-In</a>
+            </li>
+            <li class="top-nav__item"><a class="top-nav__link" href=".prog">Ford Credit</a>
+            </li>
+            <li class="top-nav__item"><a class="top-nav__link" href=".pride">О компании</a>
+            </li>
+            <li class="top-nav__item"><a class="top-nav__link" href=".contact">Контакты</a>
+            </li>
+            <li class="top-nav__item"><a class="top-nav__link" href="#">Другие модели FORD</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="offers">offers</div>
+    <div class="s-form">s-form</div>
+    <div class="trade">trade</div>
+    <div class="prog">prog</div>
+    <div class="top3">top3</div>
+    <div class="char">char</div>
+    <div class="pride">pride</div>
+    <div class="team">team</div>
+    <div class="contact">contact</div>
+    <div class="footer">footer</div>
+    <div class="zoom-anim-dialog mfp-hide modal-window modal-form" id="small-dialog">
+      <div class="form-wrap text-center">  
+        <h3>Оставьте заявку на получение займа</h3><span> Менеджер свяжемся с вами в течение 5 минут</span>
+        <form method="post" action="action.php">
+          <div class="form-wrap__item-wrap">
+            <!-- .form-wrap__item-->
+            <div class="form-wrap__item">
+              <label> 
+                <input type="text" placeholder="как вас зовут" name="Имя" required="required"/>
+              </label>
+            </div>
+            <!-- .form-wrap__item-->
+            <div class="form-wrap__item">
+              <label> 
+                <input type="tel" placeholder="Введите ваш телефон" name="Телефон" required="required"/>
+              </label>
+            </div>
+            <!-- .form-wrap__item-->
+            <div class="form-wrap__item">
+              <button class="btn btn-info" type="submit">ОТПРАВИТЬ</button>
+            </div>
+          </div>
+          <!-- .form-wrap__item-->
+          <p class="form-wrap__politic">
+            Я согласен с <a class="form-wrap__link" href="" target="_blank"> условиями</a>
+            обработки персональных данных
+          </p>
+          <div class="form-wrap__bot-small"> <strong>Скидка 30% </strong>всем первым клиентам
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="zoom-anim-dialog mfp-hide modal-window" id="thanks">
+      <div class="form-wrap text-center"><br/>
+        <h3>Ваша заявку принята</h3><br/><span>Скоро с Вами свяжутся</span><br/><br/>
+      </div>
+    </div>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
