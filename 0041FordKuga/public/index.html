@@ -28,7 +28,17 @@
           <li><a href=".prog">Ford Credit</a></li>
           <li><a href=".pride">О компании</a></li>
           <li><a href=".contact">Контакты</a></li>
-          <li><a href="#">Другие модели FORD</a></li>
+          <li><span class="header__link dropdown-toggle">Другие модели FORD<span class="caret"></span></span>
+            <ul> 
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider" role="separator"></li>
+              <li><a href="#">Separated link</a></li>
+              <li class="divider" role="separator"></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
       <div class="top-nav">
@@ -46,7 +56,16 @@
             </li>
             <li class="top-nav__item"><a class="top-nav__link" href=".contact">Контакты</a>
             </li>
-            <li class="top-nav__item"><a class="top-nav__link" href="#">Другие модели FORD</a>
+            <li class="top-nav__item dropdown"><span class="top-nav__link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Другие модели FORD<span class="caret"></span></span>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider" role="separator"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider" role="separator"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
             </li>
           </ul><a class="btn-modal btn btn-info top-nav__btn" href="">ЗАКАЗАТЬ ЗВОНОК</a>
         </div>
@@ -65,7 +84,7 @@
         <h2>
           НАШИ ЛУЧШИЕ ПРЕДЛОЖЕНИЯ Июля&#160;2017</h2>
         <div class="row">
-              <div class="col-md-4 col-sm-6 col col-xs-12">
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
                 <div class="block-item block-item-img"><img class="res-i" src="img/offers-1.png" alt=""/>
                   <div class="block-item__caption">
                     <h3>Экономия до 150 000 рублей</h3>
@@ -74,7 +93,7 @@
                 </div>
               </div>
               <!-- end .col-md-4.col-sm-6-->
-              <div class="col-md-4 col-sm-6 col col-xs-12">
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
                 <div class="block-item block-item-img"><img class="res-i" src="img/offers-2.png" alt=""/>
                   <div class="block-item__caption">
                     <h3>Выгодные условия обмена</h3>
@@ -83,7 +102,7 @@
                 </div>
               </div>
               <!-- end .col-md-4.col-sm-6-->
-              <div class="col-md-4 col-sm-6 col col-xs-12">
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
                 <div class="block-item block-item-img"><img class="res-i" src="img/offers-3.png" alt=""/>
                   <div class="block-item__caption">
                     <h3>Опции в подарок на сумму до 59 000 руб.</h3>
@@ -92,7 +111,7 @@
                 </div>
               </div>
               <!-- end .col-md-4.col-sm-6-->
-              <div class="col-md-4 col-sm-6 col col-xs-12">
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
                 <div class="block-item block-item-img"><img class="res-i" src="img/offers-4.png" alt=""/>
                   <div class="block-item__caption">
                     <h3>Бонус от директора по продажам</h3>
@@ -101,7 +120,7 @@
                 </div>
               </div>
               <!-- end .col-md-4.col-sm-6-->
-              <div class="col-md-4 col-sm-6 col col-xs-12">
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
                 <div class="block-item block-item-img"><img class="res-i" src="img/offers-5.png" alt=""/>
                   <div class="block-item__caption">
                     <h3>5-ть специальных  программ Ford Credit</h3>
@@ -110,7 +129,7 @@
                 </div>
               </div>
               <!-- end .col-md-4.col-sm-6-->
-              <div class="col-md-4 col-sm-6 col col-xs-12">
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
                 <div class="block-item block-item-img"><img class="res-i" src="img/offers-6.png" alt=""/>
                   <div class="block-item__caption">
                     <h3>Автомобили с ПТС</h3>
@@ -123,7 +142,7 @@
       </div>
     </section>
     <!-- end offers-->
-    <section class="s-form s-form-1">
+    <section class="s-form s-form-1" style="background-image: url(../img/form__bg-1.jpg);">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
@@ -224,15 +243,586 @@
       </div>
     </section>
     <!-- end trade-->
-    <div class="prog">prog</div><span></span>
+    <section class="prog">
+      <div class="container container-1440">
+        <h2> ПРОГРАММА FORD CREDIT </h2>
+        <p>Не сомневайтесь: выбрав программу Ford Credit, Вы сотрудничаете с людьми, которые так же неравнодушны к автомобилям Ford, как и Вы!</p>
+        <div class="row">
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                <div class="block-item block-item-img prog__item"><img class="res-i" src="img/prog__1.png" alt=""/>
+                  <div class="block-item__caption"> 
+                    <p>Льготное автокредитование, реалазуемое совместно с государством </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end .col-md-4.col-sm-6-->
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                <div class="block-item block-item-img prog__item"><img class="res-i" src="img/prog__2.png" alt=""/>
+                  <div class="block-item__caption"> 
+                    <p>5-ть кредитных программ, удобный первоначальный взнос, оптимальный срок </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end .col-md-4.col-sm-6-->
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                <div class="block-item block-item-img prog__item"><img class="res-i" src="img/prog__3.png" alt=""/>
+                  <div class="block-item__caption"> 
+                    <p>Возможность оформления по 2-м документам </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end .col-md-4.col-sm-6-->
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                <div class="block-item block-item-img prog__item"><img class="res-i" src="img/prog__4.png" alt=""/>
+                  <div class="block-item__caption"> 
+                    <p>Возможность рассмотрения заявки за 15 минут</p>
+                  </div>
+                </div>
+              </div>
+              <!-- end .col-md-4.col-sm-6-->
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                <div class="block-item block-item-img prog__item"><img class="res-i" src="img/prog__5.png" alt=""/>
+                  <div class="block-item__caption"> 
+                    <p>Оформление кредита в салоне дилера в день получения автомобиля </p>
+                  </div>
+                </div>
+              </div>
+              <!-- end .col-md-4.col-sm-6-->
+              <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                <div class="block-item block-item-img prog__item"><img class="res-i" src="img/prog__6.png" alt=""/>
+                  <div class="block-item__caption"> 
+                    <p>Ford Options - возможность всегда управлять новым а/м</p>
+                  </div>
+                </div>
+              </div>
+              <!-- end .col-md-4.col-sm-6-->
+        </div>
+      </div>
+    </section>
+    <section class="s-form s-form-2" style="background-image: url(../img/form__bg-2.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="s-form__text">
+              <h2>
+                Оставьте заявку на&#160;расчет и&#160;мы расскажем Вам 3-и способа экономии при&#160;оформлении кредита&#160;</h2>
+              <ul class="s-form__ul">
+                <li class="s-form__item">Как сэкономить при оформлении полиса КАСКО
+                </li>
+                <li class="s-form__item">Как получить дополнительную выгоду  на автомобиль при оформлении кредита
+                </li>
+                <li class="s-form__item">В чем преимущества автокредита  перед потребительским кредитованием
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-wrap text-center">
+              <form method="post" action="action.php">
+                <!-- Hidden Required Fields-->
+                <input type="hidden" name="project_name" value="Заявка с сайта"/>
+                <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
+                <input class="form_subject" type="hidden" name="form_subject" value=" название формы"/>
+                <input class="order" type="hidden" name="Заявка " value=" Название формы"/>
+                <div class="form-wrap__item-wrap">
+                  <!-- .form-wrap__item-->
+                  <div class="form-wrap__item">
+                    <label> <i class="hidd">Имя</i>
+                      <input type="text" placeholder="Ваше имя" name="Имя"/>
+                    </label>
+                  </div>
+                  <!-- .form-wrap__item-->
+                  <div class="form-wrap__item">
+                    <label><i class="hidd">Телефон</i>
+                      <input type="tel" placeholder="+7(___)___-__-__" name="Телефон" required="required"/>
+                    </label>
+                  </div>
+                  <!-- .form-wrap__item-->
+                  <div class="form-wrap__item">
+                    <label> <i class="hidd">Электронная почта</i>
+                      <input type="email" placeholder="E-mail" name="E-mail" required="required"/>
+                    </label>
+                  </div>
+                  <!-- .form-wrap__item-->
+                  <div class="form-wrap__item">
+                    <label> <i class="hidd">Цена автомобиля</i>
+                      <input type="text" placeholder="Цена автомобиля" name="Цена автомобиля" required="required"/>
+                    </label>
+                  </div>
+                  <!-- .form-wrap__item-->
+                  <div class="form-wrap__item">
+                    <label> <i class="hidd">Первоначальный взнос</i>
+                      <input type="text" placeholder="Первоначальный взнос" name="Первоначальный взнос" required="required"/>
+                    </label>
+                  </div>
+                  <!-- .form-wrap__item-->
+                  <div class="form-wrap__item">
+                    <p class="form-wrap__politic">
+                      При отправке заявки вы соглашаетесь на <a class="form-wrap__link" href="" target="_blank"> использование ваших персональных данных</a>
+                    </p>
+                  </div>
+                  <div class="form-wrap__item">
+                    <button class="btn btn-info" type="submit">ПОЛУЧИТЬ РАСЧЁТ</button>
+                  </div>
+                </div>
+                <!-- .form-wrap__item-->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- end s-form-->
-    <div class="top3">top3</div>
-    <div class="char">char</div>
-    <div class="pride">pride</div>
-    <div class="team">team</div>
-    <div class="contact">contact</div>
-    <div class="footer">footer</div>
+    <section class="top3">
+      <div class="container container-1440">
+        <h2>
+          Топ 3 предложения на&#160;автомобили в&#160;наличии</h2>
+          <div class="top3__item">
+            <div class="row">
+              <div class="col-lg-5 col-md-6">
+                <div class="top3__caption">
+                  <div class="top3__caption-left">
+                    <div class="top3__head">
+                      <h3>
+                        Новый 
+                        <strong>Kuga</strong>
+                         <span>Trend </span>
+                      </h3>
+                      <p>от 1 264 000 ₽</p>
+                      <p class="small">ЗА 5600 РУБ./МЕС. В КРЕДИТ</p>
+                    </div>
+                    <div class="top3__ava">
+                       7 автомобилей в&#160;наличии  
+                    </div><a class="btn-modal btn btn-primary" href="">Бонус от директора &gt;</a><a class="btn-modal btn btn-primary" href="">Получить предожение &gt;</a>
+                  </div>
+                  <ul class="top3__caption-right">
+                    <li class="top3__li">
+                      <p class="upp">ТИП ДВИГАТЕЛЯ</p>
+                      <p>Бензин</p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">ОБЪЕМ</p>
+                      <p>2.5 л.</p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">МОЩНОСТЬ</p>
+                      <p>150.0 л.с </p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">ПРИВОД</p>
+                      <p>Передний</p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">ТРАНСМИССИЯ</p>
+                      <p>Автомат</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-6">
+                <div class="top3__img-wrap"><img class="res-i" src="img/top3__1.png" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="top3__item">
+            <div class="row">
+              <div class="col-lg-5 col-md-6">
+                <div class="top3__caption">
+                  <div class="top3__caption-left">
+                    <div class="top3__head">
+                      <h3>
+                        Новый 
+                        <strong>Kuga</strong>
+                         <span>Trend Plus</span>
+                      </h3>
+                      <p>от 1 264 000 ₽</p>
+                      <p class="small">ЗА 5600 РУБ./МЕС. В КРЕДИТ</p>
+                    </div>
+                    <div class="top3__ava">
+                      3 автомобиля в&#160;наличии
+                    </div><a class="btn-modal btn btn-primary" href="">Бонус от директора &gt;</a><a class="btn-modal btn btn-primary" href="">Получить предожение &gt;</a>
+                  </div>
+                  <ul class="top3__caption-right">
+                    <li class="top3__li">
+                      <p class="upp">ТИП ДВИГАТЕЛЯ</p>
+                      <p>Бензин</p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">ОБЪЕМ</p>
+                      <p>1.5 л.</p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">МОЩНОСТЬ</p>
+                      <p>150.0 л.с </p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">ПРИВОД</p>
+                      <p>Передний</p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">ТРАНСМИССИЯ</p>
+                      <p>Автомат</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-6">
+                <div class="top3__img-wrap"><img class="res-i" src="img/top3__2.png" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item-->
+          <div class="top3__item">
+            <div class="row">
+              <div class="col-lg-5 col-md-6">
+                <div class="top3__caption">
+                  <div class="top3__caption-left">
+                    <div class="top3__head">
+                      <h3>
+                        Новый 
+                        <strong>Kuga</strong>
+                         <span>Titanium</span>
+                      </h3>
+                      <p>от 1 264 000 ₽</p>
+                      <p class="small">ЗА 5600 РУБ./МЕС. В КРЕДИТ</p>
+                    </div>
+                    <div class="top3__ava">
+                       3 автомобиля в&#160;наличии
+                    </div><a class="btn-modal btn btn-primary" href="">Бонус от директора &gt;</a><a class="btn-modal btn btn-primary" href="">Получить предожение &gt;</a>
+                  </div>
+                  <ul class="top3__caption-right">
+                    <li class="top3__li">
+                      <p class="upp">ТИП ДВИГАТЕЛЯ</p>
+                      <p>Бензин</p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">ОБЪЕМ</p>
+                      <p>1.5 л.</p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">МОЩНОСТЬ</p>
+                      <p>150.0 л.с </p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">ПРИВОД</p>
+                      <p>Передний</p>
+                    </li>
+                    <li class="top3__li">
+                      <p class="upp">ТРАНСМИССИЯ</p>
+                      <p>Автомат</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-6">
+                <div class="top3__img-wrap"><img class="res-i" src="img/top3__3.png" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- item-->
+      </div>
+    </section>
+    <!-- .top3-->
+    <section class="char">
+      <div class="container container-1440">
+        <h2>
+          новый FORD kuga&#160;- КЛЮЧЕВЫЕ&#160;ХАРАКТЕРИСТИКИ</h2>
+        <div class="row">
+              <div class="char__item">
+                <div class="char__img-wrap"><img class="res-i" src="img/char__1.png" alt=""/>
+                </div>
+                <div class="char__caption">
+                  <h3>ЭКСТЕРЬЕР</h3>
+                  <ul>
+                    <li>легкосплавные колесные диски;</li>
+                    <li>хромированная решетка радиатора;</li>
+                    <li>серебристые защитные накладки на бамперах;</li>
+                    <li>внешнее запасное колесо;</li>
+                    <li>светодиодные (LED) секции передних фар;</li>
+                    <li>многослойное лакокрасочное покрытие кузова.</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- item-->
+              <div class="char__item">
+                <div class="char__img-wrap"><img class="res-i" src="img/char__2.png" alt=""/>
+                </div>
+                <div class="char__caption">
+                  <h3>АДАПТИРОВАН ДЛЯ РОССИИ</h3>
+                  <ul>
+                    <li>интеллектуальный полный привод;</li>
+                    <li>увеличенный дорожный просвет;</li>
+                    <li>преодоление бродов глубиной до 550 мм;</li>
+                    <li>дополнительный электрический отопитель салона;</li>
+                    <li>воздуховоды к ногам задних пассажиров;</li>
+                    <li>дополнительная оцинковка крыши для защиты от сколов;</li>
+                    <li> повышенный уровень коррозионной стойкости;</li>
+                    <li>подвеска, пружины и амортизаторы, адаптированные </li>
+                    <li> специально для российских дорог.</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- item-->
+              <div class="char__item">
+                <div class="char__img-wrap"><img class="res-i" src="img/char__3.png" alt=""/>
+                </div>
+                <div class="char__caption">
+                  <h3>ИНТЕРЬЕР</h3>
+                  <ul>
+                    <li>кожаная отделка рулевого колеса и рукоятки рычага  переключения передач;</li>
+                    <li>удобные кресла с высокой посадкой;​</li>
+                    <li>20 отсеков для хранения мелочей, включая  ящик под передним пассажирским сиденьем</li>
+                    <li>заднее сиденье, складывающееся в соотношении 60:40;</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- item-->
+              <div class="char__item">
+                <div class="char__img-wrap"><img class="res-i" src="img/char__4.png" alt=""/>
+                </div>
+                <div class="char__caption">
+                  <h3>ТЕХНОЛОГИИ </h3>
+                  <ul>
+                    <li>экономичные двигатели;</li>
+                    <li>6-ступенчатая автоматическая коробка передач Ford PowerShift;</li>
+                    <li>кнопка запуска двигателя;</li>
+                    <li>система бесключевого доступа;</li>
+                    <li>мультимедийная система SYNC с Bluetooth  и голосовым управлением на русском языке;</li>
+                    <li> интеллектуальная система безопасности.</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- item-->
+        </div>
+        <div class="char__btn-wrap"><a class="btn-modal btn btn-info" href="">ЗАПИСЬ НА ТЕСТ-ДРАЙВ</a><a class="btn-modal btn btn-info" href="">СКАЧАТЬ БРОШЮРУ</a><a class="btn-modal btn btn-info" href="">ЗАКАЗАТЬ АВТОМОБИЛЬ</a>
+        </div>
+      </div>
+    </section>
+    <div class="bg-block">
+      <section class="pride">
+        <div class="container container-1440">
+          <h2>  МЫ&#160;АВТОМИР&#160;- <br/>НАМ&#160;ЕСТЬ ЧЕМ ГОРДИТьСЯ</h2>
+          <div class="row">
+                <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                  <div class="block-item block-item-img"><img class="res-i" src="img/pride__1.png" alt=""/>
+                    <div class="block-item__caption">
+                      <div class="table">
+                        <h3 class="td">Дилер №1 по уровню сервиса</h3>
+                      </div>
+                      <p>По итогам 2016 года мы стали лучшим дилером Ford по обсулуживанию клиентов сервиса! Предлагаем убедиться Вам в этом!</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .col-md-4.col-sm-6-->
+                <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                  <div class="block-item block-item-img"><img class="res-i" src="img/pride__2.png" alt=""/>
+                    <div class="block-item__caption">
+                      <div class="table">
+                        <h3 class="td">Нам 24 года</h3>
+                      </div>
+                      <p>Группа компаний «Автомир» была основана в 1993 году и за  это время стала одним из самых крупных официальных автодилеров России.  </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .col-md-4.col-sm-6-->
+                <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                  <div class="block-item block-item-img"><img class="res-i" src="img/pride__3.png" alt=""/>
+                    <div class="block-item__caption">
+                      <div class="table">
+                        <h3 class="td">Гарантия официального дилера</h3>
+                      </div>
+                      <p>Это залог Вашей уверенности - начиная от технического состояния автомобиля и заканчиваю юридической стороной сделки.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .col-md-4.col-sm-6-->
+                <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                  <div class="block-item block-item-img"><img class="res-i" src="img/pride__4.png" alt=""/>
+                    <div class="block-item__caption">
+                      <div class="table">
+                        <h3 class="td">Опытные менеджеры</h3>
+                      </div>
+                      <p>Мы эксперты в своем деле и гордимся этим! Средний стаж работы наших менеджеров по продажам - 5 лет. Все сотрудники прошли необходимое обучение в компании Ford.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .col-md-4.col-sm-6-->
+                <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                  <div class="block-item block-item-img"><img class="res-i" src="img/pride__5.png" alt=""/>
+                    <div class="block-item__caption">
+                      <div class="table">
+                        <h3 class="td">Автомобили в наличии</h3>
+                      </div>
+                      <p>И с ПТС. А также мы готовы предложить Вам более 50-ти вариантов автомобилей со сроком поставки в течении 1-ой недели!</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .col-md-4.col-sm-6-->
+                <div class="col-md-4 col-sm-6 col col-xs-6 col-480">
+                  <div class="block-item block-item-img"><img class="res-i" src="img/pride__6.png" alt=""/>
+                    <div class="block-item__caption">
+                      <div class="table">
+                        <h3 class="td">Вы останитесь довольны</h3>
+                      </div>
+                      <p>98,4% - таков индекс удовлетворенности наших клиентов от покупки автомобилей, но конечно, мы стремимся к идеалу.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .col-md-4.col-sm-6-->
+          </div>
+        </div>
+      </section>
+      <!-- end .pride-->
+      <section class="team">
+        <div class="container container-1440">
+          <h2>Наша команда </h2>
+          <p>
+            Вы получаете сервис высочайшего класса от&#160;первоклассных экспертов своего направления</p>
+          <div class="row">
+                <div class="col-md-3 col-xs-6 col-480">
+                  <div class="team__item">
+                    <div class="team__img-wrap"><img class="res-i" src="img/team__1.jpg" alt=""/>
+                    </div>
+                    <div class="team__caption">
+                      <h3 class="team__title">Гуляев Евгений
+                      </h3>
+                      <div class="team__p text">Руководитель отдела продаж Получить консультацию 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .col-md-3.col-sm-6-->
+                <div class="col-md-3 col-xs-6 col-480">
+                  <div class="team__item">
+                    <div class="team__img-wrap"><img class="res-i" src="img/team__2.jpg" alt=""/>
+                    </div>
+                    <div class="team__caption">
+                      <h3 class="team__title">Ильюшин Роман
+                      </h3>
+                      <div class="team__p text">Менеджер по продажам
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .col-md-3.col-sm-6-->
+                <div class="col-md-3 col-xs-6 col-480">
+                  <div class="team__item">
+                    <div class="team__img-wrap"><img class="res-i" src="img/team__3.jpg" alt=""/>
+                    </div>
+                    <div class="team__caption">
+                      <h3 class="team__title">Бибиков Андрей
+                      </h3>
+                      <div class="team__p text">Руководитель отдела продаж Получить консультацию 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .col-md-3.col-sm-6-->
+                <div class="col-md-3 col-xs-6 col-480">
+                  <div class="team__item">
+                    <div class="team__img-wrap"><img class="res-i" src="img/team__4.jpg" alt=""/>
+                    </div>
+                    <div class="team__caption">
+                      <h3 class="team__title">Юренкова Елена
+                      </h3>
+                      <div class="team__p text">Менеджер по продажам
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end .col-md-3.col-sm-6-->
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="s-form contact s-form-contact" style="background-image: url(../img/form__bg-3.jpg);">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="s-form__text">
+              <h2>Автомир Ford Брянск</h2>
+              <p>Официальный дилер Ford</p>
+              <p>Брянск<br/>ул. Советская, д. 88<br/>Тел.
+                <a class="tel" href="tel:+74832589589">+7 (4832) 589-589</a><br/> <a href="mailto:info@avtomir.ru">info@avtomir.ru</a>
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-wrap text-center">
+              <form method="post" action="action.php">
+                <!-- Hidden Required Fields-->
+                <input type="hidden" name="project_name" value="Заявка с сайта"/>
+                <input type="hidden" name="admin_email" value="wol1414@gmail.com"/>
+                <input class="form_subject" type="hidden" name="form_subject" value=" название формы"/>
+                <input class="order" type="hidden" name="Заявка " value=" Название формы"/>
+                <div class="form-wrap__item-wrap">
+                  <!-- .form-wrap__item-->
+                  <div class="form-wrap__item">
+                    <label> <i class="hidd">Имя</i>
+                      <input type="text" placeholder="Ваше имя" name="Имя"/>
+                    </label>
+                  </div>
+                  <!-- .form-wrap__item-->
+                  <div class="form-wrap__item">
+                    <label><i class="hidd">Телефон</i>
+                      <input type="tel" placeholder="+7(___)___-__-__" name="Телефон" required="required"/>
+                    </label>
+                  </div>
+                  <!-- .form-wrap__item-->
+                  <div class="form-wrap__item">
+                    <label> <i class="hidd">Электронная почта</i>
+                      <input type="email" placeholder="E-mail" name="E-mail" required="required"/>
+                    </label>
+                  </div>
+                  <!-- .form-wrap__item--> 
+                  <div class="form-wrap__item">
+                    <p class="form-wrap__politic">
+                      При отправке заявки вы соглашаетесь на <a class="form-wrap__link" href="" target="_blank"> использование ваших персональных данных</a>
+                    </p>
+                  </div>
+                  <div class="form-wrap__item">
+                    <button class="btn btn-info" type="submit">ПОЗВОНИТЕ МНЕ</button>
+                  </div>
+                </div>
+                <!-- .form-wrap__item-->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end contact
+    -->
+    <footer class="footer">
+      <div class="footer__head">
+        <div class="footer__logo">
+          <div class="footer__img-wrap"><img class="res-i" src="img/logo.png" alt=""/>
+          </div>
+          <div class="footer__logo-caption">
+            <div class="footer__logo-title">Автомир Ford Брянск	
+            </div>
+            <p>Официальный дилер Ford</p>
+          </div>
+        </div>
+        <div class="footer__contact"><a class="tel" href="tel:+74832589589">+7 (4832) 589-589</a>
+          <p>ул. Советская, д. 88</p>
+        </div>
+      </div>
+      <div class="footer__bot">
+        <p>*Указана максимальная выгода на Ford Ecosport  с учетом бонуса по программе Трейд – ин, экономии по программе Ford Credit и бонуса от компании Автомир.</p>
+        <p>** Платеж по «Ford Credit: Форд Возможности_Особое предложение» приведен на 01.04.17 исходя из: 1) цены 797 517 руб. на Ford EcoSport Trend (Тренд) 1,6л, 122 л.с., 5МКП 2WD, с учетом выгоды 41 000 руб., экономии Ford Credit 21 483 руб. и бонуса за Трейд-ин 50 000 руб. (при сдаче а/м Ford), 2) предоставления кредита «Сетелем Банк» ООО на срок 36 мес. при первоначальном взносе 360 360 руб. с остаточной стоимостью а/м (часть последнего платежа по кредиту) 368 550 руб., ставка Банка – 11% в год с учетом государственной субсидии, сумма кредита – 437 157 руб., пакет документов - полный, обязательное КАСКО, соотв. требованиям Банка, залог - приобретаемый а/м. Предложение ограничено, действует по 30.06.17, не является публичной офертой и может быть изменено в любое время. Подробности и наличие а/м - у Вашего дилера и на www.ford.ru.</p>
+        <p>***За счет предоставления специальной цены на автомобиль расходы на его приобретение по данной программе сопоставимы с расходами по кредиту по ставке банка-партнера. Подробности: на сайте www.ford.ru, 8 800 500 42 01 (звонок бесплатный).</p>
+        <p>****Выгода при покупке Ford EcoSport по программе “Бонус за Trade-in/Утилизацию”, реализуемой дистрибьютором, совместно с официальными дилерами. Указанная программа позволяет получить выгоду на новый Ford EcoSport 30 000 руб. до 65 000 руб. (в зависимости от комплектации приобретаемого автомобиля) при сдаче дилеру автомобиля любой марки по системе Трейд-ин или при предоставлении документов, подтверждающих снятие с учета автомобиля в связи с утилизацией. Совместима с программами Ford Credit.</p>
+        <p>*****Цена рассчитана на базе розничной цены с учетом всех действующих специальных предложений, включая бонус при покупке по программе “Бонус за Trade-in”, экономию Ford Credit.</p>
+      </div>
+    </footer>
+    <!-- footer-->
     <div class="zoom-anim-dialog mfp-hide modal-window modal-form" id="small-dialog">
+      <h3>Оставьте заявку </h3><span> Менеджер свяжемся с вами в течение 5 минут</span>
       <div class="form-wrap text-center">
         <form method="post" action="action.php">
           <!-- Hidden Required Fields-->
@@ -260,7 +850,6 @@
               </label>
             </div>
             <!-- .form-wrap__item-->  
-            <h3>Оставьте заявку на получение займа</h3><span> Менеджер свяжемся с вами в течение 5 минут</span>
             <div class="form-wrap__item">
               <p class="form-wrap__politic">
                 При отправке заявки вы соглашаетесь на <a class="form-wrap__link" href="" target="_blank"> использование ваших персональных данных</a>
@@ -279,6 +868,7 @@
         <h3>Ваша заявку принята</h3><br/><span>Скоро с Вами свяжутся</span><br/><br/>
       </div>
     </div>
+    <link rel="stylesheet" href="fonts/fontello/css/fontello.css">
     <script src="js/scripts.min.js"></script>
     <script src="js/common.js"></script>
   </body>

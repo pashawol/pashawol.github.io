@@ -77,6 +77,7 @@ $(function() {
  function heightses() {
     var w = $(window).width();
      $(".offers h3 ").height('auto').equalHeights();
+     // $(".pride h3 ").height('auto').equalHeights();
      
      var topH=$(".top-line ").innerHeight();  
   if($(this).scrollTop()>topH){
