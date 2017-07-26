@@ -86,7 +86,7 @@ $( window ).on( "load", function() {
 
  
 
-  $('section.otz .row.slider').slick({
+  $('section.otz .row.slider ').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
     dots: false,
@@ -108,6 +108,8 @@ $( window ).on( "load", function() {
       }
     ]
   });
+
+
 
   $(".header__btn").each(function(event){
     $(this).attr("href", "#small-dialog");
@@ -173,5 +175,47 @@ $( window ).on( "load", function() {
 // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
     
-   
+
+
+    
+   $('  .sliderfor1').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    speed: 900,
+    infinite: false,
+    loop: false,  
+    arrows: true,
+     prevArrow: ' <div class="l"> </div>',
+    nextArrow: '   <div class="r"> </div> ',
+        responsive: [
+      
+     
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+        
+        }
+      }
+    ]
+  });
+   $('.court-service__gal').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    // image: {
+    //   tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+    //   titleSrc: function(item) {
+    //     return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+    //   }
+    // }
+  });
+  
 });
