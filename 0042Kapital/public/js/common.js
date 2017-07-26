@@ -71,7 +71,38 @@ $(".slider-for4").slick({
     arrows: true,
      prevArrow: ' <div class="l"><i class="icon-left"  > </i></div>',
       nextArrow: '   <div class="r"><i class="icon-right" > </i></div> ',
+    responsive: [
+        
+       
+        
+     {
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 3,
+             variableWidth: false
+          }
+        },
+   
+     {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+             variableWidth: false
+          }
+        },
+   
+     {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+         
+          }
+        },
+   
+     
  
+
+      ]
   });
 
 
