@@ -79,7 +79,7 @@
                   </p>
                 </div>
               </div>
-              <div class="header__bot text-center"><a class="btn-modal btn-info btn" href="">ЗАКАЗАТЬ ПЕЧАТЬ</a>
+              <div class="header__bot text-center"><a class="  btn-info btn header-btn" href=".s-form">ЗАКАЗАТЬ ПЕЧАТЬ</a>
                 <div class="header__bot-small">
                   всего от 250 
                   <i class="demo-icon icon-rouble"></i>
@@ -173,14 +173,18 @@
                   <div class="s-form__head-item">
                     <h3>Вид печати</h3>
                     <div class="s-form__label">
-                      <label><input class="s-form__radio" type="radio" name="vid"/>
-                        <div class="s-form__lab"><span>Новая</span>
+                      <div class="clearfix"></div>
+                      <label><input class="s-form__radio dop-new" type="radio" name="vid"/>
+                        <div class="s-form__lab"><span>Новая </span>
                         </div>
                       </label>
-                      <label><input class="s-form__radio" type="radio" name="vid"/>
-                        <div class="s-form__lab"><span>По оттиску</span>
+                      <label><input class="s-form__radio dop-file" type="radio" name="vid"/>
+                        <div class="s-form__lab"><span>По оттиску </span>
                         </div>
                       </label>
+                    </div>
+                    <div class="s-form__dop-file">
+                      <input type="file"/>
                     </div>
                   </div>
                   <div class="s-form__head-item">
@@ -729,6 +733,20 @@
                       </div>
                     </div>
                     <!-- .col-sm-6.col-xs-12-->
+                    <div class="col-sm-6 col-xs-12">
+                      <h3>Email</h3>
+                      <div class="s-form__head-item s-form__bot-item">
+                        <input type="email" name="email" placeholder="Ваш email"/>
+                      </div>
+                    </div>
+                    <!-- .col-sm-6.col-xs-12-->
+                    <div class="col-sm-6 col-xs-12">
+                      <h3>Дополнительно</h3>
+                      <div class="s-form__head-item s-form__bot-item">
+                        <input type="text" name="othe" placeholder="Ввести вручную"/>
+                      </div>
+                    </div>
+                    <!-- .col-sm-6.col-xs-12-->
                     <div class="col-xs-12">
                       <h3>Доcтавка</h3>
                       <div class="s-form__head-item s-form__bot-item">
@@ -753,7 +771,7 @@
                       <div class="s-form__btn-wrap">
                         <button class="btn btn-info">ЗАКАЗАТЬ</button>
                         <div class="politic">
-                          Я согласен с <a class="politic__link" href="" target="_blank"> условиями</a>
+                          Я согласен с <a class="politic__link" href="Soglasie.pdf" target="_blank"> условиями</a>
                           обработки персональных данных
                         </div>
                       </div>
@@ -803,7 +821,8 @@
               </div>
             </div>
             <!-- .item--><br/><br/>
-            <h3>Стоимость изделий</h3>
+            <h3 class="s-ways__h3">Стоимость изделий
+            </h3>
             <p>
               На нашем сайте указаны ориентировочные расценки на печати и штампы. Стоимость изделий может корректироваться 
               в зависимости от размеров изделий, их сложности, материалов 
@@ -864,7 +883,7 @@
             <div class="footer__right-wrap"> <a class="site" href="http://xn----7sbbd.xn--p1ai/" target="_blank">Создание сайта</a>
             </div>
           </div>
-          <div class="col-md-3 text-center"><a class="polite" href="" target="_blank">Политика конфеденциальности</a></div>
+          <div class="col-md-3 text-center"><a class="polite" href="Politika.pdf" target="_blank">Политика конфеденциальности</a></div>
           <div class="col-md-6">
             <div class="tel-block-wrap">
               <div class="tel-block">

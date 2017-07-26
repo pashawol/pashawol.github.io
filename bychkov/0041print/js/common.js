@@ -2,7 +2,7 @@ $(function() {
 
 
 // листалка по стр
- $(".top-nav a, .trop.main-mnu a").click(function () {
+ $(".top-nav a, .trop.main-mnu a, .header-btn").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         
@@ -157,4 +157,11 @@ $(".s-form__color-item").click(function(){
 
   th.parents(".s-form__item-prod").find(".s-form__img-wrap").css('background-image','url('+th.data("src")+')');
 })
+$(".dop-file").on('change', function(){
+  $(".s-form__dop-file").slideDown();
+})
+$(".dop-new").on('change', function(){
+  $(".s-form__dop-file").slideUp();
+})
+
 });
