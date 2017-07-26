@@ -1,26 +1,6 @@
 $(function() {
 
-	// Custom JS
-	function heightses() {
-
-   
-   $(".otz__item .text-wrap ").height('auto').equalHeights();
-   $(".news__caption h3 ").height('auto').equalHeights();
-    
-  }
-
-  $(window).resize(function() {
-    heightses();
-   
-  });
-$( window ).on( "load", function() {
- heightses();
-
-})
-
- heightses();
-
-
+	
  $(".header__slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -31,7 +11,7 @@ $( window ).on( "load", function() {
     arrows: false,
      // prevArrow: ' <div class="l"><i class="icon-left"  > </i></div>',
       // nextArrow: '   <div class="r"><i class="icon-right" > </i></div> ',
- 
+     
   });
 
 
@@ -45,7 +25,39 @@ $(".complex__slider").slick({
     arrows: true,
      prevArrow: ' <div class="l"><i class="icon-left"  > </i></div>',
       nextArrow: '   <div class="r"><i class="icon-right" > </i></div> ',
+    responsive: [
+        
+       
+        
+     {
+          breakpoint: 1260,
+          settings: {
+            slidesToShow: 4,
+             variableWidth: false
+          }
+        },
+   
+     {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+             variableWidth: false
+          }
+        },
+   
+     {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            centerMode: true,
+            variableWidth: true
+          }
+        },
+   
+     
  
+
+      ]
   });
 
 
@@ -68,14 +80,42 @@ $(".slider-for4").slick({
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
     
-    $(this).toggleClass("on");
+    $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
-    $(".hidden-mnu").slideToggle();
+    $(".hidden-mnu").toggleClass("active");
+    $("body").toggleClass("fixed");
     return false;
   }); 
     $('.hidden-mnu ul li a').on('click', function () {
       $(".toggle-mnu-1").click();
     });
+
+
+// Custom JS
+  function heightses() {
+    var w = $(window).width();
+   
+   $(".otz__item .text-wrap ").height('auto').equalHeights();
+   $(".news__caption h3 ").height('auto').equalHeights();
+    
+    if (w>1260){
+       $(".toggle-mnu-1").removeClass("on");
+        // $("body").removeClass("fixed");
+        $(".hidden-mnu").removeClass("active");
+        $("body").removeClass("fixed");
+    }
+  }
+
+  $(window).resize(function() {
+    heightses();
+   
+  });
+$( window ).on( "load", function() {
+ heightses();
+
+})
+
+ heightses();
 
 
   // маска на инпут

@@ -159,9 +159,11 @@ $(".s-form__color-item").click(function(){
 })
 $(".dop-file").on('change', function(){
   $(".s-form__dop-file").slideDown();
+  $(".s-form__block-osn").slideUp();
 })
 $(".dop-new").on('change', function(){
   $(".s-form__dop-file").slideUp();
+  $(".s-form__block-osn").slideDown();
 })
 
 });
