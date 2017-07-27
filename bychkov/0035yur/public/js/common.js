@@ -7,7 +7,7 @@ $(function() {
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
    $(".problem").height('auto').equalHeights();
    $(".when__item").height('auto').equalHeights();
-    
+    carousel; 
   }
 
   $(window).resize(function() {
@@ -172,6 +172,24 @@ $( window ).on( "load", function() {
     th.parents(".form-debt__item.form-debt__item-active").removeClass("form-debt__item-active").next("").fadeIn();
     return false;
   })
+
+
+   // переход в форме на стр суды
+  $(".s-vyb .custom-label__input").click(function(){
+    $(".custom-label").removeClass("active");
+    var th= $(this);
+    th.parents(".s-vyb").find(".s-vyb__btn.disabled")
+    .removeClass("disabled");
+    th.parent().addClass("active");
+  })
+  $(".s-vyb__btn.next").click(function(e){
+    var th= $(this);
+    th.parents(".s-vyb__item.s-vyb__item-active").removeClass("s-vyb__item-active").next("").fadeIn();
+    return false;
+  })
+
+
+
 // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
     
@@ -200,6 +218,63 @@ $( window ).on( "load", function() {
       }
     ]
   });
+
+
+   // $('  .header__slider').featureCarousel({
+   //      // include options like this:
+   //      // (use quotes only for string values, and no trailing comma after last option)
+   //      // option: value,
+   //      // option: value
+   //  });
+  
+
+// https://www.bkosborne.com/jquery-waterwheel-carousel/options
+   var carousel = $(".header__slider").waterwheelCarousel({
+          flankingItems: 1,
+          horizon: 0,
+          horizonOffset: -90,
+          horizonOffsetMultiplier: .8,
+          separation: 160,
+          edgeFadeEnabled: true,
+          opacityMultiplier: 0.3,
+          sizeMultiplier: 0.9,
+          movingToCenter: function ($item) {
+            $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movedToCenter: function ($item) {
+            $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movingFromCenter: function ($item) {
+            $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movedFromCenter: function ($item) {
+            $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+          },
+          clickedCenter: function ($item) {
+            $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+          }
+        });
+
+        $('#prev').bind('click', function () {
+          carousel.prev();
+          return false
+        });
+
+        $('#next').bind('click', function () {
+          carousel.next();
+          return false;
+        });
+
+        $('#reload').bind('click', function () {
+          newOptions = eval("(" + $('#newoptions').val() + ")");
+          carousel.reload(newOptions);
+          return false;
+        });
+
+
+
+
+
    $('.court-service__gal').magnificPopup({
     delegate: 'a',
     type: 'image',
@@ -218,4 +293,7 @@ $( window ).on( "load", function() {
     // }
   });
   
+  $(".js-hide-block").click(function(){
+    $(this).parents("section").find(".row-hide").slideToggle()
+  })
 });
