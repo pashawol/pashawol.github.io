@@ -32,7 +32,7 @@ $( window ).on( "load", function() {
       $(".toggle-mnu-1").click();
     });
 
-    // маска на инпут
+    
      // модалка
   $(".btn-modal").each(function(){
     $(this).attr("href", "#small-dialog")
@@ -43,7 +43,46 @@ $( window ).on( "load", function() {
     // })
   })
 
+  // $(".aside__item-have").click(function(){
+  //      $(".aside__item-have").removeClass("active");
 
+  // })
+
+  // выпадающее меню
+$(' .aside__item-have  ').on('click', function(){
+        // $(this).removeAttr('href');
+        var element = $(this);
+        if (element.hasClass('active')) {
+            element.find('ul').slideUp();
+            element.removeClass('active');
+        }
+        else {
+            element.children('ul').slideDown(); 
+            element.addClass('active');
+            element.siblings('li').find('ul').slideUp();
+            element.siblings('li').removeClass('active'); 
+        }
+    });
+
+
+  $('.content__slider').slick({  
+      speed: 600,
+      slidesToShow: 1,
+      // adaptiveHeight: true,
+      // vertical: true,
+      arrows: false,
+      // draggable: false,
+      // prevArrow: ' <div><i class="demo-icon icon-angle-up"> </i></div>',
+      // nextArrow: '   <div><i class="demo-icon icon-angle-down"> </i></div> ',
+      // fade: true,
+      dots:true,
+      // adaptiveHeight: true
+      // centerMode: true,
+    });
+    $(".aside__mobile-catalog").click(function(){
+      $(this).toggleClass("active")
+      .next().slideToggle();
+    })
   // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 });
