@@ -105,6 +105,28 @@ $(".slider-for4").slick({
       ]
   });
 
+$(".slider-for2").slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
+    speed: 450,
+    infinite: false, 
+    loop: false, 
+    arrows: true,
+     prevArrow: ' <div class="l"><i class="icon-left"  > </i></div>',
+      nextArrow: '   <div class="r"><i class="icon-right" > </i></div> ',
+    responsive: [ 
+     
+     {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1,
+         
+          }
+        }
+      ]
+  });
+
 
 
 
@@ -127,7 +149,8 @@ $(".slider-for4").slick({
     var w = $(window).width();
    
    $(".otz__item .text-wrap ").height('auto').equalHeights();
-   $(".news__caption h3 ").height('auto').equalHeights();
+   $(".news__item h3 ").height('auto').equalHeights();
+   $(".complex__item ").height('auto').equalHeights();
     
     if (w>1260){
        $(".toggle-mnu-1").removeClass("on");
@@ -147,6 +170,62 @@ $( window ).on( "load", function() {
 })
 
  heightses();
+
+
+// слайдер на стр новостей
+$('.popup-gallery').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    
+  });
+// слайдер с миниатюрами
+ $('.slider-big').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false, 
+  asNavFor: '.slider-small',
+  dots: false,
+   
+  adaptiveHeight: true,
+
+  // draggable: false 
+
+});
+$('.slider-small').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider-big',
+  dots: false,  
+  // centerMode: true,
+  focusOnSelect: true,
+  // vertical: false,
+  arrows: true,
+  prevArrow: ' <div class="l"><i class="icon-left"  > </i></div>',
+  nextArrow: '   <div class="r"><i class="icon-right" > </i></div> ',
+  // draggable: false 
+
+  responsive: [
+    
+      
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 2,
+         
+        }
+      }
+     
+    ]
+});
+
+
 
 
   // маска на инпут
