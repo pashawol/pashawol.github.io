@@ -128,6 +128,29 @@ $(".slider-for2").slick({
   });
 
 
+$(".preim__slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    
+    dots: false,
+    speed: 450,
+    infinite: false, 
+    loop: false, 
+    arrows: true,
+     prevArrow: ' <div class="l"><i class="icon-left"  > </i></div>',
+      nextArrow: '   <div class="r"><i class="icon-right" > </i></div> ',
+    responsive: [ 
+        {
+          breakpoint: 480,
+          settings: {
+             slidesToShow: 1,
+          }
+        },
+
+      ]
+  });
+
+
 
 
 // мобильное меню
@@ -225,9 +248,19 @@ $('.slider-small').slick({
     ]
 });
 
+  // выбор варианта кредита
+  $(".type-buy").on('click', '.mode__item:not(.mode__item-active)', function(e) {
 
+    $(this)
+    .addClass('mode__item-active').addClass('current').siblings().removeClass('mode__item-active')
+    // .closest('div.tabs').find('div.tabs__content').hide().removeClass('active')
+    // .eq($(this).index()).fadeIn().addClass('active'); 
+  })
 
-
+  // кастомный селект
+  $("  select").styler({
+        selectSearch: true,
+      });
   // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99")
     .attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
