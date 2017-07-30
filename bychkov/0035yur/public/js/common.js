@@ -7,6 +7,7 @@ $(function() {
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
    $(".problem").height('auto').equalHeights();
    $(".when__item").height('auto').equalHeights();
+   $(".s-result__caption").height('auto').equalHeights();
     carousel; 
   }
 
@@ -111,7 +112,7 @@ $( window ).on( "load", function() {
 
 
 
-  $(".header__btn").each(function(event){
+  $(".header__btn, .btn-modal").each(function(event){
     $(this).attr("href", "#small-dialog");
     // event.preventDefault();
     return false;
