@@ -303,6 +303,41 @@ $('.slider-small').slick({
     $("input[type='tel']").inputmask("+7(999)999-99-99")
     .attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 
+// подсветка карты
+$('.map-img').maphilight({
+  strokeColor: 'ff0000',
 
+});
 
+$('.btn-modal').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: true,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: false,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in',
+
+  }); 
+  $(document).on('click', '.popup-modal-dismiss', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+
+$("area.btn-modal").click(function(){
+  var th= $(this),
+      mod = $("#map-dialog");
+  mod.find(".d-rooms").text(th.data("rooms"));
+  mod.find(".d-flor").text(th.data("flor"));
+  mod.find(".d-totalarea").text(th.data("totalarea"));
+  mod.find(".d-livingspace").text(th.data("livingspace"));
+  mod.find("img").attr("src", th.data("img"));
+
+})
 });
