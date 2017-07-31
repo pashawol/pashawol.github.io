@@ -233,26 +233,64 @@ $('.slider-small').slick({
   prevArrow: ' <div class="l"><i class="icon-left"  > </i></div>',
   nextArrow: '   <div class="r"><i class="icon-right" > </i></div> ',
   // draggable: false 
-
-  responsive: [
+  variableWidth: true,
+  // responsive: [
     
       
-      {
-        breakpoint: 400,
-        settings: {
-          slidesToShow: 2,
+  //     {
+  //       breakpoint: 400,
+  //       settings: {
+  //         slidesToShow: 2,
          
-        }
-      }
+  //       }
+  //     }
      
-    ]
+  //   ]
 });
 
   // выбор варианта кредита
-  $(".type-buy").on('click', '.mode__item:not(.mode__item-active)', function(e) {
+
+  $('.type-buy .mode__row').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    
+    dots: false,
+    speed: 450,
+    infinite: false, 
+    loop: false, 
+    arrows: false,
+     prevArrow: ' <div class="l"><i class="icon-left"  > </i></div>',
+      nextArrow: '   <div class="r"><i class="icon-right" > </i></div> ',
+    responsive: [ 
+        {
+          breakpoint: 1260,
+          settings: {
+             // slidesToShow: 3,
+              // variableWidth: true,
+          }
+        },
+       
+     {
+            breakpoint: 991,
+            settings: {
+               slidesToShow: 1,
+                variableWidth: true,
+            }
+          },
+         
+    
+    
+      ]
+  });
+
+ 
+
+
+  $(".type-buy").on('click', '.mode__slide:not(.mode__slide-active)', function(e) {
 
     $(this)
-    .addClass('mode__item-active').addClass('current').siblings().removeClass('mode__item-active')
+    .addClass('mode__slide-active').addClass('current').siblings().removeClass('mode__slide-active')
+    $(".types-bye").text($(this).data("type"))
     // .closest('div.tabs').find('div.tabs__content').hide().removeClass('active')
     // .eq($(this).index()).fadeIn().addClass('active'); 
   })

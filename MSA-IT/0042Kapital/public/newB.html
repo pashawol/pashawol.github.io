@@ -29,11 +29,11 @@
               </p><small>Звонок по России бесплатный<br/>Ежедневно с 9-00 до 21-00</small>
             </div>
             <ul> 
-              <li><a href="#">строящиеся</a></li>
-              <li><a href="#"> сданые  </a></li>
-              <li><a href="#"> Новости </a></li>
-              <li><a href="#">Коммерция </a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="newB.html">строящиеся</a></li>
+              <li><a href="ready.html"> сданые  </a></li>
+              <li><a href="news__all.html"> Новости </a></li>
+              <li><a href="commerce.html">Коммерция </a></li>
+              <li><a href="contact.html">Контакты</a></li>
             </ul>
             <div class="soc soc-top-nav"><a class="soc__item" href="#" target="_blank"><span class="icon-soc-1"></span></a><a class="soc__item" href="#" target="_blank"><span class="icon-soc-2"></span></a><a class="soc__item" href="#" target="_blank"><span class="icon-soc-3"></span></a><a class="soc__item" href="#" target="_blank"><span class="icon-soc-4"></span></a>
             </div>
@@ -45,15 +45,15 @@
               <div class="col-lg-2 col-sm-6"><a class="logo" href="."><img class="res-i" src="img/logo.png" alt=""/></a></div>
               <div class="col-lg-7 hidden-sm hidden-xs hidden-md">
                 <ul class="top-nav__nav">
-                  <li class="top-nav__item"><a class="top-nav__link" href="#">строящиеся</a>
+                  <li class="top-nav__item"><a class="top-nav__link" href="newB.html">строящиеся</a>
                   </li>
-                  <li class="top-nav__item"><a class="top-nav__link" href="#"> сданые  </a>
+                  <li class="top-nav__item"><a class="top-nav__link" href="ready.html"> сданые  </a>
                   </li>
-                  <li class="top-nav__item"><a class="top-nav__link" href="#"> Новости </a>
+                  <li class="top-nav__item"><a class="top-nav__link" href="news__all.html"> Новости </a>
                   </li>
-                  <li class="top-nav__item"><a class="top-nav__link" href="#">Коммерция </a>
+                  <li class="top-nav__item"><a class="top-nav__link" href="commerce.html">Коммерция </a>
                   </li>
-                  <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты</a>
+                  <li class="top-nav__item"><a class="top-nav__link" href="contact.html">Контакты</a>
                   </li>
                 </ul>
               </div>
@@ -283,36 +283,61 @@
           <div class="text-center">
             <h2>Способы покупки</h2>
           </div>
-          <div class="mode"> 
-            <div class="mode__row"><a class="mode__item mode__item-active">
-              <div class="before" style="background-image: url(img/mode-1.jpg);" href="#"> </div>
-              <h3>Ипотека от 8,49%</h3>
-              <p> Поможем быстро<br/> открыть ипотеку</p></a>
-              <!-- .item--><a class="mode__item">
-              <div class="before" style="background-image: url(img/mode-2.jpg);" href="#"> </div>
-              <h3>Рассрочка</h3>
-              <p>Первоначальный<br/>взнос 50%</p></a>
-              <!-- .item--><a class="mode__item">
-              <div class="before" style="background-image: url(img/mode-3.jpg);" href="#"> </div>
-              <h3>Военная ипотека</h3>
-              <p>Выгодные условия<br/>для военных</p></a>
-              <!-- .item--><a class="mode__item">
-              <div class="before" style="background-image: url(img/mode-4.jpg);" href="#"> </div>
-              <h3>Материнский капитал</h3>
-              <p>Первоначальный взнос  на основе<br/> сертификата</p></a>
-              <!-- .item-->
+        </div>
+        <div class="mode"> 
+          <div class="container">
+            <div class="mode__row row">
+              <div class="mode__slide mode__slide-active" data-type="ипотеки">
+                <div class="mode__item">
+                  <div class="before" style="background-image: url(img/mode-1.jpg);"> </div>
+                  <h3>Ипотека от 8,49%</h3>
+                  <p> Поможем быстро<br/> открыть ипотеку</p>
+                </div>
+              </div>
+              <!-- .slide-->
+              <div class="mode__slide" data-type="рассрочки">
+                <div class="mode__item">
+                  <div class="before" style="background-image: url(img/mode-2.jpg);"> </div>
+                  <h3>Рассрочка</h3>
+                  <p>Первоначальный<br/>взнос 50%</p>
+                </div>
+              </div>
+              <!-- .slide-->
+              <div class="mode__slide" data-type="военной ипотеки">
+                <div class="mode__item">
+                  <div class="before" style="background-image: url(img/mode-3.jpg);"> </div>
+                  <h3>Военная ипотека</h3>
+                  <p>Выгодные условия<br/>для военных</p>
+                </div>
+              </div>
+              <!-- .slide-->
+              <div class="mode__slide" data-type="материнского капитала">
+                <div class="mode__item">
+                  <div class="before" style="background-image: url(img/mode-4.jpg);"> </div>
+                  <h3>Материнский капитал</h3>
+                  <p>Первоначальный взнос  на основе<br/> сертификата</p>
+                </div>
+              </div>
+              <!-- .slide-->
             </div>
           </div>
         </div>
         <div class="s-form">
           <div class="s-form__wrap container"> 
-            <h2>Форма расчета ипотеки</h2>
+            <h2>
+              Форма расчета 
+              <span class="types-bye">ипотеки</span>
+            </h2>
             <form class="s-form__form">
               <div class="s-form__input-wrap">
-                <select name="" placeholder="Площадь квартиры">
-                  <option value="" selected="selected" disabled="disabled"> </option>
+                <select name="">
+                  <option value="" selected="selected" disabled="disabled">Площадь квартиры</option>
                   <option value="">Площадь квартиры 3</option>
                   <option value="">Площадь квартиры 1</option>
+                  <option value="">Площадь квартиры 2</option>
+                  <option value="">Площадь квартиры 2</option>
+                  <option value="">Площадь квартиры 2</option>
+                  <option value="">Площадь квартиры 2</option>
                   <option value="">Площадь квартиры 2</option>
                 </select>
               </div>
@@ -320,7 +345,15 @@
                 <input type="text" name="Первоначальный взнос" placeholder="Первоначальный взнос"/>
               </div>
               <div class="s-form__input-wrap">
-                <input type="tel" name="tel" placeholder="Контактный телефон"/>
+                <select name="">
+                  <option value="" selected="selected" disabled="disabled">Площадь квартиры</option>
+                  <option value="">Площадь квартиры 3</option>
+                  <option value="">Площадь квартиры 1</option>
+                  <option value="">Площадь квартиры 2</option>
+                  <option value="">Площадь квартиры 2</option>
+                  <option value="">Площадь квартиры 2</option>
+                  <option value="">Площадь квартиры 2</option>
+                </select>
               </div>
               <div class="s-form__input-wrap">
                 <button class="btn btn-info">Расчитать</button>
@@ -446,12 +479,42 @@
       </section>
       <div class="mixin-wrap">
       </div>
-      <section class="courseCont" id="courseCont">courseCont
+      <section class="courseCont" id="courseCont">
+        <div class="text-center">
+          <h2>Ход строительства</h2>
+        </div>
       </section>
       <!-- courseCont-->
       <div class="mixin-wrap">
       </div>
-      <section class="s-doc" id="s-doc">s-doc
+      <section class="s-doc">
+        <div class="text-center">
+          <h2>Документация</h2>
+        </div>
+        <div class="container">
+          <div class="s-doc__row row">
+            <div class="s-doc__item"><img class="res-i" src="img/img-pdf.png" alt=""/>
+              <p>Разрешение на строительство литер 1</p>
+            </div>
+            <!-- end .item-->
+            <div class="s-doc__item"><img class="res-i" src="img/img-pdf.png" alt=""/>
+              <p>Разрешение на строительство литер 2</p>
+            </div>
+            <!-- end .item-->
+            <div class="s-doc__item"><img class="res-i" src="img/img-doc.png" alt=""/>
+              <p>Проектная декларация в ред. 02.04.2015 г.</p>
+            </div>
+            <!-- end .item-->
+            <div class="s-doc__item"><img class="res-i" src="img/img-doc.png" alt=""/>
+              <p>Разрешение на ввод объекта в эксплуатацию от 30.07.2015 г.</p>
+            </div>
+            <!-- end .item-->
+            <div class="s-doc__item"><img class="res-i" src="img/img-pdf.png" alt=""/>
+              <p>Разрешение на строительство литер 1</p>
+            </div>
+            <!-- end .item-->
+          </div><a class="s-doc__btn btn btn-success" href="#">Показать еще</a>
+        </div>
       </section>
       <!-- s-doc-->
       <section class="map">
@@ -600,10 +663,10 @@
                   .add(placemark2);
           }
           
-        </script> 
+        </script>
         <div class="container">
           <div class="text-center">
-            <h2>Расположение Жилых Комплексов</h2>
+            <h2>Расположение ЖК СПОРТ СИТИ</h2>
           </div>
         </div>
         <div class="map__wrap">
@@ -663,13 +726,13 @@
                 <div class="footer__tWork hidden-sm hidden-xs">Офис работает<br/>Ежедневно с 9-00 до 18-00   
                 </div>
                 <div class="footer__mnu"><ul>
-                  <li class="footer__item"><a class="footer__link" href="#">Новостройки  </a>
+                  <li class="footer__item"><a class="footer__link" href="newB.html">Новостройки  </a>
                   </li>
-                  <li class="footer__item"><a class="footer__link" href="#">      Готовые   </a>
+                  <li class="footer__item"><a class="footer__link" href="ready.html">      Готовые   </a>
                   </li>
-                  <li class="footer__item"><a class="footer__link" href="#"> Новости  </a>
+                  <li class="footer__item"><a class="footer__link" href="news__all.html"> Новости  </a>
                   </li>
-                  <li class="footer__item"><a class="footer__link" href="#"> Коммерция </a>
+                  <li class="footer__item"><a class="footer__link" href="commerce.html"> Коммерция </a>
                   </li>
                 </div>
                 <div class="footer__search hidden-lg hidden-md">
