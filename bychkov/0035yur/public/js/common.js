@@ -231,7 +231,7 @@ $( window ).on( "load", function() {
 
 // https://www.bkosborne.com/jquery-waterwheel-carousel/options
    var carousel = $(".header__slider").waterwheelCarousel({
-          flankingItems: 1,
+          flankingItems: 0,
           horizon: 0,
           horizonOffset: -90,
           horizonOffsetMultiplier: .8,
