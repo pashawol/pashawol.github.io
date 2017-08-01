@@ -233,19 +233,19 @@ $('.slider-small').slick({
   prevArrow: ' <div class="l"><i class="icon-left"  > </i></div>',
   nextArrow: '   <div class="r"><i class="icon-right" > </i></div> ',
   // draggable: false 
-  variableWidth: true,
-  // responsive: [
+  // variableWidth: true,
+  responsive: [
     
       
-  //     {
-  //       breakpoint: 400,
-  //       settings: {
-  //         slidesToShow: 2,
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 2,
          
-  //       }
-  //     }
+        }
+      }
      
-  //   ]
+    ]
 });
 
   // выбор варианта кредита
