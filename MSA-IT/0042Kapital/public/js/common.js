@@ -166,7 +166,32 @@ $(".preim__slider").slick({
       $(".toggle-mnu-1").click();
     });
 
+// Слайдер  ход строительства
 
+  var cours = (".coursecont");
+  $(cours+"__slider").slick({
+      infinite: false, 
+    loop: false, 
+    prevArrow: ' <div class="l"><i class="icon-left"  > </i></div>',
+    nextArrow: '   <div class="r"><i class="icon-right" > </i></div> ',
+    variableWidth: true,
+    loop: true,
+    slidesToShow: 1,
+    // centerMode: true,
+  })
+
+  $(cours+'__slider').on("click", '.coursecont__slide:not(.coursecont__slide-active)',function(){
+    $(this)
+    .addClass("coursecont__slide-active").siblings().removeClass("coursecont__slide-active");
+  })
+ 
+     
+  $(cours+"__img-wrap").each(function(){
+    $(this).height(  246 * ( parseInt($(this).data("h")) / 100));
+
+})
+  // consolelog($(".coursecont__img-wrap").height(  2,46 * ( parseInt($(this).data("h")) / 100)));
+// конец Слайдер  ход строительства
 // Custom JS
   function heightses() {
     var w = $(window).width();
@@ -174,6 +199,7 @@ $(".preim__slider").slick({
    $(".otz__item .text-wrap ").height('auto').equalHeights();
    $(".news__item h3 ").height('auto').equalHeights();
    $(".complex__item ").height('auto').equalHeights();
+   $(cours+"__item").height('auto').equalHeights();
     
     if (w>1260){
        $(".toggle-mnu-1").removeClass("on");
@@ -283,9 +309,8 @@ $('.slider-small').slick({
       ]
   });
 
- 
 
-
+  
   $(".type-buy").on('click', '.mode__slide:not(.mode__slide-active)', function(e) {
 
     $(this)
