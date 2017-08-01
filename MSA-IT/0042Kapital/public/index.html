@@ -238,7 +238,7 @@
               <div class="s-form__input-wrap">
                 <button class="btn btn-info">Получить</button>
               </div>
-              <div class="s-form__sogl">
+              <div class="sogl">
                 <label>
                   <input type="checkbox"/>
                   <div class="lab"></div><span>
@@ -643,7 +643,7 @@
               <div class="s-form__input-wrap">
                 <button class="btn btn-info">Получить</button>
               </div>
-              <div class="s-form__sogl">
+              <div class="sogl">
                 <label>
                   <input type="checkbox"/>
                   <div class="lab"></div><span>
@@ -711,9 +711,67 @@
           </div>
         </div>
       </footer>
-      <div class="mixin-wrap">
+      <div class="modal-map zoom-anim-dialog mfp-hide modal-window modal" id="map-dialog">
+        <div class="popup-modal-dismiss">закрыть</div>
+        <div class="row">
+          <div class="col-sm-8 col-right col">
+            <div class="modal-map__img-wrap"><img class="res-i" src="" alt=""/>
+            </div>
+          </div>
+          <div class="col-sm-4 col-left col">
+            <div class="modal-map__head">
+              <div class="modal-map__item">
+                <div class="modal-map__big d-rooms">
+                </div>
+                <div class="modal-map__small">комнатная<br/>квартира
+                </div>
+              </div>
+              <div class="modal-map__item">
+                <div class="modal-map__big d-flor">
+                </div>
+                <div class="modal-map__small">этаж 
+                </div>
+              </div>
+            </div>
+            <div class="modal-map__center">
+              <div class="modal-map__item">
+                <div class="modal-map__big d-totalarea">
+                </div>
+                <div class="modal-map__small">общая площадь
+                </div>
+              </div>
+              <div class="modal-map__item">
+                <div class="modal-map__big d-livingspace">
+                </div>
+                <div class="modal-map__small">жилая площадь
+                </div>
+              </div>
+            </div>
+            <form class="form">
+              <div class="form__input-wrap">
+                <input type="text" name="name" placeholder="Ваше имя"/>
+              </div>
+              <div class="form__input-wrap">
+                <input type="tel" name="tel" placeholder="Контактный телефон"/>
+              </div>
+              <div class="form__input-wrap">
+                <button class="btn btn-info">Отправить</button>
+              </div>
+              <!--
+              +b.sogl
+                label
+                  input(type="checkbox")
+                  .lab
+                  span
+                    | Согласен на 
+                    |
+                    |
+                    a(href="#" target="_blank") обработку персональных данных 
+              -->
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="modal"></div>
       <!-- modal-->
     </div>
     <link rel="stylesheet" href="fonts/icomoon/style.css">
