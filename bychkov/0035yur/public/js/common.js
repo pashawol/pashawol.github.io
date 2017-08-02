@@ -164,13 +164,13 @@ $( window ).on( "load", function() {
   $(".form-debt__wrap .custom-label__input").click(function(){
     $(".custom-label").removeClass("active");
     var th= $(this);
-    th.parents(".form-debt__wrap").find(".form-debt__btn.disabled")
+    th.parents(".form-debt__item").find(".form-debt__btn.disabled")
     .removeClass("disabled");
     th.parent().addClass("active");
   })
   $(".form-debt__btn.next").click(function(e){
     var th= $(this);
-    th.parents(".form-debt__item.form-debt__item-active").removeClass("form-debt__item-active").next("").fadeIn();
+    th.parents(".form-debt__item").removeClass("form-debt__item-active").next().addClass("form-debt__item-active").fadeIn();
     return false;
   })
 
