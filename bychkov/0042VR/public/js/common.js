@@ -167,5 +167,6 @@ $('.slider-nav').slick({
   $('.game-all__row').mixItUp();
   $(".place").click(function(){
     $(".toggle-place").slideToggle();
+    return false;
   })
 });
