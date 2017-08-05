@@ -138,48 +138,8 @@ $('.slider-nav').slick({
 });
 
 
-// карта
-// http://api.2gis.ru/doc/maps/ru/examples/markers/
-      // api
- 
-        var map  ;
-        DG.then(function () {
 
-        map = DG.map('map', {
-        center: [55.90065756884205,37.53963449999995],
-        zoom: 16,
-        lazy: true,
-        // fullscreenControl: false,
-        //- zoomControl: false,
-        scrollWheelZoom: false,
-        // doubleClickZoom: false,
-        });
-        var myIcon = DG.icon({
-          iconUrl: 'img/svg/placeholder-filled-point.svg',
-          iconRetinaUrl: 'img/svg/placeholder-filled-point.svg',
-          iconSize: [37, 45],
-          iconAnchor: [22, 60],
-          // popupAnchor: [-3, -76],
-          
-      });
-
-                  marker1 = DG.marker([55.74207806900115,37.602956499999976], {icon: myIcon}).addTo(map).bindPopup(
-        '<p>119034, Москва, 2 - Обыденский переулок, д. 11</p>')
-        .bindLabel(' <div class="my-hint "><h3>VR Полигон</h3> <p>119034, Москва, 2 - Обыденский переулок, д. 11</p> </div>');
-
-                  marker2 = DG.marker([55.90065756884205,37.53963449999995], {icon: myIcon}).addTo(map).bindPopup(
-         '<p>127411, Москва, Дмитровское шоссе, 157-9</p>')
-        .bindLabel(' <div class="my-hint "> <h3>главный офис</h3><p>127411, Москва, Дмитровское шоссе, 157-9</p> </div>');
-      
-                  group = DG.featureGroup([marker1, marker2]);
-                  group.addTo(map);
-                  group.on('click', function(e) {
-                      map.setView([e.latlng.lat, e.latlng.lng]);
-                  });
-         
-         
-        });
-
+    // переход по карте
    $(".p-1").click(function(){
     $(".leaflet-marker-icon:nth-child(2)").click();
    }) 
