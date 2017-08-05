@@ -65,21 +65,6 @@ $( window ).on( "load", function() {
 
 
  
-$(function() {
-// $(' .tabs__caption   .tab-btn:first-child  ').addClass("active")
- // $('.tabs__content:first-child ').addClass("active");
-$(' .tabs__caption').on('click', '.tab-btn:not(.active)', function(e) {
-
-  $(this)
-    .addClass('active').addClass('current').siblings().removeClass('active')
-    .closest('div.tabs').find('div.tabs__content').hide().removeClass('active')
-    .eq($(this).index()).fadeIn().addClass('active');
-   
-    // $('.slider-small, .slider-big').slick('unslick');
-    //  section_slider();
-    return false;
-});
-});
   // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99")
     .attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
@@ -171,10 +156,16 @@ $('.slider-nav').slick({
     mainClass: 'my-mfp-slide-bottom'
   });
 
+// accordion
   $(".showhide").click(function() {
-     $(".showhide-all").slideUp(500), $(".showhide").removeClass("active"), 
+     $(".showhide-all").slideUp(), $(".showhide").removeClass("active"), 
      $(this).next("div").filter(function() {
-            return "block" == $(this).css("display") }).slideUp(500),
+            return "block" == $(this).css("display") }).slideUp(),
              $(this).next("div").filter(function() {
-            return "none" == $(this).css("display") }).slideDown(500).prev("div").addClass("active") })
+            return "none" == $(this).css("display") }).slideDown().prev("div").addClass("active") })
+
+  $('.game-all__row').mixItUp();
+  $(".place").click(function(){
+    $(".toggle-place").slideToggle();
+  })
 });
