@@ -171,4 +171,10 @@ $('.slider-nav').slick({
     mainClass: 'my-mfp-slide-bottom'
   });
 
+  $(".showhide").click(function() {
+     $(".showhide-all").slideUp(500), $(".showhide").removeClass("active"), 
+     $(this).next("div").filter(function() {
+            return "block" == $(this).css("display") }).slideUp(500),
+             $(this).next("div").filter(function() {
+            return "none" == $(this).css("display") }).slideDown(500).prev("div").addClass("active") })
 });
