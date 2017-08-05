@@ -30,7 +30,7 @@ $(function() {
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
     }
-     var topH=$("header ").innerHeight();  
+     var topH=$("header").height();  
     if($(this).scrollTop()>topH){
                     $('.top-nav  ').addClass('fixed');
                     
@@ -118,8 +118,45 @@ $('.slider-nav').slick({
   // vertical: false,
   arrows: false, 
   // centerMode: true,
-  variableWidth: true
+  variableWidth: true,
+  responsive: [
+        
+       
+        
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 5,
+             variableWidth: false
+          }
+        },
+        {
+          breakpoint: 710,
+          settings: {
+            slidesToShow: 4,
+             variableWidth: false
+          }
+        },
+
+      {
+          breakpoint: 580,
+          settings: {
+            slidesToShow: 3,
+             variableWidth: false
+          }
+        },
+
+      {
+          breakpoint: 440,
+          settings: {
+            slidesToShow: 2,
+             variableWidth: false
+          }
+        },
+
  
+
+      ]
 });
 
 
@@ -166,7 +203,7 @@ $('.slider-nav').slick({
 
   $('.game-all__row').mixItUp();
   $(".place").click(function(){
-    $(".toggle-place").slideToggle();
+    $(".toggle-place").fadeToggle();
     return false;
   })
 });
