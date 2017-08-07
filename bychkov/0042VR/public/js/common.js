@@ -198,7 +198,7 @@ $('.slider-nav').slick({
     
     midClick: true,
     removalDelay: 300,
-    mainClass: 'my-mfp-slide-bottom'
+    mainClass: 'my-mfp-zoom-in'
   });
 
 // accordion
@@ -222,7 +222,7 @@ $('.slider-nav').slick({
     }
 });
 
-  $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a,  .scroll-link').on('click',function (e) {
+  $('  .scroll-link').on('click',function (e) {
       e.preventDefault();
 
       var target = this.hash,
@@ -233,5 +233,64 @@ $('.slider-nav').slick({
       }, 900, 'swing', function () {
           window.location.hash = target;
       });
+  });
+
+     //smoothscroll
+    $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top- 20
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top +10 <= scrollPos && refElement.position().top   + refElement.height() > (scrollPos )) {
+            $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+  }
+// форма
+$("form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: $("form").attr("action"), //Change
+      data: th.serialize()
+    }).done(function() {
+          // $.magnificPopup.close();
+         $.magnificPopup.open({
+        items: {
+          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
+          type: 'inline'
+        }
+      })
+       setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+        // $.magnificPopup.close();
+      }, 4000);
+    });
+    return false;
   });
 });
