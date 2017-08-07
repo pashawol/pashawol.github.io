@@ -206,4 +206,18 @@ $('.slider-nav').slick({
     $(".toggle-place").fadeToggle();
     return false;
   })
+
+
+  $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a,  .scroll-link').on('click',function (e) {
+      e.preventDefault();
+
+      var target = this.hash,
+      $target = $(target);
+
+      $('html, body').stop().animate({
+          'scrollTop': $target.offset().top
+      }, 900, 'swing', function () {
+          window.location.hash = target;
+      });
+  });
 });

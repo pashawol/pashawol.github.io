@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <meta name="description" content="о чем страница">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#3361d8">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#3361d8">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3361d8">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" style="background-image: url(img/header-bg.jpg);">
+        <div class="top-nav">
+          <div class="container">
+            <div class="top-nav__row"><a class="logo" href="/"><img class="res-i" src="img/logo-mnu.png" alt=""/></a>
+              <ul class="top-nav__nav">
+                <li class="top-nav__item"><a class="top-nav__a link scroll-link" href="#about">О клубе</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__a link scroll-link" href="#place">гольф-поле</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__a link scroll-link" href="#price">услуги</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__a link scroll-link" href="#membership">турниры и членство</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__a link scroll-link" href="#school">Детская школа гольфа</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__a link scroll-link" href="#contact">контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- top-nav-->
+        <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+          <div class="wrapp-hidden"> 
+            <div class="text-right">
+              <div class="lang hidden-md"><a class="lang__item active" href="#">Рус</a><a class="lang__item" href="#">Eng</a>
+              </div>
+              <p><a class="trop__link trop__link-tel hidden-sm hidden-md" href="tel:+7 931 385 04 59  ">+7 931 385 04 59 </a>
+              </p>
+              <p><a class="trop__link trop__link-addr scroll-link" href="#map">ул. Гофмейстерская, д.1 </a>
+              </p>
+            </div>
+            <ul>
+              <li><a href="#about">О клубе</a></li>
+              <li><a href="#place">гольф-поле</a></li>
+              <li><a href="#price">услуги</a></li>
+              <li><a href="#membership">турниры и членство</a></li>
+              <li><a href="#school">Детская школа гольфа</a></li>
+              <li><a href="#contact">контакты</a></li>
+            </ul>
+            <div class="soc"><a class="soc__link" href="#" target="_blank"><span class="icon-soc-1"></span></a><a class="soc__link" href="#" target="_blank"><span class="icon-soc-2"></span></a>
+            </div>
+          </div>
+        </div>
+        <!--  мобильное менюspan
+        -->
+        <div class="top_line"> 
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-9 col-sm-push-3 col-md-10 col-md-push-2">
+                <div class="top_line__head">
+                  <div class="top_line__toogle-mnu hidden-lg">
+                    <div class="toggle-mnu toggle-mnu-1" href="#"><span></span></div><span class="hidden-xs">МЕНЮ</span>
+                  </div><a class="top_line__link top_line__link-addr scroll-link" href="#map">ул. Гофмейстерская, д.1 </a><a class="top_line__link top_line__link-tel" href="tel:+7 931 385 04 59  ">+7 931 385 04 59  </a>
+                  <div class="soc soc-top hidden-xs"><a class="soc__link" href="#" target="_blank"><span class="icon-soc-1"></span></a><a class="soc__link" href="#" target="_blank"><span class="icon-soc-2"></span></a>
+                  </div>
+                  <div class="lang hidden-sm hidden-xs"><a class="lang__item active" href="#">Рус</a><a class="lang__item" href="#">Eng</a>
+                  </div>
+                </div>
+                <ul class="nav">
+                  <li class="nav__item"><a class="nav__link scroll-link" href="#about">О клубе</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link scroll-link" href="#place">гольф-поле</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link scroll-link" href="#price">услуги</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link scroll-link" href="#membership">турниры и членство</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link scroll-link" href="#school">Детская школа гольфа</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link scroll-link" href="#contact">контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-sm-3 col-sm-pull-9 col-md-2 col-md-pull-10">
+                <div class="logo"><img class="res-i" src="img/logo.svg" alt=""/></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__main">
+          <div class="container"> 
+            <h1>Гольф-Клуб «Петергоф»&#160;—<br/><small>первое 18-луночное городское поле </small><small>в&#160;Санкт-Петербурге</small></h1>
+            <div class="row hidden-xs">
+              <div class="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-2">
+                <div class="header__bot text-center"><img src="img/svg/mouse.svg" alt=""/>
+                  <p>прокрутите вниз</p>
+                </div>
+              </div>
+              <div class="col-md-5 col-sm-6">
+                <div class="temp-block">
+                  <div class="temp-block__caption">
+                    <h3>Погода</h3>
+                    <div class="gsInformer" id="gsInformerID-dfHAeaH77Eqkpc" style="width: 240px; height: auto; font-family: Arial; border: 0px;">
+                      <div class="gsIContent"><a class="nolink" alt="Погода в Петергофе" title="Погода в Петергофе" target="_blank" href="https://www.gismeteo.by/weather-petergof-66432/">
+                          <div id="gs-moduleCurrentBlock">
+                            <div class="gsInfoWrapper">
+                              <div class="main_wrap" id="main_wrap">
+                                <div class="secondaryWrap" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+                                  <table>
+                                    <tbody>
+                                      <tr>
+                                        <td align="center" style="text-align:center;" width="100%" nowrap="">
+                                          <div class="gsTemp">
+                                            <nobr><span>+15<span class="tsp"> </span>°C</span></nobr>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="gsAddInfo2 padding" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+                              <div class="gsAddInfo">Пасмурно</div>
+                              <div class="gsAddInfo3"><span id="windAddInfo">штиль</span><span id="humidityAddInfo">94<i class="tsp"> </i>% влажн.</span></div>
+                            </div>
+                          </div></a>
+                        <div class="gsLinks" style="background-color: rgb(255, 255, 255);">
+                          <table>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="leftCol"><a href="https://www.gismeteo.by/" target="_blank" title="Погода"><img alt="Погода" src="https://nby01.gismeteo.by/assets/flat-ui/img/logo-mini2.png" align="middle" border="0" width="11" height="16"/><img src="https://nby01.gismeteo.by/assets/flat-ui/img/informer/gismeteo.svg" border="0" align="middle" style="left: 5px; top:1px;"/></a></div>
+                                  <div class="rightCol"><a href="https://www.gismeteo.by/weather-petergof-66432/2-weeks/" target="_blank" title="Погода в Петергофе на 2 недели"><img src="https://nby01.gismeteo.by/assets/flat-ui/img/informer/forecast-2weeks.ru.svg" border="0" align="middle" style="top:auto;" alt="Погода в Петергофе на 2 недели"/></a></div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- temp-block-->
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container-fluid color">
+        <div class="row">
+          <div class="col-lg-7 col-xs-12">
+            <!-- start about-->
+            <section class="about" id="about" style="background-image: url(img/about-bg.jpg);">
+              <div class="inner">
+                <h2>О Клубе</h2>
+                <p>Статусное место для проведения турниров по гольфу, мероприятий международного уровня, неформального общения и деловых встреч</p>
+                <ul class="about__ul"> 
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/about-1.svg" alt=""/></span><span>все условия для комфортной игры </span>
+                  </li>
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/about-2.svg" alt=""/></span><span>оснащенная Академия гольфа с комфортными<br/>раздевалками, душевыми и персональными шкафчиками</span>
+                  </li>
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/about-3.svg" alt=""/></span><span>про-шоп, где есть возможность приобрести все <br/> необходимое оборудование, соответствующее<br/> вашему вкусу и уровню игры</span>
+                  </li>
+                  <li class="about__item"><span class="about__icon-wrap"><span>5</span></span><span>минут от Большого Петергофского дворца<br/>и паркового ансамбля</span>
+                  </li>
+                  <li class="about__item"><span class="about__icon-wrap"><span>25</span></span><span>минут от Международного аэропорта <br/>Пулково</span>
+                  </li>
+                  <li class="about__item"><span class="about__icon-wrap"><span>30</span></span><span>минут от Невского Проспекта</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <!-- end about-->
+          </div>
+          <div class="col-lg-5 col-xs-12">
+            <!-- start trener-->
+            <section class="trener" id="trener">
+              <div class="container-fluid">
+                <h3>Тренерский состав</h3>
+                <div class="row">
+                      <div class="col-lg-12 col-md-6">
+                        <div class="trener__item">
+                          <div class="trener__head">
+                            <div class="trener__img-wrap"><img class="res-i" src="img/trener-1.jpg" alt=""/>
+                            </div>
+                            <div class="trener__text">
+                              <h4 class="trener__name">Инар Курамшин
+                              </h4><a class="trener__btn btn btn-default hidden-xs popup-with-zoom-anim" href="#small-dialog">ЗАПИСАТЬСЯ НА УРОК</a>
+                            </div>
+                          </div>
+                          <div class="trener__body">
+                            <p>Гольф-Профессионал PGA, выпускник Европейской Ассоциации Профессиональных Гольфистов “PGA of GB”, участник турниров Российского Про Тура, участник турнира “European Challenge Tour”</p><a class="trener__btn btn btn-default hidden-lg hidden-md hidden-sm popup-with-zoom-anim" href="">ЗАПИСАТЬСЯ НА УРОК</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- .col-lg-12.col-md-6-->
+                      <div class="col-lg-12 col-md-6">
+                        <div class="trener__item">
+                          <div class="trener__head">
+                            <div class="trener__img-wrap"><img class="res-i" src="img/trener-2.jpg" alt=""/>
+                            </div>
+                            <div class="trener__text">
+                              <h4 class="trener__name">Максим Лёвушкин
+                              </h4><a class="trener__btn btn btn-default hidden-xs popup-with-zoom-anim" href="#small-dialog">ЗАПИСАТЬСЯ НА УРОК</a>
+                            </div>
+                          </div>
+                          <div class="trener__body">
+                            <p>Гольф-Профессионал, выпускник РГУФК СМиТ, тренер Московской Школы Гольфа, Главный Тренер Детской Школы Гольфа в гольф-клубе «Петергоф»</p><a class="trener__btn btn btn-default hidden-lg hidden-md hidden-sm popup-with-zoom-anim" href="">ЗАПИСАТЬСЯ НА УРОК</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- .col-lg-12.col-md-6-->
+                </div>
+              </div>
+            </section>
+            <!-- end trener-->
+          </div>
+        </div>
+      </div>
+      <!-- .container-fluid-->
+      <!-- start place-->
+      <section class="place" id="place">
+        <div class="place__container-wrap">
+        </div>
+        <div class="container">
+          <div class="place__head text-center">
+            <h2>Гольф-поле</h2>
+            <p><a href="">
+                  Счетная карточка 
+                
+                <span>(60 Кb)</span></a></p>
+            <p><a href="">
+                  Account card
+                
+                <span> (54 Кb)</span></a></p>
+          </div>
+          <div class="place__form">
+            <form action="">
+              <h3 class="text-center">Перерасчет гандикапа</h3>
+              <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <input type="text" placeholder="Ваш точный гандикап"/>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                  <select name="">
+                    <option value="" selected="selected" disabled="disabled">Стартовая площадка</option>
+                    <option value="">Стартовая площадка1</option>
+                    <option value="">Стартовая площадка2</option>
+                  </select>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">  
+                  <p class="accent">
+                     Ваш игровой гандикап: 
+                    
+                    <span>10</span>
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="place__slider-wrap">
+          <div class="place__slider">
+            <div class="place__slide" style="background-image: url(img/slider-1.jpg);">
+            </div>
+            <div class="place__slide" style="background-image: url(img/slider-1.jpg);">
+            </div>
+            <div class="place__slide" style="background-image: url(img/slider-1.jpg);">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end place-->
+      <div class="container-fluid color">
+        <div class="row">
+          <div class="col-lg-7 col-lg-push-5 col-xs-12">
+            <!-- start preim-->
+            <section class="about preim" id="preim" style="background-image: url(img/preim-bg.jpg);">
+              <div class="inner">
+                <h2>Преимущества</h2>
+                <ul class="about__ul"> 
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/preim-1.svg" alt=""/></span><span> Территория Клуба – 89 Га</span>
+                  </li>
+                  <!-- item-->
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/preim-2.svg" alt=""/></span><span>18 лунок PAR 71</span>
+                  </li>
+                  <!-- item-->
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/preim-3.svg" alt=""/></span><span>6 озер</span>
+                  </li>
+                  <!-- item-->
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/preim-4.svg" alt=""/></span><span>72 бункера</span>
+                  </li>
+                  <!-- item-->
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/preim-5.svg" alt=""/></span><span>Драйвинг Рейндж 80м2</span>
+                  </li>
+                  <!-- item-->
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/preim-6.svg" alt=""/></span><span>Паттинг и Чиппинг грины</span>
+                  </li>
+                  <!-- item-->
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/preim-7.svg" alt=""/></span><span>Академия Гольфа</span>
+                  </li>
+                  <!-- item-->
+                  <li class="about__item"><span class="about__icon-wrap"><img class="res-i" src="img/svg/preim-8.svg" alt=""/></span><span>Панорамный ресторан «Green Hills»</span>
+                  </li>
+                  <!-- item-->
+                </ul>
+              </div>
+            </section>
+            <!-- end preim-->
+          </div>
+          <div class="col-lg-5 col-lg-pull-7 col-xs-12">
+            <!-- start architect-->
+            <section class="trener architect" id="architect">
+              <div class="container text-center">
+                <h3 class="text-center">Архитекторы</h3>
+                <div class="row">
+                      <div class="col-lg-12 col-md-6">
+                        <div class="trener__item">
+                          <div class="trener__head">
+                            <div class="trener__img-wrap"><img class="res-i" src="img/architect-1.jpg" alt=""/>
+                            </div>
+                            <div class="trener__text">
+                              <h4 class="trener__name">Стив Форрест
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="trener__body">
+                            <p>Новое чемпионское поле для гольфа, расположенное всего в трёх километрах от изящных садов Петергофа и Летнего Дворца, было построено с  интригующими конструктивными особенностями и непростыми деталями</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- .col-lg-12.col-md-6-->
+                      <div class="col-lg-12 col-md-6">
+                        <div class="trener__item">
+                          <div class="trener__head">
+                            <div class="trener__img-wrap"><img class="res-i" src="img/architect-2.jpg" alt=""/>
+                            </div>
+                            <div class="trener__text">
+                              <h4 class="trener__name">Грег Норман
+                              </h4>
+                            </div>
+                          </div>
+                          <div class="trener__body">
+                            <p>Мы приложили все усилия для создания гольф-клуба с атмосферой изысканности и непринужденности. Элитная недвижимость, которая в дальнейшем будет построена на территории комплекса, возымеет самые лучшие видовые и дислокационные характеристики</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- .col-lg-12.col-md-6-->
+                </div>
+              </div>
+            </section>
+            <!-- end architect-->
+          </div>
+        </div>
+      </div>
+      <!-- .container-fluid     -->
+      <!-- start price-->
+      <section class="price" id="price">
+        <div class="price__head">
+          <div class="container">
+            <h2 class="text-center">Услуги</h2><a class="price__btn btn btn-default" href="#">ПРАЙТ-ЛИСТ</a>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8 col col-xs-12">
+              <div class="row">
+                <div class="price__item">
+                  <div class="row">
+                    <div class="price__img-wrap col-md-6 col-sm-6 col-xs-12 col-h" style="background-image: url(../img/price-1.jpg);">
+                    </div>
+                    <div class="col-md-6 col-xs-12 col-sm-6 col-h">
+                      <div class="price__caption">
+                        <p>«Разовая игра» или green fee в будние или выходные дни</p>
+                        <p>Индивидуальные программы обучения</p>
+                        <p>
+                          «Стань Гольфистом за 10 часов» для желающих «твердо встатьна ноги» или понять: интересен ли гольф для Вас</p>
+                        <p>Гольф-клиники или групповые уроки по гольфу, как дополнение к тимбилдингу или активность на вашем мероприятии </p>
+                        <p>Прокат гольф-инвентаря </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .item      -->
+                <div class="price__item">
+                  <div class="row">
+                    <div class="price__img-wrap col-md-6 col-sm-push-6 col-sm-6 col-xs-12 col-h" style="background-image: url(../img/price-2.png);">
+                    </div>
+                    <div class="col-md-6 col-sm-pull-6 col-sm-6 col-xs-12 col-h">
+                      <div class="price__caption">
+                        <h4>Подарочные сертификаты</h4>
+                        <p>Гольф-клуб «Петергоф» представляет подарочные сертификаты разного номинала, оформляемые на любой спектр услуг, которые непременно порадуют как самого близкого человека, так и просто знакомого, важного партнера, руководителя или коллегу. </p>
+                        <p>Это прекрасный подарок на любой праздник для всех, кто любит открывать новое, не стоит на месте и любит природу! </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .item      -->
+              </div>
+            </div>
+            <div class="col-md-4 col col-xs-12">
+              <div class="row">
+                <div class="price__item">
+                  <div class="row">
+                    <div class="price__img-wrap col-md-12 col-sm-6 col-xs-12 col-h" style="background-image: url(../img/price-3.png);">
+                    </div>
+                    <div class="col-md-12 col-sm-6 col-xs-12 col-h">
+                      <div class="price__caption">
+                        <h4>Ресторан для проведения мероприятий и частных турниров</h4>
+                        <p>В непосредственной близости от Академии Гольфа расположен декорированный шатер, подходящий для проведения банкетов, корпоративных и частных мероприятий до 140 человек, площадью 350м2. </p>
+                        <p>К услугам гостей и членов клуба меню ресторана по системе À la carte, а также банкетное меню для проведения мероприятий разного уровня</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .item    -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end price-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-lg-push-8 col-xs-12">
+            <!-- start tournaments-->
+            <section class="tournaments" id="tournaments">
+              <div class="container-fluid">
+                <h3> Турниры</h3>
+                <div class="tabs">
+                  <div class="tabs__btn-wrap">
+                    <div class="tabs__btn">Июль
+                    </div>
+                    <div class="tabs__btn">Август
+                    </div>
+                  </div>
+                  <div class="tabs__content-wrap">
+                    <div class="tabs__content">
+                      <div class="tabs__row row">
+                        <div class="col-lg-12 col-sm-6 col-xs-12"><a class="tabs__content-item popup-with-zoom-anim" href="#big-dialog"><span class="tabs__date text-center"><span class="tabs__date-head">07</span><span class="tabs__date-body"> 07</span></span><span class="tabs__caption"><span class="tabs__time">18:00</span>
+                          <p>9 лунок 3 Клюшки + Патер</p></span></a>
+                          <!-- content-item-->
+                        </div>
+                        <!-- .col-lg-12.col-sm-6.col-xs-12-->
+                        <div class="col-lg-12 col-sm-6 col-xs-12"><a class="tabs__content-item popup-with-zoom-anim" href="#big-dialog"><span class="tabs__date text-center"><span class="tabs__date-head">07</span><span class="tabs__date-body small"> 22-23</span></span><span class="tabs__caption"><span class="tabs__time">18:00</span>
+                          <p>9 лунок 3 Клюшки + Патер</p></span></a>
+                          <!-- content-item-->
+                        </div>
+                        <!-- .col-lg-12.col-sm-6.col-xs-12-->
+                        <div class="col-lg-12 col-sm-6 col-xs-12"><a class="tabs__content-item popup-with-zoom-anim" href="#big-dialog"><span class="tabs__date text-center"><span class="tabs__date-head">07</span><span class="tabs__date-body"> 07</span></span><span class="tabs__caption"><span class="tabs__time">18:00</span>
+                          <p>9 лунок 3 Клюшки + Патер</p></span></a>
+                          <!-- content-item-->
+                        </div>
+                        <!-- .col-lg-12.col-sm-6.col-xs-12-->
+                        <div class="col-lg-12 col-sm-6 col-xs-12"><a class="tabs__content-item popup-with-zoom-anim" href="#big-dialog"><span class="tabs__date text-center"><span class="tabs__date-head">07</span><span class="tabs__date-body small"> 22-23</span></span><span class="tabs__caption"><span class="tabs__time">18:00</span>
+                          <p>9 лунок 3 Клюшки + Патер</p></span></a>
+                          <!-- content-item-->
+                        </div>
+                        <!-- .col-lg-12.col-sm-6.col-xs-12-->
+                      </div>
+                    </div>
+                    <!-- +e.content-->
+                    <div class="tabs__content">
+                      <div class="tabs__row row">
+                        <div class="col-lg-12 col-sm-6 col-xs-12"><a class="tabs__content-item popup-with-zoom-anim" href="#big-dialog"><span class="tabs__date text-center"><span class="tabs__date-head">07</span><span class="tabs__date-body"> 07</span></span><span class="tabs__caption"><span class="tabs__time">18:00</span>
+                          <p>9 лунок 3 Клюшки + Патер</p></span></a>
+                          <!-- content-item-->
+                        </div>
+                        <!-- .col-lg-12.col-sm-6.col-xs-12-->
+                        <div class="col-lg-12 col-sm-6 col-xs-12"><a class="tabs__content-item popup-with-zoom-anim" href="#big-dialog"><span class="tabs__date text-center"><span class="tabs__date-head">07</span><span class="tabs__date-body small"> 22-23</span></span><span class="tabs__caption"><span class="tabs__time">18:00</span>
+                          <p>9 лунок 3 Клюшки + Патер</p></span></a>
+                          <!-- content-item-->
+                        </div>
+                        <!-- .col-lg-12.col-sm-6.col-xs-12-->
+                        <div class="col-lg-12 col-sm-6 col-xs-12"><a class="tabs__content-item popup-with-zoom-anim" href="#big-dialog"><span class="tabs__date text-center"><span class="tabs__date-head">07</span><span class="tabs__date-body"> 07</span></span><span class="tabs__caption"><span class="tabs__time">18:00</span>
+                          <p>9 лунок 3 Клюшки + Патер</p></span></a>
+                          <!-- content-item-->
+                        </div>
+                        <!-- .col-lg-12.col-sm-6.col-xs-12-->
+                        <div class="col-lg-12 col-sm-6 col-xs-12"><a class="tabs__content-item popup-with-zoom-anim" href="#big-dialog"><span class="tabs__date text-center"><span class="tabs__date-head">07</span><span class="tabs__date-body small"> 22-23</span></span><span class="tabs__caption"><span class="tabs__time">18:00</span>
+                          <p>9 лунок 3 Клюшки + Патер</p></span></a>
+                          <!-- content-item-->
+                        </div>
+                        <!-- .col-lg-12.col-sm-6.col-xs-12-->
+                      </div>
+                    </div>
+                    <!-- +e.content-->
+                  </div>
+                </div>
+                <!-- .tabs    --><a class="tournaments__btn btn btn-default" href="#">КАЛЕНДАРЬ ТУРНИРОВ</a>
+                <div class="tournaments__bott">
+                  <p>Запись на турниры:</p>
+                  <p><a class="tel" href="tel:89315436576">8-931-543-65-76</a></p>
+                  <p><a class="mail" href="mailto:info@peterhofgolf.ru">info@peterhofgolf.ru</a></p>
+                </div>
+              </div>
+            </section>
+            <!-- end tournaments-->
+          </div>
+          <div class="col-lg-8 col-lg-pull-4 col-xs-12">
+            <!-- start membership-->
+            <div class="membership" id="membership">
+              <div class="container-fluid">
+                <div class="membership__row row">
+                  <div class="col-sm-6 col-xs-12"> 
+                    <div class="membership__item">
+                      <div class="membership__img-wrap text-center" style="background-image: url(img/price-block-1.jpg);">
+                        <h3>Индивидуальное членство</h3>
+                      </div>
+                      <div class="membership__caption text-center">
+                        <div class="membership__caption-item">
+                          <p>Сезонное - полный день</p>
+                          <div class="accent">100 000 ₽</div>
+                        </div>
+                        <div class="membership__caption-item">
+                          <p>Сезонное - будние дни</p>
+                          <div class="accent">60 000 ₽</div>
+                        </div>
+                        <div class="membership__caption-item">
+                          <p>На месяц - полный день</p>
+                          <div class="accent">25 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="membership__hidden-block">
+                        <h4>   Преимущества члена Клуба:</h4>
+                        <ul>
+                          <li><strong class="accent">1</strong><span>
+                              Неограниченное пользованиегольф-полем</span></li>
+                          <li><strong class="accent">2</strong><span> Скидка в Клубном ресторане 10% </span></li>
+                          <li><strong class="accent">3</strong><span>Скидка в Pro-Shop 10% </span></li>
+                          <li><strong class="accent">3 </strong><span> Особые условия участия в турнирах Клуба</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .col-sm-6-->
+                  <div class="col-sm-6 col-xs-12"> 
+                    <div class="membership__item">
+                      <div class="membership__img-wrap text-center" style="background-image: url(img/price-block-2.jpg);">
+                        <h3>Корпоративное членство</h3>
+                      </div>
+                      <div class="membership__caption text-center">
+                        <div class="membership__caption-item">
+                          <p>Сезонное - один сотрудник</p>
+                          <div class="accent">90 000 ₽</div>
+                        </div>
+                        <p class="membership__text">Распространяются на сотрудников одной корпорации, мин. 2 человека.
+                        </p>
+                        <p class="membership__text">Коллегам предоставляется скидка 1000 ₽ на каждого доп. игрока. Минимальная стоимость корпоративного членства – 70 000 ₽
+                        </p>
+                      </div>
+                      <div class="membership__hidden-block">
+                        <h4>   Преимущества члена Клуба:</h4>
+                        <ul>
+                          <li><strong class="accent">1</strong><span>
+                              Неограниченное пользованиегольф-полем</span></li>
+                          <li><strong class="accent">2</strong><span> Скидка в Клубном ресторане 10% </span></li>
+                          <li><strong class="accent">3</strong><span>Скидка в Pro-Shop 10% </span></li>
+                          <li><strong class="accent">3 </strong><span> Особые условия участия в турнирах Клуба</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .col-sm-6-->
+                  <div class="col-sm-6 col-xs-12"> 
+                    <div class="membership__item">
+                      <div class="membership__img-wrap text-center" style="background-image: url(img/price-block-3.jpg);">
+                        <h3>Семейное членство</h3>
+                      </div>
+                      <div class="membership__caption text-center">
+                        <div class="membership__caption-item membership__caption-item-big">
+                          <p>Сезонное на двоих</p>
+                          <div class="accent">180 000 ₽</div>
+                        </div>
+                      </div>
+                      <div class="membership__hidden-block">
+                        <h4>   Преимущества члена Клуба:</h4>
+                        <ul>
+                          <li><strong class="accent">1</strong><span>
+                              Неограниченное пользованиегольф-полем</span></li>
+                          <li><strong class="accent">2</strong><span> Скидка в Клубном ресторане 10% </span></li>
+                          <li><strong class="accent">3</strong><span>Скидка в Pro-Shop 10% </span></li>
+                          <li><strong class="accent">3 </strong><span> Особые условия участия в турнирах Клуба</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .col-sm-6-->
+                  <div class="col-sm-6 col-xs-12"> 
+                    <div class="membership__item">
+                      <div class="membership__img-wrap text-center" style="background-image: url(img/price-block-4.jpg);">
+                        <h3>Юниорское членство</h3>
+                      </div>
+                      <div class="membership__caption text-center">
+                        <div class="membership__caption-item membership__caption-item-big">
+                          <p>Сезонное на одного</p>
+                          <div class="accent">35 000 ₽</div>
+                        </div>
+                        <p class="membership__text">Условия распространяются для детей от 8 до 18 лет включительно.
+                        </p>
+                      </div>
+                      <div class="membership__hidden-block">
+                        <h4>   Преимущества члена Клуба:</h4>
+                        <ul>
+                          <li><strong class="accent">1</strong><span>
+                              Неограниченное пользованиегольф-полем</span></li>
+                          <li><strong class="accent">2</strong><span> Скидка в Клубном ресторане 10% </span></li>
+                          <li><strong class="accent">3</strong><span>Скидка в Pro-Shop 10% </span></li>
+                          <li><strong class="accent">3 </strong><span> Особые условия участия в турнирах Клуба</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .col-sm-6-->
+                </div>
+              </div>
+            </div>
+            <!-- end membership-->
+          </div>
+        </div>
+      </div>
+      <!-- .container-fluid-->
+      <!-- start school-->
+      <section class="school" id="school">
+        <div class="container-fluid">
+          <div class="school__row">
+            <div class="col-lg-4 col-sm-6 col-xs-12">
+              <div class="school__text">
+                <h2 class="text-center">Детская школа гольфа</h2>
+                <h3 class="text-center">от 8 до 14 лет</h3>
+                <div class="hidden-xs">
+                  <p>Детская школа гольфа в "Петергофе" -  это не только освоение базовых навыков игры в гольф, но и развитие физического здоровья Вашего ребенка. </p>
+                  <p>Мотивацией для занятий может стать финальный юниорский турнир, проводимый в конце сезона, главным призом на котором станет индивидуальное юниорское членство на следующий год!</p>
+                  <div class="school__item">
+                    <div class="school__img"><img class="res-i" src="img/school-1.png" alt=""/>
+                    </div>
+                    <p>Стоимость месячного абонемента детской школы гольфа от 8 до 14 лет: 12 занятий — 2 500 ₽/занятие (90 мин).</p>
+                  </div>
+                  <div class="school__item">
+                    <div class="school__img"><img class="res-i" src="img/school-2.png" alt=""/>
+                    </div>
+                    <p>Гольф-инвентарь предоставляется бесплатно на период проведения всех обучающих занятий! </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="school__img-wrap col-lg-8 col-sm-6 col-xs-12" style="background-image: url(img/school-bg.jpg);"> 
+            </div>
+            <div class="col-xs-12 visible-xs">
+              <div class="school__text">
+                <p>Детская школа гольфа в "Петергофе" -  это не только освоение базовых навыков игры в гольф, но и развитие физического здоровья Вашего ребенка. </p>
+                <p>Мотивацией для занятий может стать финальный юниорский турнир, проводимый в конце сезона, главным призом на котором станет индивидуальное юниорское членство на следующий год!</p>
+                <div class="school__item">
+                  <div class="school__img"><img class="res-i" src="img/school-1.png" alt=""/>
+                  </div>
+                  <p>Стоимость месячного абонемента детской школы гольфа от 8 до 14 лет: 12 занятий — 2 500 ₽/занятие (90 мин).</p>
+                </div>
+                <div class="school__item">
+                  <div class="school__img"><img class="res-i" src="img/school-2.png" alt=""/>
+                  </div>
+                  <p>Гольф-инвентарь предоставляется бесплатно на период проведения всех обучающих занятий!      </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end school-->
+      <!-- start map-->
+      <div class="map text-center" id="contact"><img class="res-i" src="img/bitmap.jpg" alt=""/>
+      </div>
+      <!-- end map-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-sm-6">
+              <div class="footer__item">
+                <h3>Контакты и режим работы</h3>
+                <p><span class="footer__icon footer__icon-map">г. Петергоф, ул. Гофмейстерская, д.1 </span>
+                </p>
+                <p><a class="footer__icon footer__icon-tel" href="tel:89313850459">8 -931-385-04-59</a>
+                </p>
+                <p><a class="footer__icon footer__icon-mail" href="mailto:info@peterhofgolf.ru">info@peterhofgolf.ru</a>
+                </p>
+                <p>Понедельник-Пятница: 8:00 – 22:00 <br/>	Суббота-Воскресенье и Праздничные Дни: 07:00 -22:00 </p>
+                <p>Последний Ти-тайм на 18 лунок: 20:00 <br/>	Последний Ти-тайм на 9 лунок: 21:00 </p>
+                <p>Драйвинг Рейндж: последняя корзина – 21:00 <br/>	Закрытие: 21.30</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-lg-push-4">
+              <div class="footer__item">
+                <div class="footer__pers">
+                  <h3 class="text-center">По вопросам<br/>сотрудничества </h3>
+                  <div class="footer__img-wrap"><img class="res-i" src="img/footer-img.jpg" alt=""/>
+                  </div>
+                  <h4 class="name text-center">Алистратова Марина </h4>
+                  <p><a class="footer__icon footer__icon-tel" href="tel:+79999896888 ">+79999896888 </a>
+                  </p>
+                  <p><a class="footer__icon footer__icon-mail" href="mailto:marina@peterhofgolf.ru"> marina@peterhofgolf.ru</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-xs-12 col-lg-pull-4">
+              <div class="form-mod">
+                <h2>Напишите нам</h2>
+                <p> Будем признательны, если вы поделитесь своим мнением по любым вопросам нашей работы, а также выскажете свои пожеланиями. Заранее благодарим!</p>
+                <form>
+                  <div class="row">
+                    <div class="col-lg-12 col-sm-6 col-xs-12">
+                      <input type="text" placeholder="ФИО "/>
+                    </div>
+                    <div class="col-lg-12 col-sm-6 col-xs-12">
+                      <input type="tel" placeholder="Телефон "/>
+                    </div>
+                    <div class="col-lg-12 col-sm-6 col-xs-12">
+                      <input type="email" placeholder="E-mail "/>
+                    </div>
+                    <div class="col-lg-12 col-sm-6 col-xs-12">
+                      <textarea placeholder="Сообщение "></textarea>
+                    </div>
+                  </div>
+                  <button class="btn btn-warning">ОТПРАВИТЬ</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="form-mod zoom-anim-dialog mfp-hide" id="small-dialog">
+        <h2>Записаться</h2>
+        <form>
+          <div class="row">
+            <div class="col-lg-12 col-sm-6 col-xs-12">
+              <input type="text" placeholder="ФИО "/>
+            </div>
+            <div class="col-lg-12 col-sm-6 col-xs-12">
+              <input type="tel" placeholder="Телефон "/>
+            </div>
+            <div class="col-lg-12 col-sm-6 col-xs-12">
+              <input type="email" placeholder="E-mail "/>
+            </div>
+            <div class="col-lg-12 col-sm-6 col-xs-12">
+              <textarea placeholder="Сообщение "></textarea>
+            </div>
+          </div>
+          <button class="btn btn-warning">ОТПРАВИТЬ</button>
+        </form>
+      </div>
+      <div class="zoom-anim-dialog mfp-hide big-dialog" id="big-dialog">
+        <div class="text-wrap">
+          <h3>Приглашаем всех принять участие во Втором этапе Клубной Лиги гольф-клуба "Петергоф"!</h3>
+          <p>Стань первым Чемпионом Клуба и получи главный приз - индивидуальное годовое членство на сезон 2018! </p><br/>
+          <p class="h4">Формат: </p>
+          <p>Строукплей - Стейблфорд / Старт по ТИ Таймам 12:00</p>
+          <p>Турнир открыт для Членов Клуба и Гостей Клуба</p><br/>
+          <p class="h4">Категории:
+            <ul>
+              <li>0-15,4 Мужчины – Строукплей / 15,5-28 Мужчины - Сэйблфорд</li>
+              <li>0-36 Женщины – Стэйблфорд</li>
+            </ul>
+          </p><br/>
+          <p class="h4">Максимальный игровой гандикап:
+            <ul>
+              <li>Мужчины: 28</li>
+              <li>Женщины: 36</li>
+            </ul>
+          </p><br/>
+          <p class="h4">Стоимость Участия: 
+            <ul>
+              <li>Члены Клуба: 2500р.</li>
+              <li>Гости Клуба: 8000р.</li>
+              <li>19ая Лунка: 1000р. </li>
+            </ul>
+          </p><a class="btn btn-default" href="">Подробнее</a>
+        </div>
+      </div>
+    </div>
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
