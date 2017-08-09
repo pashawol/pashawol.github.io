@@ -54,7 +54,8 @@
           <div class="col-sm-4">
             <ol class="breadcrumb">
               <li><a href="#">Главная</a></li>
-              <li class="active">Цены</li>
+              <li><a href="#">Каталог</a></li>
+              <li class="active">Контакты</li>
             </ol>
           </div>
           <div class="col-sm-4 col-xs-5 text-center"><a class="logo" href="."><img class="res-i" src="img/logo.png" alt=""/></a></div>
@@ -115,65 +116,105 @@
       <!-- top-nav-->
     </header>
     <!-- end .header -->
-    <div class="main-top" style="background-image: url(img/header-bg__price.jpg);"><img class="res-i" src="img/header-bg__price.jpg" alt=""></div>
-    <!-- .main-top-->
-    <section class="section usl-block" id="usl-block">
+    <section class="block-table page" id="block-table">
       <div class="container">
-        <h1 class="text-center"> Цены на услуги</h1>
-        <div class="section__row row text-center">
-          <div class="section__item" style="background-image: url(img/section-4.jpg);"><img class="img-hidden" src="img/section-4.jpg" alt=""/>
-            <div class="section__img-wrap"><img src="img/svg/usl-1.svg" alt=""/>
-            </div>
-            <h3> Годовой взрослый<br/>членский взнос<br/>30 000 р.</h3>
+        <h1 class="text-center">Корзина</h1>
+        <div class="block-table__body">
+          <div class="table-wrap table-basket">
+            <table>
+              <tr>
+                <th>№</th>
+                <th>Наименование</th>
+                <th>Цвет</th>
+                <th>Размер</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Сумма с НДС</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>
+                  <div class="row">
+                    <div class="col-sm-3 col-xs-12"><a class="img-wrap" href=""><img class="res-i" src="img/prod-1-1.jpg" alt=""/></a></div>
+                    <div class="col-sm-9 col-xs-12">
+                      <p>Леггинсы limited edition для спорта, йоги и серфинга с тропическим принтом</p>
+                    </div>
+                  </div>
+                </td>
+                <td>Черный</td>
+                <td>XL</td>
+                <td>4500 р.</td>
+                <td>
+                  <div class="count">
+                    <div class="number-plus-minus"><input class="count__number" type="text" size="3" name="QUANTITY_INPUT_125" maxlength="18" min="0" max="100" step="1" style="max-width: 50px;" value="1" onchange="updateQuantity('QUANTITY_INPUT_125', '125', 1, false)"/><a class="count__spin count__spin-minus" href="javascript:void(0);" onclick="setQuantity(125, 1, 'down', false);">-</a><a class="count__spin count__spin-plus" href="javascript:void(0);" onclick="setQuantity(125, 1, 'up', false);">+</a>
+                    </div>
+                  </div>
+                </td>
+                <td><span>4800 р.</span><a class="close" href=""></a></td>
+              </tr>
+              <!-- end tr-->
+              <tr>
+                <td>2</td>
+                <td>
+                  <div class="row">
+                    <div class="col-sm-3 col-xs-12"><a class="img-wrap" href=""><img class="res-i" src="img/prod-2.jpg" alt=""/></a></div>
+                    <div class="col-sm-9 col-xs-12">
+                      <p>Леггинсы «Пришельцы»</p>
+                    </div>
+                  </div>
+                </td>
+                <td>Бирюзовые</td>
+                <td>S</td>
+                <td>2900 р.</td>
+                <td>
+                  <div class="count">
+                    <div class="number-plus-minus"><input class="count__number" type="text" size="3" name="QUANTITY_INPUT_125" maxlength="18" min="0" max="100" step="1" style="max-width: 50px;" value="1" onchange="updateQuantity('QUANTITY_INPUT_125', '125', 1, false)"/><a class="count__spin count__spin-minus" href="javascript:void(0);" onclick="setQuantity(125, 1, 'down', false);">-</a><a class="count__spin count__spin-plus" href="javascript:void(0);" onclick="setQuantity(125, 1, 'up', false);">+</a>
+                    </div>
+                  </div>
+                </td>
+                <td><span>3200 р.</span><a class="close" href=""></a></td>
+              </tr>
+              <!-- end tr-->
+            </table>
           </div>
-          <!-- .item-->
-          <div class="section__item" style="background-image: url(img/section-5.jpg);"><img class="img-hidden" src="img/section-5.jpg" alt=""/>
-            <div class="section__img-wrap"><img src="img/svg/usl-2.svg" alt=""/>
-            </div>
-            <h3>Годовой абонимент на<br/>групповые практики<br/>90 000 р.</h3>
+          <!-- .table-wap-->
+        </div>
+        <div class="block-table__kupon">
+          <p>Есть подарочный купон?</p>
+          <div class="block-table__kupon-input">
+            <form>
+              <input type="text" placeholder="Номер сертификата"/>
+              <button class="btn btn btn-info"></button>
+            </form>
           </div>
-          <!-- .item-->
+        </div>
+        <div class="container">
+          <div class="block-table__foot"><a class="back" href=""><< Вернуться к покупкам</a>
+            <div class="foot-right">
+              <p class="h4">
+                Общее количество товаров: 
+                <strong>2 шт.</strong>
+              </p>
+              <p class="h4">
+                Общая стоимость: 
+                <strong>8000 р.</strong>
+              </p>
+              <div class="foot-right__row">
+                <div class="foot-right__block">
+                  <label class="custom-label"><input class="custom-label__input" type="checkbox" name="1"/><i class="custom-label__lab"></i><span class="custom-label__span">Согласен с торговыми условиями</span>
+                  </label>
+                </div>
+                <div class="foot-right__block"> 
+                  <button class="foot-right__btn btn btn-info">ОФОРМИТЬ ЗАКАЗ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- usl-block-->
-    <div class="price-block" id="price-block">
-      <div class="container">
-        <div class="price-block__item">
-          <h3 class="text-center"> Групповые практики - разовое занятие</h3>
-          <div class="row">
-            <div class="col-sm-6 col">
-                <p><span> Взрослые 1 час</span><span class="pull-right"> 1200р.</span></p>
-                <p><span>Взрослые 1,5 час</span><span class="pull-right">1600р.</span></p>
-                <p><span>Дети</span><span class="pull-right">800р.</span></p>
-            </div>
-            <div class="col-sm-6 col">
-                <p><span> Взрослые 1 час</span><span class="pull-right"> 1200р.</span></p>
-                <p><span>Взрослые 1,5 час</span><span class="pull-right">1600р.</span></p>
-                <p><span>Дети</span><span class="pull-right">800р.</span></p>
-            </div>
-          </div>
-        </div>
-        <!-- .item-->
-        <div class="price-block__item">
-          <h3 class="text-center"> Групповые практики - разовое занятие</h3>
-          <div class="row">
-            <div class="col-sm-6 col">
-                <p><span> Взрослые 1 час</span><span class="pull-right"> 1200р.</span></p>
-                <p><span>Взрослые 1,5 час</span><span class="pull-right">1600р.</span></p>
-                <p><span>Дети</span><span class="pull-right">800р.</span></p>
-            </div>
-            <div class="col-sm-6 col">
-                <p><span> Взрослые 1 час</span><span class="pull-right"> 1200р.</span></p>
-                <p><span>Взрослые 1,5 час</span><span class="pull-right">1600р.</span></p>
-                <p><span>Дети</span><span class="pull-right">800р.</span></p>
-            </div>
-          </div>
-        </div>
-        <!-- .item-->
-      </div>
-    </div>
-    <!-- price-block-->
+    <!-- block-table-->
     <footer class="footer">
       <div class="container">
         <div class="row">

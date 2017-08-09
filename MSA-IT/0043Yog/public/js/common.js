@@ -119,6 +119,52 @@ $('.sliderfor4').slick({
       ]
   });
 
+$('aside .sliderfor').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    speed: 450,
+    infinite: false,  
+    arrows: true,
+    rows: 1,
+     prevArrow: ' <div class="l"><i class="demo-icon icon-ar-left" > </i></div>',
+      nextArrow: '   <div class="r"><i class="demo-icon icon-ar-right" > </i></div> ',
+     responsive: [
+        
+       
+        
+     {
+          breakpoint: 10000,
+          settings: {
+            slidesToShow: 1,
+          rows: 4,  
+          }
+        },
+   
+   
+     {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+           rows: 1,  
+          }
+        },
+   
+     {
+          breakpoint: 620,
+          settings: {
+            slidesToShow: 1,
+            rows: 1,  
+            
+          }
+        },
+   
+     
+ 
+
+      ]
+  });
+
 
 // всплываюзая галлерея
 $('.popup-gallery').magnificPopup({

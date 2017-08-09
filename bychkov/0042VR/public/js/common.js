@@ -1,3 +1,5 @@
+
+
 $(function() {
 
   // Custom JS
@@ -5,17 +7,68 @@ $(function() {
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
     
-    $(".toggle-mnu-1").toggleClass("on");
+    // $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
     $(".hidden-mnu").toggleClass("active");
     $("body").toggleClass("fixed");
     return false;
   }); 
-    $('.hidden-mnu ul li a').on('click', function () {
-      $(".toggle-mnu-1").click();
+    $('.hidden-mnu  a.scroll-a').on('click', function () {
+      $(".hidden-mnu .toggle-mnu-1").click();
+      rest();
+    });
+ 
+function  rest(){
+
+
+// Cache selectors
+var lastId,
+    topMenu = $("  .wrapp-hidden ul"),
+    topMenuHeight = 15,
+    // All list items
+    menuItems = topMenu.find("a.scroll-a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
     });
 
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
 
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter(".scroll-a[href='#"+id+"']").parent().addClass("active");
+   }                   
+});
+} 
+
+rest();
 
   function heightses() {
 
@@ -236,40 +289,93 @@ $('.slider-nav').slick({
   });
 
      //smoothscroll
-    $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
+//     $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a').on('click', function (e) {
+//         e.preventDefault();
+//         $(document).off("scroll");
         
-        $('a').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
+//         $('a').each(function () {
+//             $(this).removeClass('active');
+//         })
+//         $(this).addClass('active');
       
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top- 20
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
+//         var target = this.hash,
+//             menu = target;
+//         $target = $(target);
+//         $('html, body').stop().animate({
+//             'scrollTop': $target.offset().top- 20
+//         }, 500, 'swing', function () {
+//             window.location.hash = target;
+//             $(document).on("scroll", onScroll);
+//         });
+//     });
+
+// function onScroll(event){
+//     var scrollPos = $(document).scrollTop();
+//     $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a').each(function () {
+//         var currLink = $(this);
+//         var refElement = $(currLink.attr("href"));
+//         if (refElement.position().top +10 <= scrollPos && refElement.position().top   + refElement.height() > (scrollPos )) {
+//             $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a').removeClass("active");
+//             currLink.addClass("active");
+//         }
+//         else{
+//             currLink.removeClass("active");
+//         }
+//     });
+//   }
+
+
+ 
+
+
+
+
+// Cache selectors
+var lastId,
+    topMenu = $("  .top-nav ul"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a.scroll-a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
     });
 
-function onScroll(event){
-    var scrollPos = $(document).scrollTop();
-    $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (refElement.position().top +10 <= scrollPos && refElement.position().top   + refElement.height() > (scrollPos )) {
-            $('header.main .scroll-a, header.main .wrapp-hidden .scroll-a').removeClass("active");
-            currLink.addClass("active");
-        }
-        else{
-            currLink.removeClass("active");
-        }
-    });
-  }
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter(".scroll-a[href='#"+id+"']").parent().addClass("active");
+   }                   
+});
+ 
 // форма
 $("form").submit(function() { //Change
     var th = $(this);
@@ -294,3 +400,4 @@ $("form").submit(function() { //Change
     return false;
   });
 });
+
