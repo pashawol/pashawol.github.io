@@ -12,13 +12,14 @@ $(function() {
     return false;
   }); 
     $('.hidden-mnu ul li a').on('click', function () {
-      $(".toggle-mnu-1").click();
+      $(".hidden-mnu .toggle-mnu").click();
     });
 
   function heightses() {
 
     var w = $(window).width();
    $(".col-h ").height('auto').equalHeights();
+   $(".membership__caption  ").height('auto').equalHeights();
     
 
     // скрывает моб меню 
@@ -65,7 +66,7 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- $("   .scroll-link").click(function () {
+ $(".hidden-mnu ul li a,   .scroll-link").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         
@@ -75,8 +76,8 @@ $( window ).on( "load", function() {
     });
 // табы
 $(function() {
-$('   .tabs__btn:first-child  ').addClass("active")
- $('.tabs__content:first-child ').addClass("active");
+// $('   .tabs__btn:first-child  ').addClass("active")
+//  $('.tabs__content:first-child ').addClass("active");
 $(' .tabs').on('click', '.tabs__btn:not(.active)', function(e) {
 
   $(this)
@@ -100,7 +101,8 @@ $(' .tabs').on('click', '.tabs__btn:not(.active)', function(e) {
     infinite: true,
     loop: true,  
     arrows: true,
-    
+     autoplay: true,
+  autoplaySpeed: 5000,
      prevArrow: ' <div class="l"><i class="icon-chevron-thin-left"  > </i></div>',
       nextArrow: '   <div class="r"><i class="icon-chevron-thin-right"  > </i></div> ',
       
@@ -121,4 +123,7 @@ $('.popup-with-zoom-anim').magnificPopup({
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   });
+
+
+$('.place__form  select').styler();
 });

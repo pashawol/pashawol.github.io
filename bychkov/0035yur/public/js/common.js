@@ -119,7 +119,7 @@ $( window ).on( "load", function() {
 
   })
    // модалка
-   $('.header__btn, .btn-modal').magnificPopup({
+   $('.header__btn, .btn-modal, .modal-thanks').magnificPopup({
     type: 'inline',
 
     fixedContentPos: true,
