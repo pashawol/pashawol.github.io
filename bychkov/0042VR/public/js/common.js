@@ -23,7 +23,7 @@ function  rest(){
 
 // Cache selectors
 var lastId,
-    topMenu = $("  .wrapp-hidden ul"),
+    topMenu = $(".main  .wrapp-hidden ul"),
     topMenuHeight = 15,
     // All list items
     menuItems = topMenu.find("a.scroll-a"),
@@ -332,7 +332,7 @@ $('.slider-nav').slick({
 
 // Cache selectors
 var lastId,
-    topMenu = $("  .top-nav ul"),
+    topMenu = $(" .main .top-nav ul"),
     topMenuHeight = topMenu.outerHeight()+15,
     // All list items
     menuItems = topMenu.find("a.scroll-a"),
