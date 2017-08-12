@@ -44,7 +44,7 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- $(" .top-nav a").click(function () {
+ $(" .main-nav a").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         
@@ -52,22 +52,88 @@ $( window ).on( "load", function() {
         
         return false; 
     });
-// табы
-$(function() {
-// $(' .tabs__caption   .tab-btn:first-child  ').addClass("active")
- // $('.tabs__content:first-child ').addClass("active");
-$(' .tabs__caption').on('click', '.tab-btn:not(.active)', function(e) {
+ // слайдер
 
-  $(this)
-    .addClass('active').addClass('current').siblings().removeClass('active')
-    .closest('div.tabs').find('div.tabs__content').hide().removeClass('active')
-    .eq($(this).index()).fadeIn().addClass('active');
+   // галлерея
+    $('.slider').magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    
+  });
+   $('.slider').slick({
+  
+    dots: false,
+    speed: 450,
+    infinite: true,
+    loop: true,  
+    arrows: true, 
+    prevArrow: ' <div class="l"></div>',
+    nextArrow: '   <div class="r"></div> ',
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
+});
+
+        // модальное окно
+   $('.popup-with-move-anim').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: false,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
+  });
    
-    // $('.slider-small, .slider-big').slick('unslick');
-    //  section_slider();
-    return false;
-});
-});
+  $(document).on('click', '.btn-close', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+
+
+// для логотипа в 
+ //Replace all SVG images with inline SVG
+  $('.soc__item img').each(function(){
+    var $img = $(this);
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+
+    $.get(imgURL, function(data) {
+        // Get the SVG tag, ignore the rest
+        var $svg = $(data).find('svg');
+
+        // Add replaced image's classes to the new SVG
+        if(typeof imgClass !== 'undefined') {
+          $svg = $svg.attr('class', imgClass+' replaced-svg');
+        }
+
+        // Remove any invalid XML tags as per http://validator.w3.org
+        $svg = $svg.removeAttr('xmlns:a');
+
+        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+        }
+
+        // Replace image with new SVG
+        $img.replaceWith($svg);
+
+      }, 'xml');
+
+  });
   // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 });

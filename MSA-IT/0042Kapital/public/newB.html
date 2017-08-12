@@ -893,10 +893,21 @@
                 </div>
               </div>
               <div class="footer__search hidden-sm hidden-xs">
-                <form>
-                  <input type="text" placeholder="Поиск по сайту"/>
-                  <button></button>
-                </form>
+                <div class="ya-site-form ya-site-form_inited_no" onclick="return {'action':'https://yandex.ru/search/site/','arrow':false,'bg':'transparent','fontsize':12,'fg':'#000000','language':'ru','logo':'rb','publicname':'Yandex Site Search #2304355','suggest':true,'target':'_self','tld':'ru','type':3,'usebigdictionary':true,'searchid':2304355,'input_fg':'#000000','input_bg':'#ffffff','input_fontStyle':'normal','input_fontWeight':'normal','input_placeholder':'Поиск по сайту','input_placeholderColor':'#000000','input_borderColor':'#999999'}">
+                  <form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8">
+                    <input type="hidden" name="searchid" value="2304355"/>
+                    <input type="hidden" name="l10n" value="ru"/>
+                    <input type="hidden" name="reqenc" value=""/>
+                    <input type="search" name="text" value=""/>
+                    <input type="submit" value="Найти"/>
+                  </form>
+                </div>
+                <style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style>
+                <script type="text/javascript">
+                  (function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');
+                  
+                  
+                </script>
               </div>
             </div>
             <!-- .col-md-5.col-md-push-7-->
@@ -922,8 +933,55 @@
                 <div class="footer__search hidden-lg hidden-md">
                   <form>
                     <input type="text" placeholder="Поиск по сайту"/>
-                    <button> </button>
+                    <button></button>
                   </form>
+                  <div class="ya-site-form ya-site-form_bg_transparent ya-site-form_inited_yes" id="ya-site-form0">
+                    <div class="ya-site-form__form">
+                      <table class="ya-site-form__wrap" cellpadding="0" cellspacing="0">
+                        <tbody>
+                          <tr>
+                            <td class="ya-site-form__search-wrap">
+                              <table class="ya-site-form__search" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                  <tr>
+                                    <td class="ya-site-form__search-input">
+                                      <table class="ya-site-form__search-input-layout">
+                                        <tbody>
+                                          <tr>
+                                            <td class="ya-site-form__search-input-layout-l">
+                                              <div class="ya-site-form__input">
+                                                <input class="ya-site-form__input-text" name="text" type="search" value="" placeholder="Поиск по сайту" autocomplete="off"/>
+                                                <div class="ya-site-suggest">
+                                                  <div class="ya-site-suggest-popup" style="display: none;"><i class="ya-site-suggest__opera-gap"></i>
+                                                    <div class="ya-site-suggest-list">
+                                                      <div class="ya-site-suggest__iframe"></div>
+                                                      <ul class="ya-site-suggest-items"></ul>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td class="ya-site-form__search-input-layout-r">
+                                              <input class="ya-site-form__submit ya-site-form__submit_type_image" type="button" value=""/>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="ya-site-form__gap">
+                                      <div class="ya-site-form__gap-i"></div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
                 <div class="footer__addr hidden-lg hidden-md">Адрес:<br/><strong>г.Краснодар, Восточно-Кругликовская, 96</strong>
                 </div>
@@ -939,68 +997,30 @@
           </div>
         </div>
       </footer>
-      <div class="modal-map zoom-anim-dialog mfp-hide modal-window modal" id="map-dialog">
+      <div class="modal-map zoom-anim-dialog mfp-hide modal-window modal modal-zvonok" id="map-dialog">
         <div class="popup-modal-dismiss">закрыть</div>
-        <div class="row">
-          <div class="col-sm-8 col-right col">
-            <div class="modal-map__img-wrap"><img class="res-i" src="" alt=""/>
-            </div>
+        <form class="form">
+          <h3>ЗАКАЗАТЬ ЗВОНОК</h3>
+          <div class="form__input-wrap">
+            <input type="text" name="name" placeholder="Ваше имя"/>
           </div>
-          <div class="col-sm-4 col-left col">
-            <div class="modal-map__head">
-              <div class="modal-map__item">
-                <div class="modal-map__big d-rooms">
-                </div>
-                <div class="modal-map__small">комнатная<br/>квартира
-                </div>
-              </div>
-              <div class="modal-map__item">
-                <div class="modal-map__big d-flor">
-                </div>
-                <div class="modal-map__small">этаж 
-                </div>
-              </div>
-            </div>
-            <div class="modal-map__center">
-              <div class="modal-map__item">
-                <div class="modal-map__big d-totalarea">
-                </div>
-                <div class="modal-map__small">общая площадь
-                </div>
-              </div>
-              <div class="modal-map__item">
-                <div class="modal-map__big d-livingspace">
-                </div>
-                <div class="modal-map__small">жилая площадь
-                </div>
-              </div>
-            </div>
-            <form class="form">
-              <div class="form__input-wrap">
-                <input type="text" name="name" placeholder="Ваше имя"/>
-              </div>
-              <div class="form__input-wrap">
-                <input type="tel" name="tel" placeholder="Контактный телефон"/>
-              </div>
-              <div class="form__input-wrap">
-                <button class="btn btn-info">Отправить</button>
-              </div>
-              <!--
-              +b.sogl
-                label
-                  input(type="checkbox")
-                  .lab
-                  span
-                    | Согласен на 
-                    |
-                    |
-                    a(href="#" target="_blank") обработку персональных данных 
-              -->
-            </form>
+          <div class="form__input-wrap">
+            <input type="tel" name="tel" placeholder="Контактный телефон"/>
           </div>
-        </div>
+          <div class="form__input-wrap">
+            <button class="btn btn-info">Отправить</button>
+          </div>
+          <div class="sogl">
+            <label>
+              <input type="checkbox"/>
+              <div class="lab"></div><span>
+                Согласен на 
+                
+                <a href="#" target="_blank">обработку персональных данных </a></span>
+            </label>
+          </div>
+        </form>
       </div>
-      <!-- modal-->
     </div>
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <script src="js/scripts.min.js"></script>
