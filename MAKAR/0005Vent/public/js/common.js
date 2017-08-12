@@ -80,6 +80,10 @@ $( window ).on( "load", function() {
     centerMode: true,
     variableWidth: true
 });
+   $('.popup-with-move-anim').click(function(){
+      $("#small-dialog h3").text($(this).data("h3"));
+      $("#small-dialog .order").val($(this).data("order"));
+   })
 
         // модальное окно
    $('.popup-with-move-anim').magnificPopup({
