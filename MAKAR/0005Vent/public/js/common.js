@@ -110,7 +110,7 @@ $( window ).on( "load", function() {
 
 // для логотипа в 
  //Replace all SVG images with inline SVG
-  $('.soc__item img').each(function(){
+  $('.soc__item img , .logo img').each(function(){
     var $img = $(this);
     var imgClass = $img.attr('class');
     var imgURL = $img.attr('src');
