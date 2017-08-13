@@ -44,10 +44,10 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- $(" .main-nav a").click(function () {
+ $(" .main-nav a, .form-wrap__link").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
-        
+             $.magnificPopup.close();
             $('html, body').animate({ scrollTop: destination }, 1100);
         
         return false; 
