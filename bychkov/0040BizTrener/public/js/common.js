@@ -237,11 +237,9 @@ $(".slider__btn").each(function(){
 })
   heightses();
 
-$("section").each(function(){
-  var th = $(this);
+ 
 
-  var $gallery = th.find('.slider');
-  $gallery.slick({
+  $('.trainer .slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
@@ -253,31 +251,7 @@ $("section").each(function(){
       nextArrow: '   <div class="r"><i class="icon-back" aria-hidden="true"> </i></div> ',
  
   });
-  var $sl_l= th.find('.slider__slide').length - th.find('.slider__slide.slick-cloned').length;
-  th.find(".slide-count-wrap .total-c").text( "0" + $sl_l);
-
-
-
-$gallery.on('init', function(event, slick){
-  slideCount = slick.slideCount;
-  setSlideCount();
-  setCurrentSlideNumber(slick.currentSlide);
-});
-
-$gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  setCurrentSlideNumber(nextSlide);
-});
-
-function setSlideCount() {
-  var $el = th.find('.slide-count-wrap').find('.total');
-  $el.text(  slideCount);
-}
-
-function setCurrentSlideNumber(currentSlide) {
-  var $el = th.find('.slide-count-wrap').find('.current');
-  $el.text( currentSlide + 1);
-}
-})
+  
 
 // форма
 $("form").submit(function() { //Change
