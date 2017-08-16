@@ -3,7 +3,7 @@ $(function() {
  
 // табы
 $(function() {
-$(' .tabs__caption   .tabs__btn:first-child  ').addClass("active")
+// $(' .tabs__caption   .tabs__btn:first-child  ').addClass("active")
  // $('.tabs__content1:first-child ').addClass("active");
 $(' .tabs__caption').on('click', '.tabs__btn:not(.active)', function(e) {
 
