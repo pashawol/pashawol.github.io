@@ -242,6 +242,73 @@ $(".slider-big").slick({
   $(".reviews").find('.left-arr').on('click', function(){ 
       $(".reviews").find('.slider-big').slick("slickPrev"); 
   }) 
+
+  // настройки https://eonasdan.github.io/bootstrap-datetimepicker/
+// настройки часовой зоны http://momentjs.com/
+$(".date").datetimepicker({
+  locale: 'ru-ru',
+  
+  format: 'DD.MM.YYYY',
+  tooltips: {
+    today: 'Go to today',
+    clear: 'Clear selection',
+    close: 'Close the picker',
+    selectMonth: 'Select Month',
+    prevMonth:'Прошлый месяц',
+    nextMonth: 'Следующий месяц',
+    selectYear: 'Select Year',
+    prevYear: 'Previous Year',
+    nextYear: 'Next Year',
+    selectDecade: 'Select Decade',
+    prevDecade: 'Previous Decade',
+    nextDecade: 'Next Decade',
+    prevCentury: 'Previous Century',
+    nextCentury: 'Next Century',
+    incrementHour: 'Добавить час',
+    pickHour: 'Выбрать время',
+    decrementHour:'На час меньше',
+    incrementMinute: 'Добавить минуты',
+    pickMinute: 'Выбрать минуты',
+    decrementMinute:'Уменьшить минуты',
+    incrementSecond: 'Increment Second',
+    pickSecond: 'Pick Second',
+    decrementSecond:'Decrement Second',
+}
+
+});
+$(".time").datetimepicker({
+  locale: 'ru-ru', 
+   format: 'LT',
+   
+   tooltips: {
+    today: 'Go to today',
+    clear: 'Clear selection',
+    close: 'Close the picker',
+    selectMonth: 'Select Month',
+    prevMonth:'Прошлый месяц',
+    nextMonth: 'Следующий месяц',
+    selectYear: 'Select Year',
+    prevYear: 'Previous Year',
+    nextYear: 'Next Year',
+    selectDecade: 'Select Decade',
+    prevDecade: 'Previous Decade',
+    nextDecade: 'Next Decade',
+    prevCentury: 'Previous Century',
+    nextCentury: 'Next Century',
+    incrementHour: 'Добавить час',
+    pickHour: 'Выбрать время',
+    decrementHour:'На час меньше',
+    incrementMinute: 'Добавить минуты',
+    pickMinute: 'Выбрать минуты',
+    decrementMinute:'Уменьшить минуты',
+    incrementSecond: 'Increment Second',
+    pickSecond: 'Pick Second',
+    decrementSecond:'Decrement Second',
+
+}
+ 
+});
+
   // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 });
