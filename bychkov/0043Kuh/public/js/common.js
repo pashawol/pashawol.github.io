@@ -104,6 +104,7 @@ $(' .tabs').on('click', '.tabs__btn:not(.active)', function(e) {
       speed: 450,
       asNavFor: '.tabs__slider',
       draggable: false,
+      swipe: false, 
       fade: true,
       infinite: true,
       loop: true,  
@@ -199,7 +200,7 @@ $(".tabs__item").click(function(){
 })
 
 
-// слайдер в отзывах
+// слайдеры в отзывах
 $(".slider-small").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -210,6 +211,7 @@ $(".slider-small").slick({
     arrows: false,
      arrowa:false,
     dots: true,
+     
     customPaging : function(slider, i) {
         var thumb = $(slider.$slides[i]).data('thumb');
         return '<a style="background-image: url('+thumb+');"><img src="'+thumb+'"></a>';
@@ -217,7 +219,7 @@ $(".slider-small").slick({
 
      
 });
-// слайдер в отзывах
+  
 $(".slider-big").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -225,15 +227,21 @@ $(".slider-big").slick({
     speed: 450,
     infinite: true,
     loop: true,  
-     
-    arrowa:true,
+    swipe: false, 
+    arrows:false,
     dots: false,
     draggable: false,
     fade: true,
-    prevArrow: arrl2,
-    nextArrow: arrr2,
+    adaptiveHeight: true,
+   
 });
-
+  // кнопки переключения слайдов
+  $(".reviews").find('.right-arr').on('click', function(){ 
+      $(".reviews").find(' .slider-big').slick("slickNext"); 
+  }) 
+  $(".reviews").find('.left-arr').on('click', function(){ 
+      $(".reviews").find('.slider-big').slick("slickPrev"); 
+  }) 
   // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 });
