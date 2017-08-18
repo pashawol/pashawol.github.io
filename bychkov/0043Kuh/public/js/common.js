@@ -55,8 +55,6 @@ $( window ).on( "load", function() {
 
 // табы
 $(function() {
-// $(' .tabs__caption   .tabs-btn  ').addClass("active")
- // $('.tabs__content:first-child ').addClass("active");
 $(' .tabs').on('click', '.tabs__btn:not(.active)', function(e) {
 
   $(this)
@@ -68,6 +66,17 @@ $(' .tabs').on('click', '.tabs__btn:not(.active)', function(e) {
     $('.tabs__slider').slick('unslick');
      section_slider();
 
+    return false;
+});
+});
+
+ // табы планировки в кальке
+$(function() {
+$(' .tabs-c__caption').on('change', 'input', function(e) {
+  $(this)
+    .closest('.tabs-c').find('.tabs-c__content').hide().removeClass('active')
+    .eq($(this).parents(".tabs-c__btn").index()).fadeIn().addClass('active');
+     
     return false;
 });
 });
@@ -89,10 +98,7 @@ $(' .tabs').on('click', '.tabs__btn:not(.active)', function(e) {
       arrl2 = (' <div class="l"><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" viewBox="0 0 370.814 370.814" style="enable-background:new 0 0 370.814 370.814;" xml:space="preserve" sodipodi:docname="left-arrow-chevron.svg" inkscape:version="0.92.1 r15371"><polygon points="292.92,24.848 268.781,0 77.895,185.401 268.781,370.814 292.92,345.961 127.638,185.401   " fill="#ff5320" id="polygon2" /></svg></div>'),
       arrr2 =(' <div class="r"><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" viewBox="0 0 370.814 370.814" style="enable-background:new 0 0 370.814 370.814;" xml:space="preserve" sodipodi:docname="left-arrow-chevron.svg" inkscape:version="0.92.1 r15371"><polygon points="292.92,24.848 268.781,0 77.895,185.401 268.781,370.814 292.92,345.961 127.638,185.401   " fill="#ff5320" id="polygon2" /></svg></div> ')
  
-// On before slide change
-// $('.your-element').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-//   console.log(nextSlide);
-// });
+ 
   // слайдер в каталоге
    function  section_slider2(){
 
@@ -162,27 +168,7 @@ $(' .tabs').on('click', '.tabs__btn:not(.active)', function(e) {
  
     }
     section_slider();
-
-// $(".tabs__slider ").on('afterChange', function(currentSlide){
-//     // $(this).find(".slick-current").find(".tabs__item").addClass("active");
-
-
-//   // $(".tabs__slider .slick-current").prev().find(".tabs__item").addClass("active");
-// })
-
-// $(".tabs__slider .r.slick-arrow").on('click', function(){
-
-
-//   $(".tabs__slider .slick-current").prev().find(".tabs__item").addClass("active");
-// })
-
-
-// $(".tabs__slider  .slick-arrow").click(function(){
-//      // $(".tabs__hidden-block").removeClass("hidden");
-//       $(".tabs__hidden").fadeIn();
-//        $('.tabs__small-slider, .tabs__slider-big').slick('unslick');
-//       section_slider2();
-// })
+ 
 $(".tabs__close").click(function(){
       $(".tabs__item").removeClass("active")
       $(".tabs__hidden").fadeOut();
@@ -308,6 +294,83 @@ $(".time").datetimepicker({
 }
  
 });
+  // кастомный инпут файл
+ // $(".file-upload input[type=file]").change(function(){
+ //         var filename = $(this).val().replace(/.*\\/, "");
+ //        $(this).parents(".formm-wrap").find(".filename").text(filename);
+ //        if ($(".filename").text() != ''){
+ //                $(this).parents(".formm-wrap").find(".file-name-wrap span").prepend('<img src="img/error.png" alt="" class="error">');
+ //              }
+ //        else {
+ //           $(this).parents(".formm-wrap").find(".file-name-wrap").remove('.res-i');
+ //        }
+ //    });
+ // $(".formm-wrap ").on("click", ".error", function(){
+ //    var th= $(this);
+ //    th.find(".file-upload input[type=file]").val("");
+ //    th.find(".file-upload .filename").text("");
+ // })
+
+
+ // кастомный инпут файл 
+var $_input  = function(){
+  $(".formm-wrap").each(function(e){ 
+  var th = $(this)
+  var file = th.find("input[type=file]");
+  file.attr("name", "file_"+e);
+  file.change(function(){
+         var filename = $(this).val().replace(/.*\\/, "");
+         var name =  th.find("span.filename ");
+       name.text(filename);
+        if (name.text() != ''){
+              th.find(".del").addClass("active");
+              $(".add-input").addClass("active");
+              }
+        else {
+           th.find(".del").removeClass("active");
+            $(".add-input").removeClass("active");
+        }
+    });
+  th.find(".del").click(function(){
+    th.find("input  ").val("");
+    th.find(".filename").text("");
+    $(this).removeClass("active");
+      
+  })
+  }) 
+}
+
+$_input();
+
+
+
+    // галлерея в кальке
+    $(".vyd__vyd-item").each(function(){
+      var th =  $(this);
+     th.find(".more").click(function(){
+      th.find(".gal:first-child").click();
+      return false;
+     })
+    th.magnificPopup({
+    delegate: 'a.gal',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    
+  });
+    })
+
+    $(".btn-next").click(function(){
+      $(this).parents(".s-calc__step").removeClass("active").hide().next().fadeIn().addClass("active")
+    })
+    $(".btn-prev").click(function(){
+      $(this).parents(".s-calc__step").removeClass("active").hide().prev().fadeIn().addClass("active")
+    })
 
   // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");

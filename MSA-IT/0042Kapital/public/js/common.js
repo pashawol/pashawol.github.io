@@ -342,7 +342,7 @@ $('.btn-modal').magnificPopup({
 
     overflowY: 'auto',
 
-    closeBtnInside: false,
+    closeBtnInside: true,
     preloader: false,
     
     midClick: true,

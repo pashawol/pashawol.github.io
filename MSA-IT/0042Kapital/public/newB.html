@@ -188,7 +188,7 @@
                 </div>
                 <!-- .item-->
           </div>
-          <div class="s-price__row"><a class="s-price__btn btn btn-success" href="#">Подобрать квартиру</a><a class="s-price__btn btn btn-success" href="#">Получить консультацию</a>
+          <div class="s-price__row"><a class="s-price__btn btn btn-success btn-modal" href="#podbor-dialog">Подобрать квартиру</a><a class="s-price__btn btn btn-success btn-modal" href="#zvonok-dialog">Получить консультацию</a>
           </div>
         </div>
       </section>
@@ -997,6 +997,68 @@
           </div>
         </div>
       </footer>
+      <div class="modal-map zoom-anim-dialog mfp-hide modal-window modal modal-form" id="podbor-dialog">
+        <div class="popup-modal-dismiss">Закрыть</div>
+        <div class="s-form">
+          <div class="s-form__wrap container"> 
+            <h3>Подобрать квартиру</h3>
+            <form class="s-form__form">
+              <div class="s-form__input-wrap">
+                <input type="text" name="name" placeholder="Ваше имя"/>
+              </div>
+              <div class="s-form__input-wrap">
+                <input type="tel" name="tel" placeholder="Контактный телефон"/>
+              </div>
+              <div class="s-form__input-wrap">
+                <textarea name="" placeholder="Комментарий"></textarea>
+              </div>
+              <div class="s-form__input-wrap">
+                <button class="btn btn-info">Получить</button>
+              </div>
+              <div class="sogl">
+                <label>
+                  <input type="checkbox"/>
+                  <div class="lab"></div><span>
+                    Согласен на 
+                    
+                    <a href="#" target="_blank">обработку персональных данных </a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-map zoom-anim-dialog mfp-hide modal-window modal modal-form" id="zvonok-dialog">
+        <div class="popup-modal-dismiss">Закрыть</div>
+        <div class="s-form">
+          <div class="s-form__wrap container"> 
+            <h3>Получить консультацию</h3>
+            <form class="s-form__form">
+              <div class="s-form__input-wrap">
+                <input type="text" name="name" placeholder="Ваше имя"/>
+              </div>
+              <div class="s-form__input-wrap">
+                <input type="tel" name="tel" placeholder="Контактный телефон"/>
+              </div>
+              <div class="s-form__input-wrap">
+                <textarea name="" placeholder="Ваш вопрос"></textarea>
+              </div>
+              <div class="s-form__input-wrap">
+                <button class="btn btn-info">Получить</button>
+              </div>
+              <div class="sogl">
+                <label>
+                  <input type="checkbox"/>
+                  <div class="lab"></div><span>
+                    Согласен на 
+                    
+                    <a href="#" target="_blank">обработку персональных данных </a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
       <div class="modal-map zoom-anim-dialog mfp-hide modal-window modal modal-zvonok" id="map-dialog">
         <div class="popup-modal-dismiss">закрыть</div>
         <form class="form">
@@ -1021,6 +1083,7 @@
           </div>
         </form>
       </div>
+      <!-- modal-->
     </div>
     <link rel="stylesheet" href="fonts/icomoon/style.css">
     <script src="js/scripts.min.js"></script>
