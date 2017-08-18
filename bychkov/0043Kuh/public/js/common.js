@@ -340,12 +340,16 @@ $_input();
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   });
+  
    $('.popup-with-move-anim').click(function(){
       $('.modal-slider-small').slick('unslick');
       $(' .modal-slider-big').slick('unslick');
       section_slider2()
 
    })
+
+
+
   // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
 });
