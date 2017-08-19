@@ -207,13 +207,27 @@ var $_input  = function(){
     th.find("input  ").val("");
     th.find(".filename").text("");
     $(this).removeClass("active");
-      
+     if ( $(".add-file").length < 2 )
+     $(".add-input").removeClass("active");
+     if ( $(".add-file").length >1 )
+      $(this).parents(".add-file").remove();
+ 
   })
   }) 
 }
 
 $_input();
 
+  // добавление  инпута
+$(".add-input").click(function( ){
+  var last= $('<div class="row add-file"> <div class="col-sm-4">  <div class="file-upload">  <label>   <span>Прикрепить ТЗ</span>   <input type="file" name="file">   </label>  </div>  </div> <div class="col-sm-8"> <div class="inpput-wrap file-name-wrap"> <p  class="filename"  ><span></span><b class="del " ><i class="demo-icon icon-cancel"></i></b></p> </div>  </div> </div>');
+  last.appendTo(".wrap-file-input");
+  $_input();
+   $(".add-input").removeClass("active");
+  last.find("label").click();
+
+   return false; 
+}) 
 
 
     // галлерея в кальке
