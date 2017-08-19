@@ -27,6 +27,9 @@ $(function() {
         return false; 
     });
 
+
+
+
 // табы
 $(function() {
 $(' .tabs').on('click', '.tabs__btn:not(.active)', function(e) {
