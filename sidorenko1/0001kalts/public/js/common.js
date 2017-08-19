@@ -103,6 +103,8 @@ $(' .tabs__caption').on('click', '.tab-btn:not(.active)', function(e) {
      arrows: true, 
       prevArrow: arr_l,
       nextArrow: arr_r,
+        autoplay: true,
+  autoplaySpeed: 4000,
     });
 
      $('.sliderfo4').slick({
