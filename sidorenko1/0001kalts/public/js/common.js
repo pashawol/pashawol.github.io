@@ -14,11 +14,11 @@ $(function() {
     $('.hidden-mnu ul li a').on('click', function () {
       $(".hidden-mnu .toggle-mnu").click();
     });
- 
+  
   function heightses() {
 
     var w = $(window).width();
-  
+     $(".prod-item__h3").height('auto').equalHeights();
     
 
     // скрывает моб меню 
