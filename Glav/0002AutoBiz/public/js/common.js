@@ -28,7 +28,29 @@ $(function() {
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
     }
+  
+    var topH=$("header ").innerHeight();  
+    if($(this).scrollTop()>topH){
+                    $('.top-nav  ').addClass('fixed');
+                    
+                }
+                else if ($(this).scrollTop()<topH){
+                    $('.top-nav  ').removeClass('fixed');
+                   
+                }
+    $(window).scroll(function(){
+                if($(this).scrollTop()>topH){
+                    $('.top-nav  ').addClass('fixed');
+                 
+                }
+                else if ($(this).scrollTop()<topH){
+                    $('.top-nav  ').removeClass('fixed');
+                  
+                }
+            });
+       // конец добавил 
   }
+
 
   $(window).resize(function() {
     heightses();
