@@ -126,7 +126,7 @@
                     <li class="top-nav__item"><a class="top-nav__link" href="index4.html">Помощь</a></li>
                   </ul>
                 </div>
-                <div class="col-md-3"><a class="top-nav__btn btn btn-sm btn-danger" href="">Заказать обратный звонок</a>
+                <div class="col-md-3"><a class="top-nav__btn btn btn-sm btn-danger popup-with-move-anim" href="#small-dialog">Заказать обратный звонок</a>
                 </div>
               </div>
             </div>
@@ -166,7 +166,7 @@
                   </div>
                 </div>
               </div>
-            </div><a class="header__btn btn btn-primary" href=""> <img class="res-i" src="img/svg/small-rocket-ship-silhouette.svg" alt=""/>попробовать бесплатно</a>
+            </div><a class="header__btn btn btn-primary popup-with-move-anim" href="#small-dialog2"><img class="res-i" src="img/svg/small-rocket-ship-silhouette.svg" alt=""/>попробовать бесплатно</a>
           </div>
         </div>
       </header>
@@ -523,7 +523,7 @@
             </div>
             <!-- .item-->
           </div>
-        </div><a class="s-why__btn btn btn-primary" href="">  попробовать бесплатно</a>
+        </div><a class="s-why__btn btn btn-primary popup-with-move-anim" href="#small-dialog2">  попробовать бесплатно</a>
       </section>
       <!-- end s-why-->
       <!-- start equipment-->
@@ -930,7 +930,7 @@
                   </p>
                   <p><small>ЗВОНОК ПО РОССИИ БЕСПЛАТНЫЙ</small></p>
                 </div>
-                <div class="footer__btn-wrap"><a class="footer__btn btn btn-sm btn-danger" href=""><img class="res-i" src="img/svg/round-phone.svg" alt=""/>Заказать обратный звонок</a><a class="footer__btn btn btn-sm btn-primary" href=""><img class="res-i" src="img/svg/round-q.svg" alt=""/>Задать вопрос</a><a class="footer__btn btn btn-sm btn-primary" href=""><img class="res-i" src="img/svg/round-skype.svg" alt=""/>Заказать skype презентацию </a>
+                <div class="footer__btn-wrap"><a class="footer__btn btn btn-sm btn-danger popup-with-move-anim" href="#small-dialog"><img class="res-i" src="img/svg/round-phone.svg" alt=""/>Заказать обратный звонок</a><a class="footer__btn btn btn-sm btn-primary" href=""><img class="res-i" src="img/svg/round-q.svg" alt=""/>Задать вопрос</a><a class="footer__btn btn btn-sm btn-primary" href=""><img class="res-i" src="img/svg/round-skype.svg" alt=""/>Заказать skype презентацию </a>
                 </div>
                 <p class="footer__italic">
                   e-mail: <a href="mailto:info@fusion.pos">info@fusion.pos</a>
@@ -946,6 +946,72 @@
           </div>
         </div>
       </footer>
+      <div class="zoom-anim-dialog mfp-hide modal" id="small-dialog2">
+        <div class="form-wrap">
+          <h3>Попробуйте, первые 14 дней абсолютно бесплатно</h3>
+          <p>Более 4000 клиентов уже пользуются Fusion Pos каждый день</p>
+          <form action=""> 
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__span">Название заведения</span><input class="form-wrap__input" type="text"/>
+              </label>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__span">Ваш адрес</span><input class="form-wrap__input active" type="text" value="GoodFood.fusionpos.com" readonly="readonly"/>
+              </label>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__span">Ваше имя</span><input class="form-wrap__input" type="text"/>
+              </label>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__span">Электронная почта</span><input class="form-wrap__input" type="email"/>
+              </label>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__span">Контактный телефон</span><input class="form-wrap__input" type="tel"/>
+              </label>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <button class="form-wrap__btn btn btn-primary">Попробовать бесплатно
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="zoom-anim-dialog mfp-hide modal" id="small-dialog">
+        <div class="form-wrap">
+          <h3>Попробуйте, первые 14 дней абсолютно бесплатно</h3>
+          <p>Более 4000 клиентов уже пользуются Fusion Pos каждый день</p>
+          <form action=""> 
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__span">Ваше имя</span><input class="form-wrap__input" type="text"/>
+              </label>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__span">Электронная почта</span><input class="form-wrap__input" type="email"/>
+              </label>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__span">Контактный телефон</span><input class="form-wrap__input" type="tel"/>
+              </label>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <button class="form-wrap__btn btn btn-primary">Попробовать бесплатно
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="zoom-anim-dialog mfp-hide modal" id="thanks"> 
+        <div class="form-wrap">
+          <h3>Ваша заявка принята</h3>
+          <p>Логин и пароль отправленны на Вашу почту указанную при регистрации<br/>Войдите в личный кабинет чтобы получить больше возможностей</p>
+          <div class="form-wrap__input-wrap">
+            <button class="form-wrap__btn btn btn-primary">Перейти в панель управления
+            </button>
+          </div>
+        </div>
+      </div>
       <!-- modal-->
     </div>
     <script src="js/scripts.min.js"></script>
