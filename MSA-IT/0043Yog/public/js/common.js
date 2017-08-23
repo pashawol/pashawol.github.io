@@ -303,7 +303,12 @@ $('.date_input').datetimepicker({
    // var botH=$(window).height() - $("footer  ").height() -  $(".s-blogger-2  ").height();
     $(window).scroll(function(){
         var nsc = $(document).scrollTop();
-        var bp1 = wrapper.offset().top;
+        if(wrapper.size() > 0){
+            var bp1 = wrapper.offset().top;
+        }else{
+            var bp1 = 0;
+        }
+
         // var bp2 = $('.content-block').offset().bottom - 300;
         
         navbar.css('top', 15); 
@@ -335,11 +340,13 @@ $('.date_input').datetimepicker({
   // })
 
   var c = document.querySelector('.custom-label__input');
-c.onclick = function() {
- if (c.checked) {
-    $(".foot-right__btn").removeAttr("disabled")
- } else {
-   $(".foot-right__btn").attr("disabled","disabled")
- }
+if(c !== null) {
+    c.onclick = function () {
+        if (c.checked) {
+            $(".foot-right__btn").removeAttr("disabled")
+        } else {
+            $(".foot-right__btn").attr("disabled", "disabled")
+        }
+    }
 }
 });

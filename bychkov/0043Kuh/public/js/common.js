@@ -120,12 +120,12 @@ $(".slider-small").slick({
     slidesToScroll: 1,
     dots: false,
     speed: 450,
-    infinite: true,
-    loop: true,  
+    infinite: false,
+    loop: false,  
     arrows: false,
      arrowa:false,
     dots: true,
-    lazyLoad: 'ondemand', 
+    // lazyLoad: 'ondemand', 
     customPaging : function(slider, i) {
         var thumb = $(slider.$slides[i]).data('thumb');
         return '<a style="background-image: url('+thumb+');"><img src="'+thumb+'"></a>';
@@ -141,19 +141,13 @@ $(".slider-small").slick({
 // довести до ума
  $(".reviews").find('.right-arr').on('click', function(){ 
       $(' .reviews__slide-big.active').removeClass("active").hide().next().fadeIn().addClass("active");
-      if ($(' .reviews__slide-big.active').is(":last-child")== true){
-           $(' .reviews__slide-big.active').removeClass("active").hide()
-          $(' .reviews__slide-big:first-child').fadeIn().addClass("active");
-      }
+      
           $('.slider-small').slick('unslick');
     section_slider3();
   }) 
   $(".reviews").find('.left-arr').on('click', function(){ 
       $('.reviews__slide-big.active').removeClass("active").hide().prev().fadeIn().addClass("active"); 
-       if ($(' .reviews__slide-big.active').is(":first-child")== true){
-           $(' .reviews__slide-big.active').removeClass("active").hide()
-          $(' .reviews__slide-big:last-child').fadeIn().addClass("active");
-      }
+       
         $('.slider-small').slick('unslick');
         section_slider3();
   }) 
@@ -285,8 +279,30 @@ $(".add-input").click(function( ){
       section_slider2()
 
    })
+  
+   // $(".modal-block__btn").click(function(e){
+   //    e.preventDefault();
+   //     $.magnificPopup.close();
+   //     setTimeout(function() {  
+   //     $.magnificPopup.open({
+   //      items: {
+   //        src: '#modal-calc', // can be a HTML string, jQuery object, or CSS selector
+   //        type: 'inline',
+   //        fixedContentPos: false,
+   //        fixedBgPos: true,
 
+   //        overflowY: 'auto',
 
+   //        closeBtnInside: true,
+   //        preloader: false,
+          
+   //        midClick: true,
+   //        removalDelay: 300,
+   //        mainClass: 'my-mfp-zoom-in'
+   //      }
+   //    }) 
+   //       }, 100)
+   // })
 
   // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
