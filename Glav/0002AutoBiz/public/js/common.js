@@ -217,7 +217,7 @@ $(' .tabs').on('click', '.tabs__btn:not(.active)', function(e) {
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
 
-    fixedContentPos: false,
+    fixedContentPos: true,
     fixedBgPos: true,
 
     overflowY: 'auto',
