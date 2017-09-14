@@ -99,8 +99,65 @@ nextArrow: arrr2,
         return '<a class="pager__item"> '+title+' </a>';
     },
   });
-  $(".slick-dots").prependTo(".project__dots");
+  $(".project .slick-dots").prependTo(".project__dots");
 
+
+
+   // карусель
+ $('.carusel').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  dots: false,
+  speed: 450,
+  infinite: true,
+  loop: true,  
+  arrows: false, 
+   
+  responsive: [ 
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 2,
+             variableWidth: false,
+          }
+        },
+      
+
+      {
+          breakpoint: 720,
+          settings: { 
+             variableWidth: true,
+             
+          }
+        },
+
+      {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+             variableWidth: false
+          }
+        },
+
+ 
+
+      ]
+  });
+ // кнопки переключения слайдов
+ $(".s-object__item").each(function(){
+  var th = $(this);
+  th.find('.right-arr').on('click', function(){ 
+      th.find('  .carusel').slick("slickNext"); 
+  }) 
+  th.find('.left-arr').on('click', function(){ 
+      th.find(' .carusel').slick("slickPrev"); 
+  }) 
+})
+
+  // $(".s-object__item ").each(function(){
+  //   $(this).find(".slick-arrow").prependTo($(this).find(".s-object__arrow-wrap"));
+ 
+  // })
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
