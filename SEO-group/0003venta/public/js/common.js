@@ -91,7 +91,7 @@ $(".wrapp-hidden .dropdown > a").click(function(){
   speed: 450,
   infinite: true,
   loop: true,  
-  arrows: true, 
+  arrows: false, 
    prevArrow: arrl2,
 nextArrow: arrr2,
    customPaging : function(slider, i) {
