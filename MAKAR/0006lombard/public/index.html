@@ -11,41 +11,789 @@
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
     <!-- Chrome, Firefox OS and Opera-->
-    <meta name="theme-color" content="#3361d8">
+    <meta name="theme-color" content="#242f4d">
     <!-- Windows Phone-->
-    <meta name="msapplication-navbutton-color" content="#3361d8">
+    <meta name="msapplication-navbutton-color" content="#242f4d">
     <!-- iOS Safari-->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#3361d8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#242f4d">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <header> 
-      <div class="container"> 
-        <div class="top_line"> 
-          <div class="row">
-            <div class="col-md-4">
-              <div class="logo"><img class="res-i" src="img/logo.png" alt=""/>Gromozeka technology</div>
+    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1 hidden-lg" href="#"><span></span></a>
+      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+        <div class="wrapp-hidden"> 
+          <div class="logo"><img class="res-i" src="img/logo.png" alt=""></div>
+          <ul>
+            <li><a href="#s-about">О компании </a></li>
+            <li><a href="#s-doc"> Схема работы</a></li>
+            <li><a href="#s-patner">Наши партнеры</a></li>
+            <li><a href="#s-contact">Адрес</a></li>
+          </ul>
+          <div class="text-right"></div>
+          <p><a class="top-nav__tel tel" href="tel:8(495)5454727">8 (495) 545 47 27</a></p>
+          <p><a class="top-nav__zvonok" href="#">Заказать обратный звонок</a></p>
+        </div>
+      </div>
+      <!-- start HEADER.header-->
+      <header class="header">
+        <!--  мобильное меню                                     -->
+        <!-- start top-nav-->
+        <div class="top-nav">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-lg-3 col-sm-6">
+                <div class="logo"><img class="res-i" src="img/logo.png" alt=""/></div>
+              </div>
+              <div class="col-md-4 col-lg-3 col-lg-push-6 col-md-push-4 col-sm-6">
+                <p><a class="top-nav__tel tel" href="tel:8(495)5454727">8 (495) 545 47 27</a>
+                </p>
+                <p><a class="top-nav__zvonok popup-with-move-anim" href="#small-dialog">Заказать обратный звонок</a>
+                </p>
+              </div>
+              <div class="col-lg-6 col-md-4 col-lg-pull-3 col-md-pull-4 col-xs-12">
+                <div class="text-center"> Работаем круглосуточно 7 дней в неделю</div>
+                <ul class="top-nav__nav visible-lg">
+                  <li class="top-nav__item"><a class="top-nav__link" href="#s-doc"> Схема работы</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#s-about">О компании </a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#s-patner">Наши партнеры</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#s-map">Адрес</a>
+                  </li>
+                </ul>
+                <div class="text-center"> г. Москва , ул. Профсоюзная 56, ТДЦ Черемушки</div>
+              </div>
             </div>
-            <div class="col-md-8">
-              <ul class="main-nav">
-                <li class="main-nav__item"><a class="main-nav__item-link" href="index1.html">Menu 1</a></li>
-                <li class="main-nav__item"><a class="main-nav__item-link" href="index2.html">Menu 2</a></li>
-                <li class="main-nav__item"><a class="main-nav__item-link" href="index3.html">Menu 3</a></li>
-                <li class="main-nav__item"><a class="main-nav__item-link" href="index4.html">Menu 4</a></li>
-              </ul>
+          </div>
+        </div>
+        <!-- end top-nav-->
+        <!-- start .top_line-->
+        <div class="top_line"></div>
+        <!-- end .top_line-->
+        <div class="container"> 
+          <h1>Наличные под залог автомобиля или ПТС</h1>
+          <div class="header__row">
+            <div class="header__item">
+              <div class="h3">до 95% </div>
+              <p>рыночной стоимости</p>
+            </div>
+            <!-- item-->
+            <div class="header__item">
+              <div class="h3">От 20 000 р</div>
+              <p>до 25 000 000 руб.</p>
+            </div>
+            <!-- item-->
+            <div class="header__item">
+              <div class="h3">от 1,8 %</div>
+              <p>ставка в месяц</p>
+            </div>
+            <!-- item-->
+          </div>
+          <div class="header__foot">
+            <div class="p">Есть вопросы? С радостью ответим</div><a class="header__btn btn btn-danger popup-with-move-anim" href="#small-dialog">Заказать консультацию</a>
+          </div>
+        </div>
+      </header>
+      <!-- end HEADER.header-->
+      <!-- start s-work-->
+      <section class="s-work" id="s-work">
+        <div class="container">
+          <div class="s-work__head">
+            <h2>Что мы предлагаем</h2>
+            <div class="h3">С нами легко договориться и просто получить деньги:</div>
+          </div>
+          <div class="s-work__row">
+            <div class="s-work__item">
+              <p>Мы<br/>работаем <br/><strong class="accent">круглосуточно</strong></p>
+            </div>
+            <!-- item-->
+            <div class="s-work__item">
+              <p>Нет ограничений <br/>по <strong class="accent">
+                  возрасту
+                  Вашего ТС</strong></p>
+            </div>
+            <!-- item-->
+            <div class="s-work__item">
+              <p>
+                Программа <br/>лояльности для<br/><strong class="accent">постоянных </strong><br/>клиентов</p>
+            </div>
+            <!-- item-->
+            <div class="s-work__item">
+              <p>Вы <br/><strong class="accent">зарабатываете</strong><br/>с нами!</p>
+            </div>
+            <!-- item-->
+          </div>
+          <div class="h3">    Наличные под залог Авто или ПТС:</div>
+          <div class="s-work__row">
+            <div class="s-work__item">
+              <p>Без  <br/>коммисий</p>
+            </div>
+            <!-- item-->
+            <div class="s-work__item">
+              <p>
+                Паркинг <br/><strong class="accent">за наш счет</strong></p>
+            </div>
+            <!-- item-->
+            <div class="s-work__item">
+              <p>
+                Бесплатная<br/><strong class="accent">пролонгация</strong></p>
+            </div>
+            <!-- item-->
+            <div class="s-work__item">
+              <p> <strong class="accent">100% </strong><br/>одобрение!</p>
+            </div>
+            <!-- item-->
+          </div>
+          <div class="s-work__foot">
+            <div class="h3"> Удобное расположение офиса:</div>
+            <div class="small">1 минута от метро НОВЫЕ ЧЕРЕМУШКИ</div><a class="s-work__link" href="#s-map">Схема проезда</a>
+          </div>
+        </div>
+      </section>
+      <!-- end s-work-->
+      <div class="bg">
+        <!-- start five-->
+        <section class="five" id="five">
+          <div class="container">
+            <h2 class="text-center">5 причин довериться нам</h2>
+            <div class="five__row">
+              <div class="five__item">
+                <div class="five__wrap"><img class="res-i" src="img/five-1.png" alt=""/>
+                  <p>Ставка от 1,8%</p>
+                </div>
+              </div>
+              <!-- item-->
+              <div class="five__item">
+                <div class="five__wrap"><img class="res-i" src="img/five-2.png" alt=""/>
+                  <p>Мы работаем Круглосуточно</p>
+                </div>
+              </div>
+              <!-- item-->
+              <div class="five__item">
+                <div class="five__wrap"><img class="res-i" src="img/five-3.png" alt=""/>
+                  <p>Близко к дому.  Сеть филиалов по  Москве</p>
+                </div>
+              </div>
+              <!-- item-->
+              <div class="five__item">
+                <div class="five__wrap"><img class="res-i" src="img/five-4.png" alt=""/>
+                  <p>Любые суммы  от 20 000 рублей</p>
+                </div>
+              </div>
+              <!-- item-->
+              <div class="five__item">
+                <div class="five__wrap"><img class="res-i" src="img/five-5.png" alt=""/>
+                  <p>Бесплатный осмотр авто и оценка</p>
+                </div>
+              </div>
+              <!-- item-->
+            </div>
+          </div>
+        </section>
+        <!-- end five-->
+        <!-- start s-doc-->
+        <section class="s-doc" id="s-doc">
+          <div class="container">
+            <h2>Всего 3 документа для получения денег</h2>
+            <div class="s-doc__row">
+              <div class="s-doc__item"> 
+                <div class="s-doc__wrap">
+                  <div class="s-doc__number">1
+                  </div>
+                </div>
+                <p>Вы оставляете заявку на сайте</p>
+              </div>
+              <!-- item-->
+              <div class="s-doc__item"> 
+                <div class="s-doc__wrap">
+                  <div class="s-doc__number">2
+                  </div>
+                </div>
+                <p>Наш менеджер  связывается с  Вами и</p>
+              </div>
+              <!-- item-->
+              <div class="s-doc__item"> 
+                <div class="s-doc__wrap">
+                  <div class="s-doc__number">3
+                  </div>
+                </div>
+                <p>Приезжаете к нам в офис, на автомобиле  с документами</p>
+              </div>
+              <!-- item-->
+              <div class="s-doc__item"> 
+                <div class="s-doc__wrap">
+                  <div class="s-doc__number">4
+                  </div>
+                </div>
+                <p>Мы проверяем Ваше авто и документы</p>
+                <div class="s-doc__block"><img class="res-i" src="img/doc-img.png" alt=""/>
+                  <ul>
+                    <li>ПТС - паспорт  технического средства</li>
+                    <li>СТС - свидетельство о  регитрации технического средства</li>
+                    <li>Паспорт - гражданина  любой страны</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- item-->
+              <div class="s-doc__item"> 
+                <div class="s-doc__wrap">
+                  <div class="s-doc__number">5
+                  </div>
+                </div>
+                <p>Если все документы в порядке Вы получаете заем в течении 40 минут, при этом находясь в комфортабельном офисе с кружечкой ароматного кофе  или чая</p>
+              </div>
+              <!-- item-->
+            </div>
+          </div>
+        </section>
+        <!-- end s-doc-->
+        <!-- start s-about-->
+        <section class="s-about" id="s-about">
+          <div class="container">
+            <h2 class="text-center">О компании</h2>
+            <div class="s-about__row">
+            </div>
+            <div class="col-lg-6 col-md-5"><img src="img/about-img.png" alt=""/></div>
+            <div class="col-lg-6 col-md-7">
+              <div class="s-about__text">
+                <p>Среди автоломбардов Москвы, мы единственные, кто предлагает такие выгодные для Вас условия. Автоломбард «ПодЗайм» на протяжении многих лет отличается надежностью и индивидуальным подходом к каждому клиенту, поэтому в течение длительного времени остается в списке лидеров этого сегмента рынка.</p>
+                <p>Мы выдаем займы залог Вашего автомобиля, мотоцикла, спецтехники, а также под залог ПТС Вашего транспортного средства с минимальными процентными ставками (от 2.8%), выгодными условиями пролонгации договора до полного погашения займа и строгой конфиденциальности информации о клиентах.</p>
+                <p class="s-about__style">
+                  В любое время дня и ночи мы готовы помочь Вам решить Ваши  финансовые  трудности. Никаких справок о доходах и длительного  изучения кредитной истории – вся процедура оформления займа  родлится 
+                  <strong class="accent">не более 40 минут.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end s-about-->
+      </div>
+      <!-- start s-usl-->
+      <section class="s-usl" id="s-usl">
+        <div class="container">
+          <h2 class="text-center">Наша компания создает все условия</h2>
+          <div class="s-usl__row">
+            <div class="s-usl__item">
+              <div class="s-usl__wrap"><img class="res-i" src="img/svg/usl-1.svg" alt=""/>
+                <p>ЛЮБОГО ГОДА ВЫПУСКА — МЫ ПРИНИМАЕМ ДАЖЕ РАРИТЕТНЫЕ АВТО</p>
+              </div>
+            </div>
+            <!-- item-->
+            <div class="s-usl__item">
+              <div class="s-usl__wrap"><img class="res-i" src="img/svg/usl-2.svg" alt=""/>
+                <p>ОХРАНЯЕМАЯ ПАРКОВКА — 24 ЧАСА КРУГЛОСУТОЧНО</p>
+              </div>
+            </div>
+            <!-- item-->
+            <div class="s-usl__item">
+              <div class="s-usl__wrap"><img class="res-i" src="img/svg/usl-3.svg" alt=""/>
+                <p>НИКАКИХ КОМИССИЙ И СКРЫТЫХ ПЛАТЕЖЕЙ</p>
+              </div>
+            </div>
+            <!-- item-->
+          </div>
+        </div>
+      </section>
+      <!-- end s-usl-->
+      <!-- start s-form-->
+      <div class="s-form"> 
+        <div class="container">
+          <div class="form-wrap">
+            <h3>Заполните форму чтобы получить индивидуальный расчет займа</h3>
+            <form>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-wrap__input-wrap"><input type="text" placeholder="Ваше имя"/>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-wrap__input-wrap"><input type="tel" placeholder="Номер телефона"/>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-wrap__input-wrap"><input class="form-wrap__btn btn btn-danger" type="submit" value="Заказать расчет"/>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end s-form-->
+      <div class="bg2">
+        <!-- start .calculator-->
+        <section class="calculator calculator--home">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="calc-body" id="calculator">
+                  <div class="calculator__message">
+                    <p>Заявка успешно отправлена!<br/><strong>Закрыть</strong></p>
+                  </div>
+                  <form id="calculatorForm" action="https://podzaim.ru/" method="post">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <h2 class="text-center">Рассчитать займ</h2>
+                        <p class="calc-body__light">Не является публичной офертой</p>
+                      </div>
+                      <div class="col-md-3">
+                        <select id="type" name="calculatorFormType">
+                          <option>Тип техники *</option>
+                          <option class="auto">Автомобиль</option>
+                          <option>Мототехника</option>
+                          <option>Водная техника</option>
+                          <option>Грузовая техника</option>
+                        </select>
+                        <select id="model" name="">
+                          <option>Марка *</option>
+                          <option value="ВАЗ (Lada)">ВАЗ (Lada)</option>
+                          <option value="Audi">Audi</option>
+                          <option value="Bentley">Bentley</option>
+                          <option value="BMW">BMW</option>
+                          <option value="Chery">Chery</option>
+                          <option value="Chevrolet">Chevrolet</option>
+                          <option value="Citroen">Citroen</option>
+                          <option value="Daewoo">Daewoo</option>
+                          <option value="Ferrari">Ferrari</option>
+                          <option value="Ford">Ford</option>
+                          <option value="Honda">Honda</option>
+                          <option value="Hyundai">Hyundai</option>
+                          <option value="Infiniti">Infiniti</option>
+                          <option value="Kia">Kia</option>
+                          <option value="Lamborghini">Lamborghini</option>
+                          <option value="Land Rover">Land Rover</option>
+                          <option value="Lexus">Lexus</option>
+                          <option value="Mazda">Mazda</option>
+                          <option value="Mercedes-Benz">Mercedes-Benz</option>
+                          <option value="MINI">MINI</option>
+                          <option value="Mitsubishi">Mitsubishi</option>
+                          <option value="Nissan">Nissan</option>
+                          <option value="Opel">Opel</option>
+                          <option value="Peugeot">Peugeot</option>
+                          <option value="Renault">Renault</option>
+                          <option value="Rolls-Royce">Rolls-Royce</option>
+                          <option value="Skoda">Skoda</option>
+                          <option value="SsangYong">SsangYong</option>
+                          <option value="Subaru">Subaru</option>
+                          <option value="Suzuki">Suzuki</option>
+                          <option value="Tesla">Tesla</option>
+                          <option value="Toyota">Toyota</option>
+                          <option value="Volkswagen">Volkswagen</option>
+                          <option value="Volvo">Volvo</option>
+                          <option value="ГАЗ">ГАЗ</option>
+                          <option value="УАЗ">УАЗ</option>
+                          <option value="AC">AC</option>
+                          <option value="Acura">Acura</option>
+                          <option value="Adler">Adler</option>
+                          <option value="Alfa Romeo">Alfa Romeo</option>
+                          <option value="Alpina">Alpina</option>
+                          <option value="Alpine">Alpine</option>
+                          <option value="AM General">AM General</option>
+                          <option value="AMC">AMC</option>
+                          <option value="Ariel">Ariel</option>
+                          <option value="Aro">Aro</option>
+                          <option value="Asia">Asia</option>
+                          <option value="Aston Martin">Aston Martin</option>
+                          <option value="Austin">Austin</option>
+                          <option value="Autobianchi">Autobianchi</option>
+                          <option value="Baltijas Dzips">Baltijas Dzips</option>
+                          <option value="Beijing">Beijing</option>
+                          <option value="Bertone">Bertone</option>
+                          <option value="Bitter">Bitter</option>
+                          <option value="Borgward">Borgward</option>
+                          <option value="Brabus">Brabus</option>
+                          <option value="Brilliance">Brilliance</option>
+                          <option value="Bristol">Bristol</option>
+                          <option value="Bufori">Bufori</option>
+                          <option value="Bugatti">Bugatti</option>
+                          <option value="Buick">Buick</option>
+                          <option value="BYD">BYD</option>
+                          <option value="Byvin">Byvin</option>
+                          <option value="Cadillac">Cadillac</option>
+                          <option value="Callaway">Callaway</option>
+                          <option value="Carbodies">Carbodies</option>
+                          <option value="Caterham">Caterham</option>
+                          <option value="Changan">Changan</option>
+                          <option value="ChangFeng">ChangFeng</option>
+                          <option value="Chrysler">Chrysler</option>
+                          <option value="Cizeta">Cizeta</option>
+                          <option value="Coggiola">Coggiola</option>
+                          <option value="Dacia">Dacia</option>
+                          <option value="Dadi">Dadi</option>
+                          <option value="DAF">DAF</option>
+                          <option value="Daihatsu">Daihatsu</option>
+                          <option value="Daimler">Daimler</option>
+                          <option value="Datsun">Datsun</option>
+                          <option value="De Tomaso">De Tomaso</option>
+                          <option value="DeLorean">DeLorean</option>
+                          <option value="Derways">Derways</option>
+                          <option value="DeSoto">DeSoto</option>
+                          <option value="Dodge">Dodge</option>
+                          <option value="DongFeng">DongFeng</option>
+                          <option value="Doninvest">Doninvest</option>
+                          <option value="Donkervoort">Donkervoort</option>
+                          <option value="DS">DS</option>
+                          <option value="E-Car">E-Car</option>
+                          <option value="Eagle">Eagle</option>
+                          <option value="Eagle Cars">Eagle Cars</option>
+                          <option value="Ecomotors">Ecomotors</option>
+                          <option value="FAW">FAW</option>
+                          <option value="Fiat">Fiat</option>
+                          <option value="Fisker">Fisker</option>
+                          <option value="Foton">Foton</option>
+                          <option value="FSO">FSO</option>
+                          <option value="Fuqi">Fuqi</option>
+                          <option value="Geely">Geely</option>
+                          <option value="Geo">Geo</option>
+                          <option value="GMC">GMC</option>
+                          <option value="Gonow">Gonow</option>
+                          <option value="Gordon">Gordon</option>
+                          <option value="Great Wall">Great Wall</option>
+                          <option value="Hafei">Hafei</option>
+                          <option value="Haima">Haima</option>
+                          <option value="Haval">Haval</option>
+                          <option value="Hawtai">Hawtai</option>
+                          <option value="Hindustan">Hindustan</option>
+                          <option value="Holden">Holden</option>
+                          <option value="HuangHai">HuangHai</option>
+                          <option value="Hudson">Hudson</option>
+                          <option value="Hummer">Hummer</option>
+                          <option value="Innocenti">Innocenti</option>
+                          <option value="Invicta">Invicta</option>
+                          <option value="Iran Khodro">Iran Khodro</option>
+                          <option value="Isdera">Isdera</option>
+                          <option value="Isuzu">Isuzu</option>
+                          <option value="IVECO">IVECO</option>
+                          <option value="JAC">JAC</option>
+                          <option value="Jaguar">Jaguar</option>
+                          <option value="Jeep">Jeep</option>
+                          <option value="Jensen">Jensen</option>
+                          <option value="JMC">JMC</option>
+                          <option value="Koenigsegg">Koenigsegg</option>
+                          <option value="KTM">KTM</option>
+                          <option value="Lancia">Lancia</option>
+                          <option value="Landwind">Landwind</option>
+                          <option value="Liebao Motor">Liebao Motor</option>
+                          <option value="Lifan">Lifan</option>
+                          <option value="Lincoln">Lincoln</option>
+                          <option value="Lotus">Lotus</option>
+                          <option value="LTI">LTI</option>
+                          <option value="Luxgen">Luxgen</option>
+                          <option value="Mahindra">Mahindra</option>
+                          <option value="Marcos">Marcos</option>
+                          <option value="Marlin">Marlin</option>
+                          <option value="Marussia">Marussia</option>
+                          <option value="Maruti">Maruti</option>
+                          <option value="Maserati">Maserati</option>
+                          <option value="Maybach">Maybach</option>
+                          <option value="McLaren">McLaren</option>
+                          <option value="Mega">Mega</option>
+                          <option value="Mercury">Mercury</option>
+                          <option value="Metrocab">Metrocab</option>
+                          <option value="MG">MG</option>
+                          <option value="Microcar">Microcar</option>
+                          <option value="Minelli">Minelli</option>
+                          <option value="Mitsuoka">Mitsuoka</option>
+                          <option value="Morgan">Morgan</option>
+                          <option value="Morris">Morris</option>
+                          <option value="Noble">Noble</option>
+                          <option value="Oldsmobile">Oldsmobile</option>
+                          <option value="Osca">Osca</option>
+                          <option value="Packard">Packard</option>
+                          <option value="Pagani">Pagani</option>
+                          <option value="Panoz">Panoz</option>
+                          <option value="Perodua">Perodua</option>
+                          <option value="PGO">PGO</option>
+                          <option value="Piaggio">Piaggio</option>
+                          <option value="Plymouth">Plymouth</option>
+                          <option value="Pontiac">Pontiac</option>
+                          <option value="Porsche">Porsche</option>
+                          <option value="Premier">Premier</option>
+                          <option value="Proton">Proton</option>
+                          <option value="PUCH">PUCH</option>
+                          <option value="Puma">Puma</option>
+                          <option value="Qoros">Qoros</option>
+                          <option value="Qvale">Qvale</option>
+                          <option value="Ravon">Ravon</option>
+                          <option value="Reliant">Reliant</option>
+                          <option value="Renaissance">Renaissance</option>
+                          <option value="Renault Samsung">Renault Samsung</option>
+                          <option value="Rezvani">Rezvani</option>
+                          <option value="Rimac">Rimac</option>
+                          <option value="Ronart">Ronart</option>
+                          <option value="Rover">Rover</option>
+                          <option value="Saab">Saab</option>
+                          <option value="Saleen">Saleen</option>
+                          <option value="Santana">Santana</option>
+                          <option value="Saturn">Saturn</option>
+                          <option value="Scion">Scion</option>
+                          <option value="SEAT">SEAT</option>
+                          <option value="ShuangHuan">ShuangHuan</option>
+                          <option value="Smart">Smart</option>
+                          <option value="Soueast">Soueast</option>
+                          <option value="Spectre">Spectre</option>
+                          <option value="Spyker">Spyker</option>
+                          <option value="Talbot">Talbot</option>
+                          <option value="TATA">TATA</option>
+                          <option value="Tatra">Tatra</option>
+                          <option value="Tazzari">Tazzari</option>
+                          <option value="Tianma">Tianma</option>
+                          <option value="Tianye">Tianye</option>
+                          <option value="Tofas">Tofas</option>
+                          <option value="Trabant">Trabant</option>
+                          <option value="Tramontana">Tramontana</option>
+                          <option value="Triumph">Triumph</option>
+                          <option value="TVR">TVR</option>
+                          <option value="Ultima">Ultima</option>
+                          <option value="Vauxhall">Vauxhall</option>
+                          <option value="Vector">Vector</option>
+                          <option value="Venturi">Venturi</option>
+                          <option value="Vortex">Vortex</option>
+                          <option value="W Motors">W Motors</option>
+                          <option value="Wartburg">Wartburg</option>
+                          <option value="Westfield">Westfield</option>
+                          <option value="Wiesmann">Wiesmann</option>
+                          <option value="Willys">Willys</option>
+                          <option value="Xin Kai">Xin Kai</option>
+                          <option value="Zastava">Zastava</option>
+                          <option value="Zenos">Zenos</option>
+                          <option value="Zenvo">Zenvo</option>
+                          <option value="Zotye">Zotye</option>
+                          <option value="ZX">ZX</option>
+                          <option value="Автокам">Автокам</option>
+                          <option value="Астро">Астро</option>
+                          <option value="Бронто">Бронто</option>
+                          <option value="ЗАЗ">ЗАЗ</option>
+                          <option value="ЗИЛ">ЗИЛ</option>
+                          <option value="ЗиС">ЗиС</option>
+                          <option value="ИЖ">ИЖ</option>
+                          <option value="КамАЗ">КамАЗ</option>
+                          <option value="Канонир">Канонир</option>
+                          <option value="Комбат">Комбат</option>
+                          <option value="ЛуАЗ">ЛуАЗ</option>
+                          <option value="Москвич">Москвич</option>
+                          <option value="СеАЗ">СеАЗ</option>
+                          <option value="СМЗ">СМЗ</option>
+                          <option value="ТагАЗ">ТагАЗ</option>
+                          <option value="Эксклюзив">Эксклюзив</option>
+                          <option value="Ё-мобиль">Ё-мобиль</option>
+                        </select>
+                        <select id="series" name="">
+                          <option>Модель *</option>
+                        </select>
+                        <div class="hidden">
+                          <input type="text" name="calculatorFormBrand" required="" placeholder="Марка *"/>
+                          <input type="text" name="calculatorFormModel" required="" placeholder="Модель *"/>
+                          <input type="text" placeholder="Год выпуска *" name="calculatorFormYear" required=""/>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="range">
+                          <input id="sum" type="range" min="50000" max="5000000" step="50000" value="1000000" name="calculatorFormSum" required=""/>
+                          <div class="range__out">
+                            <div class="range__title">Сумма займа<br/>(в рублях)</div>
+                            <div class="range__value">
+                              <input class="range__value-input" id="sumtext" type="number" value="1000000" min="50000" max="5000000" step="50000"/><span>р.</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="range">
+                          <input id="days" type="range" min="1" max="30" step="1" value="14" name="calculatorFormDays" required=""/>
+                          <div class="range__out">
+                            <div class="range__title">Срок займа<br/>(в днях)</div>
+                            <div class="range__value">
+                              <input class="range__value-input" id="daystext" type="number" value="14" min="1" max="30" step="1"/><span>дней</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="total">
+                          <p>Сумма переплаты<br/>по займу:</p>
+                          <div class="total__out" id="total">
+                            <output>45000</output>                          р.
+                          </div>
+                        </div>
+                        <h4>Ваши контактные данные:</h4>
+                        <input type="text" placeholder="Ваше имя" name="calculatorFormName" required=""/>
+                        <input type="tel" placeholder="Номер телефона" name="calculatorFormPhone" required=""/>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="calc__requires">
+                          <div class="title">Что нужно, чтобы<br/>получить деньги в автоломбарде:</div>
+                          <ul>
+                            <li><img src="img/pasport.png" alt="паспорт"/>Паспорт</li>
+                            <li><img src="img/pts.png" alt="птс"/>ПТС</li>
+                            <li><img src="img/sts.png" alt="стс"/>СТС</li>
+                            <li class="also">А так же всего 30 минут Вашего времени</li>
+                          </ul>
+                          <input type="submit" value="Отправить"/>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <p class="calc-body__light"><span class="red">*</span> Данные поля можно заполнять в свободной манере, после отправки заявки в течении 15 минут с Вами свяжется наш специалист и уточнит детали</p>
+                      </div>
+                    </div>
+                    <input id="calcSubmitted" type="hidden" name="calcSubmitted" value="true"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end .calculator-->
+      </div>
+      <!-- start s-contact-->
+      <section class="s-contact" id="s-contact">
+        <div class="container">
+          <h2 class="text-center">Наши офисы в Москве</h2>
+          <div class="row">
+            <div class="col-lg-6 col-md-5">
+              <div class="s-contact__img-wrap"><img class="res-i" src="img/map.png" alt=""/>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-7">
+                    <div class="s-contact__item">
+                      <div class="row">
+                        <div class="col-xs-6 col-480">
+                          <div class="h4">Новые Черёмушки</div>
+                          <p>ул. Профсоюзная 56, ТДЦ Черемушки</p>
+                          <p> Режим работы: Пн-Вс: Круглосуточно</p>
+                        </div>
+                        <div class="col-xs-6 col-480">
+                          <div><a class="s-contact__tel tel" href="tel:8 (495) 545-47-27">8 (495) 545-47-27</a>
+                          </div>
+                          <div><a class="s-contact__btn btn btn-danger" href="">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .item-->
+                    <div class="s-contact__item">
+                      <div class="row">
+                        <div class="col-xs-6 col-480">
+                          <div class="h4"> Водный Стадион</div>
+                          <p>ул. Адмирала Макарова 8 стр.1</p>
+                          <p> Режим работы: Пн-Вс: Круглосуточно</p>
+                        </div>
+                        <div class="col-xs-6 col-480">
+                          <div><a class="s-contact__tel tel" href="tel:8 (495) 545-47-27">8 (495) 545-47-27</a>
+                          </div>
+                          <div><a class="s-contact__btn btn btn-danger" href="">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .item-->
+                    <div class="s-contact__item">
+                      <div class="row">
+                        <div class="col-xs-6 col-480">
+                          <div class="h4">Бабушкинксая</div>
+                          <p>проезд Дежнёва, д. 1, БЦ Дежнев Плаза</p>
+                          <p> Режим работы: Пн-Вс: Круглосуточно</p>
+                        </div>
+                        <div class="col-xs-6 col-480">
+                          <div><a class="s-contact__tel tel" href="tel:8 (495) 545-47-27">8 (495) 545-47-27</a>
+                          </div>
+                          <div><a class="s-contact__btn btn btn-danger" href="">Подробнее</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end .item-->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-contact-->
+      <!-- start s-patner-->
+      <section class="s-patner" id="s-patner">
+        <div class="container">
+          <h2>Нашими партнерами являются  такие компании как CarMoney и  Национальный кредит.</h2>
+          <p>мы всегда ищем надежных партнеров в нашу команду потому если Вам  интересно помогать дюдям и зарабатывать при этом деньги оставьте заявку  и мы расскажем о наших условиях</p>
+          <div class="s-patner__foot">
+            <div class="s-patner__img-wrap"><img class="res-i" src="img/patn-1.png" alt=""/>
+            </div>
+            <div class="s-patner__img-wrap"><img class="res-i" src="img/patn-2.png" alt=""/>
+            </div>
+            <div class="s-patner__btn-wrap"><a class="s-patner__btn btn btn-danger" href="">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-patner-->
+      <!-- start s-map-->
+      <div class="s-map" id="s-map">
+        <div class="container-fluid"> 
+          <div class="row">
+            <div class="col-md-6 col-md-push-6">
+              <div class="s-map__text">
+                <div class="s-map__addr"><a class="s-map__tel tel" href="tel:+7 (495) 545 47 27">+7 (495) 545 47 27</a>
+                  <p class="s-map__head">Сеть Автоломбардов ПодЗайм:
+                  </p>
+                  <p class="s-map__par">Новые Черемушки, Профсоюзная 56
+                  </p>
+                  <p class="s-map__par">Водный Стадион, Адмирала Макарова 8
+                  </p>
+                  <p class="s-map__par">Бабушкинская, проезд Дежнёва 1
+                  </p>
+                </div>
+                <div class="soc"><a class="soc__item" href="" taarget="_blank"><img class="res-i" src="img/soc-1.png" alt=""/></a><a class="soc__item" href="" taarget="_blank"><img class="res-i" src="img/soc-2.png" alt=""/></a><a class="soc__item" href="" taarget="_blank"><img class="res-i" src="img/soc-3.png" alt=""/></a><a class="soc__item" href="" taarget="_blank"><img class="res-i" src="img/soc-4.png" alt=""/></a><a class="soc__item" href="" taarget="_blank"><img class="res-i" src="img/soc-5.png" alt=""/></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-md-pull-6">
+              <div class="s-map__map-wrap">
+                <script type="text/javascript" charset="utf-8" async="true" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A37d0597a4c59d4a0055444052a5f68be9e0f33ec0bf36685fa76353643711fa2&amp;width=100%25&amp;height=360&amp;lang=ru_RU&amp;scroll=false"></script>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="polite">v
-        <h1>dfsdfsdfdsfd  dfsdfds</h1>
+      <!-- end s-map-->
+      <footer class="footer">
+        <div class="s-form"> 
+          <div class="container">
+            <div class="form-wrap">
+              <h3>Остались вопросы? Задайте их нашим специалистам!</h3>
+              <form>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-wrap__input-wrap"><input type="text" placeholder="Ваше имя"/>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-wrap__input-wrap"><input type="tel" placeholder="Номер телефона"/>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-wrap__input-wrap"><input class="form-wrap__btn btn btn-danger" type="submit" value="Заказать расчет"/>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- end s-form-->
+      </footer>
+      <!-- modal-->
+      <div class="zoom-anim-dialog mfp-hide modal" id="small-dialog">
+        <div class="form-wrap">
+          <h3>Заполните форму и мы перезвоним Вам в<br/>ближайшее время</h3>
+          <form> 
+            <div class="form-wrap__input-wrap"><input type="text" placeholder="Ваше имя"/>
+            </div>
+            <div class="form-wrap__input-wrap"><input type="tel" placeholder="Номер телефона"/>
+            </div>
+            <div class="form-wrap__input-wrap"><input class="form-wrap__btn btn btn-danger" type="submit" value="Перезвоните мне"/>
+            </div>
+          </form>
+        </div>
       </div>
-    </header>
-    <div class="footer">footer</div>
-    <div class="mixin-wrap">
+      <!-- modal-->
     </div>
-    <div class="modal">modal</div>
-    <!-- modal-->
     <script src="js/scripts.min.js"></script>
     <script src="js/common.js"></script>
   </body>

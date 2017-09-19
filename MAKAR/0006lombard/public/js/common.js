@@ -18,17 +18,17 @@ $(function() {
   function heightses() {
 
     var w = $(window).width();
-   $(".otz__item .text-wrap ").height('auto').equalHeights();
+   // $(".otz__item .text-wrap ").height('auto').equalHeights();
     
 
     // скрывает моб меню 
-    if (w>991){
+    if (w>1199){
        $(".toggle-mnu-1").removeClass("on");
         // $("body").removeClass("fixed");
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
     }
-    var topH=$("header ").innerHeight();  
+    var topH=$(".top-nav").innerHeight();  
     if($(this).scrollTop()>topH){
                     $('.top-nav  ').addClass('fixed');
                     
@@ -62,7 +62,7 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- $(" .top-nav a").click(function () {
+ $(" .s-work__link").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         
@@ -89,7 +89,7 @@ var lastId,
 // so we can get a fancy scroll animation
 menuItems.click(function(e){
   var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight - 15;
   $('html, body').stop().animate({ 
       scrollTop: offsetTop
   }, 1600);
@@ -99,7 +99,7 @@ menuItems.click(function(e){
 // Bind to scroll
 $(window).scroll(function(){
    // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
+   var fromTop = $(this).scrollTop()+topMenuHeight+45;
    
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
@@ -136,28 +136,7 @@ $(' .tabs__caption').on('click', '.tabs__btn:not(.active)', function(e) {
 });
 
 
- var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve"   sodipodi:docname="arr-left.svg" inkscape:version="0.92.1 r15371"><path d="M 455,455 V 0 H 0 V 455 Z M 275.435,99.411 296.683,120.589 190.12,227.5 296.683,334.411 275.435,355.589 147.763,227.5 Z" id="path2" inkscape:connector-curvature="0" style="fill:#ff5320" /></svg></div>'),
-      arrr =(' <div class="r"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" style="enable-background:new 0 0 455 455;" viewBox="0 0 455 455" version="1.1"><path id="path2" fill="#ff5320" d="M0,0v455h455V0H0z M179.565,355.589l-21.248-21.178L264.88,227.5L158.317,120.589l21.248-21.178L307.237,227.5  L179.565,355.589z" /></svg></div> '),
-      arrl2 = (' <div class="l"><svg  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 370.814 370.814" style="enable-background:new 0 0 370.814 370.814;" xml:space="preserve" sodipodi:docname="left-arrow-chevron.svg" inkscape:version="0.92.1 r15371"><polygon points="292.92,24.848 268.781,0 77.895,185.401 268.781,370.814 292.92,345.961 127.638,185.401   " fill="#ff5320" id="polygon2" /></svg></div>'),
-      arrr2 =(' <div class="r"><svg  xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 370.814 370.814" style="enable-background:new 0 0 370.814 370.814;" xml:space="preserve" sodipodi:docname="left-arrow-chevron.svg" inkscape:version="0.92.1 r15371"><polygon points="292.92,24.848 268.781,0 77.895,185.401 268.781,370.814 292.92,345.961 127.638,185.401   " fill="#ff5320" id="polygon2" /></svg></div> ')
-  
- // карусель
- $('.s-team__slider').slick({
-              slidesToShow: 6,
-              slidesToScroll: 1,
-              dots: false,
-              speed: 450,
-              infinite: true,
-              loop: true,  
-              arrows: true, 
-              // centerMode: true,
-              // focusOnSelect: true , 
-               variableWidth: true,
-               prevArrow: arrl2,
-            nextArrow: arrr2,
-              });
-
-
+ 
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -175,7 +154,7 @@ $(' .tabs__caption').on('click', '.tabs__btn:not(.active)', function(e) {
     mainClass: 'my-mfp-zoom-in'
   });
  
-    галерея
+    // галерея
   $(".gal").magnificPopup({
     delegate: 'a',
     type: 'image',
@@ -193,23 +172,7 @@ $(' .tabs__caption').on('click', '.tabs__btn:not(.active)', function(e) {
     }
   });
  // форма
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: $("form").attr("action"), //Change
-      data: th.serialize()
-    }).done(function() {
-          $.magnificPopup.close();
-        window.location.replace("/thanks.html");
-       setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-        // $.magnificPopup.close();
-      }, 4000);
-    });
-    return false;
-  });
+ 
   $(".contact").magnificPopup({
     delegate: 'a',
     type: 'image',
@@ -230,33 +193,15 @@ $("form").submit(function() { //Change
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
   
-    //Replace all SVG images with inline SVG
-  $('img.img-svg').each(function(){
-    var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg');
-
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-  });
+ 
+    $(window).ready(function() {
+     
+    if ($(window).width() > 991) 
+    $('input[type="range"]').rangeslider({
+      polyfill: false,
+    });
+    
+    $('select').select2({
+   width: '100%'});
+});
 });
