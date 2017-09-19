@@ -118,24 +118,7 @@ $(window).scroll(function(){
          .end().filter(".top-nav__link[href='#"+id+"']").parent().addClass("active");
    }                   
 });
-// табы
-$(function() {
-// $(' .tabs__caption   .tab-btn:first-child  ').addClass("active")
- // $('.tabs__content:first-child ').addClass("active");
-$(' .tabs__caption').on('click', '.tabs__btn:not(.active)', function(e) {
-
-  $(this)
-    .addClass('active').addClass('current').siblings().removeClass('active')
-    .closest('div.tabs').find('div.tabs__content').hide().removeClass('active')
-    .eq($(this).index()).fadeIn().addClass('active');
-   
-    // $('.slider-small, .slider-big').slick('unslick');
-    //  section_slider();
-    return false;
-});
-});
-
-
+ 
  
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
@@ -154,41 +137,8 @@ $(' .tabs__caption').on('click', '.tabs__btn:not(.active)', function(e) {
     mainClass: 'my-mfp-zoom-in'
   });
  
-    // галерея
-  $(".gal").magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    closeOnContentClick: false,
-    closeBtnInside: false,
-    mainClass: 'mfp-with-zoom mfp-img-mobile',
-    image: {
-      verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
-    },
-    gallery: {
-      enabled: true
-    }
-  });
- // форма
  
-  $(".contact").magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    closeOnContentClick: false,
-    closeBtnInside: false,
-    mainClass: 'mfp-with-zoom mfp-img-mobile',
-    image: {
-      verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
-    },
-    gallery: {
-      enabled: true
-    }
-  });
+ 
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
