@@ -60,11 +60,23 @@ $( window ).on( "load", function() {
  heightses();
 
 
- 
+
+// листалка по стр
+ $(" .top-nav a").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        
+            $('html, body').animate({ scrollTop: destination }, 1100);
+        
+        return false; 
+    });
+
+
+// или
 // Cache selectors
 var lastId,
-    topMenu = $(" .top-nav  "),
-    topMenuHeight = topMenu.outerHeight() - 15,
+    topMenu = $(" .top-nav ul"),
+    topMenuHeight = topMenu.outerHeight()+15,
     // All list items
     menuItems = topMenu.find("a.top-nav__link"),
     // Anchors corresponding to menu items
@@ -80,7 +92,7 @@ menuItems.click(function(e){
       offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
   $('html, body').stop().animate({ 
       scrollTop: offsetTop
-  }, 1000);
+  }, 1600);
   e.preventDefault();
 });
 
@@ -116,9 +128,6 @@ $(' .tabs__caption').on('click', '.tabs__btn:not(.active)', function(e) {
     .addClass('active').addClass('current').siblings().removeClass('active')
     .closest('div.tabs').find('div.tabs__content').hide().removeClass('active')
     .eq($(this).index()).fadeIn().addClass('active');
-   $(this) 
-    .closest('div.tabs').find('div.tabs__map').hide().removeClass('active')
-    .eq($(this).index()).fadeIn().addClass('active');
    
     // $('.slider-small, .slider-big').slick('unslick');
     //  section_slider();
@@ -127,179 +136,27 @@ $(' .tabs__caption').on('click', '.tabs__btn:not(.active)', function(e) {
 });
 
 
- var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve"   sodipodi:docname="arr-left.svg" inkscape:version="0.92.1 r15371"><path d="M 455,455 V 0 H 0 V 455 Z M 275.435,99.411 296.683,120.589 190.12,227.5 296.683,334.411 275.435,355.589 147.763,227.5 Z" id="path2" inkscape:connector-curvature="0" style="fill:#ff5320" /></svg></div>'),
+var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve"   sodipodi:docname="arr-left.svg" inkscape:version="0.92.1 r15371"><path d="M 455,455 V 0 H 0 V 455 Z M 275.435,99.411 296.683,120.589 190.12,227.5 296.683,334.411 275.435,355.589 147.763,227.5 Z" id="path2" inkscape:connector-curvature="0" style="fill:#ff5320" /></svg></div>'),
       arrr =(' <div class="r"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" style="enable-background:new 0 0 455 455;" viewBox="0 0 455 455" version="1.1"><path id="path2" fill="#ff5320" d="M0,0v455h455V0H0z M179.565,355.589l-21.248-21.178L264.88,227.5L158.317,120.589l21.248-21.178L307.237,227.5  L179.565,355.589z" /></svg></div> '),
       arrl2 = (' <div class="l"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path></div>'),
       arrr2 =(' <div class="r"><svg   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path></div> ')
   
  // карусель
- 
-
-var $gallery = $('.project__slider');
-var slideCount = null;
-
-$( document ).ready(function() {
-    $gallery.slick({
-       slidesToShow: 1,
+ $('.s-team__slider').slick({
+              slidesToShow: 6,
               slidesToScroll: 1,
               dots: false,
               speed: 450,
-              infinite: false,
-              loop: false,  
-              arrows: false, 
-          draggable: false,
-    });
-});
+              infinite: true,
+              loop: true,  
+              arrows: true, 
+              // centerMode: true,
+              // focusOnSelect: true , 
+               variableWidth: true,
+               prevArrow: arrl2,
+            nextArrow: arrr2,
+              });
 
-$gallery.on('init', function(event, slick){
-  slideCount = slick.slideCount;
-  setSlideCount();
-  setCurrentSlideNumber(slick.currentSlide);
-});
-
-$gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  setCurrentSlideNumber(nextSlide);
-});
-
-function setSlideCount() {
-  var $el = $('.slide-count-wrap').find('.total');
-  $el.text(slideCount);
-}
-
-function setCurrentSlideNumber(currentSlide) {
-  var $el = $('.slide-count-wrap').find('.current');
-  $el.text(currentSlide + 1);
-}
-
-
-
-
-$(".slider2").slick({
-       slidesToShow: 2,
-      slidesToScroll: 2,
-      dots: false,
-      speed: 450,
-      infinite: true,
-      loop: true,  
-      arrows: true, 
-      prevArrow: arrl2,
-      nextArrow: arrr2,
-      lazyLoad: 'ondemand',
-        responsive: [
-    
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 3, 
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2, 
-      }
-    }
-    ,
-    {
-      breakpoint: 479,
-      settings: { 
-        slidesToShow: 1,
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-    });
-$(".slider1").slick({
-       slidesToShow: 3,
-      slidesToScroll: 3,
-      dots: false,
-      speed: 450,
-      infinite: true,
-      loop: true,  
-      arrows: true, 
-      // variableWidth: true,
-      rows: 3,
-      prevArrow: arrl2,
-      nextArrow: arrr2,
-      lazyLoad: 'ondemand',
-        responsive: [
-     
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 4, 
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 3, 
-      }
-    }
-     
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-    });
-$(".slider5").slick({
-       slidesToShow: 5,
-      slidesToScroll: 1,
-      dots: false,
-      speed: 450,
-      infinite: true,
-    
-      arrows: true, 
-      // variableWidth: true, 
-      prevArrow: arrl2,
-      nextArrow: arrr2,
-      // lazyLoad: 'ondemand',
-      responsive: [
-    {
-      breakpoint: 1199,
-      settings: {
-        slidesToShow: 4,
-      
-      }
-    },
-    {
-      breakpoint: 991,
-      settings: {
-        slidesToShow: 3, 
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2, 
-      }
-    }
-    ,
-    {
-      breakpoint: 479,
-      settings: {
-        variableWidth: true, 
-        slidesToShow: 1,
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-    });
-
- // кнопки переключения слайдов
- $(".project").each(function(){
-  var th = $(this);
-  th.find('.right-arr').on('click', function(){ 
-      th.find('.slider').slick("slickNext"); 
-  }) 
-  th.find('.left-arr').on('click', function(){ 
-      th.find('.slider').slick("slickPrev"); 
-  }) 
-})
 
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
@@ -319,8 +176,8 @@ $(".slider5").slick({
   });
  
     // галерея
-  $(".project__item, .s-gal, .slider2").each(function(){
-    $(this).find("a").magnificPopup({ 
+  $(".gal").magnificPopup({
+    delegate: 'a',
     type: 'image',
     closeOnContentClick: false,
     closeBtnInside: false,
@@ -335,6 +192,39 @@ $(".slider5").slick({
       enabled: true
     }
   });
+ // форма
+$("form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: $("form").attr("action"), //Change
+      data: th.serialize()
+    }).done(function() {
+          $.magnificPopup.close();
+        window.location.replace("/thanks.html");
+       setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+        // $.magnificPopup.close();
+      }, 4000);
+    });
+    return false;
+  });
+  $(".contact").magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    mainClass: 'mfp-with-zoom mfp-img-mobile',
+    image: {
+      verticalFit: true,
+      // titleSrc: function(item) {
+      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+      // }
+    },
+    gallery: {
+      enabled: true
+    }
   });
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
@@ -368,71 +258,5 @@ $(".slider5").slick({
 
       }, 'xml');
 
-  });
-  $('.popup-youtube ').magnificPopup({
-     
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
-
-    fixedContentPos: false
-  });
- 
-// форма
-
-
-
-    // Значения в заявках
-  var order =$(".modal-form .form_subject, .modal-form  .order");
- 
-    
-  $(".s-prod__btn").click(function(){
-    var th = $(this),
-        th2= th.parents(".s-prod__item");
-        order.val("Заявка на: "  + th.data("h2"));
-    
-    // $(".modal-form").text(th2.find("h3").text());
-  })
-
-$(".top_line__btn").click(function(){
-     order.val("Заказать звонок в шапке"); 
-  })
-
-$(".header__btn").click(function(){
-      order.val("Заявка на расчет  на главном экране"); 
-  })
-
-
-  $(".s-form  .order").val("Заявка на расчет стоимости"  ); 
-    
-    // $(".modal-form").text(th2.find("h3").text());
-   
-
-
-
-
-
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: $("form").attr("action"), //Change
-      data: th.serialize()
-    }).done(function() {
-          // $.magnificPopup.close();
-         $.magnificPopup.open({
-        items: {
-          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline'
-        }
-      })
-       setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-        // $.magnificPopup.close();
-      }, 4000);
-    });
-    return false;
   });
 });
