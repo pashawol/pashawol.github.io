@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <meta name="description" content="о чем страница">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#3361d8">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#3361d8">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3361d8">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- start HEADER.header-->
+      <header class="header">
+        <div class="trop main-mnu hidden-mnu d-lg-none landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+          <div class="wrapp-hidden"> 
+            <ul>
+              <li><a href="#about">  Как начать </a></li>
+              <li><a href="#plan">Информация о сервере</a></li>
+              <li><a href="#offer">Статистика</a></li>
+              <li><a href="#contact">Правили сервера</a></li>
+              <li><a href="#contact">Форум</a></li>
+            </ul>
+            <div class="text-right"></div>
+          </div>
+        </div>
+        <!--  мобильное меню                                     -->
+        <!-- start top-nav-->
+        <div class="top-nav">
+          <div class="container">
+            <div class="row">
+              <div class="col-3 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a></div>
+              <div class="col-lg-9 d-none d-lg-block">
+                <ul class="top-nav__nav">
+                  <li class="top-nav__item"><a class="top-nav__link" href="#about">  Как начать </a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#plan">Информация о сервере</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#offer">Статистика</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#contact">Правили сервера</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#contact">Форум</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-9 col-lg-3">
+                <div class="top-nav__wrap"><a class="top-nav__lk" href="#">Личный кабинет</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end top-nav-->
+        <div class="container">
+          <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><span class="breadcrumb-item active">Информация о сервере</span>
+          </nav>
+        </div>
+        <div class="header__container">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-12 order-md-1 text-center"><a class="header__logo logo" href="#"><img class="res-i" src="img/logo.png" alt=""/></a>
+              </div>
+              <div class="col"><a class="header__btn btn btn-primary" href=""> Скачать файлы</a>
+              </div>
+              <div class="col order-md-12"><a class="header__btn btn btn-danger" href="">  Личный кабинет</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end HEADER.header-->
+      <div class="main-container">
+        <div class="container">
+          <div class="row-head">
+            <h1>Личный кабинет</h1>
+            <ul class="lk-nav row">
+              <li class="lk-nav__item col-auto"><a class="lk-nav__link current" href=""> Список Аккаунтов </a>
+              </li>
+              <li class="lk-nav__item col-auto"><a class="lk-nav__link" href=""> Создать Аккаунт </a>
+              </li>
+              <li class="lk-nav__item col-auto"><a class="lk-nav__link" href="">Сменить пароль в ЛК</a>
+              </li>
+              <li class="lk-nav__item col-auto"><a class="lk-nav__link" href=""> Выход</a>
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <!-- start s-lk-->
+              <section class="s-lk">
+                <div class="s-lk__h2">Пароли не совпадают
+                </div><a class="s-lk__btn btn btn-danger" href="">Назад</a>
+              </section>
+              <!-- end s-lk-->
+            </div>
+            <div class="col-md-4">
+              <!-- start aside-->
+              <aside class="aside">
+                <div class="aside__wrap">
+                  <div class="aside__head">
+                    <h4>На Вашем счету:</h4>
+                    <div class="aside__big">560 col
+                    </div>
+                    <div class="aside__panel">Пополнить счет
+                    </div>
+                  </div>
+                  <div class="aside__body">
+                    <h4>Перевести на персонажа:</h4>
+                    <div class="form-wrap text-center">
+                      <form method="post" action="action.php"> 
+                        <div class="form-wrap__item-wrap">
+                          <!-- .form-wrap__item-->
+                          <div class="form-wrap__item">
+                            <input type="email" placeholder="Имя персонажа" name=" " required="required"/>
+                          </div>
+                          <!-- .form-wrap__item-->
+                          <div class="form-wrap__item">
+                            <input type="text" placeholder="Количество col" name=" " required="required"/>
+                          </div>
+                          <!-- .form-wrap__item-->
+                          <div class="form-wrap__item">
+                            <div class="form-wrap__btn-wrap">
+                              <button class="form-wrap__btn btn btn-primary" type="submit">Перевести
+                              </button>
+                            </div>
+                          </div>
+                          <!-- .form-wrap__item -->
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+              <!-- end aside-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-5 col-md-7">
+              <div class="row">
+                <div class="col">
+                  <h4>Важное</h4>
+                  <ul>
+                    <li><a href="">Эпик-Боссы</a></li>
+                    <li><a href="">О серверах</a></li>
+                    <li><a href="">Главная</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h4>АККАУНТ</h4>
+                  <ul>
+                    <li><a href="">Создать аккаунт</a></li>
+                    <li><a href="">Скачать файлы</a></li>
+                    <li><a href="">Восстановить пароль</a></li>
+                  </ul>
+                </div>
+                <div class="col">
+                  <h4>ТОПЫ</h4>
+                  <ul>
+                    <li><a href="">PVP</a></li>
+                    <li><a href="">PK</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-7">
+              <div class="footer__text">ДАННЫЙ СЕРВЕР ЯВЛЯЕТСЯ ТЕСТОВЫМ ВАРИАНТОМ  ИГРЫ LINEAGE II И ПРЕДНАЗНАЧЕН ТОЛЬКО ДЛЯ  ОЗНАКОМЛЕНИЯ ИГРОКОВ. ВСЕ ПРАВА ПРИНАДЛЕЖАТ  КОМПАНИИ NCSOFT.
+              </div>
+            </div>
+          </div>
+          <div class="footer__banners"><a class="footer__banner" href="#"><img class="res-i" src="img/banner-1.jpg" alt=""/></a><a class="footer__banner" href="#"><img class="res-i" src="img/banner-2.jpg" alt=""/></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
