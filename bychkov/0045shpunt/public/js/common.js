@@ -319,7 +319,7 @@ $(".slider5").slick({
   });
  
     // галерея
-  $(".project__item, .s-gal, .slider2").each(function(){
+  $(".project__left, .s-gal, .slider2").each(function(){
     $(this).find("a").magnificPopup({ 
     type: 'image',
     closeOnContentClick: false,

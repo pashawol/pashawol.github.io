@@ -18,6 +18,10 @@ $(function() {
   function heightses() { 
     var w = $(window).width();
    $(".otz__item .text-wrap ").height('auto').equalHeights(); 
+   $(".contact-head__item ").height('auto').equalHeights(); 
+   $(".contact-head__item-big").height('auto').equalHeights(); 
+   $(".s-tarif__head").height('auto').equalHeights(); 
+   $(".s-tarif__caption-wrap").height('auto').equalHeights(); 
     // скрывает моб меню 
     if (w>991){
        $(".toggle-mnu-1").removeClass("on");
