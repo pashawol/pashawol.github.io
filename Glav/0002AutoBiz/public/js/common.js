@@ -22,6 +22,8 @@ $(function() {
    $(".contact-head__item-big").height('auto').equalHeights(); 
    $(".s-tarif__head").height('auto').equalHeights(); 
    $(".s-tarif__caption-wrap").height('auto').equalHeights(); 
+   
+   $(".convenience__item").height('auto').equalHeights(); 
     // скрывает моб меню 
     if (w>991){
        $(".toggle-mnu-1").removeClass("on");
@@ -235,4 +237,15 @@ $(' .tabs').on('click', '.tabs__btn:not(.active)', function(e) {
   });
   // маска на инпут
     $("input[type='tel']").inputmask("+7(999)999-99-99").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
+
+     $('.s-rew__slider-big').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            speed: 450,  
+            infinite: true,
+            loop: true,  
+            arrows: false,  
+          }); 
+
 });

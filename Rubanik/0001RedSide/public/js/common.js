@@ -141,10 +141,11 @@ $( window ).on( "load", function() {
     // var url = window.location.hostname === 'blueimp.github.io' ?
     //             '//jquery-file-upload.appspot.com/' : 'server/php/';
     $('#fileupload').fileupload({
-        url: 'server/php/',
+        url: '/bitrix/templates/redside/ajax/order.php',
         dataType: 'json',
         done: function (e, data) {
-            $.each(data.result.files, function (index, file) {
+            console.log();
+            $.each(data.result, function (index, file) {
                 $('<p/>').html(file.name+ "<br> еще файл").appendTo('#files');
                 $('#files').addClass("active");
             });
@@ -159,7 +160,15 @@ $( window ).on( "load", function() {
             );
             
 
+        },error:function (e) {
+           if(e.statusText == "OK"){
+
+           }
+        },
+        succes:function () {
+            console.log("succes");
         }
+
     }).prop('disabled', !$.support.fileInput)
         .parent().addClass($.support.fileInput ? undefined : 'disabled');
         $(".progress-btn").click(function(){

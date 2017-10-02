@@ -62,7 +62,7 @@
         <div class="top-nav">
           <div class="container">
             <div class="row">
-              <div class="col d-xll-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a></div>
+              <div class="col d-xll-none"><a class="header-menu-open" href="#"></a></div>
               <div class="col-10 d-none d-xll-block">
                 <ul class="top-nav__nav top-nav__nav-mnu row">
                   <li class="top-nav__item col-auto"><a class="top-nav__link" href="">Текущая заявка<span class="top-nav__link-round">3 </span></a>
@@ -94,25 +94,37 @@
         <div class="container"> </div>
       </header>
       <!-- end HEADER.header-->
-      <div class="trop main-mnu hidden-mnu d-xll-none landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
-        <div class="wrapp-hidden"> 
-          <ul class="trop__nav trop__nav-mnu">
-            <li class="trop__item col-auto"><a class="trop__link" href="">Текущая заявка<span class="trop__link-round">3 </span></a>
-            </li>
-            <li class="trop__item col-auto"><a class="trop__link" href="">Услуги жк</a>
-            </li>
-            <li class="trop__item col-auto"><a class="trop__link" href="">мои заявки<span class="trop__link-round">!</span></a>
-            </li>
-            <li class="trop__item col-auto"><a class="trop__link" href="">коммунальные платежи<span class="trop__link-round">!</span></a>
-            </li>
-            <li class="trop__item col-auto"><a class="trop__link" href="">новости</a>
-            </li>
-            <li class="trop__item col-auto"><a class="trop__link" href="">информация и контакты</a>
-            </li>
+      <!--  тут-->
+      <div class="mobile-panel">
+        <div class="container">
+          <ul class="mobile-menu">
+            <li><a href="#">
+                Текущая заявка
+                <span class="top-nav__link-round">2</span></a></li>
+            <li><a href="#">
+                Услуги жк
+                <span class="top-nav__link-round">2</span></a></li>
+            <li><a href="#">
+                мои заявки
+                <span class="top-nav__link-round">2</span></a></li>
+            <li><a href="#">
+                коммунальные платежи
+                <span class="top-nav__link-round">2</span></a></li>
+            <li><a href="#">
+                новости
+                <span class="top-nav__link-round">2</span></a></li>
+            <li><a href="#">
+                информация и контакты
+                <span class="top-nav__link-round">2</span></a></li>
           </ul>
-          <div class="text-right"></div>
+          <div class="mobile-group"><a class="header-group" href="//r7-group.com/" target="_blank"><img src="img/header-group.svg" alt="" width="87"></a></div>
+          <form class="search" action="?">
+            <input class="search-input" type="text">
+            <button class="search-submit" type="submit"></button>
+          </form>
         </div>
       </div>
+      <!--  тут-->
       <div class="container">
         <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Личный кабинет</a><span class="breadcrumb-item active">Информация и контакты</span>
         </nav>
@@ -288,6 +300,9 @@
       </footer>
     </div>
     <script src="js/scripts.min.js"></script>
+    <!-- тут-->
+    <script src="js/scripts.js"></script>
+    <!-- тут-->
     <script src="js/common.js"></script>
   </body>
 </html>
