@@ -128,182 +128,127 @@
       <div class="container">
         <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Личный кабинет</a><span class="breadcrumb-item active">Коммунальные платежи</span>
         </nav>
-        <h1>Коммунальные платежи</h1>
+        <h1>Передать показания</h1>
       </div>
       <!-- start s-table-->
-      <div class="s-table s-table-pay">
+      <div class="s-table s-table-readings">
         <div class="container">
           <div class="links-head">
             <div class="links-head__link-wrap"><a class="links-head__link links-head__link-active" href="">Оплатить</a><a class="links-head__link" href="">Передать показания счетчиков</a>
             </div>
-            <div class="links-head__right-link">У Вас имеется задолженность!
+            <div class="links-head__right-link">Передать до 27.12.2017
             </div>
+          </div>
+          <div class="s-table__head-text">
+            <p>Чтобы внести показания счетчиков, щелкните мышью по необходимому полю, а затем введите цифровое значение. Изменить данные можно только до даты формирования платежных документов - 29 число каждого месяца.</p>
           </div>
           <div class="table-wrap">
             <table>
               <tr>
                 <th class="brown-bg"></th>
-                <th class="brown-bg"> Начислено за декабрь 2017 года</th>
-                <th class="brown-bg">Сумма,  руб.</th>
-                <th class="brown-bg">Статус</th>
-                <th class="brown-bg">Оплата</th>
+                <th class="brown-bg"> Месяц / год</th>
+                <th class="brown-bg">Свет, день кВ/ч</th>
+                <th class="brown-bg">Свет, ночь кВ/ч</th>
+                <th class="brown-bg"> Вода холодная</th>
+                <th class="brown-bg">Вода горячая </th>
+                <th class="brown-bg"> Состояние</th>
               </tr>
               <tbody>
                         <tr class="s-table__tr-title">
                           <td>1</td>
-                          <td>Свет </td>
-                          <td>1 600</td>
-                          <td>выставлен счет </td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><img src="img/svg/download.svg" alt=""/><span>скачать dec_light17.pdf</span></a>
-                            </div>
+                          <td>Декабрь 2017</td>
+                          <td class="text-center"><input class="s-table__text-input" type="number" value="4000"/>
+                          </td>
+                          <td class="text-center"><input class="s-table__text-input" type="number" value="4000"/>
+                          </td>
+                          <td class="text-center"><input class="s-table__text-input" type="number" value="4000"/>
+                          </td>
+                          <td class="text-center"><input class="s-table__text-input" type="number" value="4000"/>
+                          </td>
+                          <td class="text-center"><a class="s-table__blur-link" href="#">передать</a>
                           </td>
                         </tr>
                         <tr class="s-table__tr-title">
                           <td>2</td>
-                          <td>Вода (хол 122 /гор 1234), отопление </td>
-                          <td>4 000</td>
-                          <td>выставлен счет </td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><img src="img/svg/download.svg" alt=""/><span>скачать dec_light17.pdf</span></a>
-                            </div>
-                          </td>
+                          <td>Ноябрь 2017</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">показания переданы 15.11.17</td>
                         </tr>
                         <tr class="s-table__tr-title">
                           <td>3</td>
-                          <td>Общедомовые расходы </td>
-                          <td>1 600</td>
-                          <td>выставлен счет </td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><img src="img/svg/download.svg" alt=""/><span>скачать dec_light17.pdf</span></a>
-                            </div>
-                          </td>
+                          <td>Октябрь 2017</td>
+                          <td class="text-center">1600</td>
+                          <td class="text-center">1600</td>
+                          <td class="text-center">1600</td>
+                          <td class="text-center">1600</td>
+                          <td class="text-center">показания переданы 15.11.17</td>
                         </tr>
                         <tr class="s-table__tr-title">
                           <td>4</td>
-                          <td>Взнос на капитальный ремонт </td>
-                          <td>4 000</td>
-                          <td>выставлен счет </td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><img src="img/svg/download.svg" alt=""/><span>скачать dec_light17.pdf</span></a>
-                            </div>
-                          </td>
+                          <td>Сентябрь 2017</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">показания переданы 15.11.17</td>
                         </tr>
               </tbody>
               <tr class="tfoot">
                 <td> </td>
                 <td>
-                  <div class="text-right"> Итого за декабрь 2017</div>
-                </td>
-                <td>12 500</td>
-                <td>необходимо оплатить все  счета до 29.12.2017</td>
-                <td> 
-                  <div class="s-table__links"> <a class="s-table__link" href="#"> <span>оплатить счета за декабрь 2017</span></a>
+                  <div class="text-right"> <a class="s-table__blur-link toggle-link" href="#">Показания за 2016 год</a>
                   </div>
                 </td>
-              </tr>
-              <tr class="tfoot-red">
                 <td> </td>
-                <td>
-                  <div class="text-right"> Задолженность за ноябрь 2017</div>
-                </td>
-                <td>15 000</td>
-                <td>необходимо погасить  до 15.12.2017</td>
-                <td> 
-                  <div class="s-table__links"> <a class="s-table__link" href="#"> <span>погасить задолженность</span></a>
-                  </div>
-                </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
               </tr>
-            </table>
-          </div>
-          <div class="row jcc">
-                <div class="col col-12 col-sm-6 col-lg-4">
-                  <div class="s-table__item-text">
-                  </div>
-                </div>
-                <!-- .col-12.col-sm-6.col-md-4-->
-                <div class="col col-12 col-sm-6 col-lg-4">
-                  <div class="s-table__item-text">
-                  </div>
-                </div>
-                <!-- .col-12.col-sm-6.col-md-4-->
-                <div class="col col-12 col-sm-6 col-lg-4">
-                  <div class="s-table__item-text">
-                  </div>
-                </div>
-                <!-- .col-12.col-sm-6.col-md-4-->
-          </div>
-          <div class="table-wrap table-bott">
-            <table>
-              <tr>
-                <th class="brown-bg"> Месяц</th>
-                <th class="brown-bg">Сумма,  руб.</th>
-                <th class="brown-bg">Статус</th>
-                <th class="brown-bg">Оплата</th>
-              </tr>
-              <tbody> 
+              <tbody class="hidden-table">  
                         <tr class="s-table__tr-title">
-                          <td> Счета за ноябрь 2017</td>
-                          <td>15 000 руб.</td>
-                          <td>имеется задолженность в размере 15 000 руб.</td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><span>погасить задолженность</span></a>
-                            </div>
+                          <td>1</td>
+                          <td>Декабрь 2017</td>
+                          <td class="text-center"><input class="s-table__text-input" type="number" value="4000"/>
+                          </td>
+                          <td class="text-center"><input class="s-table__text-input" type="number" value="4000"/>
+                          </td>
+                          <td class="text-center"><input class="s-table__text-input" type="number" value="4000"/>
+                          </td>
+                          <td class="text-center"><input class="s-table__text-input" type="number" value="4000"/>
+                          </td>
+                          <td class="text-center"><a class="s-table__blur-link" href="#">передать</a>
                           </td>
                         </tr>
                         <tr class="s-table__tr-title">
-                          <td>Счета за октябрь 2017 </td>
-                          <td>15 000 руб.</td>
-                          <td>оплачено </td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><img src="img/svg/download.svg" alt=""/><span>скачать dec_light17.pdf</span></a>
-                            </div>
-                          </td>
+                          <td>2</td>
+                          <td>Ноябрь 2017</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">показания переданы 15.11.17</td>
                         </tr>
                         <tr class="s-table__tr-title">
-                          <td>Счета за сентябрь 2017 </td>
-                          <td>15 000 руб.</td>
-                          <td>оплачено </td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><img src="img/svg/download.svg" alt=""/><span>скачать dec_light17.pdf</span></a>
-                            </div>
-                          </td>
+                          <td>3</td>
+                          <td>Октябрь 2017</td>
+                          <td class="text-center">1600</td>
+                          <td class="text-center">1600</td>
+                          <td class="text-center">1600</td>
+                          <td class="text-center">1600</td>
+                          <td class="text-center">показания переданы 15.11.17</td>
                         </tr>
                         <tr class="s-table__tr-title">
-                          <td>Счета за август 2017 </td>
-                          <td>15 000 руб.</td>
-                          <td>оплачено </td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><img src="img/svg/download.svg" alt=""/><span>скачать dec_light17.pdf</span></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="s-table__tr-title">
-                          <td>Счета за июль 2017 </td>
-                          <td>15 000 руб.</td>
-                          <td>оплачено </td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><img src="img/svg/download.svg" alt=""/><span>скачать dec_light17.pdf</span></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="s-table__tr-title">
-                          <td>Счета за июнь 2017 </td>
-                          <td>15 000 руб.</td>
-                          <td>оплачено </td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><img src="img/svg/download.svg" alt=""/><span>скачать dec_light17.pdf</span></a>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr class="s-table__tr-title">
-                          <td>Счета за май 2017 </td>
-                          <td>15 000 руб.</td>
-                          <td>оплачено </td>
-                          <td> 
-                            <div class="s-table__links"> <a class="s-table__link" href="#"><img src="img/svg/download.svg" alt=""/><span>скачать dec_light17.pdf</span></a>
-                            </div>
-                          </td>
+                          <td>4</td>
+                          <td>Сентябрь 2017</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">4000</td>
+                          <td class="text-center">показания переданы 15.11.17</td>
                         </tr>
               </tbody>
             </table>

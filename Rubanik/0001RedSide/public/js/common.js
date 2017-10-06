@@ -175,5 +175,8 @@ $( window ).on( "load", function() {
             $(this).parents(".form-wrap").find("#fileupload").trigger('click');
         })
 });
-
+$(".toggle-link").click(function(){
+  $(".hidden-table   ").fadeToggle();
+   return false;
+})
 });
