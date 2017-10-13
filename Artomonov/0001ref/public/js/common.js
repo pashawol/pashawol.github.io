@@ -98,4 +98,17 @@ lessLink: ' '
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
    $('select').styler();
+
+
+
+// листалка по стр
+ $(" .header__btn, .s-int__btn").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        
+            $('html, body').animate({ scrollTop: destination }, 1100);
+        
+        return false; 
+    });
+
 });
