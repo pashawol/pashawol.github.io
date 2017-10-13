@@ -63,14 +63,14 @@ $( window ).on( "load", function() {
    // в статье скрывает текст
  $(".mob-read-more").readmore({
     speed: 300,  
-    maxHeight: 100,
+    maxHeight: 83,
     moreLink: '<a href="" class="btn-more  "><span>далее</span> </a>',
 lessLink: ' '
 });
 
  $(".mob-read-more-2").readmore({
     speed: 300,  
-    maxHeight: 345,
+    maxHeight: 332,
     moreLink: '<a href="" class="btn-more  "><span>далее</span> </a>',
 lessLink: ' '
 });
