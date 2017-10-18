@@ -228,4 +228,21 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
 
     // buttonNext: arrr2,
  });
+
+// http://parsleyjs.org/doc/index.html#installation-localization
+ $(".js-form-validate").parsley();
+
+
+
+function plitki() {
+  var $container = $(".plitki "); 
+    $container.masonry({
+      columnWidth: ".plitki-col",
+      itemSelector: ".plitki-col"
+    });
+ 
+  
+};
+plitki();
+ 
 });
