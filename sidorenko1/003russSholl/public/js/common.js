@@ -110,6 +110,21 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
               // centerMode: true,
               // focusOnSelect: true , 
                
+                prevArrow: arrl2,
+                nextArrow: arrr2,
+              });
+ // карусель
+ $('.js-carusel-inside').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: false,
+              speed: 450,
+              infinite: false,
+              loop: false,  
+              arrows: true, 
+              // centerMode: true,
+              // focusOnSelect: true , 
+               
                prevArrow: arrl2,
             nextArrow: arrr2,
               });
@@ -216,7 +231,7 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
     }); 
 
  
- $(".s-treners__carusel").flipster({
+ $(".s-treners__carusel-js").flipster({
     style: 'flat',
     spacing: -0.38,
     loop: true,
@@ -230,7 +245,6 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
  });
 
 // http://parsleyjs.org/doc/index.html#installation-localization
- $(".js-form-validate").parsley();
 
 
 
@@ -244,5 +258,14 @@ function plitki() {
   
 };
 plitki();
+    $('.custom-select').styler();
+
+
  
+ $(".js-form-validate").parsley();
+
+ $(".js-btn").click(function(){
+    $(this).fadeOut();
+    $(".form-wrap__hidden-block").fadeIn("slow");
+ })
 });
