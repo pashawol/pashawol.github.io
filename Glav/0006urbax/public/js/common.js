@@ -7,14 +7,11 @@
     
     $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
-    $(".hidden-mnu").toggleClass("active");
+    $(".top-nav-mobile-wrap").fadeToggle();
     $("body").toggleClass("fixed");
     return false;
   }); 
-    $('.hidden-mnu ul li a').on('click', function () {
-      $(".hidden-mnu .toggle-mnu").click();
-    });
-
+    
   function heightses() {
 
     var w = $(window).width();
@@ -23,12 +20,12 @@
     
 
     // скрывает моб меню 
-    if (w>991){
-       $(".toggle-mnu-1").removeClass("on");
-        // $("body").removeClass("fixed");
-        $(".hidden-mnu").removeClass("active");
-        $("body").removeClass("fixed");
-    }
+    // if (w>991){
+    //    $(".toggle-mnu-1").removeClass("on");
+    //     // $("body").removeClass("fixed");
+    //     $(".hidden-mnu").removeClass("active");
+    //     $("body").removeClass("fixed");
+    // }
     var topH=$("header ").innerHeight();  
     if($(this).scrollTop()>topH){
                     $('.top-nav  ').addClass('fixed');
@@ -62,63 +59,6 @@ $( window ).on( "load", function() {
 
 
 
-// листалка по стр
- $(" .top-nav a").click(function () {
-        var elementClick = $(this).attr("href");
-        var destination = $(elementClick).offset().top;
-        
-            $('html, body').animate({ scrollTop: destination }, 1100);
-        
-        return false; 
-    });
-
-
-// или
-// Cache selectors
-var lastId,
-    topMenu = $(" .top-nav ul"),
-    topMenuHeight = topMenu.outerHeight()+15,
-    // All list items
-    menuItems = topMenu.find("a.top-nav__link"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
-    });
-
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({ 
-      scrollTop: offsetTop
-  }, 1600);
-  e.preventDefault();
-});
-
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
-   
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter(".top-nav__link[href='#"+id+"']").parent().addClass("active");
-   }                   
-});
 // табы
 $(function() {
 var tab = ('tabs');
@@ -128,14 +68,70 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 
   $(this)
     .addClass('active').addClass('current').siblings().removeClass('active')
-    .closest('.' + tab + '').find('.' + tab + '__content').hide().removeClass('active')
-    .eq($(this).index()).fadeIn().addClass('active');
+    .closest('.' + tab ).find('.' + tab + '__content').hide().removeClass(tab +'active')
+    .eq($(this).index()).fadeIn().addClass(tab +'active');
    
     // $('.slider-small, .slider-big').slick('unslick');
     //  section_slider();
     return false;
 });
 });
+
+// mnu выпадающее
+$(function() {
+var tab = ('drop-block');
+  // $(' .' + tab + '__caption   .' + tab + '__btn:first-child  ').addClass('active')
+   // $('.' + tab + '__content:first-child ').addClass("active");
+  $('.' + tab + '__mnu').on('click mouseenter mouseleave', '.' + tab + '__mnu-item:not(.'+tab + '__mnu-item-active)', function(e) {
+     
+    $(this)
+      .addClass(tab + '__mnu-item-active').siblings().removeClass(tab + '__mnu-item-active')
+      .closest('.' + tab).find('.' + tab + '__sub-mnu').hide().removeClass(tab +'__sub-mnu-active')
+      .eq($(this).index()).fadeIn().addClass(tab +'__sub-mnu-active');
+     
+      // $('.slider-small, .slider-big').slick('unslick');
+      //  section_slider();
+      return false;
+  }); 
+
+       // $('.' + tab + '__content:first-child ').addClass("active");
+  $('.' + tab + '__sub-mnu-item').hover( function(e) {
+    $(this)
+      .addClass(tab + '__mnu-item-active').siblings().removeClass(tab + '__mnu-item-active')
+      .closest('.' + tab).find('.' + tab + '__sub-news-item').removeClass(tab +'__sub-news-item-active')
+      .eq($(this).index()).addClass(tab +'__sub-news-item-active');
+     
+      // $('.slider-small, .slider-big').slick('unslick');
+      //  section_slider();
+      return false;
+  });
+
+  var nav = ("drop");
+
+  $(".drop").hover(
+   function(e) {
+     
+      $(this).siblings().removeClass("drop-active")
+      .closest(".top-nav__nav").find('.drop-block').removeClass("drop-block-active")
+      $(this)
+      .addClass('drop-active' )
+      .find('.drop-block').slideDown().addClass('drop-block-active');
+     
+      // $('.slider-small, .slider-big').slick('unslick');
+      //  section_slider();
+      return false;
+
+  }
+    ,
+    function(){
+          $(this)
+        .removeClass('drop-active' )
+        .find('.drop-block').hide().removeClass('drop-block-active');
+    }
+  )
+
+});
+
 
 
 var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455 455" style="enable-background:new 0 0 455 455;" xml:space="preserve"   sodipodi:docname="arr-left.svg" inkscape:version="0.92.1 r15371"><path d="M 455,455 V 0 H 0 V 455 Z M 275.435,99.411 296.683,120.589 190.12,227.5 296.683,334.411 275.435,355.589 147.763,227.5 Z" id="path2" inkscape:connector-curvature="0" style="fill:#ff5320" /></svg></div>'),
@@ -272,4 +268,8 @@ $("form").submit(function() { //Change
        name.text(filename);
   
     }); 
+
+
+
+  $(".js-form-validate").parsley();
 });
