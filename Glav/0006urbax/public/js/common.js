@@ -112,7 +112,7 @@ var tab = ('drop-block');
    function(e) {
      
       $(this).siblings().removeClass("drop-active")
-      .closest(".top-nav__nav").find('.drop-block').removeClass("drop-block-active")
+      .closest(".top-nav__nav").find('.drop-block').hide().removeClass("drop-block-active")
       $(this)
       .addClass('drop-active' )
       .find('.drop-block').slideDown().addClass('drop-block-active');
@@ -132,11 +132,11 @@ var tab = ('drop-block');
 
  
 
- $(".top-nav-mobile-wrap .drop").hover(
+ $(".top-nav-mobile-wrap ").on('click , mouseover', '.drop:not(.drop-active)',
    function(e) {
      
       $(this).siblings().removeClass("drop-active")
-      .closest(".top-nav__nav").find('.drop-block').removeClass("drop-block-active")
+      .closest(".top-nav-mobile-wrap").find('.drop-block').hide().removeClass("drop-block-active")
       $(this)
       .addClass('drop-active' )
       .find('.drop-block').fadeIn().addClass('drop-block-active');
