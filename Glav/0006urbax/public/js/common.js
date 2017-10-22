@@ -108,7 +108,7 @@ var tab = ('drop-block');
 
   var nav = ("drop");
 
-  $(".drop").hover(
+  $(".top-nav-js .drop").hover(
    function(e) {
      
       $(this).siblings().removeClass("drop-active")
@@ -128,6 +128,30 @@ var tab = ('drop-block');
         .removeClass('drop-active' )
         .find('.drop-block').hide().removeClass('drop-block-active');
     }
+  )
+
+ 
+
+ $(".top-nav-mobile-wrap .drop").hover(
+   function(e) {
+     
+      $(this).siblings().removeClass("drop-active")
+      .closest(".top-nav__nav").find('.drop-block').removeClass("drop-block-active")
+      $(this)
+      .addClass('drop-active' )
+      .find('.drop-block').fadeIn().addClass('drop-block-active');
+     
+      // $('.slider-small, .slider-big').slick('unslick');
+      //  section_slider();
+      return false;
+
+  }
+    // ,
+    // function(){
+    //       $(this)
+    //     .removeClass('drop-active' )
+    //     .find('.drop-block').hide().removeClass('drop-block-active');
+    // }
   )
 
 });
