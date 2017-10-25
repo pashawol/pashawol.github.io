@@ -11,39 +11,19 @@
     $("body").toggleClass("fixed");
     return false;
   }); 
+  var toggMnu2 = $(".toggle-mnu-search").click(function () {
+    
+    $(".toggle-mnu-search").toggleClass("on");
+    // $("body").toggleClass("fixed");
+    
+    return false;
+  }); 
     
   function heightses() {
 
     var w = $(window).width();
-   // $(".otz__item .text-wrap ").height('auto').equalHeights();
-   //
-    
-
-    // скрывает моб меню 
-    // if (w>991){
-    //    $(".toggle-mnu-1").removeClass("on");
-    //     // $("body").removeClass("fixed");
-    //     $(".hidden-mnu").removeClass("active");
-    //     $("body").removeClass("fixed");
-    // }
-    var topH=$("header ").innerHeight();  
-    if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed');
-                    
-                }
-                else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed');
-                   
-                }
-    $(window).scroll(function(){
-                if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed'); 
-                }
-                else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed'); 
-                }
-            });
-       // конец добавил 
+  
+   
   }
 
   $(window).resize(function() {
@@ -61,15 +41,15 @@ $( window ).on( "load", function() {
 
 // табы
 $(function() {
-var tab = ('tabs');
+var tab = ('tabs, .s-decision');
 // $(' .' + tab + '__caption   .' + tab + '__btn:first-child  ').addClass('active')
  // $('.' + tab + '__content:first-child ').addClass("active");
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
+$('.' + tab + '__caption').on('click mouseenter mouseleave', '.' + tab + '__btn:not(.active)', function(e) {
 
   $(this)
     .addClass('active').addClass('current').siblings().removeClass('active')
-    .closest('.' + tab ).find('.' + tab + '__content').hide().removeClass(tab +'active')
-    .eq($(this).index()).fadeIn().addClass(tab +'active');
+    .closest('.' + tab ).find('.' + tab + '__content').hide().removeClass('active')
+    .eq($(this).index()).fadeIn().addClass('active');
    
     // $('.slider-small, .slider-big').slick('unslick');
     //  section_slider();
@@ -157,7 +137,60 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
       arrr =(' <div class="r"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" style="enable-background:new 0 0 455 455;" viewBox="0 0 455 455" version="1.1"><path id="path2" fill="#ff5320" d="M0,0v455h455V0H0z M179.565,355.589l-21.248-21.178L264.88,227.5L158.317,120.589l21.248-21.178L307.237,227.5  L179.565,355.589z" /></svg></div> '),
       arrl2 = (' <div class="l"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path></div>'),
       arrr2 =(' <div class="r"><svg   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path></div> ')
-  
+ 
+
+
+
+ $('.js-carusel').slick({
+  // centerPadding: '60px',
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  dots: false,
+  speed: 450,
+  loop: true,  
+  arrows: true,  
+  focusOnSelect: true , 
+  centerMode: true,
+  // variableWidth: true,
+  prevArrow: arrl2,
+  nextArrow: arrr2,
+  responsive: [
+    {
+      breakpoint: 1199,
+      settings: { 
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: { 
+        slidesToShow: 5
+      }
+    },
+  {
+      breakpoint: 767,
+      settings: { 
+        slidesToShow: 4
+      }
+    },
+
+    {
+      breakpoint: 500,
+      settings: {
+        slidesToShow: 3
+       
+      }
+    },
+    {
+      breakpoint: 400,
+      settings: {
+        slidesToShow: 1
+       
+      }
+    },
+
+  ]
+}); 
  // карусель
  $('.s-team__slider').slick({
               slidesToShow: 6,

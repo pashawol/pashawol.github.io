@@ -113,21 +113,7 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
                 prevArrow: arrl2,
                 nextArrow: arrr2,
               });
- // карусель
- $('.js-carusel-inside').slick({
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              dots: false,
-              speed: 450,
-              infinite: false,
-              loop: false,  
-              arrows: true, 
-              // centerMode: true,
-              // focusOnSelect: true , 
-               
-               prevArrow: arrl2,
-            nextArrow: arrr2,
-              });
+ 
 
 // карусель
  $('.s-team__slider').slick({
@@ -145,15 +131,43 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
             nextArrow: arrr2,
               });
 
-
+// карусель
+ $('.js-carusel-inside').slick({
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              dots: false,
+              speed: 450,
+              infinite: false,
+              loop: false,  
+              arrows: true, 
+              // centerMode: true,
+              // focusOnSelect: true , 
+               
+               prevArrow: arrl2,
+              nextArrow: arrr2,
+              variableWidth: false,
+              responsive: [
+                   
+                  {
+                    breakpoint: 768,
+                    settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                    }
+                  }
+                  // You can unslick at a given breakpoint now by adding:
+                  // settings: "unslick"
+                  // instead of a settings object
+                ]
+              });
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
 
-    fixedContentPos: true,
+   fixedContentPos: false,
     fixedBgPos: true,
 
-    overflowY: 'auto',
+    overflowY: 'scroll',
 
     closeBtnInside: true,
     preloader: false,
@@ -268,4 +282,8 @@ plitki();
     $(this).fadeOut();
     $(".form-wrap__hidden-block").fadeIn("slow");
  })
+
+// загрузка карты
+ $(".s-contact__map-wrap").html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.457673763605!2d37.63089231607825!3d55.83737199293355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53663b52b0681%3A0xd7f1400e765b7db8!2z0YPQuy4g0KHQtdC70YzRgdC60L7RhdC-0LfRj9C50YHRgtCy0LXQvdC90LDRjywgMTfQujUsINCc0L7RgdC60LLQsCwgMTI5MjI2!5e0!3m2!1sru!2sru!4v1508852606099" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>')
+            
 });
