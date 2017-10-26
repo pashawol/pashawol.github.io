@@ -207,7 +207,24 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
             nextArrow: arrr2,
               });
 
-
+ //.js-header-sl
+ $('.js-header-sl').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: false,
+              speed: 450,
+              infinite: false,
+              // loop: false,  
+              arrows: true, 
+              // centerMode: true,
+              // focusOnSelect: true , 
+               prevArrow: ' <div class="l"> назад</div>',
+                nextArrow: arrr2,
+              });
+ $('.header-main__slide .right-link').on('click', function(e){ 
+      e.preventDefault();
+      $(".js-header-sl").slick("slickNext"); 
+       }) 
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -225,6 +242,7 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
     mainClass: 'my-mfp-zoom-in'
   });
  
+
     // галерея
   $(".gal").magnificPopup({
     delegate: 'a',
