@@ -272,4 +272,8 @@ $("form").submit(function() { //Change
        name.text(filename);
   
     }); 
+
+
+
+  $(".js-form-validate").parsley();
 });
