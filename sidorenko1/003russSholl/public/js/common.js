@@ -14,7 +14,18 @@
     $('.hidden-mnu ul li a').on('click', function () {
       $(".hidden-mnu .toggle-mnu").click();
     });
-
+    
+    var container = $(".hidden-mnu");
+      if(container.hasClass("active")== true){
+           $(document).mouseup(function (e) {
+          if (container.has(e.target).length === 0){
+              $(".toggle-mnu-1").toggleClass("on");
+              // $("body").toggleClass("fixed");
+              $(".hidden-mnu").toggleClass("active");
+              $("body").toggleClass("fixed");
+          }
+        });
+       }
   function heightses() {
 
     var w = $(window).width();
@@ -22,7 +33,23 @@
    //
     
 
+  var $container = $(".plitki "); 
+    $container.masonry({
+      columnWidth: ".plitki-col",
+      itemSelector: ".plitki-col"
+    });
+ 
+  
+ 
+ 
     // скрывает моб меню 
+    if (w>991){
+        $container.masonry('reloadItems');
+    }
+    else  {
+        $container.masonry('destroy');
+    }
+
     if (w>768){
        $(".toggle-mnu-1").removeClass("on");
         // $("body").removeClass("fixed");
@@ -203,47 +230,7 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
   
-    //Replace all SVG images with inline SVG
-  $('img.img-svg').each(function(){
-    var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg');
-
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-  });
-
-
-  // кастомный инпут файл 
  
-  var file = $(".add-file input[type=file]");
-  file.change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         var name = $(".add-file__filename  ");
-       name.text(filename);
-  
-    }); 
-
  
  $(".s-treners__carusel-js").flipster({
     style: 'flat',
@@ -262,16 +249,7 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
 
 
 
-function plitki() {
-  var $container = $(".plitki "); 
-    $container.masonry({
-      columnWidth: ".plitki-col",
-      itemSelector: ".plitki-col"
-    });
- 
-  
-};
-plitki();
+
     $('.custom-select').styler();
 
 
