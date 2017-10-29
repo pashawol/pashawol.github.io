@@ -11,11 +11,11 @@
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
     <!-- Chrome, Firefox OS and Opera-->
-    <meta name="theme-color" content="#3361d8">
+    <meta name="theme-color" content="#0083cb">
     <!-- Windows Phone-->
-    <meta name="msapplication-navbutton-color" content="#3361d8">
+    <meta name="msapplication-navbutton-color" content="#0083cb">
     <!-- iOS Safari-->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#3361d8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#0083cb">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -72,7 +72,7 @@
               </div>
             </div>
           </div>
-          <div class="header-block__cont-block header-block__cont-block-tel d-md-none"><a class="header-block__tel tel" href="tel:+7 (351) 216-32-10">+7 (351) 216-32-10</a><a class="header-block__link" href="#">Перезвоните мне</a></div>
+          <div class="header-block__cont-block header-block__cont-block-tel d-md-none"><a class="header-block__tel tel" href="tel:+7 (351) 216-32-10">+7 (351) 216-32-10</a><a class="header-block__link popup-with-move-anim" href="#modal-zvonok">Перезвоните мне</a></div>
         </div>
         <!-- end top-nav-->
         <div class="container"> </div>
@@ -93,7 +93,7 @@
               </li>
             </ul>
           </div>
-          <div class="header-block__cont-block header-block__cont-block-tel"><a class="header-block__tel tel" href="tel:+7 (351) 216-32-10">+7 (351) 216-32-10</a><a class="header-block__link" href="#">Перезвоните мне</a>
+          <div class="header-block__cont-block header-block__cont-block-tel"><a class="header-block__tel tel" href="tel:+7 (351) 216-32-10">+7 (351) 216-32-10</a><a class="header-block__link popup-with-move-anim" href="#modal-zvonok">Перезвоните мне</a>
           </div>
           <div class="container">
             <div class="header-block__logo"><img class="res-i" src="img/logo-big.png" alt=""/>
@@ -109,7 +109,7 @@
                 <div class="header-block__text header-block__text-big">	Экспериментус
                 </div>
               </div>
-            </div><a class="header-block__btn btn btn-lg btn-yel" href="#">Программы праздника</a>
+            </div><a class="header-block__btn btn btn-lg btn-yel" href="#s-prog">Программы праздника</a>
           </div>
         </section>
         <!-- end header-block-->
@@ -199,45 +199,6 @@
         </div>
         <div class="s-prog__carusel">
           <div class="s-prog__slide">
-            <div class="s-prog__item s-prog__item-prog">
-              <div class="row">
-                <div class="col-lg-5">
-                  <div class="s-prog__h3 s-prog__h3-m d-lg-none">Загадочное преступление в музее
-                  </div>
-                  <div class="s-prog__img-wrap" style="background-image: url(img/program-2.jpg);"><img src="img/program-2.jpg" alt=""/>
-                  </div>
-                </div>
-                <div class="col-lg-7">
-                  <div class="s-prog__caption">
-                    <div class="s-prog__h3 d-lg-block d-none">Загадочное преступление в музее
-                    </div>
-                    <p class="s-prog__text">Наши менеджеры помогут вам выбрать программу, подходящую по интересам, возрасту...
-                    </p>
-                    <div class="s-prog__h4"> В программу входит:
-                    </div>
-                    <ul class="s-prog__list">
-                      <li class="s-prog__list-item">Церемония поздравления
-                      </li>
-                      <li class="s-prog__list-item">Подарок имениннику
-                      </li>
-                      <li class="s-prog__list-item"> Опыты
-                      </li>
-                      <li class="s-prog__list-item">Воздушные шары
-                      </li>
-                      <li class="s-prog__list-item">Экскурсия + Квест
-                      </li>
-                      <li class="s-prog__list-item">Комната для чаепития
-                      </li>
-                    </ul>
-                    <div class="s-prog__btns"><a class="s-prog__btn btn btn-danger" href="#">Рассчитать стоимость</a><a class="s-prog__btn s-prog__btn-outline-danger btn btn-outline-danger" href="#">Узнать подробнее о программе</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- +e.slide-->
-          <div class="s-prog__slide">
             <div class="s-prog__item">
               <div class="row">
                 <div class="col-lg-5">
@@ -279,62 +240,711 @@
             </div>
           </div>
           <!-- +e.slide-->
+          <div class="s-prog__slide">
+            <div class="s-prog__item s-prog__item-prog">
+              <div class="row">
+                <div class="col-lg-5">
+                  <div class="s-prog__h3 s-prog__h3-m d-lg-none">Загадочное преступление в музее
+                  </div>
+                  <div class="s-prog__img-wrap" style="background-image: url(img/program-2.jpg);"><img src="img/program-2.jpg" alt=""/>
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="s-prog__caption">
+                    <div class="s-prog__h3 d-lg-block d-none">Загадочное преступление в музее
+                    </div>
+                    <p class="s-prog__text">Наши менеджеры помогут вам выбрать программу, подходящую по интересам, возрасту...
+                    </p>
+                    <div class="s-prog__h4"> В программу входит:
+                    </div>
+                    <ul class="s-prog__list">
+                      <li class="s-prog__list-item">Церемония поздравления
+                      </li>
+                      <li class="s-prog__list-item">Подарок имениннику
+                      </li>
+                      <li class="s-prog__list-item"> Опыты
+                      </li>
+                      <li class="s-prog__list-item">Воздушные шары
+                      </li>
+                      <li class="s-prog__list-item">Экскурсия + Квест
+                      </li>
+                      <li class="s-prog__list-item">Комната для чаепития
+                      </li>
+                    </ul>
+                    <div class="s-prog__btns"><a class="s-prog__btn btn btn-danger popup-with-move-anim" href="#modal-raschet">Рассчитать стоимость</a><a class="s-prog__btn s-prog__btn-outline-danger btn btn-outline-danger" href="#">Узнать подробнее о программе</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- +e.slide-->
         </div>
       </section>
       <!-- end s-prog-->
       <!-- start s-work-->
       <section class="s-work" id="s-work">
         <div class="container">
-          <h2 class="text-center">s-work</h2>
-          <div class="row"></div>
+          <div class="row">
+            <div class="col-lg-6 d-none d-lg-block">
+              <div class="s-work__ramka"><img class="res-i" src="img/work-img.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="s-work__caption">
+                <h2>Каждый День Рождения в экспериментусе - это:</h2>
+              </div>
+              <div class="s-work__items">
+                <div class="s-work__item">
+                  <div class="s-work__col">
+                    <div class="s-work__img-wrap"><img class="res-i" src="img/work-1.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="s-work__text">Интересный праздник для каждого гостя
+                  </div>
+                </div>
+                <!-- +e.item-->
+                <div class="s-work__item">
+                  <div class="s-work__col">
+                    <div class="s-work__img-wrap"><img class="res-i" src="img/work-2.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="s-work__text">Диплом научного экпериментатора для именинника
+                  </div>
+                </div>
+                <!-- +e.item-->
+                <div class="s-work__item">
+                  <div class="s-work__col">
+                    <div class="s-work__img-wrap"><img class="res-i" src="img/work-3.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="s-work__text">Познавательно-научные подарки
+                  </div>
+                </div>
+                <!-- +e.item-->
+                <div class="s-work__item">
+                  <div class="s-work__col">
+                    <div class="s-work__img-wrap"><img class="res-i" src="img/work-4.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="s-work__text">Опытные ученые-аниматоры
+                  </div>
+                </div>
+                <!-- +e.item-->
+                <div class="s-work__item">
+                  <div class="s-work__col">
+                    <div class="s-work__img-wrap"><img class="res-i" src="img/work-5.png" alt=""/>
+                    </div>
+                  </div>
+                  <div class="s-work__text">Комната для чаепития в праздничном оформлении
+                  </div>
+                </div>
+                <!-- +e.item--><a class="s-work__btn btn btn-lg btn-yel popup-with-move-anim" href="#modal-br-pr">Забронировать праздник</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end s-work-->
       <!-- start s-rew-->
       <section class="s-rew" id="s-rew">
-        <div class="container">
-          <h2 class="text-center">s-rew</h2>
-          <div class="row"></div>
+        <div class="container-fluid">
+          <h2 class="text-center title-bg">Отзывы детей и родителей</h2>
         </div>
+        <div class="s-rew__carusel">
+          <div class="s-rew__slide">
+            <div class="s-rew__item">
+              <div class="s-rew__item-wrap" style="background-color: #700d8a;">
+              </div>
+              <div class="s-rew__img-wrap" style="background-image: url(img/rew-1.jpg);"><img class="res-i" src="img/rew-1.jpg" alt=""/>
+              </div>
+              <div class="s-rew__caption">
+                <div class="s-rew__title text-center">Елена
+                </div>
+                <div class="s-rew__date text-center">12 сентября 2017 г.
+                </div>
+                <p class="s-rew__text">После захватывающего путешествия юные любители науки смогут поделиться впечатлениями друг с другом, поедая сладости и поздравляя именинника. И, конечно же, подарки! Отметить День Рождения и уйти без подарка не сможет ни один ребенок. Поэтому все дети получат интересные презенты, а имениннику достанется главный подарок.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- +e.slide-->
+          <div class="s-rew__slide">
+            <div class="s-rew__item">
+              <div class="s-rew__item-wrap" style="background-color: #0083cb;">
+              </div>
+              <div class="s-rew__img-wrap" style="background-image: url(img/rew-1.jpg);"><img class="res-i" src="img/rew-1.jpg" alt=""/>
+              </div>
+              <div class="s-rew__caption">
+                <div class="s-rew__title text-center">Елена
+                </div>
+                <div class="s-rew__date text-center">12 сентября 2017 г.
+                </div>
+                <p class="s-rew__text">После захватывающего путешествия юные любители науки смогут поделиться впечатлениями друг с другом, поедая сладости и поздравляя именинника. И, конечно же, подарки! Отметить День Рождения и уйти без подарка не сможет ни один ребенок. Поэтому все дети получат интересные презенты, а имениннику достанется главный подарок.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- +e.slide-->
+          <div class="s-rew__slide">
+            <div class="s-rew__item">
+              <div class="s-rew__item-wrap" style="background-color: #369e1b;">
+              </div>
+              <div class="s-rew__img-wrap" style="background-image: url(img/rew-1.jpg);"><img class="res-i" src="img/rew-1.jpg" alt=""/>
+              </div>
+              <div class="s-rew__caption">
+                <div class="s-rew__title text-center">Елена
+                </div>
+                <div class="s-rew__date text-center">12 сентября 2017 г.
+                </div>
+                <p class="s-rew__text">После захватывающего путешествия юные любители науки смогут поделиться впечатлениями друг с другом, поедая сладости и поздравляя именинника. И, конечно же, подарки! Отметить День Рождения и уйти без подарка не сможет ни один ребенок. Поэтому все дети получат интересные презенты, а имениннику достанется главный подарок.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- +e.slide-->
+          <div class="s-rew__slide">
+            <div class="s-rew__item">
+              <div class="s-rew__item-wrap" style="background-color: #ff9000;">
+              </div>
+              <div class="s-rew__img-wrap" style="background-image: url(img/rew-1.jpg);"><img class="res-i" src="img/rew-1.jpg" alt=""/>
+              </div>
+              <div class="s-rew__caption">
+                <div class="s-rew__title text-center">Елена
+                </div>
+                <div class="s-rew__date text-center">12 сентября 2017 г.
+                </div>
+                <p class="s-rew__text">После захватывающего путешествия юные любители науки смогут поделиться впечатлениями друг с другом, поедая сладости и поздравляя именинника. И, конечно же, подарки! Отметить День Рождения и уйти без подарка не сможет ни один ребенок. Поэтому все дети получат интересные презенты, а имениннику достанется главный подарок.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- +e.slide-->
+          <div class="s-rew__slide">
+            <div class="s-rew__item">
+              <div class="s-rew__item-wrap" style="background-color: #ff0068;">
+              </div>
+              <div class="s-rew__img-wrap" style="background-image: url(img/rew-1.jpg);"><img class="res-i" src="img/rew-1.jpg" alt=""/>
+              </div>
+              <div class="s-rew__caption">
+                <div class="s-rew__title text-center">Елена
+                </div>
+                <div class="s-rew__date text-center">12 сентября 2017 г.
+                </div>
+                <p class="s-rew__text">После захватывающего путешествия юные любители науки смогут поделиться впечатлениями друг с другом, поедая сладости и поздравляя именинника. И, конечно же, подарки! Отметить День Рождения и уйти без подарка не сможет ни один ребенок. Поэтому все дети получат интересные презенты, а имениннику достанется главный подарок.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- +e.slide-->
+        </div><a class="s-rew__btn btn btn-lg btn-yel popup-with-move-anim" href="#modal-br-pr">Заказать праздник</a>
       </section>
       <!-- end s-rew-->
       <!-- start s-faq-->
-      <section class="s-faq" id="s-faq">
+      <section class="tabs" id="s-faq">
         <div class="container">
-          <h2 class="text-center">s-faq</h2>
-          <div class="row"></div>
+          <h2 class="text-center title-bg">Частые вопросы</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="tabs__caption">
+                <li class="tabs__btn active">
+                  <div class="tabs__btn-inner"><span>Что можно увидеть в вашем музее?</span>
+                  </div>
+                  <div class="tabs__accord active d-md-none">
+                    <div class="tabs__content">
+                      <div class="tabs__content-inner">
+                        <div class="tabs__text-wrap">
+                          <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__btn">
+                  <div class="tabs__btn-inner"><span> За какое время бронировать программу Дня Рождения?</span>
+                  </div>
+                  <div class="tabs__accord d-md-none">
+                    <div class="tabs__content">
+                      <div class="tabs__content-inner">
+                        <div class="tabs__text-wrap">
+                          <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__btn">
+                  <div class="tabs__btn-inner"><span> На детей какого возраста рассчитаны программы?</span>
+                  </div>
+                  <div class="tabs__accord d-md-none">
+                    <div class="tabs__content">
+                      <div class="tabs__content-inner">
+                        <div class="tabs__text-wrap">
+                          <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__btn">
+                  <div class="tabs__btn-inner"><span>Можно ли фотографировать в музее?</span>
+                  </div>
+                  <div class="tabs__accord d-md-none">
+                    <div class="tabs__content">
+                      <div class="tabs__content-inner">
+                        <div class="tabs__text-wrap">
+                          <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__btn">
+                  <div class="tabs__btn-inner"><span>Что входит в аренду зала для чаепития?</span>
+                  </div>
+                  <div class="tabs__accord d-md-none">
+                    <div class="tabs__content">
+                      <div class="tabs__content-inner">
+                        <div class="tabs__text-wrap">
+                          <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tabs__btn">
+                  <div class="tabs__btn-inner"><span> Мы уже были в музее. Нам будет интересно?</span>
+                  </div>
+                  <div class="tabs__accord d-md-none">
+                    <div class="tabs__content">
+                      <div class="tabs__content-inner">
+                        <div class="tabs__text-wrap">
+                          <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                          <div class="row">
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                              </div>
+                            </div>
+                            <div class="col-6">
+                              <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+              <div class="tabs__wrap">
+                <div class="tabs__content active">
+                  <div class="tabs__content-inner">
+                    <div class="tabs__text-wrap">
+                      <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <div class="tabs__content-inner">
+                    <div class="tabs__text-wrap">
+                      <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <div class="tabs__content-inner">
+                    <div class="tabs__text-wrap">
+                      <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <div class="tabs__content-inner">
+                    <div class="tabs__text-wrap">
+                      <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <div class="tabs__content-inner">
+                    <div class="tabs__text-wrap">
+                      <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__content">
+                  <div class="tabs__content-inner">
+                    <div class="tabs__text-wrap">
+                      <p>Наш музей - это более 100 интерактивных экспонатов. Все можно трогать руками, включать, крутить - то есть участвовать во всех экспериментах самостоятельно. В нашем музее представлены экспонаты по следующим разделам физики: механика, оптика, акустика, электричество и магнетизм, зал головоломок. Интерактивный музей - это развлечение, связанное с наукой. Сотрудники музея помогают и подсказывают, когда это нужно.</p>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="tabs__img-wrap"><img class="res-i" src="img/img-2.jpg" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end s-faq-->
       <!-- start s-add-->
       <section class="s-add" id="s-add">
         <div class="container">
-          <h2 class="text-center">s-add</h2>
-          <div class="row"></div>
+          <h2 class="text-center title-bg">Дополнения к празднику</h2>
+        </div>
+        <div class="s-add__carusel">
+          <div class="s-add__slide">
+            <div class="s-add__img-wrap" style="background-image: url(img/top-car-1.jpg);"><img src="img/top-car-1.jpg" alt=""/>
+              <div class="s-add__title">Лабораторные работы <span>1</span>
+              </div>
+            </div>
+          </div>
+          <div class="s-add__slide">
+            <div class="s-add__img-wrap" style="background-image: url(img/top-car-2.jpg);"><img src="img/top-car-2.jpg" alt=""/>
+              <div class="s-add__title">Лабораторные работы <span>2</span>
+              </div>
+            </div>
+          </div>
+          <div class="s-add__slide">
+            <div class="s-add__img-wrap" style="background-image: url(img/top-car-3.jpg);"><img src="img/top-car-3.jpg" alt=""/>
+              <div class="s-add__title">Лабораторные работы <span>3</span>
+              </div>
+            </div>
+          </div>
+          <div class="s-add__slide">
+            <div class="s-add__img-wrap" style="background-image: url(img/top-car-4.jpg);"><img src="img/top-car-4.jpg" alt=""/>
+              <div class="s-add__title">Лабораторные работы <span>4</span>
+              </div>
+            </div>
+          </div>
+          <div class="s-add__slide">
+            <div class="s-add__img-wrap" style="background-image: url(img/top-car-5.jpg);"><img src="img/top-car-5.jpg" alt=""/>
+              <div class="s-add__title">Лабораторные работы <span>5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end head-carusel  -->
+        <div class="container"><a class="s-add__btn btn btn-lg btn-yel" href="#">Узнать подробнее</a>
         </div>
       </section>
       <!-- end s-add-->
       <!-- start s-map-->
       <section class="s-map" id="s-map">
-        <div class="container">
-          <h2 class="text-center">s-map</h2>
-          <div class="row"></div>
+        <div class="s-map__title">
+          <div class="container">
+            <h2 class="text-center title-bg">Наши музеи</h2>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="s-map__map-wrap s-map__map-wrap-left">
+                <div class="s-map__caption s-map__caption-l">
+                  <div class="s-map__caption-wrap">
+                    <div class="s-map__h4">"Экспериментус" в горсаду имени Пушкина
+                    </div>
+                    <p>Планета Земля, РФ, г. Челябинск,<br/>горсад имени А. С. Пушкина,<br/>ул. Орджоникидзе, д. 58а, к. 3, 2 этаж</p><a class="s-map__btn btn btn-outline-yel" href="#">Провести праздник здесь</a>
+                  </div>
+                </div>
+                <div class="s-map__map" id="map1">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="s-map__map-wrap s-map__map-wrap-right">
+                <div class="s-map__caption s-map__caption-r">
+                  <div class="s-map__caption-wrap">
+                    <div class="s-map__h4">"Экспериментус" в  торговом городе Алмаз
+                    </div>
+                    <p>Планета Земля, РФ, г. Челябинск,<br/>торговый город "Алмаз",<br/>Копейсшое шоссе, 64, 3 этаж (главный вход)</p><a class="s-map__btn btn btn-outline-yel" href="#">Провести праздник здесь</a>
+                  </div>
+                </div>
+                <div class="s-map__map" id="map2">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end s-map-->
       <!-- start s-bron-->
       <section class="s-bron" id="s-bron">
         <div class="container">
-          <h2 class="text-center">s-bron</h2>
-          <div class="row"></div>
+          <h2 class="text-center">Забронируйте праздник в Экспериментусе!</h2>
+          <div class="form-wrap">
+            <form class="js-form-validate" method="post">
+              <div class="form-wrap__input-wrap">
+                <label><span class="form-wrap__title">Ваше имя:</span><input class="form-wrap__input" type="text" placeholder="Ваше имя" required="required" pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g" data-parsley-pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g"/>
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="form-wrap__input-wrap">
+                <label><span class="form-wrap__title">Телефон:</span><input class="form-wrap__input" type="tel" placeholder="+7(___)___-__-__" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="form-wrap__input-wrap">
+                <label><span class="form-wrap__title">E-mail:</span><input class="form-wrap__input" type="email" placeholder="E-mail"/>
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="form-wrap__input-wrap">
+                <label><span class="form-wrap__title">Музей</span>
+                  <select class="form-wrap__input custom-select">
+                    <option value="горсад имени Пушкина">горсад имени Пушкина</option>
+                    <option value="торговый город &quot;Алмаз&quot;">торговый город "Алмаз"</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-wrap__input-wrap">
+                <label><span class="form-wrap__title">Дата:</span><input class="form-wrap__input date" type="text" placeholder="Выберите дату"/>
+                </label>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="form-wrap__btn-wrap"><input class="form-wrap__btn btn btn-lg btn-yel" value="Забронировать" type="submit"/>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
       <!-- end s-bron-->
-      <footer class="footer">footer
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <div class="footer__logo"><img class="res-i" src="img/logo-big.png" alt=""/>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <ul class="soc">
+                <li><li><a class="soc__link" href="#" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+                </li>
+                <li><li><a class="soc__link" href="#" target="_blank"><i class="fa fa-odnoklassniki" aria-hidden="true"></i></a></li>
+                </li>
+                <li><li><a class="soc__link" href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                </li>
+                <li><li><a class="soc__link" href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="header-block__cont-block header-block__cont-block-tel"><a class="header-block__tel tel" href="tel:+7 (351) 216-32-10">+7 (351) 216-32-10</a><a class="header-block__link popup-with-move-anim" href="#modal-zvonok">Перезвоните мне</a></div>
+            </div>
+          </div>
+        </div>
       </footer>
+      <div class="zoom-anim-dialog mfp-hide modal modal-form" id="modal-zvonok">
+        <div class="form-wrap">
+          <form class="js-form-validate" method="post">
+            <div class="text-center">
+              <div class="form-wrap__h4 accent">Заявка на обратный звонок
+              </div>
+              <p class="form-wrap__text">Заполните форму ниже и мы перезвоним вам в течении 15 минут:
+              </p>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Ваше имя:</span><input class="form-wrap__input" type="text" placeholder="Ваше имя" required="required" pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g" data-parsley-pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Телефон:</span><input class="form-wrap__input" type="tel" placeholder="+7(___)___-__-__" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__btn-wrap"><input class="form-wrap__btn btn btn-lg btn-yel" value="Отправить" type="submit"/>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="zoom-anim-dialog mfp-hide modal modal-form" id="modal-raschet">
+        <div class="form-wrap">
+          <form class="js-form-validate" method="post">
+            <div class="text-center">
+              <div class="form-wrap__h4 accent">Рассчитать стоимость праздника
+              </div>
+              <p class="form-wrap__text">
+                Программа: 
+                <strong>Загадки Экспериментуса</strong>
+              </p>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Ваше имя:</span><input class="form-wrap__input" type="text" placeholder="Ваше имя" required="required" pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g" data-parsley-pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Телефон:</span><input class="form-wrap__input" type="tel" placeholder="+7(___)___-__-__" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Количество гостей</span><input class="form-wrap__input form-wrap__input-number" type="number" placeholder="Количество*"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__btn-wrap"><input class="form-wrap__btn btn btn-lg btn-yel" value="Отправить" type="submit"/>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="zoom-anim-dialog mfp-hide modal modal-form" id="modal-br-pr">
+        <div class="form-wrap">
+          <form class="js-form-validate" method="post">
+            <div class="text-center">
+              <div class="form-wrap__h4 accent">Забронировать праздник
+              </div>
+              <p class="form-wrap__text">Заполните форму ниже, чтобы забронировать праздник
+              </p>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Ваше имя:</span><input class="form-wrap__input" type="text" placeholder="Ваше имя" required="required" pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g" data-parsley-pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Телефон:</span><input class="form-wrap__input" type="tel" placeholder="+7(___)___-__-__" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">E-mail:</span><input class="form-wrap__input" type="email" placeholder="E-mail"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Музей</span>
+                <select class="form-wrap__input custom-select">
+                  <option value="горсад имени Пушкина">горсад имени Пушкина</option>
+                  <option value="торговый город &quot;Алмаз&quot;">торговый город "Алмаз"</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-wrap__input-wrap">
+              <label><span class="form-wrap__title">Дата:</span><input class="form-wrap__input date" type="text" placeholder="Выберите дату"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__btn-wrap"><input class="form-wrap__btn btn btn-lg btn-yel" value="Забронировать" type="submit"/>
+            </div>
+          </form>
+        </div>
+      </div>
       <!-- modal-->
     </div>
-    <script src="js/scripts.min.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/scripts.min.js" asinc></script>
+    <script asinc src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script asinc src="js/common.js"></script>
   </body>
 </html>
