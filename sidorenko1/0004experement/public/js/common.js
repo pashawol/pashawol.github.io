@@ -177,13 +177,19 @@ var    arrl2 = (' <div class="l"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:
                     breakpoint: 1100,
                     settings: { 
                      variableWidth: false,
-                      dots: false,
+                      // dots: false,
                     }
                   } 
 
                 ]
       });
 
+ $(".s-prog__btn-outline-danger").click(function(){
+
+    $(".s-prog #slick-slide20").click();
+
+     return false;
+ })
  
   // карусель
  $('.s-rew__carusel').slick({
@@ -378,5 +384,4 @@ icons: {
 
 });
 
- 
 });
