@@ -29,7 +29,8 @@
   function heightses() {
 
     var w = $(window).width();
-   // $(".otz__item .text-wrap ").height('auto').equalHeights();
+   // $(".s-inside__title ").height('auto').equalHeights();
+   // $(".s-inside__text ").height('auto').equalHeights();
    //
     
 
@@ -39,8 +40,17 @@
       itemSelector: ".plitki-col"
     });
  
-  
- 
+    // изменение размера заголовков
+    $(".s-inside__title").each(function(){
+      var th = $(this),
+          thh = th.height();
+      if( thh > 26 ){
+        th.css("font-size", 22)
+      }
+       if (thh > 52 ) {
+        th.css("font-size", 18)
+      }
+    })
  
     // скрывает моб меню 
     if (w>991){
@@ -263,5 +273,7 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
 
 // загрузка карты
  $(".s-contact__map-wrap").html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2240.457673763605!2d37.63089231607825!3d55.83737199293355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b53663b52b0681%3A0xd7f1400e765b7db8!2z0YPQuy4g0KHQtdC70YzRgdC60L7RhdC-0LfRj9C50YHRgtCy0LXQvdC90LDRjywgMTfQujUsINCc0L7RgdC60LLQsCwgMTI5MjI2!5e0!3m2!1sru!2sru!4v1508852606099" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>')
-            
+ 
+
+
 });

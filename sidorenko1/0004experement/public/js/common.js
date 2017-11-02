@@ -18,7 +18,10 @@
     $(document).mouseup(function (e) {
     var container = $(".hidden-mnu.active");
     if (container.has(e.target).length === 0){
-        container.hide();
+       $(".toggle-mnu-1").removeClass("on");
+      // $("body").toggleClass("fixed");
+      $(".hidden-mnu").removeClass("active");
+      $("body").removeClass("fixed");
     }
 });
   function heightses() {
