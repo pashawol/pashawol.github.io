@@ -102,7 +102,7 @@ $(".head-block__btn").click(function(){
 
     // галерея
   $(".gal").magnificPopup({
-    delegate: 'a',
+    delegate: 'a.gal-link',
     type: 'image',
     closeOnContentClick: false,
     closeBtnInside: false,
@@ -228,8 +228,15 @@ $(".s-prod__link").click(function(){
   });
 
  
- 
- 
+  try {
+        $.browserSelector();
+        if($("html").hasClass("chrome")) {
+            $.smoothScroll();
+        }
+    } catch(err) {
+
+    };
+
 
 });
 
