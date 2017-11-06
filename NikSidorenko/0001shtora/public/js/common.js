@@ -27,6 +27,27 @@
        $(this).siblings().find(".drop").slideUp();
       $(this).find(".drop").slideToggle();
     })
+
+
+var toggMnu = $(".toggle-mnu-1").click(function () {
+    
+    $(".toggle-mnu-1").toggleClass("on");
+    // $("body").toggleClass("fixed");
+    $(".hidden-mnu").toggleClass("active");
+    $("body").toggleClass("fixed");
+    return false;
+  }); 
+
+ // фильтр
+   var toggMnu = $(".s-filter__gum, .s-filter__head-title").click(function () {
+    
+    $(".s-filter__gum").toggleClass("on");
+    $(".s-filter__head-title").fadeToggle(100);
+    // $("body").toggleClass("fixed");
+    $(".s-filter__inner").slideToggle(250);
+     
+  }); 
+
   var $container = $(".plitki "); 
   function mass() {
 
@@ -39,6 +60,14 @@
 
   }  
   mass();
+  $(".s-plitky__btn").click(function(e){
+      e.preventDefault();
+      var $items = $(".s-plitky__col:hidden");
+      $items.addClass("on");
+    // append items to grid
+       mass();
+      $(this).hide();
+   })
   function heightses() {
 
     var w = $(window).width();
@@ -225,39 +254,5 @@ $gallery2.find(".slick-arrow").prependTo(".s-rew__arrow-wrap");
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
-  
-    //Replace all SVG images with inline SVG
-  $('img.img-svg').each(function(){
-    var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg');
-
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-  });
-
-
-
-
-  $(".js-form-validate").parsley();
+   
 });
