@@ -363,8 +363,8 @@ $("form").submit(function() { //Change
 
   // настройки https://eonasdan.github.io/bootstrap-datetimepicker/
 // настройки часовой зоны http://momentjs.com/
+ 
 $(".date").datetimepicker({
-
   locale: 'ru-ru',
   
   format: 'DD.MM.YYYY',
@@ -374,8 +374,8 @@ $(".date").datetimepicker({
 },
 icons: {
 
-  time: 'glyphicon glyphicon-time',
-  date: 'glyphicon glyphicon-calendar',
+   time: "fa fa-clock-o",
+    date: "fa fa-calendar",
   up: 'fa fa-chevron-up',
   down: 'fa fa-chevron-down',
   previous: 'fa fa-chevron-left',
@@ -386,5 +386,32 @@ icons: {
 },
 
 });
+$(".time").datetimepicker({
+  locale: 'ru-ru', 
+   format: 'LT',
+   
+   tooltips: {
+     
+    incrementHour: 'Добавить час',
+    pickHour: 'Выбрать время',
+    decrementHour:'На час меньше',
+    incrementMinute: 'Добавить минуты',
+    pickMinute: 'Выбрать минуты',
+    decrementMinute:'Уменьшить минуты',
+ 
+},
+icons: {
 
+   time: "fa fa-clock-o",
+    date: "fa fa-calendar",
+  up: 'fa fa-chevron-up',
+  down: 'fa fa-chevron-down',
+  previous: 'fa fa-chevron-left',
+  next: 'fa fa-chevron-right',
+  today: 'glyphicon glyphicon-screenshot',
+  clear: 'fa fa-calendar-times',
+  close: 'fa fa-times'
+},
+ 
+});
 });
