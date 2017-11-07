@@ -233,8 +233,88 @@ $gallery2.find(".slick-arrow").prependTo(".s-rew__arrow-wrap");
   $('.popup-with-move-anim').click(function(){
     $(".modal-form .form-wrap__title").html($(this).data("title"))
   })
+
+  var $gal3= $('.s-gal__slider, .rew-page__slider');
+   $('.s-gal__slider').slick({
+  slidesToShow: 2,
+  slidesToScroll: 1, 
+  arrows: true,  
+  prevArrow: arrl2,
+  nextArrow: arrr2,
+  asNavFor: '  .slider-nav',
+  infinite: false,
+  loop: false,  
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: { 
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+  $('.rew-page__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1, 
+  arrows: true,  
+  prevArrow: arrl2,
+  nextArrow: arrr2,
+  asNavFor: '  .slider-nav',
+  infinite: false,
+  loop: false,  
+   
+});
+
+    $gal3.on('lazyLoaded', function(event, slick, image, imageSource){
+     image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+ });
+
+$(' .slider-nav').slick({
+  slidesToShow: 7,
+  slidesToScroll: 1,
+  asNavFor: $('.s-gal__slider, .rew-page__slider'),
+  // centerMode: true,
+  focusOnSelect: true,
+  // variableWidth: true,
+  arrows: false,
+  infinite: false,
+  loop: false,  
+   responsive: [
+    {
+      breakpoint: 991,
+      settings: { 
+        slidesToShow: 6
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: { 
+        slidesToShow: 5
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: { 
+        slidesToShow: 1,
+        variableWidth: true,
+      }
+    },
+    {
+      breakpoint: 370,
+      settings: { 
+        slidesToShow: 2,
+        variableWidth: false,
+      }
+    },
+
+  ]
+});
+   $gal3.find(".slick-arrow").prependTo(".slider-foot-inner");
     // галерея
-  $(".gal").magnificPopup({
+
+   $(".gal").each(function(){
+
+  $(this).magnificPopup({
     delegate: 'a',
     type: 'image',
     closeOnContentClick: false,
@@ -250,7 +330,9 @@ $gallery2.find(".slick-arrow").prependTo(".s-rew__arrow-wrap");
       enabled: true
     }
   });
+
  
+   } )
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
