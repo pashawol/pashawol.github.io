@@ -128,24 +128,6 @@ $( window ).on( "load", function() {
     });
 
  
-// табы
-$(function() {
-var tab = ('tabs');
-// $(' .' + tab + '__caption   .' + tab + '__btn:first-child  ').addClass('active')
- // $('.' + tab + '__content:first-child ').addClass("active");
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
-
-  $(this)
-    .addClass('active').addClass('current').siblings().removeClass('active')
-    .closest('.' + tab + '').find('.' + tab + '__content').hide().removeClass('active')
-    .eq($(this).index()).fadeIn().addClass('active');
-   
-    // $('.slider-small, .slider-big').slick('unslick');
-    //  section_slider();
-    return false;
-});
-});
-
 
 var   arrl2 = (' <div class="l"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="11" viewBox="0 0 38 11"><defs><path id="arr" d="M730 664v-2h30v2zm30 3l5-4-5-4z"/></defs><g transform="translate(-728 -657)"><use fill="#808285" xlink:href="#arr"/></g></svg></div>'),
       arrr2 =(' <div class="r"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="11" viewBox="0 0 38 11"><defs><path id="arr" d="M730 664v-2h30v2zm30 3l5-4-5-4z"/></defs><g transform="translate(-728 -657)"><use fill="#808285" xlink:href="#arr"/></g></svg></div> ')
@@ -157,7 +139,7 @@ var slideCount = null;
  $gallery.slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: false,
+    dots: true,
     speed: 450,
     infinite: true,
     loop: true,  
@@ -165,27 +147,7 @@ var slideCount = null;
     prevArrow: arrl2,
     nextArrow: arrr2,
     });
-
-
-$gallery.on('lazyLoaded', function(event, slick){
-  slideCount = slick.slideCount;
-  setSlideCount();
-  setCurrentSlideNumber(slick.currentSlide);
-});
-
-$gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  setCurrentSlideNumber(nextSlide);
-});
-
-function setSlideCount() {
-  var $el = $('.slide-count-wrap').find('.total');
-  $el.text(slideCount);
-}
-
-function setCurrentSlideNumber(currentSlide) {
-  var $el = $('.slide-count-wrap').find('.current');
-  $el.text(currentSlide + 1);
-}
+ 
  $gallery.on('lazyLoaded', function(event, slick, image, imageSource){
      image.parent().css('background-image', 'url(' + image.attr('src') + ')');
  });
