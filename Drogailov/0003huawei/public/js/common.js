@@ -87,5 +87,36 @@ $( window ).on( "load", function() {
 
    
 
-  
+ function StatusSelect(){
+
+  var selected = $("select").find('option[selected]');
+  if(selected.attr('id') == 'option-1'){ 
+      $(".block-1").removeClass("d-none")
+      $(".block-2").addClass("d-none")
+    }
+    else if(selected.attr('id') == 'option-2'  ){
+       $(".block-2").removeClass("d-none")
+      $(".block-1").addClass("d-none")
+    }
+   
+
+}
+ $( "select" ).change(function () { 
+    $( "select option:selected" ).each(function() {
+
+      if($(this).attr('id') == 'option-1'){ 
+      $(".block-1").removeClass("d-none")
+      $(".block-2").addClass("d-none")
+    }
+    else {
+       $(".block-2").removeClass("d-none")
+      $(".block-1").addClass("d-none")
+    }
+
+    });
+
+     
+
+  });
+
 });

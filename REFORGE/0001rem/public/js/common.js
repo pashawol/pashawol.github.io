@@ -14,7 +14,15 @@
     $('.hidden-mnu ul li a').on('click', function () {
       $(".hidden-mnu .toggle-mnu").click();
     });
-
+    $(document).mouseup(function (e) {
+    var container = $(".hidden-mnu.active");
+    if (container.has(e.target).length === 0){
+       $(".toggle-mnu-1").removeClass("on");
+      // $("body").toggleClass("fixed");
+      $(".hidden-mnu").removeClass("active");
+      $("body").removeClass("fixed");
+    }
+  })
   function heightses() {
 
     var w = $(window).width();
@@ -63,7 +71,7 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- $(" .top-nav a").click(function () {
+ $(" .line__modal-link").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         
@@ -277,6 +285,65 @@ $('.s-team__slider-sm').slick({
     mainClass: 'my-mfp-zoom-in'
   });
  
+  
+   $(".line__link, .s-contact .popup-with-move-anim").click(function(){
+    $("#m-prod .form-wrap__title").html("Мы вам перезвоним")
+    $("#m-prod .form-wrap__btn").val("перезвоните мне").text("перезвоните мне");
+    $("#m-prod .order").val("Мы вам перезвоним")
+   })
+   
+   $(".tabs__link ").click(function(){
+    $("#m-prod .form-wrap__title").html("Получите смету ремонта уже сегодня")
+    $("#m-prod .form-wrap__btn").val("Получить смету").text("Получить смету");
+    $("#m-prod .order").val("Получить смету");
+    $("#m-prod .order2").val($(this).parents(".tabs").find(".tabs__btn.active").text());
+    $("#m-prod .order3").val($(this).data("title"));
+   })
+
+
+  $(".s-project__rew-link").click(function(){
+    $(".rew-modal__text p").remove();
+    $(this).next().find("p").clone().prependTo(" .rew-modal__text");
+  })
+
+
+  // калькулятор
+  
+  $(".s-calc__btn-yel").click(function(){
+    $("#m-prod .form-wrap__title").html("Рассчитать стоимость ремонта")
+    $("#m-prod .form-wrap__btn").val("Получить рассчет").text("Получить рассчет");
+    $("#m-prod .order").val("Рассчитать стоимость ремонта");
+    $("#m-prod .order2").val($(this).parents(".s-calc").find(".s-calc__btn__btn.active").text());
+    $("#m-prod .order3").val($(this).parents(".s-calc").find(".minus").val() + "м2");  
+    // $("#m-prod .order4").val($(this).parents(".s-calc").find("input:checkbox:checked").val() + ",");  
+    var arr=$('.s-calc input:checkbox:checked').map(function() {return " " + this.value ;}).get();
+    $("#m-prod .order4").val(arr);      
+
+  })
+
+    $(".s-look__btn").click(function(){
+    $("#m-prod .form-wrap__title").html("Закажите экскурсию по нашим объектам")
+    $("#m-prod .form-wrap__btn").val("Заказать экскурсию").text("Заказать экскурсию");
+    $("#m-prod .order").val("Заказать экскурсию")
+   })
+  
+    $(".s-faq__btn").click(function(){
+    $("#m-prod .form-wrap__title").html("Задайте вопрос персональному менеджеру")
+    $("#m-prod .form-wrap__btn").val("Задать вопрос").text("Задать вопрос");
+    $("#m-prod .order").val("Задать вопрос")
+   })
+   
+
+    $(".s-look__btn").click(function(){
+    $("#m-prod .form-wrap__title").html("Закажите экскурсию по нашим объектам")
+    $("#m-prod .form-wrap__btn").val("Заказать экскурсию").text("Заказать экскурсию");
+    $("#m-prod .order").val("Заказать экскурсию")
+   })
+   $(".s-faq__more").click(function(){
+    $(".s-faq__item:hidden").slideDown(150);
+    $(this).hide();
+   })
+
     // галерея
   $(".gal").magnificPopup({
     delegate: 'a',
@@ -350,7 +417,7 @@ $(".s-calc").each(function(){
             return "none" == $(this).css("display") }).slideDown().prev("div").addClass("active") })
 
 
-
+ if ($("div").is("#map1")){
  ymaps.ready(function () {
     var myMap = new ymaps.Map('map1', {
             center: [51.67682134332114,39.246444082451085],
@@ -385,4 +452,5 @@ $(".s-calc").each(function(){
  
     
 });
+}
 });

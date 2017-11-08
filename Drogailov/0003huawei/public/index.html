@@ -23,15 +23,13 @@
       <!-- start HEADER.header-->
       <header class="header"> <a class="toggle-mnu toggle-mnu-1 d-md-none" href="#"><span></span></a>
         <div class="trop main-mnu hidden-mnu d-md-none landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
-          <div class="wrapp-hidden"> 
+          <div class="wrapp-hidden"> <img class="res-i" src="img/logo-1.png" alt=""/>
             <ul class="trop__nav"> 
-              <li class="trop__item"><a class="trop__link" href="#">About us</a>
+              <li class="trop__item"><a class="trop__link" href="#id1">Правила</a>
               </li>
-              <li class="trop__item"><a class="trop__link" href="#"> Our tours</a>
+              <li class="trop__item"><a class="trop__link" href="#id2"> Видео</a>
               </li>
-              <li class="trop__item"><a class="trop__link" href="#">Become a partner</a>
-              </li>
-              <li class="trop__item"><a class="trop__link" href="#">Contact</a>
+              <li class="trop__item"><a class="trop__link" href="#id2">Победители</a>
               </li>
             </ul>
           </div>
@@ -40,19 +38,21 @@
         <!-- start top-nav-->
         <div class="top-nav">
           <div class="container">
-            <ul class="top-nav__nav"> 
-              <li class="top-nav__item d-none d-md-block"><a class="top-nav__link" href="#">About us</a>
-              </li>
-              <li class="top-nav__item d-none d-md-block"><a class="top-nav__link" href="#"> Our tours</a>
-              </li>
-              <li class="top-nav__item">
-                <div class="logo"><img class="res-i" src="img/logo.png" alt=""/></div>
-              </li>
-              <li class="top-nav__item d-none d-md-block"><a class="top-nav__link" href="#">Become a partner</a>
-              </li>
-              <li class="top-nav__item d-none d-md-block"><a class="top-nav__link" href="#">Contact</a>
-              </li>
-            </ul>
+            <div class="row">
+              <div class="col-auto">
+                <div class="logo"><img class="res-i" src="img/logo-1.png" alt=""/></div>
+              </div>
+              <div class="col">
+                <ul class="top-nav__nav"> 
+                  <li class="top-nav__item d-none d-md-block"><a class="top-nav__link" href="#id1">Правила</a>
+                  </li>
+                  <li class="top-nav__item d-none d-md-block"><a class="top-nav__link" href="#id2"> Видео</a>
+                  </li>
+                  <li class="top-nav__item d-none d-md-block"><a class="top-nav__link" href="#id2">Победители</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end top-nav-->
@@ -70,13 +70,13 @@
                 <div class="header-block__sub-t">с 27 ноября по 31 декабря
                 </div>
                 <div class="header-block__img-wrap"><img class="res-i" src="img/header-img.png" alt=""/>
-                </div><a class="header-block__btn btn btn-lg btn-red" href="#">Участвовать</a>
+                </div>
                 <ul class="header-block__list">
-                  <li class="header-block__item">купи смартфон,  планшет или смарт-часы
-                  </li>
-                  <li class="header-block__item">зарегистрируйся на сайте igra-huawei.by
+                  <li class="header-block__item">купи смартфон,  планшет или умные часы
                   </li>
                   <li class="header-block__item">выиграй один  из пяти автомобилей
+                  </li>
+                  <li class="header-block__item"><a class="header-block__btn btn btn-lg btn-red" href="#s-form">Участвовать</a>
                   </li>
                 </ul>
               </div>
@@ -90,7 +90,7 @@
       </div>
       <!-- end header-block-->
       <!-- start section-->
-      <section class="section">
+      <section class="section" id="id1">
         <div class="container">
           <h2>Правила рекламной игры <br/>Huawei. На старте твоих новых возможностей.
             <div class="row"></div>
@@ -133,7 +133,7 @@
               <!-- +e.input-wrap-->
               <div class="form-wrap__input-wrap">
                 <label> <span>Выберите товар</span>
-                  <select class="form-wrap__input" name=" " required="required">
+                  <select class="form-wrap__input" name=" " required="required" onChange="StatusSelect();">
                     <option disabled="disabled" selected="selected">Выберите товар</option>
                     <option value="Часы" id="option-1"> Часы</option>
                     <option value="Телефон" id="option-2">Телефон</option>
@@ -151,11 +151,20 @@
                 </label>
               </div>
               <!-- +e.input-wrap-->
-              <div class="form-wrap__input-wrap">
-                <label><span>Введите ИМЕИ</span><input class="form-wrap__input" type="text" placeholder="Введите ИМЕИ" required="required"/>
-                </label>
+              <div class="block-1">
+                <div class="form-wrap__input-wrap">
+                  <label><span>Введите ИМЕИ</span><input class="form-wrap__input" type="text" placeholder="Введите ИМЕИ" required="required"/>
+                  </label>
+                </div>
+                <!-- +e.input-wrap-->
               </div>
-              <!-- +e.input-wrap-->
+              <div class="block-2 d-none">
+                <div class="form-wrap__input-wrap">
+                  <label><span>Введите Серийный номер</span><input class="form-wrap__input" type="text" placeholder="Введите Серийный номер" required="required"/>
+                  </label>
+                </div>
+                <!-- +e.input-wrap-->
+              </div>
               <div class="form-wrap__input-wrap">Прикрепить фото чека<input class="form-wrap__input" type="file"/>
               </div>
               <div class="form-wrap__input-wrap">
@@ -172,7 +181,7 @@
       </section>
       <!-- end s-form-->
       <!-- start section-->
-      <section class="section">
+      <section class="section" id="id2">
         <div class="container">
           <h2>Правила рекламной игры <br/>Huawei. На старте твоих новых возможностей.
             <div class="row"></div>
