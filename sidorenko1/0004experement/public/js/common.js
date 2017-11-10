@@ -140,6 +140,9 @@ var    arrl2 = (' <div class="l"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:
  $('.head-carusel, .s-add__carusel').slick({
               slidesToShow: 1,
               slidesToScroll: 1,
+               autoplay: true,
+              autoplaySpeed: 2000,
+              pauseOnDotsHover: true,
               dots: true,
               speed: 450,
               infinite: true,
@@ -161,12 +164,16 @@ var    arrl2 = (' <div class="l"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:
                 ]
       });
 
+
   // карусель
  $('.s-prog__carusel').slick({
               slidesToShow: 1,
               slidesToScroll: 1,
               dots: true,
               speed: 450,
+               autoplay: true,
+              autoplaySpeed: 2000,
+              pauseOnDotsHover: true,
               infinite: true,
               loop: true,  
               arrows: true, 
@@ -187,6 +194,17 @@ var    arrl2 = (' <div class="l"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:
                 ]
       });
 
+
+  var sl = $(".head-carusel, .s-add__carusel, .s-prog__carusel");
+ $(".slick-arrow").hover(
+  
+  function(){
+      sl.slick('slickPause');
+  },
+function(){
+      sl.slick('slickPlay');
+  }
+  )
  $(".s-prog__btn-outline-danger").click(function(){
 
     $(".s-prog #slick-slide20").click();
@@ -235,7 +253,16 @@ var    arrl2 = (' <div class="l"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:
     
     midClick: true,
     removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
+    mainClass: 'my-mfp-zoom-in',
+    callbacks: {
+    open: function() {
+       sl.slick('slickPause');
+    },
+    close: function() {
+      sl.slick('slickPlay');
+    }
+    // e.t.c.
+  }
   });
  
     // галерея
