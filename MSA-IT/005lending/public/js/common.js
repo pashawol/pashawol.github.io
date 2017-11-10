@@ -34,7 +34,7 @@
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
     }
-    var fix = $(".top_line")
+    var fix = $("header .top_line")
     var topH=$(".header-block").innerHeight();  
     if($(this).scrollTop() >  topH ){
                     fix.addClass('fixed');
@@ -79,69 +79,14 @@ $( window ).on( "load", function() {
     });
 
 
-// или
-// Cache selectors
-var lastId,
-    topMenu = $(" .top_line ul"),
-    topMenuHeight = topMenu.outerHeight()+15,
-    // All list items
-    menuItems = topMenu.find("a.top_line__nav-link"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
+$(" .top_line__nav-link").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        
+            $('html, body').animate({ scrollTop: destination }, 1100);
+        
+        return false; 
     });
-
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({ 
-      scrollTop: offsetTop
-  }, 1600);
-  e.preventDefault();
-});
-
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
-   
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter(".top_line__nav-link[href='#"+id+"']").parent().addClass("active");
-   }                   
-});
-// табы
-$(function() {
-var tab = ('tabs');
-// $(' .' + tab + '__caption   .' + tab + '__btn:first-child  ').addClass('active')
- // $('.' + tab + '__content:first-child ').addClass("active");
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
-
-  $(this)
-    .addClass('active').addClass('current').siblings().removeClass('active')
-    .closest('.' + tab + '').find('.' + tab + '__content').hide().removeClass('active')
-    .eq($(this).index()).fadeIn().addClass('active');
-   
-    // $('.slider-small, .slider-big').slick('unslick');
-    //  section_slider();
-    return false;
-});
-});
 
  
        // модальное окно
