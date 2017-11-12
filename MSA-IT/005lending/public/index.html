@@ -6,16 +6,12 @@
     <meta name="description" content="о чем страница">
     <meta name="viewport" content="width=device-width">
     <meta property="og:image" content="path/to/image.jpg">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
     <!-- Chrome, Firefox OS and Opera-->
-    <meta name="theme-color" content="#3361d8">
+    <meta name="theme-color" content="#3eb9fe">
     <!-- Windows Phone-->
-    <meta name="msapplication-navbutton-color" content="#3361d8">
+    <meta name="msapplication-navbutton-color" content="#3eb9fe">
     <!-- iOS Safari-->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#3361d8">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3eb9fe">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -122,8 +118,7 @@
             <form method="post" action="action.php" data-parsley-validate="">
               <input type="hidden" name="project_name" value="Заявка с сайта"/>
               <input class="form_subject" type="hidden" name="form_subject" value="Заявка  с сайта"/>
-              <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
-              <input type="hidden" name="admin_email" value="opt@ecodrift.ru"/>
+              <input class="order" type="hidden" name="Вид формы" value="Вид формы"/>
               <div class="row">
                 <div class="col-md-4 col-12">
                   <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" name="Имя" placeholder="Ваше имя" required="required" pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g" data-parsley-pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g"/>
@@ -442,8 +437,7 @@
                         <form method="post" action="action.php" data-parsley-validate="">
                           <input type="hidden" name="project_name" value="Заявка с сайта"/>
                           <input class="form_subject" type="hidden" name="form_subject" value="Заявка  с сайта"/>
-                          <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
-                          <input type="hidden" name="admin_email" value="opt@ecodrift.ru"/>
+                          <input class="order" type="hidden" name="Вид формы" value="Вид формы"/>
                           <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="email" name="Почта" placeholder="Ваша почта" required="required" data-parsley-type="email"/>
                           </div>
                           <!-- +e.input-wrap-->
@@ -497,8 +491,7 @@
             <form method="post" action="action.php" data-parsley-validate="">
               <input type="hidden" name="project_name" value="Заявка с сайта"/>
               <input class="form_subject" type="hidden" name="form_subject" value="Заявка  с сайта"/>
-              <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
-              <input type="hidden" name="admin_email" value="opt@ecodrift.ru"/>
+              <input class="order" type="hidden" name="Вид формы" value="Вид формы"/>
               <div class="row">
                 <div class="col-md-4 col-12">
                   <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" name="Телефон" placeholder="Телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
@@ -528,89 +521,85 @@
           <h2>готовые виджеты и доработки </h2>
           <div class="row">
                 <div class="s-widget__col col-lg-4 col-sm-6 col-12">
-                  <div class="s-widget__item"><a class="s-widget__img-wrap" href="#"><img class="res-i" src="img/vidj-1.jpg" alt=""/></a>
+                  <div class="s-widget__item"><a class="s-widget__img-wrap popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0"><img class="res-i" src="img/vidj-1.jpg" alt=""/></a>
                     <ul> 
                       <li>- Контроль усвоенных знаний</li>
                       <li>- Обучения руководителей контролю...</li>
                     </ul>
-                    <div class="s-widget__link-wrap"><a class="s-widget__link" href="#">Подробнее →</a>
+                    <div class="s-widget__link-wrap"><a class="s-widget__link popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0">Подробнее →</a>
+                    </div>
+                    <div class="d-none">
+                      <p>Клиенту включается или отключается показ рекламы, e-mail рассылка и уведомления в зависимости от его взаимодействия с вашей компанией и положения в воронке. Так же автоматическое продвижение клиента по воронке в зависимости от его действий (звонок, клик по рекламе, посещение сайта и т.д.)</p>
                     </div>
                   </div>
                 </div>
                 <!-- +e.col.col-lg-4.col-md-6.col-12-->
                 <div class="s-widget__col col-lg-4 col-sm-6 col-12">
-                  <div class="s-widget__item"><a class="s-widget__img-wrap" href="#"><img class="res-i" src="img/vidj-2.jpg" alt=""/></a>
+                  <div class="s-widget__item"><a class="s-widget__img-wrap popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0"><img class="res-i" src="img/vidj-2.jpg" alt=""/></a>
                     <ul> 
                       <li>- Контроль усвоенных знаний</li>
                       <li>- Обучения руководителей контролю...</li>
                     </ul>
-                    <div class="s-widget__link-wrap"><a class="s-widget__link" href="#">Подробнее →</a>
+                    <div class="s-widget__link-wrap"><a class="s-widget__link popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0">Подробнее →</a>
+                    </div>
+                    <div class="d-none">
+                      <p>Клиенту включается или отключается показ рекламы, e-mail рассылка и уведомления в зависимости от его взаимодействия с вашей компанией и положения в воронке. Так же автоматическое продвижение клиента по воронке в зависимости от его действий (звонок, клик по рекламе, посещение сайта и т.д.)</p>
                     </div>
                   </div>
                 </div>
                 <!-- +e.col.col-lg-4.col-md-6.col-12-->
                 <div class="s-widget__col col-lg-4 col-sm-6 col-12">
-                  <div class="s-widget__item"><a class="s-widget__img-wrap" href="#"><img class="res-i" src="img/vidj-3.jpg" alt=""/></a>
+                  <div class="s-widget__item"><a class="s-widget__img-wrap popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0"><img class="res-i" src="img/vidj-3.jpg" alt=""/></a>
                     <ul> 
                       <li>- Контроль усвоенных знаний</li>
                       <li>- Обучения руководителей контролю...</li>
                     </ul>
-                    <div class="s-widget__link-wrap"><a class="s-widget__link" href="#">Подробнее →</a>
+                    <div class="s-widget__link-wrap"><a class="s-widget__link popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0">Подробнее →</a>
+                    </div>
+                    <div class="d-none">
+                      <p>Клиенту включается или отключается показ рекламы, e-mail рассылка и уведомления в зависимости от его взаимодействия с вашей компанией и положения в воронке. Так же автоматическое продвижение клиента по воронке в зависимости от его действий (звонок, клик по рекламе, посещение сайта и т.д.)</p>
                     </div>
                   </div>
                 </div>
                 <!-- +e.col.col-lg-4.col-md-6.col-12-->
                 <div class="s-widget__col col-lg-4 col-sm-6 col-12">
-                  <div class="s-widget__item"><a class="s-widget__img-wrap" href="#"><img class="res-i" src="img/vidj-4.jpg" alt=""/></a>
+                  <div class="s-widget__item"><a class="s-widget__img-wrap popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0"><img class="res-i" src="img/vidj-4.jpg" alt=""/></a>
                     <ul> 
                       <li>- Контроль усвоенных знаний</li>
                       <li>- Обучения руководителей контролю...</li>
                     </ul>
-                    <div class="s-widget__link-wrap"><a class="s-widget__link" href="#">Подробнее →</a>
+                    <div class="s-widget__link-wrap"><a class="s-widget__link popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0">Подробнее →</a>
+                    </div>
+                    <div class="d-none">
+                      <p>Клиенту включается или отключается показ рекламы, e-mail рассылка и уведомления в зависимости от его взаимодействия с вашей компанией и положения в воронке. Так же автоматическое продвижение клиента по воронке в зависимости от его действий (звонок, клик по рекламе, посещение сайта и т.д.)</p>
                     </div>
                   </div>
                 </div>
                 <!-- +e.col.col-lg-4.col-md-6.col-12-->
                 <div class="s-widget__col col-lg-4 col-sm-6 col-12">
-                  <div class="s-widget__item"><a class="s-widget__img-wrap" href="#"><img class="res-i" src="img/vidj-5.jpg" alt=""/></a>
+                  <div class="s-widget__item"><a class="s-widget__img-wrap popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0"><img class="res-i" src="img/vidj-5.jpg" alt=""/></a>
                     <ul> 
                       <li>- Контроль усвоенных знаний</li>
                       <li>- Обучения руководителей контролю...</li>
                     </ul>
-                    <div class="s-widget__link-wrap"><a class="s-widget__link" href="#">Подробнее →</a>
+                    <div class="s-widget__link-wrap"><a class="s-widget__link popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0">Подробнее →</a>
+                    </div>
+                    <div class="d-none">
+                      <p>Клиенту включается или отключается показ рекламы, e-mail рассылка и уведомления в зависимости от его взаимодействия с вашей компанией и положения в воронке. Так же автоматическое продвижение клиента по воронке в зависимости от его действий (звонок, клик по рекламе, посещение сайта и т.д.)</p>
                     </div>
                   </div>
                 </div>
                 <!-- +e.col.col-lg-4.col-md-6.col-12-->
                 <div class="s-widget__col col-lg-4 col-sm-6 col-12">
-                  <div class="s-widget__item"><a class="s-widget__img-wrap" href="#"><img class="res-i" src="img/vidj-6.jpg" alt=""/></a>
+                  <div class="s-widget__item"><a class="s-widget__img-wrap popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0"><img class="res-i" src="img/vidj-6.jpg" alt=""/></a>
                     <ul> 
                       <li>- Контроль усвоенных знаний</li>
                       <li>- Обучения руководителей контролю...</li>
                     </ul>
-                    <div class="s-widget__link-wrap"><a class="s-widget__link" href="#">Подробнее →</a>
+                    <div class="s-widget__link-wrap"><a class="s-widget__link popup-with-move-anim" href="#modal" data-title=" Учет рабочего времени" data-iframe="4_HLis3g-E0">Подробнее →</a>
                     </div>
-                  </div>
-                </div>
-                <!-- +e.col.col-lg-4.col-md-6.col-12-->
-                <div class="s-widget__col col-lg-4 col-sm-6 col-12">
-                  <div class="s-widget__item"><a class="s-widget__img-wrap" href="#"><img class="res-i" src="img/vidj-6.jpg" alt=""/></a>
-                    <ul> 
-                      <li>- Контроль усвоенных знаний</li>
-                      <li>- Обучения руководителей контролю...</li>
-                    </ul>
-                    <div class="s-widget__link-wrap"><a class="s-widget__link" href="#">Подробнее →</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- +e.col.col-lg-4.col-md-6.col-12-->
-                <div class="s-widget__col col-lg-4 col-sm-6 col-12">
-                  <div class="s-widget__item"><a class="s-widget__img-wrap" href="#"><img class="res-i" src="img/vidj-6.jpg" alt=""/></a>
-                    <ul> 
-                      <li>- Контроль усвоенных знаний</li>
-                      <li>- Обучения руководителей контролю...</li>
-                    </ul>
-                    <div class="s-widget__link-wrap"><a class="s-widget__link" href="#">Подробнее →</a>
+                    <div class="d-none">
+                      <p>Клиенту включается или отключается показ рекламы, e-mail рассылка и уведомления в зависимости от его взаимодействия с вашей компанией и положения в воронке. Так же автоматическое продвижение клиента по воронке в зависимости от его действий (звонок, клик по рекламе, посещение сайта и т.д.)</p>
                     </div>
                   </div>
                 </div>
@@ -737,8 +726,7 @@
             <form method="post" action="action.php" data-parsley-validate="">
               <input type="hidden" name="project_name" value="Заявка с сайта"/>
               <input class="form_subject" type="hidden" name="form_subject" value="Заявка  с сайта"/>
-              <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
-              <input type="hidden" name="admin_email" value="opt@ecodrift.ru"/>
+              <input class="order" type="hidden" name="Вид формы" value="Вид формы"/>
               <div class="row">
                 <div class="col-md-4 col-12">
                   <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" name="Имя" placeholder="Ваше имя" required="required" pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g" data-parsley-pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g"/>
@@ -780,8 +768,7 @@
             <form method="post" action="action.php" data-parsley-validate="">
               <input type="hidden" name="project_name" value="Заявка с сайта"/>
               <input class="form_subject" type="hidden" name="form_subject" value="Заявка  с сайта"/>
-              <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
-              <input type="hidden" name="admin_email" value="opt@ecodrift.ru"/>
+              <input class="order" type="hidden" name="Вид формы" value="Вид формы"/>
               <div class="row">
                 <div class="col-xl-4 col-12">
                   <div class="form-wrap__text">Целый месяц (28 дней) тестового периода!
@@ -825,8 +812,7 @@
                       <form method="post" action="action.php" data-parsley-validate="">
                         <input type="hidden" name="project_name" value="Заявка с сайта"/>
                         <input class="form_subject" type="hidden" name="form_subject" value="Заявка  с сайта"/>
-                        <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
-                        <input type="hidden" name="admin_email" value="opt@ecodrift.ru"/>
+                        <input class="order" type="hidden" name="Вид формы" value="Вид формы"/>
                         <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="email" name="Почта" placeholder="Ваша почта" required="required" data-parsley-type="email"/>
                         </div>
                         <!-- +e.input-wrap-->
@@ -918,7 +904,7 @@
         <div class="top_line">
           <div class="container">
             <div class="row">
-              <div class="col-lg-4 col-md col-sm-12"><a class="logo" href=""><span class="logo__img-wrap"><img class="img-svg" src="img/svg/logo.svg" alt=""/></span><span class="logo__text">Разработка сайтов  Автоматизация продаж</span></a>
+              <div class="col-lg-4 col-md col-sm-12"><a class="logo" href=""><span class="logo__img-wrap"><img class="img-svg" src="img/svg/logo.svg" alt=""/></span><span class="logo__text d-md-none d-lg-block">Разработка сайтов  Автоматизация продаж</span></a>
               </div>
               <div class="col"> 
                 <ul class="top_line__nav">
@@ -959,6 +945,52 @@
           </div>
         </div>
       </footer>
+      <div class="modal zoom-anim-dialog mfp-hide" id="modal">
+        <div class="container">
+          <h4 class="modal__title">Учет рабочего времени
+          </h4>
+        </div>
+        <div class="modal__block gray-wrap">
+          <div class="container">
+            <div class="popup-modal-dismiss"></div>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div class="modal__video-wrap">
+                  <div class="pretty-embed">
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-12">
+                <div class="form-wrap">
+                  <h5 class="form-wrap__title"> узнать стоимость
+                  </h5>
+                  <form method="post" action="action.php" data-parsley-validate="">
+                    <input type="hidden" name="project_name" value="Заявка с сайта"/>
+                    <input class="form_subject" type="hidden" name="form_subject" value="Заявка  с сайта"/>
+                    <input class="order" type="hidden" name="Вид формы" value="Вид формы"/> 
+                    <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" name="Имя" placeholder="Ваше имя" required="required" pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g" data-parsley-pattern="/(-?([a-zA-Z-А-Яа-яЁё].s)?([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+)s?)+([a-zA-Z-А-Яа-яЁё]'([a-zA-Z-А-Яа-яЁё][a-zA-Z-А-Яа-яЁё]+))?/g"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" name="Телефон" placeholder="Телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="email" name="Почта" placeholder="Ваша почта" required="required" data-parsley-type="email"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__bnt-wrap">
+                      <button class="form-wrap__btn btn btn-lg btn-yel">Отправить
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="modal__text">
+              <p> </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/>
         <h3>Заявка принята</h3><br/>
         <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>

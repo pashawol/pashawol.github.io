@@ -29,14 +29,14 @@
     })
 
 
-var toggMnu = $(".toggle-mnu-1").click(function () {
+// var toggMnu = $(".toggle-mnu-1").click(function () {
     
-    $(".toggle-mnu-1").toggleClass("on");
-    // $("body").toggleClass("fixed");
-    $(".hidden-mnu").toggleClass("active");
-    $("body").toggleClass("fixed");
-    return false;
-  }); 
+//     $(".toggle-mnu-1").toggleClass("on");
+//     // $("body").toggleClass("fixed");
+//     $(".hidden-mnu").toggleClass("active");
+//     $("body").toggleClass("fixed");
+//     return false;
+//   }); 
 
  // фильтр
    var toggMnu = $(".s-filter__gum, .s-filter__head-title").click(function () {
@@ -167,11 +167,7 @@ var $gallery2 = $('.s-rew__slider');
     prevArrow: arrl2,
     nextArrow: arrr2,
     });
-    $gallery.on('lazyLoaded', function(event, slick){
-  slideCount = slick.slideCount;
-  setSlideCount();
-  setCurrentSlideNumber(slick.currentSlide);
-}); 
+   
 $gallery2.find(".slick-arrow").prependTo(".s-rew__arrow-wrap");
  
 

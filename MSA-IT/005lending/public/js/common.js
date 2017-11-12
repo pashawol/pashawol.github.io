@@ -106,23 +106,11 @@ $(" .top_line__nav-link").click(function () {
     mainClass: 'my-mfp-zoom-in'
   });
  
-    // галерея
-  $(".gal").magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    closeOnContentClick: false,
-    closeBtnInside: false,
-    mainClass: 'mfp-with-zoom mfp-img-mobile',
-    image: {
-      verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
-    },
-    gallery: {
-      enabled: true
-    }
+ $(document).on('click', '.popup-modal-dismiss', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
   });
+ 
  // форма
 $("form").submit(function() { //Change
     var th = $(this);
@@ -130,9 +118,15 @@ $("form").submit(function() { //Change
       type: "POST",
       url: $("form").attr("action"), //Change
       data: th.serialize()
-    }).done(function() {
-          $.magnificPopup.close();
-        window.location.replace("/thanks.html");
+    }).success(function() {
+          // $.magnificPopup.close();
+            $.magnificPopup.open({
+        items: {
+          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
+          type: 'inline'
+        }
+      }) 
+        // window.location.replace("/thanks.html");
        setTimeout(function() {
         // Done Functions
         th.trigger("reset");
@@ -176,23 +170,41 @@ $("form").submit(function() { //Change
 
   });
 
+if($(".s-widget__col").length <7) {
+     $(".s-widget__btn").hide();
+}
+ $(".s-widget__btn").click(function(e){
+    e.preventDefault();
+    $(".s-widget__col:hidden").slideDown();
+    $(this).fadeOut();
+     
+   })
+   $(".s-widget .popup-with-move-anim").click(function(){
 
-  // кастомный инпут файл 
+      var th= $(this),
+          thp = th.parents(".s-widget__item");
+        // $(thp).find(".modal-vidjet__modal-title").clone().prependTo()
+        $("#modal .modal__title").text(th.data("title"));
+        // $("#modal .form-control-large").text(th.data("title"))
+        $("#modal .order").attr("name","Узнать стоимость").val($(this).data("title"));
+        $("#modal .modal__text p ").text( thp.find(".d-none  p").text());
+        $("#modal .modal__video-wrap .pretty-embed__bg, #modal   iframe").remove();
+        $("#modal .modal__video-wrap .pretty-embed")
+        .html('<div class="pretty-embed__bg on" data-src='+ th.data("iframe") +' style="background-image: url(http://img.youtube.com/vi/'  + th.data("iframe")+ '/0.jpg)" ></div><iframe  allowfullscreen></iframe>');
+          
+        // $(thp).find(".modal-vidjet__modal-title").clone().prependTo()
+   })
  
-  var file = $(".add-file input[type=file]");
-  file.change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         var name = $(".add-file__filename  ");
-       name.text(filename);
-  
-    }); 
   $(".pretty-embed__bg").each(function(){ 
     // загрузка фона видео
   $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
   // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
+   $(".pretty-embed").on('click', '.pretty-embed__bg', function(){
+    $(this).removeClass("on").parent().find("iframe")
     .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
    })
    })
+
+
+
 });
