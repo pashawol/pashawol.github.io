@@ -68,21 +68,24 @@
     }
     var topH=$(".header-slider, .top_line-page").innerHeight();  
     if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed');
+                    $('.top-nav, .toggle-mnu-1  ').addClass('fixed');
                     
                 }
                 else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed');
+                    $('.top-nav, .toggle-mnu-1  ').removeClass('fixed');
                    
                 }
     $(window).scroll(function(){
                 if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed'); 
+                    $('.top-nav, .toggle-mnu-1  ').addClass('fixed'); 
                 }
                 else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed'); 
+                    $('.top-nav, .toggle-mnu-1  ').removeClass('fixed'); 
                 }
             });
+
+
+
        // конец добавил 
   }
 
