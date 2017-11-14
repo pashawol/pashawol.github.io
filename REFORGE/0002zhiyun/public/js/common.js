@@ -209,7 +209,7 @@ $(".s-prod__link").click(function(){
 
 
  
-  $('.js-form-validate').submit( function() {
+  $('form').submit( function() {
    var th = $(this);
     $.ajax({
       type: "POST",
