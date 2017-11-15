@@ -34,8 +34,11 @@
     $(".top_line__catalog-inner").slideToggle(); 
     return false;
   });
-
-
+ var w = $(window).width();
+  if (w>768){
+        $(".top_line__gum").addClass("on");
+        $(".top_line__catalog-inner").show(); 
+    }
 
   function heightses() {
 
@@ -43,7 +46,11 @@
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
    //
     
-
+    
+    if (w<768) {
+      $(".top_line__gum").removeClass("on");
+        $(".top_line__catalog-inner").hide(); 
+    }
     // скрывает моб меню 
     if (w>991){
        $(".toggle-mnu-1").removeClass("on");
