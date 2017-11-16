@@ -15,13 +15,13 @@
       $(".hidden-mnu .toggle-mnu").click();
     });
     $(document).mouseup(function (e) {
-    var container = $(".hidden-mnu.active, .top_line__catalog");
+    var container = $(".hidden-mnu.active ");
     if (container.has(e.target).length === 0){
-       $(".toggle-mnu-1 , .top_line__gum").removeClass("on");
+       $(".toggle-mnu-1  ").removeClass("on");
       // $("body").toggleClass("fixed");
       $(".hidden-mnu").removeClass("active");
       $("body").removeClass("fixed");
-    $(".top_line__catalog-inner").slideUp(); 
+    // $(".top_line__catalog-inner").slideUp(); 
     }
     });
 
