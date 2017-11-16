@@ -187,7 +187,10 @@ if($(".s-widget__col").length <7) {
         $("#modal .modal__title").text(th.data("title"));
         // $("#modal .form-control-large").text(th.data("title"))
         $("#modal .order").attr("name","Узнать стоимость").val($(this).data("title"));
-        $("#modal .modal__text p ").text( thp.find(".d-none  p").text());
+
+        $("#modal .modal__text .copy-to-modal").remove();
+        thp.find(".copy-to-modal").clone().prependTo("#modal .modal__text");
+
         $("#modal .modal__video-wrap .pretty-embed__bg, #modal   iframe").remove();
         $("#modal .modal__video-wrap .pretty-embed")
         .html('<div class="pretty-embed__bg on" data-src='+ th.data("iframe") +' style="background-image: url(http://img.youtube.com/vi/'  + th.data("iframe")+ '/0.jpg)" ></div><iframe  allowfullscreen></iframe>');

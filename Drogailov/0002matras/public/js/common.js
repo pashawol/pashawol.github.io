@@ -35,7 +35,7 @@
     return false;
   });
  var w = $(window).width();
-  if (w>768){
+  if (w>991){
         $(".top_line__gum").addClass("on");
         $(".top_line__catalog-inner").show(); 
     }
@@ -47,7 +47,7 @@
    //
     
     
-    if (w<768) {
+    if (w<991) {
       $(".top_line__gum").removeClass("on");
         $(".top_line__catalog-inner").hide(); 
     }
