@@ -28,9 +28,9 @@
       $(this).next( ".drop").slideToggle();
        // return false;
     })
-  $(".drop__link ").click(function(e){
+  $(".drop__link, .aside-nav__link ").click(function(e){
     e.preventDefault();
-       $(this).parent().siblings().find(".drop-sub").slideUp();
+       // $(this).parent().siblings().find(".drop-sub").slideUp();
       $(this).next( ".drop-sub").slideToggle();
        // return false;
 
