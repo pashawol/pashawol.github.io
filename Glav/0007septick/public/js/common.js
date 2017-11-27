@@ -38,7 +38,7 @@
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
     }
-    var topH=$("header ").innerHeight();  
+    var topH=$(".top_line").innerHeight();  
     if($(this).scrollTop()>topH){
                     $('.top-nav  ').addClass('fixed');
                     
