@@ -245,19 +245,52 @@ var arrl = (' <div class="l"><svg   xmlns:svg="http://www.w3.org/2000/svg" xmlns
   
  
  
- $(".s-treners__carusel-js").flipster({
-    style: 'flat',
-    spacing: -0.38,
-    loop: true,
-    buttons: true,
-    scrollwheel: false,
-    // buttonPrev: arrl2,
-    // [text|html]
-    // Changes the text for the Previous button
+ // $(".s-treners__carusel-js").flipster({
+ //    style: 'flat',
+ //    spacing: -0.38,
+ //    loop: true,
+ //    buttons: true,
+ //    scrollwheel: false,
+ //    // buttonPrev: arrl2,
+ //    // [text|html]
+ //    // Changes the text for the Previous button
 
-    // buttonNext: arrr2,
- });
+ //    // buttonNext: arrr2,
+ // });
+var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      loop: true,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      navigation: {
+        nextEl: '.flipster__button--prev',
+        prevEl: '.flipster__button--next',
+      },
+    });
 
+ // var swiper = new Swiper('.swiper-container', {
+ //      slidesPerView: 3,
+ //      spaceBetween: 30,
+ //      slidesPerGroup: 3,
+ //      loop: true,
+ //      loopFillGroupWithBlank: true,
+ //      pagination: {
+ //        el: '.swiper-pagination',
+ //        clickable: true,
+ //      },
+ //      navigation: {
+ //        nextEl: '.swiper-button-next',
+ //        prevEl: '.swiper-button-prev',
+ //      },
+ //    });
 // http://parsleyjs.org/doc/index.html#installation-localization
 
 
