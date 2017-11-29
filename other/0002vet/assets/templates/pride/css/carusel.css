@@ -1,0 +1,59 @@
+
+.personal_gallery_carusel .jcarousel-direction-rtl {direction: rtl;}
+.personal_gallery_carusel .jcarousel-container-horizontal {
+    width: 660px; 
+    padding: 0px 40px 0px 40px;
+    margin-left: 0px;
+}
+.personal_gallery_carusel .jcarousel-clip {overflow: hidden;}
+.personal_gallery_carusel .jcarousel-clip-horizontal {width:  928px; margin-left: 40px;}
+.personal_gallery_carusel .jcarousel-item {
+    width: 175px;
+    height: 275px;
+    overflow-y: hidden;
+    padding: 0 75px 0 0;
+}
+.personal_gallery_carusel .jcarousel-item-horizontal {
+    /*margin: 6px 0 0 2px; 
+    text-align: center;*/
+}
+.personal_gallery_carusel .jcarousel-direction-rtl .jcarousel-item-horizontal {margin-left: 0px; margin-right: 0;}
+.personal_gallery_carusel .jcarousel-next-horizontal {
+    position: absolute; 
+    top: 110px; 
+    right: 0px; 
+    cursor: pointer; 
+    background: url(../images/personal_right_arrow.png) no-repeat;
+    width: 18px; 
+    height: 35px; 
+}
+.personal_gallery_carusel .jcarousel-next-disabled-horizontal,
+.personal_gallery_carusel .jcarousel-next-disabled-horizontal:hover,
+.personal_gallery_carusel .jcarousel-next-disabled-horizontal:focus,
+.personal_gallery_carusel .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+    color: #333333;
+    background: url(../images/personal_right_arrow.png) no-repeat;
+    width: 18px; 
+    height: 35px; 
+    text-decoration: none;
+}
+.personal_gallery_carusel .jcarousel-prev-horizontal {
+    position: absolute; 
+    top: 110px; 
+    left: 0px; 
+    width: 18px; 
+    height: 35px; 
+    cursor: pointer; 
+    background: url(../images/personal_left_arrow.png) no-repeat;
+}
+.personal_gallery_carusel .jcarousel-prev-disabled-horizontal,
+.personal_gallery_carusel .jcarousel-prev-disabled-horizontal:hover,
+.personal_gallery_carusel .jcarousel-prev-disabled-horizontal:focus,
+.personal_gallery_carusel .jcarousel-prev-disabled-horizontal:active {
+    color: #333333;
+    background: url(../images/personal_left_arrow.png) no-repeat;
+    width: 18px; 
+    height: 35px; 
+    cursor: pointer; 
+}
