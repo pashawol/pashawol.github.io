@@ -271,8 +271,8 @@ var swiper = new Swiper('.swiper-container', {
         slideShadows : true,
       },
       navigation: {
-        nextEl: '.flipster__button--prev',
-        prevEl: '.flipster__button--next',
+        nextEl: '.flipster__button--next',
+        prevEl: '.flipster__button--prev',
       },
     });
 
