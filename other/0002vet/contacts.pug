@@ -1,0 +1,513 @@
+doctype html
+html(lang='ru')
+  // Mirrored from oncovet.ru/contacts by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Nov 2017 15:04:30 GMT
+  // Added by HTTrack
+  meta(http-equiv='content-type', content='text/html;charset=UTF-8')
+  // /Added by HTTrack
+  head
+    meta(name='google-site-verification', content='GBX1bVPWQQfOVhpzzVxw9qpsljxEAYDMkyFD9_3lTms')
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    title Ветеринарная клиника Приморский район - Санкт-Петербург
+    meta(name='keywords', content='Ветеринарная клиника Приморский район, ветклиника Приморский район')
+    meta(name='robots', content='noyaca')
+    meta(name='description', content='Ветеринарный центр Прайд расположился в самом центре Приморского района  - на улице Уточкина, в 5 минутах ходьбы от станции метро Комендантский проспект.')
+    base
+    link(rel='shortcut icon', href='assets/templates/pride/images/favicon.ico', type='image/x-icon')
+    meta(name='format-detection', content='telephone=no')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+    //if IE
+      link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/ie.css')
+    //if IE 9
+      link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/ie9.css')
+    //if IE 8
+      link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/ie8.css')
+    //if IE 7
+      link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/ie7.css')
+    link(rel='stylesheet', href='assets/templates/pride/css/style.css')
+    link(rel='stylesheet', href='css/style.css')
+  body
+    #all_screen
+      .top-pay
+        .container
+          a(href='pay.html') Оплата онлайн
+      .header
+        .container
+          //
+            <div class="mobile-block">
+            </div>
+          .logo
+            a(href='index.html')
+              .logo_img
+                img(src='assets/templates/pride/images/logo.jpg', alt='Прайд')
+              .logo_text
+                .logo_name Городской ветеринарный Онкологический центр «ПРАЙД»
+                .logo_description Европейское общество ветеринарных онкологов (ESVONC)
+          .header_center
+            .docto_home
+              a(href='vetvrach-na-dom.html') Вызов врача на дом
+            .callback_link
+              a.popup Заказать звонок
+            .question_link
+              a.popup7 Задать вопрос
+            .social_icons
+              .social_icons_wrap
+                a(href='https://plus.google.com/+OncovetRu/about?hl=ru&gl=ru', target='_blank')
+                  .google_link
+                a(href='http://vk.com/club193943', target='_blank')
+                  .vk_link
+                a(href='https://www.facebook.com/oncovet.ru/', target='_blank')
+                  .fb_link
+                a(href='https://www.instagram.com/oncovet.ru/', target='_blank')
+                  .insta_link
+          .header_right
+            .header_right_top
+              a(href='tel:+78123002978')
+                span(style="font-size: 27px; color: #1fb9e9; font-family: 'Idealist Sans Light';")
+                  span.ya-phone +7 (812) 300-29-78
+              p ул. Уточкина, д. 3, к. 2
+            .header_right_bot
+              p
+                span(style='color: #d03131; font-size: 15px;') круглосуточно
+                br
+                span(style='font-size: 11px;') без перерывов и выходных
+          .clear
+        .popup_form_wrap.callback_form_wrap
+          .form_order.popup_form
+            .popup_form_content
+              .popup_title
+                p Заказ звонка
+              .popup_intro
+                p Заполните эту простую форму и мы перезвоним Вам
+              #questionForm_header.forms_wrapper
+                form#frm1.zayavka_form_header(action='https://oncovet.ru/form1', method='post')
+                  input(type='text', name='lastname', value='')
+                  fieldset
+                    .callback_input_left
+                      input(type='text', name='phone_header', placeholder='Телефон', onfocus="this.placeholder=''", onblur="if (this.value==''){this.placeholder='Телефон'}", value='')
+                      input(type='text', name='time_header', placeholder='Удобное время для звонка', onfocus="this.placeholder=''", onblur="if (this.value==''){this.placeholder='Удобное время для звонка'}", value='')
+                      .error
+                      .clear
+                      label.required(for='registration_form_rules', style='font-weight: normal;cursor: pointer;')
+                        input#registration_form_rules(type='checkbox', name='registration_form[rules]', required='required', align_with_widget='1', style='width: auto;margin: 10px;', value='1')
+                        .registration(style='float: right;margin-right: 130px;margin-top: 13px;') Я согласен на обработку моих персональных данных
+                      .callback_required_text_wrap
+                        .callback_required_text
+                          p все поля обязательны для заполнения
+                        .zayavka_submit
+                          input.zayavka_submit(type='submit', value='Отправить запрос')
+                    .clear
+                  input(type='hidden', name='formid', value='frm1')
+              span.close.callback_close Закрыть
+          .form_order.popup_form7
+            .popup_form_content
+              .popup_title
+                p Задать вопрос
+              .popup_intro
+                p Заполните эту простую форму и мы ответим Вам в ближайшее время
+              #questionForm_header7.forms_wrapper
+                form#frm2.zayavka_form_header(action='https://oncovet.ru/form2', method='post')
+                  input(type='text', name='lastname', value='')
+                  fieldset
+                    .callback_input_left(style='width: 100%;')
+                      input(style='width: 210px;', type='text', name='name', placeholder='Ваше имя', onfocus="this.placeholder=''", onblur="if (this.value==''){this.placeholder='Ваше имя'}", value='')
+                      input(style='margin-right: 0; width: 264px;', type='text', name='email', placeholder='Ваш E-mail ', onfocus="this.placeholder=''", onblur="if (this.value==''){this.placeholder='Ваш E-mail'}", value='')
+                      textarea(name='text', placeholder='Ваш вопрос', onfocus="this.placeholder=''", onblur="if (this.value==''){this.placeholder='Ваш вопрос'}")
+                      .error
+                      .clear
+                      label.required(for='registration_form_rules', style='font-weight: normal;cursor: pointer;')
+                        input#registration_form_rules(type='checkbox', name='registration_form[rules]', required='required', align_with_widget='1', style='width: auto;margin: 10px;', value='1')
+                        .registration(style='float: right;margin-right: 135px;margin-top: -33px;') Я согласен на обработку моих персональных данных
+                      .callback_required_text_wrap
+                        .callback_required_text
+                          p все поля обязательны для заполнения
+                        .zayavka_submit
+                          input.zayavka_submit(type='submit', value='Отправить вопрос')
+                    .clear
+                  input(type='hidden', name='formid', value='frm2')
+              span.close.callback_close Закрыть
+      .clear
+      a.open-menu.active9(href='#') Меню
+      .top_menu_wrap.active9
+        .top_menu.container
+          // a href="#" class="close-menu">Меню</a
+          ul
+            li#id3
+              a(href='about.html', title='О центре') О центре
+            li#id4
+              a(href='services.html', title='Услуги') Услуги
+              ul
+                li#id11
+                  a(href='akusherstvo.html', title='Акушерство, гинекология и андрология') Акушерство, гинекология и андрология
+                li#id12
+                  a(href='anesteziologiya.html', title='Анестезиология') Анестезиология
+                li#id13
+                  a(href='vakcinaciya.html', title='Вакцинация животных') Вакцинация животных
+                li#id14
+                  a(href='dermatologiya.html', title='Дерматология') Дерматология
+                li#id16
+                  a(href='kardiologiya.html', title='Кардиология') Кардиология
+                li#id388
+                  a(href='laparoskopicheskaya-sterilizaciya.html', title='Лапароскопическая стерилизация') Лапароскопическая стерилизация
+                li#id17
+                  a(href='nevrologiya.html', title='Неврология') Неврология
+                li#id603
+                  a(href='urologiya.html', title='Нефрология и урология') Нефрология и урология
+                li#id19
+                  a(href='onkologiya.html', title='Онкология') Онкология
+                li#id20
+                  a(href='ortopediya.html', title='Ортопедия') Ортопедия
+                li#id445
+                  a(href='oftalmologiya.html', title='Офтальмология') Офтальмология
+                li#id420
+                  a(href='rentgen.html', title='Рентгенография') Рентгенография
+                li#id22
+                  a(href='stacionar.html', title='Стационар') Стационар
+                li#id23
+                  a(href='stomatologiya.html', title='Стоматология') Стоматология
+                li#id18
+                  a(href='terapiya.html', title='Терапия') Терапия
+                li#id462
+                  a(href='travmatologiya.html', title='Травматология') Травматология
+                li#id464
+                  a(href='uzi.html', title='Ультразвуковая диагностика (УЗИ)') Ультразвуковая диагностика (УЗИ)
+                li#id26
+                  a(href='hirurgiya.html', title='Хирургия') Хирургия
+                li#id27
+                  a(href='chipirovanie.html', title='Чипирование животных') Чипирование животных
+                li#id28
+                  a(href='ekzoty.html', title='Экзотические животные') Экзотические животные
+                li#id29
+                  a(href='endokrinologiya.html', title='Эндокринология') Эндокринология
+                li#id601
+                  a(href='endoskopiya.html', title='Эндоскопия') Эндоскопия
+                li#id724
+                  a(href='mrt.html', title='МРТ') МРТ
+                li#id725
+                  a(href='kt.html', title='КТ') КТ
+                li#id727.last
+                  a(href='luchevaya-terapiya.html', title='Лучевая терапия') Лучевая терапия
+            li#id5
+              a(href='prices/terapiya.html', title='Цены') Цены
+            li#id6
+              a(href='specialists.html', title='Специалисты') Специалисты
+            li#id7
+              a(href='reviews.html', title='Отзывы') Отзывы
+            li#id8
+              a(href='vakancy.html', title='Вакансии ') Вакансии 
+            li#id9.last.active
+              a(href='contacts.html', title='Контакты') Контакты
+          .clear
+          .container_shadow
+      .clear
+      .gray_bg_inside
+        .container
+          .topbar
+            .breadcrumbs
+              span.B_crumbBox
+                span.B_firstCrumb
+                  a.B_homeCrumb(href='index.html', title='Ветеринарный Онкологический Центр Прайд') Ветеринарный Онкологический Центр Прайд
+                span.breadcrumbs_separator
+                span.B_lastCrumb
+                  span.B_currentCrumb Контакты
+            .social_icons
+              .social_icons_wrap
+                a(href='https://plus.google.com/+OncovetRu/about?hl=ru&gl=ru', target='_blank')
+                  .google_link
+                a(href='http://vk.com/club193943', target='_blank')
+                  .vk_link
+                a(href='https://www.facebook.com/oncovet.ru/', target='_blank')
+                  .fb_link
+                a(href='https://www.instagram.com/oncovet.ru/', target='_blank')
+                  .insta_link
+            .top_search
+              form#ajaxSearch_form(action='https://oncovet.ru/rezultaty-poiska', method='post')
+                fieldset
+                  input(type='hidden', name='advsearch', value='oneword')
+                  input.search_submit(type='image', src='assets/templates/pride/images/icon_search.png', alt='go')
+                  input#ajaxSearch_input.cleardefault.inp_s.search_field.search-query(type='text', name='search', value='Поиск', onfocus="this.value=(this.value=='Поиск')? '' : this.value ;")
+          .clear
+          .clear
+      .clear
+      .container_wrap
+        .container
+          .content
+            h1 Ветеринарная клиника Приморский район
+        .map_fullwidth
+          #map(style='width:100%; height:429px')
+        .container
+          .content.contacts_content
+            .contacts_topbar
+              .contacts_block
+                .contacts_topbar_block
+                  h3 Адрес
+                  p
+                    | г. Санкт-Петербург, 
+                    br
+                    | ул. Уточкина, дом 3, корпус 2 
+                    br
+                    | ТЦ «Комендант», вход со двора
+                  p
+                    img.justifyleft(src='assets/images/articles/contact_img_1.png', width='19', height='19')
+                    span(style='font-size: 14px;') Комендантский проспект
+                  .clear
+                .contacts_shadow
+              .contacts_block
+                .contacts_topbar_block
+                  h3 Телефоны
+                  p
+                    a(href='tel:+78123002978')
+                      span.ya-phone(style='font-size: 28px; color: #1d8aac; line-height: 28px;') +7 (812) 300-29-78
+                  p
+                    a(href='tel:+78123930852')
+                      span.ya-phone1(style='font-size: 28px; color: #1d8aac; line-height: 28px;') +7 (812) 393-08-52
+                  .clear
+                .contacts_shadow
+              .contacts_block
+                .contacts_topbar_block.contacts_topbar_block_third
+                  h3 E-mail
+                  p
+                    span(style='font-size: 13px;') Если у вас есть вопрос или вы хотите написать нам письмо, воспользуйтесь формой:
+                  .callback_link
+                    a.cs-btn.cs-btn-flat.cs-btn-large.cs-btn-flat-green.popup7 Задать вопрос
+                  .clear
+                .contacts_shadow
+            .clear
+            .cotacts_sb_wrap
+              .contacts_left
+                .contacts_block
+                  .contacts_leftbar
+                    .contacts_leftbar_block
+                      h3 Как добраться до центра?
+                      p
+                        img.justifyleft(src='assets/images/articles/contact_img_2.png', width='38', height='38')
+                        span(style='font-size: 19px; color: #1d8aac; line-height: 30px;') На транспорте
+                      ul
+                        li
+                          | От метро Комендантский пр. 
+                          br
+                          | Пешком (5 минут)
+                        li
+                          | От метро Пионерская 
+                          br
+                          | 25, 50 троллейбус (6 остановок)
+                          br
+                          | 172 автобус
+                          br
+                          | 279 и 94 маршрутки
+                      p  
+                      p
+                        img.justifyleft(src='assets/images/articles/contact_img_3.png', width='34', height='34')
+                        span(style='font-size: 19px; color: #1d8aac; line-height: 30px;') На машине
+                      ul
+                        li
+                          | C пр. Испытателей перед
+                          br
+                          |  Комендантской площадью
+                          br
+                          | свернуть на ул. Уточкина
+                  .contacts_shadow
+              .contacts_right
+                .contacts_content_article
+                  .contacts_print_link
+                    a(href='contactsc166.html?print=1', target='_blank', title='Распечатать') Распечатать
+                  .simple-text.white(itemscope='', itemtype='http://schema.org/Organization')
+                    span.r2none(itemprop='name') Городской Ветеринарный онкологический Центр Прайд
+                    p Приморский район
+                    div(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress')
+                      p
+                        span.r2none(itemprop='postalCode') 197349
+                        | , 
+                        span.r2none(itemprop='addressLocality') Санкт-Петербург
+                        | , 
+                        span(itemprop='streetAddress') ул. Уточкина д.3, к.2
+                    p Время работы: круглосуточно, без перерывов и выходных
+                    p
+                      | Контактные телефоны: 
+                      a(href='tel:+78123002978')
+                        span.ya-phone(itemprop='telephone') +7 (812) 300-29-78
+                      | , 
+                      a(href='tel:+78123930852')
+                        span.ya-phone1(itemprop='telephone') +7 (812) 393-08-52
+                    p
+                      | E-mail: 
+                      span(itemprop='email')
+                        a(href='mailto:info@oncovet.ru') info@oncovet.ru
+                  h2 Реквизиты:
+                  p
+                    | ИНН 7814439618
+                    br
+                    | ОГРН 1097847160872
+                .contacts_bottombar
+                  .contacts_bottombar_block
+                    p(style='margin: 18px 0 5px 0;')
+                      span(style='font-size: 17px; color: #b84848;') Работаем круглосуточно
+                    p без перерывов и выходных
+                  .contacts_bottombar_block.contacts_bottombar_block_chet
+                    p
+                      span(style='font-size: 17px;') Принимаем к оплате:
+                    p
+                      img(src='assets/images/articles/visa.png', width='50', height='32', alt='Принимаем к оплате Visa', title='Принимаем к оплате visa', style='margin-left: 5px; margin-right: 5px;')
+                      img(src='assets/images/articles/mastercard.png', width='50', height='32', alt='Принимаем к оплате MasterCard', title='Принимаем к оплате MasterCard', style='margin-left: 5px; margin-right: 5px;')
+                      img(src='assets/images/articles/maestro.png', width='50', height='32', alt='Принимаем к оплате Maestro', title='Принимаем к оплате Maestro', style='margin-left: 5px; margin-right: 5px;')
+            .clear
+      .clear
+      .footer
+        .container
+          .counter
+            script(type='text/javascript').
+              document.write("<a href='//www.liveinternet.ru/click' "+"target=_blank><img src='//counter.yadro.ru/hit?t44.1;r"+escape(document.referrer)+((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+";"+Math.random()+"' alt='' title='LiveInternet' "+"border='0' width='31' height='31'><\\/a>");
+          .footer_left
+            p
+              span(style='text-decoration: underline;') © 2014, Городской ветеринарный онкологический центр «Прайд»
+          .footer_right
+            .sitemap_link
+              a(href='sitemap.html')
+                .sitemap_link_block
+                  img(src='assets/templates/pride/images/sitemap.png', alt='карта сайта')
+                  span Карта сайта
+          .clear
+      .clear
+      link(href='https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin', rel='stylesheet', type='text/css')
+      link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/jqueryui.custom.css')
+      link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/phone_ring.css')
+      link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/jquery.fancybox-1.3.4.css')
+      link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/carusel.css')
+      link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/nivo-slider.min.css')
+      link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/nivo_default.css')
+      script(type='text/javascript', src='assets/templates/pride/js/jquery-1.8.3.min.js')
+      script(type='text/javascript', src='assets/templates/pride/js/device.min.js')
+      script(type='text/javascript', src='assets/templates/pride/js/jqueryui.custom5e1f.js?v=2')
+      script(type='text/javascript', src='assets/templates/pride/js/jquery.easing.1.3.js')
+      script(type='text/javascript', src='assets/templates/pride/js/jquery.jcarousel.min.js')
+      script(type='text/javascript', src='assets/templates/pride/js/jquery.fancybox-1.3.4.pack.js')
+      script(type='text/javascript', src='assets/templates/pride/js/jquery.nivo.slider.min.js')
+      script(type='text/javascript', src='assets/templates/pride/js/jquery.placeholder.min.js')
+      script(type='text/javascript', src='assets/templates/pride/js/script.min5e1f.js?v=2')
+      script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU', type='text/javascript')
+      script(type='text/javascript', src='../yastatic.net/share/share.js', charset='utf-8')
+      script(src='../www.google.com/recaptcha/api.js', async='', defer='')
+      script(type='text/javascript').
+        $(document).ready(function() {
+        $(".content a:has(img.fancybox)").fancybox();
+        //$( "#tabs" ).tabs();
+        $( "#tabs.tabs" ).tabs();
+        $("a.fancybox").fancybox();
+        });
+      script(type='text/javascript').
+        jQuery(window).load(function() {
+        var layer = jQuery('.bg');
+        var modal = jQuery('.popup_form');
+        var modal7 = jQuery('.popup_form7');
+        var ahref = jQuery('.popup');
+        var ahref7 = jQuery('.popup7');
+        var close = jQuery('.close');
+        ahref.click(function(){
+        layer.show();
+        modal.slideDown();
+        });
+        ahref7.click(function(){
+        layer.show();
+        modal7.slideDown();
+        });
+        layer.click(function(){
+        modal.fadeOut('slow', function(){
+        layer.fadeOut('fast');
+        });
+        modal7.fadeOut('slow', function(){
+        layer.fadeOut('fast');
+        });
+        });
+        close.click(function(){
+        modal.fadeOut('slow', function(){
+        layer.fadeOut('fast');
+        });
+        modal7.fadeOut('slow', function(){
+        layer.fadeOut('fast');
+        });
+        });
+        });
+      script(type='text/javascript').
+        ymaps.ready(init);
+        function init () {
+        var myMap = new ymaps.Map("map", {
+        center: [60.009444, 30.262275],
+        zoom: 16
+        }),
+        myPlacemark1 = new ymaps.Placemark([60.010269, 30.263720], {
+        balloonContentBody: 'ул. Уточкина, д. 3, к. 2',
+        });
+        myMap.geoObjects.add(myPlacemark1);
+        }
+      // Yandex.Metrika counter
+      script(src='../mc.yandex.ru/metrika/watch.js', type='text/javascript')
+      script(type='text/javascript').
+        try { var yaCounter27845952 = new Ya.Metrika({id:27845952,
+        webvisor:true,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true});
+        } catch(e) { }
+      noscript
+        div
+          img(src='http://mc.yandex.ru/watch/27845952', style='position:absolute; left:-9999px;', alt='')
+      // /Yandex.Metrika counter
+      // GA counter
+      script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-34867376-3', 'auto');
+        ga('send', 'pageview');
+      // /GA counter
+      // Facebook Pixel Code
+      script.
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','../connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1425759037477031'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+      noscript
+        img(alt='fb', height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=1425759037477031&ev=PageView&noscript=1')
+      // DO NOT MODIFY
+      // End Facebook Pixel Code
+      script(src='http://cdn.krible.com/loader?code=583d435dd2e1b88302951795edcd90c0', async='async', type='text/javascript')
+      script(type='text/javascript').
+        var __cs = __cs || [];
+        __cs.push(["setCsAccount", "GXqg6612GTxPAWieVcfvdCy8gEHk0xwQ"]);
+        __cs.push(["setCsHost", "//server.comagic.ru/comagic"]);
+      script(type='text/javascript', async='', src='../app.comagic.ru/static/cs.min.js')
+      a.fixedbtn(href='#') Оставить отзыв
+      #review-form.popup_form_wrap.callback_form_wrap
+        .review-form.modal-form
+          .wrap
+            .success
+            form(method='post', action='https://oncovet.ru/ajaxreview', onsubmit='formSubmit(this,event)')
+              fieldset
+                input(type='hidden', name='formid', value='reviewsFormm1')
+                .top_inputs
+                  input(name='name', type='text', size='40', placeholder='Ваше имя и фамилия *', onfocus="this.placeholder=''", onblur="if (this.value==''){this.placeholder='Ваше имя и фамилия * '}", value='')
+                  select(name='vid')
+                    option Вид питомца *
+                    option(value='кошка') кошка
+                    option(value='собака') собака
+                    option(value='другое') другое
+                  input(name='klichka', type='text', size='40', placeholder='Кличка животного *', onfocus="this.placeholder=''", onblur="if (this.value==''){this.placeholder='Кличка животного * '}", value='')
+                .left_inputs
+                  input(name='phone', type='text', size='40', placeholder='Телефон *', onfocus="this.placeholder=''", onblur="if (this.value==''){this.placeholder='Телефон * '}", value='')
+                  input(name='email', type='text', size='40', placeholder='Ваш E-mail *', onfocus="this.placeholder=''", onblur="if (this.value==''){this.placeholder='Ваш E-mail * '}", value='')
+                .center_inputs
+                  textarea(name='content', cols='50', rows='8', placeholder='Ваш отзыв *', onfocus="this.placeholder=''", onblur="if (this.value==''){this.placeholder='Ваш отзыв * '}")
+                  label.required(for='registration_form_rules', style='font-weight: normal;cursor: pointer;')
+                    input#registration_form_rules(type='checkbox', name='registration_form[rules]', required='required', align_with_widget='1', style='width: auto;margin: 10px;', value='1')
+                    .registration(style='float: right;margin-right: 190px;margin-top: 6px;') Я согласен на обработку моих персональных данных
+                .right_inputs
+                  .comment_captcha
+                    img(src='manager/includes/veriword29b0.jpg?rand=356839236', alt='')
+                    input.vericodeform.input_field(type='text', name='vericode', size='20', placeholder='Код с картинки *', value='')
+                  input.review_submit(name='submit', type='submit', value='Отправить отзыв')
+                .error
+    .bg
+  // Mirrored from oncovet.ru/contacts by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 29 Nov 2017 15:04:48 GMT
