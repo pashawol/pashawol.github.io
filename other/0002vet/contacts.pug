@@ -32,6 +32,7 @@ html(lang='ru')
           a(href='pay.html') Оплата онлайн
       .header
         .container
+          // новая верстка
           //
             <div class="mobile-block">
             </div>
@@ -46,9 +47,10 @@ html(lang='ru')
             .docto_home
               a(href='vetvrach-na-dom.html') Вызов врача на дом
             .callback_link
-              a.popup Заказать звонок
+              a.popup Обратный звонок
+
             .question_link
-              a.popup7 Задать вопрос
+              a.popup7 задать вопрос
             .social_icons
               .social_icons_wrap
                 a(href='https://plus.google.com/+OncovetRu/about?hl=ru&gl=ru', target='_blank')
@@ -62,7 +64,7 @@ html(lang='ru')
           .header_right
             .header_right_top
               a(href='tel:+78123002978')
-                span(style="font-size: 27px; color: #1fb9e9; font-family: 'Idealist Sans Light';")
+                span(style="")
                   span.ya-phone +7 (812) 300-29-78
               p ул. Уточкина, д. 3, к. 2
             .header_right_bot
@@ -70,6 +72,18 @@ html(lang='ru')
                 span(style='color: #d03131; font-size: 15px;') круглосуточно
                 br
                 span(style='font-size: 11px;') без перерывов и выходных
+          .header_right
+            .header_right_top
+              a(href='tel:+78123002978')
+                span( )
+                  span.ya-phone +7 (812) 300-29-78
+              p ул. Уточкина, д. 3, к. 2
+            .header_right_bot
+              p
+                span(style='color: #d03131; font-size: 15px;') круглосуточно
+                br
+                span(style='font-size: 11px;') без перерывов и выходных
+
           .clear
         .popup_form_wrap.callback_form_wrap
           .form_order.popup_form
@@ -231,7 +245,7 @@ html(lang='ru')
       .container_wrap
         .container
           .content
-            h1 Ветеринарная клиника Приморский район
+            h1 Контакты
         .map_fullwidth
           #map(style='width:100%; height:429px')
         .container
@@ -239,133 +253,128 @@ html(lang='ru')
             .contacts_topbar
               .contacts_block
                 .contacts_topbar_block
-                  h3 Адрес
-                  p
-                    | г. Санкт-Петербург, 
-                    br
-                    | ул. Уточкина, дом 3, корпус 2 
-                    br
-                    | ТЦ «Комендант», вход со двора
-                  p
-                    img.justifyleft(src='assets/images/articles/contact_img_1.png', width='19', height='19')
-                    span(style='font-size: 14px;') Комендантский проспект
+                  h3 Прайд на Уточкина
+                  .row
+                    .col 
+                      p
+                        | г. Санкт-Петербург, 
+                        br
+                        | ул. Уточкина, дом 3, корпус 2  
+                      p
+                        img.justifyleft(src='assets/images/articles/contact_img_1.png', width='19', height='19')
+                        span(style='font-size: 14px;') Комендантский проспект
+                    .col
+                      p
+                        a(href='tel:+78123002978')
+                          span.ya-phone(style='font-size: 28px; color: #1d8aac; line-height: 28px;') +7 (812) 300-29-78
+                      p
+                        a(href='tel:+78123930852')
+                          span.ya-phone1(style='font-size: 28px; color: #1d8aac; line-height: 28px;') +7 (812) 393-08-52
                   .clear
                 .contacts_shadow
+
+
+
               .contacts_block
                 .contacts_topbar_block
-                  h3 Телефоны
-                  p
-                    a(href='tel:+78123002978')
-                      span.ya-phone(style='font-size: 28px; color: #1d8aac; line-height: 28px;') +7 (812) 300-29-78
-                  p
-                    a(href='tel:+78123930852')
-                      span.ya-phone1(style='font-size: 28px; color: #1d8aac; line-height: 28px;') +7 (812) 393-08-52
+                  h3 Прайд на Минеральной
+                  .row
+                    .col 
+                      p
+                        | г. Санкт-Петербург, 
+                        br
+                        | ул. Минеральная, д. 32
+                      p
+                        img.justifyleft(src='assets/images/articles/contact_img_1.png', width='19', height='19')
+                        span(style='font-size: 14px;') Выборгская, Пл. Ленина
+                    .col
+                      p
+                        a(href='tel:+78129213339')
+                          span.ya-phone(style='font-size: 28px; color: #1d8aac; line-height: 28px;') +7 (812) 921-33-39
+                     
                   .clear
-                .contacts_shadow
-              .contacts_block
+                 
+
+
+
+               
+              .contacts_block.contacts_block-3
                 .contacts_topbar_block.contacts_topbar_block_third
-                  h3 E-mail
+                  h3 Нашите нам
                   p
                     span(style='font-size: 13px;') Если у вас есть вопрос или вы хотите написать нам письмо, воспользуйтесь формой:
                   .callback_link
                     a.cs-btn.cs-btn-flat.cs-btn-large.cs-btn-flat-green.popup7 Задать вопрос
+                  p Или напишите нам по адресу 
+                    br
+                    a(href="mailto:info@oncovet.ru") info@oncovet.ru
                   .clear
                 .contacts_shadow
-            .clear
-            .cotacts_sb_wrap
-              .contacts_left
-                .contacts_block
-                  .contacts_leftbar
-                    .contacts_leftbar_block
-                      h3 Как добраться до центра?
-                      p
-                        img.justifyleft(src='assets/images/articles/contact_img_2.png', width='38', height='38')
-                        span(style='font-size: 19px; color: #1d8aac; line-height: 30px;') На транспорте
-                      ul
-                        li
-                          | От метро Комендантский пр. 
-                          br
-                          | Пешком (5 минут)
-                        li
-                          | От метро Пионерская 
-                          br
-                          | 25, 50 троллейбус (6 остановок)
-                          br
-                          | 172 автобус
-                          br
-                          | 279 и 94 маршрутки
-                      p  
-                      p
-                        img.justifyleft(src='assets/images/articles/contact_img_3.png', width='34', height='34')
-                        span(style='font-size: 19px; color: #1d8aac; line-height: 30px;') На машине
-                      ul
-                        li
-                          | C пр. Испытателей перед
-                          br
-                          |  Комендантской площадью
-                          br
-                          | свернуть на ул. Уточкина
-                  .contacts_shadow
-              .contacts_right
-                .contacts_content_article
-                  .contacts_print_link
-                    a(href='contactsc166.html?print=1', target='_blank', title='Распечатать') Распечатать
-                  .simple-text.white(itemscope='', itemtype='http://schema.org/Organization')
-                    span.r2none(itemprop='name') Городской Ветеринарный онкологический Центр Прайд
-                    p Приморский район
-                    div(itemprop='address', itemscope='', itemtype='http://schema.org/PostalAddress')
-                      p
-                        span.r2none(itemprop='postalCode') 197349
-                        | , 
-                        span.r2none(itemprop='addressLocality') Санкт-Петербург
-                        | , 
-                        span(itemprop='streetAddress') ул. Уточкина д.3, к.2
-                    p Время работы: круглосуточно, без перерывов и выходных
-                    p
-                      | Контактные телефоны: 
-                      a(href='tel:+78123002978')
-                        span.ya-phone(itemprop='telephone') +7 (812) 300-29-78
-                      | , 
-                      a(href='tel:+78123930852')
-                        span.ya-phone1(itemprop='telephone') +7 (812) 393-08-52
-                    p
-                      | E-mail: 
-                      span(itemprop='email')
-                        a(href='mailto:info@oncovet.ru') info@oncovet.ru
-                  h2 Реквизиты:
+              .contacts_block.contacts_block-3
+                .contacts_bottombar_block
+                  p(style='margin: 18px 0 5px 0;')
+                    span(style='font-size: 17px; color: #b84848;') Работаем круглосуточно
+                  p без перерывов и выходных
+
+                .contacts_bottombar_block
+                  p(style='margin: 18px 0 5px 0;')
+                    span(style='font-size: 17px; color: #b84848;') Реквизиты
+                  .row.row-text
+                    p.text-p ИНН 7814439618    
+                    p.text-p ОГРН 1097847160872
+
+              .contacts_block.contacts_block-3
+                .contacts_bottombar_block.contacts_bottombar_block_chet
                   p
-                    | ИНН 7814439618
-                    br
-                    | ОГРН 1097847160872
-                .contacts_bottombar
-                  .contacts_bottombar_block
-                    p(style='margin: 18px 0 5px 0;')
-                      span(style='font-size: 17px; color: #b84848;') Работаем круглосуточно
-                    p без перерывов и выходных
-                  .contacts_bottombar_block.contacts_bottombar_block_chet
-                    p
-                      span(style='font-size: 17px;') Принимаем к оплате:
-                    p
-                      img(src='assets/images/articles/visa.png', width='50', height='32', alt='Принимаем к оплате Visa', title='Принимаем к оплате visa', style='margin-left: 5px; margin-right: 5px;')
-                      img(src='assets/images/articles/mastercard.png', width='50', height='32', alt='Принимаем к оплате MasterCard', title='Принимаем к оплате MasterCard', style='margin-left: 5px; margin-right: 5px;')
-                      img(src='assets/images/articles/maestro.png', width='50', height='32', alt='Принимаем к оплате Maestro', title='Принимаем к оплате Maestro', style='margin-left: 5px; margin-right: 5px;')
+                    span(style='font-size: 17px;') Принимаем к оплате:
+                  p
+                    img(src='assets/images/articles/visa.png', width='50', height='32', alt='Принимаем к оплате Visa', title='Принимаем к оплате visa', style='margin-left: 5px; margin-right: 5px;')
+                    img(src='assets/images/articles/mastercard.png', width='50', height='32', alt='Принимаем к оплате MasterCard', title='Принимаем к оплате MasterCard', style='margin-left: 5px; margin-right: 5px;')
+                    img(src='assets/images/articles/maestro.png', width='50', height='32', alt='Принимаем к оплате Maestro', title='Принимаем к оплате Maestro', style='margin-left: 5px; margin-right: 5px;')
+
+             
+                  
             .clear
       .clear
       .footer
         .container
-          .counter
-            script(type='text/javascript').
-              document.write("<a href='//www.liveinternet.ru/click' "+"target=_blank><img src='//counter.yadro.ru/hit?t44.1;r"+escape(document.referrer)+((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+";"+Math.random()+"' alt='' title='LiveInternet' "+"border='0' width='31' height='31'><\\/a>");
-          .footer_left
-            p
-              span(style='text-decoration: underline;') © 2014, Городской ветеринарный онкологический центр «Прайд»
-          .footer_right
-            .sitemap_link
-              a(href='sitemap.html')
-                .sitemap_link_block
-                  img(src='assets/templates/pride/images/sitemap.png', alt='карта сайта')
-                  span Карта сайта
-          .clear
+          .row
+            .col-md-4
+              .footer__addr
+                .footer__title ул. Уточкина, д. 3, к. 2
+                div
+                  a.footer__tel(href="tel:+78123002978") +7 (812) 300-29-78
+                div
+                  a.footer__tel(href="tel:+78123930852") +7 (812) 393-08-52
+
+            .col-md-4
+              .footer__addr
+                .footer__title ул. Минеральная, д. 32 
+                div
+                  a.footer__tel(href="tel:+78129213339") +7 (812) 921-33-39
+
+            .col-md-4
+              .footer__soc
+                a.footer__soc-link(href='https://plus.google.com/+OncovetRu/about?hl=ru&gl=ru', target='_blank')  
+                  .google_link
+                a.footer__soc-link(href='http://vk.com/club193943', target='_blank')  
+                  .vk_link
+                a.footer__soc-link(href='https://www.facebook.com/oncovet.ru/', target='_blank')  
+                  .fb_link
+                a.footer__soc-link(ref='https://www.instagram.com/oncovet.ru/', target='_blank') 
+                  .insta_link
+              .clear
+                
+              .footer__p  
+                span.red-text работаем круглосуточно
+                br
+                | без перерывов и выходных
+            .col-md-4
+              a.footer__map(href="#") Карта сайта
+              .footer__copy   © 2014, Городской ветеринарнеый  нкологический центр «Прайд»
+
+      // новая верстка
+           
       .clear
       link(href='https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin', rel='stylesheet', type='text/css')
       link(rel='stylesheet', type='text/css', href='assets/templates/pride/css/jqueryui.custom.css')
