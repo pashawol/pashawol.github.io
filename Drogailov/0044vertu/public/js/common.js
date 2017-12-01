@@ -33,6 +33,9 @@
     // var h = $(".item-prod__inner").height();
    // $(".item-prod").height('auto').height(h);
    //
+   $(".drop-menu .row").each(function(){
+      $(this).find(".drop-menu__img-wrap").height('auto').equalHeights();
+   })
    $(".s-catalog__block").each(function(){
       $(this).find(".item-prod__title").height('auto').equalHeights();
       $(this).find(".item-prod__inner").height('auto').equalHeights();
