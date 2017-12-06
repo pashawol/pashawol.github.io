@@ -38,7 +38,7 @@
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
     }
-    var topH=$("header ").innerHeight();  
+    var topH=$(".top_line").innerHeight();  
     if($(this).scrollTop()>topH){
                     $('.top-nav  ').addClass('fixed');
                     
@@ -65,6 +65,44 @@
 $( window ).on( "load", function() {
  heightses();
 
+
+ if ($("div").is("#map1")){
+ ymaps.ready(function () {
+    var myMap = new ymaps.Map('map1', {
+            center: [59.87463006425739,30.344245999999966],
+            zoom: 15,
+            behaviors: ['drag'],
+              
+                // controls: ["zoomControl", "fullscreenControl"]
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+   
+        myPlacemark = new ymaps.Placemark([59.87463006425739,30.344245999999966], {
+            hintContent: 'Воронеж, ул. Уличная, 32, корп. 1',
+            balloonContent: 'Воронеж, ул. Уличная, 32, корп. 1 '
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: $("#map1").data("img"),
+            // Размеры метки.
+            iconImageSize: [100, 146],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-50, -73]
+        }) 
+
+    myMap.geoObjects
+        .add(myPlacemark)
+       
+ 
+    
+});
+}
+
 })
 
  heightses();
@@ -82,11 +120,52 @@ $( window ).on( "load", function() {
  //    });
 
 
- $('.top-nav a').onePageNav({
-            currentClass: 'active',
-            scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
-            scrollSpeed: 1000
-        });
+// или
+// Cache selectors
+var lastId,
+    topMenu = $(" .top-nav ul"),
+    topMenuHeight = topMenu.outerHeight()+15,
+    // All list items
+    menuItems = topMenu.find("a.top-nav__link"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get a fancy scroll animation
+menuItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 1600);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+topMenuHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       menuItems
+         .parent().removeClass("active")
+         .end().filter(".top-nav__link[href='#"+id+"']").parent().addClass("active");
+   }                   
+});
 // табы
 $(function() {
 var tab = ('tabs');
@@ -186,22 +265,7 @@ $("form").submit(function() { //Change
     });
     return false;
   });
-  $(".contact").magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    closeOnContentClick: false,
-    closeBtnInside: false,
-    mainClass: 'mfp-with-zoom mfp-img-mobile',
-    image: {
-      verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
-    },
-    gallery: {
-      enabled: true
-    }
-  });
+   
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
@@ -237,25 +301,70 @@ $("form").submit(function() { //Change
   });
 
 
-  // кастомный инпут файл 
- 
-  var file = $(".add-file input[type=file]");
-  file.change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         var name = $(".add-file__filename  ");
-       name.text(filename);
-  
-    }); 
+  //  $('.cd').countdown("2017/01/01", function(event) {
+  //   $(this).text(
+  //     event.strftime('%D %H:%M:%S')
+  //   );
+  // });
 
 
-  
-  $(".pretty-embed__bg").each(function(){ 
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
+   // $(".s-take__timer").each(function(){
+   //    // таймер
+        
+   //      var clock = $(this).find('.cd-wrapper').FlipClock({
+   //    clockFace: "DailyCounter",
+   //    language:'ru-ru',
+   //    // autoPlay: true,
+   //    // autoStart: false,
+   //    });
+   //    var dt =  "20:22:48";
+   //    var first= new Date(dt);
+   //    var last = Date.now();
+   //    var remaining = first - last;
+   //    remaining /= 1000;
+
+   //    clock.setTime(remaining);
+   //    clock.setCountdown(true);
+   //    clock.start();
+        
+   //    })
+   // var clock;
+
+   //    clock = $('.cd-wrapper').FlipClock({
+   //          clockFace: 'DailyCounter',
+   //          language:'ru-ru', 
+   //          autoStart: false,
+   //          сallbacks: { //Действие после окончания отсчета
+   //            stop: function() {
+   //              clock.reset();
+   //            }
+   //         },
+   //      });
+        
+   //      var dt =  ('12 21 2017 20:22:48');
+   //      var first= new Date(dt);
+   //      var last = Date.now();
+   //      var remaining = first - last;
+   //      remaining /= 10000;
+
+   //      var date = new Date(),
+   //        h = date.getHours(),
+   //          min = date.getMinutes(),
+   //          sec = date.getSeconds();
+   //      if(  h == 15 && min == 27  ){ 
+               
+   //            clock.setTime(10); 
+   //      // clock.setTime(2); 
+   //          clock.setCountdown(true);
+   //            clock.start();
+           
+   //      }
+   //      else{
+
+   //      clock.setTime(remaining); 
+   //      // clock.setTime(2); 
+   //      clock.setCountdown(true);
+   //      clock.start();
+   //      }
+// alert( date.getHours() );
 });
