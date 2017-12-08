@@ -33,8 +33,10 @@
     // var h = $(".item-prod__inner").height();
    // $(".item-prod").height('auto').height(h);
    //
+   $(".drop-menu").css("max-height", $(window).height()  - $(".top_line").height())
+   $(".catalog-aside__nav ul").css("max-height", $(window).height() - $(".catalog-aside__title").height() - $(".top_line").height())
    $(".drop-menu .row").each(function(){
-      $(this).find(".drop-menu__img-wrap").height('auto').equalHeights();
+      $(this).find(".drop-menu__img-wrap ").height('auto').equalHeights();
    })
    $(".s-catalog__block").each(function(){
       $(this).find(".item-prod__title").height('auto').equalHeights();

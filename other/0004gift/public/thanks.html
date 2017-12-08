@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <meta name="description" content="о чем страница">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#3361d8">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#3361d8">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3361d8">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- start thanks-->
+      <section class="thanks" id="thanks">
+        <div class="table">
+          <div class="td">
+            <div class="container">
+              <div class="thanks__block">
+                <div class="thanks__head">
+                  <h1>Спасибо за заявку!</h1>
+                  <p>Мы&nbsp;перезвоним вам в&nbsp;течении 30&nbsp;минут, а&nbsp;пока что можете подписаться на&nbsp;нашу официальную группу Вконтакте</p>
+                </div>
+                <div class="thanks__body">
+                  <script type="text/javascript" src="//vk.com/js/api/openapi.js?150"></script>
+                  <div id="vk_groups"></div>
+                  <script type="text/javascript">VK.Widgets.Group("vk_groups", {mode: 3, no_cover: 1, width: "auto"}, 78434574);</script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end thanks-->
+    </div>
+    <script src="js/scripts.min.js"></script>
+    <script asinc="true" src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

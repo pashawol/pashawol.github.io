@@ -45,7 +45,7 @@
           </ul>
           <div class="text-right">
             <div class="trop__link-wrap">
-              <div><a class="trop__btn btn btn-accent" href="#">Получить каталог</a><br/><br/>
+              <div><a class="trop__btn btn btn-accent popup-with-move-anim" href="#modal">Получить каталог</a><br/><br/>
               </div>
               <div><a class="trop__link trop__link-tel" href="tel:88124093449">8 (812) 409-34-49</a>
               </div>
@@ -87,7 +87,7 @@
               </div>
               <div class="col-auto">
                 <div class="top-nav__link-wrap">
-                  <div><a class="top-nav__btn btn btn-accent" href="#">Получить каталог</a>
+                  <div><a class="top-nav__btn btn btn-accent popup-with-move-anim" href="#modal">Получить каталог</a>
                   </div>
                   <div><a class="top-nav__link top-nav__link-tel" href="tel:88124093449">8 (812) 409-34-49</a>
                   </div>
@@ -134,9 +134,10 @@
                     </div>
                     <div class="form-wrap">
                       <form method="post" data-parsley-validate="">
+                        <input class="order" type="hidden" name="order" val="Получить расчет"/>
                         <div class="row">
                           <div class="col-md col-12">
-                            <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+                            <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" name="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
                             </div>
                           </div>
                           <div class="col-md col-12">
@@ -150,8 +151,6 @@
                       </form>
                     </div>
                   </div>
-                </div>
-                <div class="header-block__img-wrap"><img src="img/header-img.png" alt=""/>
                 </div>
               </div>
             </div>
@@ -170,7 +169,7 @@
                 <div class="s-category__title">В картонной упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-1.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В картонной упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В картонной упаковке)">Получить каталог</a>
               </div>
             </div>
             <div class="s-category__col col-lg-3 col-sm-6">
@@ -178,7 +177,7 @@
                 <div class="s-category__title">В жестяной упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-2.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В жестяной упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В жестяной упаковке)">Получить каталог</a>
               </div>
             </div>
             <div class="s-category__col col-lg-3 col-sm-6">
@@ -186,7 +185,7 @@
                 <div class="s-category__title">В текстильной упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-3.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В текстильной упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В текстильной упаковке)">Получить каталог</a>
               </div>
             </div>
             <div class="s-category__col col-lg-3 col-sm-6">
@@ -194,7 +193,7 @@
                 <div class="s-category__title">В прочей упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-4.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В прочей упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В прочей упаковке)">Получить каталог</a>
               </div>
             </div>
           </div>
@@ -358,14 +357,15 @@
                 <div class="s-take__timer-title">До конца акции осталось
                 </div>
                 <div class="s-take__timer-inner">
-                  <script src="//megatimer.ru/s/2d860a9358e0c3bc2351fc164feec26a.js"></script>
+                  <script asinc="true" src="//megatimer.ru/s/2d860a9358e0c3bc2351fc164feec26a.js"> </script>
                 </div>
               </div>
               <div class="form-wrap">
                 <form method="post" data-parsley-validate="">
+                  <input class="order" type="hidden" name="order" val="Оформить заказ"/>
                   <div class="row">
                     <div class="col-md col-12">
-                      <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+                      <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" name="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
                       </div>
                     </div>
                     <div class="col-md col-12">
@@ -450,9 +450,10 @@
               </div>
               <div class="form-wrap">
                 <form method="post" data-parsley-validate="">
+                  <input class="order" type="hidden" name="order" val="Узнать подробности"/>
                   <div class="row">
                     <div class="col-md col-12">
-                      <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+                      <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" name="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
                       </div>
                     </div>
                     <div class="col-md col-12">
@@ -474,18 +475,12 @@
       <section class="s-sert" id="s-sert">
         <div class="container text-center">
           <h2>Мы имеем все необходимы сертификаты соответствия</h2>
-          <div class="row">
-            <div class="col-md-4 col-sm-6 col-12">
-              <div class="s-sert__item"><img class="res-i" src="img/sert-1.jpg" alt=""/>
-              </div>
+          <div class="row gal">
+            <div class="col-md-4 col-sm-6 col-12"><a class="s-sert__item" href="img/sert-b-1.jpg"><img class="res-i" src="img/sert-1.jpg" alt=""/></a>
             </div>
-            <div class="col-md-4 col-sm-6 col-12">
-              <div class="s-sert__item"><img class="res-i" src="img/sert-2.jpg" alt=""/>
-              </div>
+            <div class="col-md-4 col-sm-6 col-12"><a class="s-sert__item" href="img/sert-b-2.jpg"><img class="res-i" src="img/sert-2.jpg" alt=""/></a>
             </div>
-            <div class="col-md-4 col-sm-6 col-12">
-              <div class="s-sert__item"><img class="res-i" src="img/sert-3.jpg" alt=""/>
-              </div>
+            <div class="col-md-4 col-sm-6 col-12"><a class="s-sert__item" href="img/sert-b-3.jpg"><img class="res-i" src="img/sert-3.jpg" alt=""/></a>
             </div>
           </div>
         </div>
@@ -506,9 +501,10 @@
               </div>
               <div class="form-wrap">
                 <form method="post" data-parsley-validate="">
+                  <input class="order" type="hidden" name="order" val="Получить предложение"/>
                   <div class="row">
                     <div class="col-md col-12">
-                      <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+                      <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" name="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
                       </div>
                     </div>
                     <div class="col-md col-12">
@@ -539,7 +535,7 @@
         </div>
         <div class="s-contact__map-wrap">
           <div class="container"></div>
-          <div id="map1" data-img="../img/map.png"></div>
+          <div id="map1" data-img="img/map.png"></div>
         </div>
       </section>
       <!-- end s-contact-->
@@ -593,9 +589,10 @@
             <h2>ОСТАЛИСЬ ВОПРОСЫ?</h2>
             <div class="form-wrap">
               <form method="post" data-parsley-validate="">
+                <input class="order" type="hidden" name="order" val="Задать вопрос"/>
                 <div class="row">
                   <div class="col-md col-12">
-                    <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+                    <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" name="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
                     </div>
                   </div>
                   <div class="col-md col-12">
@@ -623,9 +620,10 @@
               </div>
               <div class="form-wrap">
                 <form method="post" data-parsley-validate="">
+                  <input class="order" type="hidden" name="order" val="Получить предложение"/>
                   <div class="row">
                     <div class="col-md col-12">
-                      <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+                      <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" name="tel" placeholder="Ваш телефон" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
                       </div>
                     </div>
                     <div class="col-md col-12">
@@ -653,7 +651,7 @@
                 <div class="s-category__title">В картонной упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-1.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В картонной упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В картонной упаковке)">Получить каталог</a>
               </div>
             </div>
             <div class="s-category__col col-lg-3 col-sm-6">
@@ -661,7 +659,7 @@
                 <div class="s-category__title">В жестяной упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-2.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В жестяной упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В жестяной упаковке)">Получить каталог</a>
               </div>
             </div>
             <div class="s-category__col col-lg-3 col-sm-6">
@@ -669,7 +667,7 @@
                 <div class="s-category__title">В текстильной упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-3.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В текстильной упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В текстильной упаковке)">Получить каталог</a>
               </div>
             </div>
             <div class="s-category__col col-lg-3 col-sm-6">
@@ -677,7 +675,7 @@
                 <div class="s-category__title">В прочей упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-4.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В прочей упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В прочей упаковке)">Получить каталог</a>
               </div>
             </div>
             <div class="s-category__col col-lg-3 col-sm-6">
@@ -685,7 +683,7 @@
                 <div class="s-category__title">В картонной упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-1.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В картонной упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В картонной упаковке)">Получить каталог</a>
               </div>
             </div>
             <div class="s-category__col col-lg-3 col-sm-6">
@@ -693,7 +691,7 @@
                 <div class="s-category__title">В жестяной упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-2.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В жестяной упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В жестяной упаковке)">Получить каталог</a>
               </div>
             </div>
             <div class="s-category__col col-lg-3 col-sm-6">
@@ -701,7 +699,7 @@
                 <div class="s-category__title">В текстильной упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-3.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В текстильной упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В текстильной упаковке)">Получить каталог</a>
               </div>
             </div>
             <div class="s-category__col col-lg-3 col-sm-6">
@@ -709,7 +707,7 @@
                 <div class="s-category__title">В прочей упаковке
                 </div>
                 <div class="s-category__img-wrap"><img class="res-i" src="img/cat-4.jpg" alt=""/>
-                </div><a class="s-category__btn btn btn-sm btn-accent" href="#" data-order="Получить каталог (В прочей упаковке)">Получить каталог</a>
+                </div><a class="s-category__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal" data-order="Получить каталог (В прочей упаковке)">Получить каталог</a>
               </div>
             </div>
           </div>
@@ -722,14 +720,35 @@
           <p class="color">Разработка сайта - «Простые интеграции»</p>
         </div>
       </footer>
-      <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/>
-        <h3>Заявка принята</h3><br/>
-        <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
+      <div class="zoom-anim-dialog mfp-hide modal modal-form text-center" id="modal">
+        <div class="form-wrap">
+          <div class="text-center">
+            <div class="h3">Получите каталог</div>
+          </div>
+          <div class="modal__text">Оставьте свои контактные данные и мы вышлем Вам актуальный Каталог сладких новогодних подарков</div>
+          <form method="post" data-parsley-validate="">
+            <input class="order" type="hidden" name="order"/>
+            <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="email" name="email" placeholder="Email (для отправки каталога)" required="required" data-parsley-type="email"/>
+            </div>
+            <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" name="tel" placeholder="Номер телефона для связи" required="required" pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}" data-parsley-pattern="[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+            </div>
+            <div class="form-wrap__btn-wrap">
+              <button class="form-wrap__btn btn btn-accent-2">Получить каталог
+              </button>
+            </div>
+          </form>
+          <div class="politic">
+            Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку своих персональных данных и&nbsp;соглашаетесь с <a href="#" target="_blank">Политикой конфиденциальности</a></div>
+        </div>
+      </div>
+      <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/><br/>
+        <div class="h3">Заявка принята</div><br/>
+        <p class="modal__text">Скоро с Вами свяжутся</p><br/>
       </div>
       <!-- modal-->
     </div>
     <script src="js/scripts.min.js"></script>
-    <script asinc src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script asinc="true" src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
