@@ -261,7 +261,12 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   });
- 
+ setTimeout(
+  function(){
+    $(".link-foot").click()
+  }
+  , 45000)
+
   // всплывающая медиа галлерея
 $('.magnific-all').each(function() {
   var $container = $(this);

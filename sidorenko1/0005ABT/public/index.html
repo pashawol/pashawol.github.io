@@ -4,149 +4,846 @@
     <meta charset="utf-8">
     <title>title</title>
     <meta name="description" content="о чем страница">
-    <meta name="viewport" content="width=device-width">
-    <meta property="og:image" content="path/to/image.jpg">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <meta name="viewport" content="width=1110">
     <!-- Chrome, Firefox OS and Opera-->
     <meta name="theme-color" content="#3361d8">
     <!-- Windows Phone-->
     <meta name="msapplication-navbutton-color" content="#3361d8">
     <!-- iOS Safari-->
     <meta name="apple-mobile-web-app-status-bar-style" content="#3361d8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300&amp;subset=latin,cyrillic,latin-ext,cyrillic-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/main.min.css">
+    <link href="css/template.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="css/front.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="local/templates/elb.theme/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="local/templates/maximum.fixwidth.catalog.theme/css/style.css">
+    <link href="local/templates/elb.theme/css/jquery.growl.css" rel="stylesheet">
+    <script src="local/templates/elb.theme/js/jquerymin.js"></script>
+    <!--if lte IE 8
+    link(rel='stylesheet', type='text/css', href='/local/templates/elb.theme/css/ie.css', media='screen')
+    script(src='/local/templates/elb.theme/js/ie_v678.js')
+    
+    -->
   </head>
   <body>
-    <div class="main-wrapper">
-      <!-- start HEADER.header-->
-      <header class="header">
-        <!-- start .top_line-->
-        <div class="top_line">
-        </div>
-        <!-- end .top_line--><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
-        <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
-          <div class="wrapp-hidden"> 
-            <ul>
-              <li><a href="#about">About us</a></li>
-              <li><a href="#plan"> Our tours </a></li>
-              <li><a href="#offer">Become a partner</a></li>
-              <li><a href="#contact"> Contact</a></li>
-            </ul>
-            <div class="text-right"></div>
-          </div>
-        </div>
-        <!--  мобильное меню                                     -->
-        <!-- start top-nav-->
-        <div class="top-nav">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="logo"><img class="res-i" src="img/logo.png" alt=""/></div>
-              </div>
-              <div class="col-md-6">
-                <ul class="top-nav__nav">
-                  <li class="top-nav__item"><a class="top-nav__link" href="#about">About us</a>
-                  </li>
-                  <li class="top-nav__item"><a class="top-nav__link" href="#plan"> Our tours </a>
-                  </li>
-                  <li class="top-nav__item"><a class="top-nav__link" href="#offer">Become a partner</a>
-                  </li>
-                  <li class="top-nav__item"><a class="top-nav__link" href="#contact"> Contact</a>
-                  </li>
-                </ul>
-              </div>
+    <div class="main-wrapper" id="wrapper">
+      <header id="header">
+        <div class="top-line js-fixed-bar" style="top: -60px;">
+          <div class="top-line-center clearfix">
+            <div class="header-logo"><a href="/"><img src="img/logo.jpg" alt=""/></a></div>
+            <div class="top-line-btns"><a class="header-basket-ico header-basket-ico--mod" href="/search/"><img src="/local/templates/maximum.fixwidth.catalog.theme/img/ico-search.png" alt=""/></a></div>
+            <div class="header-phone">
+              <div class="header-phone-item"><a class="header-phone-ico ico-0018-phone" href="#callbackhunter"></a><span>+7 (4852) 20-80-50</span></div>
+              <div>Ярославль</div>
+            </div>
+            <div class="header-phone no-margin">
+              <div class="header-phone-item"><a class="header-phone-ico ico-0018-phone" href="#callbackhunter"></a><span>+7 (4942) 22-23-23</span></div>
+              <div>Кострома</div>
             </div>
           </div>
         </div>
-        <!-- end top-nav-->
-        <div class="container"> </div>
-        <div class="polite">v
-          <h1>dfsdfsdfdsfd  dfsdfds</h1>
+        <div class="header-center-line">
+          <div class="header-center clearfix">
+            <div class="header-logo"><a href="/"><img src="img/logo.jpg" alt=""/></a></div>
+            <div class="header-phone">
+              <div class="header-phone-item"><a class="header-phone-ico ico-0018-phone" href="#callbackhunter"></a><span>+7 (4852) 20-80-50</span></div>
+              <div>Ярославль</div>
+            </div>
+            <div class="header-phone no-margin">
+              <div class="header-phone-item"><a class="header-phone-ico ico-0018-phone" href="#callbackhunter"></a><span>+7 (4942) 22-23-23</span></div>
+              <div>Кострома</div>
+            </div>
+          </div>
+        </div>
+        <div class="user-bar">
+          <div class="user-bar-center clearfix">
+            <div class="search">
+              <div id="title-search">
+                <form action="">
+                  <input class="search-input" id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Поиск по сайту"/>
+                  <button class="search-btn ico-0014-search" name="s" type="submit"></button>
+                </form>
+              </div>
+            </div>
+            <nav class="user-bar-nav">
+              <ul id="horizontal-multilevel-menu">
+                <li><a class="root-item-selected" href="/">Виды ЭП</a>
+                  <ul>
+                    <li><a href="/catalog/ofd/">Ключ для регистрации онлайн-кассы</a></li>
+                    <li class="item-selected"><a href="/catalog/fsrar/">ФСРАР</a></li>
+                    <li><a href="/catalog/alkoegais/">ЕГАИС алкоголь</a></li>
+                    <li><a href="/catalog/goszakaz/">Госзаказ 44-ФЗ</a></li>
+                    <li><a href="/catalog/universalnaya_podpis/">Универсальная подпись</a></li>
+                    <li><a href="/catalog/rosreestr/">Росреестр</a></li>
+                    <li><a href="/catalog/rfm/">Росфинмониторинг</a></li>
+                    <li><a href="/catalog/lesegais/">ЕГАИС лес</a></li>
+                    <li><a href="/catalog/Gosuslugi/">Госуслуги</a></li>
+                    <li><a href="/catalog/komtorgi/">Коммерческие торги</a></li>
+                    <li><a href="/catalog/bankrot/">Торги по реализации имущества банкротов</a></li>
+                    <li><a href="/catalog/gisjkh/">ГИС ЖКХ</a></li>
+                    <li><a href="/catalog/gismark/">ГИС Маркировка </a></li>
+                    <li><a href="/catalog/gazprombank/">ЭТП Газпромбанк</a></li>
+                    <li><a href="/catalog/b2b/">ЭТП B2B</a></li>
+                    <li><a href="/catalog/223fz/">Закупки по 223-ФЗ</a></li>
+                    <li><a href="/catalog/Eias_fst/">ЕИАС ФСТ</a></li>
+                    <li><a href="/catalog/Rosimyhestvo/">Росимущество</a></li>
+                    <li><a href="/catalog/Fedresurs/">Федресурс</a></li>
+                    <li><a href="/catalog/SMEV/">СМЭВ</a></li>
+                    <li><a href="/catalog/Rospatent/">Роспатент</a></li>
+                    <li><a href="/catalog/fsfr/">ФСФР</a></li>
+                    <li><a href="/catalog/fts/">ФТС</a></li>
+                  </ul>
+                </li>
+                <li><a class="root-item" href="/about">О компании</a></li>
+                <li><a class="root-item" href="/contacts">Контакты</a></li>
+                <li><a class="root-item" href="/tekhpodderzhka">Техподдержка</a></li>
+              </ul>
+              <div class="menu-clear-left"></div>
+            </nav>
+          </div>
         </div>
       </header>
-      <!-- end HEADER.header-->
-      <footer class="footer">footer
+      <!-- header-->
+      <div class="header-block" id="content" style="background-image: url(&quot;img/header-bg.jpg&quot;); padding-bottom: 50px;">
+        <div class="columns clearfix">
+          <div class="columns-main">
+            <section>
+              <div class="breadcrumbs"><a href="/" title="Главная страница" itemprop="url"><span itemprop="title">Главная страница</span></a><span class="breadcrumbs-sep">/</span><span>Каталог</span>
+                <div style="clear:both;"></div>
+              </div>
+              <div class="text" style="width:800px;">
+                <h1 align="center" style="text-align: left;">Всего за 1 час мы изготовим электронную  подпись для любых целей</h1>
+                <p>Электронная подпись - это Ваш цифровой ключ к электронным торговым площадкам и новым заказчикам. <br/>Доступ к государственным информационным системам и торгам банкротов. Сдача отчетности и<br/>получение сведений из государственных реестров без визита к чиновникам</p>
+                <div class="one-click one-click--mod">
+                  <div class="text-center"><b>Всего за 1 час изготовим электронную  подпись для любых целей</b><small>отправка запроса не накладывает на вас никаких обязательств</small></div>
+                  <form action="#">
+                    <div class="one-click-item">
+                      <input class="one-click-input form-order-call-send-name" type="text" placeholder="Введите ваше имя" value=""/>
+                    </div>
+                    <div class="one-click-item">
+                      <input class="one-click-input form-order-call-send-phone" type="text" placeholder="Введите номер телефона" value=""/>
+                    </div>
+                    <div class="one-click-item"><span class="btn btn--middle btn--full form-order-call-send" onclick="yaCounter43845824.reachGoal('request'); return true;">Получить подпись</span></div>
+                    <div class="one-click-text">
+                      <input type="checkbox"/>Я ознакомлен, согласен и принимаю  условия 
+                      <a href="#" target="_blank">Политики Конфеденциальности</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </section>
+            <!-- content-columns-content-->
+          </div>
+          <!-- content-columns-main-->
+        </div>
+        <!-- columns-->
+      </div>
+      <!-- start popular-->
+      <section class="popular section" id="popular">
+        <div class="container">
+          <p class="title text-center">популярные виды электронной подписи</p>
+          <div class="row">
+                <div class="popular__col">
+                  <div class="popular__item">
+                    <div class="popular__body">
+                      <div class="popular__title">ЭЛЕКТРОННАЯ ПОДПИСЬ ДЛЯ ОНЛАЙН-КАСС (ОФД)
+                      </div>
+                      <div class="popular__text">Необходима для регистрации онлайн-кассы в ФНС и подключения  ее к ОФД согласно 54-ФЗ
+                      </div>
+                      <div class="popular__price">1500р
+                      </div>
+                    </div>
+                    <div class="popular__polosa">Получить подпись за 1 час
+                    </div>
+                    <div class="popular__body"><a class="popular__link" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="popular__col">
+                  <div class="popular__item">
+                    <div class="popular__body">
+                      <div class="popular__title">ЭЛЕКТРОННАЯ ПОДПИСЬ ДЛЯ ЕГАИС ЛЕС
+                      </div>
+                      <div class="popular__text">Необходима для сдачи электронных  деклараций в ЕГАИС, учета  древесины и сделок по ней согласно  415-ФЗ
+                      </div>
+                      <div class="popular__price">2000р
+                      </div>
+                    </div>
+                    <div class="popular__polosa">Получить подпись за 1 час
+                    </div>
+                    <div class="popular__body"><a class="popular__link" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="popular__col">
+                  <div class="popular__item">
+                    <div class="popular__body">
+                      <div class="popular__title">ЭЛЕКТРОННАЯ ПОДПИСЬ ДЛЯ РОСФИНМОНИТОРИНГ
+                      </div>
+                      <div class="popular__text">Необходима для сдачи отчетности в  Федеральную службу по  финансовому мониторингу согласно  115-ФЗ
+                      </div>
+                      <div class="popular__price">2000р
+                      </div>
+                    </div>
+                    <div class="popular__polosa">Получить подпись за 1 час
+                    </div>
+                    <div class="popular__body"><a class="popular__link" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="popular__col">
+                  <div class="popular__item">
+                    <div class="popular__body">
+                      <div class="popular__title">ЭЛЕКТРОННАЯ ПОДПИСЬ ДЛЯ ФСРАР
+                      </div>
+                      <div class="popular__text">Необходима для подачи деклараций  по розничному обороту алкоголя и  пива в электронном виде через  портал fsrar.ru
+                      </div>
+                      <div class="popular__price">1500р
+                      </div>
+                    </div>
+                    <div class="popular__polosa">Получить подпись за 1 час
+                    </div>
+                    <div class="popular__body"><a class="popular__link" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </section>
+      <!-- end popular-->
+      <!-- start s-catalog-->
+      <section class="s-catalog section" id="s-catalog">
+        <div class="container">
+          <p class="title text-center">каталог электронных цифровых подписей</p>
+          <div class="row">
+                <div class="s-catalog__col">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__img-wrap"><img src="img/cat-1.png" alt=""/>
+                    </div>
+                    <div class="s-catalog__body">
+                      <div class="s-catalog__title">Электронные торги
+                      </div>
+                      <ul>
+                        <li><a href="#">Госзаказ 44-фз</a></li>
+                        <li><a href="#">Коммерческие  торги</a></li>
+                        <li><a href="#">Торги банкротов</a></li>
+                        <li><a href="#">Госзаказ 44-фз</a></li>
+                        <li><a href="#">Коммерческие торги</a></li>
+                        <li><a href="#">Торги банкротов</a></li>
+                        <li><a href="#">Торги банкротов</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-catalog__col">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__img-wrap"><img src="img/cat-2.png" alt=""/>
+                    </div>
+                    <div class="s-catalog__body">
+                      <div class="s-catalog__title">Государственные сервисы
+                      </div>
+                      <ul>
+                        <li><a href="#">Ключ для онлайн кассы</a></li>
+                        <li><a href="#">ГИС ЖКХ</a></li>
+                        <li><a href="#">Госуслуги</a></li>
+                        <li><a href="#">Росимущество</a></li>
+                        <li><a href="#">Роспатент</a></li>
+                        <li><a href="#">СМЭВ</a></li>
+                        <li><a href="#">Росреестр</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-catalog__col">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__img-wrap"><img src="img/cat-3.png" alt=""/>
+                    </div>
+                    <div class="s-catalog__body">
+                      <div class="s-catalog__title">Отчетность
+                      </div>
+                      <ul>
+                        <li><a href="#">Госзаказ 44-фз</a></li>
+                        <li><a href="#">Коммерческие торги</a></li>
+                        <li><a href="#">Торги банкротов</a></li>
+                        <li><a href="#">Госзаказ 44-фз</a></li>
+                        <li><a href="#">Коммерческие торги</a></li>
+                        <li><a href="#">Торги банкротов</a></li>
+                        <li><a href="#"> Торги банкротов</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-catalog-->
+      <!-- start s-why-->
+      <section class="s-why section" id="s-why">
+        <div class="container text-center">
+          <p class="title">Как получить электронную подпись?</p>
+          <div class="row">
+                <div class="s-why__col">
+                  <div class="s-why__item">
+                    <div class="s-why__img-wrap"><img src="img/s-why-1.jpg" alt=""/>
+                    </div>
+                    <div class="s-why__body">
+                      <p>Отправьте заявку на сайте или позвоните по телефону</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-why__col">
+                  <div class="s-why__item">
+                    <div class="s-why__img-wrap"><img src="img/s-why-2.jpg" alt=""/>
+                    </div>
+                    <div class="s-why__body">
+                      <p>Получите подтверждение и оплатите счет</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-why__col">
+                  <div class="s-why__item">
+                    <div class="s-why__img-wrap"><img src="img/s-why-3.jpg" alt=""/>
+                    </div>
+                    <div class="s-why__body">
+                      <p>Подготовьте документы и отправьте скан-копии по электронной почте</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-why__col">
+                  <div class="s-why__item">
+                    <div class="s-why__img-wrap"><img src="img/s-why-4.jpg" alt=""/>
+                    </div>
+                    <div class="s-why__body">
+                      <p>Получите сертификат электронной  подписи в центре выдачи электронных подписей</p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-why-->
+      <!-- start s-form -->
+      <section class="s-form section reviews reviews reviews--mod active" id="s-form">
+        <div class="reviews-center clearfix">
+          <!-- <a class="reviews-all" href="#">Все отзывы</a>-->
+          <div class="s-form__head text-center">
+            <div class="recommend-head h4">Затрудняетесь с выбором электронной подписи?</div>
+            <div class="s-form__sub-title">Получите бесплатную консультацию в течение 15 минут!
+            </div>
+            <div class="s-form__form-wrap">
+              <form action="#"> 
+                <div class="row">
+                  <div class="s-form__col">
+                    <div class="one-click-item">
+                      <input class="one-click-input form-order-call-send-phone" type="text" placeholder="Введите номер телефона" value=""/>
+                    </div>
+                  </div>
+                  <div class="s-form__col">
+                    <div class="one-click-item"><span class="btn btn--middle btn-red btn--full form-order-call-send" onclick="yaCounter43845824.reachGoal('request'); return true;">Получить подпись</span></div>
+                  </div>
+                </div>
+                <div class="one-click-text">
+                  <input type="checkbox"/>Я ознакомлен, согласен и принимаю  условия 
+                  <a href="#" target="_blank">Политики Конфеденциальности</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-form-->
+      <!-- start s-dop-->
+      <section class="s-dop section" id="s-dop">
+        <div class="container text-center">
+          <p class="title">Дополнительные услуги</p>
+          <div class="row">
+                <div class="s-dop__col">
+                  <div class="s-dop__item">
+                    <div class="s-dop__img-wrap"><img src="img/dop-1.jpg" alt=""/>
+                    </div>
+                    <div class="s-dop__body">
+                      <div class="s-dop__title">Сопровождение акредитации на ЭТП
+                      </div>
+                      <p>На каждой электроной площадке аккредитация проводится отдельно. Срок рассмотрения заявки на аккредитацию зависит от регламента площадки, в среднем составляет 3-5 рабочих дней. Наша компания поможет сэкономить время и пройдет аккредитацию за вас.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-dop__col">
+                  <div class="s-dop__item">
+                    <div class="s-dop__img-wrap"><img src="img/dop-2.jpg" alt=""/>
+                    </div>
+                    <div class="s-dop__body">
+                      <div class="s-dop__title">Лицензия КриптоПро CSP
+                      </div>
+                      <p>Для работы с электронной подписью требуется установить на компьютер криптопровайдер(СКЗИ). Криптопровайдер - это программное обеспечение, енерирующее электронную подпись при подписании документов. Приобретайте лицензию на КриптоПро CSP всего от 600 рублей. </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-dop__col">
+                  <div class="s-dop__item">
+                    <div class="s-dop__img-wrap"><img src="img/dop-3.jpg" alt=""/>
+                    </div>
+                    <div class="s-dop__body">
+                      <div class="s-dop__title">Оформление деклараций по обороту алкоголя
+                      </div>
+                      <p>Сдача алкогольной отчетности теперь не проблема для наших клиентов. Вы покупаете электронную подпись, заключаете с нами договор, а дальше мы все берем на себя. Вам останется только получить квитанцию о сданной отчетности.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-dop__col">
+                  <div class="s-dop__item">
+                    <div class="s-dop__img-wrap"><img src="img/dop-4.jpg" alt=""/>
+                    </div>
+                    <div class="s-dop__body">
+                      <div class="s-dop__title">Срочный выпуск за 1 час
+                      </div>
+                      <p>Закончилась электронная подпись, а торги уже сегодня? Мы изготовим электронную подпись в максимально сжатые сроки - всего за 1 час!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-dop__col">
+                  <div class="s-dop__item">
+                    <div class="s-dop__img-wrap"><img src="img/dop-5.jpg" alt=""/>
+                    </div>
+                    <div class="s-dop__body">
+                      <div class="s-dop__title">Фискализация
+                      </div>
+                      <p>Наша компания предлагает услугу регистрации онлайн-кассы на сайте налоговой инспекции и активации фискального накопителя.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-dop__col">
+                  <div class="s-dop__item">
+                    <div class="s-dop__img-wrap"><img src="img/dop-6.jpg" alt=""/>
+                    </div>
+                    <div class="s-dop__body">
+                      <div class="s-dop__title">Подключение к ОФД
+                      </div>
+                      <p>У нас вы можете подключится к оператору фискальных данных Такском для последующей передачи чеков в налоговую согласно 54-ФЗ.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-dop__col">
+                  <div class="s-dop__item">
+                    <div class="s-dop__img-wrap"><img src="img/dop-7.jpg" alt=""/>
+                    </div>
+                    <div class="s-dop__body">
+                      <div class="s-dop__title">Продажа онлайн касс
+                      </div>
+                      <p>Предлагаем широкий ассортимент кассовой техники по 54-ФЗ от известных и надежных производителей (АТОЛ, ЭВОТОР). Наши специалисты подберут модель кассы под Ваши потребности и финансовые возможности.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-dop__col">
+                  <div class="s-dop__item">
+                    <div class="s-dop__img-wrap"><img src="img/dop-8.jpg" alt=""/>
+                    </div>
+                    <div class="s-dop__body">
+                      <div class="s-dop__title">Техническая поддержка
+                      </div>
+                      <p>Сотрудники компании быстро и профессионально настроят все необходимые программные средства для работы с электронной подписью. Мы окажем помощь на протяжении всего срока использования ЭЦП. </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-dop__col">
+                  <div class="s-dop__item">
+                    <div class="s-dop__img-wrap"><img src="img/dop-9.jpg" alt=""/>
+                    </div>
+                    <div class="s-dop__body">
+                      <div class="s-dop__title">Система Технокад Экспресс
+                      </div>
+                      <p>"ТехноКад-Экспресс" это программа для формирования межевых, технических планов, карт (планов), схем расположения ЗУ на КПТ и других документов для кадастрового учета. Можно создавать как электронные, так и печатные версии документов с возможностью их дальнейшей отправки в органы Росреестра.</p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-dop-->
+      <!-- start s-preim-->
+      <div class="recommend recommend--mod pic_block_06 s-preim">
+        <div class="recommend-center">
+          <div class="article clearfix">
+            <p style="text-align: center;"><span style="font-size: 18pt;">НАШИ ПРЕИМУЩЕСТВА:</span></p>
+            <table cellpadding="1" cellspacing="1" style="width: 100%;">
+              <tbody>
+                <tr>
+                  <td><img width="71" alt="icon1.png" src="/upload/medialibrary/913/913e42ec42c27b6bc7827f8ee8cb92c1.png" height="71" title="icon1.png"/><span style="font-size: 7pt;"> </span></td>
+                  <td><span style="font-size: 7pt;"><span style="font-size: 12pt;"><b>Широкий выбор сертификатов ЭП</b></span></span><br/><span style="font-size: 12pt;">Электронные подписи, выпускаемые нашей Компанией,</span><span style="font-size: 12pt;">могут использоваться на самых разных порталах и торговых площадках страны.</span><br/></td>
+                  <td><img width="71" alt="icon3.png" src="/upload/medialibrary/558/558496e438e12c8d2920ada45fcdf196.png" height="71" title="icon3.png"/><span style="font-size: 12pt;"> </span></td>
+                  <td><span style="font-size: 12pt;"><b>Возможность срочного выпуска ЭП за 1 час </b></span><br/><span style="font-size: 12pt;">У нас Вы сможете получить ЭП спустя час после обращения.<br/></span><br/></td>
+                </tr>
+                <tr>
+                  <td><br/><img width="71" alt="icon4.png" src="/upload/medialibrary/986/9862e677401422e2a16d8052c538e0c7.png" height="71" title="icon4.png"/></td>
+                  <td><span style="font-size: 12pt;"><b>Стандартный выпуск ЭП не превышает одни сутки</b></span><br/><span style="font-size: 12pt;">Уже на следующий день после оплаты и предоставления документов вы <br/></span><span style="font-size: 12pt;">получаете электронную подпись, готовую для работы.</span></td>
+                  <td><img width="71" alt="icon2.png" src="/upload/medialibrary/00d/00dea212a1ecf7e51b96e771a2ede604.png" height="71" title="icon2.png"/></td>
+                  <td><span style="font-size: 12pt;"><b>Единоразовое посещение нашего офиса</b></span><br/><span style="font-size: 12pt;">Вы посещаете наш офис только 1 раз, когда забираете готовую </span><span style="font-size: 12pt;">электронную подпись. </span><span style="font-size: 12pt;">Остальное взаимодействие происходит по электронной почте.</span></td>
+                </tr>
+                <tr>
+                  <td><br/><img width="71" alt="icon5.png" src="/upload/medialibrary/f06/f063f3abb8d88636e9f4a4a06999d5f3.png" height="71" title="icon5.png"/></td>
+                  <td><span style="font-size: 12pt;"><b>Техническая поддержка пользователей</b></span><br/><span style="font-size: 12pt;">Возможность обратиться к техническим специалистам Компании и получить решение проблемы в кратчайшие сроки.</span></td>
+                  <td><img width="71" alt="icon6.png" src="/upload/medialibrary/6b1/6b1e078059a9197ccd0544f1d14dd622.png" height="71" title="icon6.png"/></td>
+                  <td><span style="font-size: 12pt;"><b>Минимальный комплект документов</b></span><br/><span style="font-size: 12pt;">Для выпуска электронной подписи теперь не требуется предоставлять оригинал выписки из ЕГРЮЛ (ЕГРИП).<br/></span><span style="font-size: 12pt;"><br/></span><span style="font-size: 12pt;"> </span></td>
+                </tr>
+                <tr>
+                  <td colspan="1"><br/><img width="71" alt="icon8.png" src="/upload/medialibrary/5a2/5a243ed228b6f74374be2715b83462fc.png" height="71" title="icon8.png"/><span style="font-size: 12pt;"> </span></td>
+                  <td colspan="1"><span style="font-size: 12pt;"> </span><span style="font-size: 12pt;"><b>Сотрудничество с аккредитованным УЦ</b></span><br/><span style="font-size: 12pt;">Гарантия того, что подпись будет работать на заявленных порталах и торговых площадках.</span><span style="font-size: 12pt;"> </span></td>
+                  <td colspan="1"><img width="71" alt="icon7.png" src="/upload/medialibrary/a72/a7269a2673729733a59d8af96b44c186.png" height="71" title="icon7.png"/><span style="font-size: 12pt;"> </span></td>
+                  <td colspan="1"><span style="font-size: 12pt;"><b>Дополнительные услуги</b></span><br/><span style="font-size: 12pt;">Аккредитация на торговой площадке, сдача алкогольной отчетности теперь не проблема для наших клиентов.</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- end s-preim-->
+      <!-- start s-form -->
+      <section class="s-form section reviews reviews reviews--mod active" id="s-form">
+        <div class="reviews-center clearfix">
+          <!-- <a class="reviews-all" href="#">Все отзывы</a>-->
+          <div class="s-form__head text-center">
+            <div class="recommend-head h4">Затрудняетесь с выбором электронной подписи?</div>
+            <div class="s-form__sub-title">Получите бесплатную консультацию в течение 15 минут!
+            </div>
+            <div class="s-form__form-wrap">
+              <form action="#"> 
+                <div class="row">
+                  <div class="s-form__col">
+                    <div class="one-click-item">
+                      <input class="one-click-input form-order-call-send-phone" type="text" placeholder="Введите номер телефона" value=""/>
+                    </div>
+                  </div>
+                  <div class="s-form__col">
+                    <div class="one-click-item"><span class="btn btn--middle btn-red btn--full form-order-call-send" onclick="yaCounter43845824.reachGoal('request'); return true;">Получить подпись</span></div>
+                  </div>
+                </div>
+                <div class="one-click-text">
+                  <input type="checkbox"/>Я ознакомлен, согласен и принимаю  условия 
+                  <a href="#" target="_blank">Политики Конфеденциальности</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-form-->
+      <!-- start s-about-->
+      <section class="s-about section" id="s-about">
+        <div class="container">
+          <p class="title text-center">О компании</p>
+          <div class="s-about__text">
+            <p>ООО «ЭЛЕКТРОННЫЕ БИЗНЕС ТЕХНОЛОГИИ» работает на рынке услуг по выпуску электронной подписи с 2012 года. Компания является региональным представительством Удостоверяющего центра, аккредитованного Министерством связи и массовых коммуникаций Российской Федерации. </p>
+            <p>С 2015 года является также официальным дилером ООО «КРИПТО-ПРО» в части реализации лицензий программных продуктов.<br/>Сотрудники компании быстро и профессионально подберут электронную подпись для работы с различными информационными системами, порталами, для участия в торгах, для электронного документооборота ,а также проконсультируют Вас по техническим вопросам настройки всех необходимых программных средств для работы с электронной подписью. Офисы Компании открыты для Вас в Костроме и Ярославле.  </p>
+          </div>
+          <div class="s-about__sert-wrap text-center">
+            <div class="row gal">
+                <div class="s-about__col">
+                  <div class="s-about__item">
+                    <div class="s-about__title">Сертификат официально партнера  Удостоверяющего центра в  Костромской области
+                    </div><a class="s-about__img-wrap" href="img/sert-1.jpg"><img src="img/sert-1.jpg" alt=""/></a>
+                  </div>
+                </div>
+                <div class="s-about__col">
+                  <div class="s-about__item">
+                    <div class="s-about__title">Сертификат официального диллера КриптоПро
+                    </div><a class="s-about__img-wrap" href="img/sert-2.jpg"><img src="img/sert-2.jpg" alt=""/></a>
+                  </div>
+                </div>
+                <div class="s-about__col">
+                  <div class="s-about__item">
+                    <div class="s-about__title">Сертификат официального партнера  Удостоверяющего центра в Ярославской области.
+                    </div><a class="s-about__img-wrap" href="img/sert-3.jpg"><img src="img/sert-3.jpg" alt=""/></a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-about-->
+      <!-- start s-klient-->
+      <section class="s-klient section" id="s-klient">
+        <div class="container text-center">
+          <p class="title">наши КЛИЕНТЫ</p>
+          <div class="row">
+            <div class="s-klient__col">
+              <div class="s-klient__img-wrap"><img class="res-i" src="img/klient-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-klient__col">
+              <div class="s-klient__img-wrap"><img class="res-i" src="img/klient-2.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-klient__col">
+              <div class="s-klient__img-wrap"><img class="res-i" src="img/klient-3.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-klient__col">
+              <div class="s-klient__img-wrap"><img class="res-i" src="img/klient-4.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-klient__col">
+              <div class="s-klient__img-wrap"><img class="res-i" src="img/klient-5.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-klient__col">
+              <div class="s-klient__img-wrap"><img class="res-i" src="img/klient-6.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-klient__col">
+              <div class="s-klient__img-wrap"><img class="res-i" src="img/klient-7.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-klient__col">
+              <div class="s-klient__img-wrap"><img class="res-i" src="img/klient-8.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-klient__col">
+              <div class="s-klient__img-wrap"><img class="res-i" src="img/klient-9.jpg" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-klient-->
+      <!-- start s-faq-->
+      <div class="faq faq-new">
+        <div class="faq-center">
+          <p class="title text-center">Вопросы и ответы</p>
+          <div class="faq-body">
+            <div class="row">
+              <div class="col-6">
+                <div class="faq-item">
+                  <div class="faq-item-head"><span class="faq-item-link active">Как узнать, передает ли касса данные оператору?</span></div>
+                  <div class="faq-item-content" style="display: block;">
+                    <div class="faq-item-body">Эту информацию можно будет посмотреть в Личном кабинете на сайте ОФД «Такском». У нас предусмотрена система уведомлений о событиях, на которые нужно реагировать. Например, когда касса не передает чеки 24 часа или трое суток.</div>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <div class="faq-item-head"><span class="faq-item-link">Что будет с данными, если вдруг пропадет Интернет?</span></div>
+                  <div class="faq-item-content hidden">
+                    <div class="faq-item-body">По закону у вас есть 30 дней на то, чтобы устранить неполадки. В течение 30 дней фискальный накопитель накапливает данные и передает их при первом же подключении к Интернету. По истечении 30 дней без связи фискальный накопитель кассы блокируется.</div>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <div class="faq-item-head"><span class="faq-item-link">Примерный объем трафика, который будет передаваться с фискального накопителя в ОФД?</span></div>
+                  <div class="faq-item-content hidden">
+                    <div class="faq-item-body">Объем трафика зависит от количества и размеров документов, которые будут передаваться. На каждый фискальный документ от ОФД будет приходить подтверждение о его получении. Примерные цифры из расчета средний чек на 10 позиций, 2 чека в минуту при смене в 10 часов - 600 КБ или примерно 18 МБ в месяц в одной кассы.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="faq-item">
+                  <div class="faq-item-head"><span class="faq-item-link">Какие штрафы грозят за неверное применение ККТ?</span></div>
+                  <div class="faq-item-content hidden">
+                    <div class="faq-item-body">Штрафы за неприменение или неверное применение ККТ составляют от ¼ до полной суммы расчета без применения ККТ, но не менее 30 000 рублей для юридического лица. Но не стоит волноваться, в ФНС понимают, что в переходный период никто не застрахован от ошибок, поэтому законом предусмотрен минимальный размер штрафа, если владелец ККТ признал вину и добровольно исполнил неисполненные обязательства до вынесения постановления о правонарушении.</div>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <div class="faq-item-head"><span class="faq-item-link">Нужно ли готовиться к переходу на онлайн-кассы заранее?</span></div>
+                  <div class="faq-item-content hidden">
+                    <div class="faq-item-body">
+                      Нужно. Уже сейчас вы можете перейти на работу с онлайн-кассами, заключив договор с ОФД «Такском». Надо понимать, что, хотя обязанность применять онлайн-кассы для большинства наступит в июле 2017 года, перерегистрация кассовой техники займет у вас некоторое время.
+                      Если же Вы владелец большого парка ККТ, мы настоятельно рекомендуем разработать план перехода, так как для снятия старой кассы с учета, Вам потребуется ее на время отключить, а значит, переходить на онлайн-кассы Вам нужно будет постепенно, чтобы не было простоя в работе торговых точек.
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <div class="faq-item-head"><span class="faq-item-link">Нужно ли готовиться к переходу на онлайн-кассы заранее?</span></div>
+                    <div class="faq-item-content hidden">
+                      <div class="faq-item-body">
+                        Нужно. Уже сейчас вы можете перейти на работу с онлайн-кассами, заключив договор с ОФД «Такском». Надо понимать, что, хотя обязанность применять онлайн-кассы для большинства наступит в июле 2017 года, перерегистрация кассовой техники займет у вас некоторое время.
+                        Если же Вы владелец большого парка ККТ, мы настоятельно рекомендуем разработать план перехода, так как для снятия старой кассы с учета, Вам потребуется ее на время отключить, а значит, переходить на онлайн-кассы Вам нужно будет постепенно, чтобы не было простоя в работе торговых точек.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <div class="faq-item-head"><span class="faq-item-link">Нужно ли готовиться к переходу на онлайн-кассы заранее?</span></div>
+                    <div class="faq-item-content hidden">
+                      <div class="faq-item-body">
+                        Нужно. Уже сейчас вы можете перейти на работу с онлайн-кассами, заключив договор с ОФД «Такском». Надо понимать, что, хотя обязанность применять онлайн-кассы для большинства наступит в июле 2017 года, перерегистрация кассовой техники займет у вас некоторое время.
+                        Если же Вы владелец большого парка ККТ, мы настоятельно рекомендуем разработать план перехода, так как для снятия старой кассы с учета, Вам потребуется ее на время отключить, а значит, переходить на онлайн-кассы Вам нужно будет постепенно, чтобы не было простоя в работе торговых точек.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <div class="faq-item-head"><span class="faq-item-link">Нужно ли готовиться к переходу на онлайн-кассы заранее?</span></div>
+                    <div class="faq-item-content hidden">
+                      <div class="faq-item-body">
+                        Нужно. Уже сейчас вы можете перейти на работу с онлайн-кассами, заключив договор с ОФД «Такском». Надо понимать, что, хотя обязанность применять онлайн-кассы для большинства наступит в июле 2017 года, перерегистрация кассовой техники займет у вас некоторое время.
+                        Если же Вы владелец большого парка ККТ, мы настоятельно рекомендуем разработать план перехода, так как для снятия старой кассы с учета, Вам потребуется ее на время отключить, а значит, переходить на онлайн-кассы Вам нужно будет постепенно, чтобы не было простоя в работе торговых точек.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <div class="faq-item-head"><span class="faq-item-link">Нужно ли готовиться к переходу на онлайн-кассы заранее?</span></div>
+                    <div class="faq-item-content hidden">
+                      <div class="faq-item-body">
+                        Нужно. Уже сейчас вы можете перейти на работу с онлайн-кассами, заключив договор с ОФД «Такском». Надо понимать, что, хотя обязанность применять онлайн-кассы для большинства наступит в июле 2017 года, перерегистрация кассовой техники займет у вас некоторое время.
+                        Если же Вы владелец большого парка ККТ, мы настоятельно рекомендуем разработать план перехода, так как для снятия старой кассы с учета, Вам потребуется ее на время отключить, а значит, переходить на онлайн-кассы Вам нужно будет постепенно, чтобы не было простоя в работе торговых точек.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="faq-item">
+                    <div class="faq-item-head"><span class="faq-item-link">Нужно ли готовиться к переходу на онлайн-кассы заранее?</span></div>
+                    <div class="faq-item-content hidden">
+                      <div class="faq-item-body">
+                        Нужно. Уже сейчас вы можете перейти на работу с онлайн-кассами, заключив договор с ОФД «Такском». Надо понимать, что, хотя обязанность применять онлайн-кассы для большинства наступит в июле 2017 года, перерегистрация кассовой техники займет у вас некоторое время.
+                        Если же Вы владелец большого парка ККТ, мы настоятельно рекомендуем разработать план перехода, так как для снятия старой кассы с учета, Вам потребуется ее на время отключить, а значит, переходить на онлайн-кассы Вам нужно будет постепенно, чтобы не было простоя в работе торговых точек.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-faq-->
+      <!-- start s-form -->
+      <section class="s-form section reviews reviews reviews--mod active" id="s-form">
+        <div class="reviews-center clearfix">
+          <!-- <a class="reviews-all" href="#">Все отзывы</a>-->
+          <div class="s-form__head text-center">
+            <div class="recommend-head h4">Затрудняетесь с выбором электронной подписи?</div>
+            <div class="s-form__sub-title">Получите бесплатную консультацию в течение 15 минут!
+            </div>
+            <div class="s-form__form-wrap">
+              <form action="#"> 
+                <div class="row">
+                  <div class="s-form__col">
+                    <div class="one-click-item">
+                      <input class="one-click-input form-order-call-send-phone" type="text" placeholder="Введите номер телефона" value=""/>
+                    </div>
+                  </div>
+                  <div class="s-form__col">
+                    <div class="one-click-item"><span class="btn btn--middle btn-red btn--full form-order-call-send" onclick="yaCounter43845824.reachGoal('request'); return true;">Получить подпись</span></div>
+                  </div>
+                </div>
+                <div class="one-click-text">
+                  <input type="checkbox"/>Я ознакомлен, согласен и принимаю  условия 
+                  <a href="#" target="_blank">Политики Конфеденциальности</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-form--><br><br>
+      <!-- start s-news-->
+      <section class="center clearfix">
+        <div class="news"><a class="news-all f-right" href="/news/">Все новости</a>
+          <div class="news-head h3">
+            <div>Новости</div>
+          </div>
+          <div class="news-body clearfix">
+            <div class="news-item">
+              <div class="news-date">
+                <div class="news-date-day">23</div>
+                <div>Май</div>
+                <div>2017</div>
+              </div>
+              <div class="news-text">
+                <div class="news-title"><a href="news/268/">В каком случае нельзя штрафовать за неприменение ККТ при реализации алкогольной продукции?</a></div>
+                <p>Если налоговый орган обнаружит факт неприменения ККТ при реализации алкогольной продукции, но выявит обстоятельства ...</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-date">
+                <div class="news-date-day">19</div>
+                <div>Май</div>
+                <div>2017</div>
+              </div>
+              <div class="news-text">
+                <div class="news-title"><a href="news/267/">Что значит для бизнеса внедрение новой контрольно-кассовой техники?</a></div>
+                <p>С 1 июля в России изменится вся розничная торговля. Об этом программе «Налоги» рассказал начальник Управления оперативного контроля ФНС России Андрей Бударин.</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-date">
+                <div class="news-date-day">18</div>
+                <div>Май</div>
+                <div>2017</div>
+              </div>
+              <div class="news-text">
+                <div class="news-title"><a href="news/266/">Программа «Цифровая экономика Российской Федерации» должна быть утверждена до 1 июня 2017 года</a></div>
+                <p>Проект программы предусматривает снизить издержки организаций при предоставлении отчетности и взаимодействии с ...</p>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="news-date">
+                <div class="news-date-day">16</div>
+                <div>Май</div>
+                <div>2017</div>
+              </div>
+              <div class="news-text">
+                <div class="news-title"><a href="news/265/">Все организации и ИП, которые продают алкоголь, с 31 марта 2017 года обязаны применять контрольно-кассовую технику.</a></div>
+                <p>Если организация пользуется ККТ старого образца, то она...</p>
+              </div>
+            </div>
+            <!-- <div class="news-item">-->
+            <!-- <div class="news-date">-->
+            <!-- <div class="news-date-day">08</div>-->
+            <!-- <div>Марта</div>-->
+            <!-- <div>2016</div>-->
+            <!-- </div>-->
+            <!-- <div class="news-text">-->
+            <!-- <div class="news-title"><a href="#">Внесены изменения в правила активации подарочных сертификатов</a></div>-->
+            <!-- <p>Уважаемые покупатели! Обращаем ваше внимание, что в целях повышения уровня безопасности и защиты персональных данных клиентов «Максимум» вступают в силу новые правила активации подарочных сертификатов.</p>-->
+            <!-- </div>-->
+            <!-- </div>-->
+            <!-- <div class="news-item">-->
+            <!-- <div class="news-date">-->
+            <!-- <div class="news-date-day">08</div>-->
+            <!-- <div>Марта</div>-->
+            <!-- <div>2016</div>-->
+            <!-- </div>-->
+            <!-- <div class="news-text">-->
+            <!-- <div class="news-title"><a href="#">Режим работы в праздничные дни</a></div>-->
+            <!-- <p>Уважаемые покупатели!  Доставка товаров по России в праздничные дни работает в следующем режиме:-->
+            <!-- 31 декабря 2015 года: работа в обычном режиме. C 01 января по 10 января 2016 года заказы принимаются на сайте в обычном режиме. . </p>-->
+            <!-- </div>-->
+            <!-- </div>-->
+            <!-- <div class="news-item">-->
+            <!-- <div class="news-date">-->
+            <!-- <div class="news-date-day">08</div>-->
+            <!-- <div>Марта</div>-->
+            <!-- <div>2016</div>-->
+            <!-- </div>-->
+            <!-- <div class="news-text">-->
+            <!-- <div class="news-title"><a href="#">Внесены изменения в правила активации подарочных сертификатов</a></div>-->
+            <!-- <p>Уважаемые покупатели! В связи с предстоящими новогодними праздниками «Максимум» продлевает действие условий сервиса Moneyback для покупок, совершённых с 15 по 31 декабря 2015 года.</p>-->
+            <!-- </div>-->
+            <!-- </div>-->
+            <!-- <div class="news-item">-->
+            <!-- <div class="news-date">-->
+            <!-- <div class="news-date-day">08</div>-->
+            <!-- <div>Марта</div>-->
+            <!-- <div>2016</div>-->
+            <!-- </div>-->
+            <!-- <div class="news-text">-->
+            <!-- <div class="news-title"><a href="#">Внесены изменения в правила активации подарочных сертификатов</a></div>-->
+            <!-- <p>Уважаемые покупатели! <br>-->
+            <!-- Мы в деле! Интернет-ретейлер номер один «Максимум» дебютирует на всероссийской онлайн-распродаже Black Friday 2015.</p>-->
+            <!-- </div>-->
+            <!-- </div>-->
+          </div>
+        </div>
+      </section>
+      <!-- end s-news-->
+      <footer id="footer">
+        <div class="footer-center clearfix">
+          <div class="footer-copy">2010 - 2017 <br/>© ЭЛЕКТРОННЫЕ БИЗНЕС ТЕХНОЛОГИИ</div>
+          <div class="footer-menu"><a href="about/index.html">О КОМПАНИИ</a><a href="contacts/index.html">КОНТАКТЫ</a><a href="tekhpodderzhka/index.html">ТЕХПОДДЕРЖКА</a></div>
+          <div class="footer-dev">Разработка сайта <br/><a href="http://www.aisol.ru/">АйТи Решения</a></div>
+        </div>
       </footer>
-      <div class="form-wrap text-center zoom-anim-dialog mfp-hide modal modal-form" id="small-dialog">
-        <h3>Оставьте заявку</h3>
-        <p class="form-wrap__h4">на бесплатную консультацию
-        </p>
-        <form method="post" action="action.php">
-          <input type="hidden" name="project_name" value="Заявка с сайта"/>
-          <input class="form_subject" type="hidden" name="form_subject" value="Заявка  с сайта"/>
-          <input type="hidden" name="admin_email" value="dmitriiperkov@gmail.com"/>
-          <input type="hidden" name="admin_email2" value="m.neohouse@list.ru "/>
-          <input class="order" type="hidden" name="Заявка" value=" на консультацию"/>
-          <div class="form-wrap__item-wrap">
-            <!-- .form-wrap__item-->
-            <div class="form-wrap__item">
-              <input type="text" placeholder="Введите ваше имя" name="Имя" required="required"/>
-            </div>
-            <!-- .form-wrap__item-->
-            <div class="form-wrap__item">
-              <input type="tel" placeholder="Введите ваш телефон" name="Телефон" required="required"/>
-            </div>
-            <!-- .form-wrap__item-->
-            <div class="form-wrap__item">
-              <div class="form-wrap__btn-wrap">
-                <button class="form-wrap__btn btn btn-danger" type="submit">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
-                </button>
-              </div>
-            </div>
-            <!-- .form-wrap__item -->
-            <div class="clearfix"></div>
-            <div class="politic">
-              Отправляя заявку Вы даете
-              <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
-              
-              на&#160;обработку персональных данных
-            </div>
-          </div>
-          <!-- .form-wrap__item  -->
-        </form>
-      </div>
-      <div class="form-wrap text-center zoom-anim-dialog mfp-hide modal modal-form" id="foot-dialog">
-        <h3>Оставьте Ваш номера телефона</h3>
-        <p class="form-wrap__h4">и мы Вам перезвоним
-        </p>
-        <form method="post" action="action.php">
-          <input type="hidden" name="project_name" value="Заявка с сайта"/>
-          <input class="form_subject" type="hidden" name="form_subject" value="Заявка  с сайта"/>
-          <input type="hidden" name="admin_email" value="dmitriiperkov@gmail.com"/>
-          <input type="hidden" name="admin_email2" value="m.neohouse@list.ru "/>
-          <input class="order" type="hidden" name="Заявка" value=" на консультацию"/>
-          <div class="form-wrap__item-wrap"> 
-            <div class="form-wrap__item">
-              <input type="tel" placeholder="Введите ваш телефон" name="Телефон" required="required"/>
-            </div>
-            <!-- .form-wrap__item-->
-            <div class="form-wrap__item">
-              <div class="form-wrap__btn-wrap">
-                <button class="form-wrap__btn btn btn-danger" type="submit">Заказать звонок
-                </button>
-              </div>
-            </div>
-            <!-- .form-wrap__item -->
-            <div class="clearfix"></div>
-            <div class="politic">
-              Отправляя заявку Вы даете
-              <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
-              
-              на&#160;обработку персональных данных
-            </div>
-          </div>
-          <!-- .form-wrap__item -->
-        </form>
-      </div>
-      <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/>
-        <h3>Заявка принята</h3><br/>
-        <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
-      </div>
-      <!-- modal-->
+      <!-- footer-->
     </div>
     <script src="js/scripts.min.js"></script>
+    <script src="local/templates/elb.theme/js/jquery.main.js"></script>
+    <script src="local/templates/elb.theme/js/popup.js"></script>
+    <script src="local/templates/elb.theme/js/jquery.growl.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
