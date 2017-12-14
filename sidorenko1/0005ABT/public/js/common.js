@@ -37,5 +37,41 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
     return false;
 });
 });
+
+     // модальное окно
+   $('.popup-with-move-anim').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: true,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
+  });
+ 
+    // галерея
+  $(".gal").magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    mainClass: 'mfp-with-zoom mfp-img-mobile',
+    image: {
+      verticalFit: true,
+      // titleSrc: function(item) {
+      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+      // }
+    },
+    gallery: {
+      enabled: true
+    }
+  });
+ // форма
     
 });
