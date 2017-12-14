@@ -38,21 +38,25 @@
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
     }
-    var topH=$("header ").innerHeight();  
+    var topH=$(".header-block").innerHeight();  
     if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed');
+                   
+                    $('.btn-top  ').addClass('active');
                     
                 }
                 else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed');
+                   
+                    $('.btn-top  ').removeClass('active');
                    
                 }
     $(window).scroll(function(){
                 if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed'); 
+                
+                    $('.btn-top  ').addClass('active'); 
                 }
                 else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed'); 
+                  
+                    $('.btn-top ').removeClass('active'); 
                 }
             });
        // конец добавил 
@@ -72,21 +76,26 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- // $(" .top-nav a").click(function () {
- //        var elementClick = $(this).attr("href");
- //        var destination = $(elementClick).offset().top;
+ $(" .top-nav a").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
         
- //            $('html, body').animate({ scrollTop: destination }, 1100);
+            $('html, body').animate({ scrollTop: destination }, 1100);
         
- //        return false; 
- //    });
+        return false; 
+    });
+
+ $(" .btn-top").click(function () {
+        var elementClick = $('header');
+        var destination = $(elementClick).offset().top;
+        
+            $('html, body').animate({ scrollTop: destination }, 1100);
+        
+        return false; 
+    });
 
 
- $('.top-nav a').onePageNav({
-            currentClass: 'active',
-            scrollThreshold: 0.2, // Adjust if Navigation highlights too early or too late
-            scrollSpeed: 1000
-        });
+ 
 // табы
 $(function() {
 var tab = ('tabs');
