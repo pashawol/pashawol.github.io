@@ -1,7 +1,28 @@
  jQuery(document).ready(function($) { 
 
   // Custom JS
-  
+  var url=document.location.href; 
+  $.each($(".top_line__nav a, .footer__nav a "),function(){
+ 
+  if(this.href==url){
+    if($(this).hasClass("top_line__link") == true){
+
+    $(this).addClass('top_line__link-active');
+    }
+    if($(this).hasClass("footer__link") == true){
+
+    $(this).addClass('footer__link-active');
+    }
+
+  };
+ 
+  });
+  // var url2=document.location.href; $.each($(".footer__nav a  "),function(){
+ 
+  // if(this.href==url){$(this).addClass('footer__link-active');};
+ 
+  // });
+
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
     
@@ -22,7 +43,7 @@
       $(".hidden-mnu").removeClass("active");
       $("body").removeClass("fixed");
         }
-        
+
     });
  
   function heightses() {
