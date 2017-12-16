@@ -22,6 +22,7 @@
       $(".hidden-mnu").removeClass("active");
       $("body").removeClass("fixed");
         }
+        
     });
  
   function heightses() {
