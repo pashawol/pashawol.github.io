@@ -223,27 +223,38 @@ $gallery2.slick({
  }
 
  section_slider();
-  // слацдеры в табах
-// табы
+// табы  . Теперь данные активного таба остается в storage
+ 
+
+// табы  . Теперь данные активного таба остается в storage
 $(function() {
-var tab = ('tabs');
-// $(' .' + tab + '__caption   .' + tab + '__btn:first-child  ').addClass('active')
- // $('.' + tab + '__content:first-child ').addClass("active");
+var tab = ('tabs'); 
+  $( tab + '__caption').each(function(i) {
+    var storage = localStorage.getItem('tab' + i);
+    if (storage) {
+      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
+        .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
+    }
+  }); 
 $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
 
   $(this)
     .addClass('active').addClass('current').siblings().removeClass('active')
-    .closest('.' + tab + '').find('.' + tab + '__content').hide().removeClass('active')
+    .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
     .eq($(this).index()).fadeIn().addClass('active');
-   
+
+    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
+    localStorage.removeItem('tab' + ulIndex);
+    localStorage.setItem('tab' + ulIndex, $(this).index());
+
     slfo.slick("destroy");
     slfo2.slick("destroy");
     $gallery.slick("destroy");
     $gallery2.slick("destroy");
      section_slider();
-    return false;
 });
 });
+
 
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({

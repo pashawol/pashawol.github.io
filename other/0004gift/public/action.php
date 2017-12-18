@@ -1,7 +1,7 @@
 <?php
 ini_set( 'display_errors', 1 );
 require __DIR__ . '/vendor/autoload.php';
-
+ // $to='trifectahealthnyc@gmail.com';    
 $mail = new PHPMailer(true);
 $mail->IsMail();
 $mail->IsHTML(true);
@@ -10,7 +10,7 @@ $mail->Encoding = 'base64';
 $mail->CharSet = 'utf-8';
 
 ///от кого письмо  
-$mail->setFrom('info@info.info');
+$mail->setFrom('info@info.com');
 
  $mail->addAddress('wol1414@gmail.com');
  // $mail->addAddress('horenkova369@gmail.com');
@@ -29,16 +29,21 @@ $html = '
         $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид формы:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['order'] . '</b></td></tr>';
     }
 
-    if (isset($_POST['name'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Имя:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['name'] . '</b></td></tr>';
+    if (isset($_POST['user_name'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Name:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['user_name'] . '</b></td></tr>';
     }
     if (isset($_POST['tel'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
     }
-    if (isset($_POST['email'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Электронная почта:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td>';
+    if (isset($_POST['text'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вопрос:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['text'] . '</b></td>';
     }
 
+    if (isset($_POST['comment'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Отзыв:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td>';
+    }
+
+    
     // if (isset($_POST['text'])) {
     //     $html .= ' <li> Текст сообщения: <b>' . $_POST['text'] . '</b></li>';
     // }
