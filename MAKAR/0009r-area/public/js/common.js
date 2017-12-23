@@ -72,7 +72,30 @@ var    arrl1 = (' <div class="l"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:
       nextArrow: arrr2,
     });
 
- 
+ // $('.s-news').slick({ 
+ //    // slidesToScroll: 0,
+ //     infinite: false,
+
+ //    centerMode: true,
+ //    dots: false,
+ //    speed: 450, 
+ //    arrows: true,  
+ //     variableWidth: true,
+ //     prevArrow: arrl2,
+ //      nextArrow: arrr2, 
+ //    });
+
+  var swiper = new Swiper('.s-news', {
+       
+      // spaceBetween: 30,
+      slidesPerView: 'auto',
+      freeMode: true,
+      freeModeMomentum: false,
+      navigation: {
+        nextEl: '.l.slick-arrow',
+        prevEl: '.r.slick-arrow',
+      },
+    });
 
    $('.js-slider').slick({
     infinite: false,
@@ -120,6 +143,8 @@ var    arrl1 = (' <div class="l"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:
           }
         });
     });
+
+
 
  
 
