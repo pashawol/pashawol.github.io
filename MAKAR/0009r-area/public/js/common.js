@@ -85,16 +85,18 @@ var    arrl1 = (' <div class="l"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:
  //      nextArrow: arrr2, 
  //    });
 
-  var swiper = new Swiper('.s-news', {
+  var swiper = new Swiper('.swiper-container', {
        
       // spaceBetween: 30,
+      loop: true,
       slidesPerView: 'auto',
       freeMode: true,
       freeModeMomentum: false,
       navigation: {
-        nextEl: '.l.slick-arrow',
-        prevEl: '.r.slick-arrow',
+        nextEl: '.r.slick-arrow',
+        prevEl: '.l.slick-arrow',
       },
+     
     });
 
    $('.js-slider').slick({
