@@ -3,7 +3,20 @@
   // Custom JS
   
 // мобильное меню
-   var toggMnu = $(".toggle-mnu-1").click(function () {
+   var toggMnu1 = $(".catalog-aside__item").find(".catalog-aside__link").click(function () {
+    
+    $(this).toggleClass("active").next().toggleClass("active");
+    // $("body").toggleClass("fixed");
+    return false;
+  }); 
+       $(document).mouseup(function (e) {
+    var container = $(".drop-menu.active");
+    if (container.has(e.target).length === 0){
+       $(".catalog-aside__link").removeClass("active").next().removeClass("active");
+      // $("body").removeClass("fixed");
+        }
+    });
+      var toggMnu = $(".toggle-mnu-1").click(function () {
     
     $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
@@ -33,7 +46,7 @@
     // var h = $(".item-prod__inner").height();
    // $(".item-prod").height('auto').height(h);
    //
-   $(".drop-menu").css("max-height", $(window).height()  - $(".top_line").height())
+   $(".drop-menu").css("min-height", $(window).height()  - $(".top_line").height())
    $(".catalog-aside__nav ul").css("max-height", $(window).height() - $(".catalog-aside__title").height() - $(".top_line").height())
    $(".drop-menu .row").each(function(){
       $(this).find(".drop-menu__img-wrap ").height('auto').equalHeights();
