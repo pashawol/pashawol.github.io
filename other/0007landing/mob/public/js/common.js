@@ -5,36 +5,37 @@
  
  // карусель
  
-   
- $('.slider__block').slick({
-    // slidesToShow: 1,
-   //  slidesToScroll: 1, 
-    arrows: false, 
-    dots: false,  
-    speed: 450, 
-    asNavFor: '.slider-nav',
-    touchThreshold: 5
-});
-$('.slider-nav').slick({
-  // slidesToShow: 1,
-  // slidesToScroll: 1,
-  asNavFor: '.slider__block',
-   arrows: false, 
-  dots: true,  
-  speed: 450, 
-  touchThreshold: 5
-});
-      
- // карусель
- $('.s-brands__slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: false,  
-    arrows: false,  
-     variableWidth: true, 
-     speed: 450,
-     touchThreshold: 5
-    
+
+    var galleryTop = new Swiper('.slider__block', {
+      slidesPerView: 1,
+      loop: true,
+      // navigation: {
+      //   nextEl: '.swiper-button-next',
+      //   prevEl: '.swiper-button-prev',
+      // },
     });
+    var galleryThumbs = new Swiper('.slider-nav', {
+      // spaceBetween: 1,
+      centeredSlides: true,
+      slidesPerView: 1,
+      loop: true,
+      // touchRatio: 0.2,
+      slideToClickedSlide: true,
+       pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
+
+		  
+ // карусель
+    var swiper = new Swiper('.s-brands__slider', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+       loop: true,
+      
+    }); 
 
 });
