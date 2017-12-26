@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>title</title>
     <meta name="description" content="о чем страница">
-    <meta name="viewport" content="width=1040, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=1040, maximum-scale=1">
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.min.css">
@@ -37,60 +37,32 @@
           <div class="col-6">
             <!-- start slider-->
             <div class="slider text-center"> 
-              <div class="slider__block">
-                <div class="slider__slide">
-                  <div class="slider__item">
-                    <div class="slider__img-wrap"><img class="res-i" src="img/screen-1.jpg" alt=""/>
-                    </div>
-                  </div>
-                </div>
-                <div class="slider__slide">
-                  <div class="slider__item">
-                    <div class="slider__img-wrap"><img class="res-i" src="img/screen-1.jpg" alt=""/>
-                    </div>
-                  </div>
-                </div>
-                <div class="slider__slide">
-                  <div class="slider__item">
-                    <div class="slider__img-wrap"><img class="res-i" src="img/screen-1.jpg" alt=""/>
-                    </div>
-                  </div>
-                </div>
-                <div class="slider__slide">
-                  <div class="slider__item">
-                    <div class="slider__img-wrap"><img class="res-i" src="img/screen-1.jpg" alt=""/>
-                    </div>
-                  </div>
-                </div>
-                <div class="slider__slide">
-                  <div class="slider__item">
-                    <div class="slider__img-wrap"><img class="res-i" src="img/screen-1.jpg" alt=""/>
-                    </div>
+              <div class="slider__block-wrap">
+                <div class="slider__block swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="res-i" src="img/screen-1.jpg" alt=""/></div>
+                    <div class="swiper-slide"><img class="res-i" src="img/screen-2.jpg" alt=""/></div>
+                    <div class="swiper-slide"><img class="res-i" src="img/screen-3.jpg" alt=""/></div>
+                    <div class="swiper-slide"><img class="res-i" src="img/screen-4.jpg" alt=""/></div>
+                    <div class="swiper-slide"><img class="res-i" src="img/screen-5.jpg" alt=""/></div>
                   </div>
                 </div>
               </div>
               <div class="slider__wrap"> 
-                <div class="slider-nav"> 
-                  <div class="slider__slide">
-                    <div class="slider__caption">Приобретайте лечебную косметику<br/>с&nbsp;мобильных устройств, <br/>где&nbsp;бы вы&nbsp;ни&nbsp;находились
+                <div class="slider-nav swiper-container"> 
+                  <div class="swiper-wrapper">
+                    <div class="slider__caption swiper-slide">Ориентируйтесь в обширном<br/>каталоге с помощью умных<br/> фильтров
+                    </div>
+                    <div class="slider__caption swiper-slide">Приобретайте лечебную косметику  с&nbsp;мобильных устройств,   где&nbsp;бы вы&nbsp;ни&nbsp;находились
+                    </div>
+                    <div class="slider__caption swiper-slide">Приобретайте лечебную косметику <br/>с мобильных устройств, где бы вы<br/>ни находились
+                    </div>
+                    <div class="slider__caption swiper-slide">Читайте отзывы реальных   покупателей и пишите<br/>свои отзывы
+                    </div>
+                    <div class="slider__caption swiper-slide">Ищите и находите товары по штрихкоду
                     </div>
                   </div>
-                  <div class="slider__slide">
-                    <div class="slider__caption">Приобретайте лечебную косметику<br/>с&nbsp;мобильных устройств, <br/>где&nbsp;бы вы&nbsp;ни&nbsp;находились
-                    </div>
-                  </div>
-                  <div class="slider__slide">
-                    <div class="slider__caption">Приобретайте лечебную косметику<br/>с&nbsp;мобильных устройств, <br/>где&nbsp;бы вы&nbsp;ни&nbsp;находились
-                    </div>
-                  </div>
-                  <div class="slider__slide">
-                    <div class="slider__caption">Приобретайте лечебную косметику<br/>с&nbsp;мобильных устройств, <br/>где&nbsp;бы вы&nbsp;ни&nbsp;находились
-                    </div>
-                  </div>
-                  <div class="slider__slide">
-                    <div class="slider__caption">Приобретайте лечебную косметику<br/>с&nbsp;мобильных устройств, <br/>где&nbsp;бы вы&nbsp;ни&nbsp;находились
-                    </div>
-                  </div>
+                  <div class="swiper-pagination"></div>
                 </div>
               </div>
             </div>
@@ -103,37 +75,39 @@
                 <h2 class="text-center"><img class="res-i" src="img/svg/i-1.svg" alt=""/>Всё, что нужно вашей коже</h2>
                 <div class="sub-title">от более чем 100 ведущих брендов</div>
               </div>
-              <div class="s-brands__slider">
-                <div class="s-brands__slide">
-                  <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-1.png" alt=""/>
+              <div class="s-brands__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="s-brands__slide swiper-slide">
+                    <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-1.png" alt=""/>
+                    </div>
                   </div>
-                </div>
-                <div class="s-brands__slide">
-                  <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-2.png" alt=""/>
+                  <div class="s-brands__slide swiper-slide">
+                    <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-2.png" alt=""/>
+                    </div>
                   </div>
-                </div>
-                <div class="s-brands__slide">
-                  <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-3.png" alt=""/>
+                  <div class="s-brands__slide swiper-slide">
+                    <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-3.png" alt=""/>
+                    </div>
                   </div>
-                </div>
-                <div class="s-brands__slide">
-                  <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-4.png" alt=""/>
+                  <div class="s-brands__slide swiper-slide">
+                    <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-4.png" alt=""/>
+                    </div>
                   </div>
-                </div>
-                <div class="s-brands__slide">
-                  <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-5.png" alt=""/>
+                  <div class="s-brands__slide swiper-slide">
+                    <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-5.png" alt=""/>
+                    </div>
                   </div>
-                </div>
-                <div class="s-brands__slide">
-                  <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-6.png" alt=""/>
+                  <div class="s-brands__slide swiper-slide">
+                    <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-6.png" alt=""/>
+                    </div>
                   </div>
-                </div>
-                <div class="s-brands__slide">
-                  <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-7.png" alt=""/>
+                  <div class="s-brands__slide swiper-slide">
+                    <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-7.png" alt=""/>
+                    </div>
                   </div>
-                </div>
-                <div class="s-brands__slide">
-                  <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-8.png" alt=""/>
+                  <div class="s-brands__slide swiper-slide">
+                    <div class="s-brands__img-wrap"><img class="res-i" src="img/logo-8.png" alt=""/>
+                    </div>
                   </div>
                 </div>
               </div>
