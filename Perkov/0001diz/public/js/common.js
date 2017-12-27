@@ -195,6 +195,33 @@ $(' .tabs__caption').on('click', '.tabs__btn:not(.active)', function(e) {
 });
 });
 
+// табы  . Теперь данные активного таба остается в storage
+$(function() {
+var tab = ('main-tabs'); 
+
+   $('.' + tab + '__caption').each(function(i) {
+    // var storage = localStorage.getItem('tab' + i);
+    // if (storage) {
+    //   $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
+    //    .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
+    // }
+  });
+
+$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
+  $(this) 
+      .addClass('active').siblings().removeClass('active')
+      .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+      .eq($(this).index()).fadeIn().addClass('active');
+
+    // var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
+    // localStorage.removeItem('tab' + ulIndex);
+    // localStorage.setItem('tab' + ulIndex, $(this).index());
+ 
+});
+});
+
+
+
   $(".price__link").click(function(){
 
   $(this).parents('.price').find(".price__btn").attr("data-tarif", $(this).find("h3").text())
@@ -242,7 +269,7 @@ $(team+"__btn").click(function(){
   
  
    
- $("input[type='tel']").attr("pattern","[+]7[ ][0-9]{3}[ ][0-9]{3}[0-9]{2}[0-9]{2}").inputmask("+7 999 9999999");
+ $("input[type='tel']").attr("pattern","[+]7[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}").inputmask("+79999999999");
   // // маска на инпут
   //   $("input[type='tel']").inputmask("+7 999 9999999").attr("pattern","[+]7[ ][0-9]{3}[ ][0-9]{3}[0-9]{2}[0-9]{2}");
      // стрелки для слайдера
@@ -414,24 +441,26 @@ $("form").submit(function() { //Change
 
 
 // табы на ajax
-var containerId = '#tabs-container';
-var tabsId = '#tabs';
+var containerId = '.mytabs-container';
+var tabsId = '.mytabs';
 
 $(document).ready(function(){
   // Preload tab on page load
   if($(tabsId + ' LI.current A').length > 0){
     loadTab($(tabsId + ' LI.current A'));
   }
-  
-    $(tabsId + ' A').click(function(){
+    $(tabsId).each(function(){
+      var th = $(this);
+    th.find(' A').click(function(){
       if($(this).parent().hasClass('current')){ return false; }
       
-      $(tabsId + ' LI.current').removeClass('current');
+      th.find(' LI.current').removeClass('current');
       $(this).parent().addClass('current');
       
       loadTab($(this));     
         return false;
     });
+    })
 });
 
 function loadTab(tabObj){
