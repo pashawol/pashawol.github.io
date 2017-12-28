@@ -210,24 +210,46 @@ $( window ).on( "load", function() {
     mainClass: 'my-mfp-zoom-in'
   });
  
-    // галерея
-  $(".gal").magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    closeOnContentClick: false,
-    closeBtnInside: false,
-    mainClass: 'mfp-with-zoom mfp-img-mobile',
-    image: {
-      verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
+   // всплывающая медиа галлерея
+$('.magnific-all').each(function() {
+  var $container = $(this);
+  var $imageLinks = $container.find('.img-wrap');
+ 
+  var items = [];
+  $imageLinks.each(function() {
+    var $item = $(this);
+    var type = 'image';
+    if ($item.hasClass('video-link')) {
+      type = 'iframe';
+    }
+    var magItem = {
+      src: $item.attr('href'),
+      type: type
+    };
+    magItem.title = $item.data('title');
+    items.push(magItem);
+    });
+ 
+  $imageLinks.magnificPopup({
+    mainClass: 'mfp-fade',
+    items: items,
+    gallery:{
+        enabled:true,
+        tPrev: $(this).data('prev-text'),
+        tNext: $(this).data('next-text')
     },
-    gallery: {
-      enabled: true
+    type: 'image',
+    callbacks: {
+      beforeOpen: function() {
+        var index = $imageLinks.index(this.st.el);
+        if (-1 !== index) {
+          this.goTo(index);
+        }
+      }
     }
   });
- 
+});
+
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 

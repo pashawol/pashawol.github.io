@@ -199,23 +199,14 @@ $(' .tabs__caption').on('click', '.tabs__btn:not(.active)', function(e) {
 $(function() {
 var tab = ('main-tabs'); 
 
-   $('.' + tab + '__caption').each(function(i) {
-    // var storage = localStorage.getItem('tab' + i);
-    // if (storage) {
-    //   $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-    //    .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    // }
-  });
+ 
 
 $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
   $(this) 
       .addClass('active').siblings().removeClass('active')
       .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
       .eq($(this).index()).fadeIn().addClass('active');
-
-    // var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    // localStorage.removeItem('tab' + ulIndex);
-    // localStorage.setItem('tab' + ulIndex, $(this).index());
+ 
  
 });
 });
@@ -441,56 +432,122 @@ $("form").submit(function() { //Change
 
 
 // табы на ajax
-var containerId = '.mytabs-container';
-var tabsId = '.mytabs';
+var containerId1 = '.mytabs-container1';
+var tabsId1 = '.mytabs1';
 
 $(document).ready(function(){
-  // Preload tab on page load
-  if($(tabsId + ' LI.current A').length > 0){
-    loadTab($(tabsId + ' LI.current A'));
-  }
-    $(tabsId).each(function(){
-      var th = $(this);
-    th.find(' A').click(function(){
-      if($(this).parent().hasClass('current')){ return false; }
-      
-      th.find(' LI.current').removeClass('current');
-      $(this).parent().addClass('current');
-      
-      loadTab($(this));     
-        return false;
-    });
-    })
+  $(".main-tabs__content").each(function(){
+    var th = $(this);
+
+    // Preload tab on page load
+
+    if($(tabsId1 + ' LI.current A').length > 0){
+      loadTab1($(tabsId1 + ' LI.current A'));
+    }
+    
+      $(tabsId1 + ' A').click(function(){
+        if($(this).parent().hasClass('current')){ return false; }
+        
+        $(tabsId1 + ' LI.current').removeClass('current');
+        $(this).parent().addClass('current');
+        
+        loadTab1($(this));     
+          return false;
+      });
+    function loadTab1(tabObj1){
+        if(!tabObj1 || !tabObj1.length){ return; }
+        $(containerId1).addClass('loading');
+        $(containerId1).hide();
+        
+        $(containerId1).load(tabObj1.attr('href'), function(){
+            $(containerId1).removeClass('loading');
+            $(containerId1).fadeIn();
+
+       $(".port__item").each(function(){
+
+
+      $(this).magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        closeOnContentClick: false,
+        closeBtnInside: false,
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+          verticalFit: true,
+          // titleSrc: function(item) {
+          //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+          // }
+        },
+        gallery: {
+          enabled: true
+        }
+      });
+     }) 
+              });
+    }
+
+  })
 });
 
-function loadTab(tabObj){
-    if(!tabObj || !tabObj.length){ return; }
-    $(containerId).addClass('loading');
-    $(containerId).hide();
-    
-    $(containerId).load(tabObj.attr('href'), function(){
-        $(containerId).removeClass('loading');
-        $(containerId).fadeIn();
-
-   $(".port__item").each(function(){
 
 
-  $(this).magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    closeOnContentClick: false,
-    closeBtnInside: false,
-    mainClass: 'mfp-with-zoom mfp-img-mobile',
-    image: {
-      verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
-    },
-    gallery: {
-      enabled: true
+// табы на ajax
+var containerId2 = '.mytabs-container2';
+var tabsId2 = '.mytabs2';
+
+$(document).ready(function(){
+  $(".main-tabs__content").each(function(){
+    var th = $(this);
+
+    // Preload tab on page load
+
+    if($(tabsId2 + ' LI.current A').length > 0){
+      loadTab2($(tabsId2 + ' LI.current A'));
     }
-  });
- }) 
-          });
-}
+    
+      $(tabsId2 + ' A').click(function(){
+        if($(this).parent().hasClass('current')){ return false; }
+        
+        $(tabsId2 + ' LI.current').removeClass('current');
+        $(this).parent().addClass('current');
+        
+        loadTab2($(this));     
+          return false;
+      });
+    function loadTab2(tabObj2){
+        if(!tabObj2 || !tabObj2.length){ return; }
+        $(containerId2).addClass('loading');
+        $(containerId2).hide();
+        
+        $(containerId2).load(tabObj2.attr('href'), function(){
+            $(containerId2).removeClass('loading');
+            $(containerId2).fadeIn();
+
+       $(".port__item").each(function(){
+
+
+      $(this).magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        closeOnContentClick: false,
+        closeBtnInside: false,
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+          verticalFit: true,
+          // titleSrc: function(item) {
+          //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+          // }
+        },
+        gallery: {
+          enabled: true
+        }
+      });
+     }) 
+              });
+    }
+
+  })
+});
+
+
+

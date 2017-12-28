@@ -32,8 +32,8 @@
 		  
  // карусель
     var swiper = new Swiper('.s-brands__slider', {
-      slidesPerView: 'auto',
-      spaceBetween: 30,
+      slidesPerView: 3,
+      spaceBetween: 0,
        loop: true,
       
     }); 

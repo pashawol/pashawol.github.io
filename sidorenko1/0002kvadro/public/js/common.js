@@ -48,6 +48,8 @@ $(function() {
                   
                 }
             });
+       var fh= $("footer").height(); 
+    $(".wrapper").css("padding-bottom", fh + 30);
        // конец добавил 
   }
 
