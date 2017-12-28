@@ -1,7 +1,10 @@
  jQuery(document).ready(function($) { 
 
   // Custom JS
-  
+  $(".s-filter__selects .jq-selectbox__select").click(function(){
+      $(this).parent().toggleClass("active")
+      $(this).next().fadeToggle(10);
+  })
 // мобильное меню
    var toggMnu1 = $(".catalog-aside__item").find(".catalog-aside__link").click(function () {
     
