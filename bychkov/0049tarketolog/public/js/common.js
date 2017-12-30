@@ -1,7 +1,7 @@
  jQuery(document).ready(function($) { 
 
   // Custom JS
-  
+  // паралакс
 var scene = document.getElementById('scene');
 var parallaxInstance = new   Parallax(scene, {
   relativeInput: true
@@ -12,54 +12,61 @@ var parallaxInstance = new   Parallax(scene2, {
   relativeInput: true
 });
  
- 
-//  var scene5 = document.getElementById('scene5');
-// var parallaxInstance = new   Parallax(scene5, {
-//   relativeInput: true
-// });
+  
  
  
   var scene4 = document.getElementById('scene4');
 var parallaxInstance = new   Parallax(scene4, {
   relativeInput: true
 });
- 
- 
- 
+  var scene5 = document.getElementById('scene5');
+var parallaxInstance = new   Parallax(scene5, {
+  relativeInput: true
+});
 
-
-
+  // паралакс
+  
+       // ===================================================== Sounds
+// звук
 ion.sound({
     sounds: [
         {
             name: "glass"
+        } ,
+        {
+            name: "snap"
+        } ,
+
+         {
+            name: "button_click"
         } 
-    ],
-    // volume: 0.02,
+    ], 
     volume: 1,
-    path: "sounds/",
-    preload: true
+    
+    path: "sounds/", 
 });
-
-
- // $.ionSound({
- //            sounds: ["bip-1", "bip-2", "wuf-1", "wuf-2", "wuf-3", "wuf-4"],
- //            path: "sounds/",
- //            volume: 0.9
- //        });
-
- //        // ===================================================== Sounds
         $(document).on('mouseenter',
-            '.btn ', function () {
+            '.btn ,'+ 
+            ' .link-more,'+ 
+            ' s-rew__item-m-v,'+ 
+            ' .sound-btn' , function () {
               ion.sound.play("glass");
             });
-        // SIModals.beforeOpen = function () {
-        //     $.ionSound.play('wuf-4');
-        // };
-        // SIModals.beforeClose = function () {
-        //     $.ionSound.play('wuf-3');
-        // }; 
 
+          $(document).on('mouseenter',
+            '.hover-block'
+            , function () {
+              ion.sound.play("snap");
+            });
+
+
+           $(".btn, .btn-click").click(function(){
+
+            
+              ion.sound.play("button_click");
+             
+           });
+ 
   // accordion
   $(".showhide").click(function() {
 
@@ -77,7 +84,11 @@ ion.sound({
         container.fadeOut();
     }
 });
-
+$(".link-more").click(function(){
+  $(this).hide()
+  .parents(".row").find("div:hidden").slideDown();
+   return false;
+})
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
     
@@ -100,13 +111,56 @@ ion.sound({
         }
     });
  
+   // всплывающая медиа галлерея
+$('.magnific-all').each(function() {
+  var $container = $(this);
+  var $imageLinks = $container.find('.img-wrap');
+ 
+  var items = [];
+  $imageLinks.each(function() {
+    var $item = $(this);
+    var type = 'image';
+    if ($item.hasClass('video-link')) {
+      type = 'iframe';
+    }
+    var magItem = {
+      src: $item.attr('href'),
+      type: type
+    };
+    magItem.title = $item.data('title');
+    items.push(magItem);
+    });
+ 
+  $imageLinks.magnificPopup({
+    mainClass: 'mfp-fade',
+    items: items,
+    gallery:{
+        enabled:true,
+        tPrev: $(this).data('prev-text'),
+        tNext: $(this).data('next-text')
+    },
+    type: 'image',
+    callbacks: {
+      beforeOpen: function() {
+        var index = $imageLinks.index(this.st.el);
+        if (-1 !== index) {
+          this.goTo(index);
+        }
+      }
+    }
+  });
+});
   function heightses() {
 
     var w = $(window).width();
-   // $(".otz__item .text-wrap ").height('auto').equalHeights();
+   $(".s-vers__body p ").height('auto').equalHeights();
    //
     
-
+      // стики
+ 
+   $(".stick_in").stick_in_parent({
+      offset_top:  125
+   });
     // скрывает моб меню 
     if (w>991){
        $(".toggle-mnu-1").removeClass("on");
@@ -151,39 +205,35 @@ $( window ).on( "load", function() {
  $(" .scroll").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
-        
+            setTimeout(function(){
+
+
             $('html, body').animate({ scrollTop: destination }, 1100);
+          }, 500);
         
         return false; 
     });
 
 
  
-// табы  . Теперь данные активного таба остается в storage
-$(function() {
-var tab = ('tabs'); 
+   $(".type").each(function(){
+    var th = $(this).next(".d-none").text();
+   $(this).typed({
+      strings: [th],
+      typeSpeed: 120,
+      fadeOutDelay: 60,
+      startDelay: 1500,
+      cursorChar: "<span class='cursor'>",  
+//       preStringTyped: function() {
+// audio.play();
+//       }, 
+      onStringTyped: function() {
+        // audio.pause();
+        $(".typed-cursor").fadeOut();
+      } 
 
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
-
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
-  $(this) 
-      .addClass('active').siblings().removeClass('active')
-      .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-      .eq($(this).index()).fadeIn().addClass('active');
-
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
- 
-});
-});
-
+    });
+   })
  
 
  
@@ -205,48 +255,12 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
     }
   });
  
-    //Replace all SVG images with inline SVG
-  $('img.img-svg').each(function(){
-    var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg');
-
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-  });
-
+   
   
 
-  
-  $(".pretty-embed__bg").each(function(){ 
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
+ 
+
+
 });
 
 
