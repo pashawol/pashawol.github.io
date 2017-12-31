@@ -2,7 +2,36 @@
 
  jQuery(document).ready(function($) { 
  
+ var audio = new Audio('audio_file.mp3');
  
+   $(".type-wrap").each(function(){
+
+  var th = $(this).find(".op").text();
+    // $(this).find(".type").waypoint(function(){   
+    $(this).find(".type").typed({
+      strings: [th],
+      typeSpeed: 240,
+      fadeOutDelay: 60,
+      startDelay: 1500,
+      cursorChar: "<span class='cursor'>",  
+      preStringTyped: function() {
+        audio.play();
+      }, 
+      onStringTyped: function() {
+        audio.pause();
+        $(".typed-cursor").fadeOut();
+        }  
+     }) 
+    // },
+    //   {
+        
+    //   offset: '90%'
+    //   }
+    //   )
+
+   });
+ 
+   
 // $('.top-nav__nav').simpleMenu({
 //   menuSpeedAnimate:             600, 
 //   slidingLine:                  true, 
@@ -104,6 +133,7 @@ ion.sound({
         $(document).on('mouseenter',
             '.btn ,'+ 
             ' .link-more,'+ 
+            ' .top-nav__link,'+ 
             ' s-rew__item-m-v,'+ 
             ' .sound-btn' , function () {
               ion.sound.play("glass");
@@ -116,7 +146,7 @@ ion.sound({
             });
 
 
-           $(".btn, .btn-click").click(function(){
+           $(".btn, .btn-click, .top-nav__link").click(function(){
 
             
               ion.sound.play("button_click");
@@ -260,7 +290,7 @@ $( window ).on( "load", function() {
 // листалка по стр
  $(" .scroll").click(function () {
         var elementClick = $(this).attr("href");
-        var destination = $(elementClick).offset().top;
+        var destination = $(elementClick).offset().top - 40;
             setTimeout(function(){
 
 
@@ -270,28 +300,8 @@ $( window ).on( "load", function() {
         return false; 
     });
 
-
  
-   $(".type").each(function(){
-    var th = $(this).next(".d-none").text();
-   $(this).typed({
-      strings: [th],
-      typeSpeed: 120,
-      fadeOutDelay: 60,
-      startDelay: 1500,
-      cursorChar: "<span class='cursor'>",  
-//       preStringTyped: function() {
-// audio.play();
-//       }, 
-      onStringTyped: function() {
-        // audio.pause();
-        $(".typed-cursor").fadeOut();
-      } 
-
-    });
-   })
  
-
  
     // галерея
   $(".gal").magnificPopup({
