@@ -10,9 +10,9 @@
     // $(this).find(".type").waypoint(function(){   
     $(this).find(".type").typed({
       strings: [th],
-      typeSpeed: 240,
-      fadeOutDelay: 60,
-      startDelay: 1500,
+      typeSpeed: 60,
+      fadeOutDelay: 30,
+      startDelay: 1000,
       cursorChar: "<span class='cursor'>",  
       preStringTyped: function() {
         audio.play();
