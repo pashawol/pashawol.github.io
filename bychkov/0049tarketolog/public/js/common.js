@@ -280,7 +280,7 @@ $('.magnific-all').each(function() {
    
   });
 $( window ).on( "load", function() {
-  // $('html, body').animate({ scrollTop: $(window) }, 1);
+  $('html, body').animate({ scrollTop: $(window) }, 1);
  heightses();
 
 })
@@ -350,133 +350,20 @@ var wow = new WOW({ mobile: false });
 
   // Banners
 $(document).ready(function(){
-    var data = [
-        {
-            name: "Владимир Потапов",
-            cost: "1 курс за 790 руб.",
-            count: "29шт.",
-            before_count: "30шт."
-        },
-        {
-            name: "Евгений Станкевич",
-            cost: "1 курс за 790 руб.",
-            count: "28шт.",
-            before_count: "29шт."
-        },
-        {
-            name: "Мария Фомина",
-            cost: "2 курса за 1580 руб. ",
-            count: "26шт.",
-            before_count: "28шт."
-        },
-        {
-            name: "Лариса Костикова",
-            cost: "1 курс за 790 руб.",
-            count: "25шт.",
-            before_count: "26шт."
-        },
-        {
-            name: "Борис Гатаулин",
-            cost: "3 курса за 2370 руб.",
-            count: "22шт.",
-            before_count: "25шт."
-        },
-        {
-            name: "Михаил Куракин",
-            cost: "2 кусра за 1580 руб.",
-            count: "20шт.",
-            before_count: "22шт."
-        },
-        {
-            name: "Алексей Непомнящих",
-            cost: "4 курса за 3160 руб.",
-            count: "16шт.",
-            before_count: "20шт."
-        },
-        {
-            name: "Варвара Афонасьева",
-            cost: "2 кусра за 1580 руб.",
-            count: "14шт.",
-            before_count: "16шт."
-        },
-        {
-            name: "Андрей Ильин",
-            cost: "3 курса за 2370 руб.",
-            count: "11шт.",
-            before_count: "14шт."
-        },
-        {
-            name: "Алена Потапова",
-            cost: "5 курсов за 3950 руб.",
-            count: "6шт.",
-            before_count: "11шт."
-        },
-        {
-            name: "Игорь Фомин",
-            cost: "1 курс за 790 руб.",
-            count: "5шт.",
-            before_count: "6шт."
-        },
-        {
-            name: "Ильдар Мустафьев",
-            cost: "1 курс за 790 руб.",
-            count: "3шт.",
-            before_count: "4шт."
-        },
-        {
-            name: "Георгий Жданов",
-            cost: "1 курс за 790 руб.",
-            count: "2шт.",
-            before_count: "3шт."
-        },
-        {
-            name: "Эльвира Полынкова",
-            cost: "1 курс за 790 руб.",
-            count: "Последняя",
-            before_count: "1шт."
+    // $('<link rel="stylesheet" href="yved/style.css">').appendTo('head');
+        var i = 0;
+        function yved(){
+        i=1;
+        $('.yved:nth-child('+i+')').fadeIn(500).delay(7000).fadeOut(500);//В этой строчке в мс 500 - время анимации появления, 5000 - время задержки, 500 - время затухания уведомления соответсвенно
         }
-    ],
-    lengthData = data.length,
-    i = 0,
-    banner = $(".banner-js"),
-    name = $(".banner__name"),
-    basket = $(".banner__txt-2"),
-    count = $(".banner__txt-4");
-    before_count = $(".banner__txt-40");
-
-    function writeElem() {
-        $(name).text(data[i].name);
-        $(basket).text(data[i].cost);
-        $(count).html('&nbsp;'+data[i].count+'&nbsp;');
-        $(before_count).text(data[i].before_count);
-    }
-
-    window.switchedOn = false;
-    document.addEventListener('mousewheel', function(e) {
-    if (window.switchedOn)
-    return false;
-    window.switchedOn = true;
-    var fnc = function(){
-    writeElem();
-        $(banner).fadeIn(500);
-
-        setTimeout(function() {
-            $(banner).fadeOut(500);
-        }, 7000);
-        if(i != lengthData) {
-            i++;
-        } else {
-            i = 0;
-        }
-
-        setTimeout(function() {
-                fnc();
-            }, 12000);
-    };
         setTimeout(function(){
-        fnc();  
-        }, 2500);
-    });
-
-});
+        setInterval(
+        function(){
+        i=i+1;
+        if(i>10) i=1;//10 - количество уведомлений
+        $('.yved:nth-child('+i+')').fadeIn(500).delay(7000).fadeOut(500);//В этой строчке в мс 500 - время анимации появления, 5000 - время задержки, 500 - время затухания уведомления соответсвенно
+        },30000);//12000 - задержка в мс меду показами уведомлений
+        yved();
+        },10000);//6000 - задержка в мс перед показом первого уведомления
+  });
 
