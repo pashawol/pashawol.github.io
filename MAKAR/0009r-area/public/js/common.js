@@ -23,30 +23,25 @@
  
  
 // табы  . Теперь данные активного таба остается в storage
-$(function() {
-var tab = ('tabs'); 
+// $(function() {
+// var tab = ('tabs'); 
 
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
+//    $('.' + tab + '__caption').each(function(i) {
+   
+// $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
+//   $(this) 
+//       .addClass('active').siblings().removeClass('active')
+//       .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+//       .eq($(this).index()).fadeIn().addClass('active');
 
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
-  $(this) 
-      .addClass('active').siblings().removeClass('active')
-      .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-      .eq($(this).index()).fadeIn().addClass('active');
-
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
+   
  
-});
-});
+// });
+// });
+$('.tabs').each(function(){
 
+$(this).easyResponsiveTabs();
+})
     
   $(' .js-slider, .js-slider-2, .slider ').on('lazyLoaded', function(event, slick, image, imageSource){
      image.parent().css('background-image', 'url(' + image.attr('src') + ')');

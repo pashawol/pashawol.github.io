@@ -1,6 +1,7 @@
  
 
  jQuery(document).ready(function($) { 
+
  
  var audio = new Audio('audio_file.mp3');
  
@@ -279,17 +280,30 @@ $('.magnific-all').each(function() {
    
   });
 $( window ).on( "load", function() {
+  // $('html, body').animate({ scrollTop: $(window) }, 1);
  heightses();
 
 })
 
+  // window.scrollTo( 0, 0 );
  heightses();
-
 
 
 // листалка по стр
  $(" .scroll").click(function () {
         var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top - 40;
+            setTimeout(function(){
+
+
+            $('html, body').animate({ scrollTop: destination }, 1100);
+          }, 500);
+        
+        return false; 
+    });
+
+ $(" .btn-top").click(function () {
+        var elementClick = $("header");
         var destination = $(elementClick).offset().top - 40;
             setTimeout(function(){
 
@@ -322,8 +336,147 @@ $( window ).on( "load", function() {
   });
 
 
+
 });
   
 
 var wow = new WOW({ mobile: false });
         wow.init();
+
+ 
+  // $('html, body').animate({ scrollTop: $(window) }, 1);
+
+
+
+  // Banners
+$(document).ready(function(){
+    var data = [
+        {
+            name: "Владимир Потапов",
+            cost: "1 курс за 790 руб.",
+            count: "29шт.",
+            before_count: "30шт."
+        },
+        {
+            name: "Евгений Станкевич",
+            cost: "1 курс за 790 руб.",
+            count: "28шт.",
+            before_count: "29шт."
+        },
+        {
+            name: "Мария Фомина",
+            cost: "2 курса за 1580 руб. ",
+            count: "26шт.",
+            before_count: "28шт."
+        },
+        {
+            name: "Лариса Костикова",
+            cost: "1 курс за 790 руб.",
+            count: "25шт.",
+            before_count: "26шт."
+        },
+        {
+            name: "Борис Гатаулин",
+            cost: "3 курса за 2370 руб.",
+            count: "22шт.",
+            before_count: "25шт."
+        },
+        {
+            name: "Михаил Куракин",
+            cost: "2 кусра за 1580 руб.",
+            count: "20шт.",
+            before_count: "22шт."
+        },
+        {
+            name: "Алексей Непомнящих",
+            cost: "4 курса за 3160 руб.",
+            count: "16шт.",
+            before_count: "20шт."
+        },
+        {
+            name: "Варвара Афонасьева",
+            cost: "2 кусра за 1580 руб.",
+            count: "14шт.",
+            before_count: "16шт."
+        },
+        {
+            name: "Андрей Ильин",
+            cost: "3 курса за 2370 руб.",
+            count: "11шт.",
+            before_count: "14шт."
+        },
+        {
+            name: "Алена Потапова",
+            cost: "5 курсов за 3950 руб.",
+            count: "6шт.",
+            before_count: "11шт."
+        },
+        {
+            name: "Игорь Фомин",
+            cost: "1 курс за 790 руб.",
+            count: "5шт.",
+            before_count: "6шт."
+        },
+        {
+            name: "Ильдар Мустафьев",
+            cost: "1 курс за 790 руб.",
+            count: "3шт.",
+            before_count: "4шт."
+        },
+        {
+            name: "Георгий Жданов",
+            cost: "1 курс за 790 руб.",
+            count: "2шт.",
+            before_count: "3шт."
+        },
+        {
+            name: "Эльвира Полынкова",
+            cost: "1 курс за 790 руб.",
+            count: "Последняя",
+            before_count: "1шт."
+        }
+    ],
+    lengthData = data.length,
+    i = 0,
+    banner = $(".banner-js"),
+    name = $(".banner__name"),
+    basket = $(".banner__txt-2"),
+    count = $(".banner__txt-4");
+    before_count = $(".banner__txt-40");
+
+    function writeElem() {
+        $(name).text(data[i].name);
+        $(basket).text(data[i].cost);
+        $(count).html('&nbsp;'+data[i].count+'&nbsp;');
+        $(before_count).text(data[i].before_count);
+    }
+
+    window.switchedOn = false;
+    document.addEventListener('mousewheel', function(e) {
+    if (window.switchedOn)
+    return false;
+    window.switchedOn = true;
+    var fnc = function(){
+    writeElem();
+        $(banner).fadeIn(500);
+
+        setTimeout(function() {
+            $(banner).fadeOut(500);
+        }, 7000);
+        if(i != lengthData) {
+            i++;
+        } else {
+            i = 0;
+        }
+
+        setTimeout(function() {
+                fnc();
+            }, 12000);
+    };
+        setTimeout(function(){
+        fnc();  
+        }, 2500);
+    });
+
+});
+
