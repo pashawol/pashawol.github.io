@@ -19,15 +19,17 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
-      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
+      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
         <div class="wrapp-hidden"> 
-          <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">Наши работы</a>
+          <ul class="nav">
+            <li class="nav__item"><a class="nav__link" href="#">Наши работы</a>
             </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Цены</a>
+            <li class="nav__item"><a class="nav__link" href="#sprice"> Цены</a>
             </li>
-            <li class="trop__item"><a class="trop__link" href="#">Акции</a>
+            <li class="nav__item"><a class="nav__link" href="#s-stock">Акции</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="#s-calc"> Рассчитать</a>
             </li>
           </ul>
           <div class="text-right"></div>
@@ -39,36 +41,271 @@
         <!-- start top-nav-->
         <div class="top-nav">
           <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Наши работы</a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Цены</a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции</a>
-              </li>
-            </ul>
+            <div class="row">
+              <div class="col-lg-3 col-auto col-logo"><a class="logo" href="/">
+                <div class="row">
+                  <div class="col-auto"><img src="img/logo.png" alt=""/></div>
+                  <div class="col d-none d-sm-block"><span class="logo__text">Доступные<span class="accent">  заборы </span></span>
+                  </div>
+                </div></a>
+              </div>
+              <div class="col d-none d-lg-block">
+                <ul class="nav">
+                  <li class="nav__item"><a class="nav__link" href="#">Наши работы</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link" href="#sprice"> Цены</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__link" href="#s-stock">Акции</a>
+                  </li>
+                  <li class="nav__item"><a class="nav__btn btn btn-sm btn-accent" href="#s-calc">РАССЧИТАТЬ</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-auto col">
+                <div class="top-nav__tel-wrap"><a class="top-nav__tel accent" href="tel:+ 7 (499) 649-13-27">+ 7 (499) 649-13-27</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end top-nav-->
         <!-- start .top_line-->
         <div class="top_line">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-2 col-sm-auto col-12"><a class="logo" href="/">
+                <div class="row">
+                  <div class="col-sm-12 col-auto"><img src="img/logo.png" alt=""/></div>
+                  <div class="col-sm-12 col"><span class="logo__text">Доступные<span class="accent">  заборы </span></span>
+                  </div>
+                </div></a>
+              </div>
+              <div class="col-sm col-12">
+                <div class="top_line__text">
+                  <p>Cтроительство заборов &laquo;под ключ&raquo; в&nbsp;радиусе 400&nbsp;км от&nbsp;мкад</p>
+                </div>
+                <div class="d-none d-lg-block">
+                  <ul class="nav">
+                    <li class="nav__item"><a class="nav__link" href="#">Наши работы</a>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="#sprice"> Цены</a>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="#s-stock">Акции</a>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="#s-calc"> Рассчитать</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-auto">
+                <div class="top_line__cont">
+                  <p>Есть вопросы? Звоните!</p><a class="top_line__tel accent" href="tel:+ 7 (499) 649-13-27">+ 7 (499) 649-13-27</a>
+                  <p><small>Работаем ежедневно с О9:00 до 21:00 </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- end .top_line-->
+        <!-- start header-block-->
+        <div class="header-block" id="header-block">
+          <div class="container">
+            <div class="row">
+              <div class="header-block__col col-auto">
+                <h1>Построим надежный забор в&nbsp;московской области</h1>
+                <div class="h1 accent">
+                  ОТ&nbsp;455&nbsp;РУБ. ЗА&nbsp;П.&nbsp;М.
+                  без&nbsp;предоплаты
+                </div>
+                <div class="header-block__block">
+                  <div class="form-wrap">
+                    <form method="post">
+                      <p><strong>Оставьте заявку прямо сейчас и&nbsp;узнайте точную стоимость Вашего забора уже через 5&nbsp;минут</strong></p>
+                      <div class="form-wrap__input-wrap">
+                        <label><span class="form-wrap__title">Введите свой телефон:</span><input class="form-wrap__input" type="tel" placeholder="+ 7 (xxx) xxx - xx - xx"/>
+                        </label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__btn-wrap">
+                        <button class="form-wrap__btn btn btn-lg btn-accent">Узнать точную стоимость
+                        </button>
+                      </div>
+                      <div class="form-wrap__polite">
+                        <label>
+                          <input type="checkbox" checked="checked"/>
+                          
+                          я даю согласие на обработку персональных данных
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                </div><img class="img-bg" src="img/header-img.png" alt=""/>
+              </div>
+            </div>
+            <div class="row"> 
+                  <div class="col-lg col-md-6">
+                    <div class="header-block__item">
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="header-block__img-wrap"><img src="img/svg/head-1.svg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="header-block__text">
+                            <div class="header-block__title">В срок
+                            </div>
+                            <p>Сроки строительства прописаны в договоре. В наличии материала на 15,2 км забора</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .col-->
+                  <div class="col-lg col-md-6">
+                    <div class="header-block__item">
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="header-block__img-wrap"><img src="img/svg/head-2.svg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="header-block__text">
+                            <div class="header-block__title">Без риска
+                            </div>
+                            <p>Работаем без предоплаты. Вы платите после завершения строительства</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .col-->
+                  <div class="col-lg col-md-6">
+                    <div class="header-block__item">
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="header-block__img-wrap"><img src="img/svg/head-3.svg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="header-block__text">
+                            <div class="header-block__title">Срок службы от 20 лет
+                            </div>
+                            <p>Благодаря сертифицированным материалам и правильной установке опытной бригадой</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .col-->
+            </div>
+          </div>
+        </div>
+        <!-- end header-block-->
       </header>
       <!-- end HEADER.header-->
-      <!-- start header-block-->
-      <div class="header-block" id="header-block">
-        <div class="container">
-          <h1></h1>
-          <div class="row"></div>
-        </div>
-      </div>
-      <!-- end header-block-->
       <!-- start s-gal-->
       <section class="s-gal section" id="s-gal">
         <div class="container">
-          <h2 class="text-center">s-gal</h2>
-          <div class="row"></div>
+          <div class="title-block">
+            <h2>УЗНАЙТЕ ПОЧЕМУ 9657 КЛИЕНТОВ </h2>
+            <div class="sub-title">  довольны своим новым забором</div>
+          </div>
+          <div class="s-gal__slider">
+            <div>
+              <div class="row">
+                <div class="col-9">
+                  <div class="s-gal__slider-big slider-for">
+                    <div class="img-wrap"><img class="res-i" data-lazy="img/slide-2.jpg" alt=""/></div>
+                    <div class="img-wrap"><img class="res-i" data-lazy="img/slide-1.jpg" alt=""/></div>
+                    <div class="img-wrap"><img class="res-i" data-lazy="img/slide-2.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="s-gal__slide-small slider-nav">
+                    <div class="img-wrap"><img class="res-i" src="img/slide-2.jpg" alt=""/></div>
+                    <div class="img-wrap"><img class="res-i" src="img/slide-1.jpg" alt=""/></div>
+                    <div class="img-wrap"><img class="res-i" src="img/slide-2.jpg" alt=""/></div>
+                  </div><a class="s-gal__video popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">Послушайте отзыв  клиента</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <div class="s-gal__text">
+                    <div class="s-gal__title accent">Устроила цена!
+                    </div>
+                    <p> <strong>Клиент:</strong>
+                      
+                      Юлия
+                    </p>
+                    <p> <strong>Адрес участка:</strong>
+                      
+                      Московская область,  Щелковский район, с.Петровское
+                    </p>
+                    <p> <strong>Комплектация:</strong>
+                      
+                      длина забора 76 м. Забор из одностороннего профнастила высотой 2 м, ворота 4 м с фурнитурой, калитка с фурнитурой. Демонтаж старого забора.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <p><strong>Сумма заказа: </strong></p>
+                  <div class="s-gal__price accent">94 610 руб.
+                  </div>
+                  <p><strong>
+                      Дата:
+                      
+                      16 июня 2017 года</strong></p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-9">
+                  <div class="s-gal__slider-big slider-for">
+                    <div class="img-wrap"><img class="res-i" data-lazy="img/slide-2.jpg" alt=""/></div>
+                    <div class="img-wrap"><img class="res-i" data-lazy="img/slide-1.jpg" alt=""/></div>
+                    <div class="img-wrap"><img class="res-i" data-lazy="img/slide-2.jpg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="s-gal__slide-small slider-nav">
+                    <div class="img-wrap"><img class="res-i" src="img/slide-2.jpg" alt=""/></div>
+                    <div class="img-wrap"><img class="res-i" src="img/slide-1.jpg" alt=""/></div>
+                    <div class="img-wrap"><img class="res-i" src="img/slide-2.jpg" alt=""/></div>
+                  </div><a class="s-gal__video popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">Послушайте отзыв  клиента</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <div class="s-gal__text">
+                    <div class="s-gal__title accent">Устроила цена!
+                    </div>
+                    <p> <strong>Клиент:</strong>
+                      
+                      Юлия
+                    </p>
+                    <p> <strong>Адрес участка:</strong>
+                      
+                      Московская область,  Щелковский район, с.Петровское
+                    </p>
+                    <p> <strong>Комплектация:</strong>
+                      
+                      длина забора 76 м. Забор из одностороннего профнастила высотой 2 м, ворота 4 м с фурнитурой, калитка с фурнитурой. Демонтаж старого забора.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <p><strong>Сумма заказа: </strong></p>
+                  <div class="s-gal__price accent">94 610 руб.
+                  </div>
+                  <p><strong>
+                      Дата:
+                      
+                      16 июня 2017 года</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end s-gal-->
@@ -131,7 +368,7 @@
       <footer class="footer">footer
       </footer>
       <div class="form-wrap zoom-anim-dialog mfp-hide modal modal-form" id="modal">
-        <form class="js-form-validate" method="post">
+        <form method="post">
         </form>
       </div>
       <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/>
