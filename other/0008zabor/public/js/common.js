@@ -186,16 +186,107 @@ $('.slider-nav').slick({
   slidesToScroll: 1,
   asNavFor: '.slider-for',
   dots: false,
-  vertical: true,
-  verticalSwiping: true,
   arrows: false, 
      infinite: false,
-    loop: false,   
-
+    loop: false,  
+    focusOnSelect: true,
   // centerMode: true,
-  focusOnSelect: true,
+   // vertical: true,
+  
+    vertical: true,
+        verticalSwiping: true,
+    responsive: [
+    
+    {
+      breakpoint: 992,
+      settings: {
+       vertical: false,
+        verticalSwiping: false,
+       
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
 
 });
+
+
+
+
+ $('.slider-for2').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false, 
+   infinite: false,
+    loop: false,   
+
+  asNavFor: '.slider-nav2'
+});
+$('.slider-nav2').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for2',
+  dots: false,
+  arrows: false, 
+     infinite: false,
+    loop: false,  
+    focusOnSelect: true,
+  // centerMode: true,
+   // vertical: true,
+  
+    vertical: true,
+        verticalSwiping: true,
+    responsive: [
+    
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 5,
+       // vertical: false,
+       //  verticalSwiping: false,
+       
+      }
+
+    },
+     {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3,
+        
+      }
+
+    },
+     {
+      breakpoint: 576,
+      settings: {
+       slidesToShow: 3, 
+       vertical: false,
+        verticalSwiping: false,
+       
+      }
+
+    },
+
+
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+
+});
+
+
+
+
+ $('.s-gal__slider,'+
+    ' .slider-for ,'+
+    ' .slider-for2 ')
+ .on('lazyLoaded', function(event, slick, image, imageSource){
+     image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+ });
+
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -214,7 +305,9 @@ $('.slider-nav').slick({
   });
  
     // галерея
-  $(".gal").magnificPopup({
+  $(".gal").each(function(){
+
+  $(this).magnificPopup({
     delegate: 'a',
     type: 'image',
     closeOnContentClick: false,
@@ -230,6 +323,7 @@ $('.slider-nav').slick({
       enabled: true
     }
   });
+  })
  
  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
      
