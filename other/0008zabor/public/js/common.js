@@ -241,7 +241,7 @@ $('.slider-nav2').slick({
     responsive: [
     
     {
-      breakpoint: 991,
+      breakpoint: 1440,
       settings: {
         slidesToShow: 5,
        // vertical: false,
@@ -250,6 +250,17 @@ $('.slider-nav2').slick({
       }
 
     },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 4,
+       // vertical: false,
+       //  verticalSwiping: false,
+       
+      }
+
+    },
+
      {
       breakpoint: 768,
       settings: {
