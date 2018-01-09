@@ -406,4 +406,23 @@ $('.slider-nav2').slick({
     .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
    })
    })
+
+ 
+$('.player_audio').click(function() {
+  if (this.paused == false) {
+      this.pause();
+      $(this).parent().removeClass("play");
+
+  } else {
+      // $('.player_audio').pause();
+      $("audio").trigger("pause").parent().removeClass("play");
+      this.play();
+      $(this).parent().addClass("play");
+
+  }
+});
+$('.s-gal__slider').on('beforeChange', function(  currentSlide, nextSlide ){
+  // console.log(nextSlide);
+    $("audio").trigger("pause").parent().removeClass("play");
+});
 });
