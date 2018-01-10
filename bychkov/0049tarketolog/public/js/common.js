@@ -133,15 +133,16 @@ ion.sound({
 });
         $(document).on('mouseenter',
             '.btn ,'+ 
-            ' .link-more,'+ 
-            ' .top-nav__link,'+ 
+            // ' .link-more,'+ 
+            // ' .top-nav__link,'+ 
             ' s-rew__item-m-v,'+ 
             ' .sound-btn' , function () {
               ion.sound.play("glass");
             });
 
           $(document).on('mouseenter',
-            '.hover-block'
+            '.hover-block,'+
+            ' .top-nav__link'
             , function () {
               ion.sound.play("snap");
             });
