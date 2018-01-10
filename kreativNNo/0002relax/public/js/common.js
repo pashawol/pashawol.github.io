@@ -188,6 +188,62 @@ $('.s-brands__slider').slick({
     });
 
 
+
+
+
+ // ui slider
+$(".filter-aside__item  ").each(function(){
+        
+    var 
+        th= $(this),
+        handle_min = th.find('.minus'),
+        handle_max = th.find('.plus'),
+        minn = parseInt(handle_min.val()),
+        maxx = parseInt(handle_max.val());
+
+ 
+
+    th.find( ".filter-aside__range-1" ).slider({
+      min: minn,
+      max: maxx,
+      values: [ minn, maxx ],
+      range: true,
+      stop: function(event, ui) {
+        handle_min.val(  ui.values[ 0 ] );
+        handle_max.val(  ui.values[ 1 ] );
+        },
+        slide: function(event, ui){
+        handle_min.val(  ui.values[ 0 ] );
+        handle_max.val(  ui.values[ 1 ] );
+        }
+    });
+    handle_min.change(function(){
+      var value1=handle_min.val();
+      var value2=handle_max.val();
+
+        if(parseInt(value1) > parseInt(value2)){
+        value1 = value2;
+        handle_min.val(value1);
+      }
+      th.find( ".filter-aside__range-1" ).slider("values",0,value1);  
+    });
+
+      
+    handle_max.change(function(){
+      var value1=handle_min.val();
+      var value2=handle_max.val();
+      
+      if (value2 > 1000) { value2 = 1000; handle_max.val(1000)}
+
+      if(parseInt(value1) > parseInt(value2)){
+        value2 = value1;
+        handle_max.val(value2);
+      }
+      th.find( ".filter-aside__range-1" ).slider("values",1,value2);
+    });
+});
+
+
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',

@@ -158,26 +158,13 @@ var   arrl2 = (' <div class="l">'+ icon2),
  $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  arrows: false, 
+ 
    // infinite: false,
    //  loop: false,   
   asNavFor: '.slider-nav',
-   prevArrow: arrl2,
-    nextArrow: arrr2, 
-   responsive: [
-    
-    {
-      breakpoint: 576,
-      settings: {
-        arrows: true,  
+  arrows: true,  
         prevArrow: arrl2,
         nextArrow: arrr2, 
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
 });
 $('.slider-nav').slick({
   slidesToShow: 2,
@@ -221,22 +208,10 @@ $('.slider-nav').slick({
    //  loop: false,   
 
   asNavFor: '.slider-nav2',
-   prevArrow: arrl2,
-    nextArrow: arrr2, 
-   responsive: [
-    
-    {
-      breakpoint: 576,
-      settings: {
-        arrows: true,  
+  arrows: true,  
         prevArrow: arrl2,
         nextArrow: arrr2, 
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
+   
 });
 $('.slider-nav2').slick({
   slidesToShow: 6,
