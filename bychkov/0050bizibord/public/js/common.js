@@ -26,6 +26,7 @@ var   arrl2 = (' <div class="l">'+ icon),
     infinite: true,
     loop: true,  
     arrows: false, 
+     adaptiveHeight: true
     });
 
 
@@ -55,11 +56,11 @@ $("form").submit(function() { //Change
       url: 'action.php', //Change
       data: th.serialize()
     }).success(function() {
-          $.magnificPopup.close();
-             $.magnificPopup.open({
+          // $.magnificPopup.close();
+      $.magnificPopup.open({
         items: {
           src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline'
+          // type: 'inline'
         }
       })
         // window.location.replace("/thanks.html");
@@ -74,5 +75,24 @@ $("form").submit(function() { //Change
   
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
- 
+ // листалка по стр
+ $(" .scroll-l").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        
+            $('html, body').animate({ scrollTop: destination }, 1100);
+        
+        return false; 
+    });
+  $(".top_line__btn").click(function(){
+    $("form .order").val("Заявка в шапке");
+    $(".modal-f  .form-wrap__h4").text("на бесплатную консультацию");
+
+  })
+  $(".s-catalog__btn").click(function(){
+    $("form .order").val("Заявка на:" + $(this).data("order"));
+    $(".modal-f .form-wrap__h4").text("на развивающую доску");
+
+  })
+
 });
