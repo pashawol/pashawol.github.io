@@ -20,7 +20,8 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="trop main-mnu hidden-mnu d-lg-none landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+      <!-- изменил класс-->
+      <div class="trop main-mnu hidden-mnu d-lg-none landingMenu2 hidden-mnu-1"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
         <div class="wrapp-hidden">
           <ul class="trop__nav">
             <li class="trop__item"><a class="trop__link" href="#">Доставка и оплата</a>
@@ -40,6 +41,29 @@
           </ul>
         </div>
       </div>
+      <!-- добавил-->
+      <div class="trop main-mnu hidden-mnu d-lg-none landingMenu2 hidden-mnu-2"><a class="toggle-mnu toggle-mnu-2" href="#"><span></span></a>
+        <div class="wrapp-hidden">
+          <!-- сюда вставишь меню каталога-->
+          <ul class="trop__nav">
+            <li class="trop__item"><a class="trop__link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#">Гарантия</a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#">Наши преимущества</a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#">Отзывы</a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#">О нас</a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#">Контакты</a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#">Наш журнал</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- добавил-->
       <!--  мобильное меню                                     -->
       <!-- start HEADER.header-->
       <header class="header">
@@ -97,7 +121,13 @@
           <div class="container">
             <div class="row">
               <div class="col-aside">
-                <div class="catalog-aside">
+                <!-- изменил-->
+                <div class="catalog-aside d-lg-none">
+                  <div class="catalog-aside__title toggle-mnu-2">КАТАЛОГ ТОВАРОВ
+                  </div>
+                </div>
+                <!-- изменил-->
+                <div class="catalog-aside d-none d-lg-block">
                   <div class="catalog-aside__title">КАТАЛОГ ТОВАРОВ
                   </div>
                   <div class="catalog-aside__nav"><ul>
@@ -1105,9 +1135,15 @@
           </div>
         </div>
       </div>
-      <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/>
-        <h3>Заявка принята</h3><br/>
-        <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
+      <!-- добавил-->
+      <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="callback"> 
+        <div class="title title--extra">Быстрая покупка</div>
+        <form class="callback__form ajax_form" method="post"><span class="error error_name"></span>
+          <input type="text" name="name" placeholder="Ваше имя" required=""/><span class="error error_phone"></span>
+          <input type="text" name="phone" placeholder="Телефон" required=""/>
+          <input class="js_producttitle" type="hidden" name="product" value="Гироскутер Smart Balance 10"/>
+          <button class="btn btn--main  btn btn-lg btn-accent  " type="submit">Отправить </button>
+        </form>
       </div>
       <!-- modal-->
     </div>
