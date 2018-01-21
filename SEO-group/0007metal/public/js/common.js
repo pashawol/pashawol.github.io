@@ -36,8 +36,96 @@
 var   arrl2 = (' <div class="l">'+ icon),
       arrr2 =(' <div class="r">'+ icon);  
  
+ $('.carusel').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: false,
+    speed: 450,
+    infinite: true,
+    loop: true,  
+    arrows: true, 
+    // centerMode: true,
+    // focusOnSelect: true , 
+     // variableWidth: true,
+     prevArrow: arrr2,
+      nextArrow: arrl2,
+
+      responsive: [
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 3,
+        
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+       
+      }
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+    });
+
 
  
+  $('.kart-head__slider-big').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            speed: 450, 
+            asNavFor: '.kart-head__slider-small', 
+            infinite: false,  
+            loop: false,  
+              arrows: false, 
+   
+          }); 
+         $('.kart-head__slider-small').slick({
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              dots: false,
+              speed: 450,
+              infinite: false,  
+              loop: false,  
+              arrows: false,  
+              // centerMode: true,
+               
+              focusOnSelect: true , 
+              asNavFor:  '.kart-head__slider-big',
+              
+              // swipeToSlide: false
+              }); 
+      $('.kart-head__slider-big, .kart-head__slider-small, .carusel')
+ .on('lazyLoaded', function(event, slick, image, imageSource){
+     image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+ });     
+  $('.gal').each(function(){
+    $(this).magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Загрузка #%curr%...',
+      mainClass: 'mfp-img-mobile',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      },
+    
+  });
+  });
+
+
     $('.slider').slick({
        mobileFirst: true,
         slidesToShow: 1,
@@ -107,7 +195,24 @@ $( window ).on( "load", function() {
 
  heightses();
 
-
+// мобильный фильтр
+ var toggMnu = $(".toggle-mnu-2").click(function () {
+    
+    $(".toggle-mnu-2").toggleClass("on");
+    // $("body").toggleClass("fixed");
+    $(".mobile-filter").toggleClass("active");
+    $("body").toggleClass("fixed");
+    return false;
+  }); 
+  $(document).mouseup(function (e) {
+    var container = $(".mobile-filter.active");
+    if (container.has(e.target).length === 0){
+       $(".toggle-mnu-2").removeClass("on");
+      // $("body").toggleClass("fixed");
+      $(".mobile-filter").removeClass("active");
+      $("body").removeClass("fixed");
+        }
+    });
 
 // листалка по стр
  // $(" .top-nav a").click(function () {
