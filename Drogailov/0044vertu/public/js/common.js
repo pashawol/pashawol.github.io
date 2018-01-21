@@ -1,7 +1,12 @@
  jQuery(document).ready(function($) { 
 
-
-
+$(" .trop__link").click(function(e){
+      e.preventDefault();
+       // $(this).siblings().find(".drop").slideUp();
+      $(this).toggleClass("open");
+      $(this).next( ".drop").slideToggle();
+       // return false;
+    })
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -49,18 +54,18 @@
     return false;
   }); 
 
-    $('.hidden-mnu ul li a').on('click', function () {
-      $(".hidden-mnu .toggle-mnu").click();
-    });
-    $(document).mouseup(function (e) {
-    var container = $(".hidden-mnu.active");
-    if (container.has(e.target).length === 0){
-       $(".toggle-mnu-1").removeClass("on");
-      // $("body").toggleClass("fixed");
-      $(".hidden-mnu").removeClass("active");
-      $("body").removeClass("fixed");
-        }
-    });
+    // $('.hidden-mnu ul li a').on('click', function () {
+    //   $(".hidden-mnu .toggle-mnu").click();
+    // });
+    // $(document).mouseup(function (e) {
+    // var container = $(".hidden-mnu.active");
+    // if (container.has(e.target).length === 0){
+    //    $(".toggle-mnu-1").removeClass("on");
+    //   // $("body").toggleClass("fixed");
+    //   $(".hidden-mnu").removeClass("active");
+    //   $("body").removeClass("fixed");
+    //     }
+    // });
  
  // $(".catalog-aside__title").click(function(){
  //  $(this).next().slideToggle();
