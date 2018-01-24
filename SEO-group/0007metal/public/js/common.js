@@ -1,11 +1,11 @@
- jQuery(document).ready(function($) { 
+ jQuery(document).ready(function($) {
 
   // Custom JS
-  
 
-  var url=document.location.href; 
+
+  var url=document.location.href;
   $.each($(".top-nav__nav a "),function(){
- 
+
   if(this.href==url){
     if($(this).hasClass("top-nav__link") == true){
 
@@ -14,10 +14,10 @@
     if($(this).hasClass("footer__link") == true){
 
     $(this).addClass('footer__link-active');
-    
-    } 
-    
-  }; 
+
+    }
+
+  };
   });
 
   $(".search-btn").click(function(){
@@ -28,24 +28,24 @@
       e.preventDefault();
       $(this).parent().toggleClass("active");
       $(this).next().slideToggle();
-      
+
   })
- 
+
  var icon = '<svg  width="20" height="33" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 20 33"><defs><path d="M19.28635,5753.37047l13.70573,13.07555l-1.5579,1.56472l-13.70544,-13.07555l-0.15511,0.15533l-1.56174,-1.56907l15.44113,-15.50981l1.56199,1.56907z" id="Path-0"/></defs><desc>Generated with Avocode.</desc><g transform="matrix(1,0,0,1,-15,-5737)"><g><title>Forward</title><use xlink:href="#Path-0" fill="#d7d7d7" fill-opacity="1"/></g></g></svg>';
 
 var   arrl2 = (' <div class="l">'+ icon),
-      arrr2 =(' <div class="r">'+ icon);  
- 
+      arrr2 =(' <div class="r">'+ icon);
+
  $('.carusel').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     dots: false,
     speed: 450,
     infinite: true,
-    loop: true,  
-    arrows: true, 
+    loop: true,
+    arrows: true,
     // centerMode: true,
-    // focusOnSelect: true , 
+    // focusOnSelect: true ,
      // variableWidth: true,
      prevArrow: arrr2,
       nextArrow: arrl2,
@@ -55,14 +55,14 @@ var   arrl2 = (' <div class="l">'+ icon),
       breakpoint: 1199,
       settings: {
         slidesToShow: 3,
-        
+
       }
     },
     {
       breakpoint: 991,
       settings: {
         slidesToShow: 2,
-       
+
       }
     },
     {
@@ -79,37 +79,37 @@ var   arrl2 = (' <div class="l">'+ icon),
     });
 
 
- 
+
   $('.kart-head__slider-big').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: false,
-            speed: 450, 
-            asNavFor: '.kart-head__slider-small', 
-            infinite: false,  
-            loop: false,  
-              arrows: false, 
-   
-          }); 
+            speed: 450,
+            asNavFor: '.kart-head__slider-small',
+            infinite: false,
+            loop: false,
+              arrows: false,
+
+          });
          $('.kart-head__slider-small').slick({
               slidesToShow: 4,
               slidesToScroll: 1,
               dots: false,
               speed: 450,
-              infinite: false,  
-              loop: false,  
-              arrows: false,  
+              infinite: false,
+              loop: false,
+              arrows: false,
               // centerMode: true,
-               
-              focusOnSelect: true , 
+
+              focusOnSelect: true ,
               asNavFor:  '.kart-head__slider-big',
-              
+
               // swipeToSlide: false
-              }); 
+              });
       $('.kart-head__slider-big, .kart-head__slider-small, .carusel')
  .on('lazyLoaded', function(event, slick, image, imageSource){
      image.parent().css('background-image', 'url(' + image.attr('src') + ')');
- });     
+ });
   $('.gal').each(function(){
     $(this).magnificPopup({
       delegate: 'a',
@@ -121,7 +121,7 @@ var   arrl2 = (' <div class="l">'+ icon),
         navigateByImgClick: true,
         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
       },
-    
+
   });
   });
 
@@ -133,12 +133,12 @@ var   arrl2 = (' <div class="l">'+ icon),
         dots: false,
         speed: 450,
         infinite: true,
-        loop: true,  
-        arrows: true, 
+        loop: true,
+        arrows: true,
          prevArrow: arrl2,
-          nextArrow: arrr2, 
+          nextArrow: arrr2,
           rows: 3,
-        
+
         });
 
       $('.s-rew__slider').slick({
@@ -146,47 +146,47 @@ var   arrl2 = (' <div class="l">'+ icon),
            dots: true,
             speed: 450,
             infinite: true,
-            loop: true,  
-            arrows: true,  
+            loop: true,
+            arrows: true,
          prevArrow: arrl2,
-          nextArrow: arrr2, 
-        
+          nextArrow: arrr2,
+
            slidesToShow: 1,
             slidesToScroll: 1,
-          
+
         });
 
-  function heightses() { 
-    var w = $(window).width(); 
-    if (w < 767){ 
-      $('  .s-rew__slider').slick("init"); 
-    } 
-    if (w > 767){ 
-      $('  .s-rew__slider').slick("destroy"); 
-    } 
-    var topH=$(".header ").height();  
+  function heightses() {
+    var w = $(window).width();
+    if (w < 767){
+      $('  .s-rew__slider').slick("init");
+    }
+    if (w > 767){
+      $('  .s-rew__slider').slick("destroy");
+    }
+    var topH=$(".header ").height();
     if($(this).scrollTop()>topH){
               $('.top-nav  ').addClass('fixed');
-              
+
           }
           else if ($(this).scrollTop()<topH){
               $('.top-nav  ').removeClass('fixed');
-             
+
           }
 $(window).scroll(function(){
           if($(this).scrollTop()>topH){
-              $('.top-nav  ').addClass('fixed'); 
+              $('.top-nav  ').addClass('fixed');
           }
           else if ($(this).scrollTop()<topH){
-              $('.top-nav  ').removeClass('fixed'); 
+              $('.top-nav  ').removeClass('fixed');
           }
       });
- // конец добавил 
+ // конец добавил
   }
 
   $(window).resize(function() {
     heightses();
-   
+
   });
 $( window ).on( "load", function() {
  heightses();
@@ -197,13 +197,13 @@ $( window ).on( "load", function() {
 
 // мобильный фильтр
  var toggMnu = $(".toggle-mnu-2").click(function () {
-    
+
     $(".toggle-mnu-2").toggleClass("on");
     // $("body").toggleClass("fixed");
     $(".mobile-filter").toggleClass("active");
     $("body").toggleClass("fixed");
     return false;
-  }); 
+  });
   $(document).mouseup(function (e) {
     var container = $(".mobile-filter.active");
     if (container.has(e.target).length === 0){
@@ -218,17 +218,17 @@ $( window ).on( "load", function() {
  // $(" .top-nav a").click(function () {
  //        var elementClick = $(this).attr("href");
  //        var destination = $(elementClick).offset().top;
-        
+
  //            $('html, body').animate({ scrollTop: destination }, 1100);
-        
- //        return false; 
+
+ //        return false;
  //    });
 
 
- 
+
 // табы  . Теперь данные активного таба остается в storage
 $(function() {
-var tab = ('tabs'); 
+var tab = ('tabs');
 
    $('.' + tab + '__caption').each(function(i) {
     var storage = localStorage.getItem('tab' + i);
@@ -238,8 +238,8 @@ var tab = ('tabs');
     }
   });
 
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
-  $(this) 
+$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
+  $(this)
       .addClass('active').siblings().removeClass('active')
       .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
       .eq($(this).index()).fadeIn().addClass('active');
@@ -247,11 +247,11 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
     var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
     localStorage.removeItem('tab' + ulIndex);
     localStorage.setItem('tab' + ulIndex, $(this).index());
- 
+
 });
 });
 
- 
+
 
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
@@ -264,12 +264,12 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 
     closeBtnInside: true,
     preloader: false,
-    
+
     midClick: true,
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   });
- 
+
     // галерея
   $(".gal").magnificPopup({
     delegate: 'a',
@@ -287,11 +287,11 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
       enabled: true
     }
   });
- 
+
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
-  
+
     //Replace all SVG images with inline SVG
   $('img.img-svg').each(function(){
     var $img = $(this);
@@ -323,7 +323,7 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
   });
 
 
- 
+
 $('input.number, .custom-select').styler();
- 
+
 });
