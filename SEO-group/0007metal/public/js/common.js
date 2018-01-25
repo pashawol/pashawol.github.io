@@ -21,7 +21,7 @@
   });
 
   $(".search-btn").click(function(){
-   
+
     $(".form-search").toggleClass("active");
   })
   $(".wrapp-hidden .menu-item-has-children > a").click(function(e){
@@ -47,8 +47,8 @@ var   arrl2 = (' <div class="l">'+ icon),
     // centerMode: true,
     // focusOnSelect: true ,
      // variableWidth: true,
-     prevArrow: arrr2,
-      nextArrow: arrl2,
+     prevArrow: arrl2,
+      nextArrow: arrr2,
 
       responsive: [
     {
@@ -226,17 +226,11 @@ $( window ).on( "load", function() {
 
 
 
-// табы  . Теперь данные активного таба остается в storage
+// табы  
 $(function() {
 var tab = ('tabs');
 
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
+ 
 
 $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
   $(this)
@@ -244,9 +238,7 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
       .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
       .eq($(this).index()).fadeIn().addClass('active');
 
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
+     
 
 });
 });

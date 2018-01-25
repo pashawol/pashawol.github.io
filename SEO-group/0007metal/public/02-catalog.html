@@ -136,7 +136,7 @@
       <!-- end HEADER.header-->
       <div class="container">
         <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная </a><a class="breadcrumb-item" href="#">Услуги</a><span class="breadcrumb-item active">Строительство коттеджей</span>
-        </nav><a class="toggle-mnu toggle-mnu-2 d-xl-none" href="#"><span></span><small>фильтр</small></a>
+        </nav>
         <div class="row">
           <div class="col-auto mobile-filter"><a class="toggle-mnu toggle-mnu-2 d-xl-none" href="#"><span></span></a>
             <!-- start filter-aside-->
@@ -191,10 +191,12 @@
             <section class="catalog section bg-w">
               <h1 class="title-page">Строительство коттеджей</h1>
               <p>Наилучшим вариантом сотрудничества заказчика и компании-застройщика является вариант строительства дома «под ключ». В этом случае заказчик не погружается в стихию строительных проблем, а рассказывает нам о своих предпочтениях и наслаждается наблюдением за строительными процессами. Мы самостоятельно проводим исследование грунта, подготавливаем строительную площадку, закладываем фундамент, возводим стены и крышу, а также занимаемся монтажом окон и дверей, внешней и внутренней отделкой здания. Параллельно ведутся инженерно-технические роботы по устройству канализационной системы, систем водоподачи и водоотведения, организации отопления и вентиляции, проведению электричества.</p>
+              <div class="catalog__mob-filter-wrap d-xl-none"><a class="toggle-mnu toggle-mnu-2" href="#"><span></span><small>Подбор по параметрам</small></a>
+              </div>
               <div class="catalog__panel">
                 <div class="catalog__select-wrap"> 
-                  <select class="custom-select" name="" data-placeholder=""> 
-                    <option value="" selected="selected" disabled="disabled">Сортировать по</option>
+                  <select class="custom-select" data-placeholder="Сортировать по"> 
+                    <option></option>
                     <option value="">По умолчанию</option>
                     <option value="">По умолчанию 1212sasa</option>
                   </select>
@@ -351,12 +353,16 @@
             <form method="post">
               <div class="row">
                 <div class="col-md-4 col-sm-6">
-                  <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" placeholder="Имя"/>
+                  <div class="form-wrap__input-wrap"> 
+                    <div class="form-wrap__icon-wrap d-sm-none"><img class="img-svg" src="img/svg/user-icon-copy.svg" alt=""/>
+                    </div><input class="form-wrap__input" type="text" placeholder="Имя"/>
                   </div>
                   <!-- +e.input-wrap-->
                 </div>
                 <div class="col-md-4 col-sm-6">
-                  <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Телефон"/>
+                  <div class="form-wrap__input-wrap"> 
+                    <div class="form-wrap__icon-wrap d-sm-none"><img class="img-svg" src="img/svg/phone.svg" alt=""/>
+                    </div><input class="form-wrap__input" type="tel" placeholder="Телефон"/>
                   </div>
                   <!-- +e.input-wrap-->
                 </div>
@@ -464,10 +470,10 @@
         <form method="post">
           <div class="form-wrap__title">Закажите обратный звонок и наш специалист перезвонит вам в течение 5 минут.
           </div>
-          <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" placeholder="Ваше имя"/>
+          <div class="form-wrap__input-wrap">  <input class="form-wrap__input" type="text" placeholder="Ваше имя"/>
           </div>
           <!-- +e.input-wrap-->
-          <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Телефон"/>
+          <div class="form-wrap__input-wrap">  <input class="form-wrap__input" type="tel" placeholder="Телефон"/>
           </div>
           <!-- +e.input-wrap-->
           <div class="form-wrap__btn-wrap">

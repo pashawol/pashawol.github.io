@@ -323,4 +323,7 @@ $("form").submit(function() { //Change
     .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
    })
    })
+
+  var wow = new WOW({ mobile: false });
+        wow.init();
 });
