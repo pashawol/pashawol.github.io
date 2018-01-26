@@ -81,17 +81,12 @@ $( window ).on( "load", function() {
       },
       breakpoints: {
          
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 30,
+        
+        992: {
+          slidesPerView: 2, 
         },
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 10,
+        480: {
+          slidesPerView: 1, 
         }
       }
     });    
