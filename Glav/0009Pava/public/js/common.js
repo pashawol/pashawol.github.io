@@ -28,11 +28,7 @@
       return false;
     })
  
-     $(".filter__sort-btn").click(function(){
-        $(".filter__wrapper").fadeToggle(100);
-        $(".filter__slider-title, .filter__slider").slick("refresh");
-          // section_slider();
-     })
+ 
   $(".reg__link").click(function(){
     $(".reg").toggleClass("active");
     $(this).toggleClass("active")
@@ -96,6 +92,27 @@ $( window ).on( "load", function() {
  heightses();
 
 
+
+     $(".filter__sort-btn").click(function(){
+        $(".filter__wrapper").fadeToggle(100);
+        $(".filter__slider-title, .filter__slider").slick("refresh");
+
+      
+ var swiper = new Swiper('.swiper-container', {
+      // init: false,
+      slidesPerView: 'auto',
+      
+      freeMode: true,
+      freeModeMomentum:false,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        
+      },
+    
+      mousewheel: true,
+    });
+          // section_slider();
+     })
  
 // табы  . Теперь данные активного таба остается в storage
 $(function() {
@@ -177,7 +194,8 @@ function section_slider(){
      infinite: true,
   infinite: false,
   loop: false,
-  draggable: false,
+  // draggable: false,
+  swipe: false,
   asNavFor:  '.filter__slider-title'
 });
 $('.filter__slider-title').slick({
@@ -191,13 +209,27 @@ $('.filter__slider-title').slick({
   nextArrow: arrr2,
   infinite: false,
   loop: false,
-  draggable: false,
+  swipe: false,
    focusOnSelect: true ,
   // centerMode: true, 
 });
 }
  
-  
+  $('.kart-head__slider').slick({
+  // slidesToShow: 1,
+  // slidesToScroll: 1,
+ 
+  variableWidth: true,  
+  arrows: true, 
+  dots: false,
+  prevArrow: arrl2,
+  nextArrow: arrr2,
+  infinite: false,
+  loop: false,
+  // swipe: false,
+   focusOnSelect: true ,
+  // centerMode: true, 
+});
   // $(".filter__ovh").niceScroll({
   //   // horizrailenabled : false,
   //   "verge" : "500",
@@ -216,8 +248,41 @@ section_slider();
 
 
 
+  $('.kart-head__slider-big').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            speed: 450,
+            asNavFor: '.kart-head__slider-small',
+            infinite: false,
+            loop: false,
+              arrows: false,
 
- $('.s-event__slider')
+          });
+         $('.kart-head__slider-small').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              dots: false,
+              speed: 450,
+              infinite: false,
+              loop: false,
+              arrows: false,
+              vertical: true,
+              verticalSwiping: true,
+              // centerMode: true,
+
+              focusOnSelect: true ,
+              asNavFor:  '.kart-head__slider-big',
+
+              // swipeToSlide: false
+              });
+  
+
+
+ $('.s-event__slider,'+
+    // '.kart-head__slider-big,'+
+    // ' .kart-head__slider-small,'+
+    ' .carusel')
  .on('lazyLoaded', function(event, slick, image, imageSource){
      image.parents(".img-wrap").css('background-image', 'url(' + image.attr('src') + ')');
  });
