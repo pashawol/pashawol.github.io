@@ -2,23 +2,7 @@
 
   // Custom JS
   
-
-  var url=document.location.href; 
-  $.each($(".top-nav__nav a "),function(){
  
-  if(this.href==url){
-    if($(this).hasClass("top-nav__link") == true){
-
-    $(this).addClass('top-nav__link-active');
-    }
-    if($(this).hasClass("footer__link") == true){
-
-    $(this).addClass('footer__link-active');
-    }
-
-  };
- 
-  });
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
     
@@ -28,10 +12,7 @@
     $("body").toggleClass("fixed");
     return false;
   }); 
-    $('.hidden-mnu ul li a').on('click', function () {
-      $(".hidden-mnu .toggle-mnu").click();
-    });
-    $(document).mouseup(function (e) {
+  $(document).mouseup(function (e) {
     var container = $(".hidden-mnu.active");
     if (container.has(e.target).length === 0){
        $(".toggle-mnu-1").removeClass("on");
@@ -39,8 +20,26 @@
       $(".hidden-mnu").removeClass("active");
       $("body").removeClass("fixed");
         }
+       
     });
+     $(".trop li.menu-item-has-children").click(function(){
+       $(this).siblings().find(".trop__nav").slideUp();
+      $(this).find(".trop__nav").slideToggle();
+      return false;
+    })
  
+     $(".filter__sort-btn").click(function(){
+        $(".filter__wrapper").fadeToggle(100);
+        $(".filter__slider-title, .filter__slider").slick("destroy");
+          section_slider();
+     })
+  $(".reg__link").click(function(){
+    $(".reg").toggleClass("active");
+    $(this).toggleClass("active")
+
+    .next().fadeToggle(150);
+     return false;
+  })
   function heightses() {
 
     var w = $(window).width();
@@ -87,64 +86,7 @@ $( window ).on( "load", function() {
  heightses();
 
 
-
-// листалка по стр
- // $(" .top-nav a").click(function () {
- //        var elementClick = $(this).attr("href");
- //        var destination = $(elementClick).offset().top;
-        
- //            $('html, body').animate({ scrollTop: destination }, 1100);
-        
- //        return false; 
- //    });
-
-
-// или
-// Cache selectors
-var lastId,
-    topMenu = $(" .top-nav ul"),
-    topMenuHeight = topMenu.outerHeight()+15,
-    // All list items
-    menuItems = topMenu.find("a.top-nav__link"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
-    });
-
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({ 
-      scrollTop: offsetTop
-  }, 1600);
-  e.preventDefault();
-});
-
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
-   
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter(".top-nav__link[href='#"+id+"']").parent().addClass("active");
-   }                   
-});
+ 
 // табы  . Теперь данные активного таба остается в storage
 $(function() {
 var tab = ('tabs'); 
@@ -172,13 +114,14 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 
  
 
- var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+ var icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252.06 477.18"><g   data-name="Слой 2"><g  data-name="Capa 1"><g id="g4"><path id="path2" d="M248.18,229.08,23.08,4A13.51,13.51,0,1,0,4,23.08l215.5,215.5L4,454.08a13.46,13.46,0,0,0,0,19.1,13.59,13.59,0,0,0,9.5,4,13.17,13.17,0,0,0,9.5-4l225.1-225.1a13.43,13.43,0,0,0,.1-19Z"/></g></g></g></svg>';
 
 var   arrl2 = (' <div class="l">'+ icon),
       arrr2 =(' <div class="r">'+ icon);  
+
  // карусель
- $('.s-team__slider').slick({
-    slidesToShow: 3,
+ $('.s-event__slider').slick({
+    slidesToShow: 2,
     slidesToScroll: 1,
     dots: false,
     speed: 450,
@@ -190,9 +133,66 @@ var   arrl2 = (' <div class="l">'+ icon),
      // variableWidth: true,
      prevArrow: arrl2,
       nextArrow: arrr2,
+       responsive: [
+    
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1
+      }
+    }  
+  ]
+    });
+ // карусель
+ $('.header-block').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 450,
+    infinite: true,
+    loop: true,  
+    arrows: false, 
+    dots: true,
+    
+      
     });
 
+function section_slider(){
+ $('.filter__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true, 
+   arrows: false, 
+    dots: false,
+     infinite: true,
+  infinite: false,
+  loop: false,
+  draggable: false,
+  asNavFor:  '.filter__slider-title'
+});
+$('.filter__slider-title').slick({
+  // slidesToShow: 1,
+  // slidesToScroll: 1,
+  asNavFor: '.filter__slider',
+  variableWidth: true,  
+  arrows: true, 
+  dots: false,
+  prevArrow: arrl2,
+  nextArrow: arrr2,
+  infinite: false,
+  loop: false,
+  draggable: false,
+   // focusOnSelect: true ,
+  // centerMode: true, 
+});
+}
 
+section_slider();
+
+ $('.s-event__slider')
+ .on('lazyLoaded', function(event, slick, image, imageSource){
+     image.parents(".img-wrap").css('background-image', 'url(' + image.attr('src') + ')');
+ });
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
