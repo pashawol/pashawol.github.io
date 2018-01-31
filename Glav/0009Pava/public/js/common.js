@@ -304,7 +304,9 @@ section_slider();
   });
  
     // галерея
-  $(".gal").magnificPopup({
+  $(".gal").each(function(){
+    
+  $(this).magnificPopup({
     delegate: 'a',
     type: 'image',
     closeOnContentClick: false,
@@ -320,6 +322,7 @@ section_slider();
       enabled: true
     }
   });
+  })
  // форма
 $("form").submit(function() { //Change
     var th = $(this);

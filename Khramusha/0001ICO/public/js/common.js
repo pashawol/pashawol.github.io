@@ -46,6 +46,17 @@ $( window ).on( "load", function() {
  heightses();
 
 
+ $(".reg-block__text-block").niceScroll({
+    horizrailenabled : false,
+    "verge" : "500",
+    cursorborder: "0",
+    cursorborderradius: "4px",
+    cursorwidth: "10px",
+    cursorcolor: "#d7d7d7", 
+    // background: " #fff",
+    // railpadding: "5"
+    touchbehavior: "true",
+  });
 
 // листалка по стр
  $(" .top_line ul a, footer   ul a").click(function () {
