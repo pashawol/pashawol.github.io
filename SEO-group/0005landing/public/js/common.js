@@ -27,7 +27,7 @@
   function heightses() {
 
     var w = $(window).width();
-   // $(".otz__item .text-wrap ").height('auto').equalHeights();
+   $(".s-for p").height('auto').equalHeights();
    //
     
 

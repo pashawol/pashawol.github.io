@@ -12,7 +12,9 @@
       
       
     });
- 
+
+
+
   function heightses() {
 
     var w = $(window).width();
@@ -35,21 +37,21 @@
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
     }
-    var topH=$("header ").innerHeight();  
+    var topH=$("header .top_line").innerHeight();  
     if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed');
+                    $('header .top_line  ').addClass('fixed');
                     
                 }
                 else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed');
+                    $('header .top_line  ').removeClass('fixed');
                    
                 }
     $(window).scroll(function(){
                 if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed'); 
+                    $('header .top_line  ').addClass('fixed'); 
                 }
                 else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed'); 
+                    $('header .top_line  ').removeClass('fixed'); 
                 }
             });
        // конец добавил 
@@ -187,4 +189,23 @@ wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
   
 
 
+});
+
+
+$(document).on("submit",".js-form-validate",function(  ){
+
+
+
+  $.post( "/action.php",$(this).serialize(), function( data ) {
+    console.log(data);
+    $.magnificPopup.open({
+      items: {
+        src: $('#thanks'),
+        type: 'inline',
+      }})
+
+  });
+
+
+  return false;
 });

@@ -20,6 +20,40 @@
   };
  
   });
+    if($(".s-serv__row .s-serv__col").length > 6 ){
+
+    $(".s-serv__row   ")
+    .append('<div class="col-12 text-center"><a class="btn btn-lg btn-accent btn-more-serv" href="#">Список всех услуг</a></div>');
+    $(".s-serv__row .s-serv__col:nth-child(n + 7)").addClass("col__hidden");
+    }
+
+$( '.s-serv__row').on('click', '.btn-more-serv', function(){
+      var hidden = $(".col__hidden");
+      if ($(".col__hidden").is(":hidden") == true){
+
+         hidden.slideDown();
+         $(this).text("Скрыть");
+      }
+      else{
+        hidden.slideUp();
+         $(this).text("Список всех услуг");
+      }
+        // $(this).remove();
+        return false;
+      }) 
+
+    
+     $(".trop__nav .dropdown ").each(function(){
+      $(this).append('<div class="toggle-l"></div>');
+    })
+
+    $( '.trop__nav .dropdown  ').on('click', '.toggle-l', function(){
+        $(this).prev().slideToggle()
+        return false;
+      }) 
+
+
+
   // Custom JS
   
 // мобильное меню
@@ -31,18 +65,7 @@
     $("body").toggleClass("fixed");
     return false;
   }); 
-    $('.hidden-mnu ul li a').on('click', function () {
-      $(".hidden-mnu .toggle-mnu").click();
-    });
-    $(document).mouseup(function (e) {
-    var container = $(".hidden-mnu.active");
-    if (container.has(e.target).length === 0){
-       $(".toggle-mnu-1").removeClass("on");
-      // $("body").toggleClass("fixed");
-      $(".hidden-mnu").removeClass("active");
-      $("body").removeClass("fixed");
-        }
-    });
+ 
  
   function heightses() {
 
