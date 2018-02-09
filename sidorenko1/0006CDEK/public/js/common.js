@@ -13,7 +13,56 @@
       
     });
 
+// $(".s-why__caption.active ").click(function(){
+//   $(this).toggleClass("active").parents(".s-why__item").toggleClass("active");
+// })
+ 
 
+isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    if (isMobile.any()) {
+    $(".s-why__item").on(' click    ', function(){
+
+    $(this).toggleClass("active").siblings().removeClass('active')
+    $(this).find(".s-why__caption").toggleClass("active").siblings().removeClass('active') 
+  })
+     $(".s-dop__col").on(' click    ', function(){
+
+    $(this).toggleClass("active").siblings().removeClass('active')
+    $(this).find(".s-dop__caption").toggleClass("active").siblings().removeClass('active') 
+  })
+
+}
+else{
+   $(".s-why__item").hover( function(){
+
+    $(this).toggleClass("active").find(".s-why__caption").toggleClass("active");
+  })
+    $(".s-dop__col").hover( function(){
+
+    $(this).toggleClass("active").find(".s-dop__caption").toggleClass("active");
+  })
+
+}
 
   function heightses() {
 
