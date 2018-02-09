@@ -107,7 +107,21 @@ $('.s-gal__slider').slick({
   ]
     });
 
- $('.s-gal__slider'  )
+$('.s-rew__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    speed: 450,
+    infinite: true,
+    loop: true,  
+    arrows: true, 
+     adaptiveHeight: true,
+     prevArrow: arrr2 + 'Вперед',
+      nextArrow: arrl2 + 'Назад',
+    });
+
+ $('.s-gal__slider,' +
+    '.s-rew__slider' )
  .on('lazyLoaded', function(event, slick, image, imageSource){
      image.parent().css('background-image', 'url(' + image.attr('src') + ')');
  });
@@ -223,7 +237,9 @@ $("form").submit(function() { //Change
      
 var wowAnim = $(".s-preim__col," +
                 ".s-zakaz__col," + 
-                ".s-condition__col");
+                ".footer__col," + 
+                ".header-block__item," + 
+                ".s-work__col");
 wowAnim.each(function(i){
  
 wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s"); 
@@ -243,8 +259,8 @@ wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
 
  ymaps.ready(function () {
     var myMap = new ymaps.Map('map1', {
-            center: [51.67682134332114,39.246444082451085],
-            zoom: 15,
+            center: [59.905,30.419244415344213],
+            zoom: 16,
             behaviors: ['drag'],
               
                 // controls: ["zoomControl", "fullscreenControl"]
@@ -253,9 +269,9 @@ wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
         }),
 
    
-        myPlacemark = new ymaps.Placemark([51.677603654725326,39.24610075969719], {
-            hintContent: 'Воронеж, ул. Уличная, 32, корп. 1',
-            balloonContent: 'Воронеж, ул. Уличная, 32, корп. 1 '
+        myPlacemark = new ymaps.Placemark([59.90625833506598,30.4190083809509], {
+            hintContent: 'г. Санкт-Петербург проспект Обуховской обороны д. 51 K, офис 503',
+            balloonContent: 'г. Санкт-Петербург проспект Обуховской обороны д. 51 K, офис 503'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
@@ -266,7 +282,7 @@ wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
             iconImageSize: [88, 97],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-35, -50]
+            iconImageOffset: [-35, 80]
         }) 
 
     myMap.geoObjects
