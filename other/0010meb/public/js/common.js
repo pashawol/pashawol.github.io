@@ -247,100 +247,19 @@ var   arrl2 = (' <div class="l">'+ icon),
       enabled: true
     }
   });
- // форма
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: 'action.php', //Change
-      data: th.serialize()
-    }).success(function() {
-          $.magnificPopup.close();
-             $.magnificPopup.open({
-        items: {
-          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline'
-        }
-      })
-        // window.location.replace("/thanks.html");
-       setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-        // $.magnificPopup.close();
-      }, 4000);
-    });
-    return false;
+
+  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
   });
-  $(".contact").magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    closeOnContentClick: false,
-    closeBtnInside: false,
-    mainClass: 'mfp-with-zoom mfp-img-mobile',
-    image: {
-      verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
-    },
-    gallery: {
-      enabled: true
-    }
-  });
+ 
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
-  
-    //Replace all SVG images with inline SVG
-  $('img.img-svg').each(function(){
-    var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg');
-
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-  });
-
-
-  // кастомный инпут файл 
- 
-  var file = $(".add-file input[type=file]");
-  file.change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         var name = $(".add-file__filename  ");
-       name.text(filename);
-  
-    }); 
-
-
-  
-  $(".pretty-embed__bg").each(function(){ 
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
+   
 });
