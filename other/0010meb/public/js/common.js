@@ -19,6 +19,26 @@
   };
  
   });
+      // галерея
+  $(".gal").each(function(){
+    
+  $(this).magnificPopup({
+    delegate: 'a',
+    type: 'image',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    mainClass: 'mfp-with-zoom mfp-img-mobile',
+    image: {
+      verticalFit: true,
+      // titleSrc: function(item) {
+      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+      // }
+    },
+    gallery: {
+      enabled: true
+    }
+  });
+  })
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
     

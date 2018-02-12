@@ -2,29 +2,85 @@
 
   // Custom JS
     
-  var vid = document.getElementById("bgvid");
  
+ // мобильное меню
+   var toggMnu = $(".toggle-mnu-1").click(function () {
+    
+    $(".toggle-mnu-1").toggleClass("on");
+    // $("body").toggleClass("fixed");
+    $(".hidden-mnu").toggleClass("active");
+    $("body").toggleClass("fixed");
+    return false;
+  }); 
+    $('.hidden-mnu ul li a').on('click', function () {
+      $(".hidden-mnu .toggle-mnu").click();
+    });
+    $(document).mouseup(function (e) {
+    var container = $(".hidden-mnu.active");
+    if (container.has(e.target).length === 0){
+       $(".toggle-mnu-1").removeClass("on");
+      // $("body").toggleClass("fixed");
+      $(".hidden-mnu").removeClass("active");
+      $("body").removeClass("fixed");
+        }
+    });
+ 
+  function heightses() {
 
-if (window.matchMedia('(prefers-reduced-motion)').matches) {
-    vid.removeAttribute("autoplay");
-    vid.pause();
-    pauseButton.innerHTML = "Paused";
-}
+    var w = $(window).width();
+   // $(".otz__item .text-wrap ").height('auto').equalHeights();
+   //
+    
 
-function vidFade() {
-  vid.classList.add("stopfade");
-}
+    // скрывает моб меню 
+    if (w>991){
+       $(".toggle-mnu-1").removeClass("on");
+        // $("body").removeClass("fixed");
+        $(".hidden-mnu").removeClass("active");
+        $("body").removeClass("fixed");
+    }
+    var topH=$(".header-block ").innerHeight();  
+    if($(this).scrollTop()>topH){
+                    $('.top-nav  ').addClass('fixed');
+                    
+                }
+                else if ($(this).scrollTop()<topH){
+                    $('.top-nav  ').removeClass('fixed');
+                   
+                }
+    $(window).scroll(function(){
+                if($(this).scrollTop()>topH){
+                    $('.top-nav  ').addClass('fixed'); 
+                }
+                else if ($(this).scrollTop()<topH){
+                    $('.top-nav  ').removeClass('fixed'); 
+                }
+            });
+       // конец добавил 
+  }
 
-vid.addEventListener('ended', function()
-{
-// only functional if "loop" is removed 
-vid.pause();
-// to capture IE10
-vidFade();
-}); 
+  $(window).resize(function() {
+    heightses();
+   
+  });
+$( window ).on( "load", function() {
+ heightses();
+
+})
+
+ heightses();
 
  
- 
+ $(" .top-nav a").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        
+            $('html, body').animate({ scrollTop: destination }, 1100);
+        
+        return false; 
+    });
+
+
       // галерея
   $(".gal").each(function(){
     
@@ -46,67 +102,12 @@ vidFade();
   });
   })
  
-
-// листалка по стр
- // $(" .top-nav a").click(function () {
- //        var elementClick = $(this).attr("href");
- //        var destination = $(elementClick).offset().top;
-        
- //            $('html, body').animate({ scrollTop: destination }, 1100);
-        
- //        return false; 
- //    });
-
-  
-
+ 
  var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
 
 var   arrr2  = (' <div class="l">'+ icon),
       arrl2 =(' <div class="r">'+ icon);  
- // карусель
- $('.s-team__slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: false,
-    speed: 450,
-    infinite: true,
-    loop: true,  
-    arrows: true, 
-    // centerMode: true,
-    // focusOnSelect: true , 
-     // variableWidth: true,
-     prevArrow: arrr2,
-      nextArrow: arrl2,
-    });
-
-$('.s-gal__slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: false,
-    speed: 450,
-    infinite: true,
-    loop: true,  
-    arrows: true, 
-    // centerMode: true,
-    // focusOnSelect: true , 
-     // variableWidth: true,
-     prevArrow: arrr2,
-      nextArrow: arrl2,
-      rows: 2,
-       responsive: [
-    
-    {
-      breakpoint: 576,
-      settings: {
-        slidesToShow: 2, 
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-    });
-
+ 
 $('.s-rew__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -120,8 +121,7 @@ $('.s-rew__slider').slick({
       nextArrow: arrl2 + 'Назад',
     });
 
- $('.s-gal__slider,' +
-    '.s-rew__slider' )
+ $(  '.s-rew__slider' )
  .on('lazyLoaded', function(event, slick, image, imageSource){
      image.parent().css('background-image', 'url(' + image.attr('src') + ')');
  });
@@ -159,30 +159,81 @@ $('.s-rew__slider').slick({
       enabled: true
     }
   });
+  
+  $(".top_line__modal").click(function(){
+    $("#modal .form-wrap__h4").text("на бесплатную консультацию менеджера");
+    $("#modal .order").val("Заявка  на бесплатную консультацию менеджера");
+  })
+
+  $(".header-block__btn").click(function(){
+    $("#modal .form-wrap__h4").text("на бесплатный расчёт стоимости изготовления");
+    $("#modal .order").val("Заявка  на бесплатный расчёт стоимости  ");
+  })
+
+
+  $(".s-zakaz-d__btn").click(function(){
+    $("#modal .form-wrap__h4").text("на заказ камина");
+    $("#modal .order").val("Заявка   на заказ камина");
+  })
+
+
  // форма
-$("form").submit(function() { //Change
+$("#modal, .section ")
+  .find("form").submit(function() { //Change
     var th = $(this);
     $.ajax({
       type: "POST",
       url: 'action.php', //Change
       data: th.serialize()
     }).success(function() {
-          $.magnificPopup.close();
+   
              $.magnificPopup.open({
         items: {
           src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
           type: 'inline'
         }
       })
-        // window.location.replace("/thanks.html");
-       setTimeout(function() {
+
+               setTimeout(function() {
         // Done Functions
         th.trigger("reset");
-        // $.magnificPopup.close();
+        $.magnificPopup.close();
       }, 4000);
+     
+     
     });
     return false;
+   // $(this).find(".d-none").click();
   });
+ 
+
+ // форма
+$("#modal-stat form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: 'action.php', //Change
+      data: th.serialize()
+    }).success(function() {
+        
+              $.magnificPopup.open({
+        items: {
+          src: '#thanks-stat', // can be a HTML string, jQuery object, or CSS selector
+          type: 'inline'
+        }
+      })
+                setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+     
+      }, 3000);
+  
+    });
+    return false;
+   // $(this).find(".d-none").click();
+  });
+ 
+
   $(".contact").magnificPopup({
     delegate: 'a',
     type: 'image',
@@ -237,8 +288,9 @@ $("form").submit(function() { //Change
      
 var wowAnim = $(".s-preim__col," +
                 ".s-zakaz__col," + 
+                ".s-gal__col," + 
                 ".footer__col," + 
-                ".header-block__item," + 
+                // ".header-block__item," + 
                 ".s-work__col");
 wowAnim.each(function(i){
  
@@ -259,7 +311,7 @@ wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
 
  ymaps.ready(function () {
     var myMap = new ymaps.Map('map1', {
-            center: [59.905,30.419244415344213],
+            center: [59.902,30.419244415344213],
             zoom: 16,
             behaviors: ['drag'],
               
@@ -269,7 +321,7 @@ wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
         }),
 
    
-        myPlacemark = new ymaps.Placemark([59.90625833506598,30.4190083809509], {
+        myPlacemark = new ymaps.Placemark([59.90329979116978,30.421154148162806], {
             hintContent: 'г. Санкт-Петербург проспект Обуховской обороны д. 51 K, офис 503',
             balloonContent: 'г. Санкт-Петербург проспект Обуховской обороны д. 51 K, офис 503'
         }, {
@@ -282,7 +334,7 @@ wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
             iconImageSize: [88, 97],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-35, 80]
+            iconImageOffset: [-45, -80]
         }) 
 
     myMap.geoObjects

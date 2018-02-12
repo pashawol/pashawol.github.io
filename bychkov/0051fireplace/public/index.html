@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>title</title>
+    <title>Флоренция - изготовление и монтаж каминов</title>
     <meta name="description" content="о чем страница">
     <meta name="viewport" content="width=device-width">
     <meta property="og:image" content="path/to/image.jpg">
@@ -19,7 +19,23 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper">
+    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
+      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+        <div class="wrapp-hidden"> 
+          <ul class="trop__nav">
+            <li class="trop__item"><a class="trop__link" href="#s-gal">Наши работы  </a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#s-rew"> Отзывы  </a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#s-stat">Как выбрать камин   </a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#s-contact">Контакты</a>
+            </li>
+          </ul>
+          <div class="text-right"></div>
+        </div>
+      </div>
+      <!--  мобильное меню                                     -->
       <!-- start HEADER.header-->
       <header class="header video-background">
         <div class="video-fallback"></div>
@@ -44,11 +60,11 @@
                 <div class="top_line__row row">
                   <div class="col-xl-auto"><a class="top_line__tel" href="tel:+7(921)9071821">+7 (921) 907-18-21</a>
                   </div>
-                  <div class="col-xl-auto"><a class="top_line__modal" href="#">Заказать звонок</a>
+                  <div class="col-xl-auto"><a class="top_line__modal popup-with-move-anim" href="#modal">Заказать звонок</a>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-5 col-6 col-12">
+              <div class="col-xl-5 col-lg-6 col-12">
                 <ul class="top_line__list row">
                   <li class="top_line__item">Электрокамины
                   </li>
@@ -65,23 +81,49 @@
         <!-- start header-block-->
         <div class="header-block" id="header-block">
           <div class="container text-center">
-            <h1 class="  wow bounceInUp animated " data-wow-offset="80" data-wow-duration="2s">
+            <h1>
               Изготовление и монтаж 
               <strong>каминов</strong>
             </h1>
-            <div class="header-block__sub-t wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s" data-wow-delay=".1s">Для загородных домов и квартир от производителя 
+            <div class="header-block__sub-t"> Для загородных домов и квартир от производителя 
             </div>
             <div class="row">
-              <div class="header-block__item col-sm-auto wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s"> Монтаж за 14 дней
+              <div class="header-block__item col-sm-auto"> Монтаж за 14 дней
               </div>
-              <div class="header-block__item col-sm-auto wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s"> Бесплатный замер и доставка по СПб
+              <div class="header-block__item col-sm-auto"> Бесплатный замер и доставка по СПб
               </div>
-              <div class="header-block__item col-sm-auto wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s"> Гарантия 3 года
+              <div class="header-block__item col-sm-auto"> Гарантия 3 года
               </div>
-            </div><a class="header-block__btn btn btn-accent wow bounceInUp animated" href="#" data-wow-offset="80" data-wow-duration="2s" data-wow-delay=".3s">Заказать расчёт стоимости</a>
+            </div><a class="header-block__btn btn btn-accent popup-with-move-anim" href="#modal">Заказать расчёт стоимости</a>
           </div>
         </div>
         <!-- end header-block-->
+        <!-- start top-nav-->
+        <div class="top-nav d-none d-lg-block">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-3 col-sm-auto">
+                <div class="logo"><img src="img/logo.png" alt=""/>
+                  <div class="logo__text">Флоренция
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto">
+                <ul class="top-nav__nav">
+                  <li class="top-nav__item"><a class="top-nav__link" href="#s-gal">Наши работы  </a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#s-rew"> Отзывы  </a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#s-stat">Как выбрать камин   </a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#s-contact">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end top-nav-->
       </header>
       <!-- end HEADER.header-->
       <!-- start s-preim-->
@@ -141,8 +183,20 @@
             <div class="title-block__sub"> Мы производим камины любой сложности
             </div>
           </div>
-          <div class="s-gal__slider gal wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s">
-            <!-- - for (var x = 1; x < 28; x++)--><a class="s-gal__img-wrap" href="img/gal/gal-10.jpg"><img data-lazy="img/gal/gal-sm-10.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-8.jpg"><img data-lazy="img/gal/gal-sm-8.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-13.jpg"><img data-lazy="img/gal/gal-sm-13.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-5.jpg"><img data-lazy="img/gal/gal-sm-5.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-6.jpg"><img data-lazy="img/gal/gal-sm-6.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-9.jpg"><img data-lazy="img/gal/gal-sm-9.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-11.jpg"><img data-lazy="img/gal/gal-sm-11.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-2.jpg"><img data-lazy="img/gal/gal-sm-2.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-1.jpg"><img data-lazy="img/gal/gal-sm-1.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-12.jpg"><img data-lazy="img/gal/gal-sm-12.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-3.jpg"><img data-lazy="img/gal/gal-sm-3.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-14.jpg"><img data-lazy="img/gal/gal-sm-14.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-15.jpg"><img data-lazy="img/gal/gal-sm-15.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-16.jpg"><img data-lazy="img/gal/gal-sm-16.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-17.jpg"><img data-lazy="img/gal/gal-sm-17.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-18.jpg"><img data-lazy="img/gal/gal-sm-18.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-19.jpg"><img data-lazy="img/gal/gal-sm-19.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-20.jpg"><img data-lazy="img/gal/gal-sm-20.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-21.jpg"><img data-lazy="img/gal/gal-sm-21.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-22.jpg"><img data-lazy="img/gal/gal-sm-22.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-23.jpg"><img data-lazy="img/gal/gal-sm-23.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-24.jpg"><img data-lazy="img/gal/gal-sm-24.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-25.jpg"><img data-lazy="img/gal/gal-sm-25.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-26.jpg"><img data-lazy="img/gal/gal-sm-26.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-27.jpg"><img data-lazy="img/gal/gal-sm-27.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-4.jpg"><img data-lazy="img/gal/gal-sm-4.jpg" alt=""/></a><a class="s-gal__img-wrap" href="img/gal/gal-7.jpg"><img data-lazy="img/gal/gal-sm-7.jpg" alt=""/></a>
+          <div class="row no-gutters gal">
+            <!-- - for (var x = 1; x < 28; x++)-->
+                <div class="s-gal__col col-sm-4 col-6 wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s"><a class="s-gal__img-wrap" href="img/gal/gal-10.jpg" style="background-image: url(img/gal/gal-sm-10.jpg);"><img src="img/gal/gal-sm-10.jpg" alt=""/></a>
+                </div>
+                <div class="s-gal__col col-sm-4 col-6 wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s"><a class="s-gal__img-wrap" href="img/gal/gal-8.jpg" style="background-image: url(img/gal/gal-sm-8.jpg);"><img src="img/gal/gal-sm-8.jpg" alt=""/></a>
+                </div>
+                <div class="s-gal__col col-sm-4 col-6 wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s"><a class="s-gal__img-wrap" href="img/gal/gal-13.jpg" style="background-image: url(img/gal/gal-sm-13.jpg);"><img src="img/gal/gal-sm-13.jpg" alt=""/></a>
+                </div>
+                <div class="s-gal__col col-sm-4 col-6 wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s"><a class="s-gal__img-wrap" href="img/gal/gal-5.jpg" style="background-image: url(img/gal/gal-sm-5.jpg);"><img src="img/gal/gal-sm-5.jpg" alt=""/></a>
+                </div>
+                <div class="s-gal__col col-sm-4 col-6 wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s"><a class="s-gal__img-wrap" href="img/gal/gal-6.jpg" style="background-image: url(img/gal/gal-sm-6.jpg);"><img src="img/gal/gal-sm-6.jpg" alt=""/></a>
+                </div>
+                <div class="s-gal__col col-sm-4 col-6 wow bounceInUp animated" data-wow-offset="80" data-wow-duration="2s"><a class="s-gal__img-wrap" href="img/gal/gal-9.jpg" style="background-image: url(img/gal/gal-sm-9.jpg);"><img src="img/gal/gal-sm-9.jpg" alt=""/></a>
+                </div><a class="s-gal__img-wrap d-none" href="img/gal/gal-11.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-2.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-1.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-12.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-3.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-14.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-15.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-16.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-17.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-18.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-19.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-20.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-21.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-22.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-23.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-24.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-25.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-26.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-27.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-4.jpg"> </a><a class="s-gal__img-wrap d-none" href="img/gal/gal-7.jpg"> </a>
           </div>
         </div>
       </section>
@@ -169,7 +223,7 @@
                       <li>Установим камин в&nbsp;существующий дымоход, проведя его обследование и&nbsp;реставрацию.</li>
                       <li>Устанавливаем электрокамины или биокамины.</li>
                     </ul>
-                    <div class="form-wrap__input-wrap"> <input class="form-wrap__input order" type="hidden" placeholder="" name="order"/>
+                    <div class="form-wrap__input-wrap"> <input class="form-wrap__input order" type="hidden" placeholder="" name="order" value="Заявка на консультацию  по установке камина "/>
                     </div>
                     <!-- +e.input-wrap-->
                     <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Введите свой номер телефона" name="tel" required="required"/>
@@ -236,7 +290,7 @@
               <form method="post"> 
                 <h3>Заказать камин с&nbsp;гарантией 3&nbsp;года</h3>
                 <p>Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время</p>
-                <div class="form-wrap__input-wrap"> <input class="form-wrap__input order" type="hidden" placeholder="" name="order"/>
+                <div class="form-wrap__input-wrap"> <input class="form-wrap__input order" type="hidden" placeholder="" name="order" value="Заявка на камин с гарантией "/>
                 </div>
                 <!-- +e.input-wrap-->
                 <div class="row">
@@ -344,7 +398,7 @@
               <h2> Скачайте <span class="accent">бесплатно  </span>
                 статью &laquo;Как правильно выбрать камин&raquo;
               </h2>
-              <div class="s-stat__btn-wrap"><a class="s-stat__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal-catalog">Получить бесплатно</a>
+              <div class="s-stat__btn-wrap"><a class="s-stat__btn btn btn-sm btn-accent popup-with-move-anim" href="#modal-stat">Получить бесплатно</a>
               </div><img class="s-stat__abs hidden-xs" src="img/stat-img.png" alt="" role="presentation"/>
             </div>
           </div>
@@ -451,7 +505,7 @@
             <div class="footer__col col-lg-auto col-sm-6">
               <div class="footer__text">Мы в социальных сетях:
               </div>
-              <div class="soc"><a class="soc__item" href="https://vk.com/kaminy_spb" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="https://www.youtube.com/channel/UCds815-MnhucZTAMfIuyWLg/featured" target="_blank"><i class="fab  fa-youtube"></i></a>
+              <div class="soc"><a class="soc__item" href="https://vk.com/kaminy_spb" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="https://www.youtube.com/channel/UCds815-MnhucZTAMfIuyWLg/featured" target="_blank"><i class="fab  fa-youtube"></i></a><a class="soc__item" href="https://www.instagram.com/florenciaspb" target="_blank"><i class="fab  fa-instagram"></i></a>
               </div>
             </div>
             <div class="footer__col col-lg-auto col-sm-6">
@@ -465,16 +519,16 @@
       </footer>
       <div class="zoom-anim-dialog mfp-hide modal modal-form text-center modal-f" id="modal">
         <h3>Оставьте заявку</h3>
-        <p class="form-wrap__h4">на обратный звонок</p>
+        <p class="form-wrap__h4">на бесплатный расчёт стоимости изготовления</p>
         <div class="form-wrap">
           <form method="post">
-            <div class="form-wrap__input-wrap"> <input class="form-wrap__input order" type="hidden" placeholder="" name="order"/>
+            <div class="form-wrap__input-wrap"> <input class="form-wrap__input order" type="hidden" placeholder="" name="order" value="Заявка на статью"/>
             </div>
             <!-- +e.input-wrap-->
             <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Введите свой номер телефона" name="tel" required="required"/>
             </div>
             <!-- +e.input-wrap-->
-            <button class="form-wrap__btn btn btn-sm btn-accent" type="submit" value="Получить консультацию"> 
+            <button class="form-wrap__btn btn btn-sm btn-accent">Получить консультацию
             </button>
             <div class="form-wrap__small"> <a href="Soglasie.pdf" target="_blank">Я&nbsp;согласен </a>
                на&nbsp;обработку и&nbsp;хранение моих персональных данных
@@ -482,15 +536,60 @@
           </form>
         </div>
       </div>
+      <div class="zoom-anim-dialog mfp-hide modal modal-form text-center modal-f modal-stat" id="modal-stat">
+        <h3>Оставьте заявку</h3>
+        <p class="form-wrap__h4">на скачивание статьи статьи <br/>«Как правильно выбрать камин»</p>
+        <div class="form-wrap">
+          <form method="post">
+            <div class="form-wrap__input-wrap"> <input class="form-wrap__input order" type="hidden" placeholder="" name="order" value="Заявка на статью"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Введите свой номер телефона" name="tel" required="required"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <button class="form-wrap__btn btn btn-sm btn-accent">Получить консультацию
+            </button>
+            <div class="form-wrap__small"> <a href="Soglasie.pdf" target="_blank">Я&nbsp;согласен </a>
+               на&nbsp;обработку и&nbsp;хранение моих персональных данных
+            </div><a class="d-none" href="Statya.pdf" target="_blank"></a>
+          </form>
+        </div>
+      </div>
       <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/><br/>
         <h3>Заявка принята</h3>
         <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/><br/>
+      </div>
+      <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks-stat"><br/><br/>
+        <h3>Заявка принята</h3>
+        <p class="form-wrap__h4">Нажмите на кнопку </p><a class="btn btn btn-accent" href="Statya.pdf" target="_blank">Открыть статью</a>
       </div>
       <!-- modal-->
     </div>
     <script src="js/jquery.min.js"></script>
     <script asinc="true" src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="js/scripts.min.js"></script>
+    <script>
+       var vid = document.getElementById("bgvid");
+      
+      
+      if (window.matchMedia('(prefers-reduced-motion)').matches) {
+          vid.removeAttribute("autoplay");
+          vid.pause();
+          pauseButton.innerHTML = "Paused";
+      }
+      
+      function vidFade() {
+        vid.classList.add("stopfade");
+      }
+      
+      vid.addEventListener('ended', function()
+      {
+      // only functional if "loop" is removed 
+      vid.pause();
+      // to capture IE10
+      vidFade();
+      }); 
+    </script>
     <script src="js/common.js"></script>
   </body>
 </html>
