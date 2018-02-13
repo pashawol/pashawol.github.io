@@ -78,9 +78,9 @@
                 </div>
               </div>
               <div class="col-sm-auto text-center">
-                <div><a class="top_line__btn btn btn-accent" href="#">Обсудить проект</a>
+                <div><a class="top_line__btn btn btn-accent popup-with-move-anim" href="#modal">Обсудить проект</a>
                 </div>
-                <div><a class="top_line__link strong" href="#">Обратный звонок</a>
+                <div><a class="top_line__link strong popup-with-move-anim" href="#modal">Обратный звонок</a>
                 </div>
               </div>
             </div>
@@ -197,7 +197,7 @@
                     <div class="h5">Гарантийные обязательства</div>
                     <p>На всю поставляемую мебель предоставляется гарантия до 18 месяцев. Мы также готовы выполнить работы по обслуживанию мебели после окончания гарантийного срока.</p>
                   </li>
-            </ul><a class="s-steps__btn btn btn-lg btn-accent" href="#"> Обсудить проект</a>
+            </ul><a class="s-steps__btn btn btn-lg btn-accent popup-with-move-anim" href="#modal"> Обсудить проект</a>
           </div>
         </section>
         <!-- end s-steps-->
@@ -325,13 +325,27 @@
           </div>
         </div>
       </footer>
-      <div class="form-wrap zoom-anim-dialog mfp-hide modal modal-form" id="modal">
-        <form class="js-form-validate" method="post">
-        </form>
+      <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap" id="modal">
+        <div class="form-wrap">
+          <form class="js-form-validate" method="post">
+            <div class="h3">Есть вопросы и&nbsp;нужна консультация дизайнера?</div>
+            <p>Заполните форму ниже и&nbsp;наш специалист вяжется с&nbsp;Вами в&nbsp;течение часа и&nbsp;проконсультирует по&nbsp;интересующим вопросам</p>
+            <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" placeholder="Ваше имя"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Номер телефона"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__btn-wrap"><input class="form-wrap__btn btn btn-lg btn-accent" type="submit" value="Получить консультацию"/>
+            </div>
+            <div class="form-wrap__polite strong">Нажимая кнопку &laquo;Получить консультацию&raquo; Вы  соглашаетесь с&nbsp;условиями политики конфиденциальности  и&nbsp;пользовательским соглашением
+            </div>
+          </form>
+        </div>
       </div>
       <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/>
-        <h3>Заявка принята</h3><br/>
-        <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
+        <div class="h3">Заявка принята</div><br/>
+        <p>Скоро с Вами свяжутся</p><br/>
       </div>
       <!-- modal-->
     </div>

@@ -22,6 +22,15 @@
     <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
       <div class="trop main-mnu hidden-mnu landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
         <div class="wrapp-hidden">
+          <ul>
+            <li><a href="#">Как заказать </a></li>
+            <li><a href="#">О нас </a></li>
+            <li><a href="#">Наши услуги</a></li>
+            <li><a href="#">Производство </a></li>
+            <li><a href="#">Наши работы </a></li>
+            <li><a href="#">Частые вопросы</a></li>
+            <li><a href="#">Наши контакты</a></li>
+          </ul>
           <div class="time-work">
             <p class="gray strong">Пн-Пт с 8.00 до 18.00       </p>
             <p class="gray strong">Суббота с 9.00 до 17.00       </p>
@@ -51,8 +60,8 @@
               </div>
               <div class="col-lg-3 col-auto d-none d-lg-block">
                 <div class="time-work">
-                  <p class="gray strong">Пн-Пт с 8.00 до 18.00       </p>
-                  <p class="gray strong">Суббота с 9.00 до 17.00       </p>
+                  <div class="strong"><a href="#">  Дизайнеру и застройщику</a></div>
+                  <div class="strong"><a href="#">Наши акции</a></div>
                   <p><small>Симферополь, ул. Генерала Васильева, 43Б   </small></p>
                 </div>
               </div>
@@ -71,9 +80,9 @@
                 </div>
               </div>
               <div class="col-sm-auto text-center">
-                <div><a class="top_line__btn btn btn-accent" href="#">Обсудить проект</a>
+                <div><a class="top_line__btn btn btn-accent popup-with-move-anim" href="#modal">Обсудить проект</a>
                 </div>
-                <div><a class="top_line__link strong" href="#">Обратный звонок</a>
+                <div><a class="top_line__link strong popup-with-move-anim" href="#modal">Обратный звонок</a>
                 </div>
               </div>
             </div>
@@ -83,6 +92,15 @@
         <!-- start top-nav-->
         <div class="top-nav d-none d-lg-block">
           <div class="container">
+            <ul>
+              <li><a href="#">Как заказать </a></li>
+              <li><a href="#">О нас </a></li>
+              <li><a href="#">Наши услуги</a></li>
+              <li><a href="#">Производство </a></li>
+              <li><a href="#">Наши работы </a></li>
+              <li><a href="#">Частые вопросы</a></li>
+              <li><a href="#">Наши контакты</a></li>
+            </ul>
           </div>
         </div>
         <!-- end top-nav-->
@@ -92,24 +110,420 @@
       <div class="header-block" id="header-block">
         <div class="container">
           <div class="header-block__slider">
-            <div class="header-block__item"><img data-lazy="img/slider-1.jpg" alt=""/>
+            <div class="header-block__item">
+              <div class="header-block__text-block">
+                <div class="h1 accent">Заголовок слайда  или акции</div>
+                <p>Краткое описание акции с возможными супер предложениями</p><a class="header-block__btn btn btn-sm btn-accent" href="#">Подробнее</a>
+              </div><img data-lazy="img/slider-1.jpg" alt=""/>
             </div>
-            <div class="header-block__item"><img data-lazy="img/slider-1.jpg" alt=""/>
+            <div class="header-block__item">
+              <div class="header-block__text-block">
+                <div class="h1 accent">Заголовок слайда  или акции</div>
+                <p>Краткое описание акции с возможными супер предложениями</p><a class="header-block__btn btn btn-sm btn-accent" href="#">Подробнее</a>
+              </div><img data-lazy="img/slider-1.jpg" alt=""/>
             </div>
-            <div class="header-block__item"><img data-lazy="img/slider-1.jpg" alt=""/>
+            <div class="header-block__item">
+              <div class="header-block__text-block">
+                <div class="h1 accent">Заголовок слайда  или акции</div>
+                <p>Краткое описание акции с возможными супер предложениями</p><a class="header-block__btn btn btn-sm btn-accent" href="#">Подробнее</a>
+              </div><img data-lazy="img/slider-1.jpg" alt=""/>
             </div>
+          </div>
+          <div class="header-block__bott">
+            <div class="row">
+                <div class="header-block__col col-lg-3 col-6">
+                  <div class="header-block__block">
+                    <div class="row align-items-center">
+                      <div class="col-xl-auto col-lg-12 col-sm-auto">
+                        <div class="header-block__img-wrap"><img src="img/svg/head-1.svg" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="h5">Индивидуальные проекты</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-block__col col-lg-3 col-6">
+                  <div class="header-block__block">
+                    <div class="row align-items-center">
+                      <div class="col-xl-auto col-lg-12 col-sm-auto">
+                        <div class="header-block__img-wrap"><img src="img/svg/head-2.svg" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="h5">Собственное  производство</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-block__col col-lg-3 col-6">
+                  <div class="header-block__block">
+                    <div class="row align-items-center">
+                      <div class="col-xl-auto col-lg-12 col-sm-auto">
+                        <div class="header-block__img-wrap"><img src="img/svg/head-3.svg" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="h5">Подбор и продажа  бытовой техники</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-block__col col-lg-3 col-6">
+                  <div class="header-block__block">
+                    <div class="row align-items-center">
+                      <div class="col-xl-auto col-lg-12 col-sm-auto">
+                        <div class="header-block__img-wrap"><img src="img/svg/head-4.svg" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="h5">Сервисная  программа</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div><a class="header-block__btn btn btn-lg btn-accent popup-with-move-anim" href="#modal">Заказать расчет</a>
           </div>
         </div>
       </div>
       <!-- end header-block-->
-      <!-- start s-form-->
-      <section class="s-form section" id="s-form">
+      <!-- start s-work-->
+      <section class="s-work section bg-gray" id="s-work">
         <div class="container">
-          <h2 class="text-center">s-form</h2>
-          <div class="row"></div>
+          <h2 class="text-center">Простые шаги для создания Вашей мебели </h2>
+          <div class="row text-center">
+                <div class="s-work__col col-md-3 col-6">
+                  <div class="s-work__item">
+                    <div class="s-work__img-wrap"><img class="res-i" src="img/svg/work-1.svg" alt=""/>
+                    </div>
+                    <div class="s-work__caption">
+                      <div class="h5">Вызов дизайнера и&nbsp;замеры</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-work__col col-md-3 col-6">
+                  <div class="s-work__item">
+                    <div class="s-work__img-wrap"><img class="res-i" src="img/svg/work-2.svg" alt=""/>
+                    </div>
+                    <div class="s-work__caption">
+                      <div class="h5"> Дизайн  и проектирование</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-work__col col-md-3 col-6">
+                  <div class="s-work__item">
+                    <div class="s-work__img-wrap"><img class="res-i" src="img/svg/work-3.svg" alt=""/>
+                    </div>
+                    <div class="s-work__caption">
+                      <div class="h5">Подписание договора</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-work__col col-md-3 col-6">
+                  <div class="s-work__item">
+                    <div class="s-work__img-wrap"><img class="res-i" src="img/svg/work-4.svg" alt=""/>
+                    </div>
+                    <div class="s-work__caption">
+                      <div class="h5">Доставка  и&nbsp;сборка</div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <div class="s-work__wrap">
+            <div class="s-work__row row align-items-center">
+              <div class="col-auto">
+                <p>Просто оставьте заявку на&nbsp;расчет, и&nbsp;наш дизайнер   поможет определиться с&nbsp;подходящим для Вас вариантом     </p>
+              </div>
+              <div class="col-auto"><a class="s-work__btn btn btn-lg btn-accent popup-with-move-anim" href="#modal">Оставить заявку</a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <!-- end s-form-->
+      <!-- end s-work-->
+      <!-- start s-about-->
+      <section class="s-about section s-d" id="s-about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 h5">
+              <h2>О нас</h2>
+                    <ul>
+                      <li>«Мебельные технологии-Юг» - это более 15-ти лет успешной работы на рынке мебели Крыма.      </li>
+                      <li>Самый широкий выбор материалов и фурнитуры:от бюджетных вариантов до премиум сегмента. </li>
+                      <li>Производственные мощности позволяют реализовать проекты любой сложности.  </li>
+                      <li>Современное высококлассное оборудование и квалифицированные сотрудники гарантируют качественное выполнение заказа. </li>
+                      <li>Наш собственный автопарк доставит Ваш заказ в любую точку Крыма.   </li>
+                    </ul>
+            </div>
+            <div class="col d-none d-lg-block">
+              <div class="s-about__img-wrap img-wrap-2"><img class="res-i" src="img/aobut-img-2.png" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-about-->
+      <!-- start s-servises-->
+      <section class="s-servises section" id="s-servises">
+        <div class="container">
+          <h2 class="text-center">Наши услуги</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="h5">
+                <ul>
+                  <li>Дизайн и проектирование корпусной и мягкой мебели      </li>
+                  <li>Подбор и продажа встраиваемой бытовой техники        </li>
+                  <li>Производство элитных шкафов-купе Командор        </li>
+                  <li>Доставка и сборка мебели в любой точке Крыма       </li>
+                  <li>Гарантийное и послегарантийное обслуживание        </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-wrap">
+                <form class="js-form-validate" method="post">
+                  <div class="h3">Есть вопросы и&nbsp;нужна консультация дизайнера?</div>
+                  <p>Заполните форму ниже и&nbsp;наш специалист вяжется с&nbsp;Вами в&nbsp;течение часа и&nbsp;проконсультирует по&nbsp;интересующим вопросам</p>
+                  <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" placeholder="Ваше имя"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Номер телефона"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__btn-wrap"><input class="form-wrap__btn btn btn-lg btn-accent" type="submit" value="Получить консультацию"/>
+                  </div>
+                  <div class="form-wrap__polite strong">Нажимая кнопку &laquo;Получить консультацию&raquo; Вы  соглашаетесь с&nbsp;условиями политики конфиденциальности  и&nbsp;пользовательским соглашением
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-servises-->
+      <!-- start sprod-->
+      <section class="s-prod section">
+        <div class="container">
+          <div class="text-center"> 
+            <h2>Производство</h2>
+            <p>Для производства всей нашей мебели мы&nbsp;используем современное высококлассное оборудование,   на&nbsp;котором работают мастера своего дела.</p>
+          </div>
+          <div class="row gal">
+                <div class="s-prod__col col-12 col-md-6"><a class="s-prod__item" href="img/prod-1.jpg" style="background-image: url(img/prod-1.jpg);"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                </div>
+                <!-- +e.col-->
+                <div class="s-prod__col col-12 col-md-6"><a class="s-prod__item" href="img/prod-2.jpg" style="background-image: url(img/prod-2.jpg);"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
+                </div>
+                <!-- +e.col-->
+                <div class="s-prod__col col-12"><a class="s-prod__item s-prod__item-big" href="img/prod-3.jpg" style="background-image: url(img/prod-3.jpg);"><img class="res-i" src="img/prod-3.jpg" alt=""/></a>
+                </div>
+                <!-- +e.col-->
+          </div>
+        </div>
+      </section>
+      <!-- end sprod-->
+      <!-- start s-gal-->
+      <section class="s-gal section" id="s-gal">
+        <div class="container">
+          <h2 class="text-center">Примеры реализованных проектов</h2>
+          <div class="s-gal__slider-big gal">
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+            <div class="s-gal__slide"><a class="s-gal__img-wrap s-gal__img-wrap-big" href="img/gal-1.jpg"><img data-lazy="img/gal-1.jpg" alt=""/></a>
+              <div class="s-gal__caption text-center">Краткое название проекта с возможным описанием выполненых работ плюс цена 
+              </div>
+            </div>
+          </div>
+          <div class="s-gal__slider-small">
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+            <div class="s-gal__slide">
+              <div class="s-gal__img-wrap s-gal__img-wrap-small"><img data-lazy="img/gal-1.jpg" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-gal-->
+      <!-- start s-accord-->
+      <section class="s-accord section bg-pattern tracked" id="s-accord">
+        <div class="container">
+          <h2 class="text-center">Частые вопросы наших покупателей</h2>
+            <div class="s-accord__item hover-block">
+              <div class="showhide btn-click"><span>Как оплачивается выезд дизайнера?</span></div>
+              <div class="showhide-all">
+                <p> Нет, договор дает возможность делать отправления и работать по спецаильному тарифу для интернет магазинов, а так же наложенным платежем.</p>
+              </div>
+            </div>
+            <div class="s-accord__item hover-block">
+              <div class="showhide btn-click"><span>Чем ваша  мебель лучше?</span></div>
+              <div class="showhide-all">
+                <p> В первую очередь, мы разрабатываем каждый проект мебели индивидуально, с учетом всех Ваших пожеланий и предпочтений. 15-летний опыт и работа с проверенными поставщиками комплектующих гарантирует качество Вашей мебели. Наличие собственного производства значительно удешевляет ее стоимость. Мы не просто продаем мебель — мы ее изготавливаем.      </p>
+              </div>
+            </div>
+            <div class="s-accord__item hover-block">
+              <div class="showhide btn-click"><span>Сколько стоит мебель, заказанная у вас?</span></div>
+              <div class="showhide-all">
+                <p> Вы можете воспользоваться всеми режимами доставки: от пункта выдачи отправителя до пункта выдачи получателя, от пункта выдачи отправителя до адреса получателя, от адреса отправителя до пункта выдачи получателя, от адреса отправителя до адреса получателя</p>
+              </div>
+            </div>
+            <div class="s-accord__item hover-block">
+              <div class="showhide btn-click"><span>На какой стадии ремонта лучше заказывать мебель?</span></div>
+              <div class="showhide-all">
+                <p> Да, вы можете отправлять посылки в большинство стран мира.</p>
+              </div>
+            </div>
+        </div>
+      </section>
+      <!-- end s-accord-->
+      <!-- start s-contact-->
+      <section class="s-contact section" id="s-contact">
+        <div class="s-contact__block">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <h2>Наши контакты</h2>
+                      <div class="s-contact__item row">
+                        <div class="col-sm-auto"> 
+                          <div class="s-contact__title">Адрес:
+                          </div>
+                        </div>
+                        <div class="col"> 
+                          <div class="h5">Симферополь, <br/>ул. Генерала Васильева, 43Б   </div>
+                        </div>
+                      </div>
+                      <div class="s-contact__item row">
+                        <div class="col-sm-auto"> 
+                          <div class="s-contact__title">Телефоны:
+                          </div>
+                        </div>
+                        <div class="col"> 
+                          <div class="h5"> <a href="tel:+7(978) 130-95-36">  +7(978) 130-95-36</a>
+                            <small>дизайнер  </small>
+                          </div>
+                          <div class="h5"> <a href="tel:+7(978) 810-22-25">+7(978) 810-22-25</a>
+                            <small>магазин</small>
+                          </div>
+                          <div class="h5"> <a href="tel:+7(978) 216-37-87">+7(978) 216-37-87</a>
+                            <small>бытовая техника </small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="s-contact__item row">
+                        <div class="col-sm-auto"> 
+                          <div class="s-contact__title">Соц.сети:
+                          </div>
+                        </div>
+                        <div class="col"> 
+                          <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                <div class="s-contact__fasad">
+                  <p>Фасад нашего магазина:</p><img class="res-i" src="img/contact-img.jpg" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-contact__wrap">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6 offset-md-6">
+                  <div class="s-contact__map">
+                    <script type="text/javascript" charset="utf-8" async="true" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A654f8669218b6ab8b01a0bac92d1ff6fa0a580de34214485ec47b1eee0db6a6c&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-contact-->
       <footer class="footer">
         <div class="container">
           <div class="footer__row row">
@@ -133,13 +547,27 @@
           </div>
         </div>
       </footer>
-      <div class="form-wrap zoom-anim-dialog mfp-hide modal modal-form" id="modal">
-        <form class="js-form-validate" method="post">
-        </form>
+      <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap" id="modal">
+        <div class="form-wrap">
+          <form class="js-form-validate" method="post">
+            <div class="h3">Есть вопросы и&nbsp;нужна консультация дизайнера?</div>
+            <p>Заполните форму ниже и&nbsp;наш специалист вяжется с&nbsp;Вами в&nbsp;течение часа и&nbsp;проконсультирует по&nbsp;интересующим вопросам</p>
+            <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" placeholder="Ваше имя"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Номер телефона"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__btn-wrap"><input class="form-wrap__btn btn btn-lg btn-accent" type="submit" value="Получить консультацию"/>
+            </div>
+            <div class="form-wrap__polite strong">Нажимая кнопку &laquo;Получить консультацию&raquo; Вы  соглашаетесь с&nbsp;условиями политики конфиденциальности  и&nbsp;пользовательским соглашением
+            </div>
+          </form>
+        </div>
       </div>
       <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/>
-        <h3>Заявка принята</h3><br/>
-        <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
+        <div class="h3">Заявка принята</div><br/>
+        <p>Скоро с Вами свяжутся</p><br/>
       </div>
       <!-- modal-->
     </div>
