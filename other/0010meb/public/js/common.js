@@ -121,50 +121,7 @@ $( window ).on( "load", function() {
 
 // или
 // Cache selectors
-var lastId,
-    topMenu = $(" .top-nav ul"),
-    topMenuHeight = topMenu.outerHeight()+15,
-    // All list items
-    menuItems = topMenu.find("a.top-nav__link"),
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-      var item = $($(this).attr("href"));
-      if (item.length) { return item; }
-    });
 
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
-menuItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
-  $('html, body').stop().animate({ 
-      scrollTop: offsetTop
-  }, 1600);
-  e.preventDefault();
-});
-
-// Bind to scroll
-$(window).scroll(function(){
-   // Get container scroll position
-   var fromTop = $(this).scrollTop()+topMenuHeight;
-   
-   // Get id of current scroll item
-   var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
-   });
-   // Get the id of the current element
-   cur = cur[cur.length-1];
-   var id = cur && cur.length ? cur[0].id : "";
-   
-   if (lastId !== id) {
-       lastId = id;
-       // Set/remove active class
-       menuItems
-         .parent().removeClass("active")
-         .end().filter(".top-nav__link[href='#"+id+"']").parent().addClass("active");
-   }                   
-});
 // табы  . Теперь данные активного таба остается в storage
 $(function() {
 var tab = ('tabs'); 
@@ -212,7 +169,26 @@ var   arrl2 = (' <div class="l">'+ icon),
       nextArrow: arrr2,
     });
 
+// карусель
+ $('.header-block__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    speed: 450,
+    infinite: true,
+    loop: true,  
+    arrows: true, 
+    // centerMode: true,
+    // focusOnSelect: true , 
+     // variableWidth: true,
+     prevArrow: arrl2,
+      nextArrow: arrr2,
+    });
 
+ $(  '.header-block__slider' )
+ .on('lazyLoaded', function(event, slick, image, imageSource){
+     image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+ });
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',

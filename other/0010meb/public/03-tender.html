@@ -19,17 +19,31 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
-      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
-        <div class="wrapp-hidden"> 
-          <ul class="trop__nav row">
+    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
+      <div class="trop main-mnu hidden-mnu landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+        <div class="wrapp-hidden">
+          <ul>
             <li><a href="#">Для ВУЗов, школ, детских садов</a></li>
-            <li><a href="#">Для детских лагерей и пансионатов</a></li>
+            <li class="current-menu-item"><a href="#">Для детских лагерей и пансионатов</a></li>
             <li><a href="#">Для офисных помещений</a></li>
             <li><a href="#">Для отелей и гостиниц</a></li>
             <li><a href="#">Для баров и ресторанов</a></li>
           </ul>
-          <div class="text-right"></div>
+          <div class="time-work">
+            <p class="gray strong">Пн-Пт с 8.00 до 18.00       </p>
+            <p class="gray strong">Суббота с 9.00 до 17.00       </p>
+            <p><small>Симферополь, ул. Генерала Васильева, 43Б   </small></p>
+          </div>
+          <div class="cont">
+            <div><a class="cont__tel" href="tel:+7 (978) 810 22 25">+7 (978) 810 22 25</a>
+            </div>
+            <div><a class="cont__tel" href="tel:+7 (978) 810 22 23">+7 (978) 810 22 23</a>
+            </div>
+            <div><a class="cont__mail" href="mailto:sample@sample.com">sample@sample.com</a>
+            </div>
+          </div>
+          <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </div>
         </div>
       </div>
       <!--  мобильное меню                                     -->
@@ -37,14 +51,53 @@
       <header class="header">
         <!-- start .top_line-->
         <div class="top_line">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-auto"><a class="logo" href="/"><img class="res-i" src="img/logo.png" alt=""/><span class="logo__text">
+                Мебельные<small>технологии-Юг</small></span></a>
+              </div>
+              <div class="col-lg-3 col-auto d-none d-lg-block">
+                <div class="time-work">
+                  <p class="gray strong">Пн-Пт с 8.00 до 18.00       </p>
+                  <p class="gray strong">Суббота с 9.00 до 17.00       </p>
+                  <p><small>Симферополь, ул. Генерала Васильева, 43Б   </small></p>
+                </div>
+              </div>
+              <div class="col-auto d-none d-md-block">
+                <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </div>
+              </div>
+              <div class="col-sm-auto">
+                <div class="cont">
+                  <div><a class="cont__tel" href="tel:+7 (978) 810 22 25">+7 (978) 810 22 25</a>
+                  </div>
+                  <div><a class="cont__tel" href="tel:+7 (978) 810 22 23">+7 (978) 810 22 23</a>
+                  </div>
+                  <div><a class="cont__mail" href="mailto:sample@sample.com">sample@sample.com</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-auto text-center">
+                <div><a class="top_line__btn btn btn-accent" href="#">Обсудить проект</a>
+                </div>
+                <div><a class="top_line__link strong" href="#">Обратный звонок</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- end .top_line-->
+        <div class="container">
+          <div class="title-page text-center">
+            <h1>Мебель для государственных, муниципальных учреждений и&nbsp;юридических лиц</h1>
+          </div>
+        </div>
         <!-- start top-nav-->
-        <div class="top-nav">
+        <div class="top-nav d-none d-lg-block">
           <div class="container">
-            <ul class="top-nav__nav row">
+            <ul>
               <li><a href="#">Для ВУЗов, школ, детских садов</a></li>
-              <li><a href="#">Для детских лагерей и пансионатов</a></li>
+              <li class="current-menu-item"><a href="#">Для детских лагерей и пансионатов</a></li>
               <li><a href="#">Для офисных помещений</a></li>
               <li><a href="#">Для отелей и гостиниц</a></li>
               <li><a href="#">Для баров и ресторанов</a></li>
@@ -57,48 +110,195 @@
       <!-- start header-block-->
       <div class="header-block" id="header-block">
         <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+          <div class="header-block__slider">
+            <div class="header-block__item"><img data-lazy="img/slider-1.jpg" alt=""/>
+            </div>
+            <div class="header-block__item"><img data-lazy="img/slider-1.jpg" alt=""/>
+            </div>
+            <div class="header-block__item"><img data-lazy="img/slider-1.jpg" alt=""/>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end header-block-->
       <!-- start s-text-->
       <section class="s-text section" id="s-text">
-        <div class="container">
-          <h2 class="text-center">s-text</h2>
-          <div class="row"></div>
+        <div class="container"> 
+          <div class="row">
+            <div class="col-md-6">
+              <h5>ООО «Мебельные технологии-ЮГ» предлагает:</h5>
+              <ul>
+                <li>изготовление и&nbsp;поставку мебели любой сложности для государственных и&nbsp;муниципальных нужд, а&nbsp;также юридических лиц. </li>
+                <li>услуги по&nbsp;составлению технической части аукционной или котировочной документации (технического задания) на&nbsp;любую заинтересовавшую модель мебели; </li>
+                <li>информацию для обоснования первоначальной стоимости контракта (НМЦ).</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <p>Государственные закупки&nbsp;&mdash; конкурентная форма размещения заказов на&nbsp;поставку товаров, выполнение работ, оказание услуг для государственных и&nbsp;муниципальных нужд по&nbsp;заранее указанным в&nbsp;документации условиям, в&nbsp;оговоренные сроки на&nbsp;принципах состязательности, справедливости и&nbsp;эффективности!</p>
+              <p><strong> Участвуем в&nbsp;государственных закупках согласно Федеральному закону&nbsp;44 (О&nbsp;госзакупках) и&nbsp;Федеральному закону 223 (О&nbsp;закупках товаров, работ, услуг).</strong></p>
+              <hr/>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end s-text-->
-      <!-- start s-sq-->
-      <section class="s-sq section" id="s-sq">
-        <div class="container">
-          <h2 class="text-center">s-sq</h2>
-          <div class="row"></div>
-        </div>
-      </section>
-      <!-- end s-sq-->
-      <!-- start s-steps-->
-      <section class="s-steps section" id="s-steps">
-        <div class="container">
-          <h2 class="text-center">s-steps</h2>
-          <div class="row"></div>
-        </div>
-      </section>
-      <!-- end s-steps-->
+      <div class="bg-gray">
+        <!-- start s-sq-->
+        <section class="s-sq section" id="s-sq">
+          <div class="container">
+            <h2 class="text-center">Мы&nbsp;успешно участвуем в&nbsp;электронных торгах и&nbsp;котировках на&nbsp;всех популярных электронных площадках:</h2>
+            <div class="row justify-content-center">
+                  <div class="col-sm-auto">
+                    <div class="s-sq__item">rts-tender.ru
+                    </div>
+                  </div>
+                  <div class="col-sm-auto">
+                    <div class="s-sq__item">etp.zakazrf.ru
+                    </div>
+                  </div>
+                  <div class="col-sm-auto">
+                    <div class="s-sq__item">etp.roseltorg.ru
+                    </div>
+                  </div>
+                  <div class="col-sm-auto">
+                    <div class="s-sq__item">sberbank-ast.ru
+                    </div>
+                  </div>
+                  <div class="col-sm-auto">
+                    <div class="s-sq__item">etp-micex.ru
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </section>
+        <!-- end s-sq-->
+        <!-- start s-steps-->
+        <section class="s-steps section" id="s-steps">
+          <div class="container">
+            <h2 class="text-center">Этапы выполнения работ по тендеру «под ключ»:</h2>
+            <ul>
+                  <li>
+                    <div class="h5">Подготовка  дизайн-проекта с учетом специфики и архитектурных особенностей помещений</div>
+                    <p>Наш специалист может выехать к Вам для изучения ситуации на месте и обсуждения всех возникающих при составлении проекта вопросов. Вам будут предоставлены все необходимые материалы для выбора мебели. Это позволит обеспечить наиболее качественную реализацию этого этапа работ.</p>
+                  </li>
+                  <li>
+                    <div class="h5">Подготовка технического задания и спецификаций для проекта</div>
+                    <p>После согласования дизайн-проекта мы подготовим техническое задание и сделаем спецификации на всю мебель. Вы получите подробное описание каждого элемента мебели с указанием конструктивных особенностей и цен.</p>
+                  </li>
+                  <li>
+                    <div class="h5">Производство мебели по заказу</div>
+                    <p>После согласования дизайн-проекта мы подготовим техническое задание и сделаем спецификации на всю мебель. Вы получите подробное описание каждого элемента мебели с указанием конструктивных особенностей и цен.</p>
+                  </li>
+                  <li>
+                    <div class="h5">Доставка и сборка мебели</div>
+                    <p>Мы обеспечиваем доставку и сборку мебели по всей территории Республики Крым. Если при подготовке проекта возникла задача по производству мебели с индивидуальным дизайном, она будет решена в минимально возможные сроки.</p>
+                  </li>
+                  <li>
+                    <div class="h5">Гарантийные обязательства</div>
+                    <p>На всю поставляемую мебель предоставляется гарантия до 18 месяцев. Мы также готовы выполнить работы по обслуживанию мебели после окончания гарантийного срока.</p>
+                  </li>
+            </ul><a class="s-steps__btn btn btn-lg btn-accent" href="#"> Обсудить проект</a>
+          </div>
+        </section>
+        <!-- end s-steps-->
+      </div>
       <!-- start s-about-->
-      <section class="s-about section" id="s-about">
+      <section class="s-about section s-d" id="s-about">
         <div class="container">
-          <h2 class="text-center">s-about</h2>
-          <div class="row"></div>
+          <div class="row">
+            <div class="col-6 h5">
+              <h2>О нас</h2>
+                    <ul>
+                      <li>«Мебельные технологии-Юг» - это более 15-ти лет успешной работы на рынке мебели Крыма.      </li>
+                      <li>Самый широкий выбор материалов и фурнитуры:от бюджетных вариантов до премиум сегмента. </li>
+                      <li>Производственные мощности позволяют реализовать проекты любой сложности.  </li>
+                      <li>Современное высококлассное оборудование и квалифицированные сотрудники гарантируют качественное выполнение заказа. </li>
+                      <li>Наш собственный автопарк доставит Ваш заказ в любую точку Крыма.   </li>
+                    </ul>
+            </div>
+            <div class="col">
+              <div class="s-about__img-wrap"><img class="res-i" src="img/aobut-img-1.png" alt=""/>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end s-about-->
+      <!-- start s-patner-->
+      <section class="s-patner section" id="s-patner">
+        <div class="container">
+          <h2 class="text-center">Наши партнеры</h2>
+          <div class="row">
+            <div class="col-auto"><img class="res-i" src="img/patner-1.jpg" alt=""/></div>
+            <div class="col-auto"><img class="res-i" src="img/patner-2.jpg" alt=""/></div>
+            <div class="col-auto"><img class="res-i" src="img/patner-3.jpg" alt=""/></div>
+            <div class="col-auto"><img class="res-i" src="img/patner-4.jpg" alt=""/></div>
+            <div class="col-auto"><img class="res-i" src="img/patner-5.jpg" alt=""/></div>
+            <div class="col-auto"><img class="res-i" src="img/patner-6.jpg" alt=""/></div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-patner-->
       <!-- start s-contact-->
       <section class="s-contact section" id="s-contact">
-        <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"></div>
+        <div class="s-contact__block">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <h2>Наши контакты</h2>
+                      <div class="s-contact__item row">
+                        <div class="col-sm-auto"> 
+                          <div class="s-contact__title">Адрес:
+                          </div>
+                        </div>
+                        <div class="col"> 
+                          <div class="h5">Симферополь, <br/>ул. Генерала Васильева, 43Б   </div>
+                        </div>
+                      </div>
+                      <div class="s-contact__item row">
+                        <div class="col-sm-auto"> 
+                          <div class="s-contact__title">Телефоны:
+                          </div>
+                        </div>
+                        <div class="col"> 
+                          <div class="h5"> <a href="tel:+7(978) 130-95-36">  +7(978) 130-95-36</a>
+                            <small>дизайнер  </small>
+                          </div>
+                          <div class="h5"> <a href="tel:+7(978) 810-22-25">+7(978) 810-22-25</a>
+                            <small>магазин</small>
+                          </div>
+                          <div class="h5"> <a href="tel:+7(978) 216-37-87">+7(978) 216-37-87</a>
+                            <small>бытовая техника </small>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="s-contact__item row">
+                        <div class="col-sm-auto"> 
+                          <div class="s-contact__title">Соц.сети:
+                          </div>
+                        </div>
+                        <div class="col"> 
+                          <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                <div class="s-contact__fasad">
+                  <p>Фасад нашего магазина:</p><img class="res-i" src="img/contact-img.jpg" alt=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-contact__wrap">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6 offset-md-6">
+                  <div class="s-contact__map">
+                    <script type="text/javascript" charset="utf-8" async="true" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A654f8669218b6ab8b01a0bac92d1ff6fa0a580de34214485ec47b1eee0db6a6c&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end s-contact-->
@@ -106,7 +306,10 @@
         <div class="container">
           <div class="footer__row row">
             <div class="col-md-auto">
-              <div class="footer__copy">© Copyright 2018. Все права защищены
+              <div class="small">
+                <div class="footer__copy">© Copyright 2018. Все права защищены
+                </div>
+                <p> <a href="#">Политика конфиденциальности  </a><a href="#">  Пользовательское соглашение</a></p>
               </div>
             </div>
             <div class="col-md-auto">
@@ -118,23 +321,6 @@
                 <li class="footer__item col-auto"><a class="footer__link" href="#">Тендеры</a>
                 </li>
               </ul>
-              <div class="footer__block">
-              </div>
-            </div>
-            <div class="col-12">
-              <div class="row">
-                <div class="col-md-auto">
-                  <p>Симферополь, ул. Генерала Васильева, 43Б    </p>
-                </div>
-                <div class="col-md-auto">
-                  <p>
-                    Тел: 
-                    <a href="tel:+7978 810 22 25">+7978 810 22 25</a>;  
-                    
-                    <a href="tel:+7978 810 22 23">+7978 810 22 23</a>
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
