@@ -19,62 +19,62 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
-      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
+      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
         <div class="wrapp-hidden"> 
-          <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">Продукция </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Услуги  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Акции </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
-            </li>
-          </ul>
+          <div class="nav-wrap">
+            <ul>
+              <li><a href="#s-help">КАК ПОМОЧЬ</a></li>
+              <li><a href="#s-about">о монетах</a></li>
+              <li><a href="#s-news">новости</a></li>
+              <li><a href="#s-form">обратная связь</a></li>
+            </ul>
+          </div>
           <div class="text-right"></div>
+          <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="soc__item" href="" target="_blank"><i class="fas fa-at"></i></a>
+          </div>
         </div>
       </div>
       <!--  мобильное меню                                     -->
       <!-- start HEADER.header-->
       <header class="header">
-        <!-- start .top_line-->
-        <div class="top_line">
-        </div>
-        <!-- end .top_line-->
         <!-- start top-nav-->
         <div class="top-nav">
           <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-              </li>
-            </ul>
+            <div class="row justify-content-between">
+              <div class="col-lg-5 col">
+                <div class="top-nav__logo-wrap">
+                  <div class="logo text-center"><img class="res-i" src="img/logo.png" alt=""/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg col-auto">
+                <div class="row align-items-center">
+                  <div class="col d-none d-lg-block">
+                    <div class="nav-wrap">
+                      <ul>
+                        <li><a href="#s-help">КАК ПОМОЧЬ</a></li>
+                        <li><a href="#s-about">о монетах</a></li>
+                        <li><a href="#s-news">новости</a></li>
+                        <li><a href="#s-form">обратная связь</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-auto d-none d-md-block">
+                    <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="soc__item" href="" target="_blank"><i class="fas fa-at"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-uto">
+                    <div class="top-nav__lang">   
+                      <ul>
+                        <li class="current-menu-item"><a href="#">RUS</a></li>
+                        <li><a href="#">ENG</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end top-nav-->
@@ -82,31 +82,510 @@
       <!-- end HEADER.header-->
       <!-- start header-block-->
       <div class="header-block" id="header-block">
-        <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+        <div class="header-block__slider bg-dark">
+          <div class="header-block__item">
+            <div class="container">
+              <div class="header-block__text-block">
+                <div class="header-block__title h3 strong">Не можете оставаться  равнодушным к чужой беде?
+                </div>
+                <p>Хотите помочь больному малышу, но не знаете, как это сделать? Тогда вы попали на нужный сайт! С нашей помощью вы можете пожертвовать деньги, которые пойдут на восстановление здоровья наших маленьких сограждан.</p><a class="header-block__btn btn btn-accent" href="#">как помочь проекту</a>
+              </div>
+            </div><img data-lazy="img/slider-1.jpg" alt=""/>
+          </div>
+          <div class="header-block__item">
+            <div class="container">
+              <div class="header-block__text-block">
+                <div class="header-block__title h3 strong">Не можете оставаться  равнодушным к чужой беде?
+                </div>
+                <p>Хотите помочь больному малышу, но не знаете, как это сделать? Тогда вы попали на нужный сайт! С нашей помощью вы можете пожертвовать деньги, которые пойдут на восстановление здоровья наших маленьких сограждан.</p><a class="header-block__btn btn btn-accent" href="#">как помочь проекту</a>
+              </div>
+            </div><img data-lazy="img/slider-1.jpg" alt=""/>
+          </div>
+          <div class="header-block__item">
+            <div class="container">
+              <div class="header-block__text-block">
+                <div class="header-block__title h3 strong">Не можете оставаться  равнодушным к чужой беде?
+                </div>
+                <p>Хотите помочь больному малышу, но не знаете, как это сделать? Тогда вы попали на нужный сайт! С нашей помощью вы можете пожертвовать деньги, которые пойдут на восстановление здоровья наших маленьких сограждан.</p><a class="header-block__btn btn btn-accent" href="#">как помочь проекту</a>
+              </div>
+            </div><img data-lazy="img/slider-1.jpg" alt=""/>
+          </div>
         </div>
       </div>
       <!-- end header-block-->
-      <!-- start s-form-->
-      <section class="s-form section" id="s-form">
+      <!-- start s-all-->
+      <section class="s-all section text-center" id="s-all">
         <div class="container">
-          <h2 class="text-center">s-form</h2>
-          <div class="row"></div>
+          <h2>Всего собрано средств</h2>
+          <div class="row">
+                <div class="col-lg-6">
+                  <div class="s-all__item">
+                    <div class="s-all__caption">
+                      <div class="s-all__logo"><img class="res-i" src="img/logo-1.png" alt=""/>
+                      </div>
+                      <p>Монет на кошельке:</p>
+                      <div class="s-all__count strong h2">890075.04355182
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-6-->
+                <div class="col-lg-6">
+                  <div class="s-all__item">
+                    <div class="s-all__caption">
+                      <div class="s-all__logo"><img class="res-i" src="img/logo-2.png" alt=""/>
+                      </div>
+                      <p>Монет на кошельке:</p>
+                      <div class="s-all__count strong h2">890075.04355182
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-6-->
+          </div>
+        </div>
+      </section>
+      <!-- end s-all-->
+      <!-- start s-help-->
+      <section class="s-help section text-center gray-bg" id="s-help">
+        <div class="container">
+          <h2>Как помочь</h2>
+          <div class="row">
+                <div class="col-lg-4 col-md-6">
+                  <div class="s-help__item">
+                    <div class="s-help__img-wrap"><img src="img/svg/hepl-1.svg" alt=""/>
+                    </div>
+                    <p>Вы&nbsp;можете сделать  пожертвование своими монетами ECO или TER, отправив их&nbsp;на&nbsp;соответствующие кошельки указанные на&nbsp;сайте.</p>
+                  </div>
+                </div>
+                <!-- .col-lg-4.col-md-6-->
+                <div class="col-lg-4 col-md-6">
+                  <div class="s-help__item">
+                    <div class="s-help__img-wrap"><img src="img/svg/hepl-2.svg" alt=""/>
+                    </div>
+                    <p>Ваши пожертвования будут всегда оставаться на&nbsp;этих  кошельках.</p>
+                  </div>
+                </div>
+                <!-- .col-lg-4.col-md-6-->
+                <div class="col-lg-4 col-md-6">
+                  <div class="s-help__item">
+                    <div class="s-help__img-wrap"><img src="img/svg/hepl-3.svg" alt=""/>
+                    </div>
+                    <p>Два монитора отбражает сколько монеток лежит на&nbsp;кошельках ECO и&nbsp;TER</p>
+                  </div>
+                </div>
+                <!-- .col-lg-4.col-md-6-->
+                <div class="col-lg-4 col-md-6">
+                  <div class="s-help__item">
+                    <div class="s-help__img-wrap"><img src="img/svg/hepl-4.svg" alt=""/>
+                    </div>
+                    <p>Так&nbsp;же можно будет помочь напрямую щелкнув по&nbsp;фотографии малыша сразу переходит на&nbsp;сайт фонда откуда была взята информация по&nbsp;ребенку</p>
+                  </div>
+                </div>
+                <!-- .col-lg-4.col-md-6-->
+                <div class="col-lg-4 col-md-6">
+                  <div class="s-help__item">
+                    <div class="s-help__img-wrap"><img src="img/svg/hepl-5.svg" alt=""/>
+                    </div>
+                    <p>Разработчик будет добавлять сумму эквивалентную Вашему пожертвованию к&nbsp;своему</p>
+                  </div>
+                </div>
+                <!-- .col-lg-4.col-md-6-->
+                <div class="col-lg-4 col-md-6">
+                  <div class="s-help__item">
+                    <div class="s-help__img-wrap"><img src="img/svg/hepl-6.svg" alt=""/>
+                    </div> 
+                    <p>Так&nbsp;же вы&nbsp;можете сделать  пожертвования в&nbsp;BTC/LTC/ETH <small>За&nbsp;эти монеты будут куплены ECO или TER и&nbsp;отправлены на&nbsp;кошельки указанные на&nbsp;сайте. Разработчик аналогично будет добавлять сумму эквивалентную Вашему пожертвованию к&nbsp;своему.</small></p>
+                  </div>
+                </div>
+                <!-- .col-lg-4.col-md-6-->
+          </div>
+        </div>
+      </section>
+      <!-- end s-help-->
+      <!-- start s-news-->
+      <section class="s-news section" id="s-news">
+        <div class="container">
+          <h2 class="text-center">Новости</h2>
+          <div class="s-news__item">
+            <div class="row">
+              <div class="col-md-auto">
+                <div class="s-news__img-wrap img-bg" style="background-image: url(img/news-1.jpg);"><img src="img/news-1.jpg" alt=""/>
+                </div>
+              </div>
+              <div class="col">
+                <div class="s-news__caption">
+                  <div class="s-news__head">
+                    <div class="row justify-content-between align-items-end">
+                      <div class="col-auto">19.01.2018г</div>
+                      <div class="col-auto">
+                        <div class="row align-items-center">
+                          <div class="col-auto"><small>Поделиться<br/>новостью</small></div>
+                          <div class="col-auto">
+                            <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-twitter"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-news__body">
+                    <div class="h4">  Даша Возница начинает новый курс химиотерапии</div>
+                    <p>Новый год Даша Возница все-таки встретила в немецкой клинике. Ребенка с рецидивом рака головного мозга побоялись отпускать домой, пока воспаление легких окончательно не прошло. Выписали только 2 января, но до сих пор каждый день надо приходить в клинику и сдавать кровь. Новый год Даша Возница все-таки встретила в немецкой клинике. Ребенка с рецидивом рака головного мозга побоялись отпускать домой, пока воспаление легких окончательно не прошло. Выписали только 2 января, но до сих пор каждый день надо приходить в клинику и сдавать кровь. </p><a class="s-news__link" href="#">Читать всю новость</a>
+                  </div>
+                  <div class="s-news__foot red"><small>Собрано средств: </small><strong class="h4">890075.04355182</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- +e.item-->
+          <div class="s-news__item">
+            <div class="row">
+              <div class="col-md-auto">
+                <div class="s-news__img-wrap img-bg" style="background-image: url(img/news-2.jpg);"><img src="img/news-2.jpg" alt=""/>
+                </div>
+              </div>
+              <div class="col">
+                <div class="s-news__caption">
+                  <div class="s-news__head">
+                    <div class="row justify-content-between align-items-end">
+                      <div class="col-auto">19.01.2018г</div>
+                      <div class="col-auto">
+                        <div class="row align-items-center">
+                          <div class="col-auto"><small>Поделиться<br/>новостью</small></div>
+                          <div class="col-auto">
+                            <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-twitter"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-news__body">
+                    <div class="h4">  Даша Возница начинает новый курс химиотерапии</div>
+                    <p>Новый год Даша Возница все-таки встретила в немецкой клинике. Ребенка с рецидивом рака головного мозга побоялись отпускать домой, пока воспаление легких окончательно не прошло. Выписали только 2 января, но до сих пор каждый день надо приходить в клинику и сдавать кровь. Новый год Даша Возница все-таки встретила в немецкой клинике. Ребенка с рецидивом рака головного мозга побоялись отпускать домой, пока воспаление легких окончательно не прошло. Выписали только 2 января, но до сих пор каждый день надо приходить в клинику и сдавать кровь. </p><a class="s-news__link" href="#">Читать всю новость</a>
+                  </div>
+                  <div class="s-news__foot red"><small>Собрано средств: </small><strong class="h4">890075.04355182</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- +e.item-->
+          <div class="s-news__item">
+            <div class="row">
+              <div class="col-md-auto">
+                <div class="s-news__img-wrap img-bg" style="background-image: url(img/news-3.jpg);"><img src="img/news-3.jpg" alt=""/>
+                </div>
+              </div>
+              <div class="col">
+                <div class="s-news__caption">
+                  <div class="s-news__head">
+                    <div class="row justify-content-between align-items-end">
+                      <div class="col-auto">19.01.2018г</div>
+                      <div class="col-auto">
+                        <div class="row align-items-center">
+                          <div class="col-auto"><small>Поделиться<br/>новостью</small></div>
+                          <div class="col-auto">
+                            <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-twitter"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="s-news__body">
+                    <div class="h4">  Даша Возница начинает новый курс химиотерапии</div>
+                    <p>Новый год Даша Возница все-таки встретила в немецкой клинике. Ребенка с рецидивом рака головного мозга побоялись отпускать домой, пока воспаление легких окончательно не прошло. Выписали только 2 января, но до сих пор каждый день надо приходить в клинику и сдавать кровь. Новый год Даша Возница все-таки встретила в немецкой клинике. Ребенка с рецидивом рака головного мозга побоялись отпускать домой, пока воспаление легких окончательно не прошло. Выписали только 2 января, но до сих пор каждый день надо приходить в клинику и сдавать кровь. </p><a class="s-news__link" href="#">Читать всю новость</a>
+                  </div>
+                  <div class="s-news__foot red"><small>Собрано средств: </small><strong class="h4">890075.04355182</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- +e.item--><a class="s-news__btn btn btn-block btn-def" href="#"> Больше новостей</a>
+        </div>
+      </section>
+      <!-- end s-news-->
+      <!-- start s-about-->
+      <section class="s-about section" id="s-about">
+        <div class="container">
+          <h2 class="text-center">О монетах</h2>
+        </div>
+        <div class="s-about__item">
+          <div class="container">
+            <div class="row">
+              <div class="s-about__col col-lg-6">
+                <div class="s-about__logo text-center"><img class="res-i" src="img/logo-1-b.png" alt=""/>
+                </div>
+                <div class="s-about__link-wrap">
+                  <div class="row">
+                    <div class="col-6"><a class="s-about__link-pl" href="#"><img class="res-i" src="img/plat-1.png" alt=""/></a>
+                    </div>
+                    <div class="col-6"><a class="s-about__link-pl" href="#"><img class="res-i" src="img/plat-2.png" alt=""/></a>
+                    </div>
+                    <div class="col-6"><a class="s-about__link-pl" href="#"><img class="res-i" src="img/plat-3.png" alt=""/></a>
+                    </div>
+                    <div class="col-6"><a class="s-about__link-pl" href="#"><img class="res-i" src="img/plat-4.png" alt=""/></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-about__foot">
+                  <div class="s-about__down">Скачать утилиты:
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6"><a class="s-about__btn btn btn-block btn-accent" href="#">daemon</a>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6"><a class="s-about__btn btn btn-block btn-accent" href="#">Windows wallet</a>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6"><a class="s-about__btn btn btn-block btn-accent" href="#">Linux wallet</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-about__col col-lg-6">
+                <div class="s-about__head">
+                  <div class="row justify-content-between">
+                    <div class="col-auto">
+                      <div class="s-about__logo-text-1"><strong>ECO</strong>COIN  
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="text-center">
+                        <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-twitter"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="soc__item" href="" target="_blank"><i class="fas fa-at"></i></a>
+                        </div>
+                        <div class="small">Присоединяйтесь!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>Создав эту монету, мы намеревались привлечь внимание людей к экологии. В основном для эффективного использования ресурсов: вода, электричество, топливо, деньги и т. Д. На нашей планете растет потребность в энергоресурсах, и нам требуется больше энергии, чем продуктов. В то же время многие из сегодняшних ресурсов</p><a class="s-about__link" href="#">Форум</a>
+                <div class="accord">
+                  <div class="accord__item hover-block">
+                    <div class="showhide btn-click"><span>Спецификация</span></div>
+                    <div class="showhide-all">
+                      <div class="accord__table-wrap small">
+                        <table>
+                            <tr>
+                              <td>Algorithm</td>
+                              <td>Scrypt</td>
+                              <td>Coin abbreviation</td>
+                              <td>TER</td>
+                            </tr>
+                            <tr>
+                              <td>Type</td>
+                              <td>PoW/PoS</td>
+                              <td>Address letter</td>
+                              <td>T</td>
+                            </tr>
+                            <tr>
+                              <td>Coin name</td>
+                              <td>TerraNovaCOIN</td>
+                              <td>RPC port</td>
+                              <td>14541</td>
+                            </tr>
+                            <tr>
+                              <td>Total coin supply</td>
+                              <td>15733333 coins</td>
+                              <td>Premine amount</td>
+                              <td>14541</td>
+                            </tr>
+                            <tr>
+                              <td>PoS percentage</td>
+                              <td>20% per year</td>
+                              <td>Last PoWblock block</td>
+                              <td>1500</td>
+                            </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accord__item hover-block">
+                    <div class="showhide btn-click"><span>road map</span></div>
+                    <div class="showhide-all">
+                      <div class="accord__inner">
+                        <p> В первую очередь, мы разрабатываем каждый проект мебели индивидуально, с учетом всех Ваших пожеланий и предпочтений. 15-летний опыт и работа с проверенными поставщиками комплектующих гарантирует качество Вашей мебели. Наличие собственного производства значительно удешевляет ее стоимость. Мы не просто продаем мебель — мы ее изготавливаем.      </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accord__item hover-block">
+                    <div class="showhide btn-click"><span>NODES</span></div>
+                    <div class="showhide-all">
+                      <div class="accord__inner">
+                        <p> Вы можете воспользоваться всеми режимами доставки: от пункта выдачи отправителя до пункта выдачи получателя, от пункта выдачи отправителя до адреса получателя, от адреса отправителя до пункта выдачи получателя, от адреса отправителя до адреса получателя </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end +b.accord-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- +e.item-->
+        <div class="s-about__item">
+          <div class="container">
+            <div class="row">
+              <div class="s-about__col col-lg-6">
+                <div class="s-about__logo text-center"><img class="res-i" src="img/logo-2-b.png" alt=""/>
+                </div>
+                <div class="s-about__link-wrap">
+                  <div class="row">
+                    <div class="col-6"><a class="s-about__link-pl" href="#"><img class="res-i" src="img/plat-1.png" alt=""/></a>
+                    </div>
+                    <div class="col-6"><a class="s-about__link-pl" href="#"><img class="res-i" src="img/plat-2.png" alt=""/></a>
+                    </div>
+                    <div class="col-6"><a class="s-about__link-pl" href="#"><img class="res-i" src="img/plat-3.png" alt=""/></a>
+                    </div>
+                    <div class="col-6"><a class="s-about__link-pl" href="#"><img class="res-i" src="img/plat-4.png" alt=""/></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-about__foot">
+                  <div class="s-about__down">Скачать утилиты:
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6"><a class="s-about__btn btn btn-block btn-accent" href="#">daemon</a>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6"><a class="s-about__btn btn btn-block btn-accent" href="#">Windows wallet</a>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6"><a class="s-about__btn btn btn-block btn-accent" href="#">Linux wallet</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-about__col col-lg-6">
+                <div class="s-about__head">
+                  <div class="row justify-content-between">
+                    <div class="col-auto">
+                      <div class="s-about__logo-text-2"> <span class="accent">TERRA</span>NOVA
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="text-center">
+                        <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-twitter"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="soc__item" href="" target="_blank"><i class="fas fa-at"></i></a>
+                        </div>
+                        <div class="small">Присоединяйтесь!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>Создав эту монету, мы намеревались привлечь внимание людей к экологии. В основном для эффективного использования ресурсов: вода, электричество, топливо, деньги и т. Д. На нашей планете растет потребность в энергоресурсах, и нам требуется больше энергии, чем продуктов. В то же время многие из сегодняшних ресурсов</p><a class="s-about__link" href="#">Подробности на bitcointalk.org</a>
+                <div class="accord">
+                  <div class="accord__item hover-block">
+                    <div class="showhide btn-click"><span>Спецификация</span></div>
+                    <div class="showhide-all">
+                      <div class="accord__table-wrap small">
+                        <table>
+                            <tr>
+                              <td>Algorithm</td>
+                              <td>Scrypt</td>
+                              <td>Coin abbreviation</td>
+                              <td>TER</td>
+                            </tr>
+                            <tr>
+                              <td>Type</td>
+                              <td>PoW/PoS</td>
+                              <td>Address letter</td>
+                              <td>T</td>
+                            </tr>
+                            <tr>
+                              <td>Coin name</td>
+                              <td>TerraNovaCOIN</td>
+                              <td>RPC port</td>
+                              <td>14541</td>
+                            </tr>
+                            <tr>
+                              <td>Total coin supply</td>
+                              <td>15733333 coins</td>
+                              <td>Premine amount</td>
+                              <td>14541</td>
+                            </tr>
+                            <tr>
+                              <td>PoS percentage</td>
+                              <td>20% per year</td>
+                              <td>Last PoWblock block</td>
+                              <td>1500</td>
+                            </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accord__item hover-block">
+                    <div class="showhide btn-click"><span>road map</span></div>
+                    <div class="showhide-all">
+                      <div class="accord__inner">
+                        <p> В первую очередь, мы разрабатываем каждый проект мебели индивидуально, с учетом всех Ваших пожеланий и предпочтений. 15-летний опыт и работа с проверенными поставщиками комплектующих гарантирует качество Вашей мебели. Наличие собственного производства значительно удешевляет ее стоимость. Мы не просто продаем мебель — мы ее изготавливаем.      </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accord__item hover-block">
+                    <div class="showhide btn-click"><span>NODES</span></div>
+                    <div class="showhide-all">
+                      <div class="accord__inner">
+                        <p> Вы можете воспользоваться всеми режимами доставки: от пункта выдачи отправителя до пункта выдачи получателя, от пункта выдачи отправителя до адреса получателя, от адреса отправителя до пункта выдачи получателя, от адреса отправителя до адреса получателя </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end +b.accord-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- +e.item-->
+      </section>
+      <!-- end s-about-->
+      <!-- start s-form-->
+      <section class="s-form section bg-dark" id="s-form">
+        <div class="container">
+          <h2 class="text-center">Обратная связь</h2>
+          <div class="form-wrap">
+            <form class="js-form-validate" method="post"> 
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-wrap__input-wrap"> <i class="fas fa-user"></i><input class="form-wrap__input" type="text" placeholder="Имя *" required="required"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap"> <i class="fas fa-envelope"></i><input class="form-wrap__input" type="email" placeholder="E-Mail *" required="required"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap"> <i class="fas fa-phone"></i><input class="form-wrap__input" type="tel" placeholder="Телефон"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="col-md-6">
+                  <div class="form-wrap__input-wrap"> <i class="fas fa-envelope"></i><textarea class="form-wrap__input" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+              </div>
+              <div class="text-center">
+                <p>  * поля обязательные для заполнения  </p>
+                <button class="form-wrap__btn btn btn-accent">отправить
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
       <!-- end s-form-->
-      <footer class="footer">footer
+      <footer class="footer gray-bg">
+        <div class="container">
+          <div class="row justify-content-sm-between justify-content-around align-items-center">
+            <div class="col-auto">
+              <div class="footer__copy">©Все права защищены 
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab fa-twitter"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-facebook-f"></i></a><a class="soc__item" href="" target="_blank"><i class="fas fa-at"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
-      <div class="form-wrap zoom-anim-dialog mfp-hide modal modal-form" id="modal">
-        <form class="js-form-validate" method="post">
-        </form>
-      </div>
-      <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/>
-        <h3>Заявка принята</h3><br/>
-        <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
-      </div>
-      <!-- modal-->
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
