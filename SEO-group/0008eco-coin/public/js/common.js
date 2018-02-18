@@ -69,6 +69,23 @@ $( window ).on( "load", function() {
  heightses();
 
 
+       // модальное окно
+   $('.popup-with-move-anim').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: true,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
+  });
+ 
 
 // листалка по стр
  $(" .top-nav a").click(function () {
