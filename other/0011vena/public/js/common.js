@@ -259,9 +259,15 @@ $("form").submit(function() { //Change
 
 $(".s-doc__btn-sm").click(function(){
   $(".s-doc__h5 p").slideDown();
-  $(this).hide();
+  $(this).hide(); 
+
 })
  
+ $('.tabs').each(function(){
+
+$(this).easyResponsiveTabs();
+})
+    
 });
   $(window).load(function() {
   $(".img2").twentytwenty({
