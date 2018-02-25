@@ -1,159 +1,34 @@
  jQuery(document).ready(function($) { 
 
-  // Custom JS
   
 
-  var url=document.location.href; 
-  $.each($(".top-nav__nav a "),function(){
- 
-  if(this.href==url){
-    if($(this).hasClass("top-nav__link") == true){
-
-    $(this).addClass('top-nav__link-active');
-    }
-    if($(this).hasClass("footer__link") == true){
-
-    $(this).addClass('footer__link-active');
-    }
-
-  };
- 
-  });
-      // галерея
-  $(".gal").each(function(){
-    
-  $(this).find("a").magnificPopup({
-    type: 'image',
-    closeOnContentClick: false,
-    closeBtnInside: false,
-    mainClass: 'mfp-with-zoom mfp-img-mobile',
-    image: {
-      verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
-    },
-    gallery: {
-      enabled: true
-    }
-  });
-  })
-// мобильное меню
-   var toggMnu = $(".toggle-mnu-1").click(function () {
-    
-    $(".toggle-mnu-1").toggleClass("on");
-    // $("body").toggleClass("fixed");
-    $(".hidden-mnu").toggleClass("active");
-    $("body").toggleClass("fixed");
-    return false;
-  }); 
-    $('.hidden-mnu ul li a').on('click', function () {
-      $(".hidden-mnu .toggle-mnu").click();
-    });
-    $(document).mouseup(function (e) {
-    var container = $(".hidden-mnu.active");
-    if (container.has(e.target).length === 0){
-       $(".toggle-mnu-1").removeClass("on");
-      // $("body").toggleClass("fixed");
-      $(".hidden-mnu").removeClass("active");
-      $("body").removeClass("fixed");
-        }
-    });
- 
-  function heightses() {
-
-    var w = $(window).width();
-   // $(".otz__item .text-wrap ").height('auto').equalHeights();
-   //
-    
-
-    // скрывает моб меню 
-    if (w>991){
-       $(".toggle-mnu-1").removeClass("on");
-        // $("body").removeClass("fixed");
-        $(".hidden-mnu").removeClass("active");
-        $("body").removeClass("fixed");
-    }
-    var topH=$("header ").innerHeight();  
-    if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed');
-                    
-                }
-                else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed');
-                   
-                }
-    $(window).scroll(function(){
-                if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed'); 
-                }
-                else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed'); 
-                }
-            });
-       // конец добавил 
-  }
-
-  $(window).resize(function() {
-    heightses();
-   
-  });
-$( window ).on( "load", function() {
- heightses();
-
-})
-
- heightses();
-
-
-
-// листалка по стр
- // $(" .top-nav a").click(function () {
- //        var elementClick = $(this).attr("href");
- //        var destination = $(elementClick).offset().top;
-        
- //            $('html, body').animate({ scrollTop: destination }, 1100);
-        
- //        return false; 
- //    });
-
-
-// или
-// Cache selectors
- 
-// табы  . Теперь данные активного таба остается в storage
-$(function() {
-var tab = ('tabs'); 
-
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
-
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
-  $(this) 
-      .addClass('active').siblings().removeClass('active')
-      .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-      .eq($(this).index()).fadeIn().addClass('active');
-
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
- 
-});
-});
-
- 
-
  var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
-
+ var ic = '<svg id="SVGDoc" width="18" height="16" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 18 16"><defs><path d="M1298.87864,6789.53532c-0.39053,0.39061 -1.02362,0.39061 -1.41415,0c-0.39062,-0.39061 -0.39062,-1.02386 0,-1.41395l4.12133,-4.12159h-10.58584c-0.55232,0 -1.00001,-0.44761 -1.00001,-0.99981c0,-0.55219 0.44769,-1.00033 1.00001,-1.00033h10.58584l-4.12133,-4.12107c-0.39062,-0.39061 -0.39062,-1.02386 0,-1.41448c0.39053,-0.39061 1.02362,-0.39061 1.41415,0l5.65693,5.65686c0.23973,0.24002 0.31414,0.5684 0.25947,0.87901c0.05467,0.31009 -0.01974,0.63848 -0.25947,0.87849z" id="Path-0"/></defs><desc>Generated with Avocode.</desc><g transform="matrix(1,0,0,1,-1288,-6775)"><g><title>5</title><use xlink:href="#Path-0" fill="#42bbd6" fill-opacity="1"/></g></g></svg>'
 var   arrl2 = (' <div class="l">'+ icon),
       arrr2 =(' <div class="r">'+ icon);  
+var   arrl3 = (' <div class="l"> ' + ic + ' Предыдущий шаг</div>'),
+      arrr3 =(' <div class="r"> Следующий шаг ' + ic + '</div>');  
+
+$(' .s-gal__slider').slick({
+  slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    speed: 450,
+    infinite: true,
+    loop: true, 
+    adaptiveHeight: true, 
+    arrows: false,  
+    draggable: false,
+    fade: true,
+    appendDots:$('.s-gal__col'),
+      customPaging : function(slider, i) {
+        var thumb = $(slider.$slides[i]).data('thumb');
+        return '<div class="s-gal__dots-item"><img src="' + thumb+ '" /></div>';
+    },
+    
+    });
  // карусель
- $('.s-slider__slider').slick({
+ $('.s-slider__slider ').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
@@ -161,8 +36,23 @@ var   arrl2 = (' <div class="l">'+ icon),
     infinite: true,
     loop: true,  
     arrows: false, 
-    
     });
+
+$(' .s-cons__slider').slick({
+  slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    speed: 450,
+    infinite: true,
+    loop: true, 
+    adaptiveHeight: true,
+   appendDots:$('.s-cons__head'),
+   appendArrows:$('.s-cons__head'),
+    arrows: true, 
+      prevArrow: arrl3,
+      nextArrow: arrr3,
+    });
+
 
 
 
@@ -296,7 +186,14 @@ var   arrl2 = (' <div class="l">'+ icon),
     mainClass: 'my-mfp-zoom-in'
   });
  
-  
+    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+     type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
  // форма
 $("form").submit(function() { //Change
     var th = $(this);
@@ -325,76 +222,18 @@ $("form").submit(function() { //Change
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]38[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+38(999)999-99-99"});
 
-  
-    //Replace all SVG images with inline SVG
-  $('img.img-svg').each(function(){
-    var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg');
-
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-  });
-
-
-  // кастомный инпут файл 
+   
  
-  var file = $(".add-file input[type=file]");
-  file.change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         var name = $(".add-file__filename  ");
-       name.text(filename);
-  
-    }); 
-
-
-  
-  // $(".pretty-embed__bg").each(function(){ 
-  //   // загрузка фона видео
-  // $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // // включение видео при клике по блоку
-  //  $(this).click(function(){
-  //   $(this).removeClass("on").next()
-  //   .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-  //  })
-  //  })
-Hyphenator.config({
-            // displaytogglebox : true,
-            // minwordlength : 4
-          });
-          Hyphenator.run();
+ 
+  Hyphenator.run();
  // включение видео   
   $(".pretty-embed__bg").each(function(){ 
    $(this).on('click', function(){
     $(this).removeClass("on").next()
     .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
    })
-   })
-  // (function(){
-    // $('.flex-container').waitForImages(function() {
-    //   $('.spinner').fadeOut();
-    // }, $.noop, true);
-    
+   }) 
+
     $(".flex-slide").each(function(){
       $(this).click(function(){
         $(this).closest(".flex-container").find('.flex-slide').removeClass('active');
@@ -412,14 +251,28 @@ Hyphenator.config({
      $(".showhide-all").slideUp().parent().removeClass("active"), $(".showhide").removeClass("active"), 
      $(this).next("div").filter(function() {
             return "block" == $(this).css("display") }).slideUp().parent()
-                              .removeClass("active"),
-             $(this).next("div").filter(function() {
-            return "none" == $(this).css("display") }).slideDown().prev("div")
-                              .addClass("active").parent().addClass("active")})
-  
+                      .removeClass("active"),
+     $(this).next("div").filter(function() {
+    return "none" == $(this).css("display") }).slideDown().prev("div")
+                      .addClass("active").parent().addClass("active")})
 
 
-
+$(".s-doc__btn-sm").click(function(){
+  $(".s-doc__h5 p").slideDown();
+  $(this).hide();
+})
+ 
 });
+  $(window).load(function() {
+  $(".img2").twentytwenty({
+    before_label: 'До', // Set a custom before label
+      after_label: 'После', // Set a custom after label
+      // default_offset_pct: 1,
+      no_overlay: false,
+  });  
+});   
+
+
+ 
 
  
