@@ -202,11 +202,12 @@ $("form").submit(function() { //Change
       url: 'action.php', //Change
       data: th.serialize()
     }).success(function() {
-          $.magnificPopup.close();
+         
              $.magnificPopup.open({
         items: {
           src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline'
+          type: 'inline',
+           mainClass: 'my-mfp-zoom-in'
         }
       })
         // window.location.replace("/thanks.html");
@@ -267,7 +268,10 @@ $(".s-doc__btn-sm").click(function(){
 
 $(this).easyResponsiveTabs();
 })
-    
+ $(".popup-with-move-anim").click(function(){
+
+    $(".order").val($(this).data("order"))
+ })
 });
   $(window).load(function() {
   $(".img2").twentytwenty({

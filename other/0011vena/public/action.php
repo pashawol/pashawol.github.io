@@ -12,7 +12,8 @@ $mail->CharSet = 'utf-8';
 ///от кого письмо  
 $mail->setFrom('info@info.com');
 
- $mail->addAddress('wol1414@gmail.com');
+ // $mail->addAddress('wol1414@gmail.com');
+ $mail->addAddress('seozavr@gmail.com');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 
@@ -35,8 +36,8 @@ $html = '
     if (isset($_POST['tel'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
     }
-    if (isset($_POST['text'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вопрос:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['text'] . '</b></td>';
+    if (isset($_POST['time'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Время для звонка:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time'] . '</b></td>';
     }
 
     if (isset($_POST['comment'])) {
