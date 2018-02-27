@@ -43,11 +43,11 @@
                 <div class="top_line__cont row no-gutters align-items-center">
                   <div class="col-auto"><a class="top_line__tel" href="tel:+7 (499) 110-36-98">+7 (499) 110-36-98</a>
                   </div>
-                  <div class="col-auto d-none d-lg-block"> <a class="top_line__btn btn btn-sm btn-outline-accent" href="#">Заказать звонок</a>
+                  <div class="col-auto d-none d-lg-block"> <a class="top_line__btn btn btn-sm btn-outline-accent popup-with-move-anim" href="#modal">Заказать звонок</a>
                   </div>
                 </div>
               </div>
-              <div class="col-auto d-lg-none"> <a class="top_line__btn btn btn-sm btn-outline-accent" href="#">Заказать звонок</a>
+              <div class="col-auto d-lg-none"> <a class="top_line__btn btn btn-sm btn-outline-accent popup-with-move-anim" href="#modal">Заказать звонок</a>
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@
                   <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" placeholder="Ваше имя"/>
                   </div>
                   <!-- +e.input-wrap-->
-                  <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Ваш телефон"/>
+                  <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Ваш телефон" required="required"/>
                   </div>
                   <!-- +e.input-wrap-->
                   <div class="form-wrap__btn-wrap">
@@ -261,9 +261,7 @@
                       </div>
                     </div>
                     <div class="col-lg-auto order-lg-12">
-                      <div class="form-wrap__btn-wrap">
-                        <button class="form-wrap__btn btn btn-accent">зАКАЗАТЬ</button>
-                      </div>
+                      <div class="form-wrap__btn-wrap"><a class="form-wrap__btn btn btn-accent popup-with-move-anim" href="#modal"> зАКАЗАТЬ</a></div>
                     </div>
                   </div>
                 </div>
@@ -308,7 +306,7 @@
               </svg>
             </div>
             <div class="swiper-pagination"></div>
-          </div><a class="s-gal__btn btn btn-block btn-accent" href="#">зАКАЗАТЬ</a>
+          </div><a class="s-gal__btn btn btn-block btn-accent popup-with-move-anim" href="#modal"> зАКАЗАТЬ</a>
         </div>
       </section>
       <!-- end s-gal-->
@@ -318,7 +316,7 @@
           <div class="row">
             <div class="s-char__col col-lg-5">
               <div class="s-char__img-wrap"><img class="res-i" src="img/char-img.png" alt=""/>
-              </div><a class="s-char__btn btn btn-accent d-none d-lg-block" href="#">ЗАКАЗАТЬ</a>
+              </div><a class="s-char__btn btn btn-accent d-none d-lg-block popup-with-move-anim" href="#modal"> ЗАКАЗАТЬ</a>
             </div>
             <div class="col">
               <div class="s-char__wrap">
@@ -358,7 +356,7 @@
                 </div>
               </div>
             </div>
-          </div><a class="s-char__btn btn btn-accent d-lg-none" href="#">ЗАКАЗАТЬ</a>
+          </div><a class="s-char__btn btn btn-accent d-lg-none popup-with-move-anim" href="#modal"> ЗАКАЗАТЬ</a>
         </div>
       </section>
       <!-- end s-char-->
@@ -373,7 +371,7 @@
                 </div>
                 <div class="s-pop__price">от 2100 руб.
                 </div>
-                <div class="s-pop__img-wrap"><img src="img/car-1.png" alt=""/>
+                <div class="s-pop__img-wrap"><img class="res-i" src="img/car-1.png" alt=""/>
                 </div><a class="s-pop__btn btn btn-sm btn-accent" href="#">ПОДРОБНЕЕ</a>
               </div>
             </div>
@@ -383,7 +381,7 @@
                 </div>
                 <div class="s-pop__price">от 2100 руб.
                 </div>
-                <div class="s-pop__img-wrap"><img src="img/car-2.png" alt=""/>
+                <div class="s-pop__img-wrap"><img class="res-i" src="img/car-2.png" alt=""/>
                 </div><a class="s-pop__btn btn btn-sm btn-accent" href="#">ПОДРОБНЕЕ</a>
               </div>
             </div>
@@ -393,7 +391,7 @@
                 </div>
                 <div class="s-pop__price">от 2100 руб.
                 </div>
-                <div class="s-pop__img-wrap"><img src="img/car-3.png" alt=""/>
+                <div class="s-pop__img-wrap"><img class="res-i" src="img/car-3.png" alt=""/>
                 </div><a class="s-pop__btn btn btn-sm btn-accent" href="#">ПОДРОБНЕЕ</a>
               </div>
             </div>
@@ -403,7 +401,7 @@
                 </div>
                 <div class="s-pop__price">от 2100 руб.
                 </div>
-                <div class="s-pop__img-wrap"><img src="img/car-4.png" alt=""/>
+                <div class="s-pop__img-wrap"><img class="res-i" src="img/car-4.png" alt=""/>
                 </div><a class="s-pop__btn btn btn-sm btn-accent" href="#">ПОДРОБНЕЕ</a>
               </div>
             </div>
@@ -413,7 +411,7 @@
                 </div>
                 <div class="s-pop__price">от 2100 руб.
                 </div>
-                <div class="s-pop__img-wrap"><img src="img/car-5.png" alt=""/>
+                <div class="s-pop__img-wrap"><img class="res-i" src="img/car-5.png" alt=""/>
                 </div><a class="s-pop__btn btn btn-sm btn-accent" href="#">ПОДРОБНЕЕ</a>
               </div>
             </div>
@@ -422,17 +420,73 @@
       </section>
       <!-- end s-pop-->
       <!-- start s-contact-->
-      <section class="s-contact section" id="s-contact">
-        <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"></div>
+      <div class="s-contact" id="s-contact">
+        <div class="container-fluid">
+          <div class="s-contact__block">
+            <div class="container">
+              <div class="form-wrap">
+                <div class="form-wrap__head"><i>Заказ в один клик</i>
+                </div>
+                <form method="post">
+                  <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" placeholder="Ваше имя"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Ваш телефон" required="required"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__btn-wrap">
+                    <button class="form-wrap__btn btn btn-accent">зАКАЗАТЬ
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="s-contact__map">
+            <script type="text/javascript" charset="utf-8" async="true" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4153a641518d92a9d6d33e69d14ed6c177a809a1ee2b5eedc0167689108900ff&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+          </div>
         </div>
-      </section>
+      </div>
       <!-- end s-contact-->
-      <footer class="footer">footer
+      <footer class="footer">
+        <div class="container">
+          <div class="top_line">
+            <div class="row align-items-center justify-content-sm-between justify-content-center">
+              <div class="col-xl-4 col-md-auto col-sm-6">
+                <div class="top_line__logo"> <img class="res-i" src="img/logo.png" alt=""/>
+                  <p><small>Москва, проспект Мира, 150 (ВДНХ)</small></p>
+                </div>
+              </div>
+              <div class="col-lg col-sm-auto text-center"><a class="top_line__mail" href="mailto:sale1@autoprokat24.ru">sale1@autoprokat24.ru</a>
+              </div>
+              <div class="col-lg-auto">
+                <div class="top_line__cont row align-items-center justify-content-between">
+                  <div class="col-sm-auto"><a class="top_line__tel" href="tel:+7 (499) 110-36-98">+7 (499) 110-36-98</a>
+                  </div>
+                  <div class="col-sm-auto"><a class="top_line__btn btn btn-sm btn-outline-white popup-with-move-anim" href="#modal"> Заказать звонок</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copy text-center"><i>© 2018 «Автопрокат 24» - Аренда Volkswagen Polo. Все права защищены</i>
+          </div>
+        </div>
       </footer>
       <div class="form-wrap zoom-anim-dialog mfp-hide modal modal-form" id="modal">
+        <div class="form-wrap__head"><i>Заказ в один клик</i>
+        </div>
         <form method="post">
+          <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="text" placeholder="Ваше имя"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Ваш телефон" required="required"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__btn-wrap">
+            <button class="form-wrap__btn btn btn-accent">зАКАЗАТЬ
+            </button>
+          </div>
         </form>
       </div>
       <div class="zoom-anim-dialog mfp-hide modal modal-form form-wrap text-center" id="thanks"><br/>

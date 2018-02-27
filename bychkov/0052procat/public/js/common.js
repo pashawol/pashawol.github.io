@@ -62,6 +62,40 @@ var   arrl2 = (' <div class="l">'+ icon),
     
      prevArrow: arrr2,
       nextArrow: arrl2,
+      responsive: [
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 4,
+       
+      }
+    },
+     
+     {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 3,
+       
+      }
+    },
+     {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+       
+      }
+    },
+     {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+       
+      }
+    },
+
+     
+    
+  ]
     });
 
 var swiper = new Swiper('.swiper-container', {
