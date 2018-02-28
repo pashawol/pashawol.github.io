@@ -158,6 +158,15 @@ $(".check_fio").submit(function(event) {
   $("#footer .fancys").click(function(){
     $("#send .order").val("Заявка в подвале "  );
   })
+  $(" .scroll-ll").click(function () {
+          var elementClick = $("body");
+          var destination = $(elementClick).offset().top;
+          
+              $('html, body').animate({ scrollTop: destination }, 1100);
+          
+          return false; 
+      });
+  
   $(" .scroll-l").click(function () {
           var elementClick = $(this).attr("href");
           var destination = $(elementClick).offset().top;
