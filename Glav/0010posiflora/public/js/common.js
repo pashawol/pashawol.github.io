@@ -68,17 +68,7 @@
             this.title = $(this.element).data("caption");
         }
   });
-  $(".tabes").jCarouselLite2({
-    btnNext: ".next",
-    btnPrev: ".prev",
-    auto: 2000,
-    speed: 1400,
-    vertical:true,
-    hoverPause:true,
-    visible:2
-  }); 
-
-
+ 
 
   $('.scrollto').click(function(){
   var selected = $(this).attr('href').replace('/', '');
@@ -105,16 +95,7 @@ $("#cal3").keyup(function() {
   var pages = parseInt(value) + 17;
   $("#calf3").val(pages);
 });
-$("#calendars").jCarouselLite({
-  btnNext: ".nextc",
-  btnPrev: ".prevc",
-  auto: null,
-  speed: 800,
-  vertical:false,
-  hoverPause:true,
-  visible:1
-});
-
+ 
 $(".fancy33").click(function(){
     var value = $(this).attr('data');
     $("#zap_date").val(value);
@@ -135,22 +116,7 @@ $(".check_fio").submit(function(event) {
   });
   
   
-
-  
-  
-
-  $("#register").animatedModal({
-    modalTarget: 'register_modal',
-    animatedIn: 'zoomIn',
-    animatedOut: 'zoomOut',
-    color:'#fff'
-  });
-  
-  $(".close_anim").click(function(){
-    $("body").css({'overflow':'hidden'});
-  });
-  
-  
+ 
   
   function setHeiHeight() {
     var wh = $(window).height();
@@ -201,31 +167,7 @@ $(".check_fio").submit(function(event) {
           return false; 
       });
   
-
-  // табы  . Теперь данные активного таба остается в storage
-$(function() {
-var tab = ('tabs'); 
-
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
-
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
-  $(this) 
-      .addClass('active').siblings().removeClass('active')
-      .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-      .eq($(this).index()).fadeIn().addClass('active');
-
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
  
-});
-});
 
 });
  
@@ -233,23 +175,7 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 
   // Custom JS
   
-
-  var url=document.location.href; 
-  $.each($(".top-nav__nav a "),function(){
  
-  if(this.href==url){
-    if($(this).hasClass("top-nav__link") == true){
-
-    $(this).addClass('top-nav__link-active');
-    }
-    if($(this).hasClass("footer__link") == true){
-
-    $(this).addClass('footer__link-active');
-    }
-
-  };
- 
-  });
       // галерея
   $(".gal").each(function(){
     
@@ -443,117 +369,20 @@ var   arrl2 = (' <div class="l">'+ icon),
     });
 
 
-       // модальное окно
-   $('.popup-with-move-anim').magnificPopup({
-    type: 'inline',
-
-    fixedContentPos: true,
-    fixedBgPos: true,
-
-    overflowY: 'auto',
-
-    closeBtnInside: true,
-    preloader: false,
-    
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
-  });
- 
-  
- // форма
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: 'action.php', //Change
-      data: th.serialize()
-    }).success(function() {
-          $.magnificPopup.close();
-             $.magnificPopup.open({
-        items: {
-          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline'
-        }
-      })
-        // window.location.replace("/thanks.html");
-       setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-        // $.magnificPopup.close();
-      }, 4000);
-    });
-    return false;
-  });
+   
    
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
-  
-    //Replace all SVG images with inline SVG
-  $('img.img-svg').each(function(){
-    var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg');
-
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-  });
-
-
-  // кастомный инпут файл 
- 
-  var file = $(".add-file input[type=file]");
-  file.change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         var name = $(".add-file__filename  ");
-       name.text(filename);
-  
-    }); 
-
-
-  
-  $(".pretty-embed__bg").each(function(){ 
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
-
    
-var wowAnim = $(".s-dop__col," +
-                ".s-pick__col," + 
-                ".s-condition__col");
-wowAnim.each(function(i){
- 
-wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s"); 
-// $(this).addClass("wow bounceInUp");
- 
-   var wow = new WOW({ mobile: false });
-        wow.init();
+});
 
-});
-});
+
+$(window).scroll(function() {
+      var height = $(window).scrollTop();
+      if(height  > 800) {
+      $("#notuse").addClass('freeuse');
+      }else{
+      $("#notuse").removeClass('freeuse');
+      }
+    })

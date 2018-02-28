@@ -13,7 +13,7 @@ $mail->CharSet = 'utf-8';
 $mail->setFrom('info@info.com');
 
  // $mail->addAddress('wol1414@gmail.com');
- $mail->addAddress('seozavr@gmail.com');
+ $mail->addAddress('institutven@gmail.com');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 

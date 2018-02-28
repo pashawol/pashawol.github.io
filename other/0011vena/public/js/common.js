@@ -12,7 +12,6 @@ var   arrl3 = (' <div class="l"> ' + ic + ' Предыдущий шаг</div>'),
 $(' .s-gal__slider').slick({
   slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true,
     speed: 450,
     infinite: true,
     loop: true, 
@@ -20,6 +19,7 @@ $(' .s-gal__slider').slick({
     arrows: false,  
     draggable: false,
     fade: true,
+    dots: true,
     appendDots:$('.s-gal__col'),
       customPaging : function(slider, i) {
         var thumb = $(slider.$slides[i]).data('thumb');
@@ -28,7 +28,8 @@ $(' .s-gal__slider').slick({
     
     });
  // карусель
- $('.s-slider__slider ').slick({
+
+ $('.slider-1 ').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
@@ -36,6 +37,18 @@ $(' .s-gal__slider').slick({
     infinite: true,
     loop: true,  
     arrows: false, 
+    appendDots: $(".dots-wrap-1"),
+    });
+
+ $('.slider-2 ').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    speed: 450,
+    infinite: true,
+    loop: true,  
+    arrows: false, 
+    appendDots: $(".dots-wrap-2"),
     });
 
 $(' .s-cons__slider').slick({
@@ -43,8 +56,8 @@ $(' .s-cons__slider').slick({
     slidesToScroll: 1,
     dots: true,
     speed: 450,
-    infinite: true,
-    loop: true, 
+    infinite: false,
+    loop: false, 
     adaptiveHeight: true,
    appendDots:$('.s-cons__head'),
    appendArrows:$('.s-cons__head'),
@@ -119,44 +132,15 @@ $(' .s-cons__slider').slick({
   th.find('.s-doc__carusel-b').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: false,
-    speed: 450,
-    asNavFor: th.find('.s-doc__carusel-sm'),
+    speed: 450, 
     infinite: true,
     loop: true,
      
      arrows: false, 
-
-  });
- th.find('.s-doc__carusel-sm').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
       dots: false,
-      speed: 450,
-      infinite: true,
-      loop: true,
-      prevArrow: arrl2,
-      nextArrow: arrr2,
-      
-      // centerMode: true,
-
-      focusOnSelect: true ,
-      asNavFor:  th.find('.s-doc__carusel-b'),
-
-           mobileFirst: true,
-      responsive: [{
  
-       
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 4,
-          arrows: false,
-          }
-        }
- 
-    ]
-      // swipeToSlide: false
-      });
+  });
+
   })
 
 
@@ -169,22 +153,11 @@ $(' .s-cons__slider').slick({
  });
 
 
-       // модальное окно
-   $('.popup-with-move-anim').magnificPopup({
-    type: 'inline',
-
-    fixedContentPos: true,
-    fixedBgPos: true,
-
-    overflowY: 'auto',
-
-    closeBtnInside: true,
-    preloader: false,
-    
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
-  });
+   //     // модальное окно
+   // $('.popup-with-move-anim').click(function(e){
+   //  e.preventdefault();
+   //  // return false;
+   // }) 
  
     $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
      type: 'iframe',
@@ -202,14 +175,9 @@ $("form").submit(function() { //Change
       url: 'action.php', //Change
       data: th.serialize()
     }).success(function() {
-         
-             $.magnificPopup.open({
-        items: {
-          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline',
-           mainClass: 'my-mfp-zoom-in'
-        }
-      })
+      $('#thanks').modal('show');
+        $('#modal-win').modal('hide'); 
+       
         // window.location.replace("/thanks.html");
        setTimeout(function() {
         // Done Functions
@@ -231,17 +199,31 @@ $("form").submit(function() { //Change
   $(".pretty-embed__bg").each(function(){ 
    $(this).on('click', function(){
     $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
+    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1&amp;rel=0').addClass("on");
+
    })
    }) 
+
 
     $(".flex-slide").each(function(){
       $(this).click(function(){
         $(this).closest(".flex-container").find('.flex-slide').removeClass('active');
         $(this).toggleClass("active")
-        
-      })
+     
+            var w = $(window).width(); 
+            if (w<768){ 
+                var elementClick = $(this);
+                var destination = $(elementClick).offset().top; 
+                $('html, body').animate({ scrollTop: destination }, 1100); 
+            }
+            else{
+             
+            }
+         
+          })
     });
+
+
 
   // })();
 
@@ -272,6 +254,9 @@ $(this).easyResponsiveTabs();
 
     $(".order").val($(this).data("order"))
  })
+ $(".custom-input__input-radio ").click(function(){
+  $(".time-call").text($(this).val());
+ })
 });
   $(window).load(function() {
   $(".img2").twentytwenty({
@@ -280,6 +265,8 @@ $(this).easyResponsiveTabs();
       // default_offset_pct: 1,
       no_overlay: false,
   });  
+
+
 });   
 
 
