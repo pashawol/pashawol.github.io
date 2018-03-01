@@ -389,7 +389,10 @@ var   arrl2 = (' <div class="l">'+ icon),
 
 $(window).scroll(function() {
       var height = $(window).scrollTop();
-      if(height  > 800) {
+      var header  = $("header").height();
+      var header2  = $("#head").height();
+      var header3  = $("#header-block").height();
+      if(height  > header && height  > header2 && height  > header3) {
       $("#notuse").addClass('freeuse');
       }else{
       $("#notuse").removeClass('freeuse');
