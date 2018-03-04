@@ -51,7 +51,7 @@
             </div>
             <div class="header-block__h3 h3">Каждому посетителю сайта комплексный осмотр автомобиля&nbsp;&mdash; в&nbsp;подарок!
             </div>
-            <button class="header-block__btn btn btn-accent btn-section btn-block">Записаться на ремонт  
+            <button class="header-block__btn btn btn-accent btn-section btn-block btn-modal" type="button" data-toggle="modal" data-target="#thanks">Записаться на ремонт  
             </button>
             <ul>
                     <li><img src="img/svg/head-1.svg" alt=""/><span>Техническое обслуживание</span></li>
@@ -76,7 +76,9 @@
                 </div>
                 <div class="cont-block__col col-auto"> <a class="cont-block__tel strong small" href="tel:+7 495 902 7400">+7 495 902 7400</a><span>, </span><a class="cont-block__tel strong small" href="tel:+7 916 706 18 27">+7 916 706 18 27</a>
                 </div>
-                <div class="cont-block__col col-auto"><a class="cont-block__btn btn btn-sm btn-accent" href="#">Заказать звонок</a>
+                <div class="cont-block__col col-auto">
+                  <buton class="cont-block__btn btn btn-sm btn-accent btn-modal" type="button" data-toggle="modal" data-target="#modal-win">Заказать звонок
+                  </buton>
                 </div>
               </div>
             </div>
@@ -200,7 +202,7 @@
                     </div>
                     <!-- .col-lg-3.col-md-4.col-6-->
             </div>
-            <button class="s-work__btn btn btn-accent btn-section btn-block">Записаться на ремонт  
+            <button class="s-work__btn btn btn-accent btn-section btn-block btn-modal" type="button" data-toggle="modal" data-target="#thanks">Записаться на ремонт  
             </button>
             <div class="s-work__rew">
               <div class="row">
@@ -230,7 +232,9 @@
                 </div>
                 <div class="cont-block__col col-auto"> <a class="cont-block__tel strong small" href="tel:+7 495 902 7400">+7 495 902 7400</a><span>, </span><a class="cont-block__tel strong small" href="tel:+7 916 706 18 27">+7 916 706 18 27</a>
                 </div>
-                <div class="cont-block__col col-auto"><a class="cont-block__btn btn btn-sm btn-accent" href="#">Заказать звонок</a>
+                <div class="cont-block__col col-auto">
+                  <buton class="cont-block__btn btn btn-sm btn-accent btn-modal" type="button" data-toggle="modal" data-target="#modal-win">Заказать звонок
+                  </buton>
                 </div>
               </div>
             </div>
@@ -312,7 +316,9 @@
                 </div>
                 <div class="cont-block__col col-auto"> <a class="cont-block__tel strong small" href="tel:+7 495 902 7400">+7 495 902 7400</a><span>, </span><a class="cont-block__tel strong small" href="tel:+7 916 706 18 27">+7 916 706 18 27</a>
                 </div>
-                <div class="cont-block__col col-auto"><a class="cont-block__btn btn btn-sm btn-accent" href="#">Заказать звонок</a>
+                <div class="cont-block__col col-auto">
+                  <buton class="cont-block__btn btn btn-sm btn-accent btn-modal" type="button" data-toggle="modal" data-target="#modal-win">Заказать звонок
+                  </buton>
                 </div>
               </div>
             </div>
@@ -366,7 +372,9 @@
                 </div>
                 <div class="cont-block__col col-auto"> <a class="cont-block__tel strong small" href="tel:+7 495 902 7400">+7 495 902 7400</a><span>, </span><a class="cont-block__tel strong small" href="tel:+7 916 706 18 27">+7 916 706 18 27</a>
                 </div>
-                <div class="cont-block__col col-auto"><a class="cont-block__btn btn btn-sm btn-accent" href="#">Заказать звонок</a>
+                <div class="cont-block__col col-auto">
+                  <buton class="cont-block__btn btn btn-sm btn-accent btn-modal" type="button" data-toggle="modal" data-target="#modal-win">Заказать звонок
+                  </buton>
                 </div>
               </div>
             </div>
@@ -568,7 +576,7 @@
               </div>
               <!-- +e.slide -->
             </div>
-            <button class="s-rew__btn btn btn-accent btn-section btn-block">Записаться на ремонт  
+            <button class="s-rew__btn btn btn-accent btn-section btn-block btn-modal" type="button" data-toggle="modal" data-target="#thanks">Записаться на ремонт  
             </button>
           </div>
           <div class="container">
@@ -583,7 +591,9 @@
                 </div>
                 <div class="cont-block__col col-auto"> <a class="cont-block__tel strong small" href="tel:+7 495 902 7400">+7 495 902 7400</a><span>, </span><a class="cont-block__tel strong small" href="tel:+7 916 706 18 27">+7 916 706 18 27</a>
                 </div>
-                <div class="cont-block__col col-auto"><a class="cont-block__btn btn btn-sm btn-accent" href="#">Заказать звонок</a>
+                <div class="cont-block__col col-auto">
+                  <buton class="cont-block__btn btn btn-sm btn-accent btn-modal" type="button" data-toggle="modal" data-target="#modal-win">Заказать звонок
+                  </buton>
                 </div>
               </div>
             </div>
@@ -618,44 +628,35 @@
         </div>
       </section>
       <!-- end s-contact-->
-      <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-win" aria-hidden="true">
-        <div class="form-wrap modal-win modal-form modal-dialog modal-content" role="document">
-          <form class="js-form-validate" method="post">
-            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-            <div class="form-wrap__input-wrap">
-              <label><span class="form-wrap__title">tel</span><input class="form-wrap__input" type="Введите ваш телефон" name="tel" required="required"/>
+    </div>
+    <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-win" aria-hidden="true">
+      <div class="form-wrap modal-win modal-form modal-content modal-dialog modal-content" role="document">
+        <form class="js-form-validate" method="post"> 
+          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+          <div class="h1 text-center">Записаться</div>
+          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <button class="form-wrap__btn btn btn-accent btn-block">Отправить
+          </button>
+          <div class="wrap-polite">
+            <div class="custom-input polite">
+              <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Даю 
+                 <span data-toggle="modal" data-target="#exampleModal2">согласие </span>на хранение и обработку   персональных данных
               </label>
             </div>
-            <!-- +e.input-wrap-->
-            <div class="form-wrap__h4 h4">Когда вам перезвонить?
-            </div>
-            <label class="custom-input h3"><input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="В течение 30 минут"/><span class="custom-input__lab custom-input__lab-radio"></span>В течение 30 минут
-            </label>
-            <label class="custom-input h3"><input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="С 9-00 до 12-00"/><span class="custom-input__lab custom-input__lab-radio"></span>С 9-00 до 12-00
-            </label>
-            <label class="custom-input h3"><input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="С 12-00 до 18-00"/><span class="custom-input__lab custom-input__lab-radio"></span>С 12-00 до 18-00
-            </label>
-            <div class="wrap-polite">
-              <div class="custom-input polite">
-                <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>
-                </label>Даю 
-                 <span data-toggle="modal" data-target="#exampleModal2">согласие </span>на хранение и обработку   персональных данных
-              </div>
-            </div>
-            <button class="form-wrap__btn btn btn-yel">Записаться на консультацию 
-            </button>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
-      <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
-        <div class="form-wrap modal-win modal-form text-center modal-win modal-form modal-dialog modal-content" role="document">
-          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> × </button><br/>
-          <div class="h2">Заявка принята</div><br/>
-          <div class="h3">Скоро с Вами свяжутся</div><br/>
-        </div>
-      </div>
-      <!-- modal-->
     </div>
+    <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
+      <div class="form-wrap modal-win modal-form text-center modal-content modal-win modal-form modal-dialog" role="document"> 
+        <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> × </button><br/>
+        <div class="h2">Заявка принята</div><br/>
+        <div class="h3">Скоро с Вами свяжутся</div><br/>
+      </div>
+    </div>
+    <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/common.js"></script>
