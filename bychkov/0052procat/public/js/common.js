@@ -101,7 +101,7 @@ var   arrl2 = (' <div class="l">'+ icon),
 var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',
       // effect: 'flip',
-      grabCursor: true,
+      // grabCursor: true,
       centeredSlides: true,
       slidesPerView: 'auto',
       loop: true,
