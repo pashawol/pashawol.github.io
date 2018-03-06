@@ -2,8 +2,17 @@
 
   // Custom JS
   
- 
- 
+     $(".trop__nav .dropdown ").each(function(){
+      $(this).append('<div class="toggle-l"></div>');
+    })
+
+    $( '.trop__nav .dropdown  ').on('click', '.toggle-l', function(){
+        $(this).prev().slideToggle()
+        return false;
+      }) 
+
+
+
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
     
@@ -88,5 +97,7 @@
 $('.carousel').carousel({
   interval: 8000
 })
-     
+     $('select').selectize({ 
+    sortField: 'text'
+});
 });
