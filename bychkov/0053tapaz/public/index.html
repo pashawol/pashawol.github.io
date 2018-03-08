@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>title</title>
     <meta name="description" content="о чем страница">
+    <meta name="viewport" content="width=device-width">
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
@@ -15,10 +16,10 @@
         <div class="top_line">
           <div class="container">
             <div class="row justify-content-between align-items-center">
-              <div class="col"><img src="img/logo.png" alt=""/></div>
+              <div class="col-3"><img src="img/logo.png" alt=""/></div>
               <div class="col text-center"><span class="top_line__strong strong d-block">Оплата наличными</span><span class="top_line__text d-block">ТРК №1 (ДТ)</span>
               </div>
-              <div class="col text-right"><span class="top_line__btn btn btn-accent btn-sm">Отмена</span>
+              <div class="col-3 text-right"><span class="top_line__btn btn btn-accent btn-sm">Отмена</span>
               </div>
             </div>
           </div>
@@ -56,21 +57,21 @@
           </div>
           <div class="s-body__block s-body__block-big">
             <div class="row justify-content-between">
-              <div class="col-auto">
+              <div class="col">
                 <p>Наличными:</p>
                 <div class="s-body__big-text"> <span>400</span> <span> ₽ </span>
                 </div>
                 <div class="s-body__text">Вставляйте купюры по одной
                 </div>
               </div>
-              <div class="col-auto">
+              <div class="col">
                 <p>Объем</p>
                 <div class="s-body__big-text"> <span>100  </span> <span>  ₽</span>
                 </div>
                 <div class="s-body__text">Поднесите чек к считывателю штрих-кодов
                 </div>
               </div>
-              <div class="col-auto">
+              <div class="col">
                 <p>Объем</p>
                 <div class="s-body__big-text"> <span>5</span><span>%</span>
                 </div>
@@ -84,20 +85,14 @@
       <!-- end s-body-->
       <footer class="footer">
         <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-auto">
-              <div class="row">
-                <div class="col-auto"><span class="footer__btn-white btn btn-lg btn-white">Чек</span>
-                </div>
-                <div class="col-auto"><span class="footer__btn btn btn-lg btn-accent">Оплатить</span><span class="footer__text d-block accent text-center">Максимальная сумма заказа: 15 000 ₽ </span>
-                </div>
-              </div>
+          <div class="row">
+            <div class="col-auto"><span class="footer__btn-white btn btn-lg btn-white">Чек</span>
             </div>
-            <div class="col-auto text-center">
-              <div class="footer__call"> <img src="img/qu.png" alt=""/><span> Вызвать  диспетчера</span>
-              </div>
+            <div class="col-auto"><span class="footer__btn btn btn-lg btn-accent">Оплатить</span><span class="footer__text d-block accent text-center">Максимальная сумма заказа: 15 000 ₽  </span>
             </div>
           </div>
+        </div>
+        <div class="footer__call"> <img src="img/qu.png" alt=""/><span> Вызвать  диспетчера</span>
         </div>
       </footer>
     </div>
