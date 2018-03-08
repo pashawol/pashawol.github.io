@@ -11,16 +11,16 @@
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
   var swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
       // effect: 'flip',
       // grabCursor: true,
       centeredSlides: true,
       slidesPerView: 'auto',
-      loop: true,
+      loop: true, 
+      effect: 'coverflow',
       coverflowEffect: {
         rotate: 0,
-        stretch: 300,
-        depth: 400,
+        stretch: 200,
+        depth: 200,
         modifier: 1,
         slideShadows : false,
       },
