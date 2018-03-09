@@ -12,16 +12,7 @@
     $("body").toggleClass("fixed");
     return false;
   }); 
-  $(document).mouseup(function (e) {
-    var container = $(".hidden-mnu.active");
-    if (container.has(e.target).length === 0){
-       $(".toggle-mnu-1").removeClass("on");
-      // $("body").toggleClass("fixed");
-      $(".hidden-mnu").removeClass("active");
-      $("body").removeClass("fixed");
-        }
-       
-    });
+ 
      $(".trop li.menu-item-has-children").click(function(){
        $(this).siblings().find(".trop__nav").slideUp();
       $(this).find(".trop__nav").slideToggle();
@@ -30,12 +21,33 @@
  
  
   $(".reg__link").click(function(){
-    $(".reg").toggleClass("active");
+    $(this).parents(".reg").toggleClass("active");
     $(this).toggleClass("active")
 
     .next().fadeToggle(150);
      return false;
   })
+
+
+   $(document).mouseup(function (e) {
+    var container = $(".hidden-mnu.active");
+    if (container.has(e.target).length === 0){
+       $(".toggle-mnu-1").removeClass("on");
+      // $("body").toggleClass("fixed");
+      $(".hidden-mnu").removeClass("active");
+      $("body").removeClass("fixed");
+        }
+    var container2 = $(".reg.active").each(function(){
+
+    if ($(this).has(e.target).length === 0){
+     
+      $(this).removeClass("active") 
+      .find(".reg__link").removeClass("active")
+      .next().fadeToggle(150);
+        }
+         
+    });
+    });
   $(".aside__toggle").click(function(){
     $(this).next().slideToggle();
   })
