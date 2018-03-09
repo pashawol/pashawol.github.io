@@ -1,5 +1,6 @@
  jQuery(document).ready(function($) { 
-
+  // для свг
+  svg4everybody({});
   // Custom JS
    
 // мобильное меню
@@ -21,6 +22,23 @@
       $("body").removeClass("fixed");
         }
     });
- 
   
+  $(".js-link-edit").click(function(){
+    var thp = $(this).parents('.s-client__item');
+    if(thp.find('.js-edit-text').is(":visible") == true){
+
+        thp.find('.js-edit-text').fadeOut(function(){
+        thp.find('.js-edit-input').fadeIn();
+      })
+    }
+    else   {
+
+        thp.find('.js-edit-input').fadeOut(function(){
+          
+        thp.find('.js-edit-text').fadeIn()
+        });
+     
+    }
+
+});
 });
