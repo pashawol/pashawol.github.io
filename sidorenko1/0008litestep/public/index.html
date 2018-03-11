@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>LiteStep</title>
+    <meta name="description" content="о чем страница">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#3361d8">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#3361d8">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#3361d8">
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+      jQuery(function($) {
+      $(window).scroll(function(){
+      if($(this).scrollTop()>140){
+      $('#navigation').addClass('fixed-menu');
+      $('#navigation').removeClass('none-menu');
+      }
+      else if ($(this).scrollTop()<140){
+      $('#navigation').addClass('none-menu');
+      $('#navigation').removeClass('fixed-menu');
+      }
+      });
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+      $("#menu").on("click","a", function (event) {
+      //отменяем стандартную обработку нажатия по ссылке
+      event.preventDefault();
+      //забираем идентификатор бока с атрибута href
+      var id  = $(this).attr('href'),
+      //узнаем высоту от начала страницы до блока на который ссылается якорь
+      top = $(id).offset().top;
+      //анимируем переход на расстояние - top за 1500 мс
+      $('body,html').animate({scrollTop: top - 50}, 1500);
+      });
+      });
+    </script>
+  </head>
+  <body><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
+    <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+      <div class="wrapp-hidden"> 
+        <ul>
+          <li><a href="#about">О ПРОЕКТЕ</a></li>
+          <li><a href="#objectives">ЦЕЛИ</a></li>
+          <li><a href="#advantage">ПРЕИМУЩЕСТВА</a></li>
+          <li><a href="#presentation">ПРЕЗЕНТАЦИЯ</a></li>
+          <li><a href="#documentation">ДОКУМЕНТАЦИЯ</a></li>
+          <li><a href="#contacts">КОНТАКТЫ</a></li>
+        </ul>
+        <div class="text-right"></div>
+      </div>
+    </div>
+    <!--  мобильное меню                                     -->
+    <div class="container">
+      <div class="logo-header">
+        <div class="logo_ru"></div>
+      </div>
+      <div class="contacts-header">
+        <!-- Контакты вверху-->
+        <ul>
+          <li><a href="#"><img src="images/fb.png"></a></li>
+          <li><a href="#"><img src="images/vk.png"></a></li>
+          <li><a href="#"><img src="images/inst.png"></a></li>
+          <li>+7 (910) 932-26-55</li>
+          <li>    +7 (915) 588-83-13</li>
+        </ul>
+      </div>
+      <nav class="menu" id="menu">
+        <div class="none-menu" id="navigation">
+          <ul>
+            <li><a href="#about">О ПРОЕКТЕ</a></li>
+            <li><a href="#objectives">ЦЕЛИ</a></li>
+            <li><a href="#advantage">ПРЕИМУЩЕСТВА</a></li>
+            <li><a href="#presentation">ПРЕЗЕНТАЦИЯ</a></li>
+            <li><a href="#documentation">ДОКУМЕНТАЦИЯ</a></li>
+            <li><a href="#contacts">КОНТАКТЫ</a></li>
+          </ul>
+        </div>
+        <ul>
+          <li><a href="#about">О ПРОЕКТЕ</a></li>
+          <li><a href="#objectives">ЦЕЛИ</a></li>
+          <li><a href="#advantage">ПРЕИМУЩЕСТВА</a></li>
+          <li><a href="#presentation">ПРЕЗЕНТАЦИЯ</a></li>
+          <li><a href="#documentation">ДОКУМЕНТАЦИЯ</a></li>
+          <li><a href="#contacts">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+      <div class="slider-main">
+        <section class="slider">
+          <div class="flexslider">
+            <ul class="slides">
+              <li><img src="img/1.jpg"></li>
+              <li><img src="img/3.jpg"></li>
+              <li><img src="img/4.jpg"></li>
+              <li><img src="img/5.jpg"></li>
+              <li><img src="img/6.jpg"></li>
+              <li><img src="img/7.jpg"></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!--
+      <li>
+      <img src="img/1.jpg" />
+      </li>
+      <li>
+      <img src="img/2.jpg" />
+      </li>
+      <li>
+      <img src="img/3.jpg" />
+      </li>
+      <li>
+      <img src="img/4.jpg" />
+      </li>
+      <li>
+      <img src="img/5.jpg." />
+      </li>
+      <li>
+      <img src="img/6.jpg" />
+      </li>
+      -->
+      <!-- Блок о проекте-->
+      <div class="about">
+        <h1 class="titles"><span id="about" name="about">О проекте</span></h1>
+        <p>ЛАЙТ<b>СТЭП</b> - это современная технологичная компания, которая специализируется <br>            на производстве высококачественных и травмобезопасных<br>            резиногранитных покрытий различного назначения.<br></p>
+      </div>
+      <!-- Блок цели проекта-->
+      <div class="objectives">
+        <h1 class="titles"><span id="objectives" name="objectives">Цели проекта</span></h1>
+        <table class="objectives-tbl">
+          <tr>
+            <td><img src="images/basket.png"></td>
+            <td><b>Строительство (либо модернизация)</b> в общенациональном масштабе на территориях
+                              муниципальных образований Российской Федерации (города, в том числе федерального значения; поселки
+                              городского типа; села; деревни; поселки; станицы и т.д.) универсальных многоцелевых спортивных площадок
+                              (далее - УМСП), оборудованных с применением травмобезопасных резиновых покрытий,
+                              предназначенных для проведения соревнований и тренировок по различным видам спорта, в том числе:
+                              мини-футбол, баскетбол, волейбол, теннис, хоккей (в зимний период) и пр.
+            </td>
+          </tr>
+          <tr>
+            <td><img src="images/school.png"></td>
+            <td><b>Благоустройство и декорирование</b> с помощью травмобезопасных резиногранитных
+                              покрытий: территорий многоквартирных жилых домов, в первую очередь - детских площадок, расположенных
+                              во дворах многоквартирных домов; частных домовладений (усадьбы, котеджи, дачи и т.п.); территорий
+                              различных учреждений и организаций (входные группы зданий, зоны отдыха (в том числе кафе, рестораны,
+                              лаундж-зоны и т.п.)); иных травмоопасных объектов инфраструктуры (мосты, надземные и подземные
+                              пешеходные переходы и т.п.).
+            </td>
+          </tr>
+          <tr>
+            <td><img src="images/medicine.png"></td>
+            <td><b>Общефедеральное снижение показателей травматизма</b> граждан Российской
+                              Федерации при занятии спортом (в результате применения травмобезопасных резиногранитных покрытий в
+                              строительстве спортивных объектов), а также в условиях обычной жизнедеятельности (при благоустройстве и
+                              докорировании различных территорий, указанных выше); использование травмобезопасных
+                              резиногранитных покрытий в лечебно-реабилитационных центрах травматологии и ортопедии, санаторно-
+                              курортных учреждениях и т.д., в целях ускорения процесса выздоровления проходящих курс
+                              послетравматического лечения граждан (например, создание прогулочных пешеходных дорожек в
+                              лесопарковых зонах указанных учреждений здравоохранения).
+            </td>
+          </tr>
+          <tr>
+            <td><img src="images/ecology.png"></td>
+            <td><b>Улучшение экологической обстановки</b> на всей территории Российской Федерации за счет
+                              массового использования в производстве травмобезопасных покрытий в качестве основного ингредиента
+                              резиновой крошки, изготовляемой из отходов резиновой промышленности, в первую очередь - из
+                              завершивших процесс эксплуатации автомобильных покрышек.
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- Блок на оранжевом фоне-->
+      <div class="orange">
+        <p>Резиногранитные покрытия предстовляют собой усовершенствованную посредством изобретательского процесса<br>            технологию изготовления двухслойных аналоговых резиновых покрытий, которые в настоящее время<br>            широко применяются в индустрии строительства.</p>
+      </div>
+      <div class="sample"><img src="images/sample.png"></div>
+      <!-- Преимущества-->
+      <div class="advantage">
+        <h1 class="titles"><span id="advantage" name="advantage">Преимущества резиногранита</span></h1>
+        <table class="advantage-tbl">
+          <tr>
+            <td><img src="images/rur.png"></td>
+            <td><b>Цена</b><br><span>
+                Существенно сниженная себестоимость продукции ООО «ЛАЙТСТЭП» с одновременным ростом качества в
+                сравнении с представленными на рынке аналоговыми покрытиями.</span></td>
+          </tr>
+          <tr>
+            <td><img src="images/list.png"></td>
+            <td><b>Экологичность</b><br><span>
+                Покрытия «ЛАЙТСТЭП» произведены из экологически чистых материалов, они безопасны для здоровья, не выделяют
+                вредных веществ даже при высокой температуре.</span></td>
+          </tr>
+          <tr>
+            <td><img src="images/cros.png"></td>
+            <td><b>Травмобезопасность</b><br><span>
+                Покрытие обеспечивает хорошую сцепляемость с подошвами обуви, поэтому не скользит, обладает
+                амортизирующими и ортопедическими свойствами, по нему удобно ходить и бегать.</span></td>
+          </tr>
+          <tr>
+            <td><img src="images/like.png"></td>
+            <td><b>Простота в применении</b><br><span>
+                Резиногранитные покрытия легко укладывать, для этого не требуется специальных знаний и оборудования. В
+                короткие сроки можно сделать дорожки, площадки или ступеньки.</span></td>
+          </tr>
+          <tr>
+            <td><img src="images/arrows.png"></td>
+            <td><b>Универсальность использования</b><br><span>
+                Резиногранитное покрытие можно укладывать на любое твердое основание без предварительной
+                подготовки, а в зимнее время на нем можно заливать каток.</span></td>
+          </tr>
+          <tr>
+            <td><img src="images/xray.png"></td>
+            <td><b>Устойчивость к гниению</b><br><span>
+                Покрытия «ЛАЙТСТЭП» не боятся воздействия химических реагентов, они не впитывают грязь и легко чистятся.
+                Если такое покрытие загрязнится, его достаточно подмети или помыть водой. Не подвержены воздействию грибка
+                и плесени, не гниют и не крошатся.</span></td>
+          </tr>
+          <tr>
+            <td><img src="images/line.png"></td>
+            <td><b>Возможность использования в местах с высокой влажностью</b><br><span>
+                Резиногранитное покрытие также рекомендуется использовать во влажных помещениях и в воде, поэтому оно
+                подходит для бассеинов и саун. Резина не боится сырости и хлора, надолго сохранит свои свойства, не будет скользить.</span></td>
+          </tr>
+        </table>
+      </div>
+      <!-- Блок с презентацией-->
+      <div class="presentation">
+        <h1 class="titles"><span id="presentation" name="presentation"></span>Презентация</h1>
+        <p>Просмотр<br>презентации:</p><a class="pdf" target="_blank" href="presentation/LITESTEP.pdf"><img src="images/pdf.png"></a>
+      </div>
+      <div class="documentation">
+        <h1 class="titles"><span id="documentation" name="documentation">Документация</span></h1><a rel="simplebox" href="images/documentation.jpg" target="_blank"><img src="images/documentation_mini.jpg"></a>
+      </div>
+      <!-- Контакты-->
+      <div class="contacts">
+        <h1 class="titles"><span id="contacts" name="contacts">Контакты</span></h1>
+        <div class="row">
+          <div class="col">
+            <div class="block-contacts-footer">
+              <ul class="contacts-footer">
+                <li>Звоните нам: +7 (910) 932-26-55</li>
+                <li>+7 (915) 588-83-13</li>
+                <li>Наша почта: Pavel.Nazarov@litestep.group</li>
+              </ul>
+              <ul class="social-networks">
+                <li><a href="#"><img src="images/inst_black.png"></a></li>
+                <li><a href="#"><img src="images/vk_black.png"></a></li>
+                <li><a href="#"><img src="images/fb_black.png"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <form class="form-contacts" action="formdata.php" method="post">
+              <!-- Задай нам вопрос-->
+              <textarea id="text-question" name="message" placeholder="Задайте нам вопрос"></textarea>
+              <input id="contact" type="text" name="contacts" placeholder="Телефон или Email">
+              <input id="question" type="submit" value="Отправить">
+            </form>
+          </div>
+          <!-- Логотип-->
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container">
+          <div class="row justify-content-end align-items-center">
+            <div class="col-auto">
+              <div class="footer-logo">
+                <div class="logo-en"></div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="requisites">
+                <p>ООО «ЛАЙТСТЭП» ИНН 6952004715, ОГРН 1156952017430</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer="" src="js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+      $('.flexslider').flexslider({
+      animation: "slide",
+      directionNav: false
+      });
+      });
+    </script>
+  </body>
+</html>
