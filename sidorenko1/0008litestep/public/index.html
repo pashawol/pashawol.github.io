@@ -14,35 +14,6 @@
     <!-- iOS Safari-->
     <meta name="apple-mobile-web-app-status-bar-style" content="#3361d8">
     <link rel="stylesheet" href="css/main.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-      jQuery(function($) {
-      $(window).scroll(function(){
-      if($(this).scrollTop()>140){
-      $('#navigation').addClass('fixed-menu');
-      $('#navigation').removeClass('none-menu');
-      }
-      else if ($(this).scrollTop()<140){
-      $('#navigation').addClass('none-menu');
-      $('#navigation').removeClass('fixed-menu');
-      }
-      });
-      });
-    </script>
-    <script>
-      $(document).ready(function(){
-      $("#menu").on("click","a", function (event) {
-      //отменяем стандартную обработку нажатия по ссылке
-      event.preventDefault();
-      //забираем идентификатор бока с атрибута href
-      var id  = $(this).attr('href'),
-      //узнаем высоту от начала страницы до блока на который ссылается якорь
-      top = $(id).offset().top;
-      //анимируем переход на расстояние - top за 1500 мс
-      $('body,html').animate({scrollTop: top - 50}, 1500);
-      });
-      });
-    </script>
   </head>
   <body><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
     <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
@@ -60,20 +31,23 @@
     </div>
     <!--  мобильное меню                                     -->
     <div class="container">
-      <div class="logo-header">
-        <div class="logo_ru"></div>
+      <div class="row align-items-center justify-content-between">
+        <div class="col-auto d-lg-none">
+          <div class="logo-header">
+            <div class="logo_ru"></div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="contacts-header clearfix">
+            <!-- Контакты вверху-->
+            <ul>
+              <li><a href="tel:+7 (910) 932-26-55">+7 (910) 932-26-55</a></li>
+              <li><a href="tel:+7 (915) 588-83-13">+7 (915) 588-83-13</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="contacts-header">
-        <!-- Контакты вверху-->
-        <ul>
-          <li><a href="#"><img src="images/fb.png"></a></li>
-          <li><a href="#"><img src="images/vk.png"></a></li>
-          <li><a href="#"><img src="images/inst.png"></a></li>
-          <li>+7 (910) 932-26-55</li>
-          <li>    +7 (915) 588-83-13</li>
-        </ul>
-      </div>
-      <nav class="menu" id="menu">
+      <nav class="menu d-none d-lg-block" id="menu">
         <div class="none-menu" id="navigation">
           <ul>
             <li><a href="#about">О ПРОЕКТЕ</a></li>
@@ -84,14 +58,23 @@
             <li><a href="#contacts">КОНТАКТЫ</a></li>
           </ul>
         </div>
-        <ul>
-          <li><a href="#about">О ПРОЕКТЕ</a></li>
-          <li><a href="#objectives">ЦЕЛИ</a></li>
-          <li><a href="#advantage">ПРЕИМУЩЕСТВА</a></li>
-          <li><a href="#presentation">ПРЕЗЕНТАЦИЯ</a></li>
-          <li><a href="#documentation">ДОКУМЕНТАЦИЯ</a></li>
-          <li><a href="#contacts">КОНТАКТЫ</a></li>
-        </ul>
+        <div class="row align-items-center justify-content-between">
+          <div class="col-auto">
+            <div class="logo-header">
+              <div class="logo_ru"></div>
+            </div>
+          </div>
+          <div class="col">
+            <ul>
+              <li><a href="#about">О ПРОЕКТЕ</a></li>
+              <li><a href="#objectives">ЦЕЛИ</a></li>
+              <li><a href="#advantage">ПРЕИМУЩЕСТВА</a></li>
+              <li><a href="#presentation">ПРЕЗЕНТАЦИЯ</a></li>
+              <li><a href="#documentation">ДОКУМЕНТАЦИЯ</a></li>
+              <li><a href="#contacts">КОНТАКТЫ</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
       <div class="slider-main">
         <section class="slider">
@@ -129,12 +112,12 @@
       -->
       <!-- Блок о проекте-->
       <div class="about">
-        <h1 class="titles"><span id="about" name="about">О проекте</span></h1>
+        <h2 class="titles"> О проекте</h2>
         <p>ЛАЙТ<b>СТЭП</b> - это современная технологичная компания, которая специализируется <br>            на производстве высококачественных и травмобезопасных<br>            резиногранитных покрытий различного назначения.<br></p>
       </div>
       <!-- Блок цели проекта-->
       <div class="objectives">
-        <h1 class="titles"><span id="objectives" name="objectives">Цели проекта</span></h1>
+        <h2 class="titles"><span id="objectives" name="objectives">Цели проекта</span></h2>
         <table class="objectives-tbl">
           <tr>
             <td><img src="images/basket.png"></td>
@@ -185,7 +168,7 @@
       <div class="sample"><img src="images/sample.png"></div>
       <!-- Преимущества-->
       <div class="advantage">
-        <h1 class="titles"><span id="advantage" name="advantage">Преимущества резиногранита</span></h1>
+        <h2 class="titles"><span id="advantage" name="advantage">Преимущества резиногранита</span></h2>
         <table class="advantage-tbl">
           <tr>
             <td><img src="images/rur.png"></td>
@@ -234,17 +217,17 @@
       </div>
       <!-- Блок с презентацией-->
       <div class="presentation">
-        <h1 class="titles"><span id="presentation" name="presentation"></span>Презентация</h1>
+        <h2 class="titles" id="presentation"><span name="presentation"></span>Презентация</h2>
         <p>Просмотр<br>презентации:</p><a class="pdf" target="_blank" href="presentation/LITESTEP.pdf"><img src="images/pdf.png"></a>
       </div>
       <div class="documentation">
-        <h1 class="titles"><span id="documentation" name="documentation">Документация</span></h1><a rel="simplebox" href="images/documentation.jpg" target="_blank"><img src="images/documentation_mini.jpg"></a>
+        <h2 class="titles"><span id="documentation" name="documentation">Документация</span></h2><a rel="simplebox" href="images/documentation.jpg" target="_blank"><img src="images/documentation_mini.jpg"></a>
       </div>
       <!-- Контакты-->
       <div class="contacts">
-        <h1 class="titles"><span id="contacts" name="contacts">Контакты</span></h1>
+        <h2 class="titles"><span id="contacts" name="contacts">Контакты</span></h2>
         <div class="row">
-          <div class="col">
+          <div class="col-md">
             <div class="block-contacts-footer">
               <ul class="contacts-footer">
                 <li>Звоните нам: +7 (910) 932-26-55</li>
@@ -258,7 +241,7 @@
               </ul>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md">
             <form class="form-contacts" action="formdata.php" method="post">
               <!-- Задай нам вопрос-->
               <textarea id="text-question" name="message" placeholder="Задайте нам вопрос"></textarea>
@@ -271,7 +254,7 @@
       </div>
       <div class="footer">
         <div class="container">
-          <div class="row justify-content-end align-items-center">
+          <div class="row justify-content-md-end justify-content-center align-items-center">
             <div class="col-auto">
               <div class="footer-logo">
                 <div class="logo-en"></div>
@@ -286,14 +269,18 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
+      <div class="form-wrap modal-win modal-form text-center modal-content modal-win modal-form modal-dialog" role="document"> 
+        <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> × </button><br/>
+        <div class="titles">Заявка принята</div><br/>
+        <h3>Скоро с Вами свяжутся</h3><br/>
+      </div>
+    </div>
+    <!-- button(type="button" class="btn btn-primary" data-toggle="modal" data-target="#thanks") button-->
+    <!-- modal-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+    <script defer="" src="js/scripts.min.js"></script>
     <script defer="" src="js/jquery.flexslider-min.js"></script>
-    <script type="text/javascript">
-      $(window).load(function(){
-      $('.flexslider').flexslider({
-      animation: "slide",
-      directionNav: false
-      });
-      });
-    </script>
+    <script defer="" src="js/common.js"></script>
   </body>
 </html>
