@@ -108,12 +108,12 @@ $( window ).on( "load", function() {
 
 
 
-     $(".filter__sort-btn").click(function(){
-        $(".filter__wrapper").fadeToggle(100);
+     $(".filter__sort-btn, .filter__btn-close ").click(function(){
+        $(".filter__sort-btn").toggleClass("active");
+        $(".filter__wrapper").fadeToggle("slow").toggleClass("active");
         $(".filter__slider-title, .filter__slider").slick("refresh");
 
-      
- var swiper = new Swiper('.swiper-container', {
+         var swiper = new Swiper('.swiper-container', {
       // init: false,
       slidesPerView: 'auto',
       
@@ -126,8 +126,8 @@ $( window ).on( "load", function() {
     
       mousewheel: true,
     });
-          // section_slider();
-     })
+
+      });
  
  
 
