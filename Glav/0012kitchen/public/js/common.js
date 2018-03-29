@@ -3,24 +3,7 @@
   // для свг
   svg4everybody({});
   // Custom JS
-  
-
-  var url=document.location.href; 
-  $.each($(".top-nav__nav a "),function(){
  
-  if(this.href==url){
-    if($(this).hasClass("top-nav__link") == true){
-
-    $(this).addClass('top-nav__link-active');
-    }
-    if($(this).hasClass("footer__link") == true){
-
-    $(this).addClass('footer__link-active');
-    }
-
-  };
- 
-  });
       // галерея
   $(".gal").each(function(){
     
@@ -110,7 +93,7 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- $(" .top-nav a").click(function () {
+ $(" .top-nav a, .scroll-link").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         
@@ -119,55 +102,14 @@ $( window ).on( "load", function() {
         return false; 
     });
 
-  
-// табы  . Теперь данные активного таба остается в storage
-$(function() {
-var tab = ('tabs'); 
-
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
-
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
-  $(this) 
-      .addClass('active').siblings().removeClass('active')
-      .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-      .eq($(this).index()).fadeIn().addClass('active');
-
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
- 
-});
-});
-
  
 
  var icon = '<svg class="icon icon-dislike ">  <use xlink:href="img/svg/sprite.svg#arr-r"></use>  </svg>';
 
 var   arrl2 = (' <div class="l">'+ icon),
       arrr2 =(' <div class="r">'+ icon);  
- // карусель
- $('.tab__slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    speed: 450,
-    infinite: true,
-    loop: true,  
-    arrows: true, 
-     prevArrow: arrl2,
-      nextArrow: arrr2,
-    });
-
-var $gallery = $('.tab__slider');
- $gallery.on('lazyLoaded', function(event, slick, image, imageSource){
-     image.parent().css('background-image', 'url(' + image.attr('src') + ')');
- });
+ 
+ 
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -213,20 +155,7 @@ $("form").submit(function() { //Change
    
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
-
-  
-  
-  $(".pretty-embed__bg").each(function(){ 
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
-
-   
+ 
 // accordion
   $(".showhide").click(function() {
 
@@ -327,6 +256,66 @@ var tabsId1 = '.mytabs1';
   });
 
 
-  
+  $('.s-sert__slider').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    dots: false,
+    speed: 450,
+    infinite: true,
+    loop: true,  
+    arrows: true,  
+     prevArrow: arrl2,
+      nextArrow: arrr2 ,
+     responsive: [
+     
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 1
+      }
+    },
+
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+            });
+
+
+  $('.s-rew__slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    speed: 450,
+    infinite: true,
+    loop: true,  
+    arrows: true,  
+     prevArrow: arrl2,
+      nextArrow: arrr2 ,
+      adaptiveHeight: true
+    });
+
+
+
+
+  // включение видео   
+  $(".pretty-embed__bg").each(function(){ 
+   $(this).click(function(){
+    $(this).removeClass("on").next()
+    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1?rel=0').addClass("on");
+   })
+   })
 });
 
