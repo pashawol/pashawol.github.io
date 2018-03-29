@@ -93,7 +93,7 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- $(" .top-nav a, .scroll-link").click(function () {
+ $(" .top-nav ul a, .scroll-link").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         
@@ -104,7 +104,7 @@ $( window ).on( "load", function() {
 
  
 
- var icon = '<svg class="icon icon-dislike ">  <use xlink:href="img/svg/sprite.svg#arr-r"></use>  </svg>';
+ var icon = '<svg class="icon icon-arr-r">  <use xlink:href="img/svg/sprite.svg#arr-r"></use>  </svg>';
 
 var   arrl2 = (' <div class="l">'+ icon),
       arrr2 =(' <div class="r">'+ icon);  
@@ -204,7 +204,43 @@ var tabsId1 = '.mytabs1';
 
 
 
-            
+         // листалка по стр
+ $(" .top-nav a, .scroll-link").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        
+            $('html, body').animate({ scrollTop: destination }, 1100);
+        
+        return false; 
+    });
+ $(".s-indr .btn").each(function(){
+  var th = $(this);
+  th.click(function(){
+    $("#modal .h2").text("УТОЧНИТЬ ЦЕНУ");
+    $("#modal .order").val("Уточнить цену");
+    $("#modal .btn").val("Уточнить цену");
+
+    $("#modal .type  ").val(th.parents(".main-tabs__content").find(".current a").text());
+    $(" #modal .meb ").val(th.prev().text());
+  })
+
+ })
+  $('.popup-with-move-anim').magnificPopup({
+    type: 'inline',
+
+    fixedContentPos: true,
+    fixedBgPos: true,
+
+    overflowY: 'auto',
+
+    closeBtnInside: true,
+    preloader: false,
+    
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in'
+  });
+    modal;
 
        th.find('.tab__slider').slick({
             slidesToShow: 1,
@@ -294,7 +330,7 @@ var tabsId1 = '.mytabs1';
             });
 
 
-  $('.s-rew__slider').slick({
+  $('.s-rew__slider, .contact__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
@@ -308,8 +344,10 @@ var tabsId1 = '.mytabs1';
     });
 
 
-
-
+ $('.contact__slider').on('lazyLoaded', function(event, slick, image, imageSource){
+             image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+         });
+     
   // включение видео   
   $(".pretty-embed__bg").each(function(){ 
    $(this).click(function(){
@@ -317,5 +355,19 @@ var tabsId1 = '.mytabs1';
     .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1?rel=0').addClass("on");
    })
    })
+
+
+   $(".footer__btn").click(function(){
+    $("#modal .h2").text("ЗАКАЗ КОНСУЛЬТАЦИИ");
+     $("#modal .order").val("Заказ консультации в подвале сайта");
+      $("#modal .btn").val("Заказать консультацию");
+     $("#modal .type, #modal .meb ").val("");
+  })
+   $(".header-block__inner .order").val("Заявка в шапке")
+   $(".s-move .order").val("Заявка в блоке потребностей")
+   $(".s-move .order").val("Заявка в блоке вызова замерщика")
+   $(".s-calc .order").val("Заявка с калькулятора")
+   $(".s-accord .order").val("Заявка с FAQ")
+
 });
 

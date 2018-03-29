@@ -29,8 +29,7 @@
             </li>
             <li class="trop__item"><a class="trop__link" href="#">Контаты</a>
             </li>
-          </ul>
-          <div class="text-right"></div>
+          </ul><a class="trop__btn btn btn-accent strong popup-with-move-anim" href="#modal-big">У Вас ремонт?</a>
         </div>
       </div>
       <!--  мобильное меню-->
@@ -86,7 +85,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-auto"><a class="top-nav__btn btn btn-accent strong" href="#">У Вас ремонт?</a>
+              <div class="col-auto"><a class="top-nav__btn btn btn-accent strong popup-with-move-anim" href="#modal-big">У Вас ремонт?</a>
               </div>
             </div>
           </div>
@@ -112,13 +111,14 @@
                   <div class="col-lg-auto col-md-6">
                     <div class="form-wrap">
                       <form>
+                        <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
                         <div class="form-wrap__title text-center strong">
                           <div class="ttu">Оставьте заявку и&nbsp;получите </div>расчет кухни в&nbsp;трех вариантах
                         </div>
-                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Ваше имя"/>
+                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" name="text" placeholder="Ваше имя"/>
                         </div>
                         <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Номер телефона" required="required"/>
+                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Номер телефона" required="required"/>
                         </div>
                         <!-- +e.input-wrap-->
                         <div class="form-wrap__polite">
@@ -259,6 +259,7 @@
           </div>
           <div class="form-wrap form-wrap-horizontal">
             <form>
+              <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
               <div class="row">
                 <div class="col-lg-3">
                   <div class="form-wrap__title">
@@ -269,12 +270,12 @@
                 <div class="col">
                   <div class="row">
                     <div class="col-md-6">
-                      <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-sm" type="text" placeholder="Ваше имя"/>
+                      <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-sm" type="text" name="text" placeholder="Ваше имя"/>
                       </div>
                       <!-- +e.input-wrap-->
                     </div>
                     <div class="col-md-6">
-                      <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-sm" type="tel" placeholder="Номер телефона" required="required"/>
+                      <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-sm" type="tel" name="tel" placeholder="Номер телефона" required="required"/>
                       </div>
                       <!-- +e.input-wrap-->
                     </div>
@@ -375,10 +376,11 @@
               <div class="col-lg-auto col-md-6">
                 <div class="form-wrap">
                   <form>
-                    <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Ваше имя"/>
+                    <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
+                    <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="text" name="text" placeholder="Ваше имя"/>
                     </div>
                     <!-- +e.input-wrap-->
-                    <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="tel" placeholder="Номер телефона" required="required"/>
+                    <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="tel" name="tel" placeholder="Номер телефона" required="required"/>
                     </div>
                     <!-- +e.input-wrap-->
                     <div class="form-wrap__polite">
@@ -506,13 +508,13 @@
       </div>
       <!-- end s-why-->
       <!-- start s-calc-->
-      <div class="s-calc section d-none d-lg-block" id="s-calc">
+      <div class="s-calc section d-none d-lg-block">
         <div class="container">
           <div class="title-wrap text-center">
             <div class="h2 strong ttu">Рассчитайте стоимость КУХНИ ВАШЕЙ МЕЧТЫ ЗА&nbsp;1&nbsp;МИНУТУ!</div>
             <div class="h5">156 костромичей уже воспользовались этой услугой</div>
           </div>
-          <div class="page-width">
+          <div class="page-width" id="s-calc">
             <div class="cost-block-wrap">
               <div class="calculator">
                 <div class="cost-content-block cont-wrp">
@@ -724,27 +726,27 @@
             <div class="h5">и свидетельство о регистрации</div>
           </div>
           <div class="s-sert__slider gal">
-            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-1.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-1.jpg" alt=""/></span>
+            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-1.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-1s.jpg" alt=""/></span>
               <p>Сертификат официального партнера Blum, австрийского производителя фурнитуры и комплектующих для мебели</p></a>
             </div>
             <!-- .col-auto-->
-            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-2.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-2.jpg" alt=""/></span>
+            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-2.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-2s.jpg" alt=""/></span>
               <p>Сертификат участника выставки Мебель 2017 в экспоцентре </p></a>
             </div>
             <!-- .col-auto-->
-            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-3.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-3.jpg" alt=""/></span>
+            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-3.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-3s.jpg" alt=""/></span>
               <p>Сертификат официального партнера Мак Март, итальянского производителя фурнитуры и комплектующих для мебели</p></a>
             </div>
             <!-- .col-auto-->
-            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-4.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-4.jpg" alt=""/></span>
+            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-4.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-4s.jpg" alt=""/></span>
               <p>Сертификат официального партнера Smeg, итальянского производителя техники для кухни</p></a>
             </div>
             <!-- .col-auto-->
-            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-5.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-5.jpg" alt=""/></span>
+            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-5.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-5s.jpg" alt=""/></span>
               <p>Сертификат официального партнера Hettich, немецкого производителя фурнитуры и комплектующих для мебели</p></a>
             </div>
             <!-- .col-auto-->
-            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-6.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-6.jpg" alt=""/></span>
+            <div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-6.jpg"><span class="s-sert__img-wrap"><img class="res-i" data-lazy="img/sert-6s.jpg" alt=""/></span>
               <p>Сертифика офицального партнера Egger, немецкого производителя ламинированной плиты и кромки для производтсва мебели </p></a>
             </div>
             <!-- .col-auto-->
@@ -1079,6 +1081,7 @@
             </div>
           <div class="form-wrap form-wrap-horizontal">
             <form>
+              <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
               <div class="row">
                 <div class="col-lg-3">
                   <div class="form-wrap__title">
@@ -1089,12 +1092,12 @@
                 <div class="col">
                   <div class="row">
                     <div class="col-md-6">
-                      <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-sm" type="text" placeholder="Ваше имя"/>
+                      <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-sm" type="text" name="text" placeholder="Ваше имя"/>
                       </div>
                       <!-- +e.input-wrap-->
                     </div>
                     <div class="col-md-6">
-                      <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-sm" type="tel" placeholder="Номер телефона" required="required"/>
+                      <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-sm" type="tel" name="tel" placeholder="Номер телефона" required="required"/>
                       </div>
                       <!-- +e.input-wrap-->
                     </div>
@@ -1125,15 +1128,15 @@
             <div class="main-tabs__content">
               <div class="mytabs mytabs1">
                 <div class="row">
-                  <div class="current col"><a class="main-tabs__btn btn" href="style/page1.html">Шкафы</a>
+                  <div class="current col"><a class="main-tabs__btn btn" href="project/page1.html">Шкафы</a>
                   </div>
-                  <div class="col"><a class="main-tabs__btn btn" href="style/page2.html">Детские</a>
+                  <div class="col"><a class="main-tabs__btn btn" href="project/page2.html">Детские</a>
                   </div>
-                  <div class="col"><a class="main-tabs__btn btn" href="style/page2.html">Гостиные</a>
+                  <div class="col"><a class="main-tabs__btn btn" href="project/page3.html">Гостиные</a>
                   </div>
-                  <div class="col"><a class="main-tabs__btn btn" href="style/page3.html">Прихожие</a>
+                  <div class="col"><a class="main-tabs__btn btn" href="project/page4.html">Прихожие</a>
                   </div>
-                  <div class="col"><a class="main-tabs__btn btn" href="style/page3.html">Другая мебель</a>
+                  <div class="col"><a class="main-tabs__btn btn" href="project/page5.html">Другая мебель</a>
                   </div>
                 </div>
               </div>
@@ -1145,50 +1148,165 @@
         </div>
       </div>
       <!-- end s-indr-->
-      <!-- start s-contact-->
-      <section class="s-contact section" id="s-contact">
-        <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"><a href="#"></a></div>
+      <!-- start contact-->
+      <section class="contact" id="contact">
+        <div class="contact__map-wrap">
+          <div class="container">
+            <div class="contact__container">
+              <div class="contact__text">
+                <div class="contact__title ttu strong h3">Где находится НАША СТУДИЯ?
+                </div>
+                <div class="row">
+                  <div class="col-xl-12 col-lg-6">
+                    <p>
+                      <div class="strong ttu">АДРЕС:</div>г. Кострома, ул. Северной правды д. 35
+                    </p>
+                  </div>
+                  <div class="col-xl-12 col-lg-6">
+                    <p>
+                      <div class="strong ttu">СВЯЖИТЕСЬ С НАМИ: </div>
+                    </p>
+                    <div class="row">
+                      <div class="col-xl-12 col-md-6"> 
+                        <p><a class="contact__tel tel" href="tel:+74942501621">+7 (4942) 501-621</a>
+                        </p>
+                        <p><a class="contact__tel tel" href="tel:+79101954565">+7 (910) 195-45-65 </a><img class="res-i" src="img/i-vib.png" alt=""/><img class="res-i" src="img/i-wa.png" alt=""/>
+                        </p>
+                      </div>
+                      <div class="col-xl-12 col-md-6"> 
+                        <p><a href="http://vk.com/palazo" target="_blank">http://vk.com/palazo <img class="res-i soc-i" src="img/vk.png" alt=""/></a></p>
+                        <p><a href="mailto:salon@palazo.ru">salon@palazo.ru</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-12 col-lg-6">
+                    <p>
+                      <div class="strong ttu">РЕЖИМ РАБОТЫ:</div>
+                      <div class="row">
+                        <div class="col-sm-6">Пн-Пт: 9:00 - 18:00    </div>
+                        <div class="col-sm-6">  Сб: 10:00 - 16:00</div>
+                      </div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="contact__slider gal">
+                <div class="contact__slide">
+                  <div class="contact__item"><a class="contact__img-wrap" href="img/con-1.jpg"><img class="res-i" data-lazy="img/con-1.jpg" alt=""/></a>
+                    <div class="contact__caption strong">Ждем Вас в нашем салоне
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__slide">
+                  <div class="contact__item"><a class="contact__img-wrap" href="img/con-2.jpg"><img class="res-i" data-lazy="img/con-2.jpg" alt=""/></a>
+                    <div class="contact__caption strong">У нас удобная, большая парковка
+                    </div>
+                  </div>
+                </div>
+                <div class="contact__slide">
+                  <div class="contact__item"><a class="contact__img-wrap" href="img/con-3.jpg"><img class="res-i" data-lazy="img/con-3.jpg" alt=""/></a>
+                    <div class="contact__caption strong">Мы находимся напротив &quot;Автолиги&quot; 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact__map">
+          </div>
         </div>
       </section>
-      <!-- end s-contact-->
-      <footer class="footer">footer
+      <!-- end contact-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-8">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="footer__small">
+                     ИП Тощакова Елена Вячеславовна<br/>ИНН 440125137790<br/>ОГРН 309440120300060
+                  </div>
+                </div>
+                <div class="col-md-auto"><a class="footer__btn btn btn-accent popup-with-move-anim" href="#modal">Заказать консультацию</a>
+                </div>
+                <div class="col-lg">
+                  <div class="footer__small">
+                    <div class="ttu">ЕСТЬ ВОПРОСЫ? ЗВОНИТЕ ПРЯМО СЕЙЧАС</div>
+                    <div class="strong"> <a class="footer__tel tel" href="tel:+74942501621">+7 (4942) 501-621</a>, <a class="footer__tel tel" href="tel:+79101954565">+7 (910) 195-45-65 </a>
+                    </div>Режим работы: Пн-Пт.  с 9 до 18, Сб с 10 до 16
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
+      <div class="zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-big">
+        <div class="title-wrap text-center">
+          <div class="ttu h2 strong"> У ВАС РЕМОНТ?</div>
+          <div class="h5">Чтобы к концу ремонта ваша кухня была готова, <br/>закажите проект сейчас</div>
+        </div>
+        <div class="h2 ttu strong">У ВАС БУДЕТ:</div>
+        <p> <strong>1. </strong> 3D визулизация вашей кухни</p>
+        <p> <strong>2. </strong> Точная стоимость будущей кухни.<br/>Это поможет вам спланировать бюджет.</p>
+        <p> <strong>3. </strong> Технический проект для Ваших отделочных бригад, а именно:
+          <ul>
+            <li>точное расположение розеток, выводов под воду, канализацию, вытяжку</li>
+            <li>рекомендации по гипсокартонным конструкциям</li>
+            <li>раскладку на плитку</li>
+          </ul>
+        </p>
+        <div class="strong red">Согласитесь это важно!</div>
+        <div class="form-wrap form-wrap-horizontal">
+          <form>
+            <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
+            <div class="row"> 
+              <div class="col-lg-4 col-md-6">
+                <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="text" name="text" placeholder="Ваше имя"/>
+                </div>
+                <!-- +e.input-wrap-->
+              </div>
+              <div class="col-lg-4 col-md-6">
+                <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="tel" name="tel" placeholder="Номер телефона" required="required"/>
+                </div>
+                <!-- +e.input-wrap-->
+              </div>
+              <div class="col-lg-4">
+                <button class="form-wrap__btn btn btn-lg btn-accent btn-block"> ЗАКАЗАТЬ ВЫЕЗД ЗАМЕРЩИКА
+                </button>
+              </div>
+            </div>
+            <div class="form-wrap__polite">
+              <input type="checkbox" checked="checked"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
+            </div>
+          </form>
+        </div>
+      </div>
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal">
         <form>
+          <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
+          <input class="type" type="hidden" name="type"/>
+          <input class="meb" type="hidden" name="meb"/>
+          <div class="text-center">
+            <div class="h2 text-center ttu strong">УТОЧНИТЬ ЦЕНУ</div>
+            <p>Оставьте ваши данные и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.</p>
+          </div>
+          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="text" name="text" placeholder="Ваше имя"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="tel" name="tel" placeholder="Номер телефона" required="required"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <button class="form-wrap__btn btn btn-lg btn-accent btn-block"> Узнать цену
+          </button>
+          <div class="form-wrap__polite">
+            <input type="checkbox" checked="checked"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
+          </div>
         </form>
       </div>
       <div class="zoom-anim-dialog mfp-hide modal-win modal-form form-wrap text-center" id="thanks"><br/>
         <h3>Заявка принята</h3><br/>
         <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
-      </div>
-      <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-win" aria-hidden="true">
-        <div class="form-wrap modal-win modal-form modal-content modal-dialog modal-content" role="document">
-          <form> 
-            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-            <div class="h1 text-center">Записаться</div>
-            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/>
-            </div>
-            <!-- +e.input-wrap-->
-            <button class="form-wrap__btn btn btn-accent btn-block">Отправить
-            </button>
-            <div class="wrap-polite">
-              <div class="custom-input polite">
-                <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Даю 
-                   <span class="link" data-toggle="modal" data-target="#exampleModal2">согласие </span>на хранение и обработку   персональных данных
-                </label>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
-        <div class="form-wrap modal-win modal-form text-center modal-content modal-win modal-form modal-dialog" role="document"> 
-          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> × </button><br/>
-          <div class="h2">Заявка принята</div><br/>
-          <div class="h3">Скоро с Вами свяжутся</div><br/>
-        </div>
       </div>
       <!-- modal-->
     </div>
