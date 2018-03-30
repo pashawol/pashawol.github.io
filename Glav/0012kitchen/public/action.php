@@ -25,26 +25,52 @@ $time = date('d.m.Y в H:i');
 $html = '
 
 <table style="width: 100%;">';
-    if (isset($_POST['order'])) {
+    if (!empty($_POST['order'])) {
         $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид формы:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['order'] . '</b></td></tr>';
     }
-    if (isset($_POST['type'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид мебели:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['type'] . '</b></td></tr>';
+    if (!empty($_POST['typer'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид мебели:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['typer'] . '</b></td></tr>';
     }
 
-    if (isset($_POST['meb'])) {
+    if (!empty($_POST['meb'])) {
         $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Название изображения:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['meb'] . '</b></td></tr>';
     }
 
-
-    if (isset($_POST['text'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Name:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['text'] . '</b></td></tr>';
+    
+    if (!empty($_POST['type'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Форма кухни:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['type'] . '</b></td></tr>';
     }
-    if (isset($_POST['tel'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
+
+    if (!empty($_POST['dlina'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Длина:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['dlina'] . '</b></td></tr>';
+    }
+
+    if (!empty($_POST['left'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Длина левой стороны</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['left'] . '</b></td></tr>';
+    }
+
+    if (!empty($_POST['right'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Длина правой стороны:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['right'] . '</b></td></tr>';
+    }
+
+    if (!empty($_POST['dlina2'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Длина нижней стороны:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['dlina2'] . '</b></td></tr>';
+    }
+
+    if (!empty($_POST['tech'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Техника:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['tech']) . '</b></td></tr>';
+    }
+
+
+    
+     if (!empty($_POST['nametext'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Имя:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['nametext'] . '</b></td>';
+    }
+    if (!empty($_POST['nametel'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['nametel'] . '</b></td></tr>';
     }
      
-    if (isset($_POST['comment'])) {
+    if (!empty($_POST['comment'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Отзыв:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td>';
     }
 
@@ -71,8 +97,8 @@ if (!$mail->send()) {
 } else {
     echo "Message sent!";
 }
-if (isset($uploadfile))unlink($uploadfile);
-if (isset($uploadfile2))unlink($uploadfile2);
+if (!empty($uploadfile))unlink($uploadfile);
+if (!empty($uploadfile2))unlink($uploadfile2);
 
 ?>
 

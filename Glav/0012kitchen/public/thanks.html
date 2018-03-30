@@ -62,20 +62,20 @@
                   <div class="col-lg-auto col-md-6">
                     <div class="form-wrap">
                       <form>
-                        <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
+                        <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
                         <div class="form-wrap__title text-center strong">
                           <div class="ttu">Оставьте заявку и&nbsp;получите </div>расчет кухни в&nbsp;трех вариантах
                         </div>
-                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" name="text" placeholder="Ваше имя"/>
+                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" name="nametext" placeholder="Ваше имя"/>
                         </div>
                         <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Номер телефона" required="required"/>
+                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" name="nametel" placeholder="Номер телефона" required="required"/>
                         </div>
                         <!-- +e.input-wrap-->
                         <div class="form-wrap__polite">
-                          <input type="checkbox" checked="checked"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
+                          <input type="checkbox" checked="checked" required="required"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
                         </div>
-                        <button class="form-wrap__btn btn btn-lg btn-block btn-accent">Получить консультацию
+                        <button class="form-wrap__btn btn btn-lg btn-block btn-accent">Получить расчет <span class="d-none d-lg-inline">в трех вариантах</span>
                         </button>
                       </form>
                     </div>
@@ -109,15 +109,15 @@
         <div class="strong red">Согласитесь это важно!</div>
         <div class="form-wrap form-wrap-horizontal">
           <form>
-            <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
+            <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
             <div class="row"> 
               <div class="col-lg-4 col-md-6">
-                <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="text" name="text" placeholder="Ваше имя"/>
+                <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="text" name="nametext" placeholder="Ваше имя"/>
                 </div>
                 <!-- +e.input-wrap-->
               </div>
               <div class="col-lg-4 col-md-6">
-                <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="tel" name="tel" placeholder="Номер телефона" required="required"/>
+                <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="tel" name="nametel" placeholder="Номер телефона" required="required"/>
                 </div>
                 <!-- +e.input-wrap-->
               </div>
@@ -127,30 +127,30 @@
               </div>
             </div>
             <div class="form-wrap__polite">
-              <input type="checkbox" checked="checked"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
+              <input type="checkbox" checked="checked" required="required"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
             </div>
           </form>
         </div>
       </div>
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal">
         <form>
-          <input class="order" type="hidden" name="Вид формы" value="Заявка  с сайта"/>
-          <input class="type" type="hidden" name="type"/>
+          <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+          <input class="type" type="hidden" name="typer"/>
           <input class="meb" type="hidden" name="meb"/>
           <div class="text-center">
             <div class="h2 text-center ttu strong">УТОЧНИТЬ ЦЕНУ</div>
             <p>Оставьте ваши данные и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время.</p>
           </div>
-          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="text" name="text" placeholder="Ваше имя"/>
+          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="text" name="nametext" placeholder="Ваше имя"/>
           </div>
           <!-- +e.input-wrap-->
-          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="tel" name="tel" placeholder="Номер телефона" required="required"/>
+          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-control-lg" type="tel" name="nametel" placeholder="Номер телефона" required="required"/>
           </div>
           <!-- +e.input-wrap-->
           <button class="form-wrap__btn btn btn-lg btn-accent btn-block"> Узнать цену
           </button>
           <div class="form-wrap__polite">
-            <input type="checkbox" checked="checked"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
+            <input type="checkbox" checked="checked" required="required"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
           </div>
         </form>
       </div>

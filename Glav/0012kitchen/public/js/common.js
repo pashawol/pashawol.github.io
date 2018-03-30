@@ -128,31 +128,7 @@ var   arrl2 = (' <div class="l">'+ icon),
   });
  
   
- // форма
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: 'action.php', //Change
-      data: th.serialize()
-    }).success(function() {
-          $.magnificPopup.close();
-             $.magnificPopup.open({
-        items: {
-          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline'
-        }
-      })
-        // window.location.replace("/thanks.html");
-       setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-        // $.magnificPopup.close();
-      }, 4000);
-    });
-    return false;
-  });
-   
+
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
  
@@ -282,7 +258,7 @@ var tabsId1 = '.mytabs1';
             });
 
 
-        var $gallery = $('.tab__slider,  .tab__slider-big, .tab__slider-small ')
+        var $gallery = $('.tab__slider,  .tab__slider-small ')
          $gallery.on('lazyLoaded', function(event, slick, image, imageSource){
              image.parent().css('background-image', 'url(' + image.attr('src') + ')');
          });
@@ -352,7 +328,7 @@ var tabsId1 = '.mytabs1';
   $(".pretty-embed__bg").each(function(){ 
    $(this).click(function(){
     $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1?rel=0').addClass("on");
+    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1&amp;rel=0').addClass("on");
    })
    })
 
@@ -363,11 +339,49 @@ var tabsId1 = '.mytabs1';
       $("#modal .btn").val("Заказать консультацию");
      $("#modal .type, #modal .meb ").val("");
   })
+$(".cost-content-l input").on("input, change" , function(){
+  var th = $(this);
+  if (th.attr("id") == 'top'){
+    $("#inp_secl_t").val(th.val() + "см");
+  }
+  
+
+})
+
+
    $(".header-block__inner .order").val("Заявка в шапке")
-   $(".s-move .order").val("Заявка в блоке потребностей")
-   $(".s-move .order").val("Заявка в блоке вызова замерщика")
+   $(".s-needs .order").val("Заявка в блоке потребностей")
+   $(".s-form .order").val("Заявка в блоке вызова замерщика")
    $(".s-calc .order").val("Заявка с калькулятора")
    $(".s-accord .order").val("Заявка с FAQ")
+   $("#modal-big .order").val('Заявка  c " У ВАС РЕМОНТ?"' )
 
+
+
+    // форма
+$("form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: 'action.php', //Change
+      data: th.serialize()
+    }).success(function() {
+      //     $.magnificPopup.close();
+      //        $.magnificPopup.open({
+      //   items: {
+      //     src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
+      //     type: 'inline'
+      //   }
+      // })
+        window.location.replace("/thanks.html");
+       setTimeout(function() {
+        // Done Functions
+        th.trigger("reset");
+        // $.magnificPopup.close();
+      }, 4000);
+    });
+    return false;
+  });
+   
 });
 
