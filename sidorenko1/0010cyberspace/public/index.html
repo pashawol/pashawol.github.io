@@ -13,62 +13,141 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
-      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
-        <div class="wrapp-hidden"> 
-          <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">Продукция </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Услуги  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Акции </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
-            </li>
-          </ul>
-          <div class="text-right"></div>
-        </div>
-      </div>
-      <!--  мобильное меню-->
+    <div class="main-wrapper">
       <!-- start HEADER.header-->
       <header class="header">
+        <!-- start top-banner-->
+        <div class="top-banner d-none d-md-block">
+          <div class="container"> 
+            <div class="row">
+              <div class="col-auto">
+                <div class="top-banner__img-wrap"><img class="res-i" src="img/top-banner.png" alt=""/>
+                </div>
+              </div>
+              <div class="col">
+                <div class="top-banner__text">
+                  <div class="h4"> <span class="text-accent">C 01.03.2018 </span>по <span class="text-accent">16.03.2018 </span>скидки <strong class="text-pink">10% </strong>на все игровые мыши  <span class="text-accent"> Logitech</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end top-banner-->
         <!-- start .top_line-->
-        <div class="top_line">
+        <div class="top_line text-white">
+          <div class="container">
+            <div class="top_line__wrap">
+              <div class="top_line__row row align-items-center">
+                <div class="col-md-auto col"><a class="logo d-block" href="/">
+                  <div><img class="res-i" src="img/logo.png" alt=""/></div>
+                  <div class="d-none d-md-block"><img class="res-i" src="img/logo-text.png" alt=""/></div></a>
+                </div>
+                <div class="col-2 d-none d-xl-block">
+                  <div class="top_line__addr">
+                    <div class="row no-gutters">
+                      <div class="col-auto">
+                        <svg class="icon icon-i-map ">
+                          <use xlink:href="img/svg/sprite.svg#i-map"></use>
+                        </svg>
+                      </div>
+                      <div class="col"> Москва и подмосковье<br/>Доставка 2 дня<br/><a class="top_line__link text-white" href="#">Наш Магазин</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto d-none d-md-block">
+                  <ul>
+                    <li><a class="top_line__link text-white ttu strong" href="#">Гарантия и возврат</a>
+                    </li>
+                    <li><a class="top_line__link text-white ttu strong" href="#">Как купить</a>
+                    </li>
+                    <li><a class="top_line__link text-white ttu strong" href="#">Доставка</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-xxl-2 col-auto">
+                  <div class="text-center">
+                    <div><a class="top_line__tel h5 text-white" href="tel:+7 (495) 123-45-67">
+                      <div class="d-none d-md-block d-xl-none">
+                        <svg class="icon icon-i-call ">
+                          <use xlink:href="img/svg/sprite.svg#i-call"></use>
+                        </svg>
+                        <div class="small text-teal">Телефон</div>
+                      </div>
+                      <stong class="d-none d-xl-inline">+7 (495) 123-45-67</stong></a>
+                    </div>
+                    <div class="d-none d-xl-inline"><a class="top_line__link text-teal" href="#">Обратный звонок</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xxl-2 col-auto">
+                  <div class="top_line__basket d-inline-block">
+                    <div class="top_line__basket-top">
+                      <svg class="icon icon-basket ">
+                        <use xlink:href="img/svg/sprite.svg#basket"></use>
+                      </svg>
+                      <div class="top_line__basket-label bg-pink">2
+                      </div>
+                    </div>
+                    <div class="text-teal d-none d-md-block">Корзина</div>
+                  </div>
+                </div>
+                <div class="col-auto d-md-none"><a class="d-block" href="#">
+                    <svg class="icon icon-search ">
+                      <use xlink:href="img/svg/sprite.svg#search"></use>
+                    </svg></a></div>
+                <div class="col-xxl-2 col-auto"><a class="top_line__lk d-block text-white" href="#">
+                  <div class="d-md-none">
+                    <svg class="icon icon-user ">
+                      <use xlink:href="img/svg/sprite.svg#user"></use>
+                    </svg>
+                  </div><span class="top_line__lk-name d-none d-md-block">Александр Е. </span><span class="top_line__lk-balans d-none d-md-block"><span class="text-teal">Баланс на счету: </span><strong>4590 руб.</strong></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- end .top_line-->
         <!-- start top-nav-->
         <div class="top-nav">
           <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-              </li>
-            </ul>
+            <div class="row no-gutters">
+              <div class="col-md-auto col-6"><a class="top-nav__btn btn btn btn-danger d-block strong" href="#">Каталог</a>
+              </div>
+              <div class="top-nav__col col-md col-6">
+                <div class="d-xl-none"><a class="top-nav__btn top-nav__btn-nav btn btn btn-danger d-block strong toggle-mnu-1" href="#">Меню</a>
+                </div>
+                <div class="top-nav__nav-wrap hidden-mnu">
+                  <ul class="top-nav__nav row no-gutters">
+                    <li class="top-nav__item col-md-auto col"><a class="top-nav__link strong text-white" href="#">Компьютеры</a>
+                    </li>
+                    <li class="top-nav__item col-md-auto col"><a class="top-nav__link strong text-white" href="#">Комплектующие</a>
+                    </li>
+                    <li class="top-nav__item col-md-auto col"><a class="top-nav__link strong text-white" href="#"> Мониторы</a>
+                    </li>
+                    <li class="top-nav__item col-md-auto col"><a class="top-nav__link strong text-white" href="#">Аксессуары </a>
+                    </li>
+                    <li class="top-nav__item col-md-auto col"><a class="top-nav__link strong text-white" href="#">Игровая мебель</a>
+                    </li>
+                    <li class="top-nav__item col-md-auto col"><a class="top-nav__link strong text-white" href="#">Подарки и сувениры</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-auto d-none d-md-block">
+                <div class="top-nav__search-wrap">
+                  <div class="form-search">
+                    <form action="">
+                      <button class="form-search__btn">
+                        <svg class="icon icon-search ">
+                          <use xlink:href="img/svg/sprite.svg#search"></use>
+                        </svg>
+                      </button><input class="form-search__input" type="text" placeholder="Поиск "/>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end top-nav-->
@@ -77,24 +156,1539 @@
       <!-- start header-block-->
       <div class="header-block" id="header-block">
         <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+          <div class="header-block__row row">
+            <div class="header-block__col col-xl-auto">
+              <div class="header-block__slider swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="header-block__slide swiper-slide bgs" style="background-image: url(img/head-bg.jpg);"> 
+                    <div class="header-block__s-row row">
+                      <div class="col-sm-5 col-4">
+                        <div class="header-block__img-wrap"><img class="res-i" src="img/head-img.png" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="header-block__text-block">
+                          <div class="light h4 text-pink">Только с 1 по 19 марта</div>
+                          <div class="header-block__big gray-600">С новой выгодой!
+                          </div>
+                          <div class="header-block__caption h3 gray-600 light">Премиальные наушники <strong class="accent">Razer </strong>в подарок!
+                          </div>
+                          <div class="header-block__btn-wrap d-none d-md-block">
+                            <div class="row">
+                              <div class="col-auto"><a class="header-block__btn btn btn-block btn-danger ttu btn-lg" href="#">Купить</a>
+                              </div>
+                              <div class="col-sm-auto col"><a class="header-block__btn btn btn-block btn-outline-primary ttu btn-lg" href="#">Подробнее </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container d-md-none">
+                      <div class="header-block__btn-wrap row">
+                        <div class="col-auto"><a class="header-block__btn btn btn-block btn-danger ttu btn-lg" href="#">Купить</a>
+                        </div>
+                        <div class="col-sm-auto col"><a class="header-block__btn btn btn-block btn-outline-primary ttu btn-lg" href="#">Подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-block__slide swiper-slide bgs" style="background-image: url(img/head-bg.jpg);"> 
+                    <div class="header-block__s-row row">
+                      <div class="col-sm-5 col-4">
+                        <div class="header-block__img-wrap"><img class="res-i" src="img/head-img.png" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="header-block__text-block">
+                          <div class="light h4 text-pink">Только с 1 по 19 марта</div>
+                          <div class="header-block__big gray-600">С новой выгодой!
+                          </div>
+                          <div class="header-block__caption h3 gray-600 light">Премиальные наушники <strong class="accent">Razer </strong>в подарок!
+                          </div>
+                          <div class="header-block__btn-wrap d-none d-md-block">
+                            <div class="row">
+                              <div class="col-auto"><a class="header-block__btn btn btn-block btn-danger ttu btn-lg" href="#">Купить</a>
+                              </div>
+                              <div class="col-sm-auto col"><a class="header-block__btn btn btn-block btn-outline-primary ttu btn-lg" href="#">Подробнее </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container d-md-none">
+                      <div class="header-block__btn-wrap row">
+                        <div class="col-auto"><a class="header-block__btn btn btn-block btn-danger ttu btn-lg" href="#">Купить</a>
+                        </div>
+                        <div class="col-sm-auto col"><a class="header-block__btn btn btn-block btn-outline-primary ttu btn-lg" href="#">Подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-block__slide swiper-slide bgs" style="background-image: url(img/head-bg.jpg);"> 
+                    <div class="header-block__s-row row">
+                      <div class="col-sm-5 col-4">
+                        <div class="header-block__img-wrap"><img class="res-i" src="img/head-img.png" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="header-block__text-block">
+                          <div class="light h4 text-pink">Только с 1 по 19 марта</div>
+                          <div class="header-block__big gray-600">С новой выгодой!
+                          </div>
+                          <div class="header-block__caption h3 gray-600 light">Премиальные наушники <strong class="accent">Razer </strong>в подарок!
+                          </div>
+                          <div class="header-block__btn-wrap d-none d-md-block">
+                            <div class="row">
+                              <div class="col-auto"><a class="header-block__btn btn btn-block btn-danger ttu btn-lg" href="#">Купить</a>
+                              </div>
+                              <div class="col-sm-auto col"><a class="header-block__btn btn btn-block btn-outline-primary ttu btn-lg" href="#">Подробнее </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container d-md-none">
+                      <div class="header-block__btn-wrap row">
+                        <div class="col-auto"><a class="header-block__btn btn btn-block btn-danger ttu btn-lg" href="#">Купить</a>
+                        </div>
+                        <div class="col-sm-auto col"><a class="header-block__btn btn btn-block btn-outline-primary ttu btn-lg" href="#">Подробнее</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="col">
+                <div class="header-block__banner">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="header-block__text h4">
+                        <div class="ttu text-pink">Скидки </div>
+                        <div class="gray-600">и дисконтные карты </div>
+                      </div>
+                    </div>
+                    <div class="header-block__banner-img"><img class="res-i" src="img/banner-1.png" alt=""/>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.banner-->
+                <div class="header-block__banner">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="header-block__text h4">
+                        <div class="ttu text-pink">ПОДАРКИ</div>
+                        <div class="gray-600">ко всем видеокартам серии Ge Force GTX</div>
+                      </div>
+                    </div>
+                    <div class="header-block__banner-img"><img class="res-i" src="img/banner-2.png" alt=""/>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.banner-->
+            </div>
+          </div>
         </div>
       </div>
       <!-- end header-block-->
-      <!-- start s-form-->
-      <section class="s-form section" id="s-form">
+      <!-- start s-prod-->
+      <div class="s-prod section" id="s-prod">
         <div class="container">
-          <h2 class="text-center">s-form</h2>
-          <div class="row"></div>
+          <h2 class="gray-600 t-sh ttu">Рекомендуемые товары </h2>
+          <div class="s-prod__slider swiper-container carusel-js">
+            <div class="swiper-wrapper">
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-3.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-4.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-5.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+              <svg class="icon icon-hand ">
+                <use xlink:href="img/svg/sprite.svg#hand"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+              <svg class="icon icon-hand ">
+                <use xlink:href="img/svg/sprite.svg#hand"></use>
+              </svg>
+            </div>
+          </div>
         </div>
-      </section>
-      <!-- end s-form-->
+      </div>
+      <!-- end s-prod-->
+      <!-- start s-patner-->
+      <div class="s-patner section" id="s-patner">
+        <div class="container">
+          <h2 class="text-white ttu">Официальный партнер</h2>
+          <div class="slider-wrap">
+            <div class="s-patner__slider swiper-container carusel-js2">
+              <div class="swiper-wrapper">
+                <div class="s-patner__slide swiper-slide">
+                  <div class="s-patner__item">
+                    <div><img class="rs-i" src="img/patner-1.png" alt=""/></div>
+                  </div>
+                </div>
+                <!-- +e.slide.swiper-slide-->
+                <div class="s-patner__slide swiper-slide">
+                  <div class="s-patner__item">
+                    <div><img class="rs-i" src="img/patner-1.png" alt=""/></div>
+                  </div>
+                </div>
+                <!-- +e.slide.swiper-slide-->
+                <div class="s-patner__slide swiper-slide">
+                  <div class="s-patner__item">
+                    <div><img class="rs-i" src="img/patner-1.png" alt=""/></div>
+                  </div>
+                </div>
+                <!-- +e.slide.swiper-slide-->
+                <div class="s-patner__slide swiper-slide">
+                  <div class="s-patner__item">
+                    <div><img class="rs-i" src="img/patner-1.png" alt=""/></div>
+                  </div>
+                </div>
+                <!-- +e.slide.swiper-slide-->
+                <div class="s-patner__slide swiper-slide">
+                  <div class="s-patner__item">
+                    <div><img class="rs-i" src="img/patner-1.png" alt=""/></div>
+                  </div>
+                </div>
+                <!-- +e.slide.swiper-slide-->
+                <div class="s-patner__slide swiper-slide">
+                  <div class="s-patner__item">
+                    <div><img class="rs-i" src="img/patner-1.png" alt=""/></div>
+                  </div>
+                </div>
+                <!-- +e.slide.swiper-slide-->
+                <div class="s-patner__slide swiper-slide">
+                  <div class="s-patner__item">
+                    <div><img class="rs-i" src="img/patner-1.png" alt=""/></div>
+                  </div>
+                </div>
+                <!-- +e.slide.swiper-slide-->
+                <div class="s-patner__slide swiper-slide">
+                  <div class="s-patner__item">
+                    <div><img class="rs-i" src="img/patner-1.png" alt=""/></div>
+                  </div>
+                </div>
+                <!-- +e.slide.swiper-slide-->
+              </div>
+              <div class="swiper-button-arrow swiper-button-arrow-next swiper-button-next">
+                <svg class="icon icon-arrow ">
+                  <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                </svg>
+              </div>
+              <div class="swiper-button-arrow swiper-button-arrow-prev swiper-button-prev">
+                <svg class="icon icon-arrow ">
+                  <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-patner-->
+      <!-- start s-prod-->
+      <div class="s-prod section" id="s-prod">
+        <div class="container">
+          <h2 class="gray-600 t-sh ttu">Рекомендуемые товары </h2>
+          <div class="s-prod__slider swiper-container carusel-js">
+            <div class="swiper-wrapper">
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-3.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-4.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-5.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+              <svg class="icon icon-hand ">
+                <use xlink:href="img/svg/sprite.svg#hand"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+              <svg class="icon icon-hand ">
+                <use xlink:href="img/svg/sprite.svg#hand"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-prod-->
+      <!-- start s-stock-->
+      <div class="s-stock section">
+        <div class="container">
+          <h2 class="text-white ttu">Акции</h2>
+          <div class="d-none d-md-block">
+            <div class="row">   
+              <div class="s-stock__col col-xl-3 col-md-6 col"><a class="s-stock__item d-flex text-white" href="#" style="background-color: #27ae61;">
+                  <div class="s-stock__row d-flex">
+                    <div class="s-stock__img-wrap"><img class="s-stock__img" src="img/stock-1.png" alt="" role="presentation"/>
+                    </div>
+                    <div class="s-stock__caption">
+                      <div class="stars">
+                        <div class="small">Рейтинг товара:</div>
+                        <div class="row no-gutters">
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="h6">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</div>
+                    </div>
+                  </div></a>
+                  <!-- +e.A.item.d-block.text-white-->
+              </div>
+              <div class="s-stock__col col-xl-5 col-12"><a class="s-stock__item d-flex text-white" href="#" style="background-color: #368f8d;">
+                  <div class="s-stock__row d-flex">
+                    <div class="s-stock__img-wrap"><img class="s-stock__img" src="img/stock-2.png" alt="" role="presentation"/>
+                    </div>
+                    <div class="s-stock__caption">
+                      <div class="stars">
+                        <div class="small">Рейтинг товара:</div>
+                        <div class="row no-gutters">
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="h6">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</div>
+                    </div>
+                  </div></a>
+                  <!-- +e.A.item.d-block.text-white--><a class="s-stock__item d-flex text-white" href="#" style="background-color: #355482;">
+                  <div class="s-stock__row d-flex">
+                    <div class="s-stock__img-wrap"><img class="s-stock__img" src="img/stock-3.png" alt="" role="presentation"/>
+                    </div>
+                    <div class="s-stock__caption">
+                      <div class="stars">
+                        <div class="small">Рейтинг товара:</div>
+                        <div class="row no-gutters">
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="h6">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</div>
+                    </div>
+                  </div></a>
+                  <!-- +e.A.item.d-block.text-white-->
+              </div>
+              <div class="s-stock__col col-xl-4 col-md-6"><a class="s-stock__item d-flex text-white" href="#" style="background-color: #ff526b;">
+                  <div class="s-stock__row d-flex">
+                    <div class="s-stock__img-wrap"><img class="s-stock__img" src="img/stock-4.png" alt="" role="presentation"/>
+                    </div>
+                    <div class="s-stock__caption">
+                      <div class="stars">
+                        <div class="small">Рейтинг товара:</div>
+                        <div class="row no-gutters">
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                          </div>
+                          <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="h6">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</div>
+                    </div>
+                  </div></a>
+                  <!-- +e.A.item.d-block.text-white-->
+              </div>
+            </div>
+          </div>
+          <div class="d-md-none">
+            <div class="s-stock__slider swiper-container carusel-js3">
+              <div class="swiper-wrapper"> 
+                <div class="s-stock__col swiper-slide"><a class="s-stock__item d-flex text-white" href="#" style="background-color: #27ae61;">
+                    <div class="s-stock__row d-flex">
+                      <div class="s-stock__img-wrap"><img class="s-stock__img" src="img/stock-1.png" alt="" role="presentation"/>
+                      </div>
+                      <div class="s-stock__caption">
+                        <div class="stars">
+                          <div class="small">Рейтинг товара:</div>
+                          <div class="row no-gutters">
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="h6">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</div>
+                      </div>
+                    </div></a>
+                    <!-- +e.A.item.d-block.text-white-->
+                </div>
+                <div class="s-stock__col swiper-slide"><a class="s-stock__item d-flex text-white" href="#" style="background-color: #ff526b;">
+                    <div class="s-stock__row d-flex">
+                      <div class="s-stock__img-wrap"><img class="s-stock__img" src="img/stock-4.png" alt="" role="presentation"/>
+                      </div>
+                      <div class="s-stock__caption">
+                        <div class="stars">
+                          <div class="small">Рейтинг товара:</div>
+                          <div class="row no-gutters">
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="h6">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</div>
+                      </div>
+                    </div></a>
+                    <!-- +e.A.item.d-block.text-white-->
+                </div>
+                <div class="s-stock__col swiper-slide"><a class="s-stock__item d-flex text-white" href="#" style="background-color: #368f8d;">
+                    <div class="s-stock__row d-flex">
+                      <div class="s-stock__img-wrap"><img class="s-stock__img" src="img/stock-2.png" alt="" role="presentation"/>
+                      </div>
+                      <div class="s-stock__caption">
+                        <div class="stars">
+                          <div class="small">Рейтинг товара:</div>
+                          <div class="row no-gutters">
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="h6">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</div>
+                      </div>
+                    </div></a>
+                    <!-- +e.A.item.d-block.text-white-->
+                </div>
+                <div class="s-stock__col swiper-slide"><a class="s-stock__item d-flex text-white" href="#" style="background-color: #355482;">
+                    <div class="s-stock__row d-flex">
+                      <div class="s-stock__img-wrap"><img class="s-stock__img" src="img/stock-3.png" alt="" role="presentation"/>
+                      </div>
+                      <div class="s-stock__caption">
+                        <div class="stars">
+                          <div class="small">Рейтинг товара:</div>
+                          <div class="row no-gutters">
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                            </div>
+                            <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="h6">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</div>
+                      </div>
+                    </div></a>
+                    <!-- +e.A.item.d-block.text-white-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-stock-->
+      <!-- start s-prod-->
+      <div class="s-prod section" id="s-prod">
+        <div class="container">
+          <h2 class="gray-600 t-sh ttu">Рекомендуемые товары </h2>
+          <div class="s-prod__slider swiper-container carusel-js">
+            <div class="swiper-wrapper">
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-3.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-4.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-prod__slide swiper-slide">
+                <div class="prod-card">
+                  <div class="prod-card__badge badge badge-success text-center h6 text-white">-10%
+                  </div><a class="prod-card__img-wrap d-flex text-center" href="#"><img class="res-i" src="img/prod-5.jpg" alt=""/></a>
+                  <div class="prod-card__caption"><a class="prod-card__title text-dark" href="#">GeForce GTX 1080 Ti  Gaming X 11GB GDDR5X (352bit)</a>
+                    <div class="prod-card__rating-wrap"> 
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <div class="stars">
+                            <div class="small">Рейтинг товара:</div>
+                            <div class="row no-gutters">
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-1.png" alt=""/>
+                              </div>
+                              <div class="stars__item col-auto"><img src="img/star-0.png" alt=""/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center">
+                          <div class="small">отзывы</div>
+                          <div class="h6 gray-600">(27) </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="prod-card__price">
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col">
+                          <strike class="h6 accent">	9 500р.</strike>
+                          <div class="h4 strong"> 7999 р.</div>
+                        </div>
+                        <div class="col-auto"><a class="prod-card__btn btn btn-danger" href="#">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>Добавить в&nbsp;корзину</a>
+                        </div>
+                      </div>
+                      <div class="row no-gutters justify-content-between">
+                        <div class="col-auto text-center">
+                          <div class="h6 text-white bg-primary">	1 500р.	</div>
+                          <div class="prod-card__small small">Экономия
+                          </div>
+                        </div>
+                        <div class="col-auto text-right"><a class="prod-card__more accent" href="#">Подробнее о товаре</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +b.prod-card-->
+              </div>
+              <!-- +e.slide.swiper-slide-->
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+              <svg class="icon icon-hand ">
+                <use xlink:href="img/svg/sprite.svg#hand"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+              <svg class="icon icon-hand ">
+                <use xlink:href="img/svg/sprite.svg#hand"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-prod-->
+      <!-- start s-artical-->
+      <div class="s-artical section" id="s-artical">
+        <div class="container">
+          <div class="s-artical__row row align-items-center justify-content-between">
+            <div class="col-xl">
+              <div class="s-artical__nav row">
+                <div class="col-md-auto"><a class="s-artical__link h4 active" href="#">Обзоры товаров</a>
+                </div>
+                <div class="col-md-auto"><a class="s-artical__link h4" href="#">Новости технологий</a>
+                </div>
+                <div class="col-md-auto"><a class="s-artical__link h4" href="#">Новости компании</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="subs-form">
+                <form>
+                  <div class="input-group mb-3"><input class="subs-form__input form-control" type="email" placeholder="Ваш e-mail" aria-label="Ваш e-mail"/>
+                    <div class="input-group-append">
+                      <button class="subs-form__btn btn btn-danger" type="button"><span class="d-none d-md-block">Подписаться</span><span class="d-md-none">
+                          <svg class="icon icon-envelope ">
+                            <use xlink:href="img/svg/sprite.svg#envelope"></use>
+                          </svg></span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="s-artical__slider swiper-container">
+            <div class="swiper-wrapper">
+              <div class="s-artical__slide swiper-slide">
+                  <div class="s-artical__item"><a class="s-artical__img-wrap img-bg d-block" href="#" style="background-image: url(img/artical-1.jpg);"><img class="res-i" src="img/artical-1.jpg" alt=""/></a>
+                    <div class="s-artical__caption"><a class="s-artical__title strong" href="#">Eternal Неделя карточных игр в CyberSpace</a>
+                      <div class="s-artical__foot row justify-content-between">
+                        <div class="col-auto">
+                          <div class="s-artical__date">03.03.2018
+                          </div>
+                        </div>
+                        <div class="col-auto"><a class="s-artical__more" href="#">Читать дальше 
+                          <svg class="icon icon-arrow ">
+                            <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                          </svg></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-artical__slide swiper-slide">
+                  <div class="s-artical__item"><a class="s-artical__img-wrap img-bg d-block" href="#" style="background-image: url(img/artical-2.jpg);"><img class="res-i" src="img/artical-2.jpg" alt=""/></a>
+                    <div class="s-artical__caption"><a class="s-artical__title strong" href="#">Eternal Неделя карточных игр в CyberSpace</a>
+                      <div class="s-artical__foot row justify-content-between">
+                        <div class="col-auto">
+                          <div class="s-artical__date">03.03.2018
+                          </div>
+                        </div>
+                        <div class="col-auto"><a class="s-artical__more" href="#">Читать дальше 
+                          <svg class="icon icon-arrow ">
+                            <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                          </svg></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-artical__slide swiper-slide">
+                  <div class="s-artical__item"><a class="s-artical__img-wrap img-bg d-block" href="#" style="background-image: url(img/artical-3.jpg);"><img class="res-i" src="img/artical-3.jpg" alt=""/></a>
+                    <div class="s-artical__caption"><a class="s-artical__title strong" href="#">Eternal Неделя карточных игр в CyberSpace</a>
+                      <div class="s-artical__foot row justify-content-between">
+                        <div class="col-auto">
+                          <div class="s-artical__date">03.03.2018
+                          </div>
+                        </div>
+                        <div class="col-auto"><a class="s-artical__more" href="#">Читать дальше 
+                          <svg class="icon icon-arrow ">
+                            <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                          </svg></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-artical__slide swiper-slide">
+                  <div class="s-artical__item"><a class="s-artical__img-wrap img-bg d-block" href="#" style="background-image: url(img/artical-4.jpg);"><img class="res-i" src="img/artical-4.jpg" alt=""/></a>
+                    <div class="s-artical__caption"><a class="s-artical__title strong" href="#">Eternal Неделя карточных игр в CyberSpace</a>
+                      <div class="s-artical__foot row justify-content-between">
+                        <div class="col-auto">
+                          <div class="s-artical__date">03.03.2018
+                          </div>
+                        </div>
+                        <div class="col-auto"><a class="s-artical__more" href="#">Читать дальше 
+                          <svg class="icon icon-arrow ">
+                            <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                          </svg></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <!-- +e.slide.swiper-slide-->
+              <div class="s-artical__slide swiper-slide">
+                  <div class="s-artical__item"><a class="s-artical__img-wrap img-bg d-block" href="#" style="background-image: url(img/artical-5.jpg);"><img class="res-i" src="img/artical-5.jpg" alt=""/></a>
+                    <div class="s-artical__caption"><a class="s-artical__title strong" href="#">Eternal Неделя карточных игр в CyberSpace</a>
+                      <div class="s-artical__foot row justify-content-between">
+                        <div class="col-auto">
+                          <div class="s-artical__date">03.03.2018
+                          </div>
+                        </div>
+                        <div class="col-auto"><a class="s-artical__more" href="#">Читать дальше 
+                          <svg class="icon icon-arrow ">
+                            <use xlink:href="img/svg/sprite.svg#arrow"></use>
+                          </svg></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <!-- +e.slide.swiper-slide-->
+            </div>
+            <!-- .swiper-button-hand.swiper-button-hand-next.swiper-button-next-->
+            <!-- 	+icon('hand')-->
+            <!-- .swiper-button-hand.swiper-button-hand-prev.swiper-button-prev-->
+            <!-- 	+icon('hand')-->
+          </div>
+          <div class="text-center"><a class="s-artical__btn btn btn-outline-danger" href="#">Показать все обзоры</a>
+          </div>
+        </div>
+      </div>
+      <!-- end s-artical-->
       <!-- start s-contact-->
       <section class="s-contact section" id="s-contact">
         <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"><a href="#"></a></div>
+          <h2 class="gray-600 t-sh ttu">Наши магазины</h2>
+          <div class="row align-items-center">
+            <div class="col-xxl-9 col-xl-8 gal">
+              <div class="row">
+                        <div class="col-xl-4 col-sm-6"><a class="s-contact__img-wrap img-bg" href="img/contact-1.jpg" style="background-image: url(img/contact-1.jpg);"><img src="img/contact-1.jpg" alt=""/></a>
+                        </div>
+                        <!-- .col-4-->
+                        <div class="col-xl-4 col-sm-6"><a class="s-contact__img-wrap img-bg" href="img/contact-2.jpg" style="background-image: url(img/contact-2.jpg);"><img src="img/contact-2.jpg" alt=""/></a>
+                        </div>
+                        <!-- .col-4-->
+                        <div class="col-xl-4 col-sm-6"><a class="s-contact__img-wrap img-bg" href="img/contact-3.jpg" style="background-image: url(img/contact-3.jpg);"><img src="img/contact-3.jpg" alt=""/></a>
+                        </div>
+                        <!-- .col-4-->
+              </div>
+            </div>
+            <div class="col">
+              <div class="row justify-content-md-center">
+                        <div class="col-xl-12 col-auto">
+                          <div class="s-contact__item row align-items-center">
+                            <div class="col-auto">
+                              <div class="s-contact__icon-wrap">
+                                <svg class="icon icon-clock ">
+                                  <use xlink:href="img/svg/sprite.svg#clock"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="s-contact__text"> 
+                                <div class="h6 gray-600">Время работы:</div>
+                                <div class="h4 strong">С 10:00 до 22:00</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- .col-12-->
+                        <div class="col-xl-12 col-auto">
+                          <div class="s-contact__item row align-items-center">
+                            <div class="col-auto">
+                              <div class="s-contact__icon-wrap">
+                                <svg class="icon icon-map-loc ">
+                                  <use xlink:href="img/svg/sprite.svg#map-loc"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="col">
+                              <div class="s-contact__text"><a class="s-contact__link h6" href="#">Посмотреть все магазины на карте</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- .col-12-->
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- end s-contact-->

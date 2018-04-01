@@ -5,7 +5,7 @@
   // Custom JS
  
       // галерея
-  $(".gal").each(function(){
+  $(" .gal").each(function(){
     
   $(this).find("a").magnificPopup({
     type: 'image',
@@ -178,10 +178,35 @@ var tabsId1 = '.mytabs1';
             th.find(containerId1).removeClass('loading');
             th.find(containerId1).fadeIn();
 
-
+    // галерея
+    
+      $(".tab__slider2, .tab__slide-slider ").find("img").each(function(){
+      
+        $(this).parent().addClass("gal-link").attr("href", "dop/" + $(this).attr("data-lazy"))
+        // .wrap('<a href="dop/'+$(this).attr("data-lazy")+'">')
+      })
+   
+      $(".tab__slider2 , .tab__slide-slider ").each(function(){
+        
+      $(this).find(".gal-link").magnificPopup({
+        type: 'image',
+        closeOnContentClick: false,
+        closeBtnInside: false,
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        image: {
+          verticalFit: true,
+          // titleSrc: function(item) {
+          //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+          // }
+        },
+        gallery: {
+          enabled: true
+        }
+      });
+      })
 
          // листалка по стр
- $(" .top-nav a, .scroll-link").click(function () {
+ $("  .scroll-link").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
         
@@ -201,6 +226,9 @@ var tabsId1 = '.mytabs1';
   })
 
  })
+
+
+
   $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
 
@@ -216,9 +244,9 @@ var tabsId1 = '.mytabs1';
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   });
-    modal;
+   
 
-       th.find('.tab__slider').slick({
+       th.find('.tab__slider1').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: true,
@@ -229,7 +257,19 @@ var tabsId1 = '.mytabs1';
              prevArrow: arrl2,
               nextArrow: arrr2,
             });
-        th.find('.tab__slider-big').slick({
+        th.find('.tab__slider2').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            speed: 450,
+            infinite: true,
+            loop: true,  
+            arrows: true, 
+             prevArrow: arrl2,
+              nextArrow: arrr2,
+            });
+
+        th.find('.tab__slide-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: false,
@@ -239,6 +279,20 @@ var tabsId1 = '.mytabs1';
             arrows: true, 
              prevArrow: arrl2,
               nextArrow: arrr2,
+            });
+
+
+        th.find('.tab__slider-big').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            speed: 450,
+            infinite: true,
+            loop: true,  
+            arrows: false, 
+            draggable: false,
+            swipe: false,
+             
               asNavFor:  th.find('.tab__slider-small')
             });
 
@@ -258,7 +312,7 @@ var tabsId1 = '.mytabs1';
             });
 
 
-        var $gallery = $('.tab__slider,  .tab__slider-small ')
+        var $gallery = $('.tab__slider1,  .tab__slider-small ')
          $gallery.on('lazyLoaded', function(event, slick, image, imageSource){
              image.parent().css('background-image', 'url(' + image.attr('src') + ')');
          });
