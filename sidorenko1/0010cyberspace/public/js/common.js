@@ -4,7 +4,16 @@
   svg4everybody({});
   // Custom JS
   
-
+// мобильный фильтр
+ var toggMnu = $(".toggle-mnu-2").click(function () {
+    
+    $(".toggle-mnu-2").toggleClass("on");
+    // $("body").toggleClass("fixed");
+    $(".mobile-filter").toggleClass("active");
+    $("body").toggleClass("fixed");
+    return false;
+  }); 
+ 
  
       // галерея
   $(".gal").each(function(){
@@ -222,26 +231,108 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
           freeModeMomentum: true, 
           loop: true
         });
+     var swiper6 = new Swiper('.s-rec-prod__slider', {
+          // slidesPerView: 5,
+          watchOverflow: true,
+          slidesPerView: 'auto',
+          freeMode: true, 
+          freeModeMomentum: true, 
+          loop: true
+        });
+// слайдер в карточке товара
+  $('.kart-head__slider-big').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            speed: 450,
+            asNavFor: '.kart-head__slider-small',
+            infinite: false,
+            loop: false,
+              arrows: false,
 
-  function heightses() {
+          });
+         $('.kart-head__slider-small').slick({
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              dots: false,
+              speed: 450,
+              infinite: false,
+              loop: false,
+               arrows: false, 
 
-    var w = $(window).width();
-   // $(".otz__item .text-wrap ").height('auto').equalHeights();
-   //
-    if (w<767){
-        // слайдер каталога
-    }
-    else{
+              focusOnSelect: true ,
+              asNavFor:  '.kart-head__slider-big',
+              responsive: [{
+
+                    breakpoint: 1366,
+                    settings: {
+                      slidesToShow: 3,
+                      infinite: true
+                    }
+
+                  } ]
+              // swipeToSlide: false
+              });
+
+  // ui slider
+$(".filter-aside__item  ").each(function(){
+        
+    var 
+        th= $(this),
+        handle_min = th.find('.minus'),
+        handle_max = th.find('.plus'),
+        minn = parseInt(handle_min.val()),
+        maxx = parseInt(handle_max.val());
+
  
-    }
-  }
 
-  $(window).resize(function() {
-    heightses();
-   
-  });
- 
- heightses();
+    th.find( ".filter-aside__range-1" ).slider({
+      min: minn,
+      max: maxx,
+      values: [ minn, maxx ],
+      range: true,
+      stop: function(event, ui) {
+        handle_min.val(  ui.values[ 0 ] );
+        handle_max.val(  ui.values[ 1 ] );
+        },
+        slide: function(event, ui){
+        handle_min.val(  ui.values[ 0 ] );
+        handle_max.val(  ui.values[ 1 ] );
+        }
+    });
+    handle_min.change(function(){
+      var value1=handle_min.val();
+      var value2=handle_max.val();
+
+        if(parseInt(value1) > parseInt(value2)){
+        value1 = value2;
+        handle_min.val(value1);
+      }
+      th.find( ".filter-aside__range-1" ).slider("values",0,value1);  
+    });
+
+      
+    handle_max.change(function(){
+      var value1=handle_min.val();
+      var value2=handle_max.val();
+      
+      if (value2 > 1000) { value2 = 1000; handle_max.val(1000)}
+
+      if(parseInt(value1) > parseInt(value2)){
+        value2 = value1;
+        handle_max.val(value2);
+      }
+      th.find( ".filter-aside__range-1" ).slider("values",1,value2);
+    });
+});
 
 
+// сокращнеие текста
+ $(".text-js").readmore({
+     speed: 300,
+    maxHeight: 90,
+    heightMargin: 20,
+    moreLink: '<a href="#" class="more accent">Показать больше</a>',
+lessLink: '<a href="#" class="more accent">Скрыть</a>'
+});
 });

@@ -76,7 +76,7 @@
                       </div>
                       <stong class="d-none d-xl-inline">+7 (495) 123-45-67</stong></a>
                     </div>
-                    <div class="d-none d-xl-inline"><a class="top_line__link text-teal" href="#">Обратный звонок</a>
+                    <div class="d-none d-xl-inline"><a class="top_line__link text-teal popup-with-move-anim" href="#modal">Обратный звонок</a>
                     </div>
                   </div>
                 </div>
@@ -1757,7 +1757,7 @@
                       <div class="text-teal">Для звонков по Москве</div>
                     </div>
                   </div>
-                  <div class="col-xl-6 col-md-4 col-12"><a class="footer__cont-btn btn btn-danger btn-block" href="#">Перезвонить  мне</a>
+                  <div class="col-xl-6 col-md-4 col-12"><a class="footer__cont-btn btn btn-danger btn-block popup-with-move-anim" href="#modal">Перезвонить  мне</a>
                   </div>
                 </div>
               </div>
@@ -1811,11 +1811,25 @@
       </footer>
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal">
         <form>
+          <div class="form-wrap__head-title h2 ttu strong gray-600 text-center t-sh">Заполните форму
+          </div>
+          <div class="form-wrap__input-wrap form-group">
+            <label><span class="form-wrap__title text-primary">Ваше имя</span><input class="form-wrap__input form-control" type="text"/>
+            </label>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group">
+            <label><span class="form-wrap__title text-primary">Ваш номер телефона</span><input class="form-wrap__input form-control" type="tel"/>
+            </label>
+          </div>
+          <!-- +e.input-wrap-->
+          <button class="form-wrap__btn btn btn-danger btn-block ttu"> Отправить
+          </button>
         </form>
       </div>
-      <div class="zoom-anim-dialog mfp-hide modal-win modal-form form-wrap text-center" id="thanks"><br/>
-        <h3>Заявка принята</h3><br/>
-        <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form text-center" id="thanks"> 
+        <div class="form-wrap__head-title h2 ttu strong gray-600 text-center t-sh">Спасибо за заявку
+        </div>
       </div>
       <!-- modal-->
     </div>
