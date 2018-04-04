@@ -297,7 +297,7 @@ var tabsId1 = '.mytabs1';
             });
 
         th.find('.tab__slider-small').slick({
-            slidesToShow: 9,
+            slidesToShow: 7,
             slidesToScroll: 1,
             dots: false,
             speed: 450,

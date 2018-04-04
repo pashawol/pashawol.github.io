@@ -20,7 +20,7 @@
         <div class="top_line">
           <div class="container">
             <div class="row">
-              <div class="col-lg-3 col-auto">
+              <div class="col-lg-3 col-sm-auto col-5">
                 <div class="top_line__logo"><img src="img/logo.png" alt=""/>
                 </div>
               </div>
@@ -30,12 +30,12 @@
                   <p><small>г. Кострома, ул. Северной правды, д.&nbsp;35	</small></p>
                 </div>
               </div>
-              <div class="col-auto">
+              <div class="col-sm-auto col-7">
                 <div class="top_line__cont">
-                  <div><a class="top_line__tel" href="tel:+74942501621 ">+7 (4942) 501-621 </a>
+                  <div class="d-none d-sm-block"><a class="top_line__tel" href="tel:+74942501621 ">+7 (4942) 501-621 </a>
                   </div>
                   <div><a class="top_line__tel" href="tel:+79103706670">+7 (910) 370-66-70</a><a class="top_line__link soc-block soc-block-viber" href="viber://chat?number=79103706670"><img class="res-i" src="img/i-vib.png" alt=""/></a><a class="top_line__link soc-block soc-block-whats" href="https://api.whatsapp.com/send?phone=79103706670"><img class="res-i" src="img/i-wa.png" alt=""/></a>
-                  </div><a class="top_line__btn btn btn-sm d-block btn-accent" href="#">Обратный звонок</a>
+                  </div><a class="top_line__btn btn btn-sm btn-accent d-none d-sm-block" href="#">Обратный звонок</a>
                 </div>
               </div>
             </div>
@@ -46,40 +46,11 @@
         <div class="header-block">
           <div class="container">
             <div class="header-block__wrap">
-              <div class="header-block__inner"> 
-                <div class="row">
-                  <div class="col-lg col-md-6">
-                    <div class="header-block__text">
-                      <h1>ВСТРОЕННЫЕ КУХНИ</h1>
-                      <div class="h3">ИЗ&nbsp;ЭКОЛОГИЧНОГО МАТЕРИАЛА ПО&nbsp;ЦЕНАМ ПРОИЗВОДИТЕЛЯ</div>
-                      <ul>
-                        <li>Индивидуальный дизайн </li>
-                        <li>Бесплатная доставка и сборка</li>
-                        <li>Гарантия на фурнитуру 25 лет</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-auto col-md-6">
-                    <div class="form-wrap">
-                      <form>
-                        <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-                        <div class="form-wrap__title text-center strong">
-                          <div class="ttu">Оставьте заявку и&nbsp;получите </div>расчет кухни в&nbsp;трех вариантах
-                        </div>
-                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" name="nametext" placeholder="Ваше имя"/>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" name="nametel" placeholder="Номер телефона" required="required"/>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__polite">
-                          <input type="checkbox" checked="checked" required="required"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
-                        </div>
-                        <button class="form-wrap__btn btn btn-lg btn-block btn-accent">Получить расчет <span class="d-none d-lg-inline">в трех вариантах</span>
-                        </button>
-                      </form>
-                    </div>
-                  </div>
+              <div class="header-block__inner">
+                <div class="header-block__thanks text-center">
+                  <h1 class="strong">Спасибо!</h1>
+                  <h3>Ваша заявка принята.</h3>
+                  <h3>Наш менеджер свяжется с Вами в течении 20 минут</h3><br/><a class="header-block__btn btn btn-lg btn-accent" href="/">На главную</a>
                 </div>
               </div>
             </div>
@@ -88,6 +59,26 @@
         <!-- end header-block-->
       </header>
       <!-- end HEADER.header-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="footer__small">
+                 ИП Тощакова Елена Вячеславовна<br/>ИНН 440125137790<br/>ОГРН 309440120300060
+              </div>
+            </div>
+            <div class="col-md-4"><a class="footer__btn btn btn-accent popup-with-move-anim" href="#modal">Заказать консультацию</a>
+            </div>
+            <div class="col-lg">
+              <div class="footer__small">
+                <div class="ttu">ЕСТЬ ВОПРОСЫ? ЗВОНИТЕ ПРЯМО СЕЙЧАС</div>
+                <div class="strong"> <a class="footer__tel tel" href="tel:+74942501621">+7 (4942) 501-621</a>, <a class="footer__tel tel" href="tel:+79101954565">+7 (910) 195-45-65 </a>
+                </div>Режим работы: Пн-Пт.  с 9 до 18, Сб с 10 до 16
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
       <div class="zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-big">
         <div class="title-wrap text-center">
           <div class="ttu h2 strong"> У ВАС РЕМОНТ?</div>
@@ -124,7 +115,7 @@
               </div>
             </div>
             <div class="form-wrap__polite">
-              <input type="checkbox" checked="checked" required="required"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
+              <input type="checkbox" checked="checked" required="required"/>Принимаю условия <a href="Polzovatelskoe_soglashenie.pdf" target="_blank">пользовтаельского соглашения	</a>
             </div>
           </form>
         </div>
@@ -147,7 +138,7 @@
           <button class="form-wrap__btn btn btn-lg btn-accent btn-block"> Узнать цену
           </button>
           <div class="form-wrap__polite">
-            <input type="checkbox" checked="checked" required="required"/>Принимаю условия <a href="#" target="_blank">пользовтаельского соглашения	</a>
+            <input type="checkbox" checked="checked" required="required"/>Принимаю условия <a href="Polzovatelskoe_soglashenie.pdf" target="_blank">пользовтаельского соглашения	</a>
           </div>
         </form>
       </div>
