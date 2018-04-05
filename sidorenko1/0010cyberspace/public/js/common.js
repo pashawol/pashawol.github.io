@@ -44,14 +44,16 @@
    
     return false;
   }); 
-    
+
     $(document).mouseup(function (e) {
     var container = $(".hidden-mnu.active");
-    if (container.has(e.target).length === 0 && $(".toggle-mnu-1.active").has(e.target).length === 0){
-      
-      $(".hidden-mnu").fadeOut("150").removeClass("active");
-      $(".toggle-mnu-1").removeClass("active");
-        }
+    if( $(".hidden-mnu").hasClass("active") == true) {
+      if (container.has(e.target).length === 0 && $(".toggle-mnu-1.active").has(e.target).length === 0){
+        
+        $(".hidden-mnu").fadeOut("150").removeClass("active");
+        $(".toggle-mnu-1").removeClass("active");
+          }
+    }
     });
 
 
