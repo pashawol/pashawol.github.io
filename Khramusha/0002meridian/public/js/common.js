@@ -1,5 +1,28 @@
  jQuery(document).ready(function($) { 
 
+
+  function heightses() {
+
+    // var w = $(window).width();
+   $(" .s-mach__slide .h5").height('auto').equalHeights();
+   //
+    
+ 
+  }
+
+  $(window).resize(function() {
+    heightses();
+   
+  });
+$( window ).on( "load", function() {
+ heightses();
+
+})
+
+ heightses();
+
+
+
   // для свг
   svg4everybody({});
   // Custom JS

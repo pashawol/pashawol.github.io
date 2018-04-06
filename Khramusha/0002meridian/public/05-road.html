@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <meta name="description" content="о чем страница">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <!-- Custom Browsers Color-->
+    <meta name="theme-color" content="#da4c26">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- start HEADER.header-->
+      <header class="header">
+        <!-- start .top_line-->
+        <div class="top_line text-white bg-orange">
+          <div class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-xl-5 col-gl-3 col-auto">
+                <div class="top_line__flags">
+                  <ul class="menu" id="menu-flag">
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu_item_wpglobus_menu_switch wpglobus-selector-link wpglobus-current-language menu-item-9999999999" id="menu-item-9999999999"><a href="#"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_ru">ru</span></a>
+                      <ul class="sub-menu">
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom sub_menu_item_wpglobus_menu_switch wpglobus-selector-link menu-item-wpglobus_menu_switch_en" id="menu-item-wpglobus_menu_switch_en"><a href="#"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_en">en</span></a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom sub_menu_item_wpglobus_menu_switch wpglobus-selector-link menu-item-wpglobus_menu_switch_mx" id="menu-item-wpglobus_menu_switch_mx"><a href="#"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_mx">mx  </span></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-auto d-none d-md-block">
+                <div class="top_line__addr">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col-auto">
+                      <svg class="icon icon-map ">
+                        <use xlink:href="img/svg/sprite.svg#map"></use>
+                      </svg>
+                    </div>
+                    <div class="col">вул. Грицюка, 13 с. Руде Село, Володарський р-н,  Київська обл. 09342</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto d-none d-sm-block">
+                <div class="top_line__time">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col-auto">
+                      <svg class="icon icon-clock ">
+                        <use xlink:href="img/svg/sprite.svg#clock"></use>
+                      </svg>
+                    </div>
+                    <div class="col">Пн - Пт  9:00 - 18:00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col"><a class="top_line__link d-block text-white" href="#" target="_blank">
+                <div class="row no-gutters align-items-center"> 
+                  <div class="col-auto">
+                    <svg class="icon icon-youtube ">
+                      <use xlink:href="img/svg/sprite.svg#youtube"></use>
+                    </svg>
+                  </div>
+                  <div class="col">Youtube</div>
+                </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end .top_line-->
+        <!-- start top-nav-->
+        <div class="top-nav bg-white">
+          <div class="container">
+            <div class="row align-items-center justify-content-between">
+              <div class="col-lg-auto col-sm col-auto">
+                <div class="logo-wrap"><a href="/"><img src="img/logo.svg" alt=""/></a>
+                </div>
+              </div>
+              <div class="col d-none d-lg-block">
+                <div class="nav-wrap">
+                  <ul>
+                    <li class="current-menu-item"><a href="#"> Головна</a></li>
+                    <li><a href="#"> Про команію</a></li>
+                    <li class="menu-item-has-children"><a href="#">Послуги </a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Компания</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Вопрос-ответ</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#"> Контакти</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-auto col-lg-3 col-sm col-auto">
+                <div class="top-nav__cont">
+                  <div class="row align-items-center"> 
+                    <div class="col-xl-auto"><a class="top-nav__tel h5" href="tel:38 (093) 345-45-54">
+                      <svg class="icon icon-phone ">
+                        <use xlink:href="img/svg/sprite.svg#phone"></use>
+                      </svg>38 (093) <span class="bolder">345-45-54</span></a>
+                    </div>
+                    <div class="col-xl-auto"><a class="top-nav__btn btn btn-outline-orange ttu popup-with-move-anim" href="#modal"> замовити дзвінок</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end top-nav-->
+        <div class="trop d-lg-none">
+          <div class="wrapp-hidden"> 
+            <div class="nav-wrap">
+              <ul>
+                <li class="current-menu-item"><a href="#"> Головна</a></li>
+                <li><a href="#"> Про команію</a></li>
+                <li class="menu-item-has-children"><a href="#">Послуги </a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Компания</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Вопрос-ответ</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                  </ul>
+                </li>
+                <li><a href="#"> Контакти</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!--  мобильное меню          
+        +mnu()
+        .text-right
+        -->
+        <!--  мобильное меню-->
+      </header>
+      <!-- end HEADER.header-->
+      <!-- start header-block-->
+      <div class="header-block"> 
+        <div class="header-block__block justify-content-center" style="background-image: url(img/head-03.jpg);"><img class="res-i" src="img/3.jpg" alt=""/>
+          <div class="container text-white">
+            <div class="header-block__text">
+              <div class="h3 strong">Послуги спецтехніки для будівництва</div>
+              <p>Надаємо послуги спецтехніки для дорожнього  будівництва та будівництва споруд.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end header-block-->
+      <!-- start s-head-form-->
+      <div class="s-head-form s-form text-white">
+        <div class="container">
+          <div class="form-wrap">
+            <form>
+              <div class="row justify-content-end">
+                <div class="col-lg col-md-6">
+                  <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Ваше ім’я"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="col-lg col-md-6">
+                  <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="tel" placeholder="Ваш телефон" required="required"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="col-lg col-md-6">
+                  <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="email" placeholder="Ваш E-mail"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="col-lg-auto col-md-6">
+                  <button class="form-wrap__btn btn btn-lg btn-warning" type="button">Дізнатися ціну
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end s-head-form-->
+      <!-- start s-work-->
+      <div class="s-work s-work-icon section">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2 class="strong">Цифри, які говорять самі за себе</h2>
+          </div>
+          <div class="row justify-content-center">
+                <div class="s-work__col col-xl-auto col-lg-4 col-6">
+                  <div class="sq-item">
+                    <div class="sq-item__sq">
+                    </div>
+                    <div class="sq-item__wrap">
+                      <div class="sq-item__img-wrap"><img class="ico res-i img-svg" src="img/calendar.svg" alt=""/>
+                      </div>
+                      <div class="sq-item__big h3 text-orange bolder">7
+                      </div>
+                      <div class="h5 text-gray">продуктивних років  на ринку</div>
+                    </div>
+                  </div>
+                  <!-- +b.sq-item-->
+                </div>
+                <!-- +e.col.col-xl-auto.col-lg-4.col-sm-6-->
+                <div class="s-work__col col-xl-auto col-lg-4 col-6">
+                  <div class="sq-item">
+                    <div class="sq-item__sq">
+                    </div>
+                    <div class="sq-item__wrap">
+                      <div class="sq-item__img-wrap"><img class="ico res-i img-svg" src="img/advantages-1.svg" alt=""/>
+                      </div>
+                      <div class="sq-item__big h3 text-orange bolder">1111
+                      </div>
+                      <div class="h5 text-gray">задоволених замовників</div>
+                    </div>
+                  </div>
+                  <!-- +b.sq-item-->
+                </div>
+                <!-- +e.col.col-xl-auto.col-lg-4.col-sm-6-->
+                <div class="s-work__col col-xl-auto col-lg-4 col-6">
+                  <div class="sq-item">
+                    <div class="sq-item__sq">
+                    </div>
+                    <div class="sq-item__wrap">
+                      <div class="sq-item__img-wrap"><img class="ico res-i img-svg" src="img/advantages-2.svg" alt=""/>
+                      </div>
+                      <div class="sq-item__big h3 text-orange bolder">56
+                      </div>
+                      <div class="h5 text-gray">кваліфікованих працівників в штаті</div>
+                    </div>
+                  </div>
+                  <!-- +b.sq-item-->
+                </div>
+                <!-- +e.col.col-xl-auto.col-lg-4.col-sm-6-->
+                <div class="s-work__col col-xl-auto col-lg-4 col-6">
+                  <div class="sq-item">
+                    <div class="sq-item__sq">
+                    </div>
+                    <div class="sq-item__wrap">
+                      <div class="sq-item__img-wrap"><img class="ico res-i img-svg" src="img/advantages-3.svg" alt=""/>
+                      </div>
+                      <div class="sq-item__big h3 text-orange bolder">268
+                      </div>
+                      <div class="h5 text-gray">одиниць власної  техніки</div>
+                    </div>
+                  </div>
+                  <!-- +b.sq-item-->
+                </div>
+                <!-- +e.col.col-xl-auto.col-lg-4.col-sm-6-->
+                <div class="s-work__col col-xl-auto col-lg-4 col-6">
+                  <div class="sq-item">
+                    <div class="sq-item__sq">
+                    </div>
+                    <div class="sq-item__wrap">
+                      <div class="sq-item__img-wrap"><img class="ico res-i img-svg" src="img/advantages-4.svg" alt=""/>
+                      </div>
+                      <div class="sq-item__big h3 text-orange bolder">180
+                      </div>
+                      <div class="h5 text-gray">успішно виконаних проектів</div>
+                    </div>
+                  </div>
+                  <!-- +b.sq-item-->
+                </div>
+                <!-- +e.col.col-xl-auto.col-lg-4.col-sm-6-->
+          </div>
+        </div>
+      </div>
+      <!-- end s-work-->
+      <!-- start s-advantages-gray-->
+      <div class="s-advantages-gray section bg-gray" id="s-advantages-gray">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2 class="strong">Види дорожніх робіт</h2>
+          </div>
+          <div class="row">
+                <div class="col-6">
+                  <div class="s-advantages-gray__item h6">
+                    <div class="row align-items-center">
+                      <div class="col-lg-auto">
+                        <div class="s-advantages-gray__img-wrap"><img class="ico res-i img-svg" src="img/flyover-bridge.svg" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col text-gray">
+                        <div class="s-advantages-gray__caption">
+                          <div class="h5 strong">Будівництво</div>
+                          <p>Будівництво сучасних автомобільних доріг,  розширення вулиць, створення розв’язок  і проїздів.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-md-6-->
+                <div class="col-6">
+                  <div class="s-advantages-gray__item h6">
+                    <div class="row align-items-center">
+                      <div class="col-lg-auto">
+                        <div class="s-advantages-gray__img-wrap"><img class="ico res-i img-svg" src="img/roller.svg" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col text-gray">
+                        <div class="s-advantages-gray__caption">
+                          <div class="h5 strong">Асфальтування</div>
+                          <p>Влаштування різних типів асфальтних полотен  на основі гарячих асфальтобетонних сумішей.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-md-6-->
+                <div class="col-6">
+                  <div class="s-advantages-gray__item h6">
+                    <div class="row align-items-center">
+                      <div class="col-lg-auto">
+                        <div class="s-advantages-gray__img-wrap"><img class="ico res-i img-svg" src="img/road-block.svg" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col text-gray">
+                        <div class="s-advantages-gray__caption">
+                          <div class="h5 strong">Ремонт</div>
+                          <p>Проведення ремонту дорожнього полотна та поточний ямковий ремонт.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-md-6-->
+                <div class="col-6">
+                  <div class="s-advantages-gray__item h6">
+                    <div class="row align-items-center">
+                      <div class="col-lg-auto">
+                        <div class="s-advantages-gray__img-wrap"><img class="ico res-i img-svg" src="img/work-tools.svg" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col text-gray">
+                        <div class="s-advantages-gray__caption">
+                          <div class="h5 strong">Розмітка</div>
+                          <p>Нанесення дорожньої розмітки високоякісними  матеріалами</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-md-6-->
+          </div>
+        </div>
+      </div>
+      <!-- end s-advantages-gray-->
+      <!-- start s-work-->
+      <div class="s-work section" id="s-work">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="text-center strong">Що ми зробили за 2017 рік?</h2>
+          </div>
+          <div class="row justify-content-center">
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                  <div class="sq-item">
+                    <div class="sq-item__sq">
+                    </div>
+                    <div class="sq-item__wrap">
+                      <div class="h5 text-gray">Відремонтували</div>
+                      <div class="sq-item__big h3 text-orange bolder">10 000 м<span class="sq-item__degree">2</span>
+                      </div>
+                      <div class="h5 text-gray">доріг</div>
+                    </div>
+                  </div>
+                  <!-- +b.sq-item-->
+                </div>
+                <!-- .col-3-->
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                  <div class="sq-item">
+                    <div class="sq-item__sq">
+                    </div>
+                    <div class="sq-item__wrap">
+                      <div class="h5 text-gray">Збудували</div>
+                      <div class="sq-item__big h3 text-orange bolder">20 км<span class="sq-item__degree"></span>
+                      </div>
+                      <div class="h5 text-gray">доріг</div>
+                    </div>
+                  </div>
+                  <!-- +b.sq-item-->
+                </div>
+                <!-- .col-3-->
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                  <div class="sq-item">
+                    <div class="sq-item__sq">
+                    </div>
+                    <div class="sq-item__wrap">
+                      <div class="h5 text-gray">Провели ремонт</div>
+                      <div class="sq-item__big h3 text-orange bolder">7 000 м<span class="sq-item__degree">2</span>
+                      </div>
+                      <div class="h5 text-gray">тротуарів</div>
+                    </div>
+                  </div>
+                  <!-- +b.sq-item-->
+                </div>
+                <!-- .col-3-->
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                  <div class="sq-item">
+                    <div class="sq-item__sq">
+                    </div>
+                    <div class="sq-item__wrap">
+                      <div class="h5 text-gray">Відремонтували</div>
+                      <div class="sq-item__big h3 text-orange bolder">20 000 м<span class="sq-item__degree">2</span>
+                      </div>
+                      <div class="h5 text-gray">доріг повітряно- струменевим методом</div>
+                    </div>
+                  </div>
+                  <!-- +b.sq-item-->
+                </div>
+                <!-- .col-3-->
+          </div>
+        </div>
+      </div>
+      <!-- end s-work-->
+      <!-- start s-mach-carusel-->
+      <div class="s-mach section text-white bg-orange text-center">
+        <div class="container">
+          <div class="section-title">
+            <h2 class="strong">У своїй роботі ми застосовуємо техніку кращих світових виробників </h2>
+          </div>
+          <div class="s-mach__slider gal">
+            <div class="s-mach__slide">
+              <div class="s-mach__item">
+                <div class="h5">Strassmayr</div><a class="s-mach__img-wrap d-block img-bg" href="img/mach-1.jpg"><img data-lazy="img/mach-1.jpg" alt=""/></a>
+                <div class="s-mach__caption h6">Установка здійснює повітряно-струменевий ремонт дорожнього полотна. Усі етапи ремонту виконуються однією машиною. .
+                </div>
+              </div>
+            </div>
+            <!-- +e.slide-->
+            <div class="s-mach__slide">
+              <div class="s-mach__item">
+                <div class="h5">Vogele</div><a class="s-mach__img-wrap d-block img-bg" href="img/mach-2.jpg"><img data-lazy="img/mach-2.jpg" alt=""/></a>
+                <div class="s-mach__caption h6">Асфальтоукладач використовується як для класичного дорожнього будівництва, так і для будівництва велосипедних доріжок та тротуарів. 
+                </div>
+              </div>
+            </div>
+            <!-- +e.slide-->
+            <div class="s-mach__slide">
+              <div class="s-mach__item">
+                <div class="h5">HAMM</div><a class="s-mach__img-wrap d-block img-bg" href="img/mach-3.jpg"><img data-lazy="img/mach-3.jpg" alt=""/></a>
+                <div class="s-mach__caption h6">Каток забезпечує швидке ущільнення ґрунту або асфальту з меншою кількістю проходів.
+                </div>
+              </div>
+            </div>
+            <!-- +e.slide-->
+            <div class="s-mach__slide">
+              <div class="s-mach__item">
+                <div class="h5">Bagela</div><a class="s-mach__img-wrap d-block img-bg" href="img/mach-3.jpg"><img data-lazy="img/mach-3.jpg" alt=""/></a>
+                <div class="s-mach__caption h6">Мобільна установка, що переробляє фрезерований асфальт в готову асфальтову суміш безпосередньо на місці укладання дорожнього полотна.
+                </div>
+              </div>
+            </div>
+            <!-- +e.slide-->
+            <div class="s-mach__slide">
+              <div class="s-mach__item">
+                <div class="h5">Bagela</div><a class="s-mach__img-wrap d-block img-bg" href="img/mach-3.jpg"><img data-lazy="img/mach-3.jpg" alt=""/></a>
+                <div class="s-mach__caption h6">Мобільна установка, що переробляє фрезерований асфальт в готову асфальтову суміш безпосередньо на місці укладання дорожнього полотна.
+                </div>
+              </div>
+            </div>
+            <!-- +e.slide-->
+          </div>
+        </div>
+      </div>
+      <!-- end s-mach-carusel-->
+      <!-- start s-about-->
+      <div class="s-about section" id="s-about">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2 class="strong">Технологія укладання асфальтобетону</h2>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-lg-6 text-center"><img class="res-i" src="img/road-img.jpg" alt=""/></div>
+            <div class="col h6">
+              <!--  тут стилями все перевернуто-->
+              <ul>
+                <li><span>Дорожнє «корито», що формується за рахунок зняття  та ущільнення верхнього шару ґрунту</span></li>
+                <li><span>Шар піску або піщано-гранітної суміші</span></li>
+                <li><span>Шар щебеню крупної фракції  або ПЩС для додання  покриттю міцності</span></li>
+                <li><span>Шар щебеню дрібної фракції для мінімізації пустот</span></li>
+                <li><span>Асфальтобетон, що розподіляється рівномірним одним  або декількома шарами та ущільнюється</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-about-->
+      <!-- start s-calc-->
+      <div class="s-calc section bg-gray" id="s-calc">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2 class="strong">Розрахунок вартості</h2>
+          </div>
+          <div class="form-wrap">
+            <form>
+              <div class="row">
+                <div class="col-6">
+                    <div class="form-wrap__item">
+                      <div class="form-wrap__title-calc h5 strong text-orange">I Асфальтування
+                      </div>
+                      <div class="form-wrap__inner">
+                          <label class="custom-input"><input class="custom-input__input" type="radio" name="acf"/><span class="custom-input__lab"></span> <span class="h6">Асфальтування верхнього шару із дрібнозернистого  асфальту 3-5 см</span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="radio" name="acf"/><span class="custom-input__lab"></span> <span class="h6">Асфальтування верхнього шару із крупнозернистого  асфальту 5-6 см</span>
+                          </label>
+                      </div>
+                    </div>
+                    <!-- +e.item-->
+                    <div class="form-wrap__item">
+                      <div class="form-wrap__title-calc h5 strong text-orange">II Основа
+                      </div>
+                      <div class="form-wrap__inner">
+                        <div class="h6">Піщана основа</div>
+                        <div class="d-inline-block">
+                            <label class="custom-input"><input class="custom-input__input" type="radio" name="osn"/><span class="custom-input__lab"></span> <span class="h6">5-10 см</span>
+                            </label>
+                        </div>
+                        <div class="d-inline-block">
+                            <label class="custom-input"><input class="custom-input__input" type="radio" name="osn"/><span class="custom-input__lab"></span> <span class="h6">15 см</span>
+                            </label>
+                        </div>
+                      </div>
+                      <div class="form-wrap__inner">
+                        <div class="h6">Щебенева основа (фракція 20*40)</div>
+                        <div class="d-inline-block">
+                            <label class="custom-input"><input class="custom-input__input" type="radio" name="osn-ch"/><span class="custom-input__lab"></span> <span class="h6">12 см</span>
+                            </label>
+                        </div>
+                        <div class="d-inline-block">
+                            <label class="custom-input"><input class="custom-input__input" type="radio" name="osn-ch"/><span class="custom-input__lab"></span> <span class="h6">15 см</span>
+                            </label>
+                        </div>
+                      </div>
+                      <div class="form-wrap__inner">
+                          <label class="custom-input"><input class="custom-input__input" type="radio" name="dop"/><span class="custom-input__lab"></span> <span class="h6">Двошарова щебенева основа (фракція 40*70+20*40)(20см) </span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="radio" name="dop"/><span class="custom-input__lab"></span> <span class="h6">Влаштування основи із суміші 0-40 (5-10см) </span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="radio" name="dop"/><span class="custom-input__lab"></span> <span class="h6">Влаштування основи із відсіву (5-10см) </span>
+                          </label>
+                      </div>
+                    </div>
+                    <!-- +e.item-->
+                </div>
+                <div class="col-6">
+                    <div class="form-wrap__item">
+                      <div class="form-wrap__title-calc h5 strong text-orange">III Земляні роботи
+                      </div>
+                      <div class="form-wrap__inner">
+                          <label class="custom-input"><input class="custom-input__input" type="radio" name="zeml"/><span class="custom-input__lab"></span> <span class="h6">Планування грунту (легке профілювання поверхні без  вивезення грунту і його ущільнення) (до 10см)</span>
+                          </label>
+                      </div>
+                      <div class="form-wrap__inner">
+                        <div class="h6">Влаштування “корита” - віиїмка, планування та ущільнення грунту</div>
+                        <div class="d-inline-block">
+                            <label class="custom-input"><input class="custom-input__input" type="radio" name="zeml-sm "/><span class="custom-input__lab"></span> <span class="h6">20 см </span>
+                            </label>
+                        </div>
+                        <div class="d-inline-block">
+                            <label class="custom-input"><input class="custom-input__input" type="radio" name="zeml-sm "/><span class="custom-input__lab"></span> <span class="h6">30 см </span>
+                            </label>
+                        </div>
+                      </div>
+                      <div class="form-wrap__inner">
+                          <label class="custom-input"><input class="custom-input__input" type="radio" name="dem"/><span class="custom-input__lab"></span> <span class="h6">Демонтаж існуючого асфальтного покриття  з вивезенням сміття (5см)</span>
+                          </label>
+                      </div>
+                    </div>
+                    <!-- +e.item-->
+                    <div class="form-wrap__item">
+                      <div class="form-wrap__title-calc h5 strong text-orange">IV Ямковий ремонт
+                      </div>
+                      <div class="form-wrap__inner">
+                          <label class="custom-input"><input class="custom-input__input" type="radio" name="yam"/><span class="custom-input__lab"></span> <span class="h6">Ремонт дороги (нарізка швів, демонтаж і вивезення старого  а/б покриття, поливання швів бітумом, асфальтування) (5см)</span>
+                          </label>
+                      </div>
+                    </div>
+                    <!-- +e.item-->
+                    <div class="form-wrap__item">
+                      <div class="form-wrap__title-calc h5 strong text-orange">Коментар
+                      </div>
+                      <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control"></textarea>
+                      </div>
+                    </div>
+                    <!-- +e.item-->
+                </div>
+              </div>
+              <div class="form-wrap__foot">
+                <div class="row justify-content-end">
+                  <div class="col-lg col-md-6">
+                    <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Ваше ім’я"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg col-md-6">
+                    <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="tel" placeholder="Ваш телефон" required="required"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg col-md-6">
+                    <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="email" placeholder="Ваш E-mail"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-auto col-md-6">
+                    <button class="form-wrap__btn btn btn-lg btn-warning" type="button">Отримати розрахунок
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end s-calc-->
+      <!-- start s-rew-->
+      <div class="s-rew section" id="s-rew">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2 class="strong">Нам важлива думка кожного клієнта</h2>
+          </div>
+          <div class="carusel-js gal">
+            <div class="carusel-js__slide">
+              <div class="carusel-js__item"><a class="carusel-js__img-wrap d-block img-bg" href="img/rew-03-1.jpg"><img data-lazy="img/rew-03-1.jpg" alt=""/></a>
+              </div>
+            </div>
+            <div class="carusel-js__slide">
+              <div class="carusel-js__item"><a class="carusel-js__img-wrap d-block img-bg" href="img/rew-03-2.jpg"><img data-lazy="img/rew-03-2.jpg" alt=""/></a>
+              </div>
+            </div>
+            <div class="carusel-js__slide">
+              <div class="carusel-js__item"><a class="carusel-js__img-wrap d-block img-bg" href="img/rew-03-3.jpg"><img data-lazy="img/rew-03-3.jpg" alt=""/></a>
+              </div>
+            </div>
+            <div class="carusel-js__slide">
+              <div class="carusel-js__item"><a class="carusel-js__img-wrap d-block img-bg" href="img/rew-03-1.jpg"><img data-lazy="img/rew-03-1.jpg" alt=""/></a>
+              </div>
+            </div>
+            <div class="carusel-js__slide">
+              <div class="carusel-js__item"><a class="carusel-js__img-wrap d-block img-bg" href="img/rew-03-2.jpg"><img data-lazy="img/rew-03-2.jpg" alt=""/></a>
+              </div>
+            </div>
+            <div class="carusel-js__slide">
+              <div class="carusel-js__item"><a class="carusel-js__img-wrap d-block img-bg" href="img/rew-03-3.jpg"><img data-lazy="img/rew-03-3.jpg" alt=""/></a>
+              </div>
+            </div>
+            <div class="carusel-js__slide">
+              <div class="carusel-js__item"><a class="carusel-js__img-wrap d-block img-bg" href="img/rew-03-1.jpg"><img data-lazy="img/rew-03-1.jpg" alt=""/></a>
+              </div>
+            </div>
+            <div class="carusel-js__slide">
+              <div class="carusel-js__item"><a class="carusel-js__img-wrap d-block img-bg" href="img/rew-03-2.jpg"><img data-lazy="img/rew-03-2.jpg" alt=""/></a>
+              </div>
+            </div>
+            <div class="carusel-js__slide">
+              <div class="carusel-js__item"><a class="carusel-js__img-wrap d-block img-bg" href="img/rew-03-3.jpg"><img data-lazy="img/rew-03-3.jpg" alt=""/></a>
+              </div>
+            </div>
+          </div>
+          <div class="text-slider">
+            <div class="text-slider__slide">
+              <div class="text-slider__item bg-gray">
+                <div class="h5 text-orange">Ива Иванов</div>
+                <div class="text-slider__small">Название компании
+                </div>
+                <div class="h6">Замовляли у вас укладання асфальту. Ви зарекомендували себе як компанія з високим рівнем професіоналізму. Із завданням впоралися вчасно і якісно. Дякуємо.		</div>
+              </div>
+            </div>
+            <div class="text-slider__slide">
+              <div class="text-slider__item bg-gray">
+                <div class="h5 text-orange">Ива Иванов</div>
+                <div class="text-slider__small">Название компании
+                </div>
+                <div class="h6">Замовляли у вас укладання асфальту. Ви зарекомендували себе як компанія з високим рівнем професіоналізму. Із завданням впоралися вчасно і якісно. Дякуємо.		</div>
+              </div>
+            </div>
+            <div class="text-slider__slide">
+              <div class="text-slider__item bg-gray">
+                <div class="h5 text-orange">Ива Иванов</div>
+                <div class="text-slider__small">Название компании
+                </div>
+                <div class="h6">Замовляли у вас укладання асфальту. Ви зарекомендували себе як компанія з високим рівнем професіоналізму. Із завданням впоралися вчасно і якісно. Дякуємо.		</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-rew-->
+      <!-- start s-form-->
+      <div class="s-form section" id="s-form" style="background-image: url(img/gray-bg.jpg);">
+        <div class="container">
+          <div class="section-title text-center"> 
+            <h2 class="strong">Цікавить ціна, є запитання, бажаєте зробити замовлення? </h2>
+            <div class="h55">Менеджер зв’яжеться з Вами протягом 9 хвилин</div>
+          </div>
+          <div class="form-wrap">
+            <form>
+              <div class="row justify-content-center">
+                <div class="col-md">
+                  <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Ваше ім’я"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="col-md">
+                  <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="tel" placeholder="Ваш телефон" required="required"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="col-lg">
+                  <button class="form-wrap__btn btn btn-lg btn-warning" type="button">Залишити заявку
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end s-form-->
+      <!-- start s-contact-->
+      <section class="s-contact text-white bg-orange">
+        <div class="container"> 
+          <div class="row justify-content-between">
+            <div class="col-md-auto">
+              <div class="s-contact__left">
+                <div class="logo-wrap"><a href="/"><img src="img/logo-wh.svg" alt=""/></a>
+                </div>
+                <div class="s-contact__addr">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col-auto">
+                      <svg class="icon icon-map ">
+                        <use xlink:href="img/svg/sprite.svg#map"></use>
+                      </svg>
+                    </div>
+                    <div class="col">вул. Грицюка, 13 с. Руде Село, Володарський р-н,  Київська обл. 09342</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-auto">
+              <div class="s-contact__right-block">
+                <div class="row justify-content-between">
+                  <div class="col-auto"><a class="s-contact__soc d-block text-white" href="#" target="_blank">
+                    <div class="row no-gutters align-items-center"> 
+                      <div class="col-auto">
+                        <svg class="icon icon-youtube ">
+                          <use xlink:href="img/svg/sprite.svg#youtube"></use>
+                        </svg>
+                      </div>
+                      <div class="col">Youtube</div>
+                    </div></a>
+                  </div>
+                  <div class="col-auto">
+                    <div class="s-contact__cont-block">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <svg class="icon icon-phone ">
+                            <use xlink:href="img/svg/sprite.svg#phone"></use>
+                          </svg>
+                        </div>
+                        <div class="col"><a class="s-contact__tel h55 text-white" href="tel:38 (093) 345-45-54">38 (093)   345-45-54</a>
+                        </div>
+                      </div>
+                      <div class="text-right"><a class="s-contact__link text-warning ttu popup-with-move-anim" href="#modal">замовити дзвінок</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-wrap">
+                  <form>
+                    <div class="form-wrap__small">Підпишіться на новини
+                    </div>
+                    <div class="row"> 
+                      <div class="col-md">
+                        <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="email" placeholder="Ваша пошта" required="required"/>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="col-md-auto">
+                        <button class="form-wrap__btn btn btn-lg btn-warning" type="button">Підписатись
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end s-contact-->
+      <footer class="footer bg-orange2 text-white text-center">
+        <div class="conainer">© 2018 Меридіан</div>
+      </footer>
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal">
+        <form>
+          <div class="text-center">
+            <div class="h4 strong"> Просто залиште заявку </div>
+            <div class="h6">Протягом 9 хвилин з Вами зв’яжиться наш менеджер  і проконсультує Вас  </div>
+          </div>
+          <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Ваше ім’я"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group form-group-lg"> <input class="form-wrap__input form-control form-control-lg" type="tel" placeholder="Ваш телефон" required="required"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <button class="form-wrap__btn btn btn-lg btn-warning" type="button">Залишити заявку
+          </button>
+        </form>
+      </div>
+      <div class="zoom-anim-dialog mfp-hide modal-win modal-form form-wrap text-center" id="thanks"><br/>
+        <h3>Заявка принята</h3><br/>
+        <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
+      </div>
+      <!-- modal-->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
