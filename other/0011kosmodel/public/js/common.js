@@ -5,21 +5,26 @@
   // Custom JS
   
 
-  $(".dropdown .top-nav__link, .drop-inner .drop__link, .drop-sub-inner .drop-sub__link").click(function(e){
+  $(".dropdown .top-nav__link, .drop-inner .drop__link, .drop-sub-inner .drop-sub__link, .drop-sub-inner > a").click(function(e){
     e.preventDefault();
     // e.prevenDefault()
   })  
  
  // var togli =  '.dropdown, .drop-inner, .drop-sub-inner';
- $(".dropdown > a , .drop-inner > a , .drop-sub-inner > a ").each(function(){
+ $('.trop, .aside').find(".dropdown > a , .drop-inner > a , .drop-sub-inner > a ").each(function(){
 
   var th = $(this);
   th.click(function(){ 
     
     th.toggleClass('active').next().slideToggle();
+    th.parent().toggleClass('active');
   })
  })
+ 
 
+$(".btn-toggle-js").click(function(){
+  $(this).toggleClass("active").next().slideToggle();
+})
       // галерея
   $(".gal").each(function(){
     
@@ -140,22 +145,42 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 var   arrl2 = (' <div class="l">'+ icon),
       arrr2 =(' <div class="r">'+ icon);  
  // карусель
- $('.s-team__slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: false,
-    speed: 450,
-    infinite: true,
-    loop: true,  
-    arrows: true, 
-    // centerMode: true,
-    // focusOnSelect: true , 
-     // variableWidth: true,
-     prevArrow: arrr2,
-      nextArrow: arrl2,
+ // $('.slider-js').slick({
+ //    slidesToShow: 3,
+ //    slidesToScroll: 1,
+ //    dots: false,
+ //    speed: 450,
+ //    infinite: true,
+ //    loop: true,  
+ //    arrows: true, 
+ //    // centerMode: true,
+ //    // focusOnSelect: true , 
+ //     // variableWidth: true,
+ //     prevArrow: arrr2,
+ //      nextArrow: arrl2,
+ //    });
+
+// слайдер в шапке
+ var swiper = new Swiper('.header-block__slider', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
     });
-
-
+// слайдер каталога
+ var swiper2 = new Swiper('.slider-js', {
+      // slidesPerView: 5,
+      watchOverflow: true,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      freeMode: true, 
+       freeModeMomentum: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      
+    });
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -173,7 +198,11 @@ var   arrl2 = (' <div class="l">'+ icon),
     mainClass: 'my-mfp-zoom-in'
   });
  
- 
+ $(".s-filter__item-js ").each(function(i){
+  var th = $(this);
+  th.attr("href", '#modal-filter' + i)
+    .next().attr("id", 'modal-filter' + i);
+ })
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
