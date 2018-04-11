@@ -161,6 +161,38 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
       
     });
 
+var titles = [];
+    $('.s-product__slider-js .swiper-slide').each(function(i) {
+      titles.push($(this).data('name'))
+    });
+
+
+var mySwiper3 = new Swiper('.s-product__slider-js', {
+  // Optional parameters
+   pagination: {
+        el: '.swiper-pagination.row',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<div class="tab__link  ' + className + '"> <div class="dots-inner"> <img class="res-i" src="' + titles[index] + '" /></div></div>';
+        },
+      },
+
+});
+
+// слайдер цвета в карточке
+ var swiper4 = new Swiper('.color-slider', {
+      // slidesPerView: 5,
+      watchOverflow: true,
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      freeMode: true, 
+       freeModeMomentum: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      
+    });
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -199,20 +231,3 @@ $('.custom-select-js').each(function(){
  
 });
 
-var titles = [];
-    $('.s-product__slider-js .swiper-slide').each(function(i) {
-      titles.push($(this).data('name'))
-    });
-
-
-var mySwiper3 = new Swiper('.s-product__slider-js', {
-  // Optional parameters
-   pagination: {
-        el: '.swiper-pagination.row',
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<div class="tab__link  ' + className + '"> <div class="dots-inner"> <img class="res-i" src="' + titles[index] + '" /></div></div>';
-        },
-      },
-
-});
