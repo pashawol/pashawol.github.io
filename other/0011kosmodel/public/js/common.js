@@ -160,6 +160,7 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
       },
       
     });
+
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -196,4 +197,22 @@ $('.custom-select-js').each(function(){
   // кастомный инпут файл 
  
  
+});
+
+var titles = [];
+    $('.s-product__slider-js .swiper-slide').each(function(i) {
+      titles.push($(this).data('name'))
+    });
+
+
+var mySwiper3 = new Swiper('.s-product__slider-js', {
+  // Optional parameters
+   pagination: {
+        el: '.swiper-pagination.row',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<div class="tab__link  ' + className + '"> <div class="dots-inner"> <img class="res-i" src="' + titles[index] + '" /></div></div>';
+        },
+      },
+
 });
