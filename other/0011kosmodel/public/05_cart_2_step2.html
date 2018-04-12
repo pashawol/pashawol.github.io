@@ -519,7 +519,7 @@
               <div class="col-auto d-lg-none"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a></div>
               <div class="top-nav__col col d-none d-lg-block">
                 <ul class="top-nav__list d-flex">
-                  <li class="top-nav__item dropdown active"><a class="top-nav__link top-nav__link-active" href="#">Товарные категории</a>
+                  <li class="top-nav__item dropdown"><a class="top-nav__link" href="#">Товарные категории</a>
                     <div class="drop bg-blue2">
                       <div class="container">
                         <ul class="drop__list d-flex">
@@ -969,183 +969,294 @@
         <!-- end top-nav-->
       </header>
       <!-- end HEADER.header-->
-      <!-- start header-block-->
-      <div class="header-block text-center">
-        <div class="container">
-          <div class="row">
-            <div class="header-block__col col-md-8">
-              <div class="header-block__slider swiper-container">
-                <div class="swiper-wrapper"><a class="header-block__banner header-block__banner-big d-block swiper-slide" href="#"><img class="res-i" src="img/head-img-1.jpg" alt=""/></a><a class="header-block__banner header-block__banner-big d-block swiper-slide" href="#"><img class="res-i" src="img/head-img-1.jpg" alt=""/></a><a class="header-block__banner header-block__banner-big d-block swiper-slide" href="#"><img class="res-i" src="img/head-img-1.jpg" alt=""/></a>
-                </div>
-                <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-                  <svg class="icon icon-chevron-right ">
-                    <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-                  </svg>
-                </div>
-                <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-                  <svg class="icon icon-chevron-left ">
-                    <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-                  </svg>
-                </div>
-              </div>
+      <div class="container">
+        <nav class="breadcrumb h6"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Корзина</a><span class="breadcrumb-item active">Ваш заказ</span>
+        </nav>
+      </div>
+      <!-- start s-card-head-->
+      <div class="s-card-head">
+        <div class="container"> 
+          <div class="row no-gutters">
+            <div class="col-md-6"><a class="s-card-head__btn btn btn-blue-05 d-block" href="#">1. ВАШ ЗАКАЗ</a>
             </div>
-            <div class="header-block__col col"><a class="header-block__banner header-block__banner-small d-block" href="#"><span class="header-block__img-wrap"><img class="res-i" src="img/3-layers.jpg" alt=""/></span></a>
+            <div class="col-md-6"><a class="s-card-head__btn btn btn-blue-05 d-block active" href="#">2. ДОСТАВКА И ОПЛАТА</a>
             </div>
           </div>
         </div>
       </div>
-      <!-- end header-block-->
-      <!-- start s-stock-->
-      <div class="s-stock section">
-        <div class="container">
-          <h2 class="h5 strong">Скидки <a class="title-link small-link" href="#">Все скидки</a>
-          </h2>
-          <div class="slider-js swiper-container">
-            <div class="swiper-wrapper">
-              <div class="prod-item-wrap swiper-slide">
-                <div class="prod-item d-flex"> <a class="prod-item__img-wrap text-center d-block" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                  <div class="prod-item__caption">
-                    <div class="prod-item__title text-center">Биодерма Себиум очищающий мусс без помпы 200 мл
-                    </div>
-                    <div class="row justify-content-around align-items-center text-center">
-                      <div class="col-md-auto col-sm-12 col-auto"><a class="small-link" href="#">Vegetable beauty</a></div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <strike>560 Р </strike>
-                      </div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <div class="text-success strong">478 Р</div>
-                      </div>
-                    </div>
-                  </div><a class="prod-item__btn btn btn-block btn-primary" href="#">КУПИТЬ</a>
-                </div>
-                <!-- +b.prod-item-->
+      <!-- end s-card-head-->
+      <!-- start s-card-ship-paym-->
+      <div class="s-card-ship-paym section" id="s-card-ship-paym">
+        <div class="container"> 
+          <form>
+            <div class="s-card-ship-paym__block">
+              <div class="s-card-ship-paym__title strong h5">Выбор доставки
               </div>
-              <div class="prod-item-wrap swiper-slide">
-                <div class="prod-item d-flex"> <a class="prod-item__img-wrap text-center d-block" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                  <div class="prod-item__caption">
-                    <div class="prod-item__title text-center">Нюкс Дневной крем Продижьез для комбинированной кожи 40мл
-                    </div>
-                    <div class="row justify-content-around align-items-center text-center">
-                      <div class="col-md-auto col-sm-12 col-auto"><a class="small-link" href="#">Vegetable beauty</a></div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <strike>560 Р </strike>
-                      </div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <div class="text-success strong">478 Р</div>
-                      </div>
-                    </div>
-                  </div><a class="prod-item__btn btn btn-block btn-primary" href="#">КУПИТЬ</a>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="form-group"> 
+                    <select class="custom-select-js" name="custom-select" id="ragion-01">
+                      <option value="">Амурская область</option>
+                    </select>
+                  </div>
                 </div>
-                <!-- +b.prod-item-->
+                <div class="col-lg-4">
+                  <div class="form-group"> 
+                    <select class="custom-select-js" name="custom-select2" id="ragion-02">
+                      <option value="">Другие города Амурской области</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="form-group"> 
+                    <select class="custom-select-js" name="custom-select3" id="ragion-03">
+                      <option value="">Почтовая доставка в другие города Амурской области по предоплате</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                      <option value="">Москва (за МКАД) и Московскоая область</option>
+                    </select>
+                  </div>
+                </div>
               </div>
-              <div class="prod-item-wrap swiper-slide">
-                <div class="prod-item d-flex"> <a class="prod-item__img-wrap text-center d-block" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                  <div class="prod-item__caption">
-                    <div class="prod-item__title text-center">Ля Рош Позе Эфаклар К+ эмульсия для жирной кожи 30 мл
-                    </div>
-                    <div class="row justify-content-around align-items-center text-center">
-                      <div class="col-md-auto col-sm-12 col-auto"><a class="small-link" href="#">Vegetable beauty</a></div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <strike>560 Р </strike>
-                      </div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <div class="text-success strong">478 Р</div>
-                      </div>
-                    </div>
-                  </div><a class="prod-item__btn btn btn-block btn-primary" href="#">КУПИТЬ</a>
-                </div>
-                <!-- +b.prod-item-->
+              <div class="s-card-ship-paym__text-block bg-beige">
+                <p>Тип доставки: Почта России</p>
+                <p>Тип оплаты: Предоплата на сайте</p>
+                <p>Обращаем ваше внимание!</p>
+                <p>Все заказы оформленные почтой России выдаются только по предъявлению удостоверения личности клиента.<br/>Данные должны быть заполнены согласно удостоверению личности получателя.
+                  Изменение данных получателя или адреса доставки, после подтверждения заказа с оператором, не возможна!
+                </p>
               </div>
             </div>
-            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-              <svg class="icon icon-chevron-right ">
-                <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-              </svg>
+            <div class="s-card-ship-paym__block">
+              <div class="s-card-ship-paym__title strong h5">Выбор оплаты
+              </div>
+              <div>
+                <label class="custom-input"><input class="custom-input__input" type="radio" name="pay1"/><span class="custom-input__lab"></span><span>оплата при получении заказа </span>
+                </label>
+              </div>
+              <div>
+                <label class="custom-input"><input class="custom-input__input" type="radio" name="pay1"/><span class="custom-input__lab"></span><span>оплата онлайн</span>
+                </label>
+              </div>
+              <p>Предоплаченные заказы выдаются на пунктах самовывоза только по предъявлению удостоверения личности клиента.</p>
+              <div class="radio-img">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="pay2"/><span class="custom-input__lab"></span><img class="res-i" src="img/pay-1.png" alt=""/>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="pay2"/><span class="custom-input__lab"></span><img class="res-i" src="img/pay-2.png" alt=""/>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="pay2"/><span class="custom-input__lab"></span><img class="res-i" src="img/pay-3.png" alt=""/>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="pay2"/><span class="custom-input__lab"></span><img class="res-i" src="img/pay-4.png" alt=""/>
+                    </label>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-              <svg class="icon icon-chevron-left ">
-                <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-              </svg>
+            <div class="s-card-ship-paym__block">
+              <div class="s-card-ship-paym__title strong h5">Ваши данные
+              </div>
+              <div class="row">
+                <div class="col-lg-8">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="s-card-ship-paym__input-wrap form-group">
+                        <label for="input-name"><em>Имя</em></label><input class="s-card-ship-paym__input form-control" id="input-name" type="text" placeholder="Ваше имя"/>
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                    <div class="col-md-6">
+                      <div class="s-card-ship-paym__input-wrap form-group">
+                        <label for="input-sname"><em>Фамилия</em></label><input class="s-card-ship-paym__input form-control" id="input-sname" type="text" placeholder="Введите фамилию"/>
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                    <div class="col-md-6">
+                      <div class="s-card-ship-paym__input-wrap form-group">
+                        <label for="input-tel"><em>Телефон</em></label><input class="s-card-ship-paym__input form-control" id="input-tel" type="tel" placeholder="+7(___)___-__-__"/>
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                    <div class="col-md-6">
+                      <div class="s-card-ship-paym__input-wrap form-group">
+                        <label for="input-email"><em>Email</em></label><input class="s-card-ship-paym__input form-control" id="input-email" type="email" placeholder="example@domain.tt"/>
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                  </div><br/>
+                  <label class="custom-input"><input class="custom-input__input" type="radio" name="pay3"/><span class="custom-input__lab"></span><span>Согласен с СМС уведомлениями о движении заказа</span>
+                  </label>
+                  <label class="custom-input"><input class="custom-input__input" type="radio" name="pay4"/><span class="custom-input__lab"></span><span>Я подтверждаю свою дееспособность, даю согласие на обработку своих персональных данных в соответствии с Условиями</span>
+                  </label>
+                  <label class="custom-input"><input class="custom-input__input" type="radio" name="pay5"/><span class="custom-input__lab"></span><span>Подписаться на акции и спецпредложения ЦЗК</span>
+                  </label>
+                </div>
+                <div class="col-lg-4">
+                  <button class="s-card-ship-paym__btn-top btn btn-success btn-md btn-block">Авторизоваться / Отмена
+                  </button>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-6">
+                      <div class="s-card-ship-paym__input-wrap form-group">
+                        <label for="input-email"><em>Email</em></label><input class="s-card-ship-paym__input form-control" id="input-email" type="email" placeholder="example@domain.tt"/>
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                    <div class="col-lg-12 col-md-6">
+                      <div class="s-card-ship-paym__input-wrap form-group">
+                        <label for="input-email"><em>Email</em></label><input class="s-card-ship-paym__input form-control" id="input-email" type="email" placeholder="example@domain.tt"/>
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                  </div>
+                  <button class="s-card-ship-paym__btn btn btn-success btn-md btn-block">Войти
+                  </button>
+                </div>
+              </div>
+              <div class="s-card-ship-paym__addr">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-index"><em>Индекс</em></label><input class="s-card-ship-paym__input form-control" id="input-index" type="number" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-ragion"><em>Регион</em></label><input class="s-card-ship-paym__input form-control" id="input-ragion" type="text" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-raion"><em>Район</em></label><input class="s-card-ship-paym__input form-control" id="input-raion" type="text" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-city"><em>Город / Нас. пункт</em></label><input class="s-card-ship-paym__input form-control" id="input-city" type="text" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-street"><em>Улица</em></label><input class="s-card-ship-paym__input form-control" id="input-street" type="text" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-house"><em>Дом</em></label><input class="s-card-ship-paym__input form-control" id="input-house" type="text" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-house-corp"><em>Корпус / Строение</em></label><input class="s-card-ship-paym__input form-control" id="input-house-corp" type="text" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-house-q"><em>Квартира / Офис</em></label><input class="s-card-ship-paym__input form-control" id="input-house-q" type="text" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-house-pod"><em>Подъезд</em></label><input class="s-card-ship-paym__input form-control" id="input-house-pod" type="text" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-domophone"><em>Домофон</em></label><input class="s-card-ship-paym__input form-control" id="input-domophone" type="text" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="s-card-ship-paym__input-wrap form-group">
+                      <label for="input-floor"><em>Этаж</em></label><input class="s-card-ship-paym__input form-control" id="input-floor" type="number" placeholder=" "/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+              </div>
+              <div class="s-card-ship-paym__input-wrap form-group">
+                <label for="input-text"><em> Комментарий к заказу</em></label><textarea class="s-card-ship-paym__input form-control" id="input-comment"></textarea>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="card-foot">
+                <div class="card-foot__total h5 strong">
+                  <div class="row">
+                    <div class="col-auto">
+                      <div class="row">
+                        <div class="col-auto">Сумма заказа </div>
+                        <div class="col-auto text-success">4 5671 Р </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="row">
+                        <div class="col-auto">Доставка</div>
+                        <div class="col-auto text-success">190 Р </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><a class="card-foot__btn btn btn-primary btn-md btn-block" href="#">ОФОРМИТЬ ЗАКАЗ</a>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-      <!-- end s-stock-->
-      <!-- start s-event-->
-      <div class="s-event section">
-        <div class="container">
-          <h2 class="h5 strong">Ближайшие события<a class="title-link small-link" href="#">Полный список </a></h2>
-          <div class="slider-js swiper-container">
-            <div class="swiper-wrapper"> 
-                    <div class="prod-item-wrap swiper-slide"><a class="s-event__item d-flex" href="#"><span class="s-event__img-wrap text-center d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/></span><span class="s-event__caption row">
-                      <div class="col-auto"><span class="s-event__date bg-success text-white text-center">
-                        <div class="h5 strong">17</div>марта</span>
-                      </div>
-                      <div class="col"><span class="s-event__title bg-blue-l">День красоты с BIODERMA</span>
-                      </div></span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-                    <div class="prod-item-wrap swiper-slide"><a class="s-event__item d-flex" href="#"><span class="s-event__img-wrap text-center d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/></span><span class="s-event__caption row">
-                      <div class="col-auto"><span class="s-event__date bg-success text-white text-center">
-                        <div class="h5 strong">17</div>марта</span>
-                      </div>
-                      <div class="col"><span class="s-event__title bg-blue-l">Тестирование средств по уходу за кожей</span>
-                      </div></span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-                    <div class="prod-item-wrap swiper-slide"><a class="s-event__item d-flex" href="#"><span class="s-event__img-wrap text-center d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/></span><span class="s-event__caption row">
-                      <div class="col-auto"><span class="s-event__date bg-success text-white text-center">
-                        <div class="h5 strong">17</div>марта</span>
-                      </div>
-                      <div class="col"><span class="s-event__title bg-blue-l">День красоты с BIODERMA (уже прошёл) </span>
-                      </div></span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-              <svg class="icon icon-chevron-right ">
-                <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-              </svg>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-              <svg class="icon icon-chevron-left ">
-                <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end s-event-->
-      <!-- start s-artical-->
-      <div class="s-artical section" id="s-artical">
-        <div class="container">
-          <h2 class="h5 strong">Новости<a class="title-link small-link" href="#">Читать все новости </a></h2>
-          <div class="slider-js swiper-container">
-            <div class="swiper-wrapper"> 
-                    <div class="prod-item-wrap swiper-slide"><a class="s-artical__item d-flex" href="#"><span class="s-artical__img-wrap d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/><span class="s-artical__date bg-success text-white">13.12.2018</span></span><span class="s-artical__caption bg-blue-l">В Екатеринбурге открылась новая точка Космедэль</span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-                    <div class="prod-item-wrap swiper-slide"><a class="s-artical__item d-flex" href="#"><span class="s-artical__img-wrap d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/><span class="s-artical__date bg-success text-white">13.12.2018</span></span><span class="s-artical__caption bg-blue-l">Космедэль теперь международный сервис!</span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-                    <div class="prod-item-wrap swiper-slide"><a class="s-artical__item d-flex" href="#"><span class="s-artical__img-wrap d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/><span class="s-artical__date bg-success text-white">13.12.2018</span></span><span class="s-artical__caption bg-blue-l">Новое направление – салоны красоты Космеделия.</span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-              <svg class="icon icon-chevron-right ">
-                <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-              </svg>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-              <svg class="icon icon-chevron-left ">
-                <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end s-artical-->
+      <!-- end s-card-ship-paym-->
       <footer class="footer">
         <div class="container">
           <div class="row">

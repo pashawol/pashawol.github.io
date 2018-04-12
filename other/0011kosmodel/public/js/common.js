@@ -221,7 +221,7 @@ var mySwiper3 = new Swiper('.s-product__slider-js', {
     .next().attr("id", 'modal-filter' + i);
  })
  // маска на инпут
-   // $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
+   $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
   
    
@@ -239,10 +239,20 @@ $('.custom-select-js').each(function(){
         uploadMultiple: true,
      });
 
-
+    // показать / скрыть блок  написания отзыва
     $(".s-rew__btn-toggle").click(function(){
       $(this).toggleClass("active").next().slideToggle();
     })
+    // показать блок друго подарка
+     $(".s-card-prod__btn-toggle").click(function(){
+      $(this).toggleClass("active")
+      $(".toggle-block-js").slideToggle().toggleClass("active");
+
+      swiper2.update();
+
+    })
+  
+
 });
  
  

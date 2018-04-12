@@ -519,7 +519,7 @@
               <div class="col-auto d-lg-none"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a></div>
               <div class="top-nav__col col d-none d-lg-block">
                 <ul class="top-nav__list d-flex">
-                  <li class="top-nav__item dropdown active"><a class="top-nav__link top-nav__link-active" href="#">Товарные категории</a>
+                  <li class="top-nav__item dropdown"><a class="top-nav__link" href="#">Товарные категории</a>
                     <div class="drop bg-blue2">
                       <div class="container">
                         <ul class="drop__list d-flex">
@@ -969,183 +969,535 @@
         <!-- end top-nav-->
       </header>
       <!-- end HEADER.header-->
-      <!-- start header-block-->
-      <div class="header-block text-center">
-        <div class="container">
-          <div class="row">
-            <div class="header-block__col col-md-8">
-              <div class="header-block__slider swiper-container">
-                <div class="swiper-wrapper"><a class="header-block__banner header-block__banner-big d-block swiper-slide" href="#"><img class="res-i" src="img/head-img-1.jpg" alt=""/></a><a class="header-block__banner header-block__banner-big d-block swiper-slide" href="#"><img class="res-i" src="img/head-img-1.jpg" alt=""/></a><a class="header-block__banner header-block__banner-big d-block swiper-slide" href="#"><img class="res-i" src="img/head-img-1.jpg" alt=""/></a>
-                </div>
-                <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-                  <svg class="icon icon-chevron-right ">
-                    <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-                  </svg>
-                </div>
-                <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-                  <svg class="icon icon-chevron-left ">
-                    <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-                  </svg>
-                </div>
-              </div>
+      <div class="container">
+        <nav class="breadcrumb h6"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Корзина</a><span class="breadcrumb-item active">Ваш заказ</span>
+        </nav>
+      </div>
+      <!-- start s-card-head-->
+      <div class="s-card-head">
+        <div class="container"> 
+          <div class="row no-gutters">
+            <div class="col-md-6"><a class="s-card-head__btn btn btn-blue-05 d-block active" href="#">1. ВАШ ЗАКАЗ</a>
             </div>
-            <div class="header-block__col col"><a class="header-block__banner header-block__banner-small d-block" href="#"><span class="header-block__img-wrap"><img class="res-i" src="img/3-layers.jpg" alt=""/></span></a>
+            <div class="col-md-6"><a class="s-card-head__btn btn btn-blue-05 d-block" href="#">2. ДОСТАВКА И ОПЛАТА</a>
             </div>
           </div>
         </div>
       </div>
-      <!-- end header-block-->
-      <!-- start s-stock-->
-      <div class="s-stock section">
+      <!-- end s-card-head-->
+      <!-- start s-card-prod-->
+      <div class="s-card-prod">
         <div class="container">
-          <h2 class="h5 strong">Скидки <a class="title-link small-link" href="#">Все скидки</a>
-          </h2>
-          <div class="slider-js swiper-container">
-            <div class="swiper-wrapper">
-              <div class="prod-item-wrap swiper-slide">
-                <div class="prod-item d-flex"> <a class="prod-item__img-wrap text-center d-block" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                  <div class="prod-item__caption">
-                    <div class="prod-item__title text-center">Биодерма Себиум очищающий мусс без помпы 200 мл
+          <div class="s-card-prod__inner bg-white">
+            <div class="s-card-prod__body">
+              <table class="w-100">
+                <tr>
+                  <th>
+                    <div class="s-card-prod__td-inner">Продукт  
                     </div>
-                    <div class="row justify-content-around align-items-center text-center">
-                      <div class="col-md-auto col-sm-12 col-auto"><a class="small-link" href="#">Vegetable beauty</a></div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <strike>560 Р </strike>
-                      </div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <div class="text-success strong">478 Р</div>
+                  </th>
+                  <th>Цена</th>
+                  <th>Кол-во</th>
+                  <th>Сумма</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="th d-lg-none">
+                      <div class="s-card-prod__td-inner">
+                        <div class="h6">Продукт</div>
                       </div>
                     </div>
-                  </div><a class="prod-item__btn btn btn-block btn-primary" href="#">КУПИТЬ</a>
+                    <div class="s-card-prod__td-inner"><a class="s-card-prod__prod d-block" href="#">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="s-card-prod__img-wrap"><img class="res-i" src="img/prod-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="s-card-prod__text">
+                            <div class="strong"> Inthenso Крем для тела </div>Глубоко питает, укрепляет и подтягивает кожу
+                          </div>
+                        </div>
+                      </div></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none">Цена:
+                      </div>
+                      <div class="s-card-prod__price"> 
+                        <div class="strong text-success">245 Р </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none"> Кол-во 
+                      </div>
+                      <div class="add-block">
+                        <div class="input-group input-group">
+                          <div class="input-group-prepend">
+                            <button class="btn btn-outline-pinkish-grey btn-md" type="button">-</button>
+                          </div>
+                          <input class="form-control text-center" type="text" value="2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-pinkish-grey btn-md" type="button">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none"> Сумма
+                      </div>
+                      <div class="s-card-prod__sum">
+                        <div class="strong text-success">245 Р </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner text-center justify-content-center">
+                      <button class="s-card-prod__del" type="button"><span class="d-lg-none">Удалить </span>
+                        <div class="icon">×</div>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="th d-lg-none">
+                      <div class="s-card-prod__td-inner">
+                        <div class="h6">Продукт</div>
+                      </div>
+                    </div>
+                    <div class="s-card-prod__td-inner"><a class="s-card-prod__prod d-block" href="#">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="s-card-prod__img-wrap"><img class="res-i" src="img/prod-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="s-card-prod__text">
+                            <div class="strong"> Inthenso Крем для тела </div>Глубоко питает, укрепляет и подтягивает кожу
+                          </div>
+                        </div>
+                      </div></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none">Цена:
+                      </div>
+                      <div class="s-card-prod__price"> 
+                        <div class="strong text-success">245 Р </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none"> Кол-во 
+                      </div>
+                      <div class="add-block">
+                        <div class="input-group input-group">
+                          <div class="input-group-prepend">
+                            <button class="btn btn-outline-pinkish-grey btn-md" type="button">-</button>
+                          </div>
+                          <input class="form-control text-center" type="text" value="2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-pinkish-grey btn-md" type="button">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none"> Сумма
+                      </div>
+                      <div class="s-card-prod__sum">
+                        <div class="strong text-success">245 Р </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner text-center justify-content-center">
+                      <button class="s-card-prod__del" type="button"><span class="d-lg-none">Удалить </span>
+                        <div class="icon">×</div>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="th d-lg-none">
+                      <div class="s-card-prod__td-inner">
+                        <div class="h6">Продукт</div>
+                      </div>
+                    </div>
+                    <div class="s-card-prod__td-inner"><a class="s-card-prod__prod d-block" href="#">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="s-card-prod__img-wrap"><img class="res-i" src="img/prod-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="s-card-prod__text">
+                            <div class="strong"> Inthenso Крем для тела </div>Глубоко питает, укрепляет и подтягивает кожу
+                          </div>
+                        </div>
+                      </div></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none">Цена:
+                      </div>
+                      <div class="s-card-prod__price"> 
+                        <div class="strong text-success">245 Р </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none"> Кол-во 
+                      </div>
+                      <div class="add-block">
+                        <div class="input-group input-group">
+                          <div class="input-group-prepend">
+                            <button class="btn btn-outline-pinkish-grey btn-md" type="button">-</button>
+                          </div>
+                          <input class="form-control text-center" type="text" value="2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-pinkish-grey btn-md" type="button">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none"> Сумма
+                      </div>
+                      <div class="s-card-prod__sum">
+                        <div class="strong text-success">245 Р </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner text-center justify-content-center">
+                      <button class="s-card-prod__del" type="button"><span class="d-lg-none">Удалить </span>
+                        <div class="icon">×</div>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="th d-lg-none">
+                      <div class="s-card-prod__td-inner">
+                        <div class="h6">Продукт</div>
+                      </div>
+                    </div>
+                    <div class="s-card-prod__td-inner"><a class="s-card-prod__prod d-block" href="#">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="s-card-prod__img-wrap"><img class="res-i" src="img/prod-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="s-card-prod__text">
+                            <div class="strong"> Inthenso Крем для тела </div>Глубоко питает, укрепляет и подтягивает кожу
+                          </div>
+                        </div>
+                      </div></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none">Цена:
+                      </div>
+                      <div class="s-card-prod__price"> 
+                        <div class="strong text-success">245 Р </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none"> Кол-во 
+                      </div>
+                      <div class="add-block">
+                        <div class="input-group input-group">
+                          <div class="input-group-prepend">
+                            <button class="btn btn-outline-pinkish-grey btn-md" type="button">-</button>
+                          </div>
+                          <input class="form-control text-center" type="text" value="2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-pinkish-grey btn-md" type="button">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none"> Сумма
+                      </div>
+                      <div class="s-card-prod__sum">
+                        <div class="strong text-success">245 Р </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner text-center justify-content-center">
+                      <button class="s-card-prod__del" type="button"><span class="d-lg-none">Удалить </span>
+                        <div class="icon">×</div>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="th d-lg-none">
+                      <div class="s-card-prod__td-inner">
+                        <div class="h6">Продукт</div>
+                      </div>
+                    </div>
+                    <div class="s-card-prod__td-inner"><a class="s-card-prod__prod d-block" href="#">
+                      <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                          <div class="s-card-prod__img-wrap"><img class="res-i" src="img/prod-1.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="s-card-prod__text">
+                            <div class="strong"> Inthenso Крем для тела </div>Глубоко питает, укрепляет и подтягивает кожу
+                          </div>
+                        </div>
+                      </div></a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none">Цена:
+                      </div>
+                      <div class="s-card-prod__price"> 
+                        <div class="strong text-success">245 Р </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none"> Кол-во 
+                      </div>
+                      <div class="add-block">
+                        <div class="input-group input-group">
+                          <div class="input-group-prepend">
+                            <button class="btn btn-outline-pinkish-grey btn-md" type="button">-</button>
+                          </div>
+                          <input class="form-control text-center" type="text" value="2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-pinkish-grey btn-md" type="button">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner">
+                      <div class="s-card-prod__title-td h6 d-lg-none"> Сумма
+                      </div>
+                      <div class="s-card-prod__sum">
+                        <div class="strong text-success">245 Р </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="s-card-prod__td-inner text-center justify-content-center">
+                      <button class="s-card-prod__del" type="button"><span class="d-lg-none">Удалить </span>
+                        <div class="icon">×</div>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <div class="s-card-prod__gift-block">
+                <div class="h5 strong text-primary">Ваш подарок</div>
+                <table class="w-100">
+                  <tr>
+                    <td>
+                      <div class="th d-lg-none">
+                        <div class="s-card-prod__td-inner">
+                          <div class="h6">Продукт</div>
+                        </div>
+                      </div>
+                      <div class="s-card-prod__td-inner"><a class="s-card-prod__prod d-block" href="#">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col-auto">
+                            <div class="s-card-prod__img-wrap"><img class="res-i" src="img/prod-1.jpg" alt=""/>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <div class="s-card-prod__text">
+                              <div class="strong"> Inthenso Крем для тела </div>Глубоко питает, укрепляет и подтягивает кожу
+                            </div>
+                          </div>
+                        </div></a>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="s-card-prod__td-inner">
+                        <div class="s-card-prod__title-td h6 d-lg-none">Цена:
+                        </div>
+                        <div class="s-card-prod__price"> 
+                          <div class="strong text-success">БЕСПЛАТНО</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="s-card-prod__td-inner">
+                        <div class="s-card-prod__title-td h6 d-lg-none"> Кол-во 
+                        </div>
+                        <div class="add-block">
+                          <div class="input-group input-group">
+                            <div class="input-group-prepend">
+                              <button class="btn btn-outline-pinkish-grey btn-md" type="button">-</button>
+                            </div>
+                            <input class="form-control text-center" type="text" value="2"/>
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-pinkish-grey btn-md" type="button">+</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="s-card-prod__td-inner">
+                        <div class="s-card-prod__title-td h6 d-lg-none"> Сумма
+                        </div>
+                        <div class="s-card-prod__sum">
+                          <div class="strong text-success">0 Р </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="s-card-prod__td-inner text-center justify-content-center">
+                        <button class="s-card-prod__del" type="button"><span class="d-lg-none">Удалить </span>
+                          <div class="icon">×</div>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                <button class="s-card-prod__btn-toggle btn btn-link" type="button">ВЫБРАТЬ ДРУГОЙ ПОДАРОК
+                </button>
+                <div class="toggle-block-js">
+                  <div class="slider-js swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="prod-item-wrap swiper-slide">
+                        <div class="prod-item d-flex"> <a class="prod-item__img-wrap text-center d-block" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                          <div class="prod-item__caption">
+                            <div class="prod-item__title text-center">Биодерма Себиум очищающий мусс без помпы 200 мл
+                            </div>
+                            <button class="prod-item__btn btn btn-lg btn-blue-05 ttu">Выбрать
+                            </button>
+                          </div>
+                        </div>
+                        <!-- +b.prod-item-->
+                      </div>
+                      <div class="prod-item-wrap swiper-slide">
+                        <div class="prod-item d-flex"> <a class="prod-item__img-wrap text-center d-block" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                          <div class="prod-item__caption">
+                            <div class="prod-item__title text-center">Биодерма Себиум очищающий мусс без помпы 200 мл
+                            </div>
+                            <button class="prod-item__btn btn btn-lg btn-blue-05 ttu">Выбрать
+                            </button>
+                          </div>
+                        </div>
+                        <!-- +b.prod-item-->
+                      </div>
+                      <div class="prod-item-wrap swiper-slide">
+                        <div class="prod-item d-flex"> <a class="prod-item__img-wrap text-center d-block" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                          <div class="prod-item__caption">
+                            <div class="prod-item__title text-center">Биодерма Себиум очищающий мусс без помпы 200 мл
+                            </div>
+                            <button class="prod-item__btn btn btn-lg btn-blue-05 ttu">Выбрать
+                            </button>
+                          </div>
+                        </div>
+                        <!-- +b.prod-item-->
+                      </div>
+                    </div>
+                    <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+                      <svg class="icon icon-chevron-right ">
+                        <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+                      <svg class="icon icon-chevron-left ">
+                        <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-                <!-- +b.prod-item-->
               </div>
-              <div class="prod-item-wrap swiper-slide">
-                <div class="prod-item d-flex"> <a class="prod-item__img-wrap text-center d-block" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                  <div class="prod-item__caption">
-                    <div class="prod-item__title text-center">Нюкс Дневной крем Продижьез для комбинированной кожи 40мл
+              <div class="form-wrap"> 
+                <div class="form-wrap__row">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <label class="h5 strong" for="input-promo">Промокод</label>
                     </div>
-                    <div class="row justify-content-around align-items-center text-center">
-                      <div class="col-md-auto col-sm-12 col-auto"><a class="small-link" href="#">Vegetable beauty</a></div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <strike>560 Р </strike>
+                    <div class="col-lg-4 col-md-6">
+                      <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" id="input-promo" type="text" placeholder="Код"/>
                       </div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <div class="text-success strong">478 Р</div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                    <div class="form-wrap__btn-col col-lg-4 col-md-6 order-last order-md-0">
+                      <div>
+                        <button class="form-wrap__btn btn btn-block btn-md btn-success d-none">ПРИМЕНИТЬ ПРОМОКОД
+                        </button>
+                      </div>
+                      <div>
+                        <button class="form-wrap__btn btn btn-block btn-md btn-blue-05">ОТМЕНИТЬ ПРОМОКОД
+                        </button>
                       </div>
                     </div>
-                  </div><a class="prod-item__btn btn btn-block btn-primary" href="#">КУПИТЬ</a>
+                    <div class="col-12 text-bott">
+                      <p>Скидка 30% на товары марок VICHY и LA ROCHE-POSAY</p>
+                    </div>
+                  </div>
                 </div>
-                <!-- +b.prod-item-->
-              </div>
-              <div class="prod-item-wrap swiper-slide">
-                <div class="prod-item d-flex"> <a class="prod-item__img-wrap text-center d-block" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                  <div class="prod-item__caption">
-                    <div class="prod-item__title text-center">Ля Рош Позе Эфаклар К+ эмульсия для жирной кожи 30 мл
+                <div class="form-wrap__row">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <label class="h5 strong" for="input-card">Оплата подарочной картой</label>
                     </div>
-                    <div class="row justify-content-around align-items-center text-center">
-                      <div class="col-md-auto col-sm-12 col-auto"><a class="small-link" href="#">Vegetable beauty</a></div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <strike>560 Р </strike>
+                    <div class="col-lg-4 col-md-6">
+                      <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" id="input-card" type="text" placeholder="Код подарочной карты"/>
                       </div>
-                      <div class="col-md-auto col-sm-12 col-auto">
-                        <div class="text-success strong">478 Р</div>
-                      </div>
+                      <!-- +e.input-wrap-->
                     </div>
-                  </div><a class="prod-item__btn btn btn-block btn-primary" href="#">КУПИТЬ</a>
+                    <div class="form-wrap__btn-col col-lg-4 col-md-6">
+                      <button class="form-wrap__btn btn btn-success btn-block btn-md">ПРИМЕНИТЬ
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <!-- +b.prod-item-->
               </div>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-              <svg class="icon icon-chevron-right ">
-                <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-              </svg>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-              <svg class="icon icon-chevron-left ">
-                <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-              </svg>
+              <div class="card-foot">
+                <div class="card-foot__total h5 strong">
+                  <div class="row">
+                    <div class="col-auto">Сумма заказа без учета доставки</div>
+                    <div class="col-auto text-success">4 5671 Р </div>
+                  </div>
+                </div><a class="card-foot__btn btn btn-primary btn-md btn-block" href="#">ПРОДОЛЖИТЬ</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- end s-stock-->
-      <!-- start s-event-->
-      <div class="s-event section">
-        <div class="container">
-          <h2 class="h5 strong">Ближайшие события<a class="title-link small-link" href="#">Полный список </a></h2>
-          <div class="slider-js swiper-container">
-            <div class="swiper-wrapper"> 
-                    <div class="prod-item-wrap swiper-slide"><a class="s-event__item d-flex" href="#"><span class="s-event__img-wrap text-center d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/></span><span class="s-event__caption row">
-                      <div class="col-auto"><span class="s-event__date bg-success text-white text-center">
-                        <div class="h5 strong">17</div>марта</span>
-                      </div>
-                      <div class="col"><span class="s-event__title bg-blue-l">День красоты с BIODERMA</span>
-                      </div></span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-                    <div class="prod-item-wrap swiper-slide"><a class="s-event__item d-flex" href="#"><span class="s-event__img-wrap text-center d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/></span><span class="s-event__caption row">
-                      <div class="col-auto"><span class="s-event__date bg-success text-white text-center">
-                        <div class="h5 strong">17</div>марта</span>
-                      </div>
-                      <div class="col"><span class="s-event__title bg-blue-l">Тестирование средств по уходу за кожей</span>
-                      </div></span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-                    <div class="prod-item-wrap swiper-slide"><a class="s-event__item d-flex" href="#"><span class="s-event__img-wrap text-center d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/></span><span class="s-event__caption row">
-                      <div class="col-auto"><span class="s-event__date bg-success text-white text-center">
-                        <div class="h5 strong">17</div>марта</span>
-                      </div>
-                      <div class="col"><span class="s-event__title bg-blue-l">День красоты с BIODERMA (уже прошёл) </span>
-                      </div></span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-              <svg class="icon icon-chevron-right ">
-                <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-              </svg>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-              <svg class="icon icon-chevron-left ">
-                <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end s-event-->
-      <!-- start s-artical-->
-      <div class="s-artical section" id="s-artical">
-        <div class="container">
-          <h2 class="h5 strong">Новости<a class="title-link small-link" href="#">Читать все новости </a></h2>
-          <div class="slider-js swiper-container">
-            <div class="swiper-wrapper"> 
-                    <div class="prod-item-wrap swiper-slide"><a class="s-artical__item d-flex" href="#"><span class="s-artical__img-wrap d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/><span class="s-artical__date bg-success text-white">13.12.2018</span></span><span class="s-artical__caption bg-blue-l">В Екатеринбурге открылась новая точка Космедэль</span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-                    <div class="prod-item-wrap swiper-slide"><a class="s-artical__item d-flex" href="#"><span class="s-artical__img-wrap d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/><span class="s-artical__date bg-success text-white">13.12.2018</span></span><span class="s-artical__caption bg-blue-l">Космедэль теперь международный сервис!</span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-                    <div class="prod-item-wrap swiper-slide"><a class="s-artical__item d-flex" href="#"><span class="s-artical__img-wrap d-block img-bg" style="background-image: url(img/ivent.jpg);"><img class="res-i" src="img/ivent.jpg" alt=""/><span class="s-artical__date bg-success text-white">13.12.2018</span></span><span class="s-artical__caption bg-blue-l">Новое направление – салоны красоты Космеделия.</span></a>
-                    </div>
-                    <!-- +e.col.col-4-->
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-              <svg class="icon icon-chevron-right ">
-                <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-              </svg>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-              <svg class="icon icon-chevron-left ">
-                <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end s-artical-->
+      <!-- end s-card-prod-->
       <footer class="footer">
         <div class="container">
           <div class="row">
