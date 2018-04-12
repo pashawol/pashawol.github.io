@@ -182,10 +182,15 @@ var mySwiper3 = new Swiper('.s-product__slider-js', {
 // слайдер цвета в карточке
  var swiper4 = new Swiper('.color-slider', {
       // slidesPerView: 5,
-      watchOverflow: true,
       slidesPerView: 'auto',
+      watchOverflow: true,
       spaceBetween: 0,
       freeMode: true, 
+       // centeredSlides: true, 
+      loop: true,
+      loopFillGroupWithBlank: true,
+      touchRatio: 0.2,
+      slideToClickedSlide: true,
        freeModeMomentum: true,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -227,7 +232,18 @@ $('.custom-select-js').each(function(){
   $(this).select2();
 })
   // кастомный инпут файл 
- 
- 
+    $(".dropzone").dropzone({ 
+    url: "/file/post",
+    addRemoveLinks: true,
+        // acceptedFiles: 'image/*',
+        uploadMultiple: true,
+     });
+
+
+    $(".s-rew__btn-toggle").click(function(){
+      $(this).toggleClass("active").next().slideToggle();
+    })
 });
+ 
+ 
 

@@ -337,4 +337,9 @@ $(".filter-aside__item  ").each(function(){
     moreLink: '<a href="#" class="more accent">Показать больше</a>',
 lessLink: '<a href="#" class="more accent">Скрыть</a>'
 });
+
+
+ $(".basket-fly__btn-toggle").click(function(){
+  $(this).toggleClass("active").parents(".basket-fly").toggleClass("active")
+ })
 });
