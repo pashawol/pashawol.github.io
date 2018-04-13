@@ -255,7 +255,18 @@ $('.custom-select-js').each(function(){
 
     })
   
+// accordion
+  $(".showhide").click(function() {
 
+
+     $(".showhide-all").slideUp().parent().removeClass("active"), $(".showhide").removeClass("active"), 
+     $(this).next("div").filter(function() {
+            return "block" == $(this).css("display") }).slideUp().parent().removeClass("active"),
+             $(this).next("div").filter(function() {
+            return "none" == $(this).css("display") }).slideDown().prev("div").addClass("active").parent().addClass("active")})
+  
+
+ 
 });
  
  
