@@ -235,7 +235,7 @@ $('.custom-select-js').each(function(){
     $(".dropzone").dropzone({ 
     url: "/file/post",
     addRemoveLinks: true,
-        // acceptedFiles: 'image/*',
+        acceptedFiles: 'image/*',
         uploadMultiple: true,
      });
 
