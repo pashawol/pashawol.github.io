@@ -1,5 +1,6 @@
  jQuery(document).ready(function($) { 
 
+
   // для свг
   svg4everybody({});
   // Custom JS
@@ -67,6 +68,8 @@ $(".btn-toggle-js").click(function(){
   function heightses() {
 
     var w = $(window).width();
+     // прижать футер к низу
+     $(".main-wrapper").css("padding-bottom", $("footer").height() + 60)
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
    //
     
