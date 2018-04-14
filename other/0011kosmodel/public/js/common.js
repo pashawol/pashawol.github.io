@@ -266,6 +266,43 @@ $('.custom-select-js').each(function(){
             return "none" == $(this).css("display") }).slideDown().prev("div").addClass("active").parent().addClass("active")})
   
 
+
+
+    if ($("div").is("#map")){
+
+
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [55.727896069024254,37.44885049999991],
+            zoom: 12,
+            behaviors: ['drag'],
+              
+                // controls: ["zoomControl", "fullscreenControl"]
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+   
+        myPlacemark = new ymaps.Placemark([55.727896069024254,37.44885049999991], {
+            hintContent: 'Воронеж, ул. Уличная, 32, корп. 1',
+            balloonContent: 'Воронеж, ул. Уличная, 32, корп. 1 '
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            // iconLayout: 'default#image',
+            // // Своё изображение иконки метки.
+            // iconImageHref: $("#map").data("img"),
+            // // Размеры метки.
+            // iconImageSize: [37, 48],
+            // // Смещение левого верхнего угла иконки относительно
+            // // её "ножки" (точки привязки).
+            // iconImageOffset: [-19, -24]
+        }) 
+
+    myMap.geoObjects
+        .add(myPlacemark) 
+});
+ }
  
 });
  
