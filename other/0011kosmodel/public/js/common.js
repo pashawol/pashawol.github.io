@@ -68,6 +68,29 @@ $(".btn-toggle-js").click(function(){
   function heightses() {
 
     var w = $(window).width();
+    var wh = $(window).height();
+
+
+    // условие при котором выпадающее меню открывается  или вниз или вверх!))
+    $(".top-nav .drop-sub-inner").hover(function(){
+      $(this).find("  .drop-sub-inner-inner").each(function(){
+      // $("  .drop-sub-inner-inner").each(function(){
+        let th =$(this),
+            thp = th.parents(".top-nav  .drop-sub");
+        if ( ($(th).offset().top + th.height()) >= wh || ($(th).offset().top + th.height()) >=(thp.offset().top + thp.height())){
+          th.css({
+            top: "auto",
+            bottom: "0",
+          }) 
+        }
+        else{
+           th.css({
+            top: "0",
+            bottom: "auto",
+          }) 
+        } 
+      })
+    })
      // прижать футер к низу
      $(".main-wrapper").css("padding-bottom", $("footer").height() + 60)
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
@@ -105,10 +128,6 @@ $(".btn-toggle-js").click(function(){
     heightses();
    
   });
-$( window ).on( "load", function() {
- heightses();
-
-})
 
  heightses();
 
