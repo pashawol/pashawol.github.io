@@ -1,5 +1,6 @@
  $(document).ready(function(){
- 
+  // для свг
+  svg4everybody({});
   $(".fancy").fancybox({
     width : 650,
     height  : 380,

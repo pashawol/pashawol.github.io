@@ -2,7 +2,15 @@
 
   // Custom JS
   
+$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+       
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
 
+        fixedContentPos: false
+    });
   var icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252.15 477.17"><title>arr-l</title><g id="" data-name="Слой 2"><g id="Capa_1" data-name="Capa 1"><path d="M32.68,238.58l215.5-215.5A13.51,13.51,0,0,0,229.08,4L4,229.08a13.46,13.46,0,0,0,0,19.1l225.1,225a13.59,13.59,0,0,0,9.5,4,13.17,13.17,0,0,0,9.5-4,13.46,13.46,0,0,0,0-19.1Z"/></g></g></svg>';
 
 var   arrl2 = (' <div class="l">'+ icon),
