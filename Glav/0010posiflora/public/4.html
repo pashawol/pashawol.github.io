@@ -17,18 +17,74 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper">
-      <div id="topmenu">
-        <ul>
-          <li><a href="/"><img src="img/icof.png"/></a></li>
-          <li><a class="scroll-l" href="#albums">Возможности</a></li>
-          <li><a class="scroll-l" href="#price">Оборудование</a></li>
-          <li><a class="scroll-l" href="#prices">Тарифы</a></li>
-          <li><a class="reg fancy" id="notuse" href="#send">Попробовать бесплатно </a></li>
-          <li>
-            <div class="phoneb"><img src="img/tel.png" width="16" height="16"/><a class="tel" href="tel:88003012209">8 (800) 301-22-09</a><br/><span class="poros">звонок по россии бесплатный</span></div>
-          </li>
-        </ul>
+    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-2 d-xl-none" href="#"><span></span></a>
+      <div class="trop hidden-mnu d-xl-none"><a class="toggle-mnu toggle-mnu-2" href="#"><span></span></a>
+        <div class="wrapp-hidden">
+          <ul> 
+            <li><a class="scroll-l" href="#albums">Возможности</a></li>
+            <li><a class="scroll-l" href="#price">Оборудование</a></li>
+            <li><a class="scroll-l" href="#prices">Тарифы </a></li>
+            <li><a href="#">Поддержка</a></li>
+            <li><a href="#">Онлайн-касса </a></li>
+            <li class="menu-item-has-children"><a href="#"> О нас    </a>
+              <ul class="sub-menu drop">
+                <li><a class="drop__link" href="#">  Лицензиат</a></li>
+                <li><a class="drop__link" href="#">Миссия компании </a></li>
+                <li><a class="drop__link" href="#"> Вакансии</a></li>
+                <li><a class="drop__link" href="#"> Партнерам</a></li>
+                <li><a class="drop__link" href="#"> Публичная оферта</a></li>
+                <li><a class="drop__link" href="#">Политика конфиденциальности </a></li>
+                <li><a class="drop__link" href="#"> Оплата</a></li>
+                <li><a class="drop__link" href="#"> Помощь</a></li>
+                <li><a class="drop__link" href="#"> Поддержка</a></li>
+                <li><a class="drop__link" href="#"> Контакты </a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--  мобильное меню      -->
+      <div class="top-nav" id="topmenu">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-auto"><a class="top-nav__logo" href="/">
+              <svg class="icon icon-logo ">
+                <use xlink:href="img/svg/sprite.svg#logo"></use>
+              </svg></a>
+            </div>
+            <div class="col d-none d-xl-block">
+              <ul> 
+                <li><a class="scroll-l" href="#albums">Возможности</a></li>
+                <li><a class="scroll-l" href="#price">Оборудование</a></li>
+                <li><a class="scroll-l" href="#prices">Тарифы </a></li>
+                <li><a href="#">Поддержка</a></li>
+                <li><a href="#">Онлайн-касса </a></li>
+                <li class="menu-item-has-children"><a href="#"> О нас    </a>
+                  <ul class="sub-menu">
+                    <li><a href="#">  Лицензиат</a></li>
+                    <li><a href="#">Миссия компании </a></li>
+                    <li><a href="#"> Вакансии</a></li>
+                    <li><a href="#"> Партнерам</a></li>
+                    <li><a href="#"> Публичная оферта</a></li>
+                    <li><a href="#">Политика конфиденциальности </a></li>
+                    <li><a href="#"> Оплата</a></li>
+                    <li><a href="#"> Помощь</a></li>
+                    <li><a href="#"> Поддержка</a></li>
+                    <li><a href="#"> Контакты </a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="col-auto">
+              <div class="row align-items-center">
+                <div class="col-auto d-none d-sm-block"><a class="reg btn fancy" id="notuse" href="#send">Попробовать бесплатно </a></div>
+                <div class="col">
+                  <div class="phoneb"><img src="img/tel.png" width="16" height="16"/><a class="tel" href="tel:88003012209">8 (800) 301-22-09</a><br/><span class="poros">звонок по россии бесплатный</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- start HEADER.header-->
       <header class="header">

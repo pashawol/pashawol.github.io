@@ -184,6 +184,19 @@ $(".check_fio").submit(function(event) {
  jQuery(document).ready(function($) { 
 
   // Custom JS
+
+
+   // var togli =  '.dropdown, .drop-inner, .drop-sub-inner';
+ $('.trop').find(".menu-item-has-children > a ").each(function(){
+
+  var th = $(this);
+  th.click(function(){ 
+    
+    th.toggleClass('active').next().slideToggle();
+    th.parent().toggleClass('active');
+  })
+ })
+ 
  
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
@@ -191,6 +204,14 @@ $(".check_fio").submit(function(event) {
     $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
     $("  .aside").toggleClass("active");
+    $("body").toggleClass("fixed");
+    return false;
+  }); 
+   var toggMnu = $(".toggle-mnu-2").click(function () {
+    
+    $(".toggle-mnu-2").toggleClass("on");
+    // $("body").toggleClass("fixed");
+    $(" .trop").toggleClass("active");
     $("body").toggleClass("fixed");
     return false;
   }); 
@@ -219,6 +240,13 @@ $(".check_fio").submit(function(event) {
         $(".aside").removeClass("active");
         $("body").removeClass("fixed");
     }
+     if (w>1199){
+       $(".toggle-mnu-2").removeClass("on");
+        // $("body").removeClass("fixed");
+        $(".trop").removeClass("active");
+        $("body").removeClass("fixed");
+    }
+
     var topH=$("header ").innerHeight();  
     if($(this).scrollTop()>topH){
                     $('.top-nav  ').addClass('fixed');
@@ -236,6 +264,8 @@ $(".check_fio").submit(function(event) {
                     $('.top-nav  ').removeClass('fixed'); 
                 }
             });
+
+
        // конец добавил 
   }
 
