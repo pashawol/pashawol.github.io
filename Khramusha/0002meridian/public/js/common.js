@@ -1,6 +1,6 @@
  jQuery(document).ready(function($) { 
 
-
+ 
   function heightses() {
 
     // var w = $(window).width();

@@ -208,6 +208,7 @@ var mySwiper3 = new Swiper('.s-product__slider-js', {
       watchOverflow: true,
       spaceBetween: 0,
       freeMode: true, 
+      slidesPerGroup: 3,
        // centeredSlides: true, 
       loop: true,
       loopFillGroupWithBlank: true,
