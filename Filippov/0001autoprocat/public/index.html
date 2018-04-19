@@ -12,30 +12,51 @@
     <meta name="theme-color" content="#3361d8">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
-  <body><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
-    <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
-      <div class="wrapp-hidden"> 
-        <ul class="trop__nav">
-          <li class="trop__item"><a class="trop__link" href="#">Продукция </a>
-          </li>
-          <li class="trop__item"><a class="trop__link" href="#">Услуги  </a>
-          </li>
-          <li class="trop__item"><a class="trop__link" href="#">Подбор септика   </a>
-          </li>
-          <li class="trop__item"><a class="trop__link" href="#">Акции </a>
-          </li>
-          <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
-          </li>
-          <li class="trop__item"><a class="trop__link" href="#"> Доставка и оплата </a>
-          </li>
-          <li class="trop__item"><a class="trop__link" href="#"> Клиентам  </a>
-          </li>
-          <li class="trop__item"><a class="trop__link" href="#"> Наши работы   </a>
-          </li>
-          <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
-          </li>
-        </ul>
-        <div class="text-right"></div>
+  <body>
+    <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
+      <div class="wrapp-hidden text-center">
+        <div class="container"> 
+          <div class="form-search">
+            <div class="form-wrap">
+              <form>
+                <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Быстрый поиск автомобиля"/>
+                </div>
+                <!-- +e.input-wrap-->
+                <button class="form-wrap__btn">
+                  <svg class="icon icon-search ">
+                    <use xlink:href="img/svg/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="trop__cont">
+            <div><a class="trop__tel h5 strong text-body" href="tel:">+7 (495) 120-40-24</a>
+            </div>
+            <div><a class="trop__link text-gray-700" href="#">Заказать звонок</a>
+            </div>
+          </div>
+          <ul class="trop__nav">
+            <li class="trop__item"><a class="trop__link text-body" href="#">Главная</a>
+            </li>
+            <li class="trop__item"><a class="trop__link text-body" href="#">Каталог авто</a>
+            </li>
+            <li class="trop__item"><a class="trop__link text-body" href="#">Доставка</a>
+            </li>
+            <li class="trop__item"><a class="trop__link text-body" href="#">Сотрудничество</a>
+            </li>
+            <li class="trop__item"><a class="trop__link text-body" href="#"> О компании  </a>
+            </li>
+            <li class="trop__item"><a class="trop__link text-body" href="#">Отзывы</a>
+            </li>
+            <li class="trop__item"><a class="trop__link text-body" href="#">Новости</a>
+            </li>
+            <li class="trop__item"><a class="trop__link text-body" href="#"> Правила аренды </a>
+            </li>
+            <li class="trop__item"><a class="trop__link text-body" href="#">Контакты </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <!--  мобильное меню-->
@@ -43,60 +64,134 @@
     <header class="header">
       <!-- start .top_line-->
       <div class="top_line">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-lg-auto col"><a class="top_line__logo d-block" href="#"><img class="res-i" src="img/logo-d.png" alt=""/></a>
+            </div>
+            <div class="col-xxl-auto col d-none d-lg-block">
+              <div class="form-search">
+                <div class="form-wrap">
+                  <form>
+                    <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Быстрый поиск автомобиля"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <button class="form-wrap__btn">
+                      <svg class="icon icon-search ">
+                        <use xlink:href="img/svg/sprite.svg#search"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto"><a class="top_line__link text-body" href="#">
+              <svg class="icon icon-purse ">
+                <use xlink:href="img/svg/sprite.svg#purse"></use>
+              </svg>
+              <div class="d-none d-xxl-inline">Быстрая оплата</div></a>
+            </div>
+            <div class="col-auto"><a class="top_line__link text-body" href="#">
+              <svg class="icon icon-user ">
+                <use xlink:href="img/svg/sprite.svg#user"></use>
+              </svg>
+              <div class="d-none d-xxl-inline">Личный кабинет</div></a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <div class="top_line__cont"><a class="top_line__tel h5 strong text-body" href="tel:">+7 (495) 120-40-24</a><a class="top_line__link text-gray-700 tdu" href="#">Заказать звонок</a>
+              </div>
+            </div>
+            <div class="col-auto d-xl-block"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a></div>
+          </div>
+        </div>
       </div>
       <!-- end .top_line-->
       <!-- start top-nav-->
-      <div class="top-nav">
+      <div class="top-nav d-none d-lg-block">
         <div class="container">
-          <ul class="top-nav__nav">
-            <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-            </li>
-            <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-            </li>
-            <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-            </li>
-            <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-            </li>
-            <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-            </li>
-          </ul>
+          <div class="row no-gutters align-items-center justify-content-between">
+            <div class="col-auto d-block d-xl-block d-lg-none"><a class="top-nav__logo" href="#"><img class="res-i" src="img/logo-d.png" alt=""/></a>
+            </div>
+            <div class="col">
+              <ul class="top-nav__nav">
+                <li class="top-nav__item"><a class="top-nav__link text-body" href="#">Главная</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__link text-body" href="#">Каталог авто</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__link text-body" href="#">Доставка</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__link text-body" href="#">Сотрудничество</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__link text-body" href="#"> О компании  </a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__link text-body" href="#">Отзывы</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__link text-body" href="#">Новости</a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__link text-body" href="#"> Правила аренды </a>
+                </li>
+                <li class="top-nav__item"><a class="top-nav__link text-body" href="#">Контакты </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-auto d-block d-xl-block d-lg-none"><a class="top-nav__icon-link text-body" href="#">
+              <svg class="icon icon-purse ">
+                <use xlink:href="img/svg/sprite.svg#purse"></use>
+              </svg></a>
+            </div>
+            <div class="col-auto d-block d-xl-block d-lg-none"><a class="top-nav__icon-link text-body" href="#">
+              <svg class="icon icon-user ">
+                <use xlink:href="img/svg/sprite.svg#user"></use>
+              </svg></a>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end top-nav-->
     </header>
     <!-- end HEADER.header-->
     <!-- start header-block-->
-    <div class="header-block" id="header-block">
+    <div class="header-block bgs text-white text-center" style="background-image: url(img/head-bg.jpg);">
       <div class="container">
-        <h1></h1>
-        <div class="row"></div>
+        <h1 class="ttu">круглосуточный автопрокат в&nbsp;москве</h1>
+        <div class="header-block__title-sub h4">Доставим автомобиль в любую точку города за 60 минут!
+        </div>
+        <div class="header-block__btn-wrap"><a class="header-block__link d-inline-block" href="#"> <img class="res-i" src="img/btn-1.png" alt=""/></a><a class="header-block__link d-inline-block" href="#"> <img class="res-i" src="img/btn-2.png" alt=""/></a>
+        </div>
       </div>
     </div>
     <!-- end header-block-->
-    <!-- start s-form-->
-    <section class="s-form section" id="s-form">
+    <!-- start s-catalog-->
+    <div class="s-catalog section" id="s-catalog">
       <div class="container">
-        <h2 class="text-center">s-form</h2>
+        <h2 class="text-center">s-catalog</h2>
         <div class="row"></div>
       </div>
-    </section>
-    <!-- end s-form-->
-    <!-- start s-contact-->
-    <section class="s-contact section" id="s-contact">
+    </div>
+    <!-- end s-catalog-->
+    <!-- start s-articals-->
+    <div class="s-articals section" id="s-articals">
       <div class="container">
-        <h2 class="text-center">s-contact</h2>
-        <div class="row"><a href="#"></a></div>
+        <h2 class="text-center">s-articals</h2>
+        <div class="row"></div>
       </div>
-    </section>
-    <!-- end s-contact-->
+    </div>
+    <!-- end s-articals-->
+    <!-- start s-patner-->
+    <div class="s-patner section" id="s-patner">
+      <div class="container">
+        <h2 class="text-center">s-patner</h2>
+        <div class="row"></div>
+      </div>
+    </div>
+    <!-- end s-patner-->
+    <!-- start s-logo-->
+    <div class="s-logo section" id="s-logo">
+      <div class="container">
+        <h2 class="text-center">s-logo</h2>
+        <div class="row"></div>
+      </div>
+    </div>
+    <!-- end s-logo-->
     <footer class="footer">footer
     </footer>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal">
@@ -112,9 +207,7 @@
         <form> 
           <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
           <div class="h1 text-center">Записаться</div>
-          <div class="form-wrap__input-wrap form-group">
-            <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Введите ваш телефон" name="tel" required="required"/>
-            </label>
+          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/>
           </div>
           <!-- +e.input-wrap-->
           <button class="form-wrap__btn btn btn-accent btn-block">Отправить
