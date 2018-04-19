@@ -1,5 +1,6 @@
  jQuery(document).ready(function($) { 
 
+
   // для свг
   svg4everybody({});
   // Custom JS
@@ -34,27 +35,7 @@
     }
   });
   })
-// мобильное меню
- // мобильное меню
-   var toggMnu = $(".toggle-mnu-1").click(function () {
-    
-    
-    $(this).toggleClass("active");
-    $(".hidden-mnu").fadeToggle("150").toggleClass("active");
-   
-    return false;
-  }); 
-
-    $(document).mouseup(function (e) {
-    var container = $(".hidden-mnu.active");
-    if( $(".hidden-mnu").hasClass("active") == true) {
-      if (container.has(e.target).length === 0 && $(".toggle-mnu-1.active").has(e.target).length === 0){
-        
-        $(".hidden-mnu").fadeOut("150").removeClass("active");
-        $(".toggle-mnu-1").removeClass("active");
-          }
-    }
-    });
+ 
 
 
 // листалка по стр
@@ -73,23 +54,14 @@
 $(function() {
 var tab = ('tabs'); 
 
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
+   
 
 $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
   $(this) 
       .addClass('active').siblings().removeClass('active')
       .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
       .eq($(this).index()).fadeIn().addClass('active');
-
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
+ 
  
 });
 });
@@ -338,8 +310,46 @@ $(".filter-aside__item  ").each(function(){
 lessLink: '<a href="#" class="more accent">Скрыть</a>'
 });
 
-
  $(".basket-fly__btn-toggle").click(function(){
+ // добавил 
+  $("body").toggleClass("fixed");
   $(this).toggleClass("active").parents(".basket-fly").toggleClass("active")
  })
+ // добавил 
+
+   $(".prod-card__btn").click(function(){
+
+    $("body").toggleClass("fixed");
+    $(".basket-fly__btn-toggle").toggleClass("active").parents(".basket-fly").toggleClass("active");
+     return false;
+  })
+
+
+   $(".top-btn-toggle").click(function(){ 
+    $(".mnu-catalog-js-2").fadeOut();
+    $(".mnu-catalog-js").fadeToggle("150")
+     return false;
+   })
+
+ 
+   // мобильное меню
+ // мобильное меню
+   var toggMnu = $(".toggle-mnu-1").click(function () {  
+    $(".mnu-catalog-js").fadeOut();
+    $(".mnu-catalog-js-2").fadeToggle("150");
+   
+    return false;
+  });
+
+    // $(document).mouseup(function (e) {
+    // var container = $(".mnu-catalog-js-2.active");
+    // if( $(".mnu-catalog-js-2").hasClass("active") == true) {
+    //   if (container.has(e.target).length === 0 && $(".toggle-mnu-1.active").has(e.target).length === 0){
+        
+    //     $(".mnu-catalog-js-2").fadeOut("150").removeClass("active");
+    //     $(".toggle-mnu-1").removeClass("active");
+    //       }
+    // }
+    // });
+
 });
