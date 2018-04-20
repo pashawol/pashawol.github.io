@@ -823,7 +823,102 @@
       </div>
     </div>
     <!-- end s-logo-->
-    <footer class="footer">footer
+    <footer class="footer">
+      <div class="footer__head">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <ul class="footer__nav">
+                <li class="footer__item"><a class="footer__link text-white" href="#">Главная</a>
+                </li>
+                <li class="footer__item"><a class="footer__link text-white" href="#">Каталог авто</a>
+                </li>
+                <li class="footer__item"><a class="footer__link text-white" href="#">Доставка</a>
+                </li>
+                <li class="footer__item"><a class="footer__link text-white" href="#">Сотрудничество</a>
+                </li>
+                <li class="footer__item"><a class="footer__link text-white" href="#"> О компании  </a>
+                </li>
+                <li class="footer__item"><a class="footer__link text-white" href="#">Отзывы</a>
+                </li>
+                <li class="footer__item"><a class="footer__link text-white" href="#">Новости</a>
+                </li>
+                <li class="footer__item"><a class="footer__link text-white" href="#"> Правила аренды </a>
+                </li>
+                <li class="footer__item"><a class="footer__link text-white" href="#">Контакты </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 text-right">
+              <div class="footer__row-top row justify-content-end">
+                <div class="col-auto">
+                  <div class="soc"><a class="soc__item" href="" target="_blank">
+                    <svg class="icon icon-vk ">
+                      <use xlink:href="img/svg/sprite.svg#vk"></use>
+                    </svg></a><a class="soc__item" href="" target="_blank">
+                    <svg class="icon icon-facebook-f ">
+                      <use xlink:href="img/svg/sprite.svg#facebook-f"></use>
+                    </svg></a><a class="soc__item" href="" target="_blank">
+                    <svg class="icon icon-instagram ">
+                      <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                    </svg></a>
+                  </div><i class="far fa-address-book"></i>
+                </div>
+                <div class="col-auto">
+                  <div class="footer__cont">
+                    <div><a class="footer__tel h5 strong text-white" href="tel:">+7 (495) 120-40-24</a>
+                    </div>
+                    <div><a class="text-white tdu" href="#">Заказать звонок</a></div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="footer__text">Москва, Проспект Мира 150, Гостиница Космос, офис&nbsp;36
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-end">
+                <div class="col-auto"><a class="footer__link text-white" href="#">
+                  <svg class="icon icon-purse ">
+                    <use xlink:href="img/svg/sprite.svg#purse"></use>
+                  </svg>
+                  <div class="d-none d-xxl-inline">Быстрая оплата</div></a>
+                </div>
+                <div class="col-auto"><a class="footer__link text-white" href="#">
+                  <svg class="icon icon-user ">
+                    <use xlink:href="img/svg/sprite.svg#user"></use>
+                  </svg>
+                  <div class="d-none d-xxl-inline">Личный кабинет</div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bot">
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-6">
+              <div class="row align-items-center">
+                <div class="col-auto">© Автопрокат24, 2018</div>
+                <div class="col-auto">
+                  <div class="footer__btn-wrap"><a class="footer__link d-inline-block m-2" href="#"> <img class="res-i" src="img/btn-1-d.png" alt=""/></a><a class="footer__link d-inline-block m-2" href="#"> <img class="res-i" src="img/btn-2-d.png" alt=""/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="row align-items-center justify-content-end">
+                <div class="col-auto"><a class="text-gr" href="#">Политика конфиденциальности</a></div>
+                <div class="col-auto"><a class="text-gr" href="#">Пользовательское соглашение</a></div>
+                <div class="col-auto"><a class="scroll-link" href="#header">
+                    <svg class="icon icon-angle-up ">
+                      <use xlink:href="img/svg/sprite.svg#angle-up"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal">
       <form>
@@ -832,33 +927,6 @@
     <div class="zoom-anim-dialog mfp-hide modal-win modal-form form-wrap text-center" id="thanks"><br/>
       <h3>Заявка принята</h3><br/>
       <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
-    </div>
-    <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-win" aria-hidden="true">
-      <div class="form-wrap modal-win modal-form modal-content modal-dialog modal-content" role="document">
-        <form> 
-          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-          <div class="h1 text-center">Записаться</div>
-          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/>
-          </div>
-          <!-- +e.input-wrap-->
-          <button class="form-wrap__btn btn btn-accent btn-block">Отправить
-          </button>
-          <div class="wrap-polite">
-            <div class="custom-input polite">
-              <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Даю 
-                 <span class="link" data-toggle="modal" data-target="#exampleModal2">согласие </span>на хранение и обработку   персональных данных
-              </label>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
-      <div class="form-wrap modal-win modal-form text-center modal-content modal-win modal-form modal-dialog" role="document"> 
-        <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> × </button><br/>
-        <div class="h2">Заявка принята</div><br/>
-        <div class="h3">Скоро с Вами свяжутся</div><br/>
-      </div>
     </div>
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
