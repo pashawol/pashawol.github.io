@@ -316,7 +316,9 @@ $('.tabs-block').easyResponsiveTabs();
      $(this).next("div").filter(function() {
             return "block" == $(this).css("display") }).slideUp().parent().removeClass("active"),
              $(this).next("div").filter(function() {
-            return "none" == $(this).css("display") }).slideDown().prev("div").addClass("active").parent().addClass("active")})
+            return "none" == $(this).css("display") }).slideDown().prev("div").addClass("active").parent().addClass("active")
+  })
+  
   $(".gal__link").fancybox({
       openEffect  : 'elastic',
       closeEffect : 'elastic',

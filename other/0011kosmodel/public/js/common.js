@@ -1,5 +1,10 @@
  jQuery(document).ready(function($) { 
 
+// http://gijgo.com/datepicker
+$('.datepicker').datepicker({
+          locale: 'ru-ru',
+            uiLibrary: 'bootstrap4'
+        });
 
   // для свг
   svg4everybody({});
