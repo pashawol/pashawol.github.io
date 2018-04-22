@@ -4,6 +4,35 @@
   svg4everybody({});
   // Custom JS
   
+ 
+
+$('.popover-js').popover({
+  placement: 'auto',
+  trigger: 'hover',
+})
+ 
+
+
+ var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+        $('#startDate').datepicker({ 
+               locale: 'ru-ru',
+            uiLibrary: 'bootstrap4',
+            // iconsLibrary: 'fontawesome',
+            format: 'dd.mm.yyyy',
+            minDate: today,
+            maxDate: function () {
+                return $('#endDate').val();
+            }
+        });
+        $('#endDate').datepicker({
+               locale: 'ru-ru',
+            uiLibrary: 'bootstrap4',
+            // iconsLibrary: 'fontawesome',
+            format: 'dd.mm.yyyy',
+            minDate: function () {
+                return $('#startDate').val();
+            }
+        });
    // accordion
   $(".showhide").click(function() { 
      $(this).toggleClass("active").next("div").slideToggle().parents().toggleClass("active");
@@ -38,7 +67,54 @@
     return false;
   }); 
     
-  function heightses() {
+  
+// листалка по стр
+ $(" .scroll-link").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
+        
+            $('html, body').animate({ scrollTop: destination }, 1100);
+        
+        return false; 
+    });
+
+
+ 
+ 
+// слайдер на главной
+ var swiper = new Swiper('.s-articals__slider', { 
+      loop: true ,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+       preloadImages: false, 
+      lazy: true,
+      lazy: {
+        loadPrevNext: true,
+      }
+       
+    });
+
+// слайдер в карточке
+
+var swiperCard = new Swiper('.carusel-slider', { 
+      // loop: true ,
+      // init: false,
+      // slidesPerView: 3,
+      // slidesPerColumn: 3,
+      slidesPerView: 'auto', 
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      } 
+    });
+
+function heightses() {
 
     var w = $(window).width();
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
@@ -46,7 +122,14 @@
     
 
     // скрывает моб меню 
-    if (w>991){
+    if (w<992){
+        // swiperCard.init();
+    }
+     
+   
+    if (w>992){
+      // swiperCard.init();
+      // swiperCard.destroy();
        $(".toggle-mnu-1").removeClass("on");
         // $("body").removeClass("fixed");
         $(".hidden-mnu").removeClass("active");
@@ -76,67 +159,13 @@
     heightses();
    
   });
-$( window ).on( "load", function() {
+ 
+
+ 
+
  heightses();
 
-})
 
- heightses();
-
-
-
-// листалка по стр
- $(" .scroll-link").click(function () {
-        var elementClick = $(this).attr("href");
-        var destination = $(elementClick).offset().top;
-        
-            $('html, body').animate({ scrollTop: destination }, 1100);
-        
-        return false; 
-    });
-
-
-// табы  . Теперь данные активного таба остается в storage
-$(function() {
-var tab = ('tabs'); 
-
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
-
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
-  $(this) 
-      .addClass('active').siblings().removeClass('active')
-      .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-      .eq($(this).index()).fadeIn().addClass('active');
-
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
- 
-});
-});
-
- 
- 
-// слайдер на главной
- var swiper = new Swiper('.s-articals__slider', { 
-      loop: true ,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-       preloadImages: false, 
-      lazy: true,
-      lazy: {
-        loadPrevNext: true,
-      }
-       
-    });
 
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
