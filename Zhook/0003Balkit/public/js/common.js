@@ -1,26 +1,23 @@
  jQuery(document).ready(function($) { 
 
+$(".input-range").ionRangeSlider({
+  type: "double",
+   min: 0.8,
+    max: 10000,
+ });
+$(".btn-toggle-js").click(function(){
+
+    $(".toggle-block-js").slideToggle();
+    return false;
+})
+// адаптивные табы 
+$('.tabs-block').easyResponsiveTabs();
   // для свг
   svg4everybody({});
   // Custom JS
   
 
-  var url=document.location.href; 
-  $.each($(".top-nav__nav a "),function(){
  
-  if(this.href==url){
-    if($(this).hasClass("top-nav__link") == true){
-
-    $(this).addClass('top-nav__link-active');
-    }
-    if($(this).hasClass("footer__link") == true){
-
-    $(this).addClass('footer__link-active');
-    }
-
-  };
- 
-  });
       // галерея
   $(".gal").each(function(){
     
@@ -41,27 +38,15 @@
   });
   })
 // мобильное меню
-   var toggMnu = $(".toggle-mnu-1").click(function () {
+  var toggMnu = $(".toggle-mnu-1").click(function () {
     
     $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
     $(".hidden-mnu").toggleClass("active");
-    $("body").toggleClass("fixed");
+    $("body, html").toggleClass("fixed");
     return false;
   }); 
-    $('.hidden-mnu ul li a').on('click', function () {
-      $(".hidden-mnu .toggle-mnu").click();
-    });
-    $(document).mouseup(function (e) {
-    var container = $(".hidden-mnu.active");
-    if (container.has(e.target).length === 0){
-       $(".toggle-mnu-1").removeClass("on");
-      // $("body").toggleClass("fixed");
-      $(".hidden-mnu").removeClass("active");
-      $("body").removeClass("fixed");
-        }
-    });
- 
+    
   function heightses() {
 
     var w = $(window).width();
@@ -70,7 +55,7 @@
     
 
     // скрывает моб меню 
-    if (w>991){
+    if (w>767.98){
        $(".toggle-mnu-1").removeClass("on");
         // $("body").removeClass("fixed");
         $(".hidden-mnu").removeClass("active");
@@ -147,24 +132,10 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 
  
 
- var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
-
-var   arrl2 = (' <div class="l">'+ icon),
-      arrr2 =(' <div class="r">'+ icon);  
- // карусель
- $('.s-team__slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: false,
-    speed: 450,
-    infinite: true,
-    loop: true,  
-    arrows: true, 
-    // centerMode: true,
-    // focusOnSelect: true , 
-     // variableWidth: true,
-     prevArrow: arrr2,
-      nextArrow: arrl2,
+var swiperCard = new Swiper('.carusel-slider', {  
+      slidesPerView: 'auto', 
+      spaceBetween: 30,
+ 
     });
 
 // слайдер цвета в карточке
@@ -187,6 +158,7 @@ var   arrl2 = (' <div class="l">'+ icon),
       },
       
     });
+
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -293,18 +265,46 @@ $("form").submit(function() { //Change
    })
    })
 
+ 
+
+ // карта
+
+ if ($("div").is("#map")){
+
+
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [55.727896069024254,37.44885049999991],
+            zoom: 12,
+            behaviors: ['drag'],
+              
+                // controls: ["zoomControl", "fullscreenControl"]
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
    
-// var wowAnim = $(".s-dop__col," +
-//                 ".s-pick__col," + 
-//                 ".s-condition__col");
-// wowAnim.each(function(i){
- 
-// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");  
- 
-//    var wow = new WOW({ mobile: false });
-//         wow.init();
+        myPlacemark = new ymaps.Placemark([55.727896069024254,37.44885049999991], {
+            hintContent: 'Воронеж, ул. Уличная, 32, корп. 1',
+            balloonContent: 'Воронеж, ул. Уличная, 32, корп. 1 '
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            // iconLayout: 'default#image',
+            // // Своё изображение иконки метки.
+            // iconImageHref: $("#map").data("img"),
+            // // Размеры метки.
+            // iconImageSize: [37, 48],
+            // // Смещение левого верхнего угла иконки относительно
+            // // её "ножки" (точки привязки).
+            // iconImageOffset: [-19, -24]
+        }) 
 
-// });
-
-
+    myMap.geoObjects
+        .add(myPlacemark) 
 });
+ }
+ 
+});
+ 
+ 
