@@ -1,42 +1,21 @@
- jQuery(document).ready(function($) { 
-
+ jQuery(document).ready(function($) {  
+// слайдер ползунок
 $(".input-range").ionRangeSlider({
   type: "double",
    min: 0.8,
     max: 10000,
  });
-$(".btn-toggle-js").click(function(){
 
+$(".btn-toggle-js").click(function(){ 
     $(".toggle-block-js").slideToggle();
     return false;
 })
-// адаптивные табы 
-$('.tabs-block').easyResponsiveTabs();
-  // для свг
-  svg4everybody({});
-  // Custom JS
-  
 
- 
-      // галерея
-  $(".gal").each(function(){
-    
-  $(this).find("a").magnificPopup({
-    type: 'image',
-    closeOnContentClick: false,
-    closeBtnInside: false,
-    mainClass: 'mfp-with-zoom mfp-img-mobile',
-    image: {
-      verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
-    },
-    gallery: {
-      enabled: true
-    }
-  });
-  })
+
+
+  // для свг
+  svg4everybody({}); 
+
 // мобильное меню
   var toggMnu = $(".toggle-mnu-1").click(function () {
     
@@ -46,39 +25,18 @@ $('.tabs-block').easyResponsiveTabs();
     $("body, html").toggleClass("fixed");
     return false;
   }); 
-    
+
+  // для мобильного меню  
   function heightses() {
 
-    var w = $(window).width();
-   // $(".otz__item .text-wrap ").height('auto').equalHeights();
-   //
-    
-
+    var w = $(window).width(); 
     // скрывает моб меню 
     if (w>767.98){
        $(".toggle-mnu-1").removeClass("on");
         // $("body").removeClass("fixed");
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
-    }
-    var topH=$("header ").innerHeight();  
-    if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed');
-                    
-                }
-                else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed');
-                   
-                }
-    $(window).scroll(function(){
-                if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed'); 
-                }
-                else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed'); 
-                }
-            });
-       // конец добавил 
+    } 
   }
 
   $(window).resize(function() {
@@ -103,170 +61,33 @@ $( window ).on( "load", function() {
         
  //        return false; 
  //    });
-
-
-// табы  . Теперь данные активного таба остается в storage
-$(function() {
-var tab = ('tabs'); 
-
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
-
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
-  $(this) 
-      .addClass('active').siblings().removeClass('active')
-      .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-      .eq($(this).index()).fadeIn().addClass('active');
-
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
  
-});
-});
-
- 
-
 var swiperCard = new Swiper('.carusel-slider', {  
       slidesPerView: 'auto', 
-      spaceBetween: 30,
- 
-    });
+      spaceBetween: 30, 
+    }); 
 
-// слайдер цвета в карточке
- var swiper4 = new Swiper('.color-slider', {
-      // slidesPerView: 5,
-      slidesPerView: 'auto',
-      watchOverflow: true,
-      spaceBetween: 0,
-      freeMode: true, 
-      slidesPerGroup: 3,
-       // centeredSlides: true, 
-      loop: true,
-      loopFillGroupWithBlank: true,
-      touchRatio: 0.2,
-      slideToClickedSlide: true,
-       freeModeMomentum: true,
-      navigation: {
+var swipergal = new Swiper('.gal-slider', {   
+      lazy: true,
+      preloadImages: false,
+       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      
-    });
+    }); 
 
-       // модальное окно
-   $('.popup-with-move-anim').magnificPopup({
-    type: 'inline',
 
-    fixedContentPos: true,
-    fixedBgPos: true,
-
-    overflowY: 'auto',
-
-    closeBtnInside: true,
-    preloader: false,
-    
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
-  });
+// адаптивные табы 
+$('.tabs-block').easyResponsiveTabs({
+  activate: function() {
+    // swiperCard.init();
+  },
+});
  
-  
- // форма
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: 'action.php', //Change
-      data: th.serialize()
-    }).success(function() {
-          $.magnificPopup.close();
-             $.magnificPopup.open({
-        items: {
-          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline'
-        }
-      })
-        // window.location.replace("/thanks.html");
-       setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-        // $.magnificPopup.close();
-      }, 4000);
-    });
-    return false;
-  });
-   
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
   
-    //Replace all SVG images with inline SVG
-  $('img.img-svg').each(function(){
-    var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg');
-
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-  });
-
-
-  // кастомный инпут файл 
- 
-  var file = $(".add-file input[type=file]");
-  file.change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         var name = $(".add-file__filename  ");
-       name.text(filename);
-  
-    }); 
-  // или
-   // $(".dropzone").dropzone({ 
-   //  url: "/file/post",
-   //  addRemoveLinks: true,
-   //      acceptedFiles: 'image/*',
-   //      uploadMultiple: true,
-   //   });
-
-  
-  $(".pretty-embed__bg").each(function(){ 
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
-
- 
-
  // карта
 
  if ($("div").is("#map")){
@@ -276,28 +97,13 @@ $("form").submit(function() { //Change
     var myMap = new ymaps.Map('map', {
             center: [55.727896069024254,37.44885049999991],
             zoom: 12,
-            behaviors: ['drag'],
-              
-                // controls: ["zoomControl", "fullscreenControl"]
+            behaviors: ['drag'], 
         }, {
             searchControlProvider: 'yandex#search'
-        }),
-
-   
+        }), 
         myPlacemark = new ymaps.Placemark([55.727896069024254,37.44885049999991], {
             hintContent: 'Воронеж, ул. Уличная, 32, корп. 1',
             balloonContent: 'Воронеж, ул. Уличная, 32, корп. 1 '
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            // iconLayout: 'default#image',
-            // // Своё изображение иконки метки.
-            // iconImageHref: $("#map").data("img"),
-            // // Размеры метки.
-            // iconImageSize: [37, 48],
-            // // Смещение левого верхнего угла иконки относительно
-            // // её "ножки" (точки привязки).
-            // iconImageOffset: [-19, -24]
         }) 
 
     myMap.geoObjects
