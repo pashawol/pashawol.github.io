@@ -180,6 +180,7 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
       slidesPerView: 'auto',
       spaceBetween: 20,
       freeMode: true, 
+
        freeModeMomentum: true,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -196,6 +197,7 @@ var titles = [];
 
 var mySwiper3 = new Swiper('.s-product__slider-js', {
   // Optional parameters
+  lazy: true,
    pagination: {
         el: '.swiper-pagination.row',
         clickable: true,
@@ -205,6 +207,18 @@ var mySwiper3 = new Swiper('.s-product__slider-js', {
       },
 
 });
+
+var mySwiper4 = new Swiper('.slider-inst-js', {
+  // Optional parameters
+  lazy: true, 
+  loop: true,
+  pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+});
+
+
 
 // слайдер цвета в карточке
  var swiper4 = new Swiper('.color-slider', {
@@ -329,6 +343,10 @@ $('.custom-select-js').each(function(){
 });
  }
  
+
+ $(".toggle-btn-js").click(function(){
+  $(this).toggleClass("active").next().slideToggle();
+ })
 });
  
  
