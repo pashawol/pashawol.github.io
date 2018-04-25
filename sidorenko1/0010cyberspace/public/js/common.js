@@ -1,6 +1,21 @@
  jQuery(document).ready(function($) { 
 
 
+
+  function heightses() { 
+    var w = $(window).width();
+   $(".s-prod").each(function(){
+
+   $(this).find(".prod-card__price ").height('auto').equalHeights(); 
+   })
+  } 
+  $(window).resize(function() {
+    heightses();
+   
+  }); 
+ heightses();
+
+
   // для свг
   svg4everybody({});
   // Custom JS
