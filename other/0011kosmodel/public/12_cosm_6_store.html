@@ -983,7 +983,7 @@
             <div class="col-lg-8">
               <p>Текст про точку продаж. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
             </div>
-            <div class="col">
+            <div class="col d-none d-lg-block">
               <div class="strong text-success">
                 <p>г. Архангельск, пр. Троицкий,  д.&nbsp;10, ТЦ&nbsp;Галерея, 1этаж</p>
                 <p>Тел.: 44 88 32, <br>Моб.: 8 (911) 554 88 32<br>График: пн-вс: 10.00 - 20.00	</p>
@@ -1017,12 +1017,18 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="border-bottom border-sea">
+          <div class="col-lg-4 col-md-6">
+            <div class="border-bottom border-sea mb-2">
               <div class="map-wrap">
                 <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
                 <div class="small-map" id="map"> </div>
               </div><a class="btn btn btn-md btn-link btn-block" href="#">Открыть на весь экран</a>
+            </div>
+          </div>
+          <div class="col-md-6 d-lg-none">
+            <div class="strong text-success">
+              <p>г. Архангельск, пр. Троицкий,  д.&nbsp;10, ТЦ&nbsp;Галерея, 1этаж</p>
+              <p>Тел.: 44 88 32, <br>Моб.: 8 (911) 554 88 32<br>График: пн-вс: 10.00 - 20.00</p>
             </div>
           </div>
         </div>
@@ -1274,6 +1280,22 @@
       </div>
       <!-- end s-instagram-->
       <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-7 mb-3">
+            <h2>Виртуальный тур по магазину</h2>
+            <div class="block-3d"></div>
+          </div>
+          <div class="col-lg-4 col-md-5 mb-3">
+            <h2>Ваш эксперт сегодня</h2>
+            <div class="block-expert">
+              <div class="block-expert__img-wrap img-bg" style="background-image: url(img/maxresdefault1-1024x576.jpg);">
+              </div>
+              <div class="block-expert__caption m-0 bg-beige">
+                <div class="strong">Динара Ушинская</div>эксперт-косметлог КОСМЕДЭЛЬ
+              </div>
+            </div>
+          </div>
+        </div>
         <div><a class="btn btn-link btn-md text-left" href="#">Список всех точек</a></div>
       </div>
       <footer class="footer">
