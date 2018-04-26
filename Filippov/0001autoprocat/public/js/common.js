@@ -133,7 +133,7 @@ function heightses() {
        $(".toggle-mnu-1").removeClass("on");
         // $("body").removeClass("fixed");
         $(".hidden-mnu").removeClass("active");
-        $("body").removeClass("fixed");
+        $("html, body").removeClass("fixed");
     }
     var topH=$("header ").innerHeight();  
     if($(this).scrollTop()>topH){
