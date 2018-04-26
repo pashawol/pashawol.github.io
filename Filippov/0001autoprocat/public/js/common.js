@@ -210,10 +210,27 @@ function heightses() {
    })
    })
 
- $(".input-range").ionRangeSlider({
-  type: "double",
-   min: 0,
-    max: 10000,
- });
+ $(".input-range").each(function(){
+  let minV = $(this).data("min"),
+      maxV = $(this).data("max") ;
 
+     $(this).ionRangeSlider({
+      type: "double",
+       min: minV,
+        max: maxV,
+     });
+
+ })
+ $(".input-range-single").each(function(){
+  let minV = $(this).data("min"),
+      maxV = $(this).data("max") ;
+
+     $(this).ionRangeSlider({
+      type: "single",
+       min: minV,
+        max: maxV,
+     });
+
+ })
+ 
 });
