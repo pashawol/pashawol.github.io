@@ -14,25 +14,34 @@ $('.popover-js').popover({
 
 
  var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-        $('#startDate').datepicker({ 
+
+ $(".date-picker-block-js").each(function(){
+
+    var th = $(this);
+
+        th.find('.startDate').datepicker({ 
                locale: 'ru-ru',
             uiLibrary: 'bootstrap4',
             // iconsLibrary: 'fontawesome',
             format: 'dd.mm.yyyy',
             minDate: today,
             maxDate: function () {
-                return $('#endDate').val();
+                return th.find('.endDate').val();
             }
         });
-        $('#endDate').datepicker({
+        th.find('.endDate').datepicker({
                locale: 'ru-ru',
             uiLibrary: 'bootstrap4',
             // iconsLibrary: 'fontawesome',
             format: 'dd.mm.yyyy',
             minDate: function () {
-                return $('#startDate').val();
+                return th.find('.startDate').val();
             }
         });
+ })
+ $(".label-date-picker-js  input").click(function(){
+  $(this).next().click();
+ })
    // accordion
   $(".showhide").click(function() { 
      $(this).toggleClass("active").next("div").slideToggle().parents().toggleClass("active");
@@ -135,23 +144,34 @@ function heightses() {
         $(".hidden-mnu").removeClass("active");
         $("html, body").removeClass("fixed");
     }
-    var topH=$("header ").innerHeight();  
-    if($(this).scrollTop()>topH){
+    var topH=$("header ").height() + $('.top-nav  ').height();  
+    var topH2=$(".header-block ").height();  
+    $(window).scroll(function(){
+                if($(this).scrollTop()>topH){
+                    $('.top-nav  ').addClass('fixed-ready'); 
+                }
+                else if ($(this).scrollTop()<topH){
+                    $('.top-nav  ').removeClass('fixed-ready'); 
+                }
+            });
+
+    if($(this).scrollTop()>topH2){
                     $('.top-nav  ').addClass('fixed');
                     
                 }
-                else if ($(this).scrollTop()<topH){
+                else if ($(this).scrollTop()<topH2){
                     $('.top-nav  ').removeClass('fixed');
                    
                 }
     $(window).scroll(function(){
-                if($(this).scrollTop()>topH){
+                if($(this).scrollTop()>topH2){
                     $('.top-nav  ').addClass('fixed'); 
                 }
-                else if ($(this).scrollTop()<topH){
+                else if ($(this).scrollTop()<topH2){
                     $('.top-nav  ').removeClass('fixed'); 
                 }
             });
+
        // конец добавил 
   }
 
