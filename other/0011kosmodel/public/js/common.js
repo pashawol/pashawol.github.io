@@ -10,7 +10,7 @@ $('.datepicker').datepicker({
   svg4everybody({});
   // Custom JS
   
-$(".top-nav__lk.dropdown").on('click , mouseover', function(){
+$(".top-nav__lk.dropdown").on('  mouseover', function(){
   var th = $(this).find("ul").fadeToggle(50);
  
 })
