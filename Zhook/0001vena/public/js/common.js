@@ -175,7 +175,8 @@ $("form").submit(function() { //Change
       url: 'action.php', //Change
       data: th.serialize()
     }).success(function() {
-      $('#thanks').modal('show');
+        $('#thanks').modal('show');
+        dataLayer.push({'thankUpopap': 'ok'});
         $('#modal-win').modal('hide'); 
        
         // window.location.replace("/thanks.html");
