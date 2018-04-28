@@ -14,6 +14,13 @@ $(".top-nav__lk.dropdown").on('click ', function(){
   var th = $(this).find("ul").fadeToggle(50);
  
 })
+ $(document).mouseup(function (e) {
+    var container = $(".top-nav__lk.dropdown");
+    if (container.has(e.target).length === 0){
+          container.find("ul").fadeOut(50);
+        }
+    });
+
   $(".dropdown .top-nav__link, .drop-inner .drop__link, .drop-sub-inner .drop-sub__link, .drop-sub-inner > a").click(function(e){
     e.preventDefault();
     // e.prevenDefault()
@@ -34,6 +41,7 @@ $(".top-nav__lk.dropdown").on('click ', function(){
 $(".btn-toggle-js").click(function(){
   $(this).toggleClass("active").next().slideToggle();
 })
+
       // галерея
   $(".gal").each(function(){
     
