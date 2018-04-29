@@ -75,7 +75,7 @@
                 <div class="d-none d-md-block"><a class="top_line__tel h3 mb-0 strong text-body" href="tel:"> 8(812) 372-67-60 </a>
                 </div>
                 <div class="d-none d-md-block"><a class="top_line__tel h3 mb-0 strong text-body" href="tel:"> 8(812) 372-67-60 </a>
-                </div><a class="top_line__call text-danger h3 tdu" href="#"> 
+                </div><a class="top_line__call text-danger h3 tdu" href="#" data-toggle="modal" data-target="#modal-win"> 
                 <svg class="icon icon-call ">
                   <use xlink:href="img/svg/sprite.svg#call"></use>
                 </svg>
@@ -398,13 +398,119 @@
         </div>
       </div>
     </footer>
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal">
-      <form>
-      </form>
+    <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-win" aria-hidden="true">
+      <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
+        <div class="form-wrap modal-content modal-win">
+          <form>
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+            <div class="text-center">
+              <div class="h2">Свяжитесь с нами по телефону</div>
+              <div class="tel-block pb-2">
+                <div><a class="tel-block__link text-body tdn" href="tel:  8(812) 372-67-60"> 8(812) <strong class="h2 text-primary">372-67-60</strong></a>
+                </div>
+                <div><a class="tel-block__link text-body tdn" href="tel: 8(900)  959-98-07 ">8(900) <strong class="h2 text-primary"> 959-98-07 </strong></a>
+                </div>
+              </div>
+              <div class="h5">или оставьте контактные данные и&nbsp;мы&nbsp;Вам перезвоним</div>
+              <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/>
+              </div>
+              <!-- +e.input-wrap-->
+              <button class="form-wrap__btn btn btn-red btn-lg btn-block">Перезвонить
+              </button>
+              <div class="wrap-polite small">Нажимая "Перезвонить" вы даете согласие  на обработку своих персональных данных
+              </div><a class="text-body tdu" href="#">Политика конфиденциальности</a>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <div class="zoom-anim-dialog mfp-hide modal-win modal-form form-wrap text-center" id="thanks"><br/>
-      <h3>Заявка принята</h3><br/>
-      <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
+    <div class="modal fade" id="modal-about" tabindex="-1" role="dialog" aria-labelledby="modal-about" aria-hidden="true">
+      <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
+        <div class=" modal-content modal-win ">
+          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+          <div class="row">
+            <div class="col-md-4"><img class="res-i mb-2" src="img/-----13p.jpg" alt=""/></div>
+            <div class="col">
+              <div class="h3">Однокомнатная квартира </div>
+              <div class="list mb-2">
+                <div>Тип помещения
+                  <div class="strong">1 ккв</div>
+                </div>
+                <div>Секция 
+                  <div class="strong">7</div>
+                </div>
+                <div>Этаж
+                  <div class="strong">3</div>
+                </div>
+                <div>Номер квартиры
+                  <div class="strong">82</div>
+                </div>
+                <div>Срок сдачи
+                  <div class="strong">IV квартал 2018</div>
+                </div>
+                <div>Общая площадь
+                  <div class="strong">54,45 м²</div>
+                </div>
+                <div>Площадь кухни
+                  <div class="strong">12м²</div>
+                </div>
+                <div>Высота потолка
+                  <div class="strong">3м</div>
+                </div>
+                <div>Отделка
+                  <div class="strong">Подчистовая</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col-md-4">
+              <div class="row align-items-center">
+                <div class="col-auto">
+                  <div class="h6">Поделиться:</div>
+                </div>
+                <div class="col">
+                  <div class="soc d-flex"><a class="soc__item d-block" href="#" target="_blank">
+                    <svg class="icon icon-vk ">
+                      <use xlink:href="img/svg/sprite.svg#vk"></use>
+                    </svg></a><a class="soc__item d-block" href="#" target="_blank">
+                    <svg class="icon icon-fb ">
+                      <use xlink:href="img/svg/sprite.svg#fb"></use>
+                    </svg></a><a class="soc__item d-block" href="#" target="_blank">
+                    <svg class="icon icon-google-plus ">
+                      <use xlink:href="img/svg/sprite.svg#google-plus"></use>
+                    </svg></a><a class="soc__item d-block" href="#" target="_blank">
+                    <svg class="icon icon-inst ">
+                      <use xlink:href="img/svg/sprite.svg#inst"></use>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row align-items-end">
+                <div class="col-auto">
+                  <div class="h3 text-primary price">2 850 000 </div>
+                </div>
+                <div class="col-auto">
+                  <div>Бесплатная индивидуальная экскурсия</div><a class="btn btn btn-red btn-block" href="#" data-toggle="modal" data-target="#modal-win">Записаться на экскурсию</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
+      <div class="text-center   modal-dialog  modal-dialog-centered  " role="document"> 
+        <div class="form-wrap modal-content modal-win">
+          <form>
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button><br/>
+            <div class="h2">Заявка принята</div><br/>
+            <div class="h3">Скоро с Вами свяжутся</div><br/>
+          </form>
+        </div>
+      </div>
     </div>
     <!-- modal-->
     <script src="js/jquery.min.js"></script>

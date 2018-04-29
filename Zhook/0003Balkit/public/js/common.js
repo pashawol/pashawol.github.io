@@ -6,6 +6,9 @@ $(".input-range-double").ionRangeSlider({
     max: 10000,
  });
 
+
+
+
 $(".input-range-single").each(function(){
   let minV = $(this).data("min"),
       maxV = $(this).data("max") ,
@@ -111,7 +114,15 @@ $('.tabs-block').easyResponsiveTabs({
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
+  // аккордион в карточке
+  $(".show-hide").click(function(){
+    $(this).toggleClass("active").next(".tr-tooggle").toggle();
+  })
   
+  // $("tr[data-toggle='modal'] td").click(function(){
+  //   $('#modal-about').modal('show')
+  // })
+
  // карта
 
  if ($("div").is("#map")){
@@ -135,6 +146,8 @@ $('.tabs-block').easyResponsiveTabs({
 });
  }
  
+
+
 });
  
  
