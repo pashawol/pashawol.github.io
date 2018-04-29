@@ -263,11 +263,194 @@
     <!-- start card-body-->
     <div class="card-body section" id="card-body">
       <div class="container">
-        <h2 class="text-center">card-body</h2>
-        <div class="row"></div>
+        <div class="tabs-block">
+          <div class="resp-tabs-list d-none d-lg-block">
+            <div class="tabs-block__btn btn btn-light btn-sm resp-tab-btn">Описание объекта
+            </div>
+            <div class="tabs-block__btn btn btn-light btn-sm resp-tab-btn">Квартиры в продаже
+            </div>
+            <div class="tabs-block__btn btn btn-light btn-sm resp-tab-btn">Акции и скидки
+            </div>
+            <div class="tabs-block__btn btn btn-light btn-sm resp-tab-btn">Все планировки
+            </div>
+            <div class="tabs-block__btn btn btn-light btn-sm resp-tab-btn">Расположение на карте
+            </div>
+          </div>
+          <div class="tabs-block__wrap resp-tabs-container"> 
+            <div class="tabs-block__content">
+              <table class="table table-sm table-borderless h6">
+                  <tr>
+                    <td>Тип операции:	</td>
+                    <td class="text-right">прямая продажа</td>
+                  </tr>
+                  <tr>
+                    <td>Количество комнат:	</td>
+                    <td class="text-right">2</td>
+                  </tr>
+                  <tr>
+                    <td>Общ. площадь, м.кв.:	</td>
+                    <td class="text-right">58.3</td>
+                  </tr>
+                  <tr>
+                    <td>Жил. площадь, м.кв. :</td>
+                    <td class="text-right">	31.9</td>
+                  </tr>
+                  <tr>
+                    <td>Пл. кухни, м.кв.:</td>
+                    <td class="text-right">	11.5</td>
+                  </tr>
+                  <tr>
+                    <td>Этаж/этажность:	</td>
+                    <td class="text-right">2/22</td>
+                  </tr>
+                  <tr>
+                    <td>Тип дома:	</td>
+                    <td class="text-right">Монол.Панельный</td>
+                  </tr>
+              </table>
+            </div>
+            <div class="tabs-block__content">
+              <table></table>
+            </div>
+            <div class="tabs-block__content">
+            </div>
+            <div class="tabs-block__content">
+            </div>
+            <div class="map-wrap">
+              <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+              <div id="map"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- end card-body-->
+    <!-- start s-calc-->
+    <div class="s-calc section" id="s-calc">
+      <div class="container">
+        <h2>Ипотечный калькулятор</h2>
+        <div class="row">
+          <div class="col-lg-8 mb-5">
+            <div class="s-calc__slides">
+              <div class="s-calc__item">
+                <div class="row align-items-center">
+                  <div class="col-lg-auto">
+                    <div class="s-calc__title">Стоимость квартиры
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="s-calc__range-wrap">
+                      <input class="input-range input-range-single" type="text" data-min="0" data-max="13000000"/>
+                    </div>
+                  </div>
+                  <div class="col-md-auto">
+                    <div class="s-calc__text h5 mb-0">
+                      <div class="row">
+                        <div class="col text-range-js text-primary">5 400 000</div>
+                        <div class="col-auto price text-primary"></div>
+                        <div class="col-12">
+                          <div class="ili h6 price">или 2 097 500</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-calc__item">
+                <div class="row align-items-center">
+                  <div class="col-lg-auto">
+                    <div class="s-calc__title">Первоначальный взнос
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="s-calc__range-wrap">
+                      <input class="input-range input-range-single" type="text" data-min="0" data-max="100"/>
+                    </div>
+                  </div>
+                  <div class="col-md-auto">
+                    <div class="s-calc__text h5 mb-0">
+                      <div class="row">
+                        <div class="col text-range-js text-primary">25</div>
+                        <div class="col-auto text-primary">%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-calc__item">
+                <div class="row align-items-center">
+                  <div class="col-lg-auto">
+                    <div class="s-calc__title">Срок кредита
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="s-calc__range-wrap">
+                      <input class="input-range input-range-single" type="text" data-min="0" data-max="50"/>
+                    </div>
+                  </div>
+                  <div class="col-md-auto">
+                    <div class="s-calc__text h5 mb-0">
+                      <div class="row">
+                        <div class="col text-range-js text-primary">12</div>
+                        <div class="col-auto text-primary">лет 		</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-calc__item">
+                <div class="row align-items-center">
+                  <div class="col-lg-auto">
+                    <div class="s-calc__title">Процентная ставка
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="s-calc__range-wrap">
+                      <input class="input-range input-range-single" type="text" data-min="0" data-max="30"/>
+                    </div>
+                  </div>
+                  <div class="col-md-auto">
+                    <div class="s-calc__text h5 mb-0">
+                      <div class="row">
+                        <div class="col text-range-js text-primary">9,2</div>
+                        <div class="col-auto text-primary">%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-5">
+            <div class="s-calc__caption">
+              <p>Используйте этот простой и удобный инструмент для оценки и расчета выплат по ипотечному кредиту:<br/>Следует помнить, что полученные цифры приблизительные. В расчете учтены не все дополнительные платежи, к примеру, затраты по страхованию. Ипотечный калькулятор, в первую очередь, полезен для подбора оптимальных условий кредита, при которых у вас не возникнет сложностей с погашением.</p>
+              <div class="h5 strong">Ваш ежемесячный платеж <br/>будет составлять:</div>
+              <div class="h2 price mb-0"><span class="text-primary">48 622</span></div>
+              <p>Вам готов помочь Ваш личный ипотечный менеджер</p><a class="s-calc__btn btn btn-red btn-lg" href="#">Оставить заявку</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end s-calc-->
+    <div class="section s-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-2">
+            <div class="h2"> <span class="text-primary">Trade-in </span>или Обмен</div>
+            <ul class="list-unstyled">
+              <li>• Продать свою квартиру и оплатить новую</li>
+              <li>• Платить в рассрочку, сделать ремонт, а затем продать свою старую квартиру</li>
+              <li>• Въехать в новую квартиру, а затем продать свою старую и рассчитаться за новую</li>
+              <li>• Взять ипотеку, въехать в новую квартиру, продать старую и расплатиться с кредитом</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 mb-2"><a href="#"><img class="res-i" src="img/-----12.jpg" alt=""/></a></div>
+        </div>
+        <div class="text-right"><a class="link more tdu text-secondary mt-1 mb-1 d-inline-block h5" href="#">Показать все ></a>
+        </div>
+      </div>
+    </div>
     <!-- start s-articals-->
     <div class="s-articals section pt-0" id="s-articals">
       <div class="container">

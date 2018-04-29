@@ -1,10 +1,34 @@
  jQuery(document).ready(function($) {  
 // слайдер ползунок
-$(".input-range").ionRangeSlider({
+$(".input-range-double").ionRangeSlider({
   type: "double",
    min: 0.8,
     max: 10000,
  });
+
+$(".input-range-single").each(function(){
+  let minV = $(this).data("min"),
+      maxV = $(this).data("max") ,
+      result = $(this).parents(".s-calc__item").find(".text-range-js");
+    $(this).ionRangeSlider({ 
+       type: "single",
+      min: 0.8,
+    max: 10000,
+        from: minV,
+        onStart: function (data) {
+        result.text(data.from);
+        },
+        onChange: function (data) {
+            result.text(data.from);
+        },
+        onFinish: function (data) {
+            result.text(data.from);
+        },
+        onUpdate: function (data) {
+            result.text(data.from);
+        }
+     });
+})
 
 $(".btn-toggle-js").click(function(){ 
     $(".toggle-block-js").slideToggle();
