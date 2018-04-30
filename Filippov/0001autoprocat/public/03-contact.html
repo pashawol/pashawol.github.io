@@ -187,7 +187,7 @@
       <!-- end header-block-->
       <div class="s-page-head bg-gray">
         <div class="container">
-          <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><span class="breadcrumb-item active">Контакты</span>
+          <nav class="breadcrumb"><a class="breadcrumb-item link-body" href="#">Главная</a><span class="breadcrumb-item active">Контакты</span>
           </nav>
           <h1 class="h2 mb-0 page-title mono ttu text-lg-left text-center">Контакты</h1>
         </div>
@@ -245,7 +245,7 @@
               <div class="row align-items-center">
                 <div class="col-xxl-auto col-xl col-lg-auto col-md">
                   <addr class="s-contact-body__addr">
-                    <div class="h6 mb-0"><strong>129366, Москва, </strong>Проспект Мира 150, Гостиница Космос (ВДНХ), офис&nbsp;36</div>
+                    <div class="h6 mb-0"><strong>129366, Москва, </strong>Проспект Андроповаб д. 8</div>
                   </addr>
                 </div>
                 <div class="col-md-auto"><a class="s-contact-body__btn-vid btn btn-outline-secondary popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
@@ -259,17 +259,13 @@
               <div class="row align-items-center">
                 <div class="col-auto">
                   <div class="s-contact-body__item s-contact-body__item-2">
-                    <div class="s-contact-body__icon-wrap">
-                      <div class="s-contact-body__icon s-contact-body__icon-wh d-inline-flex">
-                        <svg class="icon icon-phone-call ">
-                          <use xlink:href="img/svg/sprite.svg#phone-call"></use>
-                        </svg>
-                      </div>
-                      <div class="s-contact-body__icon s-contact-body__icon-v d-inline-flex">
-                        <svg class="icon icon-phone-call ">
-                          <use xlink:href="img/svg/sprite.svg#phone-call"></use>
-                        </svg>
-                      </div>
+                    <div class="s-contact-body__icon-wrap"><a class="s-contact-body__icon s-contact-body__icon-wh d-inline-flex" href="whatsapp://send?phone=+79262235607">
+                      <svg class="icon icon-phone-call ">
+                        <use xlink:href="img/svg/sprite.svg#phone-call"></use>
+                      </svg></a><a class="s-contact-body__icon s-contact-body__icon-v d-inline-flex" href="viber://add?number=+79262235607">
+                      <svg class="icon icon-phone-call ">
+                        <use xlink:href="img/svg/sprite.svg#phone-call"></use>
+                      </svg></a>
                     </div>
                     <div class="s-contact-body__link h4 pb-0 mono mb-0">+7 (926) 223-56-07
                     </div>
@@ -303,9 +299,9 @@
           // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
           var mapOptions = {
           // How zoomed in you want the map to start at (always required)
-          zoom: 16,
+          zoom: 17,
           // The latitude and longitude to center the map (always required)
-          center: new google.maps.LatLng(55.8205,37.647), // New York
+          center: new google.maps.LatLng( 55.6955,37.665683899999976), // New York
           // How you would like to style the map.
           // This is where you would paste any style found on Snazzy Maps.
           styles: [{"featureType":"water","elementType":"all","stylers":[{"hue":"#7fc8ed"},{"saturation":55},{"lightness":-6},{"visibility":"on"}]},{"featureType":"water","elementType":"labels","stylers":[{"hue":"#7fc8ed"},{"saturation":55},{"lightness":-6},{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"hue":"#83cead"},{"saturation":1},{"lightness":-15},{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"hue":"#f3f4f4"},{"saturation":-84},{"lightness":59},{"visibility":"on"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbbbbb"},{"saturation":-100},{"lightness":26},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#ffcc00"},{"saturation":100},{"lightness":-35},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#ffcc00"},{"saturation":100},{"lightness":-22},{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"hue":"#d7e4e4"},{"saturation":-60},{"lightness":23},{"visibility":"on"}]}]
@@ -318,7 +314,7 @@
           // Let's also add a marker while we're at it
           var iconBase = 'img/logo24.png';
           var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(55.821742,37.646972),
+          position: new google.maps.LatLng(55.696,37.665683899999976),
           map: map,
           icon: iconBase,
           title: 'Автопрокат24'
@@ -342,17 +338,13 @@
             <div class="row align-items-center d-md-none justify-content-center">
               <div class="col-sm-auto">
                 <div class="s-contact-body__item s-contact-body__item-2">
-                  <div class="s-contact-body__icon-wrap">
-                    <div class="s-contact-body__icon s-contact-body__icon-wh d-inline-flex">
-                      <svg class="icon icon-phone-call ">
-                        <use xlink:href="img/svg/sprite.svg#phone-call"></use>
-                      </svg>
-                    </div>
-                    <div class="s-contact-body__icon s-contact-body__icon-v d-inline-flex">
-                      <svg class="icon icon-phone-call ">
-                        <use xlink:href="img/svg/sprite.svg#phone-call"></use>
-                      </svg>
-                    </div>
+                  <div class="s-contact-body__icon-wrap"><a class="s-contact-body__icon s-contact-body__icon-wh d-inline-flex" href="whatsapp://send?phone=+79262235607">
+                    <svg class="icon icon-phone-call ">
+                      <use xlink:href="img/svg/sprite.svg#phone-call"></use>
+                    </svg></a><a class="s-contact-body__icon s-contact-body__icon-v d-inline-flex" href="viber://add?number=+79262235607">
+                    <svg class="icon icon-phone-call ">
+                      <use xlink:href="img/svg/sprite.svg#phone-call"></use>
+                    </svg></a>
                   </div>
                   <div class="s-contact-body__link h4 pb-0 mono mb-0">+7 (926) 223-56-07
                   </div>
