@@ -57,9 +57,7 @@ $('.popover-js').popover({
     mainClass: 'mfp-with-zoom mfp-img-mobile',
     image: {
       verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
+      
     },
     gallery: {
       enabled: true
@@ -176,13 +174,9 @@ function heightses() {
   }
 
   $(window).resize(function() {
-    heightses();
-   
+    heightses(); 
   });
- 
-
- 
-
+  
  heightses();
 
 
@@ -206,6 +200,15 @@ function heightses() {
  
   
  
+  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
    
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
