@@ -165,7 +165,7 @@ var swiperblog = new Swiper('.blog-slider', {
   // аккордион в ЛК
  
   $(".toggle-td-js").click(function(){
-    $(this).toggleClass("active").parent("tr").find(".hidden-td-js .td-inner").slideToggle('100').toggleClass("active");
+    $(this).toggleClass("active").parent("tr").find(".hidden-td-js .td-inner").slideToggle(250).toggleClass("active");
   })
 
 function heightses() {
