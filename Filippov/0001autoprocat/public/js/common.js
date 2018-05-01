@@ -4,7 +4,20 @@
   svg4everybody({});
   // Custom JS
   
+  
+   var url=document.location.href; 
+  $.each($(".s-po-body .s-catalog-tab-link "),function(){
  
+  if(this.href==url){
+    if($(this).hasClass("s-catalog-tab-link") == true){
+
+    $(this).addClass('active');
+    }
+    
+
+  };
+ 
+  });
 
 $('.popover-js').popover({
   placement: 'auto',
@@ -115,11 +128,45 @@ var swiperCard = new Swiper('.carusel-slider', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+       
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       } 
     });
+// слайдер в блоге
+
+var swiperblog = new Swiper('.blog-slider', { 
+      slidesPerView: 3,
+      spaceBetween: 30,
+      // slidesPerColumn: 3,
+      // slidesPerView: 'auto', 
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+       preloadImages: false, 
+      lazy: true,
+      lazy: {
+        loadPrevNext: true,
+      },
+           breakpoints: {
+        992: {
+          slidesPerView: 2,
+        },
+         
+        768: {
+          slidesPerView: 1, 
+        }
+      }
+    });
+
+
+  // аккордион в ЛК
+ 
+  $(".toggle-td-js").click(function(){
+    $(this).toggleClass("active").parent("tr").find(".hidden-td-js .td-inner").slideToggle('100').toggleClass("active");
+  })
 
 function heightses() {
 
@@ -128,13 +175,21 @@ function heightses() {
    //
     
 
-    // скрывает моб меню 
-    if (w<992){
-        // swiperCard.init();
-    }
-     
+    // скрывает/показывает td  в аккордионе
+     $(".hidden-td-js .td-inner").each(function(){ 
+          if (w>992){
+               $(".toggle-td-js").removeClass("active");
+              $(this).removeClass("active").removeAttr("style")
+
+           }
+        else  if (  w < 991.98 &&  !$(this).hasClass("active")) {
+
+            $(this).hide(); 
+        }
+     })
    
     if (w>992){
+        
       // swiperCard.init();
       // swiperCard.destroy();
        $(".toggle-mnu-1").removeClass("on");
@@ -142,6 +197,8 @@ function heightses() {
         $(".hidden-mnu").removeClass("active");
         $("html, body").removeClass("fixed");
     }
+     
+
     var topH=$("header ").height() + $('.top-nav  ').height();  
     var topH2=$(".header-block ").height();  
     $(window).scroll(function(){
@@ -209,6 +266,8 @@ function heightses() {
 
     fixedContentPos: false
   });
+
+
    
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
