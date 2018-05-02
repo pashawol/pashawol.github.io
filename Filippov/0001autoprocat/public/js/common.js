@@ -168,12 +168,24 @@ var swiperblog = new Swiper('.blog-slider', {
     $(this).toggleClass("active").parent("tr").find(".hidden-td-js .td-inner").slideToggle(250).toggleClass("active");
   })
 
+
 function heightses() {
 
     var w = $(window).width();
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
    //
     
+  $(".btn-more-js").click(function(){
+    var tr= $(this).parents(".s-po-body__section").find("tr:hidden");
+     if (w>992) {
+           tr.fadeIn();
+         console.log("no")
+       }
+     else  if (  w < 991.98){
+          tr.css("display", "block");
+          console.log("yes")
+        }
+  })
 
     // скрывает/показывает td  в аккордионе
      $(".hidden-td-js .td-inner").each(function(){ 
