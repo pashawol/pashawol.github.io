@@ -44,10 +44,13 @@
               </div>
             </div>
             <div>
-              <div class="trop__lk-wrap d-inline-block"><a class="trop__i-link text-body tdn link-body" href="#">
-                <svg class="icon icon-user ">
-                  <use xlink:href="img/svg/sprite.svg#user"></use>
-                </svg>Личный кабинет</a>
+              <div class="trop__lk-wrap d-inline-block">
+                <div class="trop__i-link text-body text-left"> 
+                  <svg class="icon icon-user ">
+                    <use xlink:href="img/svg/sprite.svg#user"></use>
+                  </svg>
+                  <div><a class="popup-with-move-anim link-body d-block link-body" href="#modal-po">Личный кабинет </a><a class="po-exit link-body text-gray-700 small d-block" href="#">Выйти</a></div>
+                </div>
               </div>
             </div>
             <ul class="trop__nav">
@@ -108,11 +111,23 @@
                 </svg>
                 <div class="d-none d-xl-inline">Быстрая оплата</div></a>
               </div>
-              <div class="col-auto"><a class="top_line__link text-body" href="#">
-                <svg class="icon icon-user ">
-                  <use xlink:href="img/svg/sprite.svg#user"></use>
-                </svg>
-                <div class="d-none d-xl-inline">Личный кабинет</div></a>
+              <div class="col-auto">
+                <div class="top_line__link text-body">
+                  <div class="d-none d-xl-inline">
+                    <svg class="icon icon-user ">
+                      <use xlink:href="img/svg/sprite.svg#user"></use>
+                    </svg>
+                  </div>
+                  <div><a class="popup-with-move-anim link-body d-block link-body" href="#modal-po"> 
+                      <div class="d-xl-none">
+                        <svg class="icon icon-user ">
+                          <use xlink:href="img/svg/sprite.svg#user"></use>
+                        </svg>
+                      </div>
+                      <div class="d-none d-xl-inline">Личный кабинет</div></a>
+                    <div class="d-none d-xl-inline"><a class="po-exit link-body text-gray-700 small d-block" href="#">Выйти</a></div>
+                  </div>
+                </div>
               </div>
               <div class="col-auto d-none d-lg-block">
                 <div class="top_line__cont">
@@ -163,7 +178,7 @@
                   <use xlink:href="img/svg/sprite.svg#purse"></use>
                 </svg></a>
               </div>
-              <div class="col-auto d-block d-xl-block d-lg-none"><a class="top-nav__icon-link text-body link-body" href="#">
+              <div class="col-auto d-block d-xl-block d-lg-none"><a class="top-nav__icon-link text-body link-body popup-with-move-anim" href="#modal-po">
                 <svg class="icon icon-user ">
                   <use xlink:href="img/svg/sprite.svg#user"></use>
                 </svg></a>
@@ -191,9 +206,9 @@
                 <div class="min-row row align-items-center">
                   <div class="col-md-auto text-md-left text-center">
                     <div class="s-po-head__bal strong"> Баланс: 1 ₽
-                    </div><a class="s-po-head__link text-gray-700 tdu" href="#">Вывести</a>
+                    </div><a class="s-po-head__link text-gray-700 tdu popup-with-move-anim" href="#modal-withdraw-step-1">Вывести</a>
                   </div>
-                  <div class="col-sm"><a class="s-po-head__btn btn btn-primary btn-block" href="#">
+                  <div class="col-sm"><a class="s-po-head__btn btn btn-primary btn-block popup-with-move-anim" href="#modal-pay-step-1">
                     <div class="strong">Пополнение онлайн </div>
                     <div class="small">Комиссия банка 4% </div></a>
                   </div>
@@ -313,7 +328,7 @@
                   <div class="td-inner">
                     <div class="min-row row">
                       <div class="col d-lg-none strong"> Конец аренды</div>
-                      <div class="col">30.10.2017 15:43<a class="s-po-body__btn-sm btn btn-sm btn-primary" href="#">Изменить</a>
+                      <div class="col">30.10.2017 15:43<a class="s-po-body__btn-sm btn btn-sm btn-primary popup-with-move-anim" href="#modal-datepicker">Изменить</a>
                       </div>
                     </div>
                   </div>
@@ -323,7 +338,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -417,7 +432,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -494,7 +509,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -571,7 +586,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -648,7 +663,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -725,7 +740,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -802,7 +817,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -879,7 +894,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -956,7 +971,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -1033,7 +1048,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -1110,7 +1125,7 @@
                     <div class="min-row row">
                       <div class="col d-lg-none strong">Сумма</div>
                       <div class="col"> 
-                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller" href="#">Подробнее</a>
+                        <div>14 450&nbsp;₽ </div><a class="text-gray-700 link-body tdu smaller popup-with-move-anim" href="#modal-orders-more">Подробнее</a>
                       </div>
                     </div>
                   </div>
@@ -1185,7 +1200,7 @@
                     </svg>
                     <div class="d-none d-lg-inline">Быстрая оплата</div></a>
                   </div>
-                  <div class="col-auto"><a class="footer__link text-white link-body" href="#">
+                  <div class="col-auto"><a class="footer__link text-white link-body popup-with-move-anim" href="#modal-po">
                     <svg class="icon icon-user ">
                       <use xlink:href="img/svg/sprite.svg#user"></use>
                     </svg>
@@ -1244,8 +1259,8 @@
             </div>
             <!-- +e.input-wrap-->
             <div class="form-wrap__btn-wrap">
-              <butonn class="form-wrap__btn btn btn-primary btn-block">Отправить
-              </butonn>
+              <button class="form-wrap__btn btn btn-primary btn-block">Отправить
+              </button>
             </div>
             <div class="wrap-polite">
               <label class="custom-input polite"><input class="custom-input__input custom-input__input-checkbox" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab custom-input__lab-lg"></span><span class="small text-gray-700">Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;Условиями</span>
@@ -1254,7 +1269,7 @@
           </div>
         </form>
       </div>
-      <!-- #modal-call-->
+      <!-- end #modal-call-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-one-click">
         <form>
           <div class="text-center">
@@ -1265,8 +1280,8 @@
             </div>
             <!-- +e.input-wrap-->
             <div class="form-wrap__btn-wrap">
-              <butonn class="form-wrap__btn btn btn-primary btn-block">Заказать в один клик
-              </butonn>
+              <button class="form-wrap__btn btn btn-primary btn-block">Заказать в один клик
+              </button>
             </div>
             <div class="wrap-polite">
               <label class="custom-input polite"><input class="custom-input__input custom-input__input-checkbox" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab custom-input__lab-lg"></span><span class="small text-gray-700">Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;Условиями</span>
@@ -1275,7 +1290,7 @@
           </div>
         </form>
       </div>
-      <!-- #modal-one-click-->
+      <!-- end #modal-one-click-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-offer">
         <form>
           <div class="text-center">
@@ -1290,14 +1305,14 @@
                 <div class="col-6">
                   <div class="form-group">
                     <label class="d-block label-date-picker-js">
-                      <input class="form-cotrol datepicker startDate" type="text" placeholder="Начало аренды"/>
+                      <input class="form-control datepicker startDate" type="text" placeholder="Начало аренды"/>
                     </label>
                   </div>
                 </div>
                 <div class="col-6">
                   <div class="form-group">
                     <label class="d-block label-date-picker-js">
-                      <input class="form-cotrol datepicker endDate" type="text" placeholder="Конец аренды  "/>
+                      <input class="form-control datepicker endDate" type="text" placeholder="Конец аренды  "/>
                     </label>
                   </div>
                 </div>
@@ -1310,8 +1325,8 @@
             </div>
             <!-- +e.input-wrap-->
             <div class="form-wrap__btn-wrap">
-              <butonn class="form-wrap__btn btn btn-primary btn-block">Отправить
-              </butonn>
+              <button class="form-wrap__btn btn btn-primary btn-block">Отправить
+              </button>
             </div>
             <div class="wrap-polite">
               <label class="custom-input polite"><input class="custom-input__input custom-input__input-checkbox" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab custom-input__lab-lg"></span><span class="small text-gray-700">Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;Условиями</span>
@@ -1320,7 +1335,7 @@
           </div>
         </form>
       </div>
-      <!-- #modal-offer-->
+      <!-- end #modal-offer-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-win-double modal-form" id="modal-zakaz">
         <form>
           <div class="main-row row">
@@ -1379,8 +1394,8 @@
                 </div>
                 <!-- +e.input-wrap-->
                 <div class="form-wrap__btn-wrap">
-                  <butonn class="form-wrap__btn btn btn-primary btn-block">Завершить заказ
-                  </butonn>
+                  <button class="form-wrap__btn btn btn-primary btn-block">Завершить заказ
+                  </button>
                 </div>
                 <div class="wrap-polite">
                   <label class="custom-input polite"><input class="custom-input__input custom-input__input-checkbox" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab custom-input__lab-lg"></span><span class="small text-gray-700">Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;Условиями</span>
@@ -1391,7 +1406,7 @@
           </div>
         </form>
       </div>
-      <!-- #modal-zakaz-->
+      <!-- end #modal-zakaz-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-win-double modal-form" id="modal-pay">
         <form>
           <div class="main-row row">
@@ -1412,8 +1427,8 @@
                     <div>Общая сумма к оплате: <strong>0 ₽</strong></div>
                   </div>
                   <div class="form-wrap__btn-wrap">
-                    <butonn class="form-wrap__btn btn btn-primary btn-block">Оплатить
-                    </butonn>
+                    <button class="form-wrap__btn btn btn-primary btn-block">Оплатить
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1484,14 +1499,14 @@
                 <div>Общая сумма к оплате: <strong>0 ₽</strong></div>
               </div>
               <div class="form-wrap__btn-wrap">
-                <butonn class="form-wrap__btn btn btn-primary btn-block">Оплатить
-                </butonn>
+                <button class="form-wrap__btn btn btn-primary btn-block">Оплатить
+                </button>
               </div>
             </div>
           </div>
         </form>
       </div><a class="link text-body popup-with-move-anim" href="#modal-pay-test"> Быстрая оплата</a>
-      <!-- #modal-pay-->
+      <!-- end #modal-pay-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-win-double modal-form" id="modal-pay-test">
         <form>
           <div class="main-row row">
@@ -1512,8 +1527,8 @@
                     <div>Общая сумма к оплате: <strong>0 ₽</strong></div>
                   </div>
                   <div class="form-wrap__btn-wrap">
-                    <butonn class="form-wrap__btn btn btn-primary btn-block">Оплатить
-                    </butonn>
+                    <button class="form-wrap__btn btn btn-primary btn-block">Оплатить
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1584,14 +1599,14 @@
                 <div>Общая сумма к оплате: <strong>0 ₽</strong></div>
               </div>
               <div class="form-wrap__btn-wrap">
-                <butonn class="form-wrap__btn btn btn-primary btn-block">Оплатить
-                </butonn>
+                <button class="form-wrap__btn btn btn-primary btn-block">Оплатить
+                </button>
               </div>
             </div>
           </div>
         </form>
       </div>
-      <!-- #modal-pay-test-->
+      <!-- end #modal-pay-test-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-filter" id="modal-filter">
         <form>
           <div class="form-wrap__title mono ttu text-center">Расширенный фильтр
@@ -2129,7 +2144,7 @@
           </div>
         </form>
       </div>
-      <!-- #modal-filter-->
+      <!-- end #modal-filter-->
       <div class="zoom-anim-dialog mfp-hide modal-win modal-form form-wrap text-center" id="thanks"><br/>
         <h3>Заявка принята</h3><br/>
         <p class="form-wrap__h4">Скоро с Вами свяжутся</p><br/>
@@ -2146,13 +2161,13 @@
             </div>
             <!-- +e.input-wrap-->
             <div class="form-wrap__btn-wrap">
-              <butonn class="form-wrap__btn btn btn-primary btn-block">Отправить
-              </butonn>
+              <button class="form-wrap__btn btn btn-primary btn-block">Отправить
+              </button>
             </div>
           </div>
         </form>
       </div>
-      <!-- #modal-idea -->
+      <!-- end #modal-idea -->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-deposit">
         <form>
           <div class="text-center">
@@ -2163,8 +2178,8 @@
             </div>
             <!-- +e.input-wrap-->
             <div class="form-wrap__btn-wrap">
-              <butonn class="form-wrap__btn btn btn-primary btn-block">Отправить
-              </butonn>
+              <button class="form-wrap__btn btn btn-primary btn-block">Отправить
+              </button>
             </div>
             <div class="wrap-polite">
               <label class="custom-input polite"><input class="custom-input__input custom-input__input-checkbox" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab custom-input__lab-lg"></span><span class="small text-gray-700">Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;Условиями</span>
@@ -2173,7 +2188,7 @@
           </div>
         </form>
       </div>
-      <!-- #modal-deposit-->
+      <!-- end #modal-deposit-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-new-auto">
         <form>
           <div class="text-center">
@@ -2184,8 +2199,8 @@
             </div>
             <!-- +e.input-wrap-->
             <div class="form-wrap__btn-wrap">
-              <butonn class="form-wrap__btn btn btn-primary btn-block">Отправить
-              </butonn>
+              <button class="form-wrap__btn btn btn-primary btn-block">Отправить
+              </button>
             </div>
             <div class="wrap-polite">
               <label class="custom-input polite"><input class="custom-input__input custom-input__input-checkbox" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab custom-input__lab-lg"></span><span class="small text-gray-700">Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;Условиями</span>
@@ -2194,7 +2209,7 @@
           </div>
         </form>
       </div>
-      <!-- #modal-new-auto-->
+      <!-- end #modal-new-auto-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form form-wrap text-center modal-lg" id="popular-car">
         <div class="form-wrap__title mono ttu text-center mb-4">10 самых популярных авто
         </div>
@@ -2279,7 +2294,176 @@
         </div>
         <!-- +e.item.progress-->
       </div>
-      <!-- #popular-car-->
+      <!-- end #popular-car-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-po">
+        <form>
+          <div class="text-center">
+            <div class="form-wrap__title mono ttu pb-4">Вход в личный кабинет
+            </div>
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center" type="tel" placeholder="Введите телефон"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center" type="password" placeholder="Пароль"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__btn-wrap">
+              <button class="form-wrap__btn btn btn-primary btn-block">Войти
+              </button>
+            </div>
+            <div class="min-row row justify-content-between mt-2">
+              <div class="col-auto">
+                <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Запомнить меня</span>
+                </label>
+              </div>
+              <div class="col-auto"><a class="tdu text-gray-700" href="#"> Восстановить пароль</a></div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- end #modal-po-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-datepicker">
+        <form>
+          <div class="text-center">
+            <div class="form-wrap__title mono ttu pb-4">изменить дату и&nbsp;время окончания аренды
+            </div>
+            <div class="row min-min-row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="d-block label-date-picker-js">
+                    <input class="form-control datepicker datepicker-date datepicker-date-btn-no text-center" type="text" placeholder="Дата"/>
+                  </label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <input class="form-control text-center" type="text" placeholder="Время  "/>
+                </div>
+              </div>
+            </div>
+            <p class="small">Если время окончания аренды не позднее времени выдачи<br/>— Вы сэкономите 1 сутки. После нажатия на кнопку "Сохранить"<br/>	Ваш баланс пресчитается автоматически и у Вас будет 1 час 	на оплату. Вы сможете изменить дату и время окончания  	аренды в любое время.</p>
+            <div class="form-wrap__btn-wrap">
+              <button class="form-wrap__btn btn btn-primary btn-block">Сохранить
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- end #modal-datepicker-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form form-wrap modal-lg" id="modal-orders-more">
+        <div class="form-wrap__title mono ttu text-center mb-4">10 самых популярных авто
+        </div>
+        <table class="form-wrap__table form-wrap__table-fine table table-striped text-lg-center table-mobile">
+          <tr>
+            <th class="d-none"></th>
+            <th>Комментарий</th>
+            <th>Количество</th>
+            <th>Стоимость</th>
+            <th>Сумма</th>
+          </tr>
+          <tr>
+            <td class="d-lg-none toggle-td-js">
+              <div class="td-inner strong">325&nbsp;₽</div>
+            </td>
+            <td class="hidden-td-js">
+              <div class="td-inner">
+                <div class="min-row row">
+                  <div class="col d-lg-none strong">Комментарий</div>
+                  <div class="col">Аренда с 28.10.2017 по 30.10.2017</div>
+                </div>
+              </div>
+            </td>
+            <td class="hidden-td-js">
+              <div class="td-inner">
+                <div class="min-row row">
+                  <div class="col d-lg-none strong">Количество</div>
+                  <div class="col">1</div>
+                </div>
+              </div>
+            </td>
+            <td class="hidden-td-js">
+              <div class="td-inner">
+                <div class="min-row row">
+                  <div class="col d-lg-none strong">Стоимость</div>
+                  <div class="col">32&nbsp;₽</div>
+                </div>
+              </div>
+            </td>
+            <td class="hidden-td-js">
+              <div class="td-inner">
+                <div class="min-row row">
+                  <div class="col d-lg-none strong">Сумма</div>
+                  <div class="col">325&nbsp;₽</div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="d-none"></td>
+            <td colspan="3"></td>
+            <td>
+              <div class="td-inner strong">
+                <div class="col d-lg-none"></div>
+                <div class="col">  Итого: 325&nbsp;₽ </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- end #modal-orders-more-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-pay-step-1">
+        <form>
+          <div class="text-center">
+            <div class="form-wrap__title mono ttu mb-4">пополнение онлайн 
+            </div>
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center" type="text" placeholder="Сумма пополнения, ₽"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="h6 text-center mb-4">
+              <div>Комиссия (4%): <strong>0 ₽</strong></div>
+              <div>Общая сумма к оплате: <strong>0 ₽</strong></div>
+            </div>
+            <div class="form-wrap__btn-wrap"><a class="form-wrap__btn btn btn-primary btn-block" href="#">Далее</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- end #modal-pay-step-1-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-withdraw-step-1">
+        <form>
+          <div class="text-center">
+            <div class="form-wrap__title mono ttu mb-4">вывести деньги на&nbsp;мои реквизиты
+            </div>
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center" type="text" placeholder="Сумма пополнения, ₽"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="h6 text-center mb-4">
+              <div>
+                Доступно к выводу:  <strong>1 004, 43 ₽</strong></div>
+            </div>
+            <div class="form-wrap__btn-wrap"><a class="form-wrap__btn btn btn-primary btn-block popup-with-move-anim" href="#modal-withdraw-step-2">Подтвердить</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- end #modal-withdraw-step-1-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-withdraw-step-2">
+        <form>
+          <div class="text-center">
+            <div class="form-wrap__title mono ttu mb-4">вывести деньги на&nbsp;мои реквизиты
+            </div>
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center" type="text" placeholder="Сумма пополнения, ₽"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="h6 text-center mb-4">
+              <div>
+                Доступно к выводу:  <strong>1 004, 43 ₽</strong></div>
+            </div>
+            <div class="h6 text-center mb-4">
+              Для вывода средств должны быть заполнены все поля в&nbsp;разделе <a class="link-body text-gray-700 tdu" href="#">Мои данные</a></div>
+          </div>
+        </form>
+      </div>
+      <!-- end #modal-withdraw-step-2-->
       <!--  конец модалки с ЛК -->
       <!-- modal-->
     </div>

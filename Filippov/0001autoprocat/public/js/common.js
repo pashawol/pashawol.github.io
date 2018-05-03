@@ -52,6 +52,13 @@ $('.popover-js').popover({
             }
         });
  })
+ $('.datepicker-date').datepicker({ 
+               locale: 'ru-ru',
+            uiLibrary: 'bootstrap4', 
+            format: 'dd.mm.yyyy',
+           
+        });
+ 
  $(".label-date-picker-js  input").click(function(){
   $(this).next().click();
  })
