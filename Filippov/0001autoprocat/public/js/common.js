@@ -82,7 +82,7 @@ $('.popover-js').popover({
     
     $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
-    $(".hidden-mnu").slideToggle("active");
+    $(".hidden-mnu").slideToggle();
     $("html, body").toggleClass("fixed");
     return false;
   }); 
@@ -179,13 +179,15 @@ function heightses() {
     var tr= $(this).parents(".s-po-body__section").find("tr:hidden");
      if (w>992) {
            tr.fadeIn();
-         console.log("no")
+        
+       
        }
      else  if (  w < 991.98){
           tr.css("display", "block");
-          console.log("yes")
         }
   })
+
+
 
     // скрывает/показывает td  в аккордионе
      $(".hidden-td-js .td-inner").each(function(){ 
@@ -201,7 +203,7 @@ function heightses() {
      })
    
     if (w>992){
-        
+        $(".s-po-body__section tr").removeAttr("style"); 
       // swiperCard.init();
       // swiperCard.destroy();
        $(".toggle-mnu-1").removeClass("on");
