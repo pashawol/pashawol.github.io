@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <meta name="description" content="о чем страница">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- start HEADER.header-->
+      <header class="header">
+        <!-- start .top_line-->
+        <div class="top_line">
+          <div class="container">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-auto">
+                <div class="top_line__logo"><img src="img/logo.png" alt=""/>
+                </div>
+              </div>
+              <div class="col"><span class="top_line__title h2">Выберите способ оплаты</span>
+              </div>
+              <div class="col-auto">
+                <div class="clock clock-num"> 
+                  <div class="clock__number">3 
+                  </div>
+                  <div class="clock__time">92 Экто
+                  </div>
+                  <div class="clock__date">111137,00 руб.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end .top_line-->
+      </header>
+      <!-- end HEADER.header-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row justify-content-center"> 
+            <div class="col-3"><a class="footer__btn footer__btn-gray btn bg-primary text-white d-flex popup-with-move-anim" href="#modal-1">получить чек</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-1">
+        <div class="container">
+          <div class="head">
+            <div class="h1 strong text-primary">Хотите получить электронную копию чека?</div>
+          </div>
+        </div>
+        <div class="footer"> 
+          <div class="container">
+            <div class="row justify-content-center"> 
+              <div class="col-4">
+                <div class="footer__btn footer__btn-gray btn">На эл. почту
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="footer__btn footer__btn-gray btn">На телефон
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="footer__btn footer__btn-gray btn">Нет, не хочу
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal-->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
