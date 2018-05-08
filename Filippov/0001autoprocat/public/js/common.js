@@ -111,6 +111,7 @@ $('.popover-js').popover({
 // слайдер на главной
  var swiper = new Swiper('.s-articals__slider', {
       loop: true ,
+			speed: 900,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -127,6 +128,7 @@ $('.popover-js').popover({
 
 var swiperCard = new Swiper('.carusel-slider', {
       // loop: true ,
+			speed: 900,
       // init: false,
       // slidesPerView: 3,
       // slidesPerColumn: 3,
@@ -146,6 +148,7 @@ var swiperCard = new Swiper('.carusel-slider', {
 var swiperblog = new Swiper('.blog-slider', {
       slidesPerView: 3,
       spaceBetween: 30,
+			speed: 900,
       // slidesPerColumn: 3,
       // slidesPerView: 'auto',
       navigation: {
@@ -168,6 +171,24 @@ var swiperblog = new Swiper('.blog-slider', {
       }
     });
 
+		// слайдер последних 10ти авто
+		var swiperR = new Swiper('.s-gal__slider', {
+				loop: true,
+				slidesPerView: 1,
+				spaceBetween: 30,
+				speed: 900,
+				pagination: {
+					el: '.swiper-pagination',
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				lazy: true,
+	      lazy: {
+	        loadPrevNext: true,
+	      }
+			});
 
   // аккордион в ЛК
 
