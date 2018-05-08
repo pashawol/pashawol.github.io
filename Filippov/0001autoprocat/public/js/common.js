@@ -178,8 +178,9 @@ var swiperblog = new Swiper('.blog-slider', {
 				spaceBetween: 30,
 				speed: 900,
 				pagination: {
-					el: '.swiper-pagination',
-				},
+			 el: '.swiper-pagination',
+			 type: 'fraction',
+		 },
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
