@@ -1,29 +1,29 @@
- jQuery(document).ready(function($) { 
+ jQuery(document).ready(function($) {
 
   // для свг
   svg4everybody({});
   // Custom JS
-  
-  
-   var url=document.location.href; 
+
+
+   var url=document.location.href;
   $.each($(".s-po-body .s-catalog-tab-link "),function(){
- 
+
   if(this.href==url){
     if($(this).hasClass("s-catalog-tab-link") == true){
 
     $(this).addClass('active');
     }
-    
+
 
   };
- 
+
   });
 
 $('.popover-js').popover({
   placement: 'auto',
   trigger: 'hover',
 })
- 
+
 
 
  var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
@@ -32,7 +32,7 @@ $('.popover-js').popover({
 
     var th = $(this);
 
-        th.find('.startDate').datepicker({ 
+        th.find('.startDate').datepicker({
                locale: 'ru-ru',
             uiLibrary: 'bootstrap4',
             // iconsLibrary: 'fontawesome',
@@ -52,24 +52,24 @@ $('.popover-js').popover({
             }
         });
  })
- $('.datepicker-date').datepicker({ 
+ $('.datepicker-date').datepicker({
                locale: 'ru-ru',
-            uiLibrary: 'bootstrap4', 
+            uiLibrary: 'bootstrap4',
             format: 'dd.mm.yyyy',
-           
+
         });
- 
+
  $(".label-date-picker-js  input").click(function(){
   $(this).next().click();
  })
    // accordion
-  $(".showhide").click(function() { 
+  $(".showhide").click(function() {
      $(this).toggleClass("active").next("div").slideToggle().parents().toggleClass("active");
   })
-  
+
       // галерея
   $(".gal").each(function(){
-    
+
   $(this).find("a").magnificPopup({
     type: 'image',
     closeOnContentClick: false,
@@ -77,7 +77,7 @@ $('.popover-js').popover({
     mainClass: 'mfp-with-zoom mfp-img-mobile',
     image: {
       verticalFit: true,
-      
+
     },
     gallery: {
       enabled: true
@@ -86,73 +86,73 @@ $('.popover-js').popover({
   })
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
-    
+
     $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
     $(".hidden-mnu").slideToggle();
     $("html, body").toggleClass("fixed");
     return false;
-  }); 
-    
-  
+  });
+
+
 // листалка по стр
  $(" .scroll-link").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
-        
+
             $('html, body').animate({ scrollTop: destination }, 1100);
-        
-        return false; 
+
+        return false;
     });
 
 
- 
- 
+
+
 // слайдер на главной
- var swiper = new Swiper('.s-articals__slider', { 
+ var swiper = new Swiper('.s-articals__slider', {
       loop: true ,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-       preloadImages: false, 
+       preloadImages: false,
       lazy: true,
       lazy: {
         loadPrevNext: true,
       }
-       
+
     });
 
 // слайдер в карточке
 
-var swiperCard = new Swiper('.carusel-slider', { 
+var swiperCard = new Swiper('.carusel-slider', {
       // loop: true ,
       // init: false,
       // slidesPerView: 3,
       // slidesPerColumn: 3,
-      slidesPerView: 'auto', 
+      slidesPerView: 'auto',
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-       
+
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-      } 
+      }
     });
 // слайдер в блоге
 
-var swiperblog = new Swiper('.blog-slider', { 
+var swiperblog = new Swiper('.blog-slider', {
       slidesPerView: 3,
       spaceBetween: 30,
       // slidesPerColumn: 3,
-      // slidesPerView: 'auto', 
+      // slidesPerView: 'auto',
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-       preloadImages: false, 
+       preloadImages: false,
       lazy: true,
       lazy: {
         loadPrevNext: true,
@@ -161,16 +161,16 @@ var swiperblog = new Swiper('.blog-slider', {
         992: {
           slidesPerView: 2,
         },
-         
+
         768: {
-          slidesPerView: 1, 
+          slidesPerView: 1,
         }
       }
     });
 
 
   // аккордион в ЛК
- 
+
   $(".toggle-td-js").click(function(){
     $(this).toggleClass("active").parent("tr").find(".hidden-td-js .td-inner").slideToggle(250).toggleClass("active");
   })
@@ -181,13 +181,13 @@ function heightses() {
     var w = $(window).width();
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
    //
-    
+
   $(".btn-more-js").click(function(){
     var tr= $(this).parents(".s-po-body__section").find("tr:hidden");
      if (w>992) {
            tr.fadeIn();
-        
-       
+
+
        }
      else  if (  w < 991.98){
           tr.css("display", "block");
@@ -197,7 +197,7 @@ function heightses() {
 
 
     // скрывает/показывает td  в аккордионе
-     $(".hidden-td-js .td-inner").each(function(){ 
+     $(".hidden-td-js .td-inner").each(function(){
           if (w>992){
                $(".toggle-td-js").removeClass("active");
               $(this).removeClass("active").removeAttr("style")
@@ -205,12 +205,12 @@ function heightses() {
            }
         else  if (  w < 991.98 &&  !$(this).hasClass("active")) {
 
-            $(this).hide(); 
+            $(this).hide();
         }
      })
-   
+
     if (w>992){
-        $(".s-po-body__section tr").removeAttr("style"); 
+        $(".s-po-body__section tr").removeAttr("style");
       // swiperCard.init();
       // swiperCard.destroy();
        $(".toggle-mnu-1").removeClass("on");
@@ -218,43 +218,43 @@ function heightses() {
         $(".hidden-mnu").removeClass("active");
         $("html, body").removeClass("fixed");
     }
-     
 
-    var topH=$("header ").height() + $('.top-nav  ').height();  
-    var topH2=$(".header-block ").height();  
+
+    var topH=$("header ").height() + $('.top-nav  ').height();
+    var topH2=$(".header-block ").height();
     $(window).scroll(function(){
                 if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed-ready'); 
+                    $('.top-nav  ').addClass('fixed-ready');
                 }
                 else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed-ready'); 
+                    $('.top-nav  ').removeClass('fixed-ready');
                 }
             });
 
     if($(this).scrollTop()>topH2){
                     $('.top-nav  ').addClass('fixed');
-                    
+
                 }
                 else if ($(this).scrollTop()<topH2){
                     $('.top-nav  ').removeClass('fixed');
-                   
+
                 }
     $(window).scroll(function(){
                 if($(this).scrollTop()>topH2){
-                    $('.top-nav  ').addClass('fixed'); 
+                    $('.top-nav  ').addClass('fixed');
                 }
                 else if ($(this).scrollTop()<topH2){
-                    $('.top-nav  ').removeClass('fixed'); 
+                    $('.top-nav  ').removeClass('fixed');
                 }
             });
 
-       // конец добавил 
+       // конец добавил
   }
 
   $(window).resize(function() {
-    heightses(); 
+    heightses();
   });
-  
+
  heightses();
 
 
@@ -270,14 +270,14 @@ function heightses() {
 
     closeBtnInside: true,
     preloader: false,
-    
+
     midClick: true,
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   });
- 
-  
- 
+
+
+
   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
     disableOn: 700,
     type: 'iframe',
@@ -289,21 +289,21 @@ function heightses() {
   });
 
 
-   
+
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
-  
-    
-   // $(".dropzone").dropzone({ 
+
+
+   // $(".dropzone").dropzone({
    //  url: "/file/post",
    //  addRemoveLinks: true,
    //      acceptedFiles: 'image/*',
    //      uploadMultiple: true,
    //   });
 
-  
-  $(".pretty-embed__bg").each(function(){ 
+
+  $(".pretty-embed__bg").each(function(){
     // загрузка фона видео
   $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
   // включение видео при клике по блоку
@@ -335,5 +335,22 @@ function heightses() {
      });
 
  })
- 
+
+ $(".s-calc__range-js").each(function(){
+  let minV = $(this).data("min"),
+      maxV = $(this).data("max") ;
+
+     $(this).ionRangeSlider({
+      grid: true,
+			force_edges: true,
+			from: 2,
+			 prettify_enabled: true,
+			values: [
+			 "0 ₽",   "500 тыс.&nbsp;₽",
+			 "1 млн.&nbsp;₽", "5 млн.&nbsp;₽", "10 млн.&nbsp;₽"
+	 ]
+     });
+
+ })
+
 });
