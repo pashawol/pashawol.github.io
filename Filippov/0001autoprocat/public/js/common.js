@@ -171,19 +171,19 @@ var swiperblog = new Swiper('.blog-slider', {
       }
     });
 
-		// слайдер последних 10ти авто
-		var swiperR = new Swiper('.s-gal__slider', {
+		// слайдеры со стр сдать авто
+		var swiperR = new Swiper('.slider-one', {
 				loop: true,
 				slidesPerView: 1,
 				spaceBetween: 30,
 				speed: 900,
-				pagination: {
-			 el: '.swiper-pagination',
-			 type: 'fraction',
-		 },
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
 				},
 				lazy: true,
 	      lazy: {
