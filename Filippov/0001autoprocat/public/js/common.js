@@ -210,6 +210,38 @@ var swiperblog = new Swiper('.blog-slider', {
 	      }
 			});
 
+		// слайдеры со стр about
+		var swiperfr = new Swiper('.slider-carusel-ab-js', {
+				loop: true,
+				slidesPerView: 1,
+				speed: 900,
+				spaceBetween: 30,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				lazy: true,
+	      lazy: {
+	        loadPrevNext: true,
+	      },
+				effect: 'coverflow',
+	      grabCursor: true,
+	      centeredSlides: true,
+	      slidesPerView: 'auto',
+	      coverflowEffect: {
+	        rotate: 0,
+	        stretch: -30,
+	        depth: 100,
+	        modifier: 1,
+	        slideShadows : false,
+	      },
+	      grabCursor: true,
+			});
+
   // аккордион в ЛК
 
   $(".toggle-td-js").click(function(){
