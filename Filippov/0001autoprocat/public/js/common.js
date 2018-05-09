@@ -191,6 +191,25 @@ var swiperblog = new Swiper('.blog-slider', {
 	      }
 			});
 
+		// слайдеры со стр сдать авто
+		var swiperfr = new Swiper('.slider-carusel-js', {
+				loop: true,
+				slidesPerView: 1,
+				speed: 900,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				lazy: true,
+	      lazy: {
+	        loadPrevNext: true,
+	      }
+			});
+
   // аккордион в ЛК
 
   $(".toggle-td-js").click(function(){
@@ -297,7 +316,10 @@ function heightses() {
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   });
-
+$(".data-modal").click(function(){
+	var mod= $(this).attr("href");
+	$(mod).find(".form-wrap__title").text($(this).data("title"));
+})
 
 
   $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
