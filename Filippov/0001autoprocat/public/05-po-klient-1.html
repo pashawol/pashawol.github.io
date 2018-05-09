@@ -33,7 +33,7 @@
             <div class="trop__cont">
               <div><a class="trop__tel h5 strong text-body tdn link-body" href="tel:">+7 (495) 120-40-24</a>
               </div>
-              <div><a class="trop__link text-gray-700 popup-with-move-anim tdn link-body" href="#modal-call">Заказать звонок</a>
+              <div><a class="trop__link text-gray-700 popup-with-move-anim tdn link-body data-modal" data-title="Заказать звонок" href="#modal-call">Заказать звонок</a>
               </div>
             </div>
             <div>
@@ -132,7 +132,7 @@
               <div class="col-auto d-none d-lg-block">
                 <div class="top_line__cont">
                   <div><a class="top_line__tel h5 strong text-body" href="tel:">+7 (495) 120-40-24</a>
-                  </div><a class="top_line__link text-gray-700 tdu popup-with-move-anim" href="#modal-call"> Заказать звонок</a>
+                  </div><a class="top_line__link text-gray-700 tdu popup-with-move-anim data-modal" data-title="Заказать звонок" href="#modal-call"> Заказать звонок</a>
                 </div>
               </div>
               <div class="col-auto d-xl-none"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a></div>
@@ -1186,7 +1186,7 @@
                     <div class="footer__cont">
                       <div><a class="footer__tel h5 strong text-white link-body" href="tel:">+7 (495) 120-40-24</a>
                       </div>
-                      <div><a class="text-white tdu popup-with-move-anim" href="#modal-call">Заказать звонок</a></div>
+                      <div><a class="text-white tdu popup-with-move-anim data-modal" data-title="Заказать звонок" href="#modal-call">Заказать звонок</a></div>
                     </div>
                   </div>
                   <div class="col-lg-auto">
@@ -1247,6 +1247,7 @@
           <div class="d-lg-none text-center">© Автопрокат24, 2018</div>
         </div>
       </footer>
+      <!-- это универсальная модалкаа-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
         <form>
           <div class="text-center">
@@ -1271,6 +1272,33 @@
         </form>
       </div>
       <!-- end #modal-call-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-fran">
+        <form>
+          <div class="text-center">
+            <div class="form-wrap__title mono ttu">Оставить заявку на&nbsp;франшизу
+            </div>
+            <div class="h6 mb-4"> Заполните форму, и&nbsp;наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время</div>
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center" type="text" placeholder="Введите имя"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center" type="tel" placeholder="Введите телефон"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center" type="text" placeholder="Введите имя"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__btn-wrap">
+              <button class="form-wrap__btn btn btn-primary btn-block">Отправить
+              </button>
+            </div>
+            <div class="wrap-polite">
+              <label class="custom-input polite"><input class="custom-input__input custom-input__input-checkbox" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab custom-input__lab-lg"></span><span class="small text-gray-700">Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;Условиями</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- end #modal-fran-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-one-click">
         <form>
           <div class="text-center">
