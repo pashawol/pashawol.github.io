@@ -1,61 +1,72 @@
- jQuery(document).ready(function($) { 
+ jQuery(document).ready(function($) {
 
   // Custom JS
-  
+
   svg4everybody({});
-  
+
     $(".s-main__btn-wrap-js").each(function() {
         var ch = $(this).children();
-          if  (ch.length <= 3) { 
-             ch.removeClass(" col-4").removeClass(" col-6").addClass(" col-12"); 
-               
+					// добавил
+					if  (ch.length > 2 ) {
+						ch.find(".btn").addClass("btn-sm");
+
+					}
+					// добавил
+          if  (ch.length <= 3) {
+             ch.removeClass(" col-4").removeClass(" col-6").addClass(" col-12");
+
              }
-        else if  (ch.length <= 6) { 
-             ch.removeClass(" col-4").removeClass(" col-12").addClass(" col-6"); 
-               
+
+
+
+
+        else if  (ch.length <= 6) {
+             ch.removeClass(" col-4").removeClass(" col-12").addClass(" col-6");
+
              }
           else  {
-               ch.removeClass(" col-6").removeClass(" col-12").addClass(" col-4"); 
-                
+               ch.removeClass(" col-6").removeClass(" col-12").addClass(" col-4");
+
           }
+
     });
 
-    
+
     $(".s-colors__btn-wrap-js").each(function() {
         var ch = $(this).children();
-         if  (ch.length > 2) { 
-              ch.find(".btn").removeClass("btn-lg"); 
+         if  (ch.length > 2) {
+              ch.find(".btn").removeClass("btn-lg");
 
-             
+
            }
-           if  (ch.length > 3) { 
-              ch.removeClass("col-12").addClass("col-6"); 
-             
+           if  (ch.length > 3) {
+              ch.removeClass("col-12").addClass("col-6");
+
            }
 
-          if  (ch.length >= 4) { 
-             ch.filter(":odd").find(".btn").addClass("btn-right"); 
-               
+          if  (ch.length >= 4) {
+             ch.filter(":odd").find(".btn").addClass("btn-right");
+
              }
 
-             if  ( ch.length  == 2) { 
-                ch.find(".btn").addClass("btn-2-2"); 
-               
+             if  ( ch.length  == 2) {
+                ch.find(".btn").addClass("btn-2-2");
+
              }
-             if  ( ch.length  == 3) { 
-                ch.find(".btn").addClass("btn-3-3"); 
-               
+             if  ( ch.length  == 3) {
+                ch.find(".btn").addClass("btn-3-3");
+
              }
 
-          if  ( ch.length  == 4) { 
-                ch.find(".btn").addClass("btn-4-4"); 
-               
+          if  ( ch.length  == 4) {
+                ch.find(".btn").addClass("btn-4-4");
+
              }
-          if  (ch.length >= 5) { 
-                ch.find(".btn").addClass("btn-5-6"); 
-               
+          if  (ch.length >= 5) {
+                ch.find(".btn").addClass("btn-5-6");
+
              }
- 
+
     });
 
 
@@ -91,7 +102,7 @@
 
   });
 
-  
+
     // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -103,12 +114,12 @@
 
     closeBtnInside: true,
     preloader: false,
-    
+
     midClick: true,
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   });
- 
-   
- 
+
+
+
 });
