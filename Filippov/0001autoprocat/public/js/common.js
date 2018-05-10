@@ -369,25 +369,13 @@ $(".data-modal").click(function(){
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
-
-
-   // $(".dropzone").dropzone({
-   //  url: "/file/post",
-   //  addRemoveLinks: true,
-   //      acceptedFiles: 'image/*',
-   //      uploadMultiple: true,
-   //   });
-
-
-  $(".pretty-embed__bg").each(function(){
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
+	 // включение видео
+	   $(".pretty-embed__bg").each(function(){
+	    $(this).on("click", function(){
+	     $(this).removeClass("on").next()
+	     .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
+	    })
+	    })
 
  $(".input-range").each(function(){
   let minV = $(this).data("min"),
