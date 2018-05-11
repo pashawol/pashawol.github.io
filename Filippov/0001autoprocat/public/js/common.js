@@ -348,7 +348,14 @@ function heightses() {
 
     midClick: true,
     removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
+    mainClass: 'my-mfp-zoom-in',
+		callbacks: {
+
+	 close: function() {
+		$(".form-wrap__prev-video iframe").remove();
+	 }
+	 // e.t.c.
+ }
   });
 $(".data-modal").click(function(){
 	var mod= $(this).attr("href");
@@ -374,10 +381,12 @@ $(".data-modal").click(function(){
 	 // включение видео
 	   $(".form-wrap__prev-video").each(function(){
 	    $(this).on("click", function(){
-	     $(this).find(".pretty-embed__bg").removeClass("on").next()
-	     .attr("src", 'https://www.youtube.com/embed/' + $(this).find(".pretty-embed__bg").data("src")+'?autoplay=1').addClass("on");
+				$(this).find(".pretty-embed__bg").removeClass("on")
+	     $('<iframe src="https://www.youtube.com/embed/' + $(this).find(".pretty-embed__bg").data("src") +
+			 '?autoplay=1" class="on" allow="encrypted-media" allowfullscreen="allowfullscreen"></iframe>').prependTo(this);
 	    })
 	    })
+
 
  $(".input-range").each(function(){
   let minV = $(this).data("min"),
