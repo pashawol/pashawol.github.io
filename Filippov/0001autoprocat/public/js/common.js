@@ -111,7 +111,7 @@ $('.popover-js').popover({
 // слайдер на главной
  var swiper = new Swiper('.s-articals__slider', {
       loop: true ,
-			speed: 900,
+			speed: 450,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -128,7 +128,7 @@ $('.popover-js').popover({
 
 var swiperCard = new Swiper('.carusel-slider', {
       // loop: true ,
-			speed: 900,
+			speed: 450,
       // init: false,
       // slidesPerView: 3,
       // slidesPerColumn: 3,
@@ -148,7 +148,7 @@ var swiperCard = new Swiper('.carusel-slider', {
 var swiperblog = new Swiper('.blog-slider', {
       slidesPerView: 3,
       spaceBetween: 30,
-			speed: 900,
+			speed: 450,
       // slidesPerColumn: 3,
       // slidesPerView: 'auto',
       navigation: {
@@ -176,7 +176,7 @@ var swiperblog = new Swiper('.blog-slider', {
 				loop: true,
 				slidesPerView: 1,
 				spaceBetween: 30,
-				speed: 900,
+				speed: 450,
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
@@ -195,7 +195,8 @@ var swiperblog = new Swiper('.blog-slider', {
 		var swiperfr = new Swiper('.slider-carusel-js', {
 				loop: true,
 				slidesPerView: 1,
-				speed: 900,
+				speed: 450,
+					slideToClickedSlide: true,
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
@@ -214,7 +215,8 @@ var swiperblog = new Swiper('.blog-slider', {
 		var swiperfr = new Swiper('.slider-carusel-ab-js', {
 				loop: true,
 				slidesPerView: 1,
-				speed: 900,
+				speed: 450,
+				slideToClickedSlide: true,
 				spaceBetween: 30,
 				navigation: {
 					nextEl: '.swiper-button-next',
