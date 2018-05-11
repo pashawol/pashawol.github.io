@@ -69,15 +69,6 @@
 
     });
 
-		function heightses() {
-	   $(".section .btn ").height('auto').equalHeights();
-	  }
-
-	  $(window).resize(function() {
-	    heightses();
-	  });
-	 heightses();
-
 
        //Replace all SVG images with inline SVG
   $('img.img-svg').each(function(){
@@ -129,6 +120,14 @@
     mainClass: 'my-mfp-zoom-in'
   });
 
+
+	function heightses() {
+	 $(".section .btn ").height('auto').equalHeights();
+	} 
+	$(window).resize(function() {
+		heightses();
+	});
+ heightses();
 
 
 });
