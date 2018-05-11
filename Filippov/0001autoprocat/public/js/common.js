@@ -177,6 +177,7 @@ var swiperblog = new Swiper('.blog-slider', {
 				slidesPerView: 1,
 				spaceBetween: 30,
 				speed: 450,
+				slideToClickedSlide: true,
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
