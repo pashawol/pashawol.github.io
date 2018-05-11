@@ -123,10 +123,16 @@
 
 	function heightses() {
 	 $(".section .btn ").height('auto').equalHeights();
-	} 
+	}
 	$(window).resize(function() {
 		heightses();
 	});
+
+	$( window ).on( "load", function() {
+	 heightses();
+
+	})
+
  heightses();
 
 
