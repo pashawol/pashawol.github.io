@@ -372,10 +372,10 @@ $(".data-modal").click(function(){
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
 	 // включение видео
-	   $(".pretty-embed__bg").each(function(){
+	   $(".form-wrap__prev-video").each(function(){
 	    $(this).on("click", function(){
-	     $(this).removeClass("on").next()
-	     .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
+	     $(this).find(".pretty-embed__bg").removeClass("on").next()
+	     .attr("src", 'https://www.youtube.com/embed/' + $(this).find(".pretty-embed__bg").data("src")+'?autoplay=1').addClass("on");
 	    })
 	    })
 
