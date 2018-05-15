@@ -1,5 +1,7 @@
  jQuery(document).ready(function($) {
 
+  // видео фон
+  jQuery("#video").YTPlayer();
   // для свг
   svg4everybody({});
   // Custom JS
