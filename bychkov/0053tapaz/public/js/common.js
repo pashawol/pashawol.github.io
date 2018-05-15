@@ -17,6 +17,11 @@
 
              }
 
+          if  (ch.length == 3) {
+             ch.find(".btn").addClass("btn-3");
+
+             }
+
 
 
 
