@@ -6,6 +6,9 @@
   svg4everybody({});
   // Custom JS
 
+  $(".s-video__item").click(function() {
+    $("#modal-vid .modal-body").html($(this).find(".block-js").html());
+  })
  
       // галерея
   $(".gal").each(function(){
