@@ -9,7 +9,7 @@
   $(".s-video__item").click(function() {
     $("#modal-vid .modal-body").html($(this).find(".block-js").html());
   })
- 
+
       // галерея
   $(".gal").each(function(){
 
@@ -29,20 +29,20 @@
     }
   });
   })
- 
+
 // accordion
   $(".showhide").click(function() {
 
 
-     $(".showhide-all").slideUp().parent().removeClass("active"), $(".showhide").removeClass("active"), 
+     $(".showhide-all").slideUp().parent().removeClass("active"), $(".showhide").removeClass("active"),
      $(this).next("div").filter(function() {
-      return "block" == $(this).css("display") 
+      return "block" == $(this).css("display")
       }).slideUp().parent().removeClass("active"),
        $(this).next("div").filter(function() {
-      return "none" == $(this).css("display") 
+      return "none" == $(this).css("display")
       }).slideDown().prev("div").addClass("active").parent().addClass("active")})
 
-// адаптивные табы 
+// адаптивные табы
 $('.tabs-block').easyResponsiveTabs();
  $(".s-about-accord .resp-tab-active").each(function(){
   $(this).next().find(".before").addClass("anim");
@@ -55,7 +55,7 @@ $('.tabs-block').easyResponsiveTabs();
   function heightses() {
 
     var w = $(window).width();
-   // $(".otz__item .text-wrap " 
+   // $(".otz__item .text-wrap "
   }
 
   $(window).resize(function() {
@@ -72,7 +72,7 @@ $( window ).on( "load", function() {
   startDelay: 5,
   backDelay: 450,
   showCursor: false,
-  loop: true 
+  loop: true
 });
 
  heightses();
@@ -92,16 +92,16 @@ $( window ).on( "load", function() {
 
  //        return false;
  //    });
- 
+
 // слайдер цвета в карточке
  var swiper4 = new Swiper('.slider-sr-js', {
       // slidesPerView: 5,
-      slidesPerView: 1, 
-      spaceBetween: 0, 
-      loop: true, 
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
       effect: "fade",
       loadPrevNext: true,
-      shortSwipes: false, 
+      shortSwipes: false,
        pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -113,6 +113,33 @@ $( window ).on( "load", function() {
     // Enable lazy loading
     lazy: true
 
+    });
+ var swiper5 = new Swiper('.carusel-js', {
+      // slidesPerView: 5,
+      slidesPerView:'auto',
+      spaceBetween: 70,
+			freeMode: true,
+      // loop: true,
+			navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+			on: {
+    sliderMove: function () {
+			$(".s-team__item").each(function(){
+				$(this).removeClass("active").find(".hidden-block").slideUp();
+			})
+    }
+    },
+		breakpoints: {
+        1199: {
+          spaceBetween: 20,
+        },
+				576:{
+						freeMode: false,
+					  slidesPerView:1,
+				}
+			}
     });
 
     $('.ba-slider').beforeAfter();
@@ -132,7 +159,9 @@ $( window ).on( "load", function() {
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   });
-
+	$(".s-team__item").click(function(){
+		$(this).toggleClass("active").find(".hidden-block").slideToggle();
+	})
 
  // форма
 $("form").submit(function() { //Change
@@ -191,5 +220,5 @@ $("form").submit(function() { //Change
     .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
    })
    })
- 
+
 });
