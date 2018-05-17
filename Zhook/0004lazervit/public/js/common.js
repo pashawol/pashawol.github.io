@@ -20,9 +20,7 @@
     mainClass: 'mfp-with-zoom mfp-img-mobile',
     image: {
       verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
+
     },
     gallery: {
       enabled: true
@@ -125,9 +123,9 @@ $( window ).on( "load", function() {
         prevEl: '.swiper-button-prev',
       },
 			on: {
-    sliderMove: function () {
+    slideChangeTransitionStart: function () {
 			$(".s-team__item").each(function(){
-				$(this).removeClass("active").find(".hidden-block").slideUp();
+				$(this).removeClass("active").find(".hidden-p").slideDown().next(".hidden-block").slideUp();
 			})
     }
     },
@@ -160,36 +158,23 @@ $( window ).on( "load", function() {
     mainClass: 'my-mfp-zoom-in'
   });
 	$(".s-team__item").click(function(){
-		$(this).toggleClass("active").find(".hidden-block").slideToggle();
+		$(this).toggleClass("active").find(".hidden-p").slideToggle().next(".hidden-block").slideToggle();
 	})
 
  // форма
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: 'action.php', //Change
-      data: th.serialize()
-    }).success(function() {
-          $.magnificPopup.close();
-             $.magnificPopup.open({
-        items: {
-          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline'
-        }
-      })
-        // window.location.replace("/thanks.html");
-       setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-        // $.magnificPopup.close();
-      }, 4000);
-    });
-    return false;
-  });
+ $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+ 		disableOn: 700,
+ 		type: 'iframe',
+ 		mainClass: 'mfp-fade',
+ 		removalDelay: 160,
+ 		preloader: false,
 
- // маска на инпут
-   $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
+ 		fixedContentPos: false
+ 	});
+
+	// маска на инпут
+    $("input[type='tel']").attr("pattern","[+]38[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+38(999)999-99-99"});
+
 
 
 

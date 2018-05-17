@@ -26,7 +26,7 @@
               </div>
               <div class="col-auto d-none d-lg-block">
                 <addr class="d-block small">Адрес: г. Харьков, «Лазерсвит», ул. Тринклера 6</addr>
-                <div><a class="top-line__btn btn btn-outline-primary btn-sm" href="#">Записаться на консультацию</a>
+                <div><a class="top-line__btn btn btn-outline-primary btn-sm" href="#" data-toggle="modal" data-target="#modal-win">Записаться на консультацию</a>
                 </div>
               </div>
               <div class="col-lg col-auto d-none d-sm-block">
@@ -74,13 +74,13 @@
               </div>
               <div class="row">
                 <div class="col-lg-12 col-sm-6">
-                  <div class="header-block__block text-center"><a class="header-block__btn btn btn-primary btn-block" href="#">Проверить</a>
+                  <div class="header-block__block text-center"><a class="header-block__btn btn btn-primary btn-block" href="#" data-toggle="modal" data-target="#modal-win">Проверить</a>
                     <div class="header-block__small ttu text-primary">Подарите себе душевное спокойствие
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-12 col-sm-6">
-                  <div class="header-block__block text-center"><a class="header-block__btn btn btn-outline-primary btn-block" href="#">Удалить</a>
+                  <div class="header-block__block text-center"><a class="header-block__btn btn btn-outline-primary btn-block" href="#" data-toggle="modal" data-target="#modal-win">Удалить</a>
                     <div class="header-block__small ttu text-primary">Подарите себе эстетическое удовольствие
                     </div>
                   </div>
@@ -207,7 +207,7 @@
                     <div class="row">
                       <div class="col-lg-12 col-md-6"><a class="s-about-aside__btn btn btn-primary btn-block" href="#">Проверить сейчас online</a>
                       </div>
-                      <div class="col-lg-12 col-md-6"><a class="s-about-aside__btn btn btn-outline-primary btn-block" href="#">Записаться на прием, 250 грн</a>
+                      <div class="col-lg-12 col-md-6"><a class="s-about-aside__btn btn btn-outline-primary btn-block" href="#" data-toggle="modal" data-target="#modal-win">Записаться на прием, 250 грн</a>
                       </div>
                     </div>
                   </div>
@@ -519,7 +519,7 @@
                     <div class="s-team__caption text-white">
                       <div class="s-team__name h6">Замчий Сергей Владимирович
                       </div>
-                      <p>Врач дерматолог высшей категории, главный врач.</p>
+                      <p class="hidden-p">Врач дерматолог высшей категории, главный врач.</p>
                       <div class="hidden-block">
                         <p><strong>Специальность:</strong>
                           Лечебное дело.
@@ -545,7 +545,7 @@
                     <div class="s-team__caption text-white">
                       <div class="s-team__name h6">Бельская Елена  	Александровна
                       </div>
-                      <p>Врач дерматовенеролог, детский дерматовенеролог второй категории.</p>
+                      <p class="hidden-p">Врач дерматовенеролог, детский дерматовенеролог второй категории.</p>
                       <div class="hidden-block">
                         <p><strong>Специальность:</strong>
                           Лечебное дело.
@@ -571,7 +571,7 @@
                     <div class="s-team__caption text-white">
                       <div class="s-team__name h6">Красий Ирина Николаевна
                       </div>
-                      <p>дерматовенеролог первой категории.</p>
+                      <p class="hidden-p">дерматовенеролог первой категории.</p>
                       <div class="hidden-block">
                         <p><strong>Специальность:</strong>
                           Лечебное дело.
@@ -597,7 +597,7 @@
                     <div class="s-team__caption text-white">
                       <div class="s-team__name h6">Гавриленко Инна Эдуардовна
                       </div>
-                      <p>Врач дерматовенеролог высшей категории, врач педиатр. Заведующая дерматологическим отделением.</p>
+                      <p class="hidden-p">Врач дерматовенеролог высшей категории, врач педиатр. Заведующая дерматологическим отделением.</p>
                       <div class="hidden-block">
                         <p><strong>Специальность:</strong>
                           Дерматовенерология.
@@ -681,22 +681,61 @@
         </div>
       </div>
       <!-- end s-rew-->
-      <!-- start s-rew-vid-->
-      <div class="s-rew-vid section" id="s-rew-vid" style="background-image: url(img/video-bg.jpg);">
-        <div class="container">
-          <h2 class="text-white">Когда от&nbsp;ЭТОГО избавляешься, чувствуешь себя увереннее...</h2>
-          <button class="s-rew-vid__btn btn btn-primary btn-block" type="button">Посмотреть прямо сейчас
-          </button>
-        </div>
-      </div>
+      <!-- start s-rew-vid--><a class="s-rew-vid section popup-youtube tdn" id="s-rew-vid" href="http://www.youtube.com/watch?v=0O2aH4XLbto" style="background-image: url(img/video-bg.jpg);">
+      <div class="container">
+        <h2 class="text-white">Когда от&nbsp;ЭТОГО избавляешься, чувствуешь себя увереннее...</h2>
+        <button class="s-rew-vid__btn btn btn-primary btn-block" type="button">Посмотреть прямо сейчас
+        </button>
+      </div></a>
       <!-- end s-rew-vid-->
       <!-- start s-contact-->
-      <section class="s-contact section" id="s-contact">
+      <div class="s-contact" id="s-contact">
         <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"><a href="#"></a></div>
+          <div class="s-contact__block">
+            <div class="s-contact__head"><img class="res-i" src="img/map.png" alt=""/>
+              <div class="s-contact__title h4">Как до нас добраться
+              </div>
+              <p>г. Харьков, «Лазерсвит», ул. Тринклера 6 Телефоны: (057) 750-9-111, (097) 750-9-111</p>
+            </div>
+            <div class="s-contact__foot"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZBg9Jek0s5M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoRp8wBQeCZLL8k4R-vckP_wDGVR2k10"></script>
+          <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+            function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+            // How zoomed in you want the map to start at (always required)
+            zoom: 17,
+            // The latitude and longitude to center the map (always required)
+            center: new google.maps.LatLng( 50.006498,36.2351859), // New York
+            // How you would like to style the map.
+            // This is where you would paste any style found on Snazzy Maps.
+            styles: [{"featureType":"water","elementType":"all","stylers":[{"hue":"#7fc8ed"},{"saturation":55},{"lightness":-6},{"visibility":"on"}]},{"featureType":"water","elementType":"labels","stylers":[{"hue":"#7fc8ed"},{"saturation":55},{"lightness":-6},{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"hue":"#83cead"},{"saturation":1},{"lightness":-15},{"visibility":"on"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"hue":"#f3f4f4"},{"saturation":-84},{"lightness":59},{"visibility":"on"}]},{"featureType":"landscape","elementType":"labels","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"on"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbbbbb"},{"saturation":-100},{"lightness":26},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"hue":"#ffcc00"},{"saturation":100},{"lightness":-35},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"hue":"#ffcc00"},{"saturation":100},{"lightness":-22},{"visibility":"on"}]},{"featureType":"poi.school","elementType":"all","stylers":[{"hue":"#d7e4e4"},{"saturation":-60},{"lightness":23},{"visibility":"on"}]}]
+            };
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+            // Let's also add a marker while we're at it
+            var iconBase = 'img/map-mark.png';
+            var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(50.006498,36.2351859),
+            map: map,
+            icon: iconBase,
+            title: 'Автопрокат24'
+            });
+            }
+          </script>
         </div>
-      </section>
+        <div class="s-contact__map">
+          <div id="map"></div>
+        </div>
+      </div>
       <!-- end s-contact-->
       <!-- start .top-line-->
       <div class="top-line">
@@ -707,7 +746,7 @@
             </div>
             <div class="col-auto d-none d-lg-block">
               <addr class="d-block small">Адрес: г. Харьков, «Лазерсвит», ул. Тринклера 6</addr>
-              <div><a class="top-line__btn btn btn-outline-primary btn-sm" href="#">Записаться на консультацию</a>
+              <div><a class="top-line__btn btn btn-outline-primary btn-sm" href="#" data-toggle="modal" data-target="#modal-win">Записаться на консультацию</a>
               </div>
             </div>
             <div class="col-lg col-auto d-none d-sm-block">
@@ -842,32 +881,37 @@
         </div>
       </div>
       <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-win" aria-hidden="true">
-        <div class="form-wrap modal-win modal-form modal-dialog modal-content" role="document">
-          <form>
-            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-            <div class="form-wrap__input-wrap form-group">
-              <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Введите ваш телефон" name="tel" required="required"/>
-              </label>
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="form-wrap modal-win modal-form modal-content" role="document">
+            <div class="form-wrap__head">
+              <div class="h4 strong">Записаться на консультацию </div>
             </div>
-            <!-- +e.input-wrap-->
-            <div class="form-wrap__h4 h4">Когда вам перезвонить?
-            </div>
-            <label class="custom-input h3"><input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="В течение 30 минут"/><span class="custom-input__lab custom-input__lab-radio"></span>В течение 30 минут
-            </label>
-            <label class="custom-input h3"><input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="С 9-00 до 12-00"/><span class="custom-input__lab custom-input__lab-radio"></span>С 9-00 до 12-00
-            </label>
-            <label class="custom-input h3"><input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="С 12-00 до 18-00"/><span class="custom-input__lab custom-input__lab-radio"></span>С 12-00 до 18-00
-            </label>
-            <div class="wrap-polite">
-              <div class="custom-input polite">
-                <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>
-                </label>Даю 
-                 <span data-toggle="modal" data-target="#exampleModal2">согласие </span>на хранение и обработку   персональных данных
+            <form method="post">
+              <input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+              <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/> 
+                <div class="small">Телефон нужен, чтобы договориться о времени записи</div>
               </div>
-            </div>
-            <button class="form-wrap__btn btn btn-yel">Записаться на консультацию
-            </button>
-          </form>
+              <!-- +e.input-wrap-->
+              <div class="form-wrap__h4 h5">Когда вам перезвонить?
+              </div>
+              <label class="custom-input h5"><input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="В течение 30 минут"/><span class="custom-input__lab custom-input__lab-radio"></span>В течение 30 минут
+              </label>
+              <label class="custom-input h5"><input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="С 9-00 до 12-00"/><span class="custom-input__lab custom-input__lab-radio"></span>С 9-00 до 12-00
+              </label>
+              <label class="custom-input h5"><input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="С 12-00 до 18-00"/><span class="custom-input__lab custom-input__lab-radio"></span>С 12-00 до 18-00
+              </label>
+              <div class="wrap-polite">
+                <div class="custom-input polite">
+                  <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>
+                  </label>Даю 
+                   <span data-toggle="modal" data-target="#exampleModal2">согласие </span>на хранение и обработку   персональных данных
+                </div>
+              </div>
+              <button class="form-wrap__btn btn btn-primary">Записаться на консультацию
+              </button>
+            </form>
+          </div>
         </div>
       </div>
       <!-- modal-->
@@ -1025,10 +1069,12 @@
         <div class="form-wrap modal-win modal-form text-center modal-win modal-form modal-dialog modal-content" role="document">
           <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> × </button>
           <div class="form-wrap__head"> 
-            <div class="h4"> Спасибо, мы получили Ваш телефон.</div>
+            <div class="h5 strong"> Спасибо, мы получили Ваш телефон.</div>
           </div><br/>
-          <div class="h2">Будем рады помочь!</div><br/>
-          <p class="h4">Перезвоним <span class="time-call">через 30 минут</span>,<br/>как Вы просили.</p><br/>
+          <div class="h4 strong">Будем рады помочь!</div>
+          <p>Перезвоним <span class="time-call">через 30 минут</span>,
+            как Вы просили.
+          </p><br/>
           <div class="form-wrap__foot"><img class="res-i" src="img/thanks-img.jpg" alt=""/>
           </div>
         </div>
