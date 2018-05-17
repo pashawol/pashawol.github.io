@@ -415,7 +415,7 @@
         <div class="player" id="video" data-property="{videoURL:'p5HTCz5rc6w',containment:'#videoCont', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, addRaster:true, quality:'hd720'}"></div>
         <div class="container">
           <div class="text-center">
-            <h2>Удаление лазером родинок, папиллом, бородавок, кератом</h2><a class="s-video__btn btn btn-primary" href="#">Посмотреть цены</a>
+            <h2>Удаление лазером родинок, папиллом, бородавок, кератом</h2><a class="s-video__btn btn btn-primary" href="#" data-toggle="modal" data-target="#modal-price">Посмотреть цены</a>
           </div>
           <div class="s-video__item-wrap">
               <div class="s-video__item strong" data-toggle="modal" data-target="#modal-vid">Проходит быстро
@@ -780,106 +780,6 @@
         </div>
       </div>
       <!-- end .top-line-->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-text modal-dialog modal-win modal-win modal-content" role="document">
-          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-          <div class="h2">Проверьте, есть ли у вас эти признаки</div>
-          <div class="modal-text__row row align-items-center">
-            <div class="col-lg-7">
-              <div class="h5">Многие не приходят к врачу пока не почувствуют боль в ноге. На самом деле, даже очень большие варикозные вены могут <span class="yel"> не болеть  </span>долгие годы. Боль начнётся уже при серьёзных осложнениях вроде тромбоза, флебита, спонтанного кровотечения...Не запускайте болезнь!</div>
-            </div>
-            <div class="col-lg-auto d-none d-md-block">
-              <button class="modal-text__btn btn btn-yel popup-with-move-anim" type="button" data-toggle="modal" data-target="#modal-win" data-order="Заявка в симптомах">Записаться на консультацию
-              </button>
-            </div>
-          </div>
-          <div class="tabs">
-            <div class="row">
-              <div class="col-md-5">
-                <div class="tabs__title accent">Признаки 
-                </div>
-                <UL class="resp-tabs-list">
-                  <li><span>Сосудистые «звёздочки» и паутинки  на ногах</span></li>
-                  <li><span>Судороги в ногах</span></li>
-                  <li><span>Изменение цвета кожи</span></li>
-                  <li><span>Ежедневные отеки к вечеру</span></li>
-                  <li><span>Усталость ног в конце рабочего дня</span></li>
-                </UL>
-              </div>
-              <div class="col">
-                <div class="resp-tabs-container">
-                        <div class="tabs__content"><img class="res-i" src="img/tab-1.jpg" alt=""/>
-                          <div class="tabs__text">
-                            <p>Мелкие сосудистые звездочки — тревожный симптом. Значит, кровь в  нижних конечностях застаивается, повышается давление, вены расширяются. «Звездочки» питает какая-то глубокая вена, лечением которой и нужно заняться. В 90% случаев эти проявления первые симптомы варикозной болезни.</p>
-                            <p>«Паутинки» на ногах тоже далеко не безвредны. Стоит бить тревогу, если в вашей семье уже есть те, кто страдает от варикозного расширения вен или трамбофлебита — не стоит ждать осложнений, лучше сразу идти к флебологу и пройти УЗИ. </p>
-                            <p>Чаще всего толчком к появлению «звездочек» и «паутинок» служат гормональные изменения —  особенно беременность или прием контрацептивов. </p>
-                            <p>Среди провоцирующих факторов — лишний вес, вредные привычки, тяжелый физический труд, несбалансированное питание.</p>
-                            <p>Не занимайтесь самолечением. Назначить лечение врач может только по результатом осмотра, анализов и УЗИ.</p> 
-                          </div>
-                          <button class="tabs__btn btn btn-yel popup-with-move-anim d-md-none" type="button" data-toggle="modal" data-target="#modal-win" data-order="Заявка в симптомах">Записаться на консультацию
-                          </button>
-                        </div>
-                        <!-- +e.content-->
-                        <div class="tabs__content"><img class="res-i" src="img/tab-2.jpg" alt=""/>
-                          <div class="tabs__text">
-                            <p>Если судороги в ногах возникают редко, нерегулярно и не доставляют особого дискомфорта, то волноваться, скорее всего, не стоит. А если они протекают часто и болезненно, то это весомый повод обратиться к специалисту. Врач-флеболог не только осмотрит ваши ноги, но и обязательно произведёт дуплексное сканирование для проверки вен и сосудов. </p>
-                            <p>Самая частая причина судорог — нехватка витаминов В6 и магния. Наблюдается при обезвоживании, неправильном питании, физических нагрузках. </p>
-                            <p>Если в рационе много животного жира — это повышает плохой холестерин в крови. Как следствие, атеросклероз, который увеличивает нагрузку на вены и сосуды. </p>
-                            <p>Если судороги — симптомы тромбофлебита и варикозного расширения вен, то причиной могут быть сердечно-сосудистые заболевания. А также отёчность и постоянная боль в конечностях, т.к. во всём организме затруднён кровоток. </p>
-                            <p>Не затягивайте, чтобы не страдать от осложнений.  Запишитесь прямо сейчас к врачу-флебологу.</p> 
-                          </div>
-                          <button class="tabs__btn btn btn-yel popup-with-move-anim d-md-none" type="button" data-toggle="modal" data-target="#modal-win" data-order="Заявка в симптомах">Записаться на консультацию
-                          </button>
-                        </div>
-                        <!-- +e.content-->
-                        <div class="tabs__content"><img class="res-i" src="img/tab-3.jpg" alt=""/>
-                          <div class="tabs__text">
-                            <p>Потемнение кожи на голени или стопе — признак многих серьёзных заболеваний. Например, сахарного диабета, т.к. нарушается кровоток всего организма.</p>
-                            <p>Но, возможно, всё дело в варикозном расширении вен, тромбозе или венозной недостаточности.</p>
-                            <p>Это не косметическая проблема, мази тут не помогут, т.к. причина в застое крови, медленном кровотоке или отсутствии кислорода в тканях. Лечить нужно изнутри. </p>
-                            <p>Причиной заболевания может быть работа, если вы весь день на ногах — это серьёзно отражается на состоянии вен и сосудов.</p>
-                            <p>Наследственность — вы попадаете у группу риска, если в вашей семье уже есть случаи проблем с венами. Причинами ещё могут быть травмы, хирургические вмешательства, тяжелые виды спорта и гормональные изменения. </p>
-                            <p>Обязательно проконсультируйтесь с флебологом!</p> 
-                          </div>
-                          <button class="tabs__btn btn btn-yel popup-with-move-anim d-md-none" type="button" data-toggle="modal" data-target="#modal-win" data-order="Заявка в симптомах">Записаться на консультацию
-                          </button>
-                        </div>
-                        <!-- +e.content-->
-                        <div class="tabs__content"><img class="res-i" src="img/tab-4.jpg" alt=""/>
-                          <div class="tabs__text">
-                            <p>Отеки — это скопление жидкости между клетками в организме. Особенно сильно проявляется в вечернее и ночное время. Доставляет кроме эстетических проблем ещё и болевые ощущения. </p>
-                            <p>Часто отеки — первые признаки развития варикоза.</p>
-                            <p>Замечали вы раньше на ногах «звездочки» из сосудов? При варикозе ноги отекают нередко уже после появляется таких небольших «звездочек» на ногах.</p>
-                            <p>Основные факторы, которые приводят к варикозу и отёкам:</p> 
-                            <ul>
-                              <li>— Наследственность ;</li>
-                              <li>— Лишний вес;</li>
-                              <li>— Беременность;</li>
-                              <li>— Длительное нахождение на ногах.</li>
-                            </ul>
-                          </div>
-                          <button class="tabs__btn btn btn-yel popup-with-move-anim d-md-none" type="button" data-toggle="modal" data-target="#modal-win" data-order="Заявка в симптомах">Записаться на консультацию
-                          </button>
-                        </div>
-                        <!-- +e.content-->
-                        <div class="tabs__content"><img class="res-i" src="img/tab-5.jpg" alt=""/>
-                          <div class="tabs__text">
-                            <p>Усталость ног — это повод для бескокойства. Редко кто относится к этому серьёзно, но на самом деле это может говорить о наличие серьезной патологии.</p>
-                            <p> С другой стороны, если усталость проходит быстро, то ещё рано бить тревогу.</p>
-                            <p>Как же отличить обычную усталость после работы от первой стадии варикоза?</p>
-                            <p>Вместе с усталостью ног вы чувствуете жжение, боль, отёчность? Появляется ли сосудистая сетка? Чувствуете в спокойной положении или во время ходьбы острую пульсирующую боль? Вас беспокоют судороги в ночное время?</p>
-                            <p>Если хотя бы на один из вопросов вы сказали «да», то это повод обратиться за консультацией к врачу-флебологу.</p>
-                          </div>
-                          <button class="tabs__btn btn btn-yel popup-with-move-anim d-md-none" type="button" data-toggle="modal" data-target="#modal-win" data-order="Заявка в симптомах">Записаться на консультацию
-                          </button>
-                        </div>
-                        <!-- +e.content-->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-win" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="form-wrap modal-win modal-form modal-content" role="document">
@@ -1079,6 +979,188 @@
           </div>
         </div>
       </div>
+      <div class="modal fade bg-primary2" id="modal-price" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-price" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-white modal-win">
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+            <div class="form-wrap modal-body">
+              <div class="form-wrap__head">
+                <div class="h4 strong">Цена на лазерное удаление новообразований</div>
+              </div>
+              <div class="form-wrap__body">
+                <div class="s-about-accord">
+                  <div class="s-about-accord__item s-about-accord__item_main hover-block">
+                    <div class="showhide text-primary2 h6">Лазерное удаление родинок
+                    </div>
+                    <div class="showhide-all">
+                      <table class="table">
+                        <tr>
+                          <td>Первое новообразование 1 единица Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">130 грн</td>
+                        </tr>
+                        <tr>
+                          <td>Первое новообразование 1 единица Ø до 3 мм на лице</td>
+                          <td class="text-primary2">	295 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 2 и до 5 шт.(за одно новообразование ) Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">55 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 2 и до 5 шт.(за одно новообразование ) Ø до 3 мм на лице</td>
+                          <td class="text-primary2">95 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 6 шт. и более (за одно новообразование ) Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">45 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 6 шт. и более (за одно новообразование ) Ø до 3 мм на лице	</td>
+                          <td class="text-primary2">85 грн</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- +e.item_main.hover-block-->
+                  <div class="s-about-accord__item s-about-accord__item_main hover-block">
+                    <div class="showhide text-primary2 h6">Лазерное удаление папиллом
+                    </div>
+                    <div class="showhide-all">
+                      <table class="table">
+                        <tr>
+                          <td>Первое новообразование 1 единица Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">130 грн</td>
+                        </tr>
+                        <tr>
+                          <td>Первое новообразование 1 единица Ø до 3 мм на лице</td>
+                          <td class="text-primary2">	295 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 2 и до 5 шт.(за одно новообразование ) Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">55 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 2 и до 5 шт.(за одно новообразование ) Ø до 3 мм на лице</td>
+                          <td class="text-primary2">95 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 6 шт. и более (за одно новообразование ) Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">45 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 6 шт. и более (за одно новообразование ) Ø до 3 мм на лице	</td>
+                          <td class="text-primary2">85 грн</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- +e.item_main.hover-block-->
+                  <div class="s-about-accord__item s-about-accord__item_main hover-block">
+                    <div class="showhide text-primary2 h6">Лазерное удаление бородавок
+                    </div>
+                    <div class="showhide-all">
+                      <table class="table">
+                        <tr>
+                          <td>Первое новообразование 1 единица Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">130 грн</td>
+                        </tr>
+                        <tr>
+                          <td>Первое новообразование 1 единица Ø до 3 мм на лице</td>
+                          <td class="text-primary2">	295 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 2 и до 5 шт.(за одно новообразование ) Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">55 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 2 и до 5 шт.(за одно новообразование ) Ø до 3 мм на лице</td>
+                          <td class="text-primary2">95 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 6 шт. и более (за одно новообразование ) Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">45 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 6 шт. и более (за одно новообразование ) Ø до 3 мм на лице	</td>
+                          <td class="text-primary2">85 грн</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- +e.item_main.hover-block-->
+                  <div class="s-about-accord__item s-about-accord__item_main hover-block">
+                    <div class="showhide text-primary2 h6">Лазерное удаление кондилом
+                    </div>
+                    <div class="showhide-all">
+                      <table class="table">
+                        <tr>
+                          <td>Первое новообразование 1 единица Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">130 грн</td>
+                        </tr>
+                        <tr>
+                          <td>Первое новообразование 1 единица Ø до 3 мм на лице</td>
+                          <td class="text-primary2">	295 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 2 и до 5 шт.(за одно новообразование ) Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">55 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 2 и до 5 шт.(за одно новообразование ) Ø до 3 мм на лице</td>
+                          <td class="text-primary2">95 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 6 шт. и более (за одно новообразование ) Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">45 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 6 шт. и более (за одно новообразование ) Ø до 3 мм на лице	</td>
+                          <td class="text-primary2">85 грн</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- +e.item_main.hover-block-->
+                  <div class="s-about-accord__item s-about-accord__item_main hover-block">
+                    <div class="showhide text-primary2 h6">Лазерное удаление сосудистых звёздочек
+                    </div>
+                    <div class="showhide-all">
+                      <table class="table">
+                        <tr>
+                          <td>Первое новообразование 1 единица Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">130 грн</td>
+                        </tr>
+                        <tr>
+                          <td>Первое новообразование 1 единица Ø до 3 мм на лице</td>
+                          <td class="text-primary2">	295 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 2 и до 5 шт.(за одно новообразование ) Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">55 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 2 и до 5 шт.(за одно новообразование ) Ø до 3 мм на лице</td>
+                          <td class="text-primary2">95 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 6 шт. и более (за одно новообразование ) Ø до 3 мм на туловище</td>
+                          <td class="text-primary2">45 грн</td>
+                        </tr>
+                        <tr>
+                          <td>от 6 шт. и более (за одно новообразование ) Ø до 3 мм на лице	</td>
+                          <td class="text-primary2">85 грн</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- +e.item_main.hover-block-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal	-->
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
