@@ -80,17 +80,6 @@ $( window ).on( "load", function() {
  heightses();
 
 
-
-// листалка по стр
- // $(" .top-nav a").click(function () {
- //        var elementClick = $(this).attr("href");
- //        var destination = $(elementClick).offset().top;
-
- //            $('html, body').animate({ scrollTop: destination }, 1100);
-
- //        return false;
- //    });
-
 // слайдер цвета в карточке
  var swiper4 = new Swiper('.slider-sr-js', {
       // slidesPerView: 5,
@@ -103,6 +92,7 @@ $( window ).on( "load", function() {
        pagination: {
         el: '.swiper-pagination',
         clickable: true,
+				// dynamicBullets: true,
         renderBullet: function (index, className) {
           return '<span class="' + className + '"><span class="' + className + '__inner"></span></span>';
         },
