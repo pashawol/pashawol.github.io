@@ -1156,17 +1156,21 @@
                 <div class="h4 strong">Проверьте родинку прямо сейчас</div>
               </div>
               <div class="calc text-center">
-                <div class="calc__section">
+                <div class="calc__section active">
                   <div class="calc__head">
                     <div class="text-danger h6">Шаг 1 из 4</div>
                     <div class="text-primary2 h6">Загрузите качественное фото родинки с расстояния 10 см</div>
                   </div>
                   <div class="calc__body">
+                    <div class="dropzone">
+                      <div class="fallback">
+                        <input type="file" name="file"/>
+                      </div>
+                    </div>
                   </div>
                   <div class="calc__foot">
                     <div class="row justify-content-center">
-                      <!--.col-6: +e.BUTTON.btn.btn.btn-outline-primary(type="button") -->
-                      <div class="col-6">
+                      <div class="col-sm-6 mb-4">
                         <button class="calc__btn btn btn-primarydisabled" type="button" disabled="disabled">Далее
                         </button>
                       </div>
@@ -1174,22 +1178,22 @@
                   </div>
                 </div>
                 <!-- +e.section-->
-                <div class="calc__section">
+                <div class="calc__section active">
                   <div class="calc__head">
                     <div class="text-danger h6">Шаг 2 из 4</div>
                     <div class="text-primary2 h6">Когда появилась родинка</div>
                   </div>
                   <div class="calc__body">
                     <div class="row justify-content-center">
-                      <div class="col-auto">
+                      <div class="col-sm-auto col-6">
                         <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Совсем недавно
                         </label>
                       </div>
-                      <div class="col-auto">
+                      <div class="col-sm-auto col-6">
                         <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Несколько месяцев назад
                         </label>
                       </div>
-                      <div class="col-auto">
+                      <div class="col-sm-auto col-6">
                         <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>С рождения
                         </label>
                       </div>
@@ -1197,11 +1201,11 @@
                   </div>
                   <div class="calc__foot">
                     <div class="row justify-content-center">
-                      <div class="col-6">
+                      <div class="col-sm-6 mb-4">
                         <button class="calc__btn btn btn-outline-primary" type="button">Назад
                         </button>
                       </div>
-                      <div class="col-6">
+                      <div class="col-sm-6 mb-4">
                         <button class="calc__btn btn btn-primary" type="button">Далее
                         </button>
                       </div>
@@ -1209,30 +1213,30 @@
                   </div>
                 </div>
                 <!-- +e.section-->
-                <div class="calc__section">
+                <div class="calc__section active">
                   <div class="calc__head">
                     <div class="text-danger h6">Шаг 3 из 4</div>
                     <div class="text-primary2 h6">Загрузите качественное фото родинки с расстояния 10 см</div>
                   </div>
                   <div class="calc__body">
-                  </div>
-                  <div class="row justify-content-center">
-                    <div class="col-auto">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Да
-                      </label>
-                    </div>
-                    <div class="col-auto">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Нет
-                      </label>
+                    <div class="row justify-content-center">
+                      <div class="col-sm-auto col-6">
+                        <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Да
+                        </label>
+                      </div>
+                      <div class="col-sm-auto col-6">
+                        <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Нет
+                        </label>
+                      </div>
                     </div>
                   </div>
                   <div class="calc__foot">
                     <div class="row justify-content-center">
-                      <div class="col-6">
+                      <div class="col-sm-6 mb-4">
                         <button class="calc__btn btn btn-outline-primary" type="button">Назад
                         </button>
                       </div>
-                      <div class="col-6">
+                      <div class="col-sm-6 mb-4">
                         <button class="calc__btn btn btn-primary" type="button">Далее
                         </button>
                       </div>
@@ -1240,23 +1244,25 @@
                   </div>
                 </div>
                 <!-- +e.section-->
-                <div class="calc__section">
+                <div class="calc__section active">
                   <div class="calc__head">
                     <div class="text-danger h2">Шаг 4 из 4</div>
                     <div class="text-primary2 h6">Оставьте свой номер телефона &mdash; врач изучит Вашу фотографию, ответы на&nbsp;вопросы  и&nbsp;перезвонит Вам</div>
                   </div>
                   <div class="calc__body">
-                    <div class="calc__input-wrap"> <input class="calc__input" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/> 
+                    <div class="form-wrap">
+                      <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/> 
+                      </div>
+                      <!-- +e.input-wrap-->
                     </div>
-                    <!-- +e.input-wrap-->
                   </div>
                   <div class="calc__foot">
                     <div class="row justify-content-center">
-                      <div class="col-6">
+                      <div class="col-sm-6 mb-4">
                         <button class="calc__btn btn btn-outline-primary" type="button">Назад
                         </button>
                       </div>
-                      <div class="col-6">
+                      <div class="col-sm-6 mb-4">
                         <button class="calc__btn btn btn-primary" type="button">Завершить
                         </button>
                       </div>

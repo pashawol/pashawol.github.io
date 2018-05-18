@@ -1,7 +1,7 @@
  jQuery(document).ready(function($) {
 
   // видео фон
-  jQuery("#video").YTPlayer();
+  $("#video").YTPlayer();
   // для свг
   svg4everybody({});
   // Custom JS
@@ -50,36 +50,20 @@ $('.tabs-block').easyResponsiveTabs();
       $(".s-about-accord .resp-tab-active").next().find(".before").addClass("anim");
   })
 
-  function heightses() {
 
-    var w = $(window).width();
-   // $(".otz__item .text-wrap "
-  }
-
-  $(window).resize(function() {
-    heightses();
-
-  });
 $( window ).on( "load", function() {
 
   var typed = new Typed('.typed-js', {
-  strings: [ "родинок","папиллом","бородавок","кератом"],
-  startDelay: 300,
-  typeSpeed: 150,
-  backSpeed: 100,
-  startDelay: 5,
-  backDelay: 450,
-  showCursor: false,
-  loop: true
-});
-
- heightses();
-
+	  strings: [ "родинок","папиллом","бородавок","кератом"],
+	  startDelay: 300,
+	  typeSpeed: 150,
+	  backSpeed: 100,
+	  startDelay: 5,
+	  backDelay: 450,
+	  showCursor: false,
+	  loop: true
+	});
 })
-
- heightses();
-
-
 // слайдер цвета в карточке
  var swiper4 = new Swiper('.slider-sr-js', {
       // slidesPerView: 5,
@@ -166,34 +150,14 @@ $( window ).on( "load", function() {
     $("input[type='tel']").attr("pattern","[+]38[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+38(999)999-99-99"});
 
 
-
-
-  // кастомный инпут файл
-
-  var file = $(".add-file input[type=file]");
-  file.change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         var name = $(".add-file__filename  ");
-       name.text(filename);
-
-    });
-  // или
-   // $(".dropzone").dropzone({
-   //  url: "/file/post",
-   //  addRemoveLinks: true,
-   //      acceptedFiles: 'image/*',
-   //      uploadMultiple: true,
-   //   });
-
-
-  $(".pretty-embed__bg").each(function(){
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
-
+		// кастомный инпут файл
+	    $(".dropzone").dropzone({
+	    url: "/file/post",
+	    addRemoveLinks: true,
+	        acceptedFiles: 'image/*',
+	        uploadMultiple: true,
+	     });
+		// $(".dz-default").html('<img class="res-i" src="img/svg/file.svg" alt="">/
+		// <div class="text">Перетащите сюда <br>или  <span class="text-primary">выберите из папки </span>свою картинку
+    //                   </div> ')
 });
