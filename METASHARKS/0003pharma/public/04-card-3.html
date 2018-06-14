@@ -203,63 +203,52 @@
                 <use xlink:href="img/svg/sprite.svg#line"></use>
               </svg>
             </div>
-            <div class="col-auto"><a class="card-head__link card-head__link--active" href="#">Доставка<br>и оплата</a>
+            <div class="col-auto"><a class="card-head__link" href="#">Доставка<br>и оплата</a>
             </div>
             <div class="col-auto">
               <svg class="icon icon-line ">
                 <use xlink:href="img/svg/sprite.svg#line"></use>
               </svg>
             </div>
-            <div class="col-auto"><a class="card-head__link" href="#">Контактные<br>данные</a>
+            <div class="col-auto"><a class="card-head__link card-head__link--active" href="#">Контактные<br>данные</a>
             </div>
           </div>
         </div>
       </div>
       <!-- end card-head-->
       <div class="container section">
-        <h2 class="h6">Выбор доставки</h2>
-        <select class="form-control border-blue-l mb-2" name="">
-          <option value="">Москва и область</option>
-          <option value="">Москва и область</option>
-          <option value="">Москва и область</option>
-        </select>
-        <select class="form-control border-blue-l mb-2" name="">
-          <option value="">Зеленоград</option>
-          <option value="">Москва и область</option>
-          <option value="">Москва и область</option>
-        </select>
-      </div>
-      <div class="container section pt-0">
-        <h2 class="h6">Выбор доставки</h2>
-        <div class="pb-2">
-          <label class="custom-input"><input class="custom-input__input" type="radio" name="pay-math"/><span class="custom-input__lab"></span><span class="custom-input__text">Оплата при получении заказа</span>
-          </label>
-          <label class="custom-input"><input class="custom-input__input" type="radio" name="pay-math"/><span class="custom-input__lab"></span><span class="custom-input__text">Оплата онлайн через систему Intellect Money</span>
+                <div class="item pb-4">
+                  <label class="title d-block">Ваше имя
+                    <input class="form-control" type="text" placeholder=" Имя, пожалуйста" required>
+                  </label>
+                </div>
+                <div class="item pb-4">
+                  <label class="title d-block">Ваша фамилия
+                    <input class="form-control" type="text" placeholder=" Фамилию, пожалуйста" required>
+                  </label>
+                </div>
+                <div class="item pb-4">
+                  <label class="title d-block">Номер телефона
+                    <input class="form-control" type="tel" placeholder="+7(909)123-12-31" required>
+                  </label>
+                </div>
+                <div class="item pb-4">
+                  <label class="title d-block">Email
+                    <input class="form-control" type="email" placeholder="example@domain.ru" required>
+                  </label>
+                </div>
+        <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Согласен с СМС-уведомлениями о движении заказа</span>
+        </label>
+        <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Я подтверждаю свою дееспособность, даю согласие на обработку своих персональных данных в соответствии с Условиями</span>
+        </label>
+        <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Подписаться на акции и спецпредложения Pharmacosmetica</span>
+        </label>
+        <div class="item pb-4">
+          <label class="title d-block">Комментарий к заказу
+            <textarea class="form-control" placeholder="example@domain.ru"></textarea>
           </label>
         </div>
-      </div>
-      <div class="container section">
-        <h2 class="h6">Предоплаченные заказы выдаются на пунктах самовывоза только по предъявлению удостоверения личности клиента.</h2>
-        <div class="radio-img">
-          <div class="row align-items-center">
-            <div class="col-6">
-              <label class="custom-input"><input class="custom-input__input" type="radio" name="pay2"/><span class="custom-input__lab"></span><span class="custom-input__text"><img class="res-i" src="img/pay-1.png" alt=""></span>
-              </label>
-            </div>
-            <div class="col-6">
-              <label class="custom-input"><input class="custom-input__input" type="radio" name="pay2"/><span class="custom-input__lab"></span><span class="custom-input__text"><img class="res-i" src="img/pay-2.png" alt=""></span>
-              </label>
-            </div>
-            <div class="col-6">
-              <label class="custom-input"><input class="custom-input__input" type="radio" name="pay2"/><span class="custom-input__lab"></span><span class="custom-input__text"><img class="res-i" src="img/pay-3.png" alt=""></span>
-              </label>
-            </div>
-            <div class="col-6">
-              <label class="custom-input"><input class="custom-input__input" type="radio" name="pay2"/><span class="custom-input__lab"></span><span class="custom-input__text"><img class="res-i" src="img/pay-4.png" alt=""></span>
-              </label>
-            </div>
-          </div>
-        </div>
+        <div class="small-text text-gray"><em>Обращаем Ваше внимание!<br>Ваш заказ может быть подтвержден одним из приведенных ниже способов:<br>1. Звонок оператора на указанный Вами номер телефона (для клиентов, которые заказывают в первый раз или по заказам требующих дополнительного уточнения информации)<br>2. Письмо-уведомление с темой «Отгрузка заказа №, дата» на Вашу электронную почту (для постоянных клиентов, с положительной историей). Без предварительного звонка.<br><br>Компания оставляет за собой право не оформлять заказ без предварительного звонка. Предоставляйте пожалуйста достоверную информацию.</em></div>
       </div>
       <div class="container pt-2 pb-2">
         <div class="h5 strong">Сумма заказа</div>
@@ -289,7 +278,11 @@
             <td>Итого</td>
             <td class="text-right text-primary">4811 руб.</td>
           </tr>
-        </table><a class="btn btn-block btn-primary mb-3" href="#">ОФОРМИТЬ ЗАКАЗ</a>
+        </table>
+        <div class="text-danger small-text mb-1"><em>Не все поля заполнены корректно</em></div>
+        <button class="btn btn-block btn-primary mb-2" href="#" disabled>ОТПРАВИТЬ ЗАКАЗ</button>
+        <div class="small-text mb-3 text-gray"><em>
+            Нажимая на кнопку «Отправить заказ», вы даете согласие на   <a class="tdu" href="#">обработку своих персональных данных.</a></em></div>
       </div>
       <footer class="footer">
         <div class="container">
