@@ -3,6 +3,9 @@
   // для свг
   svg4everybody({});
   // Custom JS
+
+
+
 // фикссировать поналель цены в карточке товара
 	// var topH=   $(".buy-block-after").offset().top;
 	 if ($("div").is(".buy-block")){
@@ -220,6 +223,17 @@ $('.gallery-thumbs').slick({
       },
 
     });
+
+
+		// показать блок друго подарка
+		 $(".s-card-prod__btn-toggle").click(function(e){
+			 e.preventDefault();
+			$(this).toggleClass("active")
+			$(".toggle-block-js").slideToggle().toggleClass("active");
+
+			swiper.update();
+				
+		})
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
