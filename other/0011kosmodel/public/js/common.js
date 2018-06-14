@@ -1,4 +1,4 @@
- jQuery(document).ready(function($) { 
+ jQuery(document).ready(function($) {
 
 // http://gijgo.com/datepicker
 $('.datepicker').datepicker({
@@ -9,10 +9,10 @@ $('.datepicker').datepicker({
   // для свг
   svg4everybody({});
   // Custom JS
-  
+
 $(".top-nav__lk.dropdown").on('click ', function(){
   var th = $(this).find("ul").fadeToggle(50);
- 
+
 })
  $(document).mouseup(function (e) {
     var container = $(".top-nav__lk.dropdown");
@@ -24,19 +24,19 @@ $(".top-nav__lk.dropdown").on('click ', function(){
   $(".dropdown .top-nav__link, .drop-inner .drop__link, .drop-sub-inner .drop-sub__link, .drop-sub-inner > a").click(function(e){
     e.preventDefault();
     // e.prevenDefault()
-  })  
- 
+  })
+
  // var togli =  '.dropdown, .drop-inner, .drop-sub-inner';
  $('.trop, .aside').find(".dropdown > a , .drop-inner > a , .drop-sub-inner > a ").each(function(){
 
   var th = $(this);
-  th.click(function(){ 
-    
+  th.click(function(){
+
     th.toggleClass('active').next().slideToggle();
     th.parent().toggleClass('active');
   })
  })
- 
+
 
 $(".btn-toggle-js").click(function(){
   $(this).toggleClass("active").next().slideToggle();
@@ -44,7 +44,7 @@ $(".btn-toggle-js").click(function(){
 
       // галерея
   $(".gal").each(function(){
-    
+
   $(this).find("a").magnificPopup({
     type: 'image',
     closeOnContentClick: false,
@@ -63,14 +63,14 @@ $(".btn-toggle-js").click(function(){
   })
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
-    
+
     $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
     $(".hidden-mnu").toggleClass("active");
     $("body").toggleClass("fixed");
     return false;
-  }); 
-    
+  });
+
     $(document).mouseup(function (e) {
     var container = $(".hidden-mnu.active");
     if (container.has(e.target).length === 0){
@@ -80,7 +80,7 @@ $(".btn-toggle-js").click(function(){
       $("body").removeClass("fixed");
         }
     });
- 
+
   function heightses() {
 
     var w = $(window).width();
@@ -97,52 +97,52 @@ $(".btn-toggle-js").click(function(){
           th.css({
             top: "auto",
             bottom: "0",
-          }) 
+          })
         }
         else{
            th.css({
             top: "0",
             bottom: "auto",
-          }) 
-        } 
+          })
+        }
       })
     })
      // прижать футер к низу
      $(".main-wrapper").css("padding-bottom", $("footer").height() + 60)
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
    //
-    
 
-    // скрывает моб меню 
+
+    // скрывает моб меню
     if (w>991){
        $(".toggle-mnu-1").removeClass("on");
         // $("body").removeClass("fixed");
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
     }
-    var topH=$("header ").innerHeight();  
+    var topH=$("header ").innerHeight();
     if($(this).scrollTop()>topH){
                     $('.top-nav  ').addClass('fixed');
-                    
+
                 }
                 else if ($(this).scrollTop()<topH){
                     $('.top-nav  ').removeClass('fixed');
-                   
+
                 }
     $(window).scroll(function(){
                 if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed'); 
+                    $('.top-nav  ').addClass('fixed');
                 }
                 else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed'); 
+                    $('.top-nav  ').removeClass('fixed');
                 }
             });
-       // конец добавил 
+       // конец добавил
   }
 
   $(window).resize(function() {
     heightses();
-   
+
   });
 
  heightses();
@@ -153,36 +153,40 @@ $(".btn-toggle-js").click(function(){
  $(" .scroll-link").click(function () {
         var elementClick = $(this).attr("href");
         var destination = $(elementClick).offset().top;
-        
+
             $('html, body').animate({ scrollTop: destination }, 1100);
-        
-        return false; 
+
+        return false;
     });
 
 
 // или
 // Cache selectors
- 
+
 // табы  . Теперь данные активного таба остается в storage
 $(function() {
-var tab = ('tabs'); 
- 
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) { 
-  $(this) 
+var tab = ('tabs');
+
+$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
+  $(this)
       .addClass('active').siblings().removeClass('active')
       .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
       .eq($(this).index()).fadeIn().addClass('active');
- 
+
 });
 });
 
- 
+
 // слайдер в шапке
  var swiper = new Swiper('.header-block__slider', {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+			autoplay: {
+    delay: 5000,
+		reverseDirection: true,
+  },
     });
 // слайдер каталога
  var swiper2 = new Swiper('.slider-js', {
@@ -190,14 +194,14 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
       watchOverflow: true,
       slidesPerView: 'auto',
       spaceBetween: 20,
-      freeMode: true, 
+      freeMode: true,
 
        freeModeMomentum: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      
+
     });
 
 var titles = [];
@@ -221,7 +225,7 @@ var mySwiper3 = new Swiper('.s-product__slider-js', {
 
 var mySwiper4 = new Swiper('.slider-inst-js', {
   // Optional parameters
-  lazy: true, 
+  lazy: true,
   loop: true,
   pagination: {
         el: '.swiper-pagination',
@@ -237,9 +241,9 @@ var mySwiper4 = new Swiper('.slider-inst-js', {
       slidesPerView: 'auto',
       watchOverflow: true,
       spaceBetween: 0,
-      freeMode: true, 
+      freeMode: true,
       slidesPerGroup: 3,
-       // centeredSlides: true, 
+       // centeredSlides: true,
       loop: true,
       loopFillGroupWithBlank: true,
       touchRatio: 0.2,
@@ -249,7 +253,7 @@ var mySwiper4 = new Swiper('.slider-inst-js', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      
+
     });
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
@@ -262,12 +266,12 @@ var mySwiper4 = new Swiper('.slider-inst-js', {
 
     closeBtnInside: true,
     preloader: false,
-    
+
     midClick: true,
     removalDelay: 300,
     mainClass: 'my-mfp-zoom-in'
   });
- 
+
  $(".s-filter__item-js ").each(function(i){
   var th = $(this);
   th.attr("href", '#modal-filter' + i)
@@ -276,16 +280,16 @@ var mySwiper4 = new Swiper('.slider-inst-js', {
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
-  
-   
+
+
 
   // кастомный селект
 $('.custom-select-js').each(function(){
 
   $(this).select2();
 })
-  // кастомный инпут файл 
-    $(".dropzone").dropzone({ 
+  // кастомный инпут файл
+    $(".dropzone").dropzone({
     url: "/file/post",
     addRemoveLinks: true,
         acceptedFiles: 'image/*',
@@ -304,17 +308,17 @@ $('.custom-select-js').each(function(){
       swiper2.update();
 
     })
-  
+
 // accordion
   $(".showhide").click(function() {
 
 
-     $(".showhide-all").slideUp().parent().removeClass("active"), $(".showhide").removeClass("active"), 
+     $(".showhide-all").slideUp().parent().removeClass("active"), $(".showhide").removeClass("active"),
      $(this).next("div").filter(function() {
             return "block" == $(this).css("display") }).slideUp().parent().removeClass("active"),
              $(this).next("div").filter(function() {
             return "none" == $(this).css("display") }).slideDown().prev("div").addClass("active").parent().addClass("active")})
-  
+
 
 
 
@@ -326,13 +330,13 @@ $('.custom-select-js').each(function(){
             center: [55.727896069024254,37.44885049999991],
             zoom: 12,
             behaviors: ['drag'],
-              
+
                 // controls: ["zoomControl", "fullscreenControl"]
         }, {
             searchControlProvider: 'yandex#search'
         }),
 
-   
+
         myPlacemark = new ymaps.Placemark([55.727896069024254,37.44885049999991], {
             hintContent: 'Воронеж, ул. Уличная, 32, корп. 1',
             balloonContent: 'Воронеж, ул. Уличная, 32, корп. 1 '
@@ -347,18 +351,15 @@ $('.custom-select-js').each(function(){
             // // Смещение левого верхнего угла иконки относительно
             // // её "ножки" (точки привязки).
             // iconImageOffset: [-19, -24]
-        }) 
+        })
 
     myMap.geoObjects
-        .add(myPlacemark) 
+        .add(myPlacemark)
 });
  }
- 
+
 
  $(".toggle-btn-js").click(function(){
   $(this).toggleClass("active").next().slideToggle();
  })
 });
- 
- 
-

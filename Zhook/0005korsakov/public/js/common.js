@@ -108,50 +108,10 @@ $( window ).on( "load", function() {
  //    });
 
 
-// табы  . Теперь данные активного таба остается в storage
-$(function() {
-var tab = ('tabs');
+ // адаптивные табы
+ $('.tabs-block').easyResponsiveTabs();
 
-	 $('.' + tab + '__caption').each(function(i) {
-		var storage = localStorage.getItem('tab' + i);
-		if (storage) {
-			$(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-			 .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-		}
-	});
-
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
-	$(this)
-			.addClass('active').siblings().removeClass('active')
-			.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-			.eq($(this).index()).fadeIn().addClass('active');
-
-		var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-		localStorage.removeItem('tab' + ulIndex);
-		localStorage.setItem('tab' + ulIndex, $(this).index());
-
-});
-});
-
-
-
- // карусель
- // $('.s-team__slider').slick({
- //    slidesToShow: 3,
- //    slidesToScroll: 1,
- //    dots: false,
- //    speed: 450,
- //    infinite: true,
- //    loop: true,
- //    arrows: true,
- //    // centerMode: true,
- //    // focusOnSelect: true ,
- //     // variableWidth: true,
- //     prevArrow: arrr2,
- //      nextArrow: arrl2,
- //    });
-
-// слайдер цвета в карточке
+// слайдер
  var swiper1 = new Swiper('.slider-js', {
 			// slidesPerView: 5,
 			slidesPerView: 1,
@@ -334,7 +294,28 @@ $("form").submit(function() { //Change
 	        })
 
 	    myMap.geoObjects
-	        .add(myPlacemark) 
+	        .add(myPlacemark)
+	});
+	 }
+
+	 if ($("div").is("#map2")){
+
+
+	  ymaps.ready(function () {
+	    var myMap = new ymaps.Map('map2', {
+	            center: [55.727896069024254,37.44885049999991],
+	            zoom: 12,
+	            behaviors: ['drag'],
+	        }, {
+	            searchControlProvider: 'yandex#search'
+	        }),
+	        myPlacemark = new ymaps.Placemark([55.727896069024254,37.44885049999991], {
+	            hintContent: 'Воронеж, ул. Уличная, 32, корп. 1',
+	            balloonContent: 'Воронеж, ул. Уличная, 32, корп. 1 '
+	        })
+
+	    myMap.geoObjects
+	        .add(myPlacemark)
 	});
 	 }
 

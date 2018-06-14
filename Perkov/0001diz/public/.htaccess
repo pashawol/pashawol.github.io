@@ -43,3 +43,7 @@ ExpiresByType application/xhtml+xml "access plus 600 seconds"
 AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
 
 </ifModule>
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www\.)?neohouse44\.ru$ [NC]
+RewriteRule ^(.*)$ http://neo-house.ru/$1 [R=301,L] 

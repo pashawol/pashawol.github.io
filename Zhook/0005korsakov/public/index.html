@@ -64,7 +64,7 @@
                   </svg>8 800 555-40-23</a><span class="text-secondary">ЗВОНОК ПО РФ БЕСПЛАТНЫЙ</span>
                 </div>
               </div>
-              <div class="col-auto"><a class="top-line__btn btn btn-sm btn-outline-secondary" href="#">Записаться на приём</a><a class="top-line__btn btn btn-sm btn-outline-secondary" href="#">Вызвать врача на дом</a>
+              <div class="col-auto"><a class="top-line__btn btn btn-sm btn-outline-secondary popup-with-move-anim" href="#modal-call">Записаться на приём</a><a class="top-line__btn btn btn-sm btn-outline-secondary" href="#">Вызвать врача на дом</a>
               </div>
             </div>
           </div>
@@ -358,7 +358,7 @@
       <div class="s-team section" id="s-team">
         <div class="container">
           <div class="section__head">
-            <h2 class="med">Наши специалисты</h2>
+            <h2 class="med"> Наши специалисты</h2>
           </div>
           <div class="s-team__slider swiper-container carusel-js">
             <div class="swiper-wrapper">
@@ -631,6 +631,37 @@
       <!-- 			br-->
       <!-- 			.h3 Скоро с Вами свяжутся-->
       <!-- 			br -->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
+        <form>
+          <div class="section__head pb-4">
+            <h2 class="med">Заказать звонок</h2>
+          </div>
+          <div class="form-wrap__input-wrap form-group">
+            <div class="row">
+              <div class="col-md-auto">
+                <label>Ваше имя</label>
+              </div>
+              <div class="col"><input class="form-wrap__input form-control" type="text"/>
+              </div>
+            </div>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group">
+            <div class="row">
+              <div class="col-md-auto">
+                <label>Телефон</label>
+              </div>
+              <div class="col"><input class="form-wrap__input form-control" type="text"/>
+              </div>
+            </div>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__btn-wrap text-center">
+            <button class="form-wrap__btn btn btn-outline-primary strong">Отправить
+            </button>
+          </div>
+        </form>
+      </div>
       <!-- modal-->
     </div>
     <script src="js/jquery.min.js"></script>
