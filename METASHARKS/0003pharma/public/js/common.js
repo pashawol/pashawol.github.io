@@ -161,9 +161,10 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 		 delay: 5000,
 		reverseDirection: true,
 	 },
-	 slidesPerView: 3,
-	 lazy: true,
-	 loadPrevNext: true,
+	 slidesPerView: 'auto',
+	 // lazy: true,
+	 // loadPrevNext: true,
+	 loop: true,
 	 slideToClickedSlide: true,
 	 // spaceBetween: 'rem(30)',
 		 });
@@ -176,7 +177,6 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 	 slidesPerView: 2,
 	 lazy: true,
 	 loadPrevNext: true,
-	 loop: true,
 	 loopFillGroupWithBlank: true,
 	 // spaceBetween: 'rem(30)',
 		 });
@@ -232,7 +232,7 @@ $('.gallery-thumbs').slick({
 			$(".toggle-block-js").slideToggle().toggleClass("active");
 
 			swiper.update();
-				
+
 		})
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
