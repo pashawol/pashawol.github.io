@@ -204,7 +204,26 @@ $('.gallery-thumbs').slick({
 });
 
 // слайдер цвета в карточке
- var swiperColor = new Swiper('.color-slider', {
+ var swiperColor = new Swiper('.color-slider-1', {
+      // slidesPerView: 5,
+      slidesPerView: 4,
+      watchOverflow: true,
+      spaceBetween: 0,
+      freeMode: true,
+      slidesPerGroup: 3,
+       // centeredSlides: true,
+      loop: true,
+      slideToClickedSlide: true,
+       freeModeMomentum: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+    });
+
+// слайдер цвета в карточке
+ var swiperColor = new Swiper('.color-slider-2', {
       // slidesPerView: 5,
       slidesPerView: 'auto',
       watchOverflow: true,
@@ -213,8 +232,6 @@ $('.gallery-thumbs').slick({
       slidesPerGroup: 3,
        // centeredSlides: true,
       loop: true,
-      loopFillGroupWithBlank: true,
-      touchRatio: 0.2,
       slideToClickedSlide: true,
        freeModeMomentum: true,
       navigation: {
