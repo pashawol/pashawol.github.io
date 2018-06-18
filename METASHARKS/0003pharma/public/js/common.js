@@ -183,25 +183,27 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 
 // слайдер цвета в карточке
 
-
- $('.gallery-js').slick({
+$(".s-stock").each(function(){
+var th = $(this);
+ $(this).find('.gallery-js').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
 	infinite: true,
-  asNavFor: '.gallery-thumbs'
+  asNavFor: $(this).find('.gallery-thumbs'),
 });
-$('.gallery-thumbs').slick({
+$(this).find('.gallery-thumbs').slick({
   // slidesToShow: 3,
 	variableWidth: true,
   slidesToScroll: 1,
-  asNavFor: '.gallery-js',
+  asNavFor: $(this).find('.gallery-js'),
   dots: false,
 	arrows: false,
 	infinite: false,
   // centerMode: true,
   focusOnSelect: true
 });
+})
 
 // слайдер цвета в карточке
  var swiperColor = new Swiper('.color-slider-1', {
