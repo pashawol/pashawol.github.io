@@ -206,6 +206,9 @@ $(this).find('.gallery-thumbs').slick({
 })
 
 // слайдер цвета в карточке
+
+
+
  var swiperColor = new Swiper('.color-slider-1', {
       // slidesPerView: 5,
       slidesPerView: 4,
@@ -215,11 +218,11 @@ $(this).find('.gallery-thumbs').slick({
       slidesPerGroup: 3,
        // centeredSlides: true,
       loop: true,
-      slideToClickedSlide: true,
+      // slideToClickedSlide: true,
        freeModeMomentum: true,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: $(".section-slider-col").find('.swiper-button-next'),
+        prevEl: $(".section-slider-col").find('.swiper-button-prev'),
       },
 
     });
@@ -234,11 +237,11 @@ $(this).find('.gallery-thumbs').slick({
       slidesPerGroup: 3,
        // centeredSlides: true,
       loop: true,
-      slideToClickedSlide: true,
+      // slideToClickedSlide: true,
        freeModeMomentum: true,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+				nextEl: $(".section-slider-size").find('.swiper-button-next'),
+        prevEl: $(".section-slider-size").find('.swiper-button-prev'),
       },
 
     });
