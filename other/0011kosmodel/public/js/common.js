@@ -29,10 +29,13 @@ jQuery(document).ready(function($) {
 						container.find("ul").fadeOut(50);
 				}
 		});
-		$(".dropdown .top-nav__link, .drop-inner .drop__link, .drop-sub-inner .drop-sub__link, .drop-sub-inner > a",$('.aside')).click(function(e) {
+		$(".trop").find(".dropdown .top-nav__link, " +
+				".drop-inner .drop__link, " +
+				".drop-sub-inner .drop-sub__link, " +
+				".drop-sub-inner > a")
+				// ".drop-sub-inner > a",$('.aside'))
+				.click(function(e) {
 				e.preventDefault();
-				// e.preventDefault();
-				// e.prevenDefault()
 		})
 		// var togli =  '.dropdown, .drop-inner, .drop-sub-inner';
 		$('.trop, .aside').find(".dropdown > a , .drop-inner > a , .drop-sub-inner > a ").each(function() {
@@ -41,9 +44,16 @@ jQuery(document).ready(function($) {
 						th.toggleClass('active').next().slideToggle();
 						th.parent().toggleClass('active');
 				})
-		})
+		});
 		$(".btn-toggle-js").click(function() {
 				$(this).toggleClass("active").next().slideToggle();
+				if($(this).hasClass("active") == true) {
+					$(this).text("Скрыть фильтр")
+				}
+			else {
+
+				$(this).text("Показать фильтр")
+			}
 		})
 		// галерея
 		$(".gal").each(function() {
@@ -233,8 +243,8 @@ jQuery(document).ready(function($) {
 
 
 		// маска на инпут
-		$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
-				"mask": "+7(999)999-99-99"
+		$("input[type='tel']").attr("pattern", "8[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
+				"mask": "8(999)999-99-99"
 		});
 		// кастомный селект
 		$('.custom-select-js').not('.not_select').each(function() {

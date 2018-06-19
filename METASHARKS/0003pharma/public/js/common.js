@@ -24,8 +24,8 @@
 		var wH=   $(this).scrollTop() + $(this).height();
 		if(wH > topH){
 				$('.buy-block__inner-js  ').addClass('fixed');
-				console.log(topH);
-				console.log(wH);
+				// console.log(topH);
+				// console.log(wH);
 		}
 		else{
 				$('.buy-block__inner-js  ').removeClass('fixed');

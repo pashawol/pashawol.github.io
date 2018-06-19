@@ -10,131 +10,444 @@
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#3361d8">
+    <link link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,300i,400,700,700i&amp;amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
-      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+    <div class="main-wrapper">
+      <div class="trop main-mnu hidden-mnu landingMenu2 d-md-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
         <div class="wrapp-hidden"> 
-          <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">Продукция </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Услуги  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Акции </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
-            </li>
+          <ul>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Новости </a></li>
+            <li><a href="#">Контакты </a></li>
           </ul>
-          <div class="text-right"></div>
+          <div class="top-line">
+            <div class="container">
+              <div class="row align-items-center justify-content-lg-between">
+                <div class="top-line__col col-xl-4 col-lg-auto">
+                  <div class="top-line__cont top-line__cont--addr">
+                    <svg class="icon icon-mark ">
+                      <use xlink:href="img/svg/sprite.svg#mark"></use>
+                    </svg>г. Москва, ул. Полярная. д.39, офис 309
+                  </div>
+                </div>
+                <div class="top-line__col col-md order-first order-md-0">
+                  <div class="row align-items-center">
+                    <div class="col-md-auto">
+                      <div class="top-line__cont top-line__cont--tels">
+                        <svg class="icon icon-tel ">
+                          <use xlink:href="img/svg/sprite.svg#tel"></use>
+                        </svg><a class="text-body" href="tel:+7 975 558 66 99"> +7 975 558 66 99</a>, <a class="text-body" href="tel:+7 800 568 99 88">+7 800 568 99 88</a>
+                      </div>
+                    </div>
+                    <div class="col-auto"><a class="top-line__btn btn btn-sm btn-primary" href="#">Обратная связь</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="top-line__col col-auto">
+                  <div class="top-line__cont top-line__cont--mail"><a class="text-body" href="mailto:info@lart.ru">
+                      <svg class="icon icon-envelope ">
+                        <use xlink:href="img/svg/sprite.svg#envelope"></use>
+                      </svg>info@lart.ru</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!--  мобильное меню-->
       <!-- start HEADER.header-->
       <header class="header">
         <!-- start .top-line-->
-        <div class="top-line">
+        <div class="top-line d-none d-md-block">
+          <div class="container">
+            <div class="row align-items-center justify-content-lg-between">
+              <div class="top-line__col col-xl-4 col-lg-auto">
+                <div class="top-line__cont top-line__cont--addr">
+                  <svg class="icon icon-mark ">
+                    <use xlink:href="img/svg/sprite.svg#mark"></use>
+                  </svg>г. Москва, ул. Полярная. д.39, офис 309
+                </div>
+              </div>
+              <div class="top-line__col col-md order-first order-md-0">
+                <div class="row align-items-center">
+                  <div class="col-auto">
+                    <div class="top-line__cont top-line__cont--tels">
+                      <svg class="icon icon-tel ">
+                        <use xlink:href="img/svg/sprite.svg#tel"></use>
+                      </svg><a class="text-body" href="tel:+7 975 558 66 99"> +7 975 558 66 99</a>, <a class="text-body" href="tel:+7 800 568 99 88">+7 800 568 99 88</a>
+                    </div>
+                  </div>
+                  <div class="col-auto"><a class="top-line__btn btn btn-sm btn-primary" href="#">Обратная связь</a>
+                  </div>
+                </div>
+              </div>
+              <div class="top-line__col col-auto">
+                <div class="top-line__cont top-line__cont--mail"><a class="text-body" href="mailto:info@lart.ru">
+                    <svg class="icon icon-envelope ">
+                      <use xlink:href="img/svg/sprite.svg#envelope"></use>
+                    </svg>info@lart.ru</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- end .top-line-->
         <!-- start top-nav-->
         <div class="top-nav">
           <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-              </li>
-            </ul>
+            <div class="row align-items-center justify-content-between">
+              <div class="col-lg-5 col-md-4 col-auto">
+                <div class="top-nav__logo-wrap"><a href="/"><img src="img/svg/logo.svg" alt=""/></a>
+                </div>
+              </div>
+              <div class="col-md col-auto">
+                <div class="d-none d-md-block">
+                  <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Новости </a></li>
+                    <li><a href="#">Контакты </a></li>
+                  </ul>
+                </div><a class="toggle-mnu toggle-mnu-1 d-md-none" href="#"><span></span></a>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end top-nav-->
       </header>
       <!-- end HEADER.header-->
       <!-- start header-block-->
-      <div class="header-block" id="header-block">
+      <div class="header-block">
         <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+          <div class="slider-js header-block__slider swiper-container">
+            <div class="swiper-wrapper">
+              <div class="header-block__banner swiper-slide img-bg swiper-lazy" style="background-image: url(img/head-img.jpg);">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="header-block__title text-white mono strong">Заголовок  для банера с Важной информацией
+                </div><a class="header-block__btn btn btn-lg btn-primary" href="#">Подробнее</a>
+              </div>
+              <div class="header-block__banner swiper-slide img-bg swiper-lazy" style="background-image: url(img/head-img.jpg);">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="header-block__title text-white mono strong">Заголовок  для банера с Важной информацией
+                </div><a class="header-block__btn btn btn-lg btn-primary" href="#">Подробнее</a>
+              </div>
+              <div class="header-block__banner swiper-slide img-bg swiper-lazy" style="background-image: url(img/head-img.jpg);">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="header-block__title text-white mono strong">Заголовок  для банера с Важной информацией
+                </div><a class="header-block__btn btn btn-lg btn-primary" href="#">Подробнее</a>
+              </div>
+              <div class="header-block__banner swiper-slide img-bg swiper-lazy" style="background-image: url(img/head-img.jpg);">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="header-block__title text-white mono strong">Заголовок  для банера с Важной информацией
+                </div><a class="header-block__btn btn btn-lg btn-primary" href="#">Подробнее</a>
+              </div>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+              <svg class="icon icon-arr-lr ">
+                <use xlink:href="img/svg/sprite.svg#arr-lr"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+              <svg class="icon icon-arr-l ">
+                <use xlink:href="img/svg/sprite.svg#arr-l"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="row">
+                <div class="header-block__col col-md-4">
+                  <div class="header-block__item bgs" style="background-image: url(img/head-1.jpg);">
+                    <div class="row">
+                      <div class="col-md-12 col-auto">
+                        <svg class="icon icon-head-i-1 ">
+                          <use xlink:href="img/svg/sprite.svg#head-i-1"></use>
+                        </svg>
+                      </div>
+                      <div class="col">
+                        <div class="header-block__item-title mono strong">Образовательные организации
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-4-->
+                <div class="header-block__col col-md-4">
+                  <div class="header-block__item bgs" style="background-image: url(img/head-2.jpg);">
+                    <div class="row">
+                      <div class="col-md-12 col-auto">
+                        <svg class="icon icon-head-i-2 ">
+                          <use xlink:href="img/svg/sprite.svg#head-i-2"></use>
+                        </svg>
+                      </div>
+                      <div class="col">
+                        <div class="header-block__item-title mono strong">Промышленный сектор 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-4-->
+                <div class="header-block__col col-md-4">
+                  <div class="header-block__item bgs" style="background-image: url(img/head-3.jpg);">
+                    <div class="row">
+                      <div class="col-md-12 col-auto">
+                        <svg class="icon icon-head-i-3 ">
+                          <use xlink:href="img/svg/sprite.svg#head-i-3"></use>
+                        </svg>
+                      </div>
+                      <div class="col">
+                        <div class="header-block__item-title mono strong">Потребительская электроника
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-4-->
+          </div>
         </div>
       </div>
       <!-- end header-block-->
-      <!-- start s-form-->
-      <section class="s-form section" id="s-form">
-        <div class="container">
-          <h2 class="text-center">s-form</h2>
-          <div class="row"></div>
-        </div>
-      </section>
-      <!-- end s-form-->
-      <!-- start s-contact-->
-      <section class="s-contact section" id="s-contact">
-        <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"><a href="#"></a></div>
-        </div>
-      </section>
-      <!-- end s-contact-->
-      <footer class="footer">footer
-      </footer>
-      <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
-        <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
-          <div class="form-wrap modal-content modal-win">
-            <form>
-              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-              <div class="form-wrap__input-wrap form-group">
-                <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Введите ваш телефон" name="tel" required="required"/>
-                </label>
+      <!-- +s-form()-->
+      <!-- +s-contact()-->
+      <div class="container section">
+        <div class="row">
+          <div class="col-xl-8">
+            <!-- start s-text-->
+            <div class="s-text">
+              <div class="h1 text-primary mono strong pb-4">Ларт - робототехника и электроника в школе:</div>
+              <p>Компания ЛАРТ  образована в 2000 году. Первыми самостоятельными проектами были телефонные приставки с АОН ЛАРТ-201, ЛАРТ-202, ЛАРТ-203. Инженерами нашего предприятия разработаны телефонные аппараты, электронные часы. Так же за период деятельность предприятия выполнены конструкторские работы для наших заказчиков. В электронном магазине ЛАРТМАСТЕР представлены проекты так же в основном нашей собственной конструкции. Arduino Роботы, электронные модули. Шильды для Arduino UNO.</p>
+              <p>У нас есть опыт в разработке электроники, программировании, конструировании механических узлов. И мы постараемся предложить Вам, уважаемые посетители,  проекты для творчества, для занятий робототехникой в школе и клубах технического творчества и дома. Образовательная робототехника и электроника достаточно интересное направление в области увлечений, учебном процессе школьников и студентов.</p>
+            </div>
+            <!-- end s-text-->
+          </div>
+          <div class="col">
+            <!-- start s-aside-->
+            <div class="s-aside">
+              <div class="row">
+                <div class="s-aside__col col-xl-12 col-md-6">
+                  <div class="s-aside__item">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="h5 strong mono text-primary">Робототехника и  электроника</div>
+                        <div><a class="s-aside__link h5 mono text-body" href="www.lartmaster.ru">www.lartmaster.ru</a>
+                        </div><a class="s-aside__btn btn btn-primary mono" href="#">Перейти</a>
+                      </div>
+                      <div class="col-6"><img class="res-i" src="img/aside-1.png" alt=""/></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-12-->
+                <div class="s-aside__col col-xl-12 col-md-6">
+                  <div class="s-aside__item">
+                    <div class="row align-items-center">
+                      <div class="col-6">
+                        <div class="h5 strong mono text-primary">Заголовок сайта</div>
+                        <div><a class="s-aside__link h5 mono text-body" href="www.startelectonics.ru">www.startelectonics.ru</a>
+                        </div><a class="s-aside__btn btn btn-primary mono" href="#">Перейти</a>
+                      </div>
+                      <div class="col-6"><img class="res-i" src="img/aside-2.png" alt=""/></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-12-->
               </div>
-              <!-- +e.input-wrap-->
-              <button class="form-wrap__btn btn btn-accent btn-block">Отправить
-              </button>
-              <div class="wrap-polite">
-                <div class="custom-input polite">
-                  <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Даю 
-                     <span class="link" data-toggle="modal" data-target="#exampleModal2">согласие </span>на хранение и обработку   персональных данных
-                  </label>
+            </div>
+            <!-- end s-aside-->
+          </div>
+        </div>
+      </div>
+      <!-- start s-event-->
+      <div class="s-event section bg-light" id="s-event">
+        <div class="container">
+          <div class="row"> 
+            <div class="col-xl-8">
+              <div class="s-event__head">
+                <h2 class="text-primary mono strong">
+                  <div class="row">
+                    <div class="col-auto"> Ближайшие мероприятия </div>
+                    <div class="col-auto"><a class="s-event__btn btn btn-md btn-primary mono" href="#">Все</a>
+                    </div>
+                  </div>
+                </h2>
+              </div>
+              <div class="row">
+                <div class="s-event__col col-md-6">
+                  <div class="s-event__item" style="background-image: url(img/event-1.jpg);">
+                    <div class="s-event__date">г. Москва  |  25 сентября 2018
+                    </div>
+                    <div class="s-event__caption text-white"><a class="s-event__title text-white" href="#">Название мероприятия в одну две  строки с ограничением троеточием...</a>
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          <div class="small">Поделиться в соц. сетях</div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="soc"><a class="soc__item" href="#" target="_blank">
+                            <svg class="icon icon-soc-1 ">
+                              <use xlink:href="img/svg/sprite.svg#soc-1"></use>
+                            </svg></a><a class="soc__item" href="#" target="_blank">
+                            <svg class="icon icon-soc-2 ">
+                              <use xlink:href="img/svg/sprite.svg#soc-2"></use>
+                            </svg></a><a class="soc__item" href="#" target="_blank">
+                            <svg class="icon icon-soc-3 ">
+                              <use xlink:href="img/svg/sprite.svg#soc-3"></use>
+                            </svg></a><a class="soc__item" href="#" target="_blank">
+                            <svg class="icon icon-soc-4 ">
+                              <use xlink:href="img/svg/sprite.svg#soc-4"></use>
+                            </svg></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-event__col col-md-6">
+                  <div class="s-event__item" style="background-image: url(img/event-2.jpg);">
+                    <div class="s-event__date">г. Москва  |  25 сентября 2018
+                    </div>
+                    <div class="s-event__caption text-white"><a class="s-event__title text-white" href="#">Название мероприятия в одну две  строки с ограничением троеточием...</a>
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+                          <div class="small">Поделиться в соц. сетях</div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="soc"><a class="soc__item" href="#" target="_blank">
+                            <svg class="icon icon-soc-1 ">
+                              <use xlink:href="img/svg/sprite.svg#soc-1"></use>
+                            </svg></a><a class="soc__item" href="#" target="_blank">
+                            <svg class="icon icon-soc-2 ">
+                              <use xlink:href="img/svg/sprite.svg#soc-2"></use>
+                            </svg></a><a class="soc__item" href="#" target="_blank">
+                            <svg class="icon icon-soc-3 ">
+                              <use xlink:href="img/svg/sprite.svg#soc-3"></use>
+                            </svg></a><a class="soc__item" href="#" target="_blank">
+                            <svg class="icon icon-soc-4 ">
+                              <use xlink:href="img/svg/sprite.svg#soc-4"></use>
+                            </svg></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </form>
+            </div>
+            <div class="col">
+              <div class="s-event__head">
+                <h2 class="text-primary mono strong">
+                  <div class="row">
+                    <div class="col-auto"> Новости</div>
+                    <div class="col-auto"><a class="s-event__btn btn btn-md btn-primary mono" href="#">Все</a>
+                    </div>
+                  </div>
+                </h2>
+              </div>
+                    <div class="s-event__link-block">
+                      <div><a class="s-event__link small tdu" href="#">Возможно в виде баннера или другой яркой кнопки на образовательный сайт</a>
+                      </div>
+                      <div class="small">17.08.2018 г.</div>
+                    </div>
+                    <div class="s-event__link-block">
+                      <div><a class="s-event__link small tdu" href="#">Возможно в виде баннера или другой яркой кнопки на образовательный сайт</a>
+                      </div>
+                      <div class="small">17.08.2018 г.</div>
+                    </div>
+                    <div class="s-event__link-block">
+                      <div><a class="s-event__link small tdu" href="#">Возможно в виде баннера или другой яркой кнопки на образовательный сайт</a>
+                      </div>
+                      <div class="small">17.08.2018 г.</div>
+                    </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
-        <div class=" ttext-center  modal-dialog  modal-dialog-centered  " role="document"> 
-          <div class="form-wrap modal-content modal-win">
-            <form>
-              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button><br/>
-              <div class="h2">Заявка принята</div><br/>
-              <div class="h3">Скоро с Вами свяжутся</div><br/>
-            </form>
+      <!-- end s-event-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-sm-4">
+              <div class="footer__logo-wrap"><a href="/"><img src="img/svg/logo.svg" alt=""/></a>
+              </div>
+              <div class="footer__copy small">© Copyright 2018. Все права защищены.<br/>Произведено в <a class="tdu text-body" href="#" target="_bank">Goltsblat</a>
+              </div>
+              <div class="soc"><a class="soc__item" href="#" target="_blank">
+                <svg class="icon icon-soc-1 ">
+                  <use xlink:href="img/svg/sprite.svg#soc-1"></use>
+                </svg></a><a class="soc__item" href="#" target="_blank">
+                <svg class="icon icon-soc-2 ">
+                  <use xlink:href="img/svg/sprite.svg#soc-2"></use>
+                </svg></a><a class="soc__item" href="#" target="_blank">
+                <svg class="icon icon-soc-3 ">
+                  <use xlink:href="img/svg/sprite.svg#soc-3"></use>
+                </svg></a><a class="soc__item" href="#" target="_blank">
+                <svg class="icon icon-soc-4 ">
+                  <use xlink:href="img/svg/sprite.svg#soc-4"></use>
+                </svg></a>
+              </div>
+              <div class="small"><a class="tdu text-body" href="#" target="_bank">Политика конфиденциальности</a></div>
+            </div>
+            <div class="footer__col col d-none d-sm-block">
+              <div class="row">
+                <div class="col-auto">
+                  <div class="footer__main-nav">
+                    <ul>
+                      <li><a href="#">О компании</a></li>
+                      <li><a href="#">Услуги</a></li>
+                      <li><a href="#">Каталог</a></li>
+                      <li><a href="#">Новости </a></li>
+                      <li><a href="#">Контакты </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col">
+                  <ul class="footer__list text-primary">
+                    <li>Макетки и образовательные наборы на макетной плате;</li>
+                    <li>Arduino, драйверы, модули, Arduino проекты;</li>
+                    <li>Образовательный стенд Arduino;</li>
+                    <li>Механизмы и компоненты;</li>
+                    <li>Arduino роботы;</li>
+                    <li>Светодиодные, жидкокристаллические дисплеи с Arduino;</li>
+                    <li>Автоматика на Arduino, Блоки реле Arduino;</li>
+                    <li>Электронные компоненты;</li>
+                    <li>Измерительные приборы, оборудование рабочего места;</li>
+                    <li>Электронные конструкторы без пайки;</li>
+                    <li>Электронные конструкторы с пайкой;</li>
+                    <li>Источники питания.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-auto">
+              <div class="sub-form">
+                <div class="small">Подписаться на новости:</div>
+                <form action="">
+                  <input type="email" placeholder="Введите Ваш e-mail"/>
+                  <button class="sub-form__btn btn btn-sm btn-primary mono" type="submit">Подписаться
+                  </button>
+                </form>
+                <div class="polite">Соглашаюсь с  <a href="#">условими обработки персональных данных  </a>и пользовательским соглашением</div>
+              </div>
+              <div class="footer__cont footer__cont--tels">
+                <svg class="icon icon-tel ">
+                  <use xlink:href="img/svg/sprite.svg#tel"></use>
+                </svg>
+                <div><a class="text-body" href="tel:+7 975 558 66 99">
+                     +7 975 558 66 99, </a></div>
+                <div><a class="text-body" href="tel:+7 800 568 99 88">+7 800 568 99 88</a></div>
+              </div>
+              <div class="footer__cont footer__cont--mail"><a class="text-body" href="mailto:info@lart.ru">
+                  <svg class="icon icon-envelope ">
+                    <use xlink:href="img/svg/sprite.svg#envelope"></use>
+                  </svg>info@lart.ru</a>
+              </div><a class="footer__btn btn btn-sm btn-primary" href="#">Обратная связь</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- modal-->
+      </footer>
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
