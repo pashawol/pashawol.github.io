@@ -159,26 +159,107 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 	 lazy: true,
 	 loadPrevNext: true,
  });
-// слайдер цвета в карточке
- var swiper4 = new Swiper('.color-slider', {
-      // slidesPerView: 5,
-      slidesPerView: 'auto',
-      watchOverflow: true,
-      spaceBetween: 0,
-      freeMode: true,
-      slidesPerGroup: 3,
-       // centeredSlides: true,
-      loop: true,
-      loopFillGroupWithBlank: true,
-      touchRatio: 0.2,
-      slideToClickedSlide: true,
-       freeModeMomentum: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
 
-    });
+ // слайдер в серт
+ var swiper2 = new Swiper('.carusel-js', {
+	 navigation: {
+		 nextEl: '.carusel-js-wrap .swiper-button-next',
+		 prevEl: '.carusel-js-wrap .swiper-button-prev',
+	 },
+	 // autoplay: {
+		//  delay: 5000,
+		//  reverseDirection: true,
+	 // },
+	 lazy: true,
+	 loadPrevNext: true,
+	 slidesPerView: 4,
+	 loop: true,
+	 spaceBetween: 30,
+	 breakpoints: {
+    // when window width is <= 320px
+
+    // when window width is <= 480px
+    767: {
+      slidesPerView: 2,
+			spaceBetween: 10
+    },
+    // when window width is <= 640px
+    991: {
+      slidesPerView: 3,
+    }
+  }
+ });
+ // слайдер в серт
+ var swiper3 = new Swiper('.cat-carusel-js', {
+	 navigation: {
+		 nextEl: '.carusel-js-wrap .swiper-button-next',
+		 prevEl: '.carusel-js-wrap .swiper-button-prev',
+	 },
+	 // autoplay: {
+		//  delay: 5000,
+		//  reverseDirection: true,
+	 // },
+	 lazy: true,
+	 loadPrevNext: true,
+	 slidesPerView: 3,
+	 loop: true,
+	 spaceBetween: 30,
+	 breakpoints: {
+    // when window width is <= 320px
+
+    // when window width is <= 480px
+    767: {
+      slidesPerView: 1
+    },
+    // when window width is <= 640px
+    991: {
+      slidesPerView: 2,
+			spaceBetween: 20,
+    }
+  }
+ });
+
+// слайдер    в карточке
+
+	$('.s-card-head__slider-big').slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						dots: false,
+						speed: 450,
+						asNavFor: '.s-card-head__slider-small',
+						infinite: false,
+						loop: false,
+							arrows: false,
+
+					});
+				 $('.s-card-head__slider-small').slick({
+							slidesToShow: 5,
+							slidesToScroll: 1,
+							dots: false,
+							speed: 450,
+							infinite: false,
+							loop: false,
+							arrows: false,
+							vertical: true,
+							verticalSwiping: true,
+							// centerMode: true,
+
+							focusOnSelect: true ,
+							asNavFor:  '.s-card-head__slider-big',
+							responsive: [
+
+							    {
+							      breakpoint: 575,
+							      settings: {
+							        slidesToShow: 4,
+							      }
+							    }
+							    // You can unslick at a given breakpoint now by adding:
+							    // settings: "unslick"
+							    // instead of a settings object
+							  ]
+														// swipeToSlide: false
+							});
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
