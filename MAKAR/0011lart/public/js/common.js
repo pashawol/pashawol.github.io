@@ -161,34 +161,37 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
  });
 
  // слайдер в серт
- var swiper2 = new Swiper('.carusel-js', {
-	 navigation: {
-		 nextEl: '.carusel-js-wrap .swiper-button-next',
-		 prevEl: '.carusel-js-wrap .swiper-button-prev',
-	 },
-	 // autoplay: {
-		//  delay: 5000,
-		//  reverseDirection: true,
-	 // },
-	 lazy: true,
-	 loadPrevNext: true,
-	 slidesPerView: 4,
-	 loop: true,
-	 spaceBetween: 30,
-	 breakpoints: {
-    // when window width is <= 320px
+ $(".carusel-js-wrap").each(function(){
+	 var th = $(this);
+	 var swiper2 = new Swiper(th.find('.carusel-js'), {
+		 navigation: {
+			 nextEl: th.find('.swiper-button-next'),
+			 prevEl: th.find('.swiper-button-prev'),
+		 },
+		 // autoplay: {
+			//  delay: 5000,
+			//  reverseDirection: true,
+		 // },
+		 lazy: true,
+		 loadPrevNext: true,
+		 slidesPerView: 4,
+		 loop: true,
+		 spaceBetween: 30,
+		 breakpoints: {
+	    // when window width is <= 320px
 
-    // when window width is <= 480px
-    767: {
-      slidesPerView: 2,
-			spaceBetween: 10
-    },
-    // when window width is <= 640px
-    991: {
-      slidesPerView: 3,
-    }
-  }
- });
+	    // when window width is <= 480px
+	    767: {
+	      slidesPerView: 2,
+				spaceBetween: 10
+	    },
+	    // when window width is <= 640px
+	    991: {
+	      slidesPerView: 3,
+	    }
+	  }
+	 });
+	})
  // слайдер в серт
  var swiper3 = new Swiper('.cat-carusel-js', {
 	 navigation: {
