@@ -157,7 +157,10 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 		//  reverseDirection: true,
 	 // },
 	 lazy: true,
-	 loadPrevNext: true,
+	 lazy: {
+    loadPrevNext: true,
+  },
+	 speed: 900,
  });
 
  // слайдер в серт
@@ -173,10 +176,13 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 			//  reverseDirection: true,
 		 // },
 		 lazy: true,
-		 loadPrevNext: true,
+		 lazy: {
+	    loadPrevNext: true,
+	  },
 		 slidesPerView: 4,
 		 loop: true,
 		 spaceBetween: 30,
+		 speed: 900,
 		 breakpoints: {
 	    // when window width is <= 320px
 
@@ -203,10 +209,16 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 		//  reverseDirection: true,
 	 // },
 	 lazy: true,
-	 loadPrevNext: true,
+
 	 slidesPerView: 3,
 	 loop: true,
 	 spaceBetween: 30,
+	 speed: 900,
+	 lazy: {
+
+      loadPrevNext: true,
+   
+  },
 	 breakpoints: {
     // when window width is <= 320px
 

@@ -15,9 +15,11 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="trop main-mnu hidden-mnu landingMenu2 d-md-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+      <div class="trop main-mnu hidden-mnu landingMenu2 d-md-none">
+        <div class="toggle-mnu toggle-mnu-1" href="#"><span></span></div>
         <div class="wrapp-hidden"> 
           <ul>
+            <li><a href="#">Главная</a></li>
             <li><a href="#">О компании</a></li>
             <li><a href="#">Услуги</a></li>
             <li><a href="#">Каталог</a></li>
@@ -108,13 +110,15 @@
               <div class="col-md col-auto">
                 <div class="d-none d-md-block">
                   <ul>
+                    <li><a href="#">Главная</a></li>
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Услуги</a></li>
                     <li><a href="#">Каталог</a></li>
                     <li><a href="#">Новости </a></li>
                     <li><a href="#">Контакты </a></li>
                   </ul>
-                </div><a class="toggle-mnu toggle-mnu-1 d-md-none" href="#"><span></span></a>
+                </div>
+                <div class="toggle-mnu toggle-mnu-1 d-md-none" href="#"><span></span></div>
               </div>
             </div>
           </div>
@@ -255,13 +259,14 @@
                   <use xlink:href="img/svg/sprite.svg#soc-4"></use>
                 </svg></a>
               </div>
-              <div class="small"><a class="tdu text-body" href="#" target="_bank">Политика конфиденциальности</a></div>
+              <div class="small mt-2"><a class="tdu text-body small" href="#" target="_bank">Политика конфиденциальности</a></div>
             </div>
             <div class="footer__col col d-none d-sm-block">
               <div class="row">
                 <div class="col-auto">
                   <div class="footer__main-nav">
                     <ul>
+                      <li><a href="#">Главная</a></li>
                       <li><a href="#">О компании</a></li>
                       <li><a href="#">Услуги</a></li>
                       <li><a href="#">Каталог</a></li>
@@ -272,18 +277,18 @@
                 </div>
                 <div class="col">
                   <ul class="footer__list text-primary">
-                    <li>Макетки и образовательные наборы на макетной плате;</li>
-                    <li>Arduino, драйверы, модули, Arduino проекты;</li>
-                    <li>Образовательный стенд Arduino;</li>
-                    <li>Механизмы и компоненты;</li>
-                    <li>Arduino роботы;</li>
-                    <li>Светодиодные, жидкокристаллические дисплеи с Arduino;</li>
-                    <li>Автоматика на Arduino, Блоки реле Arduino;</li>
-                    <li>Электронные компоненты;</li>
-                    <li>Измерительные приборы, оборудование рабочего места;</li>
-                    <li>Электронные конструкторы без пайки;</li>
-                    <li>Электронные конструкторы с пайкой;</li>
-                    <li>Источники питания.</li>
+                    <li><a href="#">Макетки и образовательные наборы на макетной плате;</a></li>
+                    <li><a href="#">Arduino, драйверы, модули, Arduino проекты;</a></li>
+                    <li><a href="#">Образовательный стенд Arduino;</a></li>
+                    <li><a href="#">Механизмы и компоненты;</a></li>
+                    <li><a href="#">Arduino роботы;</a></li>
+                    <li><a href="#">Светодиодные, жидкокристаллические дисплеи с Arduino;</a></li>
+                    <li><a href="#">Автоматика на Arduino, Блоки реле Arduino;</a></li>
+                    <li><a href="#">Электронные компоненты;</a></li>
+                    <li><a href="#">Измерительные приборы, оборудование рабочего места;</a></li>
+                    <li><a href="#">Электронные конструкторы без пайки;</a></li>
+                    <li><a href="#">Электронные конструкторы с пайкой;</a></li>
+                    <li><a href="#">Источники питания.</a></li>
                   </ul>
                 </div>
               </div>
@@ -292,11 +297,14 @@
               <div class="sub-form">
                 <div class="small">Подписаться на новости:</div>
                 <form action="">
-                  <input type="email" placeholder="Введите Ваш e-mail"/>
-                  <button class="sub-form__btn btn btn-sm btn-primary mono" type="submit">Подписаться
-                  </button>
+                  <div class="sub-form__wrap">
+                    <input type="email" placeholder="Введите Ваш e-mail"/>
+                    <button class="sub-form__btn btn btn-sm btn-primary mono" type="submit">Подписаться
+                    </button>
+                  </div>
+                  <label class="custom-input polite"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Соглашаюсь с  <a href="#">условими обработки персональных данных  </a>и пользовательским соглашением</span>
+                  </label>
                 </form>
-                <div class="polite">Соглашаюсь с  <a href="#">условими обработки персональных данных  </a>и пользовательским соглашением</div>
               </div>
               <div class="footer__cont footer__cont--tels">
                 <svg class="icon icon-tel ">
