@@ -29,22 +29,35 @@ jQuery(document).ready(function($) {
 						container.find("ul").fadeOut(50);
 				}
 		});
-		$(".trop").find(".dropdown .top-nav__link, " +
-				".drop-inner .drop__link, " +
-				".drop-sub-inner .drop-sub__link, " +
-				".drop-sub-inner > a")
-				// ".drop-sub-inner > a",$('.aside'))
-				.click(function(e) {
-				e.preventDefault();
+		// $(".trop, .aside").find(".dropdown .top-nav__link, " +
+		// 		".drop-inner .drop__link, " +
+		// 		".drop-sub-inner .drop-sub__link, " +
+		// 		".drop-sub-inner > a")
+		// 		// ".drop-sub-inner > a",$('.aside'))
+		// 		.click(function(e) {
+		// 		e.preventDefault();
+		// })
+		// // var togli =  '.dropdown, .drop-inner, .drop-sub-inner';
+		// $('.trop, .aside').find(".dropdown > a , .drop-inner > a , .drop-sub-inner > a ").each(function() {
+		// 		var th = $(this);
+		// 		th.click(function() {
+		// 				th.toggleClass('active').next().slideToggle();
+		// 				th.parent().toggleClass('active');
+		// 		})
+		// });
+
+		$('.trop, .aside').find(".dropdown , .drop-inner , .drop-sub-inner ").each(function(){
+			$(this).append('<div class="toggle-l"></div>');
 		})
-		// var togli =  '.dropdown, .drop-inner, .drop-sub-inner';
-		$('.trop, .aside').find(".dropdown > a , .drop-inner > a , .drop-sub-inner > a ").each(function() {
-				var th = $(this);
-				th.click(function() {
-						th.toggleClass('active').next().slideToggle();
-						th.parent().toggleClass('active');
-				})
-		});
+		$( '.dropdown , .drop-inner , .drop-sub-inner ').on('click', '.toggle-l', function(){
+				$(this).prev().slideToggle()
+				.parent().toggleClass('active')
+				.children('a').toggleClass('active')
+				;
+				return false;
+			})
+
+
 		$(".btn-toggle-js").click(function() {
 				$(this).toggleClass("active").next().slideToggle();
 				if($(this).hasClass("active") == true) {

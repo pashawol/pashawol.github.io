@@ -137,7 +137,7 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 		},
 			autoplay: {
 		 delay: 5000,
-		reverseDirection: true,
+	loop: true,
 	 },
 		 });
  // слайдер в шапке
@@ -161,9 +161,10 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 		 delay: 5000,
 		reverseDirection: true,
 	 },
-	 slidesPerView: 'auto',
+	 slidesPerView: 3,
 	 // lazy: true,
 	 // loadPrevNext: true,
+	 // centeredSlides: true,
 	 loop: true,
 	 slideToClickedSlide: true,
 	 // spaceBetween: 'rem(30)',
@@ -199,7 +200,7 @@ $(this).find('.gallery-thumbs').slick({
   asNavFor: $(this).find('.gallery-js'),
   dots: false,
 	arrows: false,
-	infinite: false,
+	infinite: true,
   // centerMode: true,
   focusOnSelect: true
 });
@@ -263,7 +264,7 @@ $(this).find('.gallery-thumbs').slick({
     fixedContentPos: true,
     fixedBgPos: true,
 
-    overflowY: 'auto',
+    overflowY: 'hidden',
 
     closeBtnInside: true,
     preloader: false,
