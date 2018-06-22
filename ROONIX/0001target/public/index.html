@@ -13,28 +13,15 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
+    <div class="main-wrapper">
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
         <div class="wrapp-hidden"> 
-          <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">Продукция </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Услуги  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Акции </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
-            </li>
+          <ul>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Доставка и оплата </a></li>
+            <li><a href="#">Сотрудничество</a></li>
+            <li><a href="#">Контакты </a></li>
           </ul>
           <div class="text-right"></div>
         </div>
@@ -42,45 +29,440 @@
       <!--  мобильное меню-->
       <!-- start HEADER.header-->
       <header class="header">
-        <!-- start .top-line-->
-        <div class="top-line">
-        </div>
-        <!-- end .top-line-->
         <!-- start top-nav-->
-        <div class="top-nav">
+        <div class="top-nav top-nav top-nav--dark">
           <div class="container">
-            <div class="block"></div>
-            <!-- +mnu()-->
+            <div class="row justify-content-between align-items-center">
+              <div class="col-auto">
+                <div class="row align-items-center">
+                  <div class="col-auto"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a></div>
+                  <div class="col-auto"><a class="top-nav__logo" href="#">
+                    <svg class="icon icon-logo--text ">
+                      <use xlink:href="img/svg/sprite.svg#logo--text"></use>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-lg-block d-none">
+                <ul>
+                  <li><a href="#">Каталог</a></li>
+                  <li><a href="#">О нас</a></li>
+                  <li><a href="#">Доставка и оплата </a></li>
+                  <li><a href="#">Сотрудничество</a></li>
+                  <li><a href="#">Контакты </a></li>
+                </ul>
+              </div>
+              <div class="col-auto">
+                <div class="top-nav__basket">
+                  <div class="row align-items-center">
+                    <div class="col-auto text-cool-grey d-none d-sm-flex">0 руб</div>
+                    <div class="col-auto">
+                      <svg class="icon icon-basket ">
+                        <use xlink:href="img/svg/sprite.svg#basket"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end top-nav-->
+        <!-- start header-block-->
+        <div class="header-block text-center video-background" id="header-block">
+          <div class="video-fallback"></div>
+          <div class="video-container">
+            <video class="fillItUp video" id="bgvid" poster="img/header-bg.jpg" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+              <source src="video/video.mp4" type="video/mp4"/>
+              <source src="video/video.ogg" type="video/ogv"/>
+              <source src="video/video.webm" type="video/webm"/>
+            </video>
+          </div>
+          <div class="header-block__wrap text-white">
+            <div class="container text-center">
+              <div class="header-block__logo">
+                <svg class="icon icon-logo ">
+                  <use xlink:href="img/svg/sprite.svg#logo"></use>
+                </svg>
+              </div>
+              <h1>Target Hookah — произведение искусства для ценителей дыма</h1>
+              <div class="header-block__scroll header-block__scroll--js">
+                <svg class="icon icon-arrow-bott ">
+                  <use xlink:href="img/svg/sprite.svg#arrow-bott"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end header-block-->
       </header>
       <!-- end HEADER.header-->
-      <!-- start header-block-->
-      <div class="header-block" id="header-block">
-        <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+      <!-- start s-about-->
+      <div class="s-about section" id="s-about">
+        <div class="container container-sm">
+          <div class="row">
+            <div class="col">
+              <div class="s-about__head">
+                <p class="text-cool-grey">Произведение искусства</p>
+                <h2 class="section-title stronger">Target hookah</h2>
+              </div>
+              <p>TARGET — молодой и перспективный бренд, который был основан в 2016г., но уже успел зарекомендовать себя, как одну из особенных товарных марок по производству кальянов и комплектующих для них. </p>
+              <p>Консервативность и функциональность — ведущие ориентиры этой компании. Тщательный подбор сырья, индивидуальная уникальная технология, экологичность и строгий регламент производства, всё это делает продукцию TARGET не только конкурентоспособной, но и отвечающей всем необходимым стандартам: высокое качество изделия / доступная цена.</p>
+            </div>
+            <div class="col-auto d-none d-lg-block"><a class="s-about__link d-block" href="#"><span class="s-about__img-wrap img-bg" style="background-image: url(img/about-img.jpg);"><img src="img/about-img.jpg" alt=""/></span>
+              <div class="row">
+                <div class="col">
+                  <div class="h4 strong">Кальяны Target</div>
+                </div>
+                <div class="col-auto">
+                  <svg class="icon icon-arrow-right ">
+                    <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </div></a>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- end header-block-->
-      <!-- start s-form-->
-      <section class="s-form section" id="s-form">
+      <!-- end s-about-->
+      <!-- start s-catalog-->
+      <div class="s-catalog section" id="s-catalog">
         <div class="container">
-          <h2 class="text-center">s-form</h2>
-          <div class="row"></div>
+          <div class="carusel-js-wrap px-0">
+            <div class="s-catalog__head">
+              <p class="text-cool-grey">Для ценителей прекрасного</p>
+              <div class="row section-title align-items-center justify-content-sm-start justify-content-between">
+                <div class="col-auto">
+                  <h2 class="h1 stronger mb-0">Новинки</h2>
+                </div>
+                <div class="col-auto">
+                  <div class="arrow-wrap">
+                    <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+                      <svg class="icon icon-arrow-left ">
+                        <use xlink:href="img/svg/sprite.svg#arrow-left"></use>
+                      </svg>
+                    </div>
+                    <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+                      <svg class="icon icon-arrow-right ">
+                        <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s-catalog__carusel-wrap">
+              <div class="cat-carusel-js swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .swiper-slide-->
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .swiper-slide-->
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .swiper-slide-->
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .swiper-slide-->
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .swiper-slide-->
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="swiper-lazy-preloader"></div></a>
+                      <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-prod__price h4 strong">7 500 руб.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="item-prod__basket basket-btn">
+                            <svg class="icon icon-basket ">
+                              <use xlink:href="img/svg/sprite.svg#basket"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .swiper-slide-->
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
-      <!-- end s-form-->
-      <!-- start s-contact-->
-      <section class="s-contact section" id="s-contact">
+      </div>
+      <!-- end s-catalog-->
+      <!-- start s-news-->
+      <div class="s-news section pt-4">
+        <div class="container container-sm">
+          <div class="row">
+            <div class="col-xxl-5 col-xl-4 col-auto d-none d-lg-block"><a class="s-news__link d-block" href="#"><span class="s-news__img-wrap"><img class="res-i" src="img/news-img.jpg" alt=""/></span>
+              <div class="row">
+                <div class="col">
+                  <div class="h4 strong">Все новости</div>
+                </div>
+                <div class="col-auto">
+                  <svg class="icon icon-arrow-right ">
+                    <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                  </svg>
+                </div>
+              </div></a>
+            </div>
+            <div class="col">
+              <div class="s-news__head">
+                <p class="text-cool-grey">02.09.2018</p>
+                <h3 class="section-title strong">Target Ball  </h3>
+              </div>
+              <p>Для тех, кому надоели стандартные формы встречайте: Target Ball  Сделана из проверенной временем Чешской глины. Минимально впитывает пироп за счет молочного обжига. Хотим обратить ваше внимание, что чашка пустотелая, за счёт чего быстро прогревается, на ней легко регулировать жар.</p><a class="s-news__btn btn btn-primary btn-block" href="#">Читать полностью</a>
+              <div class="d-lg-none"><a class="s-news__link d-block" href="#">
+                <div class="row">
+                  <div class="col">
+                    <div class="h4 strong">Все новости</div>
+                  </div>
+                  <div class="col-auto">
+                    <svg class="icon icon-arrow-right ">
+                      <use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+                    </svg>
+                  </div>
+                </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-news-->
+      <footer class="footer">
         <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"><a href="#"></a></div>
+          <div class="row justify-content-between align-items-center">
+            <div class="col-auto">
+              <div class="soc"><a class="soc__item" href="#" target="_blank">
+                <svg class="icon icon-vk ">
+                  <use xlink:href="img/svg/sprite.svg#vk"></use>
+                </svg></a><a class="soc__item" href="#" target="_blank">
+                <svg class="icon icon-instagram ">
+                  <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                </svg></a>
+              </div>
+            </div>
+            <div class="col-auto"><a href="tel:+7(928)242-89-10">+7(928) 242-89-10</a></div>
+            <div class="col-auto"><a class="text-cool-grey" href="#" target="_blank">Сделано в Roonix</a></div>
+          </div>
         </div>
-      </section>
-      <!-- end s-contact-->
-      <footer class="footer">footer
       </footer>
       <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
         <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
