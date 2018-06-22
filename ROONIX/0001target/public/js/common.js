@@ -3,7 +3,7 @@
   // для свг
   svg4everybody({});
   // Custom JS
-
+ if ($("div").is("#bgvid")){
 	var vid = document.getElementById("bgvid");
 
 
@@ -24,6 +24,7 @@ vid.pause();
 // to capture IE10
 vidFade();
 });
+}
 
   var url=document.location.href;
   $.each($(".top-nav__nav a "),function(){
