@@ -180,10 +180,53 @@ $(".carusel-js-wrap").each(function(){
 		clickable: true,
 	});
 
- var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.98 12"><title>arrow-right</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path d="M32,12c-.2-.21-.4-.43-.61-.64s-.51-.49-.79-.75L34.19,7H0V5H34.15l0,0L30.66,1.42l.24-.26,1-1.05L32,0h0L38,6l-.3.31L34.4,9.62,32.06,12Z"/></g></g></svg>';
 
 var   arrl2 = (' <div class="l">'+ icon),
       arrr2 =(' <div class="r">'+ icon);
+// слайдер    в карточке
+
+$('.s-card-head__slider-big').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		asNavFor: '.s-card-head__slider-small',
+		infinite: false,
+		loop: false,
+			arrows: false,
+
+	});
+ $('.s-card-head__slider-small').slick({
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			dots: false,
+			speed: 450,
+			infinite: false,
+			loop: false,
+	   	arrows: true,
+	    prevArrow: arrr2,
+	    nextArrow: arrl2,
+			vertical: true,
+			verticalSwiping: true,
+			// centerMode: true,
+
+			focusOnSelect: true ,
+			asNavFor:  '.s-card-head__slider-big',
+			responsive: [
+
+			    {
+			      breakpoint: 575,
+			      settings: {
+			        slidesToShow: 4,
+			      }
+			    }
+			    // You can unslick at a given breakpoint now by adding:
+			    // settings: "unslick"
+			    // instead of a settings object
+			  ]
+										// swipeToSlide: false
+			});
  // карусель
  // $('.s-team__slider').slick({
  //    slidesToShow: 3,
@@ -192,10 +235,10 @@ var   arrl2 = (' <div class="l">'+ icon),
  //    speed: 450,
  //    infinite: true,
  //    loop: true,
- //    arrows: true,
  //    // centerMode: true,
  //    // focusOnSelect: true ,
  //     // variableWidth: true,
+ //    arrows: true,
  //     prevArrow: arrr2,
  //      nextArrow: arrl2,
  //    });
