@@ -44,7 +44,7 @@
                         </svg><a class="text-body" href="tel:+79755586699"> +7 975 558 66 99</a>, <a class="text-body" href="tel:+78005689988">+7 800 568 99 88</a>
                       </div>
                     </div>
-                    <div class="col-auto"><a class="top-line__btn btn btn-sm btn-primary" href="#">Обратная связь</a>
+                    <div class="col-auto"><a class="top-line__btn btn btn-sm btn-primary" href="#" data-toggle="modal" data-target="#modal-win">Обратная связь</a>
                     </div>
                   </div>
                 </div>
@@ -83,7 +83,7 @@
                       </svg><a class="text-body" href="tel:+79755586699"> +7 975 558 66 99</a>, <a class="text-body" href="tel:+78005689988">+7 800 568 99 88</a>
                     </div>
                   </div>
-                  <div class="col-auto"><a class="top-line__btn btn btn-sm btn-primary" href="#">Обратная связь</a>
+                  <div class="col-auto"><a class="top-line__btn btn btn-sm btn-primary" href="#" data-toggle="modal" data-target="#modal-win">Обратная связь</a>
                   </div>
                 </div>
               </div>
@@ -457,11 +457,51 @@
                   <svg class="icon icon-envelope ">
                     <use xlink:href="img/svg/sprite.svg#envelope"></use>
                   </svg>info@lart.ru</a>
-              </div><a class="footer__btn btn btn-sm btn-primary" href="#">Обратная связь</a>
+              </div><a class="footer__btn btn btn-sm btn-primary" href="#" data-toggle="modal" data-target="#modal-win">Обратная связь</a>
             </div>
           </div>
         </footer>
       </div>
+      <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
+        <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
+          <div class=" modal-content modal-win ">
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+            <div class="form-wrap">
+              <form>
+                <div class="h2 mono strong text-primary mb-0">Напишите нам</div>
+                <p> И мы свяжемся с Вами в ближайшее время</p>
+                <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control form-control-lg" type="text" placeholder="Ваше имя"/>
+                </div>
+                <!-- +e.input-wrap-->
+                <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control form-control-lg" type="tel" placeholder="Номер телефона"/>
+                </div>
+                <!-- +e.input-wrap-->
+                <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control form-control-lg" type="email" placeholder="Ваш e-mail"/>
+                </div>
+                <!-- +e.input-wrap-->
+                <button class="form-wrap__btn btn btn-lg btn-primary btn-block mono" type="submit">Отправить
+                </button>
+                <label class="custom-input polite"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Соглашаюсь с  <a href="#">условими обработки персональных данных  </a>и пользовательским соглашением</span>
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
+        <div class=" ttext-center  modal-dialog  modal-dialog-centered  " role="document"> 
+          <div class=" modal-content modal-win ">
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+            <div class="form-wrap">
+              <form><br/>
+                <div class="h2 mono strong text-primary mb-0">Заявка принята</div><br/>
+                <p>Скоро с Вами свяжутся</p><br/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal-->
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
