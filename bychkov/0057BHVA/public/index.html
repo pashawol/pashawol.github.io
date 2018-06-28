@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a>
+    <div class="main-wrapper">
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
         <div class="wrapp-hidden"> 
           <ul>
@@ -23,7 +23,10 @@
             <li><a href="#">Результаты</a></li>
             <li><a href="#">Спец. предложение</a></li>
           </ul>
-          <div class="text-right"></div>
+          <div class="container">
+            <button class="trop__btn btn btn-outline-primary btn-sm btn-block" type="button">Оставить заявку
+            </button>
+          </div>
         </div>
       </div>
       <!--  мобильное меню-->
@@ -33,11 +36,11 @@
         <div class="top-nav">
           <div class="container">
             <div class="row align-items-center justify-content-between">
-              <div class="col-3">
+              <div class="col-lg-3 col-sm-5 col">
                 <div class="top-nav__logo"><img class="res-i" src="img/logo.png" alt="alt"/>
                 </div>
               </div>
-              <div class="col">
+              <div class="col d-none d-lg-block">
                 <ul>
                   <li><a href="#">О рынке</a></li>
                   <li><a href="#">Что мы предлагаем</a></li>
@@ -47,8 +50,13 @@
                 </ul>
               </div>
               <div class="col-auto">
-                <button class="top-nav__btn btn btn-outline-primary btn-sm" type="button">Оставить заявку
-                </button>
+                <div class="row"> 
+                  <div class="col-auto d-none d-sm-block">
+                    <button class="top-nav__btn btn btn-outline-primary btn-sm" type="button" data-toggle="modal" data-target="#thanks">Оставить заявку
+                    </button>
+                  </div>
+                  <div class="col-auto d-lg-none"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a></div>
+                </div>
               </div>
             </div>
           </div>
@@ -57,94 +65,495 @@
         <!-- start header-block-->
         <div class="header-block" id="header-block">
           <div class="container">
-            <h1></h1>
-            <div class="row"></div>
+            <h1>Инвестируйте в рынок цифровых активов сегодня </h1>
+            <div class="header-block__title-sub">и получайте высокий пассивный доход ежеквартально
+            </div>
+            <ul class="text-primary">
+              <li>Безопасно</li>
+              <li>Доходно</li>
+              <li>Перспективно</li>
+            </ul>
+          </div>
+          <div class="container">
+            <div class="form-wrap">
+              <div class="form-wrap__title">Получите  <strong>бесплатную </strong>консультацию прямо сейчас
+              </div>
+              <div class="form-wrap__inner">
+                <form>
+                  <div class="row">
+                    <div class="col-sm">
+                      <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                    <div class="col-sm">
+                      <div class="form-wrap__input-wrap form-group">
+                        <select class="form-wrap__input form-control">
+                          <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
+                          <option value="">скайп</option>
+                          <option value="">вайбер</option>
+                          <option value="">телеграмм</option>
+                          <option value="">телефон</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="header-block__row row">
+              <div class="header-block__col col-lg-3 col-6">
+                <div class="header-block__item text-center">
+                  <div class="header-block__img-wrap"><span><img class="res-i" src="img/head-i-1.svg" alt="alt"/></span>
+                  </div>
+                  <p>Более 5&nbsp;лет <br/>в&nbsp;рынке</p>
+                </div>
+              </div>
+              <!-- +e.col.col-lg-3.col-6-->
+              <div class="header-block__col col-lg-3 col-6">
+                <div class="header-block__item text-center">
+                  <div class="header-block__img-wrap"><span><img class="res-i" src="img/head-i-2.svg" alt="alt"/></span>
+                  </div>
+                  <p>Без перевода средств  на&nbsp;счет компании</p>
+                </div>
+              </div>
+              <!-- +e.col.col-lg-3.col-6-->
+              <div class="header-block__col col-lg-3 col-6">
+                <div class="header-block__item text-center">
+                  <div class="header-block__img-wrap"><span><img class="res-i" src="img/head-i-3.svg" alt="alt"/></span>
+                  </div>
+                  <p>Персональный портфельный  управляющий 12/6</p>
+                </div>
+              </div>
+              <!-- +e.col.col-lg-3.col-6-->
+              <div class="header-block__col col-lg-3 col-6">
+                <div class="header-block__item text-center">
+                  <div class="header-block__img-wrap"><span><img class="res-i" src="img/head-i-4.svg" alt="alt"/></span>
+                  </div>
+                  <p>Аналитический <br/>контроль 24/7</p>
+                </div>
+              </div>
+              <!-- +e.col.col-lg-3.col-6-->
+            </div>
           </div>
         </div>
         <!-- end header-block-->
       </header>
       <!-- end HEADER.header-->
       <!-- start s-why-->
-      <div class="s-why section" id="s-why">
+      <div class="s-why section pb-0" id="s-why">
         <div class="container">
-          <h2 class="text-center">s-why</h2>
-          <div class="row"></div>
+          <h2 class="text-center">Почему рынок цифровых активов</h2>
+          <div class="row">
+                <div class="s-why__col col-lg-4">
+                  <div class="s-why__item">
+                    <div class="s-why__head bgs text-white" style="background-image: url(img/s-why-1.jpg);">
+                      <div class="s-why__title h5 strong">Территория больших возможностей
+                      </div>
+                      <p>В отличие от традиционных рынков, работа здесь не прекращается ни на минуту. А значит возможностей увеличить свой капитал в разы больше</p>
+                    </div>
+                    <div class="s-why__foot">
+                      <p>Капитализация крипто-валютного рынка сейчас колеблется от 200 до 300 млрд. долларов США</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-4.text-white-->
+                <div class="s-why__col col-lg-4">
+                  <div class="s-why__item">
+                    <div class="s-why__head bgs text-white" style="background-image: url(img/s-why-2.jpg);">
+                      <div class="s-why__title h5 strong">Низкая капитализация
+                      </div>
+                      <p>Рынок цифровых активов в процессе зарождения. Киты капитализма еще только заходят на него. Занять свое место можно сейчас</p>
+                    </div>
+                    <div class="s-why__foot">
+                      <p>Размер институционального инвестиционного капитала, заходящего в рынок по оценкам различных аналитических агенств, колеблется от 1 до 2 трлн. долларов США, что может укрепить текущие цены на криптоактивы в 4-8 раз.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-4.text-white-->
+                <div class="s-why__col col-lg-4">
+                  <div class="s-why__item">
+                    <div class="s-why__head bgs text-white" style="background-image: url(img/s-why-3.jpg);">
+                      <div class="s-why__title h5 strong">Низкие цены
+                      </div>
+                      <p>В виду прихода на рынок регуляции в 2018 году, цены практически на все цифровые активы сейчас под давлением, что благоприятно отражается на портфелях новых участников рынков</p>
+                    </div>
+                    <div class="s-why__foot">
+                      <p>BTC торгуется в зоне 5000-7000 USD, что по многим оценкам является зоной «дна». Чем ниже цена на BTC, тем больше потенциал для роста.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-4.text-white-->
+          </div>
+        </div>
+        <div class="container">
+          <div class="form-wrap">
+            <div class="form-wrap__title text-center">Вам нужны еще <strong>аргументы?</strong>
+            </div>
+            <div class="form-wrap__inner">
+              <form>
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-sm">
+                    <div class="form-wrap__input-wrap form-group">
+                      <select class="form-wrap__input form-control">
+                        <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
+                        <option value="">скайп</option>
+                        <option value="">вайбер</option>
+                        <option value="">телеграмм</option>
+                        <option value="">телефон</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-why-->
       <!-- start s-advantages-->
       <div class="s-advantages section" id="s-advantages">
         <div class="container">
-          <h2 class="text-center">s-advantages</h2>
-          <div class="row"></div>
+          <div class="row">
+                <div class="s-advantages__col col-lg-6">
+                  <div class="s-advantages__item text-white">
+                    <div class="h4 extra">Почему деньги должны работать</div>
+                    <ul>
+                      <li>Многие люди так и не становятся по-настоящему богатыми из-за неправильного обращения с деньгами.</li>
+                      <li>Даже если вы сегодня зарабатываете солидные деньги, это вовсе не гарантирует вам стабильного финансового будущего.</li>
+                      <li>Но все, как всегда, только в ваших руках.</li>
+                      <li>Начните инвестирование в цифровые активы сейчас и надежный финансовый фундамент вам гарантирован на долгие год</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- .col-6-->
+                <div class="s-advantages__col col-lg-6">
+                  <div class="s-advantages__item text-white">
+                    <div class="h4 extra">Что мы предлагаем</div>
+                    <ul>
+                      <li>Более 5 лет мы занимаемся тем, что грамотно управляем инвестиционными портфелями наших клиентов.</li>
+                      <li>При этом все операции проводятся по API на ваших биржевых счетах.</li>
+                      <li>Мы диверсифицируем портфели таким образом, чтобы инвестор получал результаты работы не только в долгосрочной перспективе, но и по итогам уже первого отчетного периода.</li>
+                      <li>Строгий риск-менеджмент позволяет нам не переживать о высокой волатильности рынка и соответствующих убытках.</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- .col-6-->
+          </div>
+        </div>
+        <div class="container">
+          <div class="form-wrap">
+            <div class="form-wrap__title text-center">Хотите получить  <strong>детальную консультацию </strong>по инвестициям в цифровые активы, а также получить скидку на обслуживание в тестовом периоде?
+            </div>
+            <div class="form-wrap__inner">
+              <form>
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-sm">
+                    <div class="form-wrap__input-wrap form-group">
+                      <select class="form-wrap__input form-control">
+                        <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
+                        <option value="">скайп</option>
+                        <option value="">вайбер</option>
+                        <option value="">телеграмм</option>
+                        <option value="">телефон</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-advantages-->
       <!-- start s-four-->
       <div class="s-four section" id="s-four">
         <div class="container">
-          <h2 class="text-center">s-four</h2>
-          <div class="row"></div>
+          <h2 class="text-center"> 4 существенных причины выбрать именно нас</h2>
+          <div class="row">
+                <div class="s-four__col col-lg-3 col-sm-6">
+                  <div class="s-four__item">
+                    <div class="s-four__img-wrap"><span><img class="res-i" src="img/four-i-1.svg" alt="alt"/></span>
+                    </div>
+                    <div class="h6 strong">Защитить свои накопления</div>
+                    <p>От ненадежных банков, геополитики и инфляции</p>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-3.col-6-->
+                <div class="s-four__col col-lg-3 col-sm-6">
+                  <div class="s-four__item">
+                    <div class="s-four__img-wrap"><span><img class="res-i" src="img/four-i-2.svg" alt="alt"/></span>
+                    </div>
+                    <div class="h6 strong">Инвестировать с умом</div>
+                    <p>Вложить свои деньги в реально прибыльные проекты</p>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-3.col-6-->
+                <div class="s-four__col col-lg-3 col-sm-6">
+                  <div class="s-four__item">
+                    <div class="s-four__img-wrap"><span><img class="res-i" src="img/four-i-3.svg" alt="alt"/></span>
+                    </div>
+                    <div class="h6 strong">Возможность заработать много и быстро</div>
+                    <p>И при этом свести риски к минимуму</p>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-3.col-6-->
+                <div class="s-four__col col-lg-3 col-sm-6">
+                  <div class="s-four__item">
+                    <div class="s-four__img-wrap"><span><img class="res-i" src="img/four-i-4.svg" alt="alt"/></span>
+                    </div>
+                    <div class="h6 strong">Конфиденциальность клиента</div>
+                    <p>Обеспечиваем полную конфиденциальность  клиентов</p>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-3.col-6-->
+          </div>
+        </div>
+        <div class="container">
+          <div class="form-wrap">
+            <div class="form-wrap__inner">
+              <form>
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-sm">
+                    <div class="form-wrap__input-wrap form-group">
+                      <select class="form-wrap__input form-control">
+                        <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
+                        <option value="">скайп</option>
+                        <option value="">вайбер</option>
+                        <option value="">телеграмм</option>
+                        <option value="">телефон</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-four-->
       <!-- start s-rez-->
-      <div class="s-rez section" id="s-rez">
+      <div class="s-rez section text-white" id="s-rez">
         <div class="container">
-          <h2 class="text-center">s-rez</h2>
-          <div class="row"></div>
+          <h2 class="text-center">Готовы показать реальный результат</h2>
+          <div class="row no-gutters">
+                <div class="s-rez__col col-lg-4">
+                  <div class="s-rez__item" style="background-image: url(img/rez-1.jpg);">
+                    <div class="s-rez__img-wrap"><span><img class="res-i" src="img/res-i-1.svg" alt="alt"/></span>
+                    </div>
+                    <div class="h6">Инвестиции в цифровые активы - это не покупка BTC, ETH или  XRP</div>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-3.col-6-->
+                <div class="s-rez__col col-lg-4">
+                  <div class="s-rez__item" style="background-image: url(img/rez-2.jpg);">
+                    <div class="s-rez__img-wrap"><span><img class="res-i" src="img/res-i-2.svg" alt="alt"/></span>
+                    </div>
+                    <div class="h6">На сегодняшний день, в рынке уже около 2000  блокчейн-проектов</div>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-3.col-6-->
+                <div class="s-rez__col col-lg-4">
+                  <div class="s-rez__item" style="background-image: url(img/rez-3.jpg);">
+                    <div class="s-rez__img-wrap"><span><img class="res-i" src="img/res-i-3.svg" alt="alt"/></span>
+                    </div>
+                    <div class="h6">Мы готовы показать реальный результат, работая для Вас в тестовом режиме</div>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-3.col-6-->
+          </div>
+        </div>
+        <div class="container">
+          <div class="form-wrap">
+            <div class="form-wrap__title">Вы увидите результат на своем счету уже  <strong>через несколько дней</strong>
+            </div>
+            <div class="form-wrap__inner">
+              <form>
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-sm">
+                    <div class="form-wrap__input-wrap form-group">
+                      <select class="form-wrap__input form-control">
+                        <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
+                        <option value="">скайп</option>
+                        <option value="">вайбер</option>
+                        <option value="">телеграмм</option>
+                        <option value="">телефон</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-rez-->
       <!-- start s-stock-->
       <div class="s-stock section" id="s-stock">
         <div class="container">
-          <h2 class="text-center">s-stock</h2>
-          <div class="row"></div>
+          <div class="s-stock__inner text-white">
+            <div class="s-stock__text">
+              <div class="s-stock__title h3 extra">Специальное предложение
+              </div>
+              <p>Начните сотрудничество прямо сейчас  и&nbsp;<strong>получите скидку в&nbsp;4%  </strong>на&nbsp;Success Fee  в&nbsp;первом отчетном квартале на&nbsp;первый квартал обслуживания!</p>
+              <button class="s-stock__btn btn btn-primary btn-block ttu" type="button">Оставить заявку
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-stock-->
       <!-- start s-faq-->
-      <div class="s-faq section" id="s-faq">
+      <div class="s-faq section text-white" id="s-faq">
         <div class="container">
-          <h2 class="text-center">s-faq</h2>
-          <div class="row"></div>
+          <h2 class="text-center">Остались вопросы?</h2>
+          <ul>
+            <li>Инвестиции в цифровые активы - это процесс, требующий постоянного контроля над состоянием рынка.</li>
+            <li>Очень важно постоянно быть готовым оперативно реагировать на различные ситуации на рынке.</li>
+            <li>Если вы не готовы 24/7 держать руку на пульсе и постоянно реагировать на изменения в рынке,</li>
+          </ul>
+          <div class="container">
+            <div class="form-wrap">
+              <div class="form-wrap__title text-center">То тогда доверьте эту работу профессионалам
+              </div>
+              <div class="form-wrap__inner">
+                <form>
+                  <div class="row">
+                    <div class="col-sm">
+                      <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                    <div class="col-sm">
+                      <div class="form-wrap__input-wrap form-group">
+                        <select class="form-wrap__input form-control">
+                          <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
+                          <option value="">скайп</option>
+                          <option value="">вайбер</option>
+                          <option value="">телеграмм</option>
+                          <option value="">телефон</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-faq-->
-      <footer class="footer">footer
+      <footer class="footer">
+        <div class="container text-center">
+          <div class="soc">
+            <div class="row justify-content-center">
+                <div class="col-auto"><a class="soc__item" href="#" target="_blank"><img src="img/soc-1.svg" alt="alt"/></a>
+                </div>
+                <div class="col-auto"><a class="soc__item" href="#" target="_blank"><img src="img/soc-2.svg" alt="alt"/></a>
+                </div>
+                <div class="col-auto"><a class="soc__item" href="#" target="_blank"><img src="img/soc-3.svg" alt="alt"/></a>
+                </div>
+                <div class="col-auto"><a class="soc__item" href="#" target="_blank"><img src="img/soc-4.svg" alt="alt"/></a>
+                </div>
+            </div>
+          </div>
+          <ul>
+            <li><a href="#">О рынке</a></li>
+            <li><a href="#">Что мы предлагаем</a></li>
+            <li><a href="#">Преимущества</a></li>
+            <li><a href="#">Результаты</a></li>
+            <li><a href="#">Спец. предложение</a></li>
+          </ul>
+          <button class="footer__btn btn btn-outline-primary btn-block btn-sm" type="button">Оставить заявку
+          </button>
+        </div>
+        <div class="footer__footer">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col-auto">© 2018 bhva | Все права защищены</div>
+              <div class="col-auto"> <a href="http://" target="_blank">Создание сайта</a></div>
+            </div>
+          </div>
+        </div>
       </footer>
       <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
         <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
-          <div class="form-wrap modal-content modal-win">
-            <form>
-              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-              <div class="form-wrap__input-wrap form-group">
-                <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Введите ваш телефон" name="tel" required="required"/>
-                </label>
-              </div>
-              <!-- +e.input-wrap-->
-              <button class="form-wrap__btn btn btn-accent btn-block">Отправить
-              </button>
-              <div class="wrap-polite">
-                <div class="custom-input polite">
-                  <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Даю 
-                     <span class="link" data-toggle="modal" data-target="#exampleModal2">согласие </span>на хранение и обработку   персональных данных
-                  </label>
+          <div class=" modal-content modal-win ">
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+            <div class="container">
+              <div class="form-wrap">
+                <div class="form-wrap__big-title text-center extra">Получите специальное предложение
+                </div>
+                <div class="form-wrap__inner">
+                  <form>
+                    <div class="row">
+                      <div class="col-sm">
+                        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="col-sm">
+                        <div class="form-wrap__input-wrap form-group">
+                          <select class="form-wrap__input form-control">
+                            <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
+                            <option value="">скайп</option>
+                            <option value="">вайбер</option>
+                            <option value="">телеграмм</option>
+                            <option value="">телефон</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
       <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
         <div class=" ttext-center  modal-dialog  modal-dialog-centered  " role="document"> 
           <div class="form-wrap modal-content modal-win">
-            <form>
-              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button><br/>
-              <div class="h2">Заявка принята</div><br/>
-              <div class="h3">Скоро с Вами свяжутся</div><br/>
-            </form>
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+            <div class="form-wrap__big-title text-center extra">Спасибо
+            </div>
+            <div class="h5 l text-center">Мы свяжимся с Вами в течении 12 часов</div>
           </div>
         </div>
       </div>
