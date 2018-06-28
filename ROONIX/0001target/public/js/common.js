@@ -26,6 +26,17 @@
 	});
 	}
 
+	$("body").on("change", ".form-control", function () {
+		if ($(this).val() === ''){
+
+			$(this).removeClass("active").next(".form-wrap__title").removeClass("active");
+		}
+		else{
+			$(this).addClass("active").next(".form-wrap__title").addClass("active");
+
+		}
+
+	})
 			// галерея
 	$(".gal").each(function(){
 
@@ -201,16 +212,51 @@ $('.s-card-head__slider-big').slick({
 		type: 'inline',
 
 		fixedContentPos: true,
-		fixedBgPos: true,
-
-		overflowY: 'auto',
-
+		fixedBgPos: true, 
+		overflowY: 'auto', 
 		closeBtnInside: true,
 		preloader: false,
 
 		midClick: true,
 		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
+		mainClass: 'my-mfp-zoom-in',
+		callbacks: {
+			open: function () {
+				$("#modal-basket").each(function () {
+					var th = $(this);
+					var swiper4 = new Swiper(th.find('.cat-carusel-js'), {
+						navigation: {
+							nextEl: th.find('.swiper-button-next'),
+							prevEl: th.find('.swiper-button-prev'),
+						},
+
+						lazy: true,
+						lazy: {
+							loadPrevNext: true,
+						},
+						slidesPerView: 3,
+						loop: true,
+						spaceBetween: 20,
+						speed: 900,
+						breakpoints: {
+							479: {
+								slidesPerView: 1,
+							},
+
+							991: {
+								slidesPerView: 2,
+							},
+							// 1199: {
+							// 	slidesPerView: 3,
+							// },
+
+						}
+					});
+				})
+
+			},
+		 
+		}
 	});
 
 
@@ -238,5 +284,25 @@ $('.s-card-head__slider-big').slick({
 			.eq($(this).index()).fadeIn().addClass('active');
 	});
 	});
+	// табы в order
+	$(function() {
+	$('.btn-radio__input').each(function  () {
 
+		$(this).click(function (e) {
+			$(this).closest('.s-order__item').find('.delivery-var').hide().removeClass('active')
+				.eq($(this).parents(".btn-col").index()).fadeIn().addClass('active');
+		});
+	})
+	});
+
+
+	    // стики
+
+	    $(".stick_in").stick_in_parent({
+	    	offset_top: 65
+			});
+			 // маска на инпут
+			 $("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
+			 	"mask": "+7(999)999-99-99"
+			 });
 });
