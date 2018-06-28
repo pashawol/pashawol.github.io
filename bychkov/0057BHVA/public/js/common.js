@@ -77,19 +77,12 @@
         $("body").removeClass("fixed");
     }
     var topH=$("header ").innerHeight();
-    if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed');
 
-                }
-                else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed');
-
-                }
     $(window).scroll(function(){
                 if($(this).scrollTop()>topH){
                     $('.top-nav  ').addClass('fixed');
                 }
-                else if ($(this).scrollTop()<topH){
+                else  {
                     $('.top-nav  ').removeClass('fixed');
                 }
             });
