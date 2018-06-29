@@ -66,14 +66,14 @@ $( window ).on( "load", function() {
 })
  heightses();
 // листалка по стр
- // $(" .top-nav a").click(function () {
- //        var elementClick = $(this).attr("href");
- //        var destination = $(elementClick).offset().top;
+ $(" .scrolll").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
 
- //            $('html, body').animate({ scrollTop: destination }, 1600);
+            $('html, body').animate({ scrollTop: destination }, 1600);
 
- //        return false;
- //    });
+        return false;
+    });
 
 
  // $(".top-nav .logo").click(function () {
