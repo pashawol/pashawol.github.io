@@ -12,7 +12,7 @@
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
 
- $('.bx-breadcrumb').slick({
+ $('.product-item-detail-tabs-list, .bx-breadcrumb').slick({
 		dots: false,
 		arrows: false,
 		infinite: false,
@@ -42,7 +42,7 @@
 			},
 			{
 				breakpoint: 767,
-				
+
 				settings: {
 					slidesToShow: 2, 
 				}
