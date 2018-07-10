@@ -49,7 +49,7 @@
               <div class="col-md-auto col text-md-center text-right"><a class="top-line__link text-body h2 d-inline-block mono tdn" href="tel:+7(495)123-45-67">+7 (495)123-45-67</a>
                 <div class="strong small ttu">Звоните с 8.00 до 23.00</div>
               </div>
-              <div class="col-auto d-none d-lg-block"><a class="top-line__btn btn btn-warning btn-block" href="#">ОБРАТНЫЙ ЗВОНОК</a>
+              <div class="col-auto d-none d-lg-block"><a class="top-line__btn btn btn-warning btn-block" href="#" data-toggle="modal" data-target="#modal-win">ОБРАТНЫЙ ЗВОНОК</a>
               </div>
             </div>
           </div>
@@ -313,7 +313,7 @@
                           </div>
                         </div>
                         <div class="col">
-                          <button class="form-wrap__btn btn btn-block btn-warning btn-block" type="submit">ОСТАВИТЬ ЗАЯВКУ
+                          <button class="form-wrap__btn btn btn-block btn-warning btn-block" type="button" data-toggle="modal" data-target="#modal-win">ОСТАВИТЬ ЗАЯВКУ
                           </button>
                         </div>
                       </div>
@@ -382,15 +382,46 @@
               <div class="col-md-auto col-sm text-md-center text-sm-right"><a class="top-line__link text-white h2 d-inline-block mono tdn" href="tel:+7(495)123-45-67">+7 (495)123-45-67</a>
                 <div class="strong small ttu text-white">Звоните с 8.00 до 23.00</div>
               </div>
-              <div class="col-sm-auto"><a class="top-line__btn btn btn-warning btn-block" href="#">ОБРАТНЫЙ ЗВОНОК</a>
+              <div class="col-sm-auto"><a class="top-line__btn btn btn-warning btn-block" href="#" data-toggle="modal" data-target="#modal-win">ОБРАТНЫЙ ЗВОНОК</a>
               </div>
             </div>
           </div>
         </div>
         <!-- end .top-line-->
       </footer>
+      <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
+        <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
+          <div class="form-wrap modal-content modal-win">
+            <form>
+              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+              <div class="h2 mono ttu text-primary text-center">ОБРАТНЫЙ ЗВОНОК</div>
+              <hr/>
+              <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя"/>
+              </div>
+              <!-- +e.input-wrap-->
+              <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон"/>
+              </div>
+              <!-- +e.input-wrap-->
+              <button class="form-wrap__btn btn btn-block btn-warning" type="submit">ОТПРАВИТЬ
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
+        <div class=" ttext-center  modal-dialog  modal-dialog-centered  " role="document"> 
+          <div class="form-wrap modal-content modal-win">
+            <form>
+              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button><br/>
+              <div class="h2">Заявка принята</div><br/>
+              <div class="h3">Скоро с Вами свяжутся</div><br/>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- modal-->
     </div>
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/common.js"></script>
   </body>

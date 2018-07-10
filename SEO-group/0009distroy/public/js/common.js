@@ -122,22 +122,7 @@ $( window ).on( "load", function() {
  //    });
 
   
-       // модальное окно
-   $('.popup-with-move-anim').magnificPopup({
-    type: 'inline',
-
-    fixedContentPos: true,
-    fixedBgPos: true,
-
-    overflowY: 'auto',
-
-    closeBtnInside: true,
-    preloader: false,
-
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'my-mfp-zoom-in'
-  });
+ 
 
   // кастомный селект
  $('.custom-select').select2();
