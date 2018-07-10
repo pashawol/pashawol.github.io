@@ -170,6 +170,13 @@ $(".carusel-js-wrap").each(function(){
 		spaceBetween: 30,
 		speed: 900,
 		clickable: true,
+		breakpoints: {
+		 
+			767: {
+				spaceBetween: 10,
+			} 
+
+		}
 	});
 
 	var icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37.98 12"><title>arrow-right</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path d="M32,12c-.2-.21-.4-.43-.61-.64s-.51-.49-.79-.75L34.19,7H0V5H34.15l0,0L30.66,1.42l.24-.26,1-1.05L32,0h0L38,6l-.3.31L34.4,9.62,32.06,12Z"/></g></g></svg>';
@@ -268,12 +275,35 @@ $('.s-card-head__slider-big').slick({
 	}
 
 
-	$(".filter-drop--js").click(function(){
-		$(this).toggleClass("active");
-		$(".child--js").slideToggle();
-	})
+	// $(".filter-drop--js").click(function(){
+	// 	$(this).toggleClass("active");
+	// 	$(".child--js").slideToggle();
+	// })
 
 
+	 // добавил  табы для фильтра
+	 
+	 $('.child--js').each(function (i) {
+		 $(this).attr("id", 'filter-drop--js-' + i);
+		 
+		})
+		$('.filter-drop--js').each(function(i){
+			$(this).attr("data-order", 'filter-drop--js-' + i);
+			
+		})
+
+	 $(function () {
+	 
+		 $('.filter-drop--js').click(function (e) {
+			 var order = $(this).attr("data-order");
+			 $(this)
+				 .addClass('active').parents(".swiper-slide")
+				 .siblings().find('.filter-drop--js').removeClass('active')
+				 $('.child--js:not(#'+order+')').hide().removeClass('active');
+				 $('#' + order).toggle().addClass('active');
+		 });
+	 });
+//  добавил табы для фильтра
 	// табы
 	$(function() {
 	var tab = ('tabs');

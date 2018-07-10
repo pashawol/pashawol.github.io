@@ -14,8 +14,39 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a>
+      <!-- end top-nav-->
+      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="wrapp-hidden"> 
+          <div class="top-nav">
+            <div class="container">
+              <div class="row justify-content-between align-items-center">
+                <div class="col-auto">
+                  <div class="row align-items-center">
+                    <div class="col-auto d-lg-none"><a class="toggle-mnu toggle-mnu-1" href="#"><span></span></a></div>
+                    <div class="col-auto"><a class="top-nav__logo" href="#">
+                      <svg class="icon icon-logo--text ">
+                        <use xlink:href="img/svg/sprite.svg#logo--text"></use>
+                      </svg></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="top-nav__basket">
+                    <div class="row align-items-center">
+                      <div class="col-auto text-cool-grey d-none d-sm-flex">0 руб</div>
+                      <div class="col-auto">
+                        <div class="basket-btn">
+                          <svg class="icon icon-basket ">
+                            <use xlink:href="img/svg/sprite.svg#basket"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <ul>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">О нас</a></li>
@@ -23,7 +54,8 @@
             <li><a href="#">Сотрудничество</a></li>
             <li><a href="#">Контакты </a></li>
           </ul>
-          <div class="text-right"></div>
+          <div class="trop__foot"><a class="small text-cool-grey" href="#" title="title">Сделано в Roonix </a>
+          </div>
         </div>
       </div>
       <!--  мобильное меню-->
@@ -110,23 +142,23 @@
                   <div class="vars">
                     <div class="form-wrap delivery-var active">
                       <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" min="4"/><span class="form-wrap__title">Адрес доставки</span>
+                        <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title">Адрес доставки</span>
                         </label>
                       </div>
                       <!-- +e.input-wrap-->
-                      <p class="text-cool-grey">Мы бережно упакуем и доставим товар до транспортной компании, Почты России или другим удобным вам способом. Подробнее о доставке здесь или по телефону 8 800 775 28 23</p>
+                      <p class="text-cool-grey">Мы бережно упакуем и доставим вам товар курьером. Подробнее о доставке здесь или по телефону <a class="text-cool-grey d-inline-block" href="tel:880077528" title="title">	8 800 775 28 23.</a></p>
                     </div>
                     <div class="form-wrap delivery-var pt-5">
                       <div class="h4 strong">Адрес пункта самовывоза:</div>
-                      <p class="text-cool-grey">Г. Краснодар, ул. Восточно-Кругликовская, 22, на въезде в ЖК «ПАНОРАМА»<br/>ежедневно с 10:00 до 22:00, без перерыва и выходных.</p>
+                      <p>Г. Краснодар, ул. Восточно-Кругликовская, 22, на въезде в ЖК «ПАНОРАМА»<br/>ежедневно с 10:00 до 22:00, без перерыва и выходных.</p>
                     </div>
                     <div class="form-wrap delivery-var">
                       <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" min="4"/><span class="form-wrap__title">Адрес доставки</span>
+                        <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title">Адрес доставки</span>
                         </label>
                       </div>
                       <!-- +e.input-wrap-->
-                      <p class="text-cool-grey">Мы бережно упакуем и доставим товар до транспортной компании, Почты России или другим удобным вам способом. Подробнее о доставке здесь или по телефону 8 800 775 28 23</p>
+                      <p class="text-cool-grey">Мы бережно упакуем и доставим товар до транспортной компании, Почты России или другим удобным вам способом. Подробнее о доставке здесь или по телефону <a class="text-cool-grey d-inline-block" href="tel:880077528" title="title">	8 800 775 28 23.</a></p>
                     </div>
                   </div>
                 </div>
@@ -151,22 +183,22 @@
                   </div>
                   <div class="form-wrap">
                     <div class="form-wrap__input-wrap form-group">
-                      <label><input class="form-wrap__input form-control" type="text" min="4"/><span class="form-wrap__title">Имя </span>
+                      <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title">Имя </span>
                       </label>
                     </div>
                     <!-- +e.input-wrap-->
                     <div class="form-wrap__input-wrap form-group">
-                      <label><input class="form-wrap__input form-control" type="tel" min="4"/><span class="form-wrap__title">Телефон </span>
+                      <label><input class="form-wrap__input form-control" type="tel"/><span class="form-wrap__title">Телефон </span>
                       </label>
                     </div>
                     <!-- +e.input-wrap-->
                     <div class="form-wrap__input-wrap form-group">
-                      <label><input class="form-wrap__input form-control" type="email" min="4"/><span class="form-wrap__title">E-mail (Необязательно) </span>
+                      <label><input class="form-wrap__input form-control" type="email"/><span class="form-wrap__title">E-mail (Необязательно) </span>
                       </label>
                     </div>
                     <!-- +e.input-wrap-->
                     <div class="form-wrap__input-wrap form-group">
-                      <label><input class="form-wrap__input form-control" type="text" min="4"/><span class="form-wrap__title">Промокод</span>
+                      <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title">Промокод</span>
                       </label>
                     </div>
                     <!-- +e.input-wrap-->
@@ -349,7 +381,7 @@
                 <div class="cat-carusel-js swiper-container">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
                         </div>
@@ -367,7 +399,7 @@
                       </div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
                         </div>
@@ -386,7 +418,7 @@
                     </div>
                     <!-- .swiper-slide-->
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
                         </div>
@@ -404,7 +436,7 @@
                       </div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
                         </div>
@@ -423,7 +455,7 @@
                     </div>
                     <!-- .swiper-slide-->
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
                         </div>
@@ -441,7 +473,7 @@
                       </div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
                         </div>
@@ -460,7 +492,7 @@
                     </div>
                     <!-- .swiper-slide-->
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
                         </div>
@@ -478,7 +510,7 @@
                       </div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
                         </div>
@@ -497,7 +529,7 @@
                     </div>
                     <!-- .swiper-slide-->
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
                         </div>
@@ -515,7 +547,7 @@
                       </div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
                         </div>
@@ -534,7 +566,7 @@
                     </div>
                     <!-- .swiper-slide-->
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Чаша Turkish Target Mummy в молочном обжиге New</a>
                         </div>
@@ -552,7 +584,7 @@
                       </div>
                     </div>
                     <div class="swiper-slide">
-                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" data-src="img/prod-i.png" alt=""/>
+                      <div class="item-prod"><a class="item-prod__img-wrap" href="#"><img class="res-i swiper-lazy" src="#" data-src="img/prod-i.png" alt=""/>
                         <div class="swiper-lazy-preloader"></div></a>
                         <div class="item-prod__title"><a href="#">Кальян TARGET BLACK ?(Шахта)</a>
                         </div>
