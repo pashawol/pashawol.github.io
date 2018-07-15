@@ -106,8 +106,5 @@ $(".data-modal").click(function(){
 	wow.init();
  
 
-	skrollr.init({
-		smoothScrolling: false,
-		mobileDeceleration: 0.004
-	});
+	 
 });
