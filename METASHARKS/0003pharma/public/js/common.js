@@ -76,10 +76,10 @@
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
 
+		 $("body, html").toggleClass("fixed");
     $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
     $(".hidden-mnu").toggleClass("active");
-    $("body, html").toggleClass("fixed");
     return false;
   });
 
