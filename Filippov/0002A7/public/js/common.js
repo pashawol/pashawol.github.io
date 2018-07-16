@@ -44,6 +44,7 @@
         return false;
     });
 
+		
  
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
