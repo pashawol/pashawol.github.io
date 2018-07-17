@@ -6,26 +6,20 @@
 
 	// показать меню разширенного поиска
 	$(".search-adv__btn--js").click(function () {
-		$(this).find(".search-adv__text").toggle('50');
-		$(".search-adv__block--js").toggle('50');
-	  })
+		$(".search-adv__btn--js").toggleClass("active").find(".search-adv__text").toggle(300);
+		$(".search-adv__block--js").toggle(300);
+		})
+		
+		// прилипает меню
+		$(".top-nav--js").stick_in_parent();
 
-  var url=document.location.href;
-  $.each($(".top-nav__nav a "),function(){
+		$('.dropdown-toggle').dropdown({
+			boundary: 'window',
+			display: 'static',
+			offset: '20',
+			placement: 'bottom'
+		})
 
-  if(this.href==url){
-    if($(this).hasClass("top-nav__link") == true){
-
-    $(this).addClass('top-nav__link-active');
-    }
-    if($(this).hasClass("footer__link") == true){
-
-    $(this).addClass('footer__link-active');
-    }
-
-  };
-
-  });
       // галерея
   $(".gal").each(function(){
 
@@ -66,14 +60,42 @@
       $("body, html").removeClass("fixed");
         }
     });
+		var h;
+		function scrolldr() {
+			$(".dropdown__block").each(function () {
+				if ($(".top-nav--js").hasClass('is_stuck') == true) {
+					h = $(window).height() - $(".top-nav--js").height()  ;
+					console.log('да' + $(this).offset().top)
+				}
+				else{
+					h = $(window).height() - $(".top-nav--js").height() - $(".top-nav--js").offset().top;
+						console.log('нет' + $(this).offset().top)
+				}
+				$(this).find(".dropdown__body").css({"max-height": h - 124 });
 
-  function heightses() {
+			})
+		}
+		$(window).scroll(function () {
+			scrolldr();
+		})
+		$(".dropdown-toggle").click(function () { 
+			if ($(".top-nav--js").hasClass('is_stuck') == true) {
+				h = $(window).height() - $(".top-nav--js").height();
+				console.log('да' + $(this).offset().top)
+			} else {
+				h = $(window).height() - $(".top-nav--js").height() - $(".top-nav--js").offset().top;
+				console.log('нет' + $(this).offset().top)
+			}
+		$(this).next().find(".dropdown__body").css({
+			"max-height": h - 124
+		});
+	})
+	scrolldr();
 
+  function heightses() { 
     var w = $(window).width();
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
-   //
-
-
+   // 
     // скрывает моб меню
     if (w>991){
        $(".toggle-mnu-1").removeClass("on");
@@ -95,14 +117,11 @@
   }
 
   $(window).resize(function() {
-    heightses();
+		heightses();
+		scrolldr();
 
   });
-$( window ).on( "load", function() {
- heightses();
-
-})
-
+ 
  heightses();
 
 
@@ -145,7 +164,7 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 
 
 
- var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+ var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.4-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
 
 var   arrl2 = (' <div class="l">'+ icon),
       arrr2 =(' <div class="r">'+ icon);
