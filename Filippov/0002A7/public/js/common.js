@@ -44,7 +44,38 @@
         return false;
     });
 
-		
+			// для  кнопок скачки приложения
+
+			isMobile = {
+				Android: function () {
+					return navigator.userAgent.match(/Android/i);
+				},
+				BlackBerry: function () {
+					return navigator.userAgent.match(/BlackBerry/i);
+				},
+				iOS: function () {
+					return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+				},
+				Opera: function () {
+					return navigator.userAgent.match(/Opera Mini/i);
+				},
+				Windows: function () {
+					return navigator.userAgent.match(/IEMobile/i);
+				},
+				any: function () {
+					return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+				}
+			};
+
+			if (isMobile.any()) {
+
+				$(".btn-apple").removeClass("popup-with-move-anim").attr("href", "#");
+				$(".btn-google").removeClass("popup-with-move-anim").attr("href", "#");
+			} else {
+
+				$(".btn-apple").addClass("popup-with-move-anim").attr("href", "#modal-app");
+				$(".btn-google").addClass("popup-with-move-anim").attr("href", "#modal-app");
+			}
  
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
@@ -105,7 +136,7 @@ $(".data-modal").click(function(){
 		mobile: false
 	});
 	wow.init();
- 
+
 
 	 
 });
