@@ -11,14 +11,13 @@
 		})
 		
 		// прилипает меню
-		$(".top-nav--js").stick_in_parent();
+	 $(".top-nav--js").stick_in_parent();
+										
+	 $(".sidebar-profile").stick_in_parent({
+		 offset_top: $(".top-nav--js").height() + 30
+	 });
 
-		$('.dropdown-toggle').dropdown({
-			boundary: 'window',
-			display: 'static',
-			offset: '20',
-			placement: 'bottom'
-		})
+	
 
       // галерея
   $(".gal").each(function(){
@@ -44,76 +43,54 @@
 
     $(".toggle-mnu-1").toggleClass("on");
     // $("body").toggleClass("fixed");
-    $(".hidden-mnu").toggleClass("active");
+    $(".hidden-mnu").fadeToggle().toggleClass("active");
     $("body, html").toggleClass("fixed");
     return false;
   });
-    $('.hidden-mnu ul li a').on('click', function () {
-      $(".hidden-mnu .toggle-mnu").click();
-    });
-    $(document).mouseup(function (e) {
-    var container = $(".hidden-mnu.active");
-    if (container.has(e.target).length === 0){
-       $(".toggle-mnu-1").removeClass("on");
-      // $("body").toggleClass("fixed");
-      $(".hidden-mnu").removeClass("active");
-      $("body, html").removeClass("fixed");
-        }
-    });
+     
+		
+
+	 $('.dropdown-toggle').dropdown({
+		 boundary: 'window',
+		//  display: 'static',
+		 offset: '20',
+		 placement: 'bottom'
+	 })
+	//  подбор высота для dropdown и  мобильного меню
 		var h;
 		function scrolldr() {
+			if ($(".top-nav--js").hasClass('is_stuck') == true) {
+				h = $(window).height() - $(".top-nav--js").height()  ; 
+			}
+			else{
+				h = $(window).height() - $(".top-nav--js").height() - $(".top-nav--js").offset().top; 
+			}
 			$(".dropdown__block").each(function () {
-				if ($(".top-nav--js").hasClass('is_stuck') == true) {
-					h = $(window).height() - $(".top-nav--js").height()  ;
-					console.log('да' + $(this).offset().top)
-				}
-				else{
-					h = $(window).height() - $(".top-nav--js").height() - $(".top-nav--js").offset().top;
-						console.log('нет' + $(this).offset().top)
-				}
-				$(this).find(".dropdown__body").css({"max-height": h - 124 });
+			$(this).find(".dropdown__body").css({"max-height": h - 124 });
+		})
+			$(".hidden-mnu").height(h);
 
-			})
 		}
+		
 		$(window).scroll(function () {
 			scrolldr();
 		})
+		scrolldr();
+
 		$(".dropdown-toggle").click(function () { 
-			if ($(".top-nav--js").hasClass('is_stuck') == true) {
-				h = $(window).height() - $(".top-nav--js").height();
-				console.log('да' + $(this).offset().top)
-			} else {
-				h = $(window).height() - $(".top-nav--js").height() - $(".top-nav--js").offset().top;
-				console.log('нет' + $(this).offset().top)
-			}
 		$(this).next().find(".dropdown__body").css({
 			"max-height": h - 124
 		});
 	})
-	scrolldr();
 
   function heightses() { 
-    var w = $(window).width();
-   // $(".otz__item .text-wrap ").height('auto').equalHeights();
-   // 
+    var w = $(window).width(); 
     // скрывает моб меню
     if (w>991){
-       $(".toggle-mnu-1").removeClass("on");
-        // $("body").removeClass("fixed");
+       $(".toggle-mnu-1").removeClass("on"); 
         $(".hidden-mnu").removeClass("active");
         $("body").removeClass("fixed");
-    }
-    var topH=$("header ").innerHeight();
-
-    $(window).scroll(function(){
-                if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed');
-                }
-                else  {
-                    $('.top-nav  ').removeClass('fixed');
-                }
-            });
-       // конец добавил
+    } 
   }
 
   $(window).resize(function() {
@@ -135,8 +112,45 @@
 
  //        return false;
  //    });
+	// эффект при наведении на меню
+	 $(function () { 
+		 var $el, leftPos, newWidth,
+			 $mainNav = $(".nav-js"); 
+		 $mainNav.each(function () { 
+			 var th = $(this);
+			 th	.append("<li class='magic-line'></li>");
+			 var $magicLine = th.find(".magic-line");
 
+			$magicLine
+				
+				.width(th.find(" .active").width())
+				.css("left", th.find(" .active a").position().left)
+				.data("origLeft", $magicLine.position().left)
+				.data("origWidth", $magicLine.width());
+			$(window).resize(function () { 
+				$magicLine 
+					.width(th.find(" .active").width())
+					.css("left", th.find(" .active a").position().left)
+					.data("origLeft", $magicLine.position().left)
+					.data("origWidth", $magicLine.width());
+			})
 
+			th.find(" li a").hover(function () {
+				$el = $(this);
+				leftPos = $el.position().left;
+				newWidth = $el.parent().width();
+				$magicLine.stop().animate({
+					left: leftPos,
+					width: newWidth
+				});
+			}, function () {
+				$magicLine.stop().animate({
+					left: $magicLine.data("origLeft"),
+					width: $magicLine.data("origWidth")
+				});
+			});
+		 })
+	 });
 // табы  . Теперь данные активного таба остается в storage
 $(function() {
 var tab = ('tabs');
