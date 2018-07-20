@@ -14,7 +14,7 @@
 	 $(".top-nav--js").stick_in_parent();
 										
 	 $(".sidebar-profile").stick_in_parent({
-		 offset_top: $(".top-nav--js").height(),
+		 offset_top: $(".top-nav--js").height() + 30,
 		//  inner_scrolling: true,
 		 recalc_every: true,
 	 });
@@ -110,6 +110,12 @@
 
 
 // листалка по стр
+ $(" .content__btn-top--js").click(function () {
+    $('html, body').animate({ scrollTop:0 }, 1100);
+    return false;
+  });
+ 
+// листалка по стр
  // $(" .top-nav a").click(function () {
  //        var elementClick = $(this).attr("href");
  //        var destination = $(elementClick).offset().top;
@@ -118,6 +124,7 @@
 
  //        return false;
  //    });
+
 	// эффект при наведении на меню
 	 $(function () { 
 		 var $el, leftPos, newWidth,
@@ -329,7 +336,7 @@ $("form").submit(function() { //Change
   file.change(function(){
          var filename = $(this).val().replace(/.*\\/, "");
          var name = $(".add-file__filename  ");
-       name.text(filename);
+       name.text("не  загружено").text(filename);
 
     });
   // или
@@ -341,16 +348,7 @@ $("form").submit(function() { //Change
    //   });
 
 
-  $(".pretty-embed__bg").each(function(){
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
-
+ 
 
 // var wowAnim = $(".s-dop__col," +
 //                 ".s-pick__col," +

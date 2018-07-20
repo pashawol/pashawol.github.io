@@ -326,62 +326,76 @@
       <!-- end top-nav-->
       <div class="main-container container">
         <div class="row justify-content-between">
-          <div class="col-auto leftcol-js">
+          <div class="col-lg-auto">
             <!-- start sidebar-profile-->
             <div class="sidebar-profile list-group">
               <div class="sidebar-profile__inner">
-                <div class="sidebar-profile__img-wrap img-bg list-group-item" style="	background-image: url(img/avatar.jpg);"><img src="img/avatar.jpg" alt="alt"/>
-                </div>
-                <div class="sidebar-profile__caption text-center list-group-item">
-                  <div class="h5 mb-0">Михаил Ишметов</div>
-                  <div class="md-s mb-2"><span class="text-secondary">Город: </span>Самара</div>
-                  <div>
-                    <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                      <svg class="icon icon-edit ">
-                        <use xlink:href="img/svg/sprite.svg#edit"></use>
-                      </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
+                <div class="sidebar-profile__main-row row">
+                  <div class="col-lg-12 col-md-4 col-sm-5">
+                    <div class="sidebar-profile__img-wrap img-bg list-group-item" style="	background-image: url(img/avatar.jpg);"><img src="img/avatar.jpg" alt="alt"/>
                     </div>
                   </div>
-                </div>
-                <div class="sidebar-profile__table w-100 md-s list-group-item py-0">
-                  <div class="row">
-                    <div class="sidebar-profile__col col-auto text-secondary">Место работы: 
+                  <div class="col-lg-12 col-md-8 col-sm-7">
+                    <div class="sidebar-profile__caption text-lg-center list-group-item">
+                      <div class="h5 mb-0">Михаил Ишметов</div>
+                      <div class="md-s mb-2"><span class="text-secondary">Город: </span>Самара</div>
+                      <div>
+                        <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
+                          <svg class="icon icon-edit ">
+                            <use xlink:href="img/svg/sprite.svg#edit"></use>
+                          </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
+                        </div>
+                      </div>
                     </div>
-                    <div class="sidebar-profile__col col">Семейная клиника
+                    <div class="sidebar-profile__table w-100 md-s list-group-item py-0">
+                      <div class="sidebar-profile__row row">
+                        <div class="sidebar-profile__col col-auto text-secondary">Место работы: 
+                        </div>
+                        <div class="sidebar-profile__col col">Семейная клиника
+                        </div>
+                      </div>
+                      <div class="sidebar-profile__row row">
+                        <div class="sidebar-profile__col col-auto text-secondary">Должность: 
+                        </div>
+                        <div class="sidebar-profile__col col">Хирург
+                        </div>
+                      </div>
+                      <div class="sidebar-profile__row row">
+                        <div class="sidebar-profile__col col-auto text-secondary">Общий стаж работы: 
+                        </div>
+                        <div class="sidebar-profile__col col">3 года
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sidebar-profile__progress list-group-item p-0 border border-warning-l text-center text-warning mb-0 d-none d-lg-block">
+                      <div class="progress">
+                        <div class="progress-bar bg-warning-l" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                        <div class="sidebar-profile__text">Мой профиль заполнен на 66%
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="sidebar-profile__col col-auto text-secondary">Должность: 
+                  <div class="col-lg-12 col-md-4 col-sm-5">
+                    <div class="sidebar-profile__foot">
+                      <div class="row no-gutters list-group-item border-bottom-0 text-center d-flex p-0">
+                        <div class="col-6 tdn border-right">
+                          <div class="sidebar-profile__btn-outline">
+                            <div class="h4 mb-0">18</div>
+                            <div class="smaller text-secondary">Мои подписчики</div>
+                          </div>
+                        </div>
+                        <div class="col-6 tdn">
+                          <div class="sidebar-profile__btn-outline">
+                            <div class="h4 mb-0">13</div>
+                            <div class="smaller text-secondary">Я подписан</div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="sidebar-profile__col col">Хирург
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="sidebar-profile__col col-auto text-secondary">Общий стаж работы: 
-                    </div>
-                    <div class="sidebar-profile__col col">3 года
-                    </div>
-                  </div>
-                </div>
-                <div class="sidebar-profile__progress list-group-item p-0 border border-warning-l text-center text-warning mb-0">
-                  <div class="progress">
-                    <div class="progress-bar bg-warning-l" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
-                    <div class="sidebar-profile__text">Мой профиль заполнен на 66%
-                    </div>
-                  </div>
-                </div>
-                <div class="row no-gutters list-group-item border-bottom-0 text-center d-flex p-0">
-                  <div class="col-6 tdn border-right">
-                    <div class="h4 mb-0">18</div>
-                    <div class="smaller text-secondary">Мои подписчики</div>
-                  </div>
-                  <div class="col-6 tdn">
-                    <div class="h4 mb-0">13</div>
-                    <div class="smaller text-secondary">Я подписан</div>
                   </div>
                 </div>
               </div>
-              <div class="smaller text-center mt-4"><a class="text-secondary d-block mb-2" href="#">Как видят мой профиль другие?</a><a class="text-secondary d-block mb-2" href="#">Как отображается мой профиль в поиске?</a><a class="text-secondary d-inline-block mx-2 mb-2 btn-icon" href="#"> 
+              <div class="d-none d-lg-block smaller text-center mt-4"><a class="text-secondary d-block mb-2" href="#">Как видят мой профиль другие?</a><a class="text-secondary d-block mb-2" href="#">Как отображается мой профиль в поиске?</a><a class="text-secondary d-inline-block mx-2 mb-2 btn-icon" href="#"> 
                   <svg class="icon icon-share ">
                     <use xlink:href="img/svg/sprite.svg#share"></use>
                   </svg>Поделиться</a><a class="text-secondary d-inline-block mx-2 mb-2 btn-icon" href="#"> 
@@ -423,13 +437,13 @@
                       <div class="status-block__body">
                         <div class="status-block__edit-block status-block__edit-block--js">
                           <div class="row">
-                              <div class="col-6">
+                              <div class="col-md-6">
                                 <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
                                       <svg class="icon icon-status-1 ">
                                         <use xlink:href="img/svg/sprite.svg#status-1"></use>
                                       </svg></span></span><span class="col"><span class="text-secondary">Смена работы: </span><span class="status-block__text block-toggle show">Возможно</span><span class="block-toggle pt-1"><span class="status-block__input-wrap form-group d-block">
                                         <select class="status-block__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                          <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                           <option value="">Выберите из списка 1</option>
                                           <option value="">Выберите из списка 2</option>
                                           <option value="">Выберите из списка 3</option>
@@ -438,13 +452,13 @@
                                         <!-- +e.input-wrap--></span></span></span>
                                 </label>
                               </div>
-                              <div class="col-6">
+                              <div class="col-md-6">
                                 <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
                                       <svg class="icon icon-status-2 ">
                                         <use xlink:href="img/svg/sprite.svg#status-2"></use>
                                       </svg></span></span><span class="col"><span class="text-secondary">Готовность к переездам: </span><span class="status-block__text block-toggle show">Нет</span><span class="block-toggle pt-1"><span class="status-block__input-wrap form-group d-block">
                                         <select class="status-block__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                          <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                           <option value="">Выберите из списка 1</option>
                                           <option value="">Выберите из списка 2</option>
                                           <option value="">Выберите из списка 3</option>
@@ -453,7 +467,7 @@
                                         <!-- +e.input-wrap--></span></span></span>
                                 </label>
                               </div>
-                              <div class="col-6">
+                              <div class="col-md-6">
                                 <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
                                       <svg class="icon icon-status-3 ">
                                         <use xlink:href="img/svg/sprite.svg#status-3"></use>
@@ -461,13 +475,13 @@
                                         <!-- +e.input-wrap--></span></span></span>
                                 </label>
                               </div>
-                              <div class="col-6">
+                              <div class="col-md-6">
                                 <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
                                       <svg class="icon icon-status-4 ">
                                         <use xlink:href="img/svg/sprite.svg#status-4"></use>
                                       </svg></span></span><span class="col"><span class="text-secondary">Готовность к командировкам: </span><span class="status-block__text block-toggle show">Да</span><span class="block-toggle pt-1"><span class="status-block__input-wrap form-group d-block">
                                         <select class="status-block__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                          <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                           <option value="">Выберите из списка 1</option>
                                           <option value="">Выберите из списка 2</option>
                                           <option value="">Выберите из списка 3</option>
@@ -476,7 +490,7 @@
                                         <!-- +e.input-wrap--></span></span></span>
                                 </label>
                               </div>
-                              <div class="col-6">
+                              <div class="col-md-6">
                                 <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
                                       <svg class="icon icon-status-5 ">
                                         <use xlink:href="img/svg/sprite.svg#status-5"></use>
@@ -484,7 +498,7 @@
                                         <!-- +e.input-wrap--></span></span></span>
                                 </label>
                               </div>
-                              <div class="col-6">
+                              <div class="col-md-6">
                                 <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
                                       <svg class="icon icon-status-6 ">
                                         <use xlink:href="img/svg/sprite.svg#status-6"></use>
@@ -516,7 +530,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Обо мне</div>
                             </div>
                             <div class="col-auto">
@@ -532,7 +546,7 @@
                           <div class="block-toggle show">
                             <p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния.</p>
                           </div>
-                          <div class="block-toggle pt-1">
+                          <div class="block-toggle pt-1 content__about-text">
                             <div class="content__input-wrap form-group"><textarea class="content__input form-control" placeholder="Напишите кратко о себе..."></textarea>
                             </div>
                             <!-- +e.input-wrap-->
@@ -545,11 +559,11 @@
                     </div>
                     <!-- end +e.block-->
                     <!-- start +e.block-->
-                    <div class="content__block">
+                    <div class="content__block block-education">
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Образование</div>
                             </div>
                             <div class="col-auto">
@@ -565,7 +579,7 @@
                           <div class="block-toggle show">
                             <div class="content__block content__block--ml border-bottom border-gray">
                               <div class="row">
-                                <div class="col-auto small">
+                                <div class="col-sm-auto small">
                                   <div class="content__label">
                                     <div class="content__date">Ноябрь 2015
                                     </div>
@@ -584,7 +598,7 @@
                             </div>
                             <div class="content__block content__block--ml border-bottom border-gray">
                               <div class="row">
-                                <div class="col-auto small">
+                                <div class="col-sm-auto small">
                                   <div class="content__label">
                                     <div class="content__date">Ноябрь 2015
                                     </div>
@@ -612,9 +626,9 @@
                                 </div>
                               </div>
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Уровень:</span></span><span class="col">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Уровень:</span></span><span class="col">
                                     <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                       <option value="">Выберите из списка 1</option>
                                       <option value="">Выберите из списка 2</option>
                                       <option value="">Выберите из списка 3</option>
@@ -623,13 +637,13 @@
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название или аббривиатура"/></span></label>
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название или аббривиатура"/></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Город:</span></span><span class="col">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Город:</span></span><span class="col">
                                     <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                       <option value="">Выберите из списка 1</option>
                                       <option value="">Выберите из списка 2</option>
                                       <option value="">Выберите из списка 3</option>
@@ -638,20 +652,20 @@
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите наименование факультета"/></span></label>
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите наименование факультета"/></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Краткое описание специализации:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Напишите несколько предложений"/></span></label>
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Краткое описание специализации:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Напишите несколько предложений"/></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
                                 <div class="row align-items-center">
-                                  <div class="col-auto"><span class="content__title-label">Конец обучения:</span>
+                                  <div class="col-md-auto"><span class="content__title-label">Конец обучения:</span>
                                   </div>
                                   <div class="col">
                                     <div class="row small-row align-items-center">
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
                                           <option value="">Январь</option>
@@ -660,7 +674,7 @@
                                           <option value="">Апрель</option>
                                         </select>
                                       </div>
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Год</option>
                                           <option value="">2018</option>
@@ -669,81 +683,7 @@
                                           <option value="">2015</option>
                                         </select>
                                       </div>
-                                      <div class="col">
-                                        <div class="smaller text-secondary">Если учитесь в&nbsp;настоящее время&nbsp;&mdash; укажите год предполагаемого окончания</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="content__block border-bottom border-gray">
-                              <div class="text-right">
-                                <div class="btn-delete btn-delete--js">
-                                  <svg class="icon icon-delete ">
-                                    <use xlink:href="img/svg/sprite.svg#delete"></use>
-                                  </svg>
-                                </div>
-                              </div>
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Уровень:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название или аббривиатура"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Город:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите наименование факультета"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Краткое описание специализации:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Напишите несколько предложений"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <div class="row align-items-center">
-                                  <div class="col-auto"><span class="content__title-label">Конец обучения:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-auto">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-auto">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                      <div class="col">
+                                      <div class="col-sm">
                                         <div class="smaller text-secondary">Если учитесь в&nbsp;настоящее время&nbsp;&mdash; укажите год предполагаемого окончания</div>
                                       </div>
                                     </div>
@@ -751,12 +691,12 @@
                                 </div>
                               </div>
                               <div class="content__foot row align-items-center">
-                                <div class="col-auto">
+                                <div class="col-sm-auto">
                                   <div class="block-toggle">
                                     <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
                                   </div>
                                 </div>
-                                <div class="col text-right"><a class="text-secondary tdu" href="#">Указать еще одно место обучения</a></div>
+                                <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одно место обучения</a></div>
                               </div>
                             </div>
                           </div>
@@ -769,7 +709,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Опыт работы</div>
                             </div>
                             <div class="col-auto">
@@ -785,7 +725,7 @@
                           <div class="block-toggle show">
                             <div class="content__block content__block--ml border-bottom border-gray">
                               <div class="row">
-                                <div class="col-auto small">
+                                <div class="col-sm-auto small">
                                   <div class="content__label">
                                     <div class="content__date">Октябрь 2010—  Ноябрь 2015
                                     </div>
@@ -814,9 +754,9 @@
                                 </div>
                               </div>
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Уровень:</span></span><span class="col">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Уровень:</span></span><span class="col">
                                     <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                       <option value="">Выберите из списка 1</option>
                                       <option value="">Выберите из списка 2</option>
                                       <option value="">Выберите из списка 3</option>
@@ -825,17 +765,13 @@
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название или аббривиатура"/></span></label>
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Организация:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название организации"/></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Организация:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название организации"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Город:</span></span><span class="col">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Город:</span></span><span class="col">
                                     <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                       <option value="">Выберите из списка 1</option>
                                       <option value="">Выберите из списка 2</option>
                                       <option value="">Выберите из списка 3</option>
@@ -844,13 +780,13 @@
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Сайт:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите сайт организации"/></span></label>
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Сайт:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите сайт организации"/></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Сфера детяльности:</span></span><span class="col">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Сфера детяльности:</span></span><span class="col">
                                     <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                       <option value="">Выберите из списка 1</option>
                                       <option value="">Выберите из списка 2</option>
                                       <option value="">Выберите из списка 3</option>
@@ -859,24 +795,20 @@
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите наименование факультета"/></span></label>
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Должность:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите должность"/></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Должность:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите должность"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="row"><span class="col-auto"><span class="content__title-label">Обязанности и достижения:</span></span><span class="col"><textarea class="content__input form-control" placeholder="Укажите обязанности и достижения"></textarea></span></label>
+                                <label class="row"><span class="col-md-auto"><span class="content__title-label">Обязанности и достижения:</span></span><span class="col"><textarea class="content__input form-control" placeholder="Укажите обязанности и достижения"></textarea></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
                                 <div class="row align-items-center">
-                                  <div class="col-auto"><span class="content__title-label">Начало работы:</span>
+                                  <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
                                   </div>
                                   <div class="col">
                                     <div class="row small-row align-items-center">
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
                                           <option value="">Январь</option>
@@ -885,7 +817,7 @@
                                           <option value="">Апрель</option>
                                         </select>
                                       </div>
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Год</option>
                                           <option value="">2018</option>
@@ -894,7 +826,7 @@
                                           <option value="">2015</option>
                                         </select>
                                       </div>
-                                      <div class="col">
+                                      <div class="col-sm">
                                         <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
                                         </label>
                                       </div>
@@ -902,13 +834,13 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="content__input-wrap form-group d-block">
+                              <div class="content__input-wrap form-group d-block mb-0">
                                 <div class="row align-items-center">
-                                  <div class="col-auto"><span class="content__title-label">Конец работы:</span>
+                                  <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
                                   </div>
                                   <div class="col">
                                     <div class="row small-row align-items-center">
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
                                           <option value="">Январь</option>
@@ -917,7 +849,7 @@
                                           <option value="">Апрель</option>
                                         </select>
                                       </div>
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Год</option>
                                           <option value="">2018</option>
@@ -940,9 +872,9 @@
                                 </div>
                               </div>
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Уровень:</span></span><span class="col">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Уровень:</span></span><span class="col">
                                     <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                       <option value="">Выберите из списка 1</option>
                                       <option value="">Выберите из списка 2</option>
                                       <option value="">Выберите из списка 3</option>
@@ -951,17 +883,13 @@
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название или аббривиатура"/></span></label>
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Организация:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название организации"/></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Организация:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название организации"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Город:</span></span><span class="col">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Город:</span></span><span class="col">
                                     <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                       <option value="">Выберите из списка 1</option>
                                       <option value="">Выберите из списка 2</option>
                                       <option value="">Выберите из списка 3</option>
@@ -970,13 +898,13 @@
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Сайт:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите сайт организации"/></span></label>
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Сайт:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите сайт организации"/></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Сфера детяльности:</span></span><span class="col">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Сфера детяльности:</span></span><span class="col">
                                     <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                       <option value="">Выберите из списка 1</option>
                                       <option value="">Выберите из списка 2</option>
                                       <option value="">Выберите из списка 3</option>
@@ -985,24 +913,20 @@
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите наименование факультета"/></span></label>
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Должность:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите должность"/></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Должность:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите должность"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="row"><span class="col-auto"><span class="content__title-label">Обязанности и достижения:</span></span><span class="col"><textarea class="content__input form-control" placeholder="Укажите обязанности и достижения"></textarea></span></label>
+                                <label class="row"><span class="col-md-auto"><span class="content__title-label">Обязанности и достижения:</span></span><span class="col"><textarea class="content__input form-control" placeholder="Укажите обязанности и достижения"></textarea></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
                                 <div class="row align-items-center">
-                                  <div class="col-auto"><span class="content__title-label">Начало работы:</span>
+                                  <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
                                   </div>
                                   <div class="col">
                                     <div class="row small-row align-items-center">
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
                                           <option value="">Январь</option>
@@ -1011,7 +935,7 @@
                                           <option value="">Апрель</option>
                                         </select>
                                       </div>
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Год</option>
                                           <option value="">2018</option>
@@ -1020,7 +944,7 @@
                                           <option value="">2015</option>
                                         </select>
                                       </div>
-                                      <div class="col">
+                                      <div class="col-sm">
                                         <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
                                         </label>
                                       </div>
@@ -1028,13 +952,13 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="content__input-wrap form-group d-block">
+                              <div class="content__input-wrap form-group d-block mb-0">
                                 <div class="row align-items-center">
-                                  <div class="col-auto"><span class="content__title-label">Конец работы:</span>
+                                  <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
                                   </div>
                                   <div class="col">
                                     <div class="row small-row align-items-center">
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
                                           <option value="">Январь</option>
@@ -1043,7 +967,7 @@
                                           <option value="">Апрель</option>
                                         </select>
                                       </div>
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Год</option>
                                           <option value="">2018</option>
@@ -1057,12 +981,12 @@
                                 </div>
                               </div>
                               <div class="content__foot row align-items-center">
-                                <div class="col-auto">
+                                <div class="col-sm-auto">
                                   <div class="block-toggle">
                                     <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
                                   </div>
                                 </div>
-                                <div class="col text-right"><a class="text-secondary tdu" href="#">Указать еще одно место работы</a></div>
+                                <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одно место работы</a></div>
                               </div>
                             </div>
                           </div>
@@ -1075,7 +999,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Социальная и профессиональная активность</div>
                             </div>
                             <div class="col-auto">
@@ -1091,7 +1015,7 @@
                           <div class="block-toggle show">
                             <div class="content__block content__block--ml border-bottom border-gray">
                               <div class="row">
-                                <div class="col-auto small">
+                                <div class="col-sm-auto small">
                                   <div class="content__label">
                                     <div class="content__date">Октябрь 2010—  Ноябрь 2015
                                     </div>
@@ -1112,17 +1036,13 @@
                           </div>
                           <div class="block-toggle pt-1">
                             <div class="content__block border-bottom border-gray">
-                              <div class="text-right">
-                                <div class="btn-delete">
-                                  <svg class="icon icon-delete ">
-                                    <use xlink:href="img/svg/sprite.svg#delete"></use>
-                                  </svg>
-                                </div>
-                              </div>
+                              <!-- .text-right-->
+                              <!-- 	.btn-delete-->
+                              <!-- 		+icon("delete")-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Тип деятельности:</span></span><span class="col">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Тип деятельности:</span></span><span class="col">
                                     <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                       <option value="">Выберите из списка 1</option>
                                       <option value="">Выберите из списка 2</option>
                                       <option value="">Выберите из списка 3</option>
@@ -1131,13 +1051,13 @@
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Описание деятельности:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название или аббривиатура"/></span></label>
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Описание деятельности:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название или аббривиатура"/></span></label>
                               </div>
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-auto"><span class="content__title-label">Город:</span></span><span class="col">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Город:</span></span><span class="col">
                                     <select class="content__input form-control">
-                                      <option class="d-none" value="" default="default" disabled="disabled">Выберите из списка</option>
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
                                       <option value="">Выберите из списка 1</option>
                                       <option value="">Выберите из списка 2</option>
                                       <option value="">Выберите из списка 3</option>
@@ -1147,11 +1067,11 @@
                               <!-- +e.input-wrap-->
                               <div class="content__input-wrap form-group d-block">
                                 <div class="row align-items-center">
-                                  <div class="col-auto"><span class="content__title-label">Начало работы:</span>
+                                  <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
                                   </div>
                                   <div class="col">
                                     <div class="row small-row align-items-center">
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
                                           <option value="">Январь</option>
@@ -1160,7 +1080,7 @@
                                           <option value="">Апрель</option>
                                         </select>
                                       </div>
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Год</option>
                                           <option value="">2018</option>
@@ -1169,7 +1089,7 @@
                                           <option value="">2015</option>
                                         </select>
                                       </div>
-                                      <div class="col">
+                                      <div class="col-sm">
                                         <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
                                         </label>
                                       </div>
@@ -1177,13 +1097,13 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="content__input-wrap form-group d-block">
+                              <div class="content__input-wrap form-group d-block mb-0">
                                 <div class="row align-items-center">
-                                  <div class="col-auto"><span class="content__title-label">Конец работы:</span>
+                                  <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
                                   </div>
                                   <div class="col">
                                     <div class="row small-row align-items-center">
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
                                           <option value="">Январь</option>
@@ -1192,7 +1112,7 @@
                                           <option value="">Апрель</option>
                                         </select>
                                       </div>
-                                      <div class="col-auto">
+                                      <div class="col-sm-auto col-6">
                                         <select class="content__input form-control">
                                           <option class="d-none" value="" default="default" disabled="disabled">Год</option>
                                           <option value="">2018</option>
@@ -1206,12 +1126,12 @@
                                 </div>
                               </div>
                               <div class="content__foot row align-items-center">
-                                <div class="col-auto">
+                                <div class="col-sm-auto">
                                   <div class="block-toggle">
                                     <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
                                   </div>
                                 </div>
-                                <div class="col text-right"><a class="text-secondary tdu" href="#">Указать еще одну активность</a></div>
+                                <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одну активность</a></div>
                               </div>
                             </div>
                           </div>
@@ -1237,7 +1157,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Навыки</div>
                             </div>
                             <div class="col-auto">
@@ -1260,7 +1180,22 @@
                             <div class="content__badge badge badge-warning-l base-fz">Спортивный
                             </div>
                           </div>
-                          <div class="block-toggle pt-1"></div>
+                          <div class="block-toggle pt-1">
+                            <div class="input-group mb-45"><input class="content__input form-control" type="text" placeholder="Например, Усидчевый"/>
+                              <div class="input-group-append">
+                                <button class="content__btn btn btn-success btn-icon" type="submit">
+                                  <svg class="icon icon-plus ">
+                                    <use xlink:href="img/svg/sprite.svg#plus"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="content__badge-wrap"><a class="content__badge badge badge-warning-l base-fz" href="#">Умный
+                              <svg class="icon icon-delete ">
+                                <use xlink:href="img/svg/sprite.svg#delete"></use>
+                              </svg></a>
+                            </div>
+                          </div>
                           <div class="block-toggle">
                             <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
                           </div>
@@ -1273,7 +1208,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Мои рекомендации</div>
                             </div>
                             <div class="col-auto">
@@ -1296,9 +1231,7 @@
                                   </div>
                                   <div class="strong text-primary">“Семейная клиника”</div>
                                 </div>
-                                <div class="col-auto">
-                                  <div class="content__badge content__badge--file strong bg-success text-white">pdf
-                                  </div>
+                                <div class="col-auto"><a class="content__badge content__badge--file strong btn btn-success text-white" href="#">pdf</a>
                                 </div>
                               </div>
                             </div>
@@ -1311,14 +1244,41 @@
                                   </div>
                                   <div class="strong text-primary">“Семейная клиника”</div>
                                 </div>
-                                <div class="col-auto">
-                                  <div class="content__badge content__badge--file strong bg-success text-white">jpeg
-                                  </div>
+                                <div class="col-auto"><a class="content__badge content__badge--file strong btn btn-success text-white" href="#">jpeg</a>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="block-toggle pt-1"></div>
+                          <div class="block-toggle pt-1">
+                            <div class="content__block border-bottom border-gray">
+                              <!-- .text-right-->
+                              <!-- 	.btn-delete-->
+                              <!-- 		+icon("delete")-->
+                              <div class="content__input-wrap form-group d-block">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Рекомендодатель:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите ФИО рекомендодателя"/></span></label>
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="content__input-wrap form-group d-block">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Место работы рекомендодателя:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название организации"/></span></label>
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="content__input-wrap form-group d-block">
+                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Должность рекомендодателя:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите должность"/></span></label>
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="content__input-wrap form-group d-block">
+                                <label>
+                                  <div class="add-file"><span class="row align-items-center"><span class="col-md-auto"><span class="add-file__title-label add-file__title-label--file">Загрузите рекомендацию в формате PDF:</span></span><span class="col"><span class="row small-row align-items-center justify-content-end">
+                                          <input class="d-none" name="file" type="file"/><span class="col-sm-auto">
+                                            <div class="add-file__filename text-left content__input form-control">не  загружено
+                                            </div></span><span class="col file-upload">
+                                            <div class="add-file__btn btn btn-outline-success">Загрузить
+                                            </div></span></span></span></span>
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
                           <div class="block-toggle">
                             <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
                           </div>
@@ -1331,7 +1291,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Знание языков</div>
                             </div>
                             <div class="col-auto">
@@ -1346,7 +1306,7 @@
                         <div class="content__block border-bottom border-gray">
                           <div class="block-toggle show">
                             <div class="row align-items-center">
-                              <div class="col-auto">
+                              <div class="col-sm-auto">
                                 <div class="content__item-lang">
                                   <div class="row align-items-center">
                                     <div class="col-auto">
@@ -1360,7 +1320,7 @@
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-auto">
+                              <div class="col-sm-auto">
                                 <div class="content__item-lang">
                                   <div class="row align-items-center">
                                     <div class="col-auto">
@@ -1376,9 +1336,38 @@
                               </div>
                             </div>
                           </div>
-                          <div class="block-toggle pt-1"></div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                          <div class="block-toggle pt-1">
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Язык:</span></span><span class="col">
+                                  <select class="content__input form-control">
+                                    <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
+                                    <option value="">Русский</option>
+                                    <option value="">Русский</option>
+                                    <option value="">Русский</option>
+                                    <option value="">Русский</option>
+                                  </select></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Уровень знания:</span></span><span class="col">
+                                  <select class="content__input form-control">
+                                    <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
+                                    <option value="">Родной язык</option>
+                                    <option value="">Родной язык</option>
+                                    <option value="">Родной язык</option>
+                                    <option value="">Родной язык</option>
+                                    <option value="">Родной язык</option>
+                                  </select></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__foot row align-items-center">
+                              <div class="col-sm-auto">
+                                <div class="block-toggle">
+                                  <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                                </div>
+                              </div>
+                              <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще один язык</a></div>
+                            </div>
                           </div>
                         </div>
                       </form>
@@ -1389,7 +1378,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Мои достижения</div>
                             </div>
                             <div class="col-auto">
@@ -1413,9 +1402,49 @@
                               За доблестную службу Российской Федерации в медицине 2017
                             </div>
                           </div>
-                          <div class="block-toggle pt-1"></div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                          <div class="block-toggle pt-1">
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Выберите из списка</span></span><span class="col">
+                                  <select class="content__input form-control">
+                                    <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
+                                    <option value="">Выберите из списка 1</option>
+                                    <option value="">Выберите из списка 2</option>
+                                    <option value="">Выберите из списка 3</option>
+                                    <option value="">Выберите из списка 3  Выберите из списка</option>
+                                  </select></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Наименование достижения:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Например, Заслуженный врач Российской Федерации"/></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Год:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="content__foot row align-items-center">
+                              <div class="col-sm-auto">
+                                <div class="block-toggle">
+                                  <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                                </div>
+                              </div>
+                              <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одно достижение</a></div>
+                            </div>
                           </div>
                         </div>
                       </form>
@@ -1426,7 +1455,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Мои статьи в журналах</div>
                             </div>
                             <div class="col-auto">
@@ -1480,13 +1509,73 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col-auto"><a class="tdu small" href="#">Ссылка на онлайн версию</a></div>
+                                <div class="col-md-auto"><a class="tdu small" href="#">Ссылка на онлайн версию</a></div>
                               </div>
                             </div>
                           </div>
-                          <div class="block-toggle pt-1"></div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                          <div class="block-toggle pt-1">
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Название статьи:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название статьи"/></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Укажите авторов:</span></span><span class="col">
+                                  <div class="input-group mw-100"><input class="content__input form-control" type="text" placeholder="Например, Иванов И.И."/>
+                                    <div class="input-group-append">
+                                      <button class="content__btn btn btn-success btn-icon" type="submit">
+                                        <svg class="icon icon-plus ">
+                                          <use xlink:href="img/svg/sprite.svg#plus"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div></span></label>
+                              <div class="align-items-center row"><span class="col-md-auto"><span class="content__title-label"></span></span><span class="col md-s">Ишметов М.С., Антонов С.А.</span></div>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Год выпуска статьи:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Название журнала:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название журнала"/></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Номер журнала:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите номер журнала"/></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Страницы:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Например, 35-41"/></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Ссылка на онлайн- версию журнала:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Необязательное поле"/></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__foot row align-items-center">
+                              <div class="col-sm-auto">
+                                <div class="block-toggle">
+                                  <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                                </div>
+                              </div>
+                              <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одну статью</a></div>
+                            </div>
                           </div>
                         </div>
                       </form>
@@ -1497,7 +1586,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Хобби</div>
                             </div>
                             <div class="col-auto">
@@ -1522,7 +1611,31 @@
                               </li>
                             </ul>
                           </div>
-                          <div class="block-toggle pt-1"></div>
+                          <div class="block-toggle pt-1">
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Укажите хобби:</span></span><span class="col">
+                                  <div class="input-group mw-100"><input class="content__input form-control" type="text" placeholder="Например, Иванов И.И."/>
+                                    <div class="input-group-append">
+                                      <button class="content__btn btn btn-success btn-icon" type="submit">
+                                        <svg class="icon icon-plus ">
+                                          <use xlink:href="img/svg/sprite.svg#plus"></use>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div></span></label>
+                              <div class="align-items-center row"><span class="col-md-auto"><span class="content__title-label"></span></span><span class="col">
+                                  <ul class="list">
+                                    <li class="list__item">Читать книги
+                                    </li>
+                                    <li class="list__item">Смотреть футбол
+                                    </li>
+                                    <li class="list__item">Бегать по утром
+                                    </li>
+                                    <li class="list__item">Коллекционирование миниатюрных автомобилей
+                                    </li>
+                                  </ul></span></div>
+                            </div>
+                          </div>
                           <div class="block-toggle">
                             <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
                           </div>
@@ -1548,7 +1661,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Мероприятия</div>
                             </div>
                             <div class="col-auto">
@@ -1569,9 +1682,39 @@
                               </li>
                             </ul>
                           </div>
-                          <div class="block-toggle pt-1"></div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                          <div class="block-toggle pt-1">
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Название мероприятия:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название мероприятия"/></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Год:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__foot row align-items-center">
+                              <div class="col-sm-auto">
+                                <div class="block-toggle">
+                                  <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                                </div>
+                              </div>
+                              <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одно мероприятие</a></div>
+                            </div>
                           </div>
                         </div>
                       </form>
@@ -1582,7 +1725,7 @@
                       <form class="block-parent--js">
                         <div class="content__head content__head--small">
                           <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col">
                               <div class="h5 mb-0">Дополнительное образование</div>
                             </div>
                             <div class="col-auto">
@@ -1605,9 +1748,39 @@
                               </li>
                             </ul>
                           </div>
-                          <div class="block-toggle pt-1"></div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                          <div class="block-toggle pt-1">
+                            <div class="content__input-wrap form-group d-block">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Название образования:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название дополнительного образования"/></span></label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__input-wrap form-group d-block">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Год:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="content__foot row align-items-center">
+                              <div class="col-sm-auto">
+                                <div class="block-toggle">
+                                  <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                                </div>
+                              </div>
+                              <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одно дополнительное образование</a></div>
+                            </div>
                           </div>
                         </div>
                       </form>
@@ -1615,49 +1788,34 @@
                     <!-- end +e.block-->
                     <!-- start +e.block-->
                     <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col-auto">
-                              <div class="h5 mb-0">Профессиональные сообщества</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
+                      <div class="content__head content__head--small">
+                        <div class="row justify-content-between">
+                          <div class="col">
+                            <div class="h5 mb-0">Профессиональные сообщества</div>
                           </div>
                         </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show"><a class="community-prev d-block tdn" href="#">
-                              <div class="row small-row">
-                                <div class="col-auto"><span class="community-prev__img-wrap"><img src="img/forum.jpg" alt="alt"/></span>
-                                </div>
-                                <div class="col">
-                                  <div class="strong">Сообщество хирургов</div>
-                                </div>
-                              </div></a><a class="community-prev d-block tdn" href="#">
-                              <div class="row small-row">
-                                <div class="col-auto"><span class="community-prev__img-wrap"><img src="img/forum.jpg" alt="alt"/></span>
-                                </div>
-                                <div class="col">
-                                  <div class="strong">Форум врачей Москвы и Санкт-Петербурга</div>
-                                </div>
-                              </div></a>
+                      </div>
+                      <div class="content__block border-bottom border-gray"><a class="community-prev d-block tdn" href="#">
+                        <div class="row small-row">
+                          <div class="col-auto"><span class="community-prev__img-wrap"><img src="img/forum.jpg" alt="alt"/></span>
                           </div>
-                          <div class="block-toggle pt-1"></div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                          <div class="col">
+                            <div class="strong">Сообщество хирургов</div>
                           </div>
-                        </div>
-                      </form>
+                        </div></a><a class="community-prev d-block tdn" href="#">
+                        <div class="row small-row">
+                          <div class="col-auto"><span class="community-prev__img-wrap"><img src="img/forum.jpg" alt="alt"/></span>
+                          </div>
+                          <div class="col">
+                            <div class="strong">Форум врачей Москвы и Санкт-Петербурга</div>
+                          </div>
+                        </div></a>
+                      </div>
                     </div>
                     <!-- end +e.block-->
                   </div>
                 </div>
-                <!--  end +e.group--><a class="content__btn-more btn btn-block btn-light small" href="#">Наверх
+                <!--  end +e.group--><a class="content__btn-top content__btn-top--js btn btn-block btn-light small" href="#">Наверх
                 <svg class="icon icon-down ">
                   <use xlink:href="img/svg/sprite.svg#down"></use>
                 </svg></a>
@@ -1670,7 +1828,7 @@
       <footer class="footer">
         <div class="container">
           <div class="row align-items-center">
-            <div class="col">
+            <div class="col-md">
               <ul class="footer__nav">
                 <li class="footer__item"><a class="footer__link" href="#">Реклама</a>
                 </li>
@@ -1686,7 +1844,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-auto">
+            <div class="col-md-auto">
               <div class="soc"><a class="soc__item soc__item soc__item--facebook-f" href="#" target="_blank">
                 <svg class="icon icon-facebook-f ">
                   <use xlink:href="img/svg/sprite.svg#facebook-f"></use>
@@ -1709,10 +1867,11 @@
                 </li>
               </ul>
             </div>
-            <div class="col">
-              <div class="small text-white">© 2018 Medicjobs.ru</div>
+            <div class="col text-md-left text-center">
+              <div class="footer__copy small text-white">© 2018 Medicjobs.ru
+              </div>
             </div>
-            <div class="col-auto">
+            <div class="col-md-auto">
               <ul class="footer__list row align-items-center small">
                 <li class="footer__list-item col-auto"><a class="footer__link text-gray tdn" href="#">Правила пользования сайтом</a>
                 </li>
