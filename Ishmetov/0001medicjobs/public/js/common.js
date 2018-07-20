@@ -16,7 +16,7 @@
 	 $(".sidebar-profile").stick_in_parent({
 		 offset_top: $(".top-nav--js").height() + 30,
 		//  inner_scrolling: true,
-		 recalc_every: true,
+		//  recalc_every: true,
 	 });
 
 	//  $(".sidebar-profile").stickyfloat('update', {
