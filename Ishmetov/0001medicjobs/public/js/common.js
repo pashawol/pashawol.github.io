@@ -14,9 +14,15 @@
 	 $(".top-nav--js").stick_in_parent();
 										
 	 $(".sidebar-profile").stick_in_parent({
-		 offset_top: $(".top-nav--js").height() + 30
+		 offset_top: $(".top-nav--js").height(),
+		//  inner_scrolling: true,
+		 recalc_every: true,
 	 });
 
+	//  $(".sidebar-profile").stickyfloat('update', {
+	//  	duration: 0,
+	//  	stickToBottom: true
+	//  });
 	
 
       // галерея
@@ -151,6 +157,26 @@
 			});
 		 })
 	 });
+	// / эффект при наведении на меню
+	//  показать блоки для редактирования на  стр профиля
+	$(".btn-toggle--js").click(function () {
+		var par = $(this).parents(".block-parent--js");
+		par.find(".btn-toggle--js").toggleClass("active");
+		par.find(".status-block__body .row").toggleClass("align-items-center");
+		par.find(".block-toggle").fadeToggle(150).toggleClass("show");
+	})
+	//  / показать блоки для редактирования на  стр профиля
+	//  показать аккордион  стр профиля
+	$(".accordion__title--js").click(function () {
+		$(this).toggleClass("active").parents(".accordion")
+		.find(".accordion__block--js").slideToggle()
+		setTimeout(function () {
+					$(this).find(".accordion__block--js").toggleClass("active");
+					}, 10);
+	})
+	// / показать аккордион  стр профиля
+
+
 // табы  . Теперь данные активного таба остается в storage
 $(function() {
 var tab = ('tabs');
