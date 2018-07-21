@@ -162,11 +162,12 @@
 	 });
 	// / эффект при наведении на меню
 	//  показать блоки для редактирования на  стр профиля
-	$(".btn-toggle--js").click(function () {
+	$(".btn-toggle--js").click(function (e) {
 		var par = $(this).parents(".block-parent--js");
 		par.find(".btn-toggle--js").toggleClass("active");
 		par.find(".status-block__body .row").toggleClass("align-items-center");
 		par.find(".block-toggle").fadeToggle(150).toggleClass("show");
+		return false;
 	})
 	//  / показать блоки для редактирования на  стр профиля
 	//  показать аккордион  стр профиля
