@@ -73,9 +73,9 @@
 
 		}
 		
-		// $(window).scroll(function () {
-		// 	scrolldr();
-		// })
+		$(window).scroll(function () {
+			scrolldr();
+		})
 		scrolldr();
 		// scrolldr();
 
