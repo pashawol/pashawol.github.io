@@ -11,11 +11,11 @@
 		})
 		
 		// прилипает меню
-	 $(".top-nav--js").stick_in_parent();
+	 $(".header--js").stick_in_parent();
 										
 	 $(".sidebar-profile").stick_in_parent({
-		 offset_top: $(".top-nav--js").height() + 30,
-		//  inner_scrolling: true,
+		 offset_top: $(".header--js").height() + 30,
+		 inner_scrolling: true,
 		//  recalc_every: true,
 	 });
 
@@ -63,29 +63,25 @@
 		 placement: 'bottom'
 	 })
 	//  подбор высота для dropdown и  мобильного меню
-		var h;
-		function scrolldr() {
-			if ($(".top-nav--js").hasClass('is_stuck') == true) {
-				h = $(window).height() - $(".top-nav--js").height()  ; 
-			}
-			else{
-				h = $(window).height() - $(".top-nav--js").height() - $(".top-nav--js").offset().top; 
-			}
+		var 	h = $(window).height() - $(".header--js").height();
+		function scrolldr() { 
+			h = $(window).height() - $(".header--js").height();
 			$(".dropdown__block").each(function () {
-			$(this).find(".dropdown__body").css({"max-height": h - 124 });
+			$(this).find(".dropdown__body").css({"max-height": h - 104 });
 		})
 			$(".hidden-mnu").height(h);
 
 		}
 		
-		$(window).scroll(function () {
-			scrolldr();
-		})
+		// $(window).scroll(function () {
+		// 	scrolldr();
+		// })
 		scrolldr();
+		// scrolldr();
 
 		$(".dropdown-toggle").click(function () { 
 		$(this).next().find(".dropdown__body").css({
-			"max-height": h - 124
+			"max-height": h - 104
 		});
 	})
 
