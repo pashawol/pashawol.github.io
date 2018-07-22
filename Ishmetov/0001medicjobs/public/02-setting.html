@@ -373,1422 +373,420 @@
           </div>
           <div class="col col-content">
             <div class="s-main">
-              <!-- start content-profile-->
-              <div class="content content--profile">
+              <!-- start content-setting-->
+              <div class="content content--setting">
                 <div class="content__group py-0 border-bottom border-gray">
                   <ul class="content-nav nav-js">
-                    <li class="content-nav__list active"><a class="content-nav__link content-nav__link--active" href="#">Обо мне</a>
+                    <li class="content-nav__list active"><a class="content-nav__link content-nav__link--active" href="#">Общая информация</a>
                     </li>
-                    <li class="content-nav__list"><a class="content-nav__link" href="#">Мои публикации</a>
+                    <li class="content-nav__list"><a class="content-nav__link" href="#">Рассылки</a>
+                    </li>
+                    <li class="content-nav__list"><a class="content-nav__link" href="#">Приватность</a>
                     </li>
                   </ul>
                 </div>
-                <div class="content__group">
-                  <div class="status-block">
-                    <form class="block-parent--js p-0">
-                      <div class="status-block__head">
-                        <div class="row justify-content-between">
-                          <div class="col-auto">
-                            <div class="strong text-success">Текущий статус:</div>
+                <div class="content__group content__group--setting py-0">
+                  <!--  start +e.group-->
+                  <div class="content__block content__block--setting border-bottom border-gray">
+                    <form class="needs-validation" novalidate="novalidate"> 
+                      <div class="content__title content__title--setting h4"><span>Персональные данные</span>
+                      </div>
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Фамилия:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder=" Заполните  фамилию" required="required"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Имя:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Заполните  имя" required="required"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Отчество:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Заполните отчество" required="required"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Дата рождения:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="ДД.ММ.ГГГГ" required="required"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="content__input-wrap content__input-wrap--checkbox form-group d-block">
+                        <div class="row align-items-center">
+                          <div class="col-md-auto"><span class="content__title-label">Пол:</span>
                           </div>
-                          <div class="col-auto">
-                            <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                              <svg class="icon icon-edit ">
-                                <use xlink:href="img/svg/sprite.svg#edit"></use>
-                              </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
+                          <div class="col">
+                            <div class="row small-row align-items-center">
+                              <div class="col-auto">
+                                <label class="custom-input"><input class="custom-input__input" name="male" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">Мужской</span>
+                                </label>
+                              </div>
+                              <div class="col-auto">
+                                <label class="custom-input"><input class="custom-input__input" name="male" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">Женский</span>
+                                </label>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="status-block__body">
-                        <div class="status-block__edit-block status-block__edit-block--js">
-                          <div class="row">
-                              <div class="col-md-6">
-                                <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
-                                      <svg class="icon icon-status-1 ">
-                                        <use xlink:href="img/svg/sprite.svg#status-1"></use>
-                                      </svg></span></span><span class="col"><span class="text-secondary">Смена работы: </span><span class="status-block__text block-toggle show">Возможно</span><span class="block-toggle pt-1"><span class="status-block__input-wrap form-group d-block">
-                                        <select class="status-block__input form-control">
-                                          <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                          <option value="">Выберите из списка 1</option>
-                                          <option value="">Выберите из списка 2</option>
-                                          <option value="">Выберите из списка 3</option>
-                                          <option value="">Выберите из списка 3  Выберите из списка</option>
-                                        </select></span>
-                                        <!-- +e.input-wrap--></span></span></span>
-                                </label>
-                              </div>
-                              <div class="col-md-6">
-                                <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
-                                      <svg class="icon icon-status-2 ">
-                                        <use xlink:href="img/svg/sprite.svg#status-2"></use>
-                                      </svg></span></span><span class="col"><span class="text-secondary">Готовность к переездам: </span><span class="status-block__text block-toggle show">Нет</span><span class="block-toggle pt-1"><span class="status-block__input-wrap form-group d-block">
-                                        <select class="status-block__input form-control">
-                                          <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                          <option value="">Выберите из списка 1</option>
-                                          <option value="">Выберите из списка 2</option>
-                                          <option value="">Выберите из списка 3</option>
-                                          <option value="">Выберите из списка 3  Выберите из списка</option>
-                                        </select></span>
-                                        <!-- +e.input-wrap--></span></span></span>
-                                </label>
-                              </div>
-                              <div class="col-md-6">
-                                <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
-                                      <svg class="icon icon-status-3 ">
-                                        <use xlink:href="img/svg/sprite.svg#status-3"></use>
-                                      </svg></span></span><span class="col"><span class="text-secondary">Желаемая должность:</span><span class="status-block__text block-toggle show"> Главный хирург, Главный врач,  Старший хрург</span><span class="block-toggle pt-1"><span class="status-block__input-wrap form-group d-block"><input class="status-block__input form-control" type="text" placeholder="Например, Хирург"/></span>
-                                        <!-- +e.input-wrap--></span></span></span>
-                                </label>
-                              </div>
-                              <div class="col-md-6">
-                                <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
-                                      <svg class="icon icon-status-4 ">
-                                        <use xlink:href="img/svg/sprite.svg#status-4"></use>
-                                      </svg></span></span><span class="col"><span class="text-secondary">Готовность к командировкам: </span><span class="status-block__text block-toggle show">Да</span><span class="block-toggle pt-1"><span class="status-block__input-wrap form-group d-block">
-                                        <select class="status-block__input form-control">
-                                          <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                          <option value="">Выберите из списка 1</option>
-                                          <option value="">Выберите из списка 2</option>
-                                          <option value="">Выберите из списка 3</option>
-                                          <option value="">Выберите из списка 3  Выберите из списка</option>
-                                        </select></span>
-                                        <!-- +e.input-wrap--></span></span></span>
-                                </label>
-                              </div>
-                              <div class="col-md-6">
-                                <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
-                                      <svg class="icon icon-status-5 ">
-                                        <use xlink:href="img/svg/sprite.svg#status-5"></use>
-                                      </svg></span></span><span class="col"><span class="text-secondary">Желаемая ЗП: </span><span class="status-block__text block-toggle show">100 000 р.</span><span class="block-toggle pt-1"><span class="status-block__input-wrap form-group d-block"><span class="after md-s">руб.</span><input class="status-block__input form-control pr-5" type="text" placeholder="100 000 "/></span>
-                                        <!-- +e.input-wrap--></span></span></span>
-                                </label>
-                              </div>
-                              <div class="col-md-6">
-                                <label class="status-block__item md-s d-block"><span class="small-row row align-items-center"><span class="col-auto mt"><span class="status-block__icon-wrap d-block">
-                                      <svg class="icon icon-status-6 ">
-                                        <use xlink:href="img/svg/sprite.svg#status-6"></use>
-                                      </svg></span></span><span class="col"><span class="text-secondary">Семейное положение: </span><span class="status-block__text block-toggle show">Женат, 2 детей</span><span class="block-toggle pt-1"><span class="status-block__input-wrap form-group d-block"><input class="status-block__input form-control" type="text" placeholder="Например, Женат, 2 детей"/></span>
-                                        <!-- +e.input-wrap--></span></span></span>
-                                </label>
-                              </div>
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Город:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Заполните город" required="required"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Желаемая з/п, руб:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Заполните поле" required="required"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Применить
+                      </button>
+                    </form>
+                  </div>
+                  <!--  end +e.block-->
+                  <!--  start +e.group-->
+                  <div class="content__block content__block--setting border-bottom border-gray">
+                    <form class="needs-validation" novalidate="novalidate"> 
+                      <div class="content__title content__title--setting h4"><span>Контактная информация</span>
+                      </div>
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">E-mail:</span></span><span class="col"><input class="content__input form-control" type="email" placeholder="Заполните email" required="required"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Телефон:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Заполните телефон" required="required"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Применить
+                      </button>
+                    </form>
+                  </div>
+                  <!--  end +e.block-->
+                  <!--  start +e.group-->
+                  <div class="content__block content__block--setting border-bottom border-gray">
+                    <form class="needs-validation" novalidate="novalidate"> 
+                      <div class="content__title content__title--setting h4"><span>Смена пароля</span>
+                      </div>
+                      <div class="content__text mb-4">Длина пароля должна составлять не менее 6 символов. Если Вы забыли пароль, нажмите <a href="#" title="title">восстановить пароль  </a> 
+                        и мы пришлем Вам ссылку на восстановление пароля.
+                      </div>
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Текущий пароль:</span></span><span class="col"><input class="content__input form-control" type="password" placeholder="Введите текущий пароль" required="required" id="password-field-1"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span><span class="validate-block pass-status" onclick="myFunction1()">
+                              <svg class="icon icon-eye ">
+                                <use xlink:href="img/svg/sprite.svg#eye"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Новый пароль:</span></span><span class="col"><input class="content__input form-control" type="password" placeholder="Введите новый пароль" required="required" id="password-field-2"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span><span class="validate-block pass-status" onclick="myFunction2()">
+                              <svg class="icon icon-eye ">
+                                <use xlink:href="img/svg/sprite.svg#eye"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Повторите пароль:</span></span><span class="col"><input class="content__input form-control" type="password" placeholder="Повторите новый пароль" required="required" id="password-field-3"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                              <svg class="icon icon-check ">
+                                <use xlink:href="img/svg/sprite.svg#check"></use>
+                              </svg></span><span class="validate-block invalid-feedback">
+                              <svg class="icon icon-exclamation-circle ">
+                                <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                              </svg></span><span class="validate-block pass-status" onclick="myFunction3()">
+                              <svg class="icon icon-eye ">
+                                <use xlink:href="img/svg/sprite.svg#eye"></use>
+                              </svg></span></span></label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Применить
+                      </button>
+                    </form>
+                  </div>
+                  <!--  end +e.block-->
+                  <!--  start +e.group-->
+                  <div class="content__block content__block--setting border-bottom border-gray">
+                    <form class="needs-validation" novalidate="novalidate"> 
+                      <div class="content__title content__title--setting h4"><span>Привязанные аккаунты</span>
+                      </div>
+                      <div class="content__text mb-2"> Авторизуйтесь через самую используемую Вами социальную сеть для максимального удобства пользования нашими сервисами.
+                      </div>
+                      <div class="content__btn-wrap content__btn-wrap--soc">
+                        <div class="row align-items-center small-row">
+                          <div class="col-auto"><a class="content__btn-soc content__btn-soc--vk content__btn-soc content__btn-soc--active btn" href="#">
+                            <svg class="icon icon-vk ">
+                              <use xlink:href="img/svg/sprite.svg#vk"></use>
+                            </svg></a>
                           </div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
+                          <div class="col">Привязан</div>
+                        </div>
+                        <div class="row align-items-center small-row">
+                          <div class="col-auto"><a class="content__btn-soc content__btn-soc--fb btn" href="#">
+                            <svg class="icon icon-facebook-f ">
+                              <use xlink:href="img/svg/sprite.svg#facebook-f"></use>
+                            </svg></a>
                           </div>
+                          <div class="col">Привязать</div>
+                        </div>
+                        <div class="row align-items-center small-row">
+                          <div class="col-auto"><a class="content__btn-soc content__btn-soc--twitter btn" href="#">
+                            <svg class="icon icon-twitter ">
+                              <use xlink:href="img/svg/sprite.svg#twitter"></use>
+                            </svg></a>
+                          </div>
+                          <div class="col">Привязать</div>
+                        </div>
+                        <div class="row align-items-center small-row">
+                          <div class="col-auto"><a class="content__btn-soc content__btn-soc--g-plus btn" href="#">
+                            <svg class="icon icon-google-plus-g ">
+                              <use xlink:href="img/svg/sprite.svg#google-plus-g"></use>
+                            </svg></a>
+                          </div>
+                          <div class="col">Привязать</div>
+                        </div>
+                        <div class="row align-items-center small-row">
+                          <div class="col-auto"><a class="content__btn-soc content__btn-soc--ok btn" href="#">
+                            <svg class="icon icon-odnoklassniki ">
+                              <use xlink:href="img/svg/sprite.svg#odnoklassniki"></use>
+                            </svg></a>
+                          </div>
+                          <div class="col">Привязать</div>
+                        </div>
+                        <div class="row align-items-center small-row">
+                          <div class="col-auto"><a class="content__btn-soc content__btn-soc--mailru btn" href="#">
+                            <svg class="icon icon-mailru ">
+                              <use xlink:href="img/svg/sprite.svg#mailru"></use>
+                            </svg></a>
+                          </div>
+                          <div class="col">Привязать</div>
                         </div>
                       </div>
                     </form>
                   </div>
-                </div>
-                <!--  start +e.group-->
-                <div class="content__group accordion">
-                  <div class="content__head">
-                    <div class="content__title accordion__title accordion__title accordion__title--js active h4"><span>Основная информация
-                        <svg class="icon icon-down ">
-                          <use xlink:href="img/svg/sprite.svg#down"></use>
-                        </svg></span>
-                    </div>
-                  </div>
-                  <div class="content__body accordion__block accordion__block accordion__block--js active">
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Обо мне</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show">
-                            <p>Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния.</p>
-                          </div>
-                          <div class="block-toggle pt-1 content__about-text">
-                            <div class="content__input-wrap form-group"><textarea class="content__input form-control" placeholder="Напишите кратко о себе..."></textarea>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                    <!-- start +e.block-->
-                    <div class="content__block block-education">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Образование</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show">
-                            <div class="content__block content__block--ml border-bottom border-gray">
-                              <div class="row">
-                                <div class="col-sm-auto small">
-                                  <div class="content__label">
-                                    <div class="content__date">Ноябрь 2015
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="content__title-small small">
-                                    <div class="text-primary strong">2010-2016 &quot;Неврологический Институт им.  Иванова</div>
-                                    <div>Высшее образование</div>
-                                    <div class="text-secondary">г. Москва</div>
-                                  </div>
-                                  <div>Факультет хирургии</div>
-                                  <div class="small text-secondary">Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад.</div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="content__block content__block--ml border-bottom border-gray">
-                              <div class="row">
-                                <div class="col-sm-auto small">
-                                  <div class="content__label">
-                                    <div class="content__date">Ноябрь 2015
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="content__title-small small">
-                                    <div class="text-primary strong">2010-2016 &quot;Неврологический Институт им.  Иванова</div>
-                                    <div>Высшее образование</div>
-                                    <div class="text-secondary">г. Москва</div>
-                                  </div>
-                                  <div>Факультет хирургии</div>
-                                  <div class="small text-secondary">Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад.</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="content__block border-bottom border-gray">
-                              <div class="text-right">
-                                <div class="btn-delete btn-delete--js">
-                                  <svg class="icon icon-delete ">
-                                    <use xlink:href="img/svg/sprite.svg#delete"></use>
-                                  </svg>
-                                </div>
-                              </div>
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Уровень:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название или аббривиатура"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Город:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Учебное заведение:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите наименование факультета"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Краткое описание специализации:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Напишите несколько предложений"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Конец обучения:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm">
-                                        <div class="smaller text-secondary">Если учитесь в&nbsp;настоящее время&nbsp;&mdash; укажите год предполагаемого окончания</div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="content__foot row align-items-center">
-                                <div class="col-sm-auto">
-                                  <div class="block-toggle">
-                                    <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                                  </div>
-                                </div>
-                                <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одно место обучения</a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Опыт работы</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content__block border-bottom border-gray"> 
-                          <div class="block-toggle show">
-                            <div class="content__block content__block--ml border-bottom border-gray">
-                              <div class="row">
-                                <div class="col-sm-auto small">
-                                  <div class="content__label">
-                                    <div class="content__date">Октябрь 2010—  Ноябрь 2015
-                                    </div>
-                                    <div class="text-secondary">5 лет, 1 месяц</div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="content__title-small small">
-                                    <div class="text-primary strong">“Семейная клиника”</div>
-                                    <div></div>
-                                    <div class="text-secondary">г. Москва</div>
-                                  </div>
-                                  <div>Пластическая хирургия</div>
-                                  <div class="small text-secondary">Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад.</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="content__block border-bottom border-gray">
-                              <div class="text-right">
-                                <div class="btn-delete">
-                                  <svg class="icon icon-delete ">
-                                    <use xlink:href="img/svg/sprite.svg#delete"></use>
-                                  </svg>
-                                </div>
-                              </div>
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Уровень:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Организация:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название организации"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Город:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Сайт:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите сайт организации"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Сфера детяльности:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Должность:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите должность"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="row"><span class="col-md-auto"><span class="content__title-label">Обязанности и достижения:</span></span><span class="col"><textarea class="content__input form-control" placeholder="Укажите обязанности и достижения"></textarea></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm">
-                                        <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="content__input-wrap form-group d-block mb-0">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="content__block border-bottom border-gray">
-                              <div class="text-right">
-                                <div class="btn-delete">
-                                  <svg class="icon icon-delete ">
-                                    <use xlink:href="img/svg/sprite.svg#delete"></use>
-                                  </svg>
-                                </div>
-                              </div>
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Уровень:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Организация:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название организации"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Город:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Сайт:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите сайт организации"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Сфера детяльности:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Должность:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите должность"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="row"><span class="col-md-auto"><span class="content__title-label">Обязанности и достижения:</span></span><span class="col"><textarea class="content__input form-control" placeholder="Укажите обязанности и достижения"></textarea></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm">
-                                        <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="content__input-wrap form-group d-block mb-0">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="content__foot row align-items-center">
-                                <div class="col-sm-auto">
-                                  <div class="block-toggle">
-                                    <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                                  </div>
-                                </div>
-                                <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одно место работы</a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Социальная и профессиональная активность</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content__block border-bottom border-gray"> 
-                          <div class="block-toggle show">
-                            <div class="content__block content__block--ml border-bottom border-gray">
-                              <div class="row">
-                                <div class="col-sm-auto small">
-                                  <div class="content__label">
-                                    <div class="content__date">Октябрь 2010—  Ноябрь 2015
-                                    </div>
-                                    <div class="text-secondary">5 лет, 1 месяц</div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="content__title-small small">
-                                    <div class="text-primary strong">Волонтер</div>
-                                    <div></div>
-                                    <div class="text-secondary">г. Москва</div>
-                                  </div>
-                                  <div></div>
-                                  <div class="small text-secondary">Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад.</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="content__block border-bottom border-gray">
-                              <!-- .text-right-->
-                              <!-- 	.btn-delete-->
-                              <!-- 		+icon("delete")-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Тип деятельности:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Описание деятельности:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название или аббривиатура"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Город:</span></span><span class="col">
-                                    <select class="content__input form-control">
-                                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                      <option value="">Выберите из списка 1</option>
-                                      <option value="">Выберите из списка 2</option>
-                                      <option value="">Выберите из списка 3</option>
-                                      <option value="">Выберите из списка 3  Выберите из списка</option>
-                                    </select></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm">
-                                        <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
-                                        </label>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="content__input-wrap form-group d-block mb-0">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="content__foot row align-items-center">
-                                <div class="col-sm-auto">
-                                  <div class="block-toggle">
-                                    <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                                  </div>
-                                </div>
-                                <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одну активность</a></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                  </div>
-                </div>
-                <!--  end +e.group-->
-                <!--  start +e.group-->
-                <div class="content__group accordion">
-                  <div class="content__head">
-                    <div class="content__title accordion__title accordion__title accordion__title--js active h4"><span>Дополнительная информация
-                        <svg class="icon icon-down ">
-                          <use xlink:href="img/svg/sprite.svg#down"></use>
-                        </svg></span>
-                    </div>
-                  </div>
-                  <div class="content__body accordion__block accordion__block accordion__block--js active">
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Навыки</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show">
-                            <div class="content__badge badge badge-warning-l base-fz">Умный
-                            </div>
-                            <div class="content__badge badge badge-warning-l base-fz">Терпиливый
-                            </div>
-                            <div class="content__badge badge badge-warning-l base-fz">Усидчевый
-                            </div>
-                            <div class="content__badge badge badge-warning-l base-fz">Спортивный
-                            </div>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="input-group mb-45"><input class="content__input form-control" type="text" placeholder="Например, Усидчевый"/>
-                              <div class="input-group-append">
-                                <button class="content__btn btn btn-success btn-icon" type="submit">
-                                  <svg class="icon icon-plus ">
-                                    <use xlink:href="img/svg/sprite.svg#plus"></use>
-                                  </svg>
-                                </button>
-                              </div>
-                            </div>
-                            <div class="content__badge-wrap">
-                              <div class="content__badge content__badge--edit badge badge-warning-l base-fz">Умный
-                                <svg class="icon icon-delete ">
-                                  <use xlink:href="img/svg/sprite.svg#delete"></use>
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Мои рекомендации</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show">
-                            <div class="content__block content__block--ml border-bottom border-gray">
-                              <div class="row">
-                                <div class="col small">
-                                  <div>
-                                    <div class="strong d-inline-block">Иванов Иван Иванович</div>
-                                    <div class="d-inline-block">Главный врач хирург</div>
-                                  </div>
-                                  <div class="strong text-primary">“Семейная клиника”</div>
-                                </div>
-                                <div class="col-auto"><a class="content__badge content__badge--file strong btn btn-success text-white" href="#" target="_blank">pdf</a>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="content__block content__block--ml border-bottom border-gray">
-                              <div class="row">
-                                <div class="col small">
-                                  <div>
-                                    <div class="strong d-inline-block">Иванов Иван Иванович</div>
-                                    <div class="d-inline-block">Главный врач хирург</div>
-                                  </div>
-                                  <div class="strong text-primary">“Семейная клиника”</div>
-                                </div>
-                                <div class="col-auto"><a class="content__badge content__badge--file strong btn btn-success text-white" href="#" target="_blank">jpeg</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="content__block border-bottom border-gray">
-                              <!-- .text-right-->
-                              <!-- 	.btn-delete-->
-                              <!-- 		+icon("delete")-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Рекомендодатель:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите ФИО рекомендодателя"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Место работы рекомендодателя:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Название организации"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Должность рекомендодателя:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите должность"/></span></label>
-                              </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label>
-                                  <div class="add-file"><span class="row align-items-center"><span class="col-md-auto"><span class="add-file__title-label add-file__title-label--file">Загрузите рекомендацию в формате PDF:</span></span><span class="col"><span class="row small-row align-items-center justify-content-end">
-                                          <input class="d-none" name="file" type="file"/><span class="col-sm-auto">
-                                            <div class="add-file__filename text-left content__input form-control">не  загружено
-                                            </div></span><span class="col file-upload">
-                                            <div class="add-file__btn btn btn-outline-success">Загрузить
-                                            </div></span></span></span></span>
-                                  </div>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Знание языков</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show">
-                            <div class="row align-items-center">
-                              <div class="col-sm-auto">
-                                <div class="content__item-lang">
-                                  <div class="row align-items-center">
-                                    <div class="col-auto">
-                                      <div class="content__round text-white strong h4 m-0 bg-success">5.0
-                                      </div>
-                                    </div>
-                                    <div class="col">
-                                      <div class="strong">Русский язык </div>
-                                      <div>Родной язык</div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-sm-auto">
-                                <div class="content__item-lang">
-                                  <div class="row align-items-center">
-                                    <div class="col-auto">
-                                      <div class="content__round text-white strong h4 m-0 bg-warning">4.0
-                                      </div>
-                                    </div>
-                                    <div class="col">
-                                      <div class="strong">Английский язык</div>
-                                      <div>Читаю профессиональную литературу</div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Язык:</span></span><span class="col">
-                                  <select class="content__input form-control">
-                                    <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                    <option value="">Русский</option>
-                                    <option value="">Русский</option>
-                                    <option value="">Русский</option>
-                                    <option value="">Русский</option>
-                                  </select></span></label>
+                  <!--  end +e.block-->
+                  <!--  start +e.group-->
+                  <div class="content__block content__block--setting border-bottom border-gray">
+                    <form class="needs-validation" novalidate="novalidate"> 
+                      <div class="content__title content__title--setting h4"><span>Социальные сети для профиля (до 4)</span>
+                      </div>
+                      <div class="content__text mb-4">
+                         Выберите социальные сети, которые вы хотите отображать в своём профиле, их видимость вы можете настроить в разделе  <a href="#" title="title">Приватность.</a>
+                      </div>
+                      <nav>
+                        <div class="nav nav-tabs"><a class="nav-item nav-link active" id="nav-vk-tab" data-toggle="tab" href="#nav-vk" role="tab" aria-controls="nav-vk" aria-selected="true">
+                            <svg class="icon icon-vk ">
+                              <use xlink:href="img/svg/sprite.svg#vk"></use>
+                            </svg></a><a class="nav-item nav-link" id="nav-facebook-f-tab" data-toggle="tab" href="#nav-facebook-f" role="tab" aria-controls="nav-facebook-f" aria-selected="true">
+                            <svg class="icon icon-facebook-f ">
+                              <use xlink:href="img/svg/sprite.svg#facebook-f"></use>
+                            </svg></a><a class="nav-item nav-link" id="nav-instagram-tab" data-toggle="tab" href="#nav-instagram" role="tab" aria-controls="nav-instagram" aria-selected="true">
+                            <svg class="icon icon-instagram ">
+                              <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                            </svg></a><a class="nav-item nav-link" id="nav-youtube-tab" data-toggle="tab" href="#nav-youtube" role="tab" aria-controls="nav-youtube" aria-selected="true">
+                            <svg class="icon icon-youtube ">
+                              <use xlink:href="img/svg/sprite.svg#youtube"></use>
+                            </svg></a><a class="nav-item nav-link" id="nav-twitter-tab" data-toggle="tab" href="#nav-twitter" role="tab" aria-controls="nav-twitter" aria-selected="true">
+                            <svg class="icon icon-twitter ">
+                              <use xlink:href="img/svg/sprite.svg#twitter"></use>
+                            </svg></a><a class="nav-item nav-link" id="nav-google-plus-g-tab" data-toggle="tab" href="#nav-google-plus-g" role="tab" aria-controls="nav-google-plus-g" aria-selected="true">
+                            <svg class="icon icon-google-plus-g ">
+                              <use xlink:href="img/svg/sprite.svg#google-plus-g"></use>
+                            </svg></a><a class="nav-item nav-link" id="nav-odnoklassniki-tab" data-toggle="tab" href="#nav-odnoklassniki" role="tab" aria-controls="nav-odnoklassniki" aria-selected="true">
+                            <svg class="icon icon-odnoklassniki ">
+                              <use xlink:href="img/svg/sprite.svg#odnoklassniki"></use>
+                            </svg></a><a class="nav-item nav-link" id="nav-linkedin-in-tab" data-toggle="tab" href="#nav-linkedin-in" role="tab" aria-controls="nav-linkedin-in" aria-selected="true">
+                            <svg class="icon icon-linkedin-in ">
+                              <use xlink:href="img/svg/sprite.svg#linkedin-in"></use>
+                            </svg></a></div>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-vk" role="tabpanel" aria-labelledby="nav-vk-tab">
+                          <form>
+                            <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Ссылка на профиль:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="vk.com/"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                                    <svg class="icon icon-check ">
+                                      <use xlink:href="img/svg/sprite.svg#check"></use>
+                                    </svg></span><span class="validate-block invalid-feedback">
+                                    <svg class="icon icon-exclamation-circle ">
+                                      <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                                    </svg></span></span></label>
                             </div>
                             <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Уровень знания:</span></span><span class="col">
-                                  <select class="content__input form-control">
-                                    <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                    <option value="">Родной язык</option>
-                                    <option value="">Родной язык</option>
-                                    <option value="">Родной язык</option>
-                                    <option value="">Родной язык</option>
-                                    <option value="">Родной язык</option>
-                                  </select></span></label>
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__foot row align-items-center">
-                              <div class="col-sm-auto">
-                                <div class="block-toggle">
-                                  <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                                </div>
-                              </div>
-                              <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще один язык</a></div>
-                            </div>
-                          </div>
+                            <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Добавить
+                            </button>
+                          </form>
                         </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Мои достижения</div>
+                        <div class="tab-pane fade show" id="nav-facebook-f" role="tabpanel" aria-labelledby="nav-facebook-f-tab">
+                          <form>
+                            <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Ссылка на профиль:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="facebook.com/"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                                    <svg class="icon icon-check ">
+                                      <use xlink:href="img/svg/sprite.svg#check"></use>
+                                    </svg></span><span class="validate-block invalid-feedback">
+                                    <svg class="icon icon-exclamation-circle ">
+                                      <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                                    </svg></span></span></label>
                             </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
+                            <!-- +e.input-wrap-->
+                            <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Добавить
+                            </button>
+                          </form>
                         </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show">
-                            <div class="mt-2"><strong>Звание: </strong> 
-                              Заслуженный врач Российской Федерации 2014
-                            </div>
-                            <div class="mt-2"><strong>Грамота: </strong> 
-                              Лучший хирург Москвы 2016
-                            </div>
-                            <div class="mt-2"><strong>Медаль: </strong> 
-                              За доблестную службу Российской Федерации в медицине 2017
-                            </div>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Выберите из списка</span></span><span class="col">
-                                  <select class="content__input form-control">
-                                    <option class="d-none" value="" selected="selected" disabled="disabled">Выберите из списка</option>
-                                    <option value="">Выберите из списка 1</option>
-                                    <option value="">Выберите из списка 2</option>
-                                    <option value="">Выберите из списка 3</option>
-                                    <option value="">Выберите из списка 3  Выберите из списка</option>
-                                  </select></span></label>
+                        <div class="tab-pane fade show" id="nav-instagram" role="tabpanel" aria-labelledby="nav-instagram-tab">
+                          <form>
+                            <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Ссылка на профиль:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="instagram.com/"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                                    <svg class="icon icon-check ">
+                                      <use xlink:href="img/svg/sprite.svg#check"></use>
+                                    </svg></span><span class="validate-block invalid-feedback">
+                                    <svg class="icon icon-exclamation-circle ">
+                                      <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                                    </svg></span></span></label>
                             </div>
                             <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Наименование достижения:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Например, Заслуженный врач Российской Федерации"/></span></label>
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <div class="row align-items-center">
-                                <div class="col-md-auto"><span class="content__title-label">Год:</span>
-                                </div>
-                                <div class="col">
-                                  <div class="row small-row">
-                                    <div class="col-sm-auto col-6">
-                                      <select class="content__input form-control">
-                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                        <option value="">2018</option>
-                                        <option value="">2017</option>
-                                        <option value="">2016</option>
-                                        <option value="">2015</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="content__foot row align-items-center">
-                              <div class="col-sm-auto">
-                                <div class="block-toggle">
-                                  <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                                </div>
-                              </div>
-                              <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одно достижение</a></div>
-                            </div>
-                          </div>
+                            <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Добавить
+                            </button>
+                          </form>
                         </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Мои статьи в журналах</div>
+                        <div class="tab-pane fade show" id="nav-youtube" role="tabpanel" aria-labelledby="nav-youtube-tab">
+                          <form>
+                            <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Ссылка на профиль:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="youtube.com/"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                                    <svg class="icon icon-check ">
+                                      <use xlink:href="img/svg/sprite.svg#check"></use>
+                                    </svg></span><span class="validate-block invalid-feedback">
+                                    <svg class="icon icon-exclamation-circle ">
+                                      <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                                    </svg></span></span></label>
                             </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
+                            <!-- +e.input-wrap-->
+                            <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Добавить
+                            </button>
+                          </form>
                         </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show">
-                            <div class="content__block content__block--ml border-bottom border-gray">
-                              <div class="row">
-                                <div class="col">
-                                  <div class="small">
-                                    <div class="strong text-primary">“Лечение гайморита на ранних этапах”</div>
-                                    <div class="mb-05"><span class="text-secondary">Авторы: </span>
-                                      Иванов И. И., Антонов А.А.
-                                    </div>
-                                    <div class="mb-05"><span class="text-secondary">Год: </span>
-                                      2016
-                                    </div>
-                                    <div class="mb-05"><span class="text-secondary">Номер журнала:</span>
-                                       4353
-                                    </div>
-                                    <div class="mb-05"><span class="text-secondary">Страницы: </span>
-                                      35-41
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="content__block content__block--ml border-bottom border-gray">
-                              <div class="row">
-                                <div class="col">
-                                  <div class="small">
-                                    <div class="strong text-primary">“Лечение гайморита на ранних этапах”</div>
-                                    <div class="mb-05"><span class="text-secondary">Авторы: </span>
-                                      Иванов И. И., Антонов А.А.
-                                    </div>
-                                    <div class="mb-05"><span class="text-secondary">Год: </span>
-                                      2016
-                                    </div>
-                                    <div class="mb-05"><span class="text-secondary">Номер журнала:</span>
-                                       4353
-                                    </div>
-                                    <div class="mb-05"><span class="text-secondary">Страницы: </span>
-                                      35-41
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-md-auto"><a class="tdu small" href="#">Ссылка на онлайн версию</a></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Название статьи:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название статьи"/></span></label>
+                        <div class="tab-pane fade show" id="nav-twitter" role="tabpanel" aria-labelledby="nav-twitter-tab">
+                          <form>
+                            <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Ссылка на профиль:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="twitter.com/"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                                    <svg class="icon icon-check ">
+                                      <use xlink:href="img/svg/sprite.svg#check"></use>
+                                    </svg></span><span class="validate-block invalid-feedback">
+                                    <svg class="icon icon-exclamation-circle ">
+                                      <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                                    </svg></span></span></label>
                             </div>
                             <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Укажите авторов:</span></span><span class="col">
-                                  <div class="input-group mw-100"><input class="content__input form-control" type="text" placeholder="Например, Иванов И.И."/>
-                                    <div class="input-group-append">
-                                      <button class="content__btn btn btn-success btn-icon" type="submit">
-                                        <svg class="icon icon-plus ">
-                                          <use xlink:href="img/svg/sprite.svg#plus"></use>
-                                        </svg>
-                                      </button>
-                                    </div>
-                                  </div></span></label>
-                              <div class="align-items-center row"><span class="col-md-auto"><span class="content__title-label"></span></span><span class="col md-s">Ишметов М.С., Антонов С.А.</span></div>
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <div class="row align-items-center">
-                                <div class="col-md-auto"><span class="content__title-label">Год выпуска статьи:</span>
-                                </div>
-                                <div class="col">
-                                  <div class="row small-row">
-                                    <div class="col-sm-auto col-6">
-                                      <select class="content__input form-control">
-                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                        <option value="">2018</option>
-                                        <option value="">2017</option>
-                                        <option value="">2016</option>
-                                        <option value="">2015</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Название журнала:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название журнала"/></span></label>
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Номер журнала:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите номер журнала"/></span></label>
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Страницы:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Например, 35-41"/></span></label>
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Ссылка на онлайн- версию журнала:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Необязательное поле"/></span></label>
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__foot row align-items-center">
-                              <div class="col-sm-auto">
-                                <div class="block-toggle">
-                                  <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                                </div>
-                              </div>
-                              <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одну статью</a></div>
-                            </div>
-                          </div>
+                            <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Добавить
+                            </button>
+                          </form>
                         </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Хобби</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show">
-                            <ul class="list">
-                              <li class="list__item">Читать книги
-                              </li>
-                              <li class="list__item">Смотреть футбол
-                              </li>
-                              <li class="list__item">Бегать по утром
-                              </li>
-                              <li class="list__item">Коллекционирование миниатюрных автомобилей
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Укажите хобби:</span></span><span class="col">
-                                  <div class="input-group mw-100"><input class="content__input form-control" type="text" placeholder="Например, Иванов И.И."/>
-                                    <div class="input-group-append">
-                                      <button class="content__btn btn btn-success btn-icon" type="submit">
-                                        <svg class="icon icon-plus ">
-                                          <use xlink:href="img/svg/sprite.svg#plus"></use>
-                                        </svg>
-                                      </button>
-                                    </div>
-                                  </div></span></label>
-                              <div class="align-items-center row"><span class="col-md-auto"><span class="content__title-label"></span></span><span class="col">
-                                  <ul class="list">
-                                    <li class="list__item">Читать книги
-                                    </li>
-                                    <li class="list__item">Смотреть футбол
-                                    </li>
-                                    <li class="list__item">Бегать по утром
-                                    </li>
-                                    <li class="list__item">Коллекционирование миниатюрных автомобилей
-                                    </li>
-                                  </ul></span></div>
-                            </div>
-                          </div>
-                          <div class="block-toggle">
-                            <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                  </div>
-                </div>
-                <!--  end +e.group-->
-                <!--  start +e.group-->
-                <div class="content__group accordion">
-                  <div class="content__head">
-                    <div class="content__title accordion__title accordion__title accordion__title--js active h4"><span>Прогресс
-                        <svg class="icon icon-down ">
-                          <use xlink:href="img/svg/sprite.svg#down"></use>
-                        </svg></span>
-                    </div>
-                  </div>
-                  <div class="content__body accordion__block accordion__block accordion__block--js active">
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Мероприятия</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show">
-                            <ul class="list">
-                              <li class="list__item">Слет хирургов-терапевт в Раменском 2017
-                              </li>
-                              <li class="list__item">Слет хирургов-терапевт в Раменском 2018
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Название мероприятия:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название мероприятия"/></span></label>
+                        <div class="tab-pane fade show" id="nav-google-plus-g" role="tabpanel" aria-labelledby="nav-google-plus-g-tab">
+                          <form>
+                            <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Ссылка на профиль:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="plus.google.com/"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                                    <svg class="icon icon-check ">
+                                      <use xlink:href="img/svg/sprite.svg#check"></use>
+                                    </svg></span><span class="validate-block invalid-feedback">
+                                    <svg class="icon icon-exclamation-circle ">
+                                      <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                                    </svg></span></span></label>
                             </div>
                             <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <div class="row align-items-center">
-                                <div class="col-md-auto"><span class="content__title-label">Год:</span>
-                                </div>
-                                <div class="col">
-                                  <div class="row small-row">
-                                    <div class="col-sm-auto col-6">
-                                      <select class="content__input form-control">
-                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                        <option value="">2018</option>
-                                        <option value="">2017</option>
-                                        <option value="">2016</option>
-                                        <option value="">2015</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
+                            <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Добавить
+                            </button>
+                          </form>
+                        </div>
+                        <div class="tab-pane fade show" id="nav-odnoklassniki" role="tabpanel" aria-labelledby="nav-odnoklassniki-tab">
+                          <form>
+                            <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Ссылка на профиль:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="ok.ru/"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                                    <svg class="icon icon-check ">
+                                      <use xlink:href="img/svg/sprite.svg#check"></use>
+                                    </svg></span><span class="validate-block invalid-feedback">
+                                    <svg class="icon icon-exclamation-circle ">
+                                      <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                                    </svg></span></span></label>
                             </div>
                             <!-- +e.input-wrap-->
-                            <div class="content__foot row align-items-center">
-                              <div class="col-sm-auto">
-                                <div class="block-toggle">
-                                  <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                                </div>
-                              </div>
-                              <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одно мероприятие</a></div>
-                            </div>
-                          </div>
+                            <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Добавить
+                            </button>
+                          </form>
                         </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <form class="block-parent--js">
-                        <div class="content__head content__head--small">
-                          <div class="row justify-content-between">
-                            <div class="col">
-                              <div class="h5 mb-0">Дополнительное образование</div>
-                            </div>
-                            <div class="col-auto">
-                              <div class="btn-edit btn-toggle btn-toggle--js text-secondary">
-                                <svg class="icon icon-edit ">
-                                  <use xlink:href="img/svg/sprite.svg#edit"></use>
-                                </svg><span><span>Редактировать</span><span>Отменить редактирование</span></span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content__block border-bottom border-gray">
-                          <div class="block-toggle show">
-                            <ul class="list">
-                              <li class="list__item">Повышение квалификации в Израиле - 2016
-                              </li>
-                              <li class="list__item">Повышение квалификации в Германии - 2017
-                              </li>
-                              <li class="list__item">Профессиональная переподготовка - 2018
-                              </li>
-                            </ul>
-                          </div>
-                          <div class="block-toggle pt-1">
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Название образования:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название дополнительного образования"/></span></label>
+                        <div class="tab-pane fade show" id="nav-linkedin-in" role="tabpanel" aria-labelledby="nav-linkedin-in-tab">
+                          <form>
+                            <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
+                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Ссылка на профиль:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="linkedin.com/"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                                    <svg class="icon icon-check ">
+                                      <use xlink:href="img/svg/sprite.svg#check"></use>
+                                    </svg></span><span class="validate-block invalid-feedback">
+                                    <svg class="icon icon-exclamation-circle ">
+                                      <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
+                                    </svg></span></span></label>
                             </div>
                             <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <div class="row align-items-center">
-                                <div class="col-md-auto"><span class="content__title-label">Год:</span>
-                                </div>
-                                <div class="col">
-                                  <div class="row small-row">
-                                    <div class="col-sm-auto col-6">
-                                      <select class="content__input form-control">
-                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                        <option value="">2018</option>
-                                        <option value="">2017</option>
-                                        <option value="">2016</option>
-                                        <option value="">2015</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__foot row align-items-center">
-                              <div class="col-sm-auto">
-                                <div class="block-toggle">
-                                  <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
-                                </div>
-                              </div>
-                              <div class="col text-sm-right"><a class="text-secondary tdu" href="#">Указать еще одно дополнительное образование</a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                    <!-- end +e.block-->
-                    <!-- start +e.block-->
-                    <div class="content__block">
-                      <div class="content__head content__head--small">
-                        <div class="row justify-content-between">
-                          <div class="col">
-                            <div class="h5 mb-0">Профессиональные сообщества</div>
-                          </div>
+                            <button class="content__btn content__btn--setting btn btn-success btn-sh" type="submit">Добавить
+                            </button>
+                          </form>
                         </div>
                       </div>
-                      <div class="content__block border-bottom border-gray"><a class="community-prev d-block tdn" href="#">
-                        <div class="row small-row">
-                          <div class="col-auto"><span class="community-prev__img-wrap"><img src="img/forum.jpg" alt="alt"/></span>
-                          </div>
-                          <div class="col">
-                            <div class="strong">Сообщество хирургов</div>
-                          </div>
-                        </div></a><a class="community-prev d-block tdn" href="#">
-                        <div class="row small-row">
-                          <div class="col-auto"><span class="community-prev__img-wrap"><img src="img/forum.jpg" alt="alt"/></span>
-                          </div>
-                          <div class="col">
-                            <div class="strong">Форум врачей Москвы и Санкт-Петербурга</div>
-                          </div>
-                        </div></a>
-                      </div>
-                    </div>
-                    <!-- end +e.block-->
+                    </form>
                   </div>
+                  <!--  end +e.block-->
                 </div>
-                <!--  end +e.group--><a class="content__btn-top content__btn-top--js btn btn-block btn-light small" href="#">Наверх
-                <svg class="icon icon-down ">
-                  <use xlink:href="img/svg/sprite.svg#down"></use>
-                </svg></a>
               </div>
-              <!-- end content-profile-->
+              <!-- end content-setting-->
             </div>
           </div>
         </div>

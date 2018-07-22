@@ -265,68 +265,12 @@ var   arrl2 = (' <div class="l">'+ icon),
     mainClass: 'my-mfp-zoom-in'
   });
 
-
- // форма
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: 'action.php', //Change
-      data: th.serialize()
-    }).success(function() {
-          $.magnificPopup.close();
-             $.magnificPopup.open({
-        items: {
-          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline'
-        }
-      })
-        // window.location.replace("/thanks.html");
-       setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-        // $.magnificPopup.close();
-      }, 4000);
-    });
-    return false;
-  });
+ 
 
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
-
-    //Replace all SVG images with inline SVG
-  $('img.img-svg').each(function(){
-    var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg');
-
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-  });
-
-
+ 
   // кастомный инпут файл
 
   var file = $(".add-file input[type=file]");
@@ -343,21 +287,59 @@ $("form").submit(function() { //Change
    //      acceptedFiles: 'image/*',
    //      uploadMultiple: true,
    //   });
+ 
+// это не полная функция только для демонстрации работы 
+ window.addEventListener('load', function () {
+ 	// Fetch all the forms we want to apply custom Bootstrap validation styles to
+ 	var forms = document.getElementsByClassName('needs-validation');
+ 	// Loop over them and prevent submission
+ 	var validation = Array.prototype.filter.call(forms, function (form) {
+ 		form.addEventListener('submit', function (event) {
+ 			if (form.checkValidity() === false) {
+ 				event.preventDefault();
+ 				event.stopPropagation();
+ 			}
+ 			form.classList.add('was-validated');
+ 		}, false);
+ 	});
+ }, false);
 
+
+//  для инпута пароля
+ 
+});
 
  
-
-// var wowAnim = $(".s-dop__col," +
-//                 ".s-pick__col," +
-//                 ".s-condition__col");
-// wowAnim.each(function(i){
-
-// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-//    var wow = new WOW({ mobile: false });
-//         wow.init();
-
-// });
-
-
-});
+ function myFunction1() {
+	 var x = document.getElementById("password-field-1");
+	  var passStatus = document.getElementById('pass-status-1');
+ 	if (x.type === "password") {
+		 x.type = "text";
+		 passStatus.className='pass-status-pass';
+ 	} else {
+		 x.type = "password";
+		 passStatus.className='pass-status-text';
+ 	}
+ }
+ function myFunction2() {
+	 var x = document.getElementById("password-field-2");
+	  var passStatus = document.getElementById('pass-status-2');
+ 	if (x.type === "password") {
+		 x.type = "text";
+		 passStatus.className='pass-status-pass';
+ 	} else {
+		 x.type = "password";
+		 passStatus.className='pass-status-text';
+ 	}
+ }
+ function myFunction3() {
+	 var x = document.getElementById("password-field-3");
+	  var passStatus = document.getElementById('pass-status-3');
+ 	if (x.type === "password") {
+		 x.type = "text";
+		 passStatus.className='pass-status-pass';
+ 	} else {
+		 x.type = "password";
+		 passStatus.className='pass-status-text';
+ 	}
+ }
