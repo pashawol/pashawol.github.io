@@ -1,5 +1,6 @@
  jQuery(document).ready(function($) { 
 
+
   // для свг
   svg4everybody({});
   // Custom JS
@@ -224,8 +225,8 @@ var tabsId1 = '.mytabs1';
     $("#modal .type  ").val(th.parents(".main-tabs__content").find(".current a").text());
     $(" #modal .meb ").val(th.prev().text());
   })
-
- })
+})
+			
 
 
 
@@ -255,7 +256,8 @@ var tabsId1 = '.mytabs1';
             loop: true,  
             arrows: true, 
              prevArrow: arrl2,
-              nextArrow: arrr2,
+							nextArrow: arrr2,
+							 adaptiveHeight: true
             });
         th.find('.tab__slider2').slick({
             slidesToShow: 1,
@@ -266,7 +268,8 @@ var tabsId1 = '.mytabs1';
             loop: true,  
             arrows: true, 
              prevArrow: arrl2,
-              nextArrow: arrr2,
+							nextArrow: arrr2,
+							 adaptiveHeight: true
             });
 
         th.find('.tab__slide-slider').slick({
@@ -278,7 +281,8 @@ var tabsId1 = '.mytabs1';
             loop: true,  
             arrows: true, 
              prevArrow: arrl2,
-              nextArrow: arrr2,
+							nextArrow: arrr2,
+							 adaptiveHeight: true
             });
 
 
@@ -291,7 +295,8 @@ var tabsId1 = '.mytabs1';
             loop: true,  
             arrows: false, 
             draggable: false,
-            swipe: false,
+						swipe: false,
+						 adaptiveHeight: true,
              
               asNavFor:  th.find('.tab__slider-small')
             });
@@ -318,9 +323,13 @@ var tabsId1 = '.mytabs1';
          });
       });
     }
-
+		
   });
+	
+	$('.main-tabs').on('click', '.toggle-l', function () {
+		$(this).parent().next().slideToggle()
 
+	})
 
   $('.s-sert__slider').slick({
     slidesToShow: 4,
@@ -435,7 +444,114 @@ $("form").submit(function() { //Change
       }, 4000);
     });
     return false;
-  });
-   
+	});
+	
+	  
+	$('.s-why__row ').slick({
+		slidesToShow: 9,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: true,
+		prevArrow: arrl2,
+		nextArrow: arrr2,
+		responsive: [
+
+			{
+				breakpoint: 991.98,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			
+			{
+				breakpoint: 575.98,
+				settings: {
+					slidesToShow: 1
+				}
+			}, 
+		]
+	});
+	
+	$('.s-ind__row ').slick({
+		slidesToShow: 9,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: true,
+		prevArrow: arrl2,
+		nextArrow: arrr2,
+		responsive: [
+
+			{
+				breakpoint: 991.98,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			
+			{
+				breakpoint: 575.98,
+				settings: {
+					slidesToShow: 1
+				}
+			}, 
+		]
+	});
+	
+	$(' .s-video__row').slick({
+		slidesToShow: 109,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: false,
+		loop: false,
+		arrows: true,
+		prevArrow: arrl2,
+		nextArrow: arrr2,
+		responsive: [
+
+			{
+				breakpoint: 991.98,
+				settings: {
+					slidesToShow: 1
+				}
+			}  
+		]
+	});
+	$(' .s-client__row').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: false,
+		loop: false,
+		arrows: true,
+		prevArrow: arrl2,
+		nextArrow: arrr2,
+		responsive: [
+
+			{
+				breakpoint: 1199.98,
+				settings: {
+					slidesToShow: 2
+				}
+			} ,
+			 
+			{
+				breakpoint: 991.98,
+				settings: {
+					slidesToShow: 1
+				}
+			} ,
+
+		]
+	});
+
+
 });
 
