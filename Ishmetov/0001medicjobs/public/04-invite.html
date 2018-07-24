@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Отклики_Архив</title>
+    <title>Отклики</title>
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
@@ -377,15 +377,23 @@
               <div class="content content--feedback">
                 <div class="content__group py-0 border-bottom border-gray">
                   <ul class="content-nav nav-js">
-                    <li class="content-nav__list"><a class="content-nav__link" href="#">Все отклики</a>
-                    </li>
-                    <li class="content-nav__list"><a class="content-nav__link" href="#">Отклики на мое резюме</a>
+                    <li class="content-nav__list active"><a class="content-nav__link content-nav__link--active" href="#">Все отклики</a>
                     </li>
                     <li class="content-nav__list"><a class="content-nav__link" href="#">Мои отклики на вакансии</a>
                     </li>
-                    <li class="content-nav__list active"><a class="content-nav__link content-nav__link--active" href="#"> архив</a>
+                    <li class="content-nav__list"><a class="content-nav__link" href="#">Отклики на мое резюме</a>
+                    </li>
+                    <li class="content-nav__list"><a class="content-nav__link" href="#">Архив</a>
                     </li>
                   </ul>
+                </div>
+                <div class="content__group border-bottom border-gray">
+                  <div class="row">
+                    <div class="col-auto"><a class="content__btn-small btn btn-sm btn-link active" href="#">Новые отклики</a>
+                    </div>
+                    <div class="col-auto"><a class="content__btn-small btn btn-sm btn-link" href="#">Просмотренные отклики</a>
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <div class="feedback-prev-item">
@@ -403,7 +411,59 @@
                         </div>
                         <div class="feedback-prev-item__date text-secondary">Вчера, 22:55
                         </div>
-                        <div class="feedback-prev-item__btn-close text-secondary">Разархивировать
+                        <div class="feedback-prev-item__btn-wrap row small-row">
+                          <div class="col-auto"><a class="feedback-prev-item__btn btn btn-success btn-block btn-sh" href="#">
+                            Ответить  <span class="d-none d-sm-inline">на приглашение</span></a>
+                          </div>
+                        </div>
+                        <div class="feedback-prev-item__btn-close">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feedback-prev-item">
+                    <div class="row small-row">
+                      <div class="col-auto"><a class="feedback-prev-item__img-wrap d-block" href="#"><span><img class="res-i" src="img/feedback.jpg" alt="alt"/></span><span class="feedback-prev-item__icon-wrap bg-danger">
+                        <svg class="icon icon-lock ">
+                          <use xlink:href="img/svg/sprite.svg#lock"></use>
+                        </svg></span></a>
+                      </div>
+                      <div class="col">
+                        <div class="feedback-prev-item__text small"><a class="strong" href="#" title="title">Семейная клиника </a> 
+                          закрыла вакансию
+                           <a href="#" title="title">Главный хирург</a>
+                        </div>
+                        <div class="feedback-prev-item__date text-secondary">Вчера, 22:55
+                        </div>
+                        <div class="feedback-prev-item__btn-close">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="feedback-prev-item">
+                    <div class="row small-row">
+                      <div class="col-auto"><a class="feedback-prev-item__img-wrap d-block" href="#"><span><img class="res-i" src="img/feedback.jpg" alt="alt"/></span><span class="feedback-prev-item__icon-wrap bg-danger">
+                        <svg class="icon icon-delete ">
+                          <use xlink:href="img/svg/sprite.svg#delete"></use>
+                        </svg></span></a>
+                      </div>
+                      <div class="col">
+                        <div class="feedback-prev-item__text small"><a class="strong" href="#" title="title">Семейная клиника </a> 
+                          отклонила ваше резюме по вакансии
+                           <a href="#" title="title">приглашение на собеседование </a>
+                        </div>
+                        <div class="feedback-prev-item__date text-secondary">Вчера, 22:55
+                        </div>
+                        <div class="feedback-prev-item__btn-close">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
                         </div>
                       </div>
                     </div>
@@ -421,11 +481,50 @@
                         </div>
                         <div class="feedback-prev-item__date text-secondary">Вчера, 22:55
                         </div>
-                        <div class="feedback-prev-item__btn-close text-secondary">Разархивировать
+                        <div class="feedback-prev-item__btn-close">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div class="feedback-prev-item">
+                    <div class="row small-row">
+                      <div class="col-auto"><a class="feedback-prev-item__img-wrap d-block" href="#"><span><img class="res-i" src="img/feedback.jpg" alt="alt"/></span><span class="feedback-prev-item__icon-wrap bg-success">
+                        <svg class="icon icon-mail ">
+                          <use xlink:href="img/svg/sprite.svg#mail"></use>
+                        </svg></span></a>
+                      </div>
+                      <div class="col">
+                        <div class="feedback-prev-item__text small"><a class="strong" href="#" title="title">Семейная клиника </a> 
+                          отправила Вам 
+                           <a href="#" title="title">приглашение на собеседование </a> 
+                          по вакансии 
+                           <a href="#" title="title">Главный хирург</a>
+                        </div>
+                        <div class="feedback-prev-item__date text-secondary">Вчера, 22:55
+                        </div>
+                        <div class="feedback-prev-item__btn-wrap row">
+                          <div class="col-auto"><a class="feedback-prev-item__btn btn btn-block btn-success disabled" disabled="disabled" href="#">
+                            Вы уже ответили  <span class="d-none d-sm-inline">на приглашение</span></a>
+                          </div>
+                          <div class="col-auto"><a class="feedback-prev-item__btn btn btn-success btn-block btn-sh" href="#">
+                            Ответить  <span class="d-none d-sm-inline">на приглашение</span></a>
+                          </div>
+                        </div>
+                        <div class="feedback-prev-item__btn-close">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content__group content__group--foot bg-light border-0">
+                  <div class="small">
+                    Данный отклик перемещен в архив.  <a href="#" title="title">Восстановить</a></div>
                 </div>
               </div>
               <!-- end content-feedback-->

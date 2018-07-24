@@ -13,6 +13,7 @@ $mail->CharSet = 'utf-8';
 $mail->setFrom('info@info.com');
 
  $mail->addAddress('dmitriiperkov@gmail.com');
+//  $mail->addAddress('wol1414@gmail.com');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 
@@ -69,7 +70,11 @@ $html = '
     if (!empty($_POST['nametel'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['nametel'] . '</b></td></tr>';
     }
-     
+    
+    if (!empty($_POST['time'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Врмя для связи:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['time'] . '</b></td></tr>';
+    }
+    
     if (!empty($_POST['comment'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Отзыв:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td>';
     }
@@ -90,6 +95,53 @@ if ($_FILES['file1']['tmp_name']) {
 if ($_FILES['file2']['tmp_name']) {    
     $mail->addAttachment($_FILES['file2']['tmp_name'],$_FILES['file2']['name']);
 }
+
+/*начало кода для интеграции EnvyCRM*/
+$url=parse_url($_SERVER['HTTP_REFERER']);
+if (isset ($url['query'])) {
+    parse_str($url['query'], $get_array);
+}
+$name = $_POST['nametext'];
+$phone = $_POST['nametel'];
+$comment = $_POST['order'];
+
+$link = 'https://envycrm.com/crm/api/v1/lead/set/?api_key=bb2c486b63ce8ce8de830c712e9cea9a55e1b7b5';
+$data = array(
+    'method' => 'create',
+    'inbox_type_id' => 154205,
+    'visit_id' => $_COOKIE['WhiteCallback_visit'],
+    'values' => array(
+        'name' => $name ? $name : 'Заявка с сайта ' . $phone,
+        'phone' => $phone,
+        'comment' => $comment,
+        'utm_source' => $get_array['utm_source'],
+        'utm_medium' => $get_array['utm_medium'],
+        'utm_campaign' => $get_array['utm_campaign'],
+        'utm_content' => $get_array['utm_content'],
+        'utm_term' => $get_array['utm_term'],
+        'custom' => array(
+            array('input_id' => 43328, 'value' => $_POST['typer']),
+            array('input_id' => 43331, 'value' => $_POST['meb']),
+            array('input_id' => 43334, 'value' => $_POST['type']),
+            array('input_id' => 43337, 'value' => $_POST['dlina']),
+            array('input_id' => 43340, 'value' => $_POST['left']),
+            array('input_id' => 43343, 'value' => $_POST['right']),
+            array('input_id' => 43346, 'value' => $_POST['dlina2']),
+            array('input_id' => 43349, 'value' => implode("\n",$_POST['tech'])),
+            array('input_id' => 43352, 'value' => $_POST['comment'])
+        )            
+    )
+);
+$curl = curl_init();
+curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
+curl_setopt($curl,CURLOPT_URL, $link);
+curl_setopt($curl,CURLOPT_POST,true);
+curl_setopt($curl,CURLOPT_POSTFIELDS, json_encode(array('request' => $data)));
+curl_setopt($curl,CURLOPT_HEADER,false);
+$out=curl_exec($curl);
+$code=curl_getinfo($curl,CURLINFO_HTTP_CODE);
+curl_close($curl);
+/*конец кода интеграции EnvyCRM*/
 
 //send the message, check for errors
 if (!$mail->send()) {
