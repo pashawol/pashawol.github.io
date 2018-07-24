@@ -132,13 +132,13 @@
 
 			$magicLine
 				
-				.width(th.find(" .active").width())
+				.width(th.find(" .active a").width())
 				.css("left", th.find(" .active a").position().left)
 				.data("origLeft", $magicLine.position().left)
 				.data("origWidth", $magicLine.width());
 			$(window).resize(function () { 
 				$magicLine 
-					.width(th.find(" .active").width())
+					.width(th.find(" .active a").width())
 					.css("left", th.find(" .active a").position().left)
 					.data("origLeft", $magicLine.position().left)
 					.data("origWidth", $magicLine.width());
@@ -269,6 +269,8 @@ var   arrl2 = (' <div class="l">'+ icon),
 
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
+	 $("input.date-input").attr("pattern", "[0-3]{1}[0-9]{1}\.[0-1]{1}[0-9]{1}\.[1-2]{1}[0-9]{3}")
+	 .inputmask({"mask": "99.99.9999"});
 
  
   // кастомный инпут файл
