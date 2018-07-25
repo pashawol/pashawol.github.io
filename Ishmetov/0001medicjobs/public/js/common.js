@@ -290,7 +290,7 @@ var   arrl2 = (' <div class="l">'+ icon),
    //      uploadMultiple: true,
    //   });
  
-// это не полная функция только для демонстрации работы 
+// это не полная функция только для демонстрации работы проверки полей
  window.addEventListener('load', function () {
  	// Fetch all the forms we want to apply custom Bootstrap validation styles to
  	var forms = document.getElementsByClassName('needs-validation');
@@ -306,11 +306,32 @@ var   arrl2 = (' <div class="l">'+ icon),
  	});
  }, false);
 
+//  .datepicker
+  $('.datepicker-date').datepicker({
+  	locale: 'ru-ru',
+  	uiLibrary: 'bootstrap4',
+  	format: 'dd.mm.yyyy',
 
-//  для инпута пароля
+	});
+	$(".label-date-picker-js  input").click(function () {
+		$(this).next().click();
+	})
+	//  показать выбор даты на стр приглашения
+	$(".input-radio-invite__input").click(function () {
  
+		var checked =   document.querySelector('.input-radio-invite__input.time');
+		
+		if (checked.checked) {
+			$(".content__block-time").slideToggle();
+		} 
+		else {
+			$(".content__block-time").slideToggle(); 
+		}
+	})
+
 });
 
+//  для инпута пароля
  
  function myFunction1() {
 	 var x = document.getElementById("password-field-1");

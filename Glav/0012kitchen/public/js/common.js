@@ -94,10 +94,22 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- $(" .top-nav ul a, .scroll-link").click(function () {
+ $("  .scroll-link").click(function () {
         var elementClick = $(this).attr("href");
-        var destination = $(elementClick).offset().top;
+				var destination = $(elementClick).offset().top;
+					 
+            $('html, body').animate({ scrollTop: destination }, 1100);
         
+        return false; 
+    });
+
+ 
+// листалка по стр
+ $(" .top-nav ul a").click(function () {
+        var elementClick = $(this).attr("href");
+				var destination = $(elementClick).offset().top;
+						$(".top-nav ul a").removeClass("active")
+						$(this).addClass("active");
             $('html, body').animate({ scrollTop: destination }, 1100);
         
         return false; 
@@ -105,7 +117,7 @@ $( window ).on( "load", function() {
 
  
 
- var icon = '<svg class="icon icon-arr-r">  <use xlink:href="img/svg/sprite.svg#arr-r"></use>  </svg>';
+	 var icon = '<svg class="icon icon-arr-r">  <use xlink:href="img/svg/sprite.svg#chevron-right"></use>  </svg>';
 
 var   arrl2 = (' <div class="l">'+ icon),
       arrr2 =(' <div class="r">'+ icon);  
@@ -282,7 +294,8 @@ var tabsId1 = '.mytabs1';
             arrows: true, 
              prevArrow: arrl2,
 							nextArrow: arrr2,
-							 adaptiveHeight: true
+							 adaptiveHeight: true,
+				 
             });
 
 
@@ -292,13 +305,27 @@ var tabsId1 = '.mytabs1';
             dots: false,
             speed: 450,
             infinite: true,
-            loop: true,  
+						loop: true,  
             arrows: false, 
             draggable: false,
 						swipe: false,
-						 adaptiveHeight: true,
-             
-              asNavFor:  th.find('.tab__slider-small')
+						adaptiveHeight: true,
+						asNavFor:  th.find('.tab__slider-small'),
+						responsive: [
+							
+							{
+								breakpoint: 991,
+								settings: {
+									draggable: true,
+									swipe: true,
+									arrows: true,
+									prevArrow: arrl2,
+									nextArrow: arrr2,
+							
+							}
+
+						} 
+					]
             });
 
         th.find('.tab__slider-small').slick({
@@ -328,6 +355,7 @@ var tabsId1 = '.mytabs1';
 	
 	$('.main-tabs').on('click', '.toggle-l', function () {
 		$(this).parent().next().slideToggle()
+		 return false;
 
 	})
 

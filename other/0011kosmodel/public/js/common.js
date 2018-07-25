@@ -180,10 +180,16 @@ jQuery(document).ready(function($) {
 						nextEl: '.swiper-button-next',
 						prevEl: '.swiper-button-prev',
 					},
+			 loop: true,
 				 autoplay: {
 				delay: 5000,
 			 reverseDirection: true,
 			},
+			 pagination: {
+				 el: '.swiper-pagination',
+				 type: 'bullets',
+				 clickable: true,
+			 },
 				});
 		// слайдер каталога
 		var swiper2 = new Swiper('.slider-js', {
