@@ -154,10 +154,9 @@ var   arrl2 = (' <div class="l">'+ icon),
             return "block" == $(this).css("display") }).slideUp().parent().removeClass("active"),
              $(this).next("div").filter(function() {
             return "none" == $(this).css("display") }).slideDown().prev("div").addClass("active").parent().addClass("active")})
-  
-
  
 
+ 
 
 // табы на ajax
 var containerId1 = '.mytabs-container1';
@@ -270,20 +269,21 @@ var tabsId1 = '.mytabs1';
              prevArrow: arrl2,
 							nextArrow: arrr2,
 							 adaptiveHeight: true
-            });
-        th.find('.tab__slider2').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            speed: 450,
-            infinite: true,
-            loop: true,  
-            arrows: true, 
-             prevArrow: arrl2,
-							nextArrow: arrr2,
-							 adaptiveHeight: true
-            });
+						});
+					th.find('.tab__slider2').slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						dots: true,
+						speed: 450,
+						infinite: true,
+						loop: true,
+						arrows: true,
+						prevArrow: arrl2,
+						nextArrow: arrr2,
+						adaptiveHeight: true,
+					});
 
+        
         th.find('.tab__slide-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -394,8 +394,8 @@ var tabsId1 = '.mytabs1';
     // settings: "unslick"
     // instead of a settings object
   ]
-            });
-
+						});
+					
 
   $('.s-rew__slider, .contact__slider').slick({
     slidesToShow: 1,
