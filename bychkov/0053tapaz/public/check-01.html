@@ -23,7 +23,13 @@
               <div class="col"><span class="top_line__title h2">Начните оформление заказа</span>
               </div>
               <div class="col-3 text-right">
-                <div class="top_line__number">3 
+                <div class="clock clock-num"> 
+                  <div class="clock__number">3 
+                  </div>
+                  <div class="clock__time">95 Пульса
+                  </div>
+                  <div class="clock__date">111137,00 руб.
+                  </div>
                 </div>
               </div>
             </div>
@@ -32,66 +38,36 @@
         <!-- end .top_line-->
       </header>
       <!-- end HEADER.header-->
-      <!-- start s-tablo-->
-      <div class="s-tablo section" id="s-tablo">
-        <div class="container">
-          <div class="s-tablo__block">
-            <div class="s-tablo__head">
-              <div class="row">
-                <div class="col"></div>
-                <div class="col-auto"></div>
-              </div>
+      <!-- start s-check-->
+      <div class="s-check section">
+        <div class="s-check__head bg-blue3">
+          <div class="container">
+            <div class="s-check__label"><input class="s-check__input form-control form-control-lg text-center" id="keyboard" type="text"/>
             </div>
-            <div class="s-tablo__body">
-              <div class="s-tablo__input-wrap">
-                <div class="row align-items-center">
-                  <div class="col-auto text-center text-white">
-                    <div class="s-tablo__title-label ttu strong">СУММА
-                    </div>
-                    <div class="s-tablo__small">руб.
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="s-tablo__label"><input class="s-tablo__input text-right form-control form-control-lg" type="text" pplaceholder="Сумма" value="0.00"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="s-tablo__input-wrap">
-                <div class="row align-items-center">
-                  <div class="col-auto text-center text-white">
-                    <div class="s-tablo__title-label ttu strong">ОБЪЕМ
-                    </div>
-                    <div class="s-tablo__small">литры
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="s-tablo__label s-tablo__label--val"><input class="s-tablo__input text-right form-control form-control-lg" type="text" pplaceholder="Литры" value="0.00"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div class="text-white">Номер телефона или e-mail получателя</div>
           </div>
-          <div class="s-tablo__caption"> 
-            <div class="ttu">ДЛЯ НАЧАЛА ЗАПРАВКИ СНИМИТЕ КРАН</div>или нажмите кнопку “Оформление заказа”
+        </div>
+        <div class="s-check__text-wrap container">
+          <div class="s-check__text">Если Вы хотите получить чек в электронном виде, выберите удобный для Вас способ.
+          </div>
+          <div class="s-check__text">Если электронный чек Вам не нужен,<br/>оставьте поле пустым
           </div>
         </div>
       </div>
-      <!-- end s-tablo-->
+      <!-- end s-check-->
       <footer class="footer">
         <div class="container">
           <div class="row justify-content-end">
             <div class="col-4">
-              <button class="footer__btn footer__btn-gray btn" type="button">Размен крупной купюры
+              <button class="footer__btn footer__btn-gray btn btn-mail" type="button">На эл. почту
               </button>
             </div>
             <div class="col-4">
-              <button class="footer__btn footer__btn-gray btn" type="button">Информация  о&nbsp;карте
+              <button class="footer__btn footer__btn-gray btn btn-tel" type="button">На телефон
               </button>
             </div>
             <div class="col-4">
-              <button class="footer__btn btn-primary btn" type="button">Оформление <br>заказа
+              <button class="footer__btn btn-primary btn" type="button">Пропустить
               </button>
             </div>
           </div>

@@ -20,23 +20,14 @@
              ch.removeClass(" col-4").removeClass(" col-6").addClass(" col-12");
 
              }
-
-
-
-
-
         else if  (ch.length <= 6) {
              ch.removeClass(" col-4").removeClass(" col-12").addClass(" col-6");
 
              }
           else  {
                ch.removeClass(" col-6").removeClass(" col-12").addClass(" col-4");
-
           }
-
     });
-
-
     $(".s-colors__btn-wrap-js").each(function() {
         var ch = $(this).children();
          if  (ch.length > 2) {
@@ -74,40 +65,6 @@
 
     });
 
-
-       //Replace all SVG images with inline SVG
-  // $('img.img-svg').each(function(){
-  //   var $img = $(this);
-  //   var imgClass = $img.attr('class');
-  //   var imgURL = $img.attr('src');
-
-  //   $.get(imgURL, function(data) {
-  //       // Get the SVG tag, ignore the rest
-  //       var $svg = $(data).find('svg');
-
-  //       // Add replaced image's classes to the new SVG
-  //       if(typeof imgClass !== 'undefined') {
-  //         $svg = $svg.attr('class', imgClass+' replaced-svg');
-  //       }
-
-  //       // Remove any invalid XML tags as per http://validator.w3.org
-  //       $svg = $svg.removeAttr('xmlns:a');
-
-  //       // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-  //       if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-  //         $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-  //       }
-  //         $('[fill]').removeAttr('fill');
-  //                   $('[stroke]').removeAttr('stroke');
-  //                   $('[style]').removeAttr('style');
-  //       // Replace image with new SVG
-  //       $img.replaceWith($svg);
-
-  //     }, 'xml');
-
-  // });
-
-
     // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -137,8 +94,111 @@
 	 heightses();
 
 	})
-
  heightses();
 
+// клавиатура
+var kv =	$('#keyboard').keyboard({
+		// openOn: null,
+			stayOpen: true,
+				alwaysOpen: true,
+					layout: 'custom',
+						openOn: null,
+						stayOpen: true,
+						// 		// layout: 'qwerty'
+						display: {
+							'bksp': '\u2190',
+							'enter': 'return',
+							'normal': 'ABC',
+							'meta1': '.?123',
+							'meta2': '#+=',
+							'accept': '\u21d3'
+						},
+
+						layout: 'custom',
+						customLayout: {
+							'normal': [
+								'q w e r t y u i o p {bksp}',
+								'a s d f g h j k l {enter}',
+								'{s} z x c v b n m @ . {s}',
+								'{meta1} {space} _ - '
+							],
+							'shift': [
+								'Q W E R T Y U I O P {bksp}',
+								'A S D F G H J K L {enter}',
+								'{s} Z X C V B N M @ . {s}',
+								'{meta1} {space} _ - '
+							],
+							'meta1': [
+								'1 2 3 4 5 6 7 8 9 0 {bksp}',
+								'` | { } % ^ * / \' {enter}',
+								'{meta2} $ & ~ # = + . {meta2}',
+								'{normal} {space} ! ? '
+							],
+							'meta2': [
+								'[ ] { } \u2039 \u203a ^ * " , {bksp}',
+								'\\ | / &lt; &gt; $ \u00a3 \u00a5 \u2022 {enter}',
+								'{meta1} \u20ac & ~ # = + . {meta1}',
+								'{normal} {space} ! ? '
+							]
+						},
+
+
+						css: {
+							// input & preview
+					 
+							container: 'ui-widget-content ui-widget ui-corner-all ui-helper-clearfix ui-tel-mail',
+					
+					 
+						},
+			// layout: 'qwerty'
+	})
+	// // .addTyping()
+	// ;
+
+	// Typing Extension
+	$('.btn-mail').click(function () {
+	 kv;
+		var kb = $('#keyboard').getkeyboard();
+			if (kb.isOpen) {
+				kb.close();
+			} else {
+				kb.reveal();
+			}
+			kb.reveal()
+	// kb.reveal()
+	 
+	});
+	
+	$('.btn-tel').click(function () {
+	var kb = 	$('#keyboard').getkeyboard();
+		if (kb.isOpen) {
+			kb.close();
+		} else {
+			kb.reveal();
+		}
+	kb.reveal()
+	});
+
+
+
+
+	$('#password')
+		.keyboard({
+			openOn: null,
+			stayOpen: true,
+			layout: 'qwerty'
+		})
+		// .addTyping()
+		;
+
+	$('#password-opener').click(function () {
+		var kb = $('#password').getkeyboard();
+		// close the keyboard if the keyboard is visible and the button is clicked a second time
+		if (kb.isOpen) {
+			kb.close();
+		} else {
+			kb.reveal();
+		}
+	});
 
 });
