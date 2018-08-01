@@ -220,18 +220,23 @@
 	 $('#keyboard__mail').slideDown();
 	 $('#keyboard__tel').slideUp();
 	 $('#search__mail').addClass('active');
-		$('#search__tel').removeClass('active');
+		$('#search__tel, .btn-tel').removeClass('active');
+		$(this).addClass('active');
 	});
 	
 	$('.btn-tel').click(function () {
 		
 		$('#keyboard__tel').slideDown();
 		$('#keyboard__mail').slideUp();
-		 $('#search__mail').removeClass('active');
-		 $('#search__tel').addClass('active');
+		$('#search__mail, .btn-mail').removeClass('active');
+		$('#search__tel').addClass('active');
+		$(this).addClass('active');
 		});
 		
-		$("input[type='tel']").inputmask("[9]{1,2}(999)999-99-99", {
+		$("input[type='tel']").inputmask(
+			// "[9]{1,2}(999)999-99-99"
+			"[9]{1,2}(999)999-99-99"
+			, {
 			autoUnmask: true,
 			showMaskOnHover: false,
 				showMaskOnFocus: false,
