@@ -42,8 +42,18 @@
       <div class="s-check section">
         <div class="s-check__head bg-blue3">
           <div class="container">
-            <div class="s-check__label"><input class="s-check__input form-control form-control-lg text-center" id="keyboard" type="text"/>
+            <div class="s-check__label"><input class="s-check__input form-control form-control-lg text-center key-input active" id="search__mail" type="text"/><input class="s-check__input form-control form-control-lg text-center key-input" id="search__tel" type="tel"/>
             </div>
+          </div>
+          <div class="keyboard-block-wrap">
+            <div class="keyboard-block-wrap-inner">
+              <div class="container">
+                <label class="keyboard-block" id="keyboard__mail" for="#search__mail"></label>
+                <label class="keyboard-block" id="keyboard__tel" for="#search__tel"></label>
+              </div>
+            </div>
+          </div>
+          <div class="container">
             <div class="text-white">Номер телефона или e-mail получателя</div>
           </div>
         </div>
@@ -75,6 +85,8 @@
       </footer>
     </div>
     <script src="js/jquery.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/jkeyboard.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/common.js"></script>
   </body>

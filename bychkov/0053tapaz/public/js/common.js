@@ -152,32 +152,32 @@
 // 						},
 // 			// layout: 'qwerty'
 // 	})
-// 	// // .addTyping()
-// 	// ;
+	// // .addTyping()
+	// ;
 
-// 	// Typing Extension
-// 	$('.btn-mail').click(function () {
-// 	 kv;
-// 		var kb = $('#keyboard').getkeyboard();
-// 			if (kb.isOpen) {
-// 				kb.close();
-// 			} else {
-// 				kb.reveal();
-// 			}
-// 			kb.reveal()
-// 	// kb.reveal()
+	// Typing Extension
+	// $('.btn-mail').click(function () {
+	//  kv;
+	// 	var kb = $('#keyboard').getkeyboard();
+	// 		if (kb.isOpen) {
+	// 			kb.close();
+	// 		} else {
+	// 			kb.reveal();
+	// 		}
+	// 		kb.reveal()
+	// // kb.reveal()
 	 
-// 	});
+	// });
 	
-// 	$('.btn-tel').click(function () {
-// 	var kb = 	$('#keyboard').getkeyboard();
-// 		if (kb.isOpen) {
-// 			kb.close();
-// 		} else {
-// 			kb.reveal();
-// 		}
-// 	kb.reveal()
-// 	});
+	// $('.btn-tel').click(function () {
+	// var kb = 	$('#keyboard').getkeyboard();
+	// 	if (kb.isOpen) {
+	// 		kb.close();
+	// 	} else {
+	// 		kb.reveal();
+	// 	}
+	// kb.reveal()
+	// });
 
 
 
@@ -200,10 +200,42 @@
 	// 		kb.reveal();
 	// 	}
 	// });
-
-	 // маска на инпут 
-	 $(".s-check__input").inputmask({
-	 	alias: "phoneru"
+	
+  $('#keyboard__mail').jkeyboard({
+		 layout: 'english__mail',
+			shift : false,
+			capslock : false, 
+			// layout_id : 0,
+			input: $('#search__mail'),
+		 
 	 });
+	  $('#keyboard__tel').jkeyboard({
+	  	layout: 'numbers_only',
+	   
+	  	input: $('#search__tel'),
+
+	  });
+
+	 $('.btn-mail').click(function () {
+	 $('#keyboard__mail').slideDown();
+	 $('#keyboard__tel').slideUp();
+	 $('#search__mail').addClass('active');
+		$('#search__tel').removeClass('active');
+	});
+	
+	$('.btn-tel').click(function () {
+		
+		$('#keyboard__tel').slideDown();
+		$('#keyboard__mail').slideUp();
+		 $('#search__mail').removeClass('active');
+		 $('#search__tel').addClass('active');
+		});
+		
+		$("input[type='tel']").inputmask("[9]{1,2}(999)999-99-99", {
+			autoUnmask: true,
+			showMaskOnHover: false,
+				showMaskOnFocus: false,
+		});
+	  // маска на инпут
 
 });
