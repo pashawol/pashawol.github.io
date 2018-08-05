@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>title</title>
+    <title>BHVA</title>
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
@@ -24,7 +24,7 @@
             <li><a href="#s-stock">Спец. предложение</a></li>
           </ul>
           <div class="container">
-            <button class="trop__btn btn btn-outline-primary btn-sm btn-block" type="button">Оставить заявку
+            <button class="trop__btn btn btn-outline-primary btn-sm btn-block" data-target="#modal-win" data-toggle="modal" href="#">Оставить заявку
             </button>
           </div>
         </div>
@@ -52,7 +52,7 @@
               <div class="col-auto">
                 <div class="row"> 
                   <div class="col-auto d-none d-sm-block">
-                    <button class="top-nav__btn btn btn-outline-primary btn-sm" type="button" data-toggle="modal" data-target="#thanks">Оставить заявку
+                    <button class="top-nav__btn btn btn-outline-primary btn-sm" href="#" data-toggle="modal" data-target="#modal-win">Оставить заявку
                     </button>
                   </div>
                   <div class="col-auto d-lg-none"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a></div>
@@ -101,6 +101,7 @@
                     </div>
                   </div>
                 </form>
+                <div class="small text-white text-center"></div>
               </div>
             </div>
           </div>
@@ -108,7 +109,7 @@
             <div class="header-block__row row">
               <div class="header-block__col col-lg-3 col-6">
                 <div class="header-block__item text-center">
-                  <div class="header-block__img-wrap"><span><img class="res-i" src="img/head-i-1.svg" alt="alt"/></span>
+                  <div class="header-block__img-wrap"><span><img class="res-i img-svg" src="img/head-i-1.svg" alt="alt"/></span>
                   </div>
                   <p>Более 5&nbsp;лет <br/>в&nbsp;рынке</p>
                 </div>
@@ -116,7 +117,7 @@
               <!-- +e.col.col-lg-3.col-6-->
               <div class="header-block__col col-lg-3 col-6">
                 <div class="header-block__item text-center">
-                  <div class="header-block__img-wrap"><span><img class="res-i" src="img/head-i-2.svg" alt="alt"/></span>
+                  <div class="header-block__img-wrap"><span><img class="res-i img-svg" src="img/head-i-2.svg" alt="alt"/></span>
                   </div>
                   <p>Без перевода средств  на&nbsp;счет компании</p>
                 </div>
@@ -124,7 +125,7 @@
               <!-- +e.col.col-lg-3.col-6-->
               <div class="header-block__col col-lg-3 col-6">
                 <div class="header-block__item text-center">
-                  <div class="header-block__img-wrap"><span><img class="res-i" src="img/head-i-3.svg" alt="alt"/></span>
+                  <div class="header-block__img-wrap"><span><img class="res-i img-svg" src="img/head-i-3.svg" alt="alt"/></span>
                   </div>
                   <p>Персональный портфельный  управляющий 12/6</p>
                 </div>
@@ -132,7 +133,7 @@
               <!-- +e.col.col-lg-3.col-6-->
               <div class="header-block__col col-lg-3 col-6">
                 <div class="header-block__item text-center">
-                  <div class="header-block__img-wrap"><span><img class="res-i" src="img/head-i-4.svg" alt="alt"/></span>
+                  <div class="header-block__img-wrap"><span><img class="res-i img-svg" src="img/head-i-4.svg" alt="alt"/></span>
                   </div>
                   <p>Аналитический <br/>контроль 24/7</p>
                 </div>
@@ -190,36 +191,6 @@
                 <!-- +e.col.col-lg-4.text-white-->
           </div>
         </div>
-        <div class="container">
-          <div class="form-wrap">
-            <div class="form-wrap__title text-center">Вам нужны еще <strong>аргументы?</strong>
-            </div>
-            <div class="form-wrap__inner">
-              <form>
-                <div class="row">
-                  <div class="col-sm">
-                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
-                    </div>
-                    <!-- +e.input-wrap-->
-                  </div>
-                  <div class="col-sm">
-                    <div class="form-wrap__input-wrap form-group">
-                      <select class="form-wrap__input form-control">
-                        <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
-                        <option value="">скайп</option>
-                        <option value="">вайбер</option>
-                        <option value="">телеграмм</option>
-                        <option value="">телефон</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
       </div>
       <!-- end s-why-->
       <!-- start s-advantages-->
@@ -254,7 +225,7 @@
         </div>
         <div class="container">
           <div class="form-wrap">
-            <div class="form-wrap__title text-center">Хотите получить  <strong>детальную консультацию </strong>по инвестициям в цифровые активы, а также получить скидку на обслуживание в тестовом периоде?
+            <div class="form-wrap__title text-center">Хотите получить  <strong>детальную консультацию </strong>по инвестициям в цифровые активы
             </div>
             <div class="form-wrap__inner">
               <form>
@@ -279,6 +250,7 @@
                   </div>
                 </div>
               </form>
+              <div class="small text-white text-center">Минимальная и максимальная стоимость нового инвестиционного портфеля составляет 1 BTC и 100 BTC соответственно</div>
             </div>
           </div>
         </div>
@@ -327,40 +299,12 @@
                 <!-- +e.col.col-lg-3.col-6-->
           </div>
         </div>
-        <div class="container">
-          <div class="form-wrap">
-            <div class="form-wrap__inner">
-              <form>
-                <div class="row">
-                  <div class="col-sm">
-                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
-                    </div>
-                    <!-- +e.input-wrap-->
-                  </div>
-                  <div class="col-sm">
-                    <div class="form-wrap__input-wrap form-group">
-                      <select class="form-wrap__input form-control">
-                        <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
-                        <option value="">скайп</option>
-                        <option value="">вайбер</option>
-                        <option value="">телеграмм</option>
-                        <option value="">телефон</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
       </div>
       <!-- end s-four-->
       <!-- start s-rez-->
-      <div class="s-rez section text-white" id="s-rez">
+      <div class="s-rez section" id="s-rez">
+        <h2 class="text-center">Представляем ваши интересы на рынке цифровых активов</h2>
         <div class="container">
-          <h2 class="text-center">Готовы показать реальный результат</h2>
           <div class="row no-gutters">
                 <div class="s-rez__col col-lg-4">
                   <div class="s-rez__item" style="background-image: url(img/rez-1.jpg);">
@@ -388,36 +332,6 @@
                 <!-- +e.col.col-lg-3.col-6-->
           </div>
         </div>
-        <div class="container">
-          <div class="form-wrap">
-            <div class="form-wrap__title">Вы увидите результат на своем счету уже  <strong>через несколько дней</strong>
-            </div>
-            <div class="form-wrap__inner">
-              <form>
-                <div class="row">
-                  <div class="col-sm">
-                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
-                    </div>
-                    <!-- +e.input-wrap-->
-                  </div>
-                  <div class="col-sm">
-                    <div class="form-wrap__input-wrap form-group">
-                      <select class="form-wrap__input form-control">
-                        <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
-                        <option value="">скайп</option>
-                        <option value="">вайбер</option>
-                        <option value="">телеграмм</option>
-                        <option value="">телефон</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
       </div>
       <!-- end s-rez-->
       <!-- start s-stock-->
@@ -425,7 +339,7 @@
         <div class="container">
           <div class="s-stock__inner text-white">
             <div class="s-stock__text">
-              <div class="s-stock__title h3 extra">Специальное предложение
+              <div class="s-stock__title h3 extra">Летнее предложение до&nbsp;31&nbsp;августа
               </div>
               <p>Начните сотрудничество прямо сейчас  и&nbsp;<strong>получите скидку в&nbsp;4%  </strong>на&nbsp;Success Fee  в&nbsp;первом отчетном квартале на&nbsp;первый квартал обслуживания!</p>
               <button class="s-stock__btn btn btn-primary btn-block ttu" type="button">Оставить заявку
@@ -442,68 +356,116 @@
           <ul>
             <li>Инвестиции в цифровые активы - это процесс, требующий постоянного контроля над состоянием рынка</li>
             <li>Очень важно постоянно быть готовым оперативно реагировать на различные ситуации на рынке</li>
-            <li>Если вы не готовы 24/7 держать руку на пульсе и постоянно реагировать на изменения в рынке</li>
+            <li>Чтобы преуспеть в этом рынке, необходимо 25/7 держать руку на пульсе и постоянно реагировать на изменения в рынке</li>
           </ul>
-          <div class="container">
-            <div class="form-wrap">
-              <div class="form-wrap__title text-center">То тогда доверьте эту работу профессионалам
-              </div>
-              <div class="form-wrap__inner">
-                <form>
-                  <div class="row">
-                    <div class="col-sm">
-                      <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
-                      </div>
-                      <!-- +e.input-wrap-->
+          <div class="form-wrap">
+            <div class="form-wrap__title strong">Хотите научиться управлять активами самостоятельно? 
+            </div>
+            <div class="form-wrap__title form-wrap__title--sub">Скачайте Руководство крипто-инвестора бесплатно
+            </div>
+            <div class="form-wrap__inner">
+              <form>
+                <div class="row align-items-center">
+                  <div class="col-sm-6">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
                     </div>
-                    <div class="col-sm">
-                      <div class="form-wrap__input-wrap form-group">
-                        <select class="form-wrap__input form-control">
-                          <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
-                          <option value="">скайп</option>
-                          <option value="">вайбер</option>
-                          <option value="">телеграмм</option>
-                          <option value="">телефон</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-wrap__input-wrap form-group">
+                      <select class="form-wrap__input form-control">
+                        <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
+                        <option value="">скайп</option>
+                        <option value="">вайбер</option>
+                        <option value="">телеграмм</option>
+                        <option value="">телефон</option>
+                      </select>
                     </div>
                   </div>
-                </form>
-              </div>
+                  <div class="col-sm-6">
+                    <div class="form-wrap__text">Формат PDF, 1 mb  
+                    </div>
+                  </div>
+                  <div class="col-sm-6"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
+                  </div>
+                </div>
+              </form>
+              <div class="small text-white text-center">Минимальный размер инвестиционного портфеля – 1 BTC, максимальный – 100 BTC</div>
             </div>
           </div>
         </div>
       </div>
       <!-- end s-faq-->
-      <footer class="footer">
+      <!-- start s-telegram-->
+      <div class="s-telegram section text-white" id="s-telegram">
         <div class="container text-center">
-          <div class="soc">
-            <div class="row justify-content-center">
-                <div class="col-auto"><a class="soc__item" href="https://www.facebook.com/bhva.ru/" target="_blank"><img src="img/soc-1.svg" alt="alt"/></a>
+          <div class="s-telegram__title h5 med">Хотите быть в&nbsp;ритме рынка? &mdash;&nbsp; Подключитесь к&nbsp;новостному каналу BHVA
+          </div><a class="s-telegram__btn btn" href="https://t.me/bhva_official" target="_blank">Подключиться к BHVA<span class="s-telegram__icon-wrap">
+          <svg class="icon icon-telegram ">
+            <use xlink:href="img/svg/sprite.svg#telegram"></use>
+          </svg></span></a>
+          <div class="s-telegram__small small ttu"> <span>Brussels </span><span>Zurich </span><span>Warsaw </span><span>Kyiv </span><span>Minsk </span><span>Saint-Petersburg </span><span>Moscow	</span>
+          </div>
+        </div>
+      </div>
+      <!-- end s-telegram-->
+      <footer class="footer text-sm-left text-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm mb-4">
+              <div class="footer__text">© 2018 Copyright by BHVA. All rights reserved.
+              </div>
+            </div>
+            <div class="col text-center">
+              <div class="soc">
+                <div class="row justify-content-center">
+                    <div class="col-auto"><a class="soc__item" href="https://www.facebook.com/bhva.ru/" target="_blank">
+                      <svg class="icon icon-facebook ">
+                        <use xlink:href="img/svg/sprite.svg#facebook"></use>
+                      </svg></a>
+                    </div>
+                    <div class="col-auto"><a class="soc__item" href="https://twitter.com/BHVA_Official?lang=en" target="_blank">
+                      <svg class="icon icon-twitter ">
+                        <use xlink:href="img/svg/sprite.svg#twitter"></use>
+                      </svg></a>
+                    </div>
+                    <div class="col-auto"><a class="soc__item" href="https://t.me/bhva_rus" target="_blank">
+                      <svg class="icon icon-telegram ">
+                        <use xlink:href="img/svg/sprite.svg#telegram"></use>
+                      </svg></a>
+                    </div>
                 </div>
-                <div class="col-auto"><a class="soc__item" href="https://twitter.com/BHVA_Official?lang=en" target="_blank"><img src="img/soc-2.svg" alt="alt"/></a>
-                </div>
-                <div class="col-auto"><a class="soc__item" href="https://t.me/bhva_rus" target="_blank"><img src="img/soc-4.svg" alt="alt"/></a>
-                </div>
+              </div>
+            </div>
+            <div class="col-md text-lg-right">
+              <div class="footer__text mb-4">Пишите нам на почту — <a class="footer__link" href="mailto:info@bhva.ch">info@bhva.ch</a>
+              </div>
             </div>
           </div>
-          <ul>
-            <li><a href="#s-why">О рынке</a></li>
-            <li><a href="#s-advantages">Что мы предлагаем</a></li>
-            <li><a href="#s-four">Преимущества</a></li>
-            <li><a href="#s-rez">Результаты</a></li>
-            <li><a href="#s-stock">Спец. предложение</a></li>
-          </ul>
-          <button class="footer__btn btn btn-outline-primary btn-block btn-sm" type="button">Оставить заявку
-          </button>
         </div>
-        <div class="footer__footer">
+        <div class="footer__foot">
           <div class="container">
             <div class="row justify-content-between">
-              <div class="col-auto">© 2018 bhva | Все права защищены</div>
-              <div class="col-auto"> <a href="http://а-ба.рф" target="_blank">Создание сайта</a></div>
+              <div class="col-sm mb-4">
+                <div class="footer__text"><a class="footer__link" data-target="#modal-text" data-toggle="modal" href="#">Privacy Policy and Terms </a>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="row justify-content-center mb-4">
+                  <div class="col-auto">
+                    <div class="footer__text"><a class="footer__link ttu" href="https://bhva.ru/" target="_blank">Bhva.ru</a>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="footer__text"><a class="footer__link ttu" href="https://bhva.ch/" target="_blank">bhva.ch</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm text-md-right">
+                <div class="footer__text"><a class="footer__link" href="http://а-ба.рф" target="_blank">Создание сайта</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -539,6 +501,7 @@
                       </div>
                     </div>
                   </form>
+                  <div class="small text-white text-center"></div>
                 </div>
               </div>
             </div>
@@ -552,6 +515,14 @@
             <div class="form-wrap__big-title text-center extra">Спасибо
             </div>
             <div class="h5 l text-center">Мы свяжимся с Вами в течении 12 часов</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modal-text" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
+        <div class=" ttext-center  modal-dialog  modal-dialog-centered  " role="document"> 
+          <div class="form-wrap modal-content modal-win">
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> × </button>
+            <p class="px-5">Materials on the BHVA website are provided "as they are". Any information available on the website can not be regarded as financial advice or manual. BHVA is not responsible for the accuracy, completeness or readability of any information, provided to Client. It is declared, that the verification of the accuracy and trueness of such information is the exclusive liability of the Client. All materials presented on the BHVA website only for personal, noncommercial use. It is not allowed to modify or copy the materials, use them for commercial purposes or for public display, delete the copyright notice or information about other proprietary rights, transfer the materials to others, or “mirror” them to another site.</p>
           </div>
         </div>
       </div>

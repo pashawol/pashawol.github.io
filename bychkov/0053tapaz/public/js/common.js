@@ -215,6 +215,19 @@
 	  	input: $('#search__tel'),
 
 	  });
+	  $('#keyboard__tel-2').jkeyboard({
+	  	layout: 'litter',
+	   
+	  	input: $('#search__tel'),
+
+	  });
+		
+	  $('#keyboard__tel-3').jkeyboard({
+	  layout: 'numbers_only_2',
+	   
+	  	input: $('#search__tel'),
+
+	  });
 
 	 $('.btn-mail').click(function () {
 	 $('#keyboard__mail').slideDown();
@@ -242,5 +255,39 @@
 				showMaskOnFocus: false,
 		});
 	  // маска на инпут
+		  var swiper = new Swiper('.swiper-container', {
+		  	// effect: 'flip',
+		  	// grabCursor: true,
+				init: false,
+		  	loop: true,
+		  	effect: 'coverflow', 
+		  	centeredSlides: true,
+				slidesPerView: 'auto',
+				speed: 650,
+				shortSwipes: false,
+				longSwipes: false,
+				followFinger: false,
+				allowTouchMove: false,
+				touchMoveStopPropagation: false,
+		  	coverflowEffect: {
+		  		depth: 15,
+		  		rotate: 0,
+		  		stretch: 7.58,
+		  		modifier: 1,
+		  		slideShadows: false,
+		  	},
+		  	navigation: {
+		  		nextEl: '.swiper-button-next',
+		  		prevEl: '.swiper-button-prev',
+				},
+			 
+			});
+			if ($(".s-card__slide").length > 2){
+				$(".s-card__slide").removeClass("active");
+				$(".swiper-container").removeClass("active");
+				$(".swiper-wrapper").removeClass("justify-content-center")
+				$(".slick-arrow").show();
+				swiper.init();
+			}
 
 });

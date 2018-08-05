@@ -94,7 +94,25 @@
                 this.createKeyboard('symbolic');
                 this.events();
             }
-        }
+				},
+				
+        symbol_inner: {
+            text: 'ввести',
+            command: function () {
+                // this.createKeyboard('symbolic');
+                this.events();
+            }
+				},
+				
+        symbol_rl: {
+            text: 'руб.',
+            command: function () {
+                // this.createKeyboard('symbolic');
+                this.events();
+            }
+				}
+
+				
     };
 
 
@@ -126,15 +144,28 @@
 						['_', '\\', '|', '~', '<', '>'],
 						['eng_switch__mail', 'numeric_switch', '.', ',', '?', '!', "'"],
 				],
-				// /кастомные клавы
         numbers_only: [
-            ['1', '2', '3',],
-            ['4', '5', '6',],
-            ['7', '8', '9',],
-            ['0', 'backspace'],
-        ],
-      
-    }
+					['1', '2', '3',],
+					['4', '5', '6',],
+					['7', '8', '9',],
+					['0', 'backspace'],
+				],
+				
+        litter: [
+					['10 л', '500 ₽', ],
+					['15 л', '1000 ₽', ],
+					['20 л', '1500 ₽', ],
+					['25 л', 'symbol_inner'],
+				],
+				numbers_only_2: [
+					['1', '2', '3', ],
+					['4', '5', '6', ],
+					['7', '8', '9', ],
+					['symbol_rl', '0', 'C'],
+				],
+				// /кастомные клавы
+				
+			}
 
     var shift = false, capslock = false, layout = 'english', layout_id = 0;
 

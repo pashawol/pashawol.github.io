@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Оплата БК</title>
+    <meta name="description" content="о чем страница">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- start HEADER.header-->
+      <header class="header">
+        <!-- start .top_line-->
+        <div class="top_line">
+          <div class="container">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-3">
+                <div class="top_line__logo"><img src="img/logo.png" alt=""/>
+                </div>
+              </div>
+              <div class="col"><span class="top_line__title h2">Введите данные заказа</span>
+              </div>
+              <div class="col-3 text-right">
+                <div class="clock clock-num"> 
+                  <div class="clock__number">3 
+                  </div>
+                  <div class="clock__time">92 Экто
+                  </div>
+                  <div class="clock__date">37,00 руб.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end .top_line-->
+      </header>
+      <!-- end HEADER.header-->
+      <!-- start s-pay-->
+      <div class="s-pay section" id="s-pay">
+        <div class="s-pay__head bg-blue3">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="s-pay__input-wrap">
+                  <div class="row align-items-center">
+                    <div class="col-6 text-white">
+                      <div class="s-pay__title-label">Объем, л
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="s-pay__label"><input class="s-pay__input text-center form-control form-control-lg" id="search__tel" type="text"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-pay__input-wrap">
+                  <div class="row align-items-center">
+                    <div class="col-6 text-white">
+                      <div class="s-pay__title-label">Сумма
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="s-pay__title-label text-white pl">185.00 руб.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-pay__key-wrap col-auto">
+                <div class="keyboard-block keyboard-block-numbers keyboard-block" id="keyboard__tel-3" for="#search__tel"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="s-pay__table-wrap">
+            <table class="s-pay__table w-100">
+              <tr class="s-pay__tr">
+                <th class="s-pay__th h6 bg-blue-l" colspan="2">Поднесите чек к считывателю штрих-кодов
+                </th>
+              </tr>
+              <tr class="s-pay__tr h3">
+                <td class="s-pay__td">Чеками
+                </td>
+                <td class="s-pay__td text-right">0.00 руб.
+                </td>
+              </tr>
+            </table>
+            <table class="s-pay__table w-100">
+              <tr class="s-pay__tr">
+                <th class="s-pay__th h6 bg-green-l" colspan="2">Поднесите дисконтную карту к считывателю
+                </th>
+              </tr>
+              <tr class="s-pay__tr h3">
+                <td class="s-pay__td">Скидка
+                </td>
+                <td class="s-pay__td text-right">0.00 руб.
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- end s-pay-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row justify-content-end">
+            <div class="col-4">
+              <button class="footer__btn footer__btn-gray btn" type="button">Чек не читается
+              </button>
+            </div>
+            <div class="col-4">
+              <button class="footer__btn footer__btn-gray btn" type="button">Отмена
+              </button>
+            </div>
+            <div class="col-4">
+              <button class="footer__btn btn-primary btn" type="button">Продолжить
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="js/jkeyboard.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
