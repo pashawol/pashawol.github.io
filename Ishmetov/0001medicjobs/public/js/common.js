@@ -3,28 +3,21 @@
   // для свг
   svg4everybody({});
   // Custom JS
-
-	// показать меню разширенного поиска
-	$(".search-adv__btn--js").click(function () {
-		$(".search-adv__btn--js").toggleClass("active").find(".search-adv__text").toggle(300);
-		$(".search-adv__block--js").toggle(300);
-		})
+$('[data-toggle="popover"]').popover({
+	html: true,
+})
+ 
 		
 		// прилипает меню
 	 $(".header--js").stick_in_parent();
 										
-	 $(".sidebar-profile").stick_in_parent({
+	 $(".sidebar-profile, .sidebar-js").stick_in_parent({
 		 offset_top: $(".header--js").height() + 30,
 		 inner_scrolling: true,
 		//  recalc_every: true,
 	 });
 
-	//  $(".sidebar-profile").stickyfloat('update', {
-	//  	duration: 0,
-	//  	stickToBottom: true
-	//  });
-	
-
+ 
       // галерея
   $(".gal").each(function(){
 
@@ -35,9 +28,7 @@
     mainClass: 'mfp-with-zoom mfp-img-mobile',
     image: {
       verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
+     
     },
     gallery: {
       enabled: true
@@ -69,7 +60,7 @@
 			$(".dropdown__block").each(function () {
 			$(this).find(".dropdown__body").css({"max-height": h - 104 });
 		})
-			$(".hidden-mnu").height(h);
+			$(".hidden-mnu").height($(window).height()).find(".wrapp-hidden").css("padding-bottom", $(window).height() - h);
 
 		}
 		
@@ -110,17 +101,7 @@
     $('html, body').animate({ scrollTop:0 }, 1100);
     return false;
   });
- 
-// листалка по стр
- // $(" .top-nav a").click(function () {
- //        var elementClick = $(this).attr("href");
- //        var destination = $(elementClick).offset().top;
-
- //            $('html, body').animate({ scrollTop: destination }, 1100);
-
- //        return false;
- //    });
-
+  
 	// эффект при наведении на меню
 	 $(function () { 
 		 var $el, leftPos, newWidth,
@@ -172,12 +153,19 @@
 	//  / показать блоки для редактирования на  стр профиля
 	//  показать аккордион  стр профиля
 	$(".accordion__title--js").click(function () {
-		$(this).toggleClass("active").parents(".accordion")
+		$(this).toggleClass("active").parent()
 		.find(".accordion__block--js").slideToggle()
 		setTimeout(function () {
 					$(this).find(".accordion__block--js").toggleClass("active");
 					}, 10);
 	})
+	
+	$(".accordion__title-filter--js").click(function () {
+		$(this).toggleClass("active").parent()
+		.find(".accordion__block-filter--js").slideToggle()
+	 
+	})
+
 	// / показать аккордион  стр профиля
 
 
@@ -208,26 +196,8 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 
 
 
- var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.4-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
-
-var   arrl2 = (' <div class="l">'+ icon),
-      arrr2 =(' <div class="r">'+ icon);
- // карусель
- // $('.s-team__slider').slick({
- //    slidesToShow: 3,
- //    slidesToScroll: 1,
- //    dots: false,
- //    speed: 450,
- //    infinite: true,
- //    loop: true,
- //    arrows: true,
- //    // centerMode: true,
- //    // focusOnSelect: true ,
- //     // variableWidth: true,
- //     prevArrow: arrr2,
- //      nextArrow: arrl2,
- //    });
-
+ 
+ 
 // слайдер цвета в карточке
  var swiper4 = new Swiper('.color-slider', {
       // slidesPerView: 5,
@@ -268,7 +238,8 @@ var   arrl2 = (' <div class="l">'+ icon),
  
 
  // маска на инпут
-   $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
+	 $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
+	// маска на дату
 	 $("input.date-input").attr("pattern", "[0-3]{1}[0-9]{1}\.[0-1]{1}[0-9]{1}\.[1-2]{1}[0-9]{3}")
 	 .inputmask({"mask": "99.99.9999"});
 
