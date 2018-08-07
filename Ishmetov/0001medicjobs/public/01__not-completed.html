@@ -64,6 +64,9 @@
               </div>
               <div class="col d-none d-md-block">
                 <ul class="top-nav__nav nav-js">
+                  <li class="top-nav__item active w-0"><a class="top-nav__link top-nav__link--active" href="#"></a>
+                  </li>
+                  <!-- надо оставить пустую лишку для скрипта-->
                   <li class="top-nav__item active"><a class="top-nav__link top-nav__link--active" href="#">Мой профиль</a>
                   </li>
                   <li class="top-nav__item"><a class="top-nav__link" href="#">Моя лента</a>
@@ -80,7 +83,7 @@
                 <div class="row align-items-center">
                   <div class="col-auto">
                     <div class="dropdown">
-                      <div class="notice-block dropdown-toggle" id="dropdown--notice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20" data-placement="bottom">
+                      <div class="notice-block dropdown-toggle" id="dropdown--notice" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-offset="10,20" data-placement="bottom">
                         <div class="notice-block__btn notice-block__btn--js notice-block__btn notice-block__btn--active">
                           <svg class="icon icon-bell ">
                             <use xlink:href="img/svg/sprite.svg#bell"></use>
@@ -218,7 +221,7 @@
                   </div>
                   <div class="col">
                     <div class="dropdown">
-                      <div class="pa-block dropdown-toggle" id="dropdown--pa" data-offset="10,20" data-placement="bottom" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                      <div class="pa-block dropdown-toggle" id="dropdown--pa" data-offset="10,20" data-placement="bottom" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                         <svg class="icon icon-down ">
                           <use xlink:href="img/svg/sprite.svg#down"></use>
                         </svg>
@@ -624,38 +627,36 @@
                                         <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
                                       </svg></span></span></label>
                               </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Конец обучения:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm">
-                                        <div class="smaller text-secondary">Если учитесь в&nbsp;настоящее время&nbsp;&mdash; укажите год предполагаемого окончания</div>
-                                      </div>
+                              <!-- +e.input-wrap--><span class="content__input-wrap form-group d-block">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Конец обучения:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row align-items-center">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Месяц</option>
+                                        <option value="">Январь</option>
+                                        <option value="">Февраль</option>
+                                        <option value="">Март</option>
+                                        <option value="">Апрель</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm">
+                                      <div class="smaller text-secondary">Если учитесь в&nbsp;настоящее время&nbsp;&mdash; укажите год предполагаемого окончания</div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </div></span>
                               <div class="content__foot row align-items-center">
                                 <div class="col-sm-auto">
                                   <div class="block-toggle">
@@ -772,67 +773,63 @@
                               <div class="content__input-wrap form-group d-block">
                                 <label class="row"><span class="col-md-auto"><span class="content__title-label">Обязанности и достижения:</span></span><span class="col"><textarea class="content__input form-control" placeholder="Укажите обязанности и достижения"></textarea></span></label>
                               </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm">
-                                        <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
-                                        </label>
-                                      </div>
+                              <!-- +e.input-wrap--><span class="content__input-wrap form-group d-block">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row align-items-center">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Месяц</option>
+                                        <option value="">Январь</option>
+                                        <option value="">Февраль</option>
+                                        <option value="">Март</option>
+                                        <option value="">Апрель</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm">
+                                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
+                                      </label>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="content__input-wrap form-group d-block mb-0">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
+                              </div></span><span class="content__input-wrap form-group d-block mb-0">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row align-items-center">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Месяц</option>
+                                        <option value="">Январь</option>
+                                        <option value="">Февраль</option>
+                                        <option value="">Март</option>
+                                        <option value="">Апрель</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </div></span>
                             </div>
                             <div class="content__block border-bottom border-gray">
                               <div class="text-right">
@@ -908,67 +905,63 @@
                               <div class="content__input-wrap form-group d-block">
                                 <label class="row"><span class="col-md-auto"><span class="content__title-label">Обязанности и достижения:</span></span><span class="col"><textarea class="content__input form-control" placeholder="Укажите обязанности и достижения"></textarea></span></label>
                               </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm">
-                                        <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
-                                        </label>
-                                      </div>
+                              <!-- +e.input-wrap--><span class="content__input-wrap form-group d-block">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row align-items-center">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Месяц</option>
+                                        <option value="">Январь</option>
+                                        <option value="">Февраль</option>
+                                        <option value="">Март</option>
+                                        <option value="">Апрель</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm">
+                                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
+                                      </label>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="content__input-wrap form-group d-block mb-0">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
+                              </div></span><span class="content__input-wrap form-group d-block mb-0">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row align-items-center">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Месяц</option>
+                                        <option value="">Январь</option>
+                                        <option value="">Февраль</option>
+                                        <option value="">Март</option>
+                                        <option value="">Апрель</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </div></span>
                               <div class="content__foot row align-items-center">
                                 <div class="col-sm-auto">
                                   <div class="block-toggle">
@@ -1046,67 +1039,63 @@
                                       <option value="">Выберите из списка 3  Выберите из списка</option>
                                     </select></span></label>
                               </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm">
-                                        <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
-                                        </label>
-                                      </div>
+                              <!-- +e.input-wrap--><span class="content__input-wrap form-group d-block">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Начало работы:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row align-items-center">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Месяц</option>
+                                        <option value="">Январь</option>
+                                        <option value="">Февраль</option>
+                                        <option value="">Март</option>
+                                        <option value="">Апрель</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm">
+                                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">По настоящее время</span>
+                                      </label>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div class="content__input-wrap form-group d-block mb-0">
-                                <div class="row align-items-center">
-                                  <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
-                                  </div>
-                                  <div class="col">
-                                    <div class="row small-row align-items-center">
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Месяц</option>
-                                          <option value="">Январь</option>
-                                          <option value="">Февраль</option>
-                                          <option value="">Март</option>
-                                          <option value="">Апрель</option>
-                                        </select>
-                                      </div>
-                                      <div class="col-sm-auto col-6">
-                                        <select class="content__input form-control">
-                                          <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                          <option value="">2018</option>
-                                          <option value="">2017</option>
-                                          <option value="">2016</option>
-                                          <option value="">2015</option>
-                                        </select>
-                                      </div>
+                              </div></span><span class="content__input-wrap form-group d-block mb-0">
+                              <div class="row align-items-center">
+                                <div class="col-md-auto"><span class="content__title-label">Конец работы:</span>
+                                </div>
+                                <div class="col">
+                                  <div class="row small-row align-items-center">
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Месяц</option>
+                                        <option value="">Январь</option>
+                                        <option value="">Февраль</option>
+                                        <option value="">Март</option>
+                                        <option value="">Апрель</option>
+                                      </select>
+                                    </div>
+                                    <div class="col-sm-auto col-6">
+                                      <select class="content__input form-control">
+                                        <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                      </select>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
+                              </div></span>
                               <div class="content__foot row align-items-center">
                                 <div class="col-sm-auto">
                                   <div class="block-toggle">
@@ -1247,18 +1236,10 @@
                                         <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
                                       </svg></span></span></label>
                               </div>
-                              <!-- +e.input-wrap-->
-                              <div class="content__input-wrap form-group d-block">
-                                <label>
-                                  <div class="add-file"><span class="row align-items-center"><span class="col-md-auto"><span class="add-file__title-label add-file__title-label--file">Загрузите рекомендацию в формате PDF:</span></span><span class="col"><span class="row small-row align-items-center justify-content-end">
-                                          <input class="d-none" name="file" type="file"/><span class="col-sm-auto">
-                                            <div class="add-file__filename text-left content__input form-control">не  загружено
-                                            </div></span><span class="col file-upload">
-                                            <div class="add-file__btn btn btn-outline-success">Загрузить
-                                            </div></span></span></span></span>
-                                  </div>
-                                </label>
-                              </div>
+                              <!-- +e.input-wrap--><span class="content__input-wrap form-group d-block">
+                              <label><span class="add-file"><span class="row align-items-center"><span class="col-md-auto"><span class="add-file__title-label add-file__title-label--file">Загрузите рекомендацию в формате PDF:</span></span><span class="col"><span class="row small-row align-items-center justify-content-end">
+                                      <input class="d-none" name="file" type="file"/><span class="col-sm-auto"><span class="add-file__filename text-left content__input form-control">не  загружено</span></span><span class="col file-upload"><span class="add-file__btn btn btn-outline-success">Загрузить</span></span></span></span></span></span>
+                              </label></span>
                             </div>
                           </div>
                           <div class="block-toggle">
@@ -1380,26 +1361,24 @@
                                       <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
                                     </svg></span></span></label>
                             </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <div class="row align-items-center">
-                                <div class="col-md-auto"><span class="content__title-label">Год:</span>
-                                </div>
-                                <div class="col">
-                                  <div class="row small-row">
-                                    <div class="col-sm-auto col-6">
-                                      <select class="content__input form-control">
-                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                        <option value="">2018</option>
-                                        <option value="">2017</option>
-                                        <option value="">2016</option>
-                                        <option value="">2015</option>
-                                      </select>
-                                    </div>
+                            <!-- +e.input-wrap--><span class="content__input-wrap form-group d-block">
+                            <div class="row align-items-center">
+                              <div class="col-md-auto"><span class="content__title-label">Год:</span>
+                              </div>
+                              <div class="col">
+                                <div class="row small-row">
+                                  <div class="col-sm-auto col-6">
+                                    <select class="content__input form-control">
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                      <option value="">2018</option>
+                                      <option value="">2017</option>
+                                      <option value="">2016</option>
+                                      <option value="">2015</option>
+                                    </select>
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div></span>
                             <div class="content__foot row align-items-center">
                               <div class="col-sm-auto">
                                 <div class="block-toggle">
@@ -1450,40 +1429,34 @@
                                       <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
                                     </svg></span></span></label>
                             </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Укажите авторов:</span></span><span class="col">
-                                  <div class="input-group mw-100"><input class="content__input form-control" type="text" placeholder="Например, Иванов И.И."/>
-                                    <div class="input-group-append">
-                                      <button class="content__btn btn btn-success btn-icon" type="submit">
-                                        <svg class="icon icon-plus ">
-                                          <use xlink:href="img/svg/sprite.svg#plus"></use>
-                                        </svg>
-                                      </button>
-                                    </div>
-                                  </div></span></label>
-                              <div class="align-items-center row"><span class="col-md-auto"><span class="content__title-label"></span></span><span class="col md-s">Ишметов М.С., Антонов С.А.</span></div>
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <div class="row align-items-center">
-                                <div class="col-md-auto"><span class="content__title-label">Год выпуска статьи:</span>
-                                </div>
-                                <div class="col">
-                                  <div class="row small-row">
-                                    <div class="col-sm-auto col-6">
-                                      <select class="content__input form-control">
-                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                        <option value="">2018</option>
-                                        <option value="">2017</option>
-                                        <option value="">2016</option>
-                                        <option value="">2015</option>
-                                      </select>
-                                    </div>
+                            <!-- +e.input-wrap--><span class="content__input-wrap form-group d-block">
+                            <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Укажите авторов:</span></span><span class="col"><span class="input-group mw-100"><input class="content__input form-control" type="text" placeholder="Например, Иванов И.И."/>
+                                  <div class="input-group-append">
+                                    <button class="content__btn btn btn-success btn-icon" type="submit">
+                                      <svg class="icon icon-plus ">
+                                        <use xlink:href="img/svg/sprite.svg#plus"></use>
+                                      </svg>
+                                    </button>
+                                  </div></span></span></label>
+                            <div class="align-items-center row"><span class="col-md-auto"><span class="content__title-label"></span></span><span class="col md-s">Ишметов М.С., Антонов С.А.</span></div></span>
+                            <!-- +e.input-wrap--><span class="content__input-wrap form-group d-block">
+                            <div class="row align-items-center">
+                              <div class="col-md-auto"><span class="content__title-label">Год выпуска статьи:</span>
+                              </div>
+                              <div class="col">
+                                <div class="row small-row">
+                                  <div class="col-sm-auto col-6">
+                                    <select class="content__input form-control">
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                      <option value="">2018</option>
+                                      <option value="">2017</option>
+                                      <option value="">2016</option>
+                                      <option value="">2015</option>
+                                    </select>
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div></span>
                             <!-- +e.input-wrap-->
                             <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
                               <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Название журнала:</span></span><span class="col"><input class="content__input form-control" type="text" placeholder="Введите название журнала"/><span class="validate-block valid-feedback bt-flabels__error-desc">
@@ -1565,30 +1538,29 @@
                               </div>
                             </div>
                           </div> 
-                          <div class="block-toggle pt-1">
-                            <div class="content__input-wrap form-group d-block">
-                              <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Укажите хобби:</span></span><span class="col">
-                                  <div class="input-group mw-100"><input class="content__input form-control" type="text" placeholder="Например, Иванов И.И."/>
-                                    <div class="input-group-append">
-                                      <button class="content__btn btn btn-success btn-icon" type="submit">
-                                        <svg class="icon icon-plus ">
-                                          <use xlink:href="img/svg/sprite.svg#plus"></use>
-                                        </svg>
-                                      </button>
-                                    </div>
-                                  </div></span></label>
-                              <div class="align-items-center row"><span class="col-md-auto"><span class="content__title-label"></span></span><span class="col">
-                                  <ul class="list">
-                                    <li class="list__item">Читать книги
-                                    </li>
-                                    <li class="list__item">Смотреть футбол
-                                    </li>
-                                    <li class="list__item">Бегать по утром
-                                    </li>
-                                    <li class="list__item">Коллекционирование миниатюрных автомобилей
-                                    </li>
-                                  </ul></span></div>
-                            </div>
+                          <div class="block-toggle pt-1"><span class="content__input-wrap form-group d-block">
+                            <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Укажите хобби:</span></span><span class="col"><span class="input-group mw-100"><input class="content__input form-control" type="text" placeholder="Например, Иванов И.И."/>
+                                  <div class="input-group-append"><span class="content__btn btn btn-success btn-icon">
+                                    <svg class="icon icon-plus ">
+                                      <use xlink:href="img/svg/sprite.svg#plus"></use>
+                                    </svg></span>
+                                  </div></span></span></label>
+                            <div class="align-items-center row">
+                              <div class="col-md-auto"><span class="content__title-label"></span>
+                              </div>
+                              <div class="col">
+                                <ul class="list">
+                                  <li class="list__item">Читать книги
+                                  </li>
+                                  <li class="list__item">Смотреть футбол
+                                  </li>
+                                  <li class="list__item">Бегать по утром
+                                  </li>
+                                  <li class="list__item">Коллекционирование миниатюрных автомобилей
+                                  </li>
+                                </ul>
+                              </div>
+                            </div></span>
                           </div>
                           <div class="block-toggle">
                             <button class="btn btn btn-success btn-block btn-save btn-toggle--js" type="button">Сохранить изменения</button>
@@ -1647,26 +1619,24 @@
                                       <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
                                     </svg></span></span></label>
                             </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <div class="row align-items-center">
-                                <div class="col-md-auto"><span class="content__title-label">Год:</span>
-                                </div>
-                                <div class="col">
-                                  <div class="row small-row">
-                                    <div class="col-sm-auto col-6">
-                                      <select class="content__input form-control">
-                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                        <option value="">2018</option>
-                                        <option value="">2017</option>
-                                        <option value="">2016</option>
-                                        <option value="">2015</option>
-                                      </select>
-                                    </div>
+                            <!-- +e.input-wrap--><span class="content__input-wrap form-group d-block">
+                            <div class="row align-items-center">
+                              <div class="col-md-auto"><span class="content__title-label">Год:</span>
+                              </div>
+                              <div class="col">
+                                <div class="row small-row">
+                                  <div class="col-sm-auto col-6">
+                                    <select class="content__input form-control">
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                      <option value="">2018</option>
+                                      <option value="">2017</option>
+                                      <option value="">2016</option>
+                                      <option value="">2015</option>
+                                    </select>
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div></span>
                             <!-- +e.input-wrap-->
                             <div class="content__foot row align-items-center">
                               <div class="col-sm-auto">
@@ -1718,26 +1688,24 @@
                                       <use xlink:href="img/svg/sprite.svg#exclamation-circle"></use>
                                     </svg></span></span></label>
                             </div>
-                            <!-- +e.input-wrap-->
-                            <div class="content__input-wrap form-group d-block">
-                              <div class="row align-items-center">
-                                <div class="col-md-auto"><span class="content__title-label">Год:</span>
-                                </div>
-                                <div class="col">
-                                  <div class="row small-row">
-                                    <div class="col-sm-auto col-6">
-                                      <select class="content__input form-control">
-                                        <option class="d-none" value="" default="default" disabled="disabled">Год</option>
-                                        <option value="">2018</option>
-                                        <option value="">2017</option>
-                                        <option value="">2016</option>
-                                        <option value="">2015</option>
-                                      </select>
-                                    </div>
+                            <!-- +e.input-wrap--><span class="content__input-wrap form-group d-block">
+                            <div class="row align-items-center">
+                              <div class="col-md-auto"><span class="content__title-label">Год:</span>
+                              </div>
+                              <div class="col">
+                                <div class="row small-row">
+                                  <div class="col-sm-auto col-6">
+                                    <select class="content__input form-control">
+                                      <option class="d-none" value="" selected="selected" disabled="disabled">Год</option>
+                                      <option value="">2018</option>
+                                      <option value="">2017</option>
+                                      <option value="">2016</option>
+                                      <option value="">2015</option>
+                                    </select>
                                   </div>
                                 </div>
                               </div>
-                            </div>
+                            </div></span>
                             <!-- +e.input-wrap-->
                             <div class="content__foot row align-items-center">
                               <div class="col-sm-auto">

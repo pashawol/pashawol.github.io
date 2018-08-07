@@ -64,6 +64,9 @@
               </div>
               <div class="col d-none d-md-block">
                 <ul class="top-nav__nav nav-js">
+                  <li class="top-nav__item active w-0"><a class="top-nav__link top-nav__link--active" href="#"></a>
+                  </li>
+                  <!-- надо оставить пустую лишку для скрипта-->
                   <li class="top-nav__item active"><a class="top-nav__link top-nav__link--active" href="#">Мой профиль</a>
                   </li>
                   <li class="top-nav__item"><a class="top-nav__link" href="#">Моя лента</a>
@@ -80,7 +83,7 @@
                 <div class="row align-items-center">
                   <div class="col-auto">
                     <div class="dropdown">
-                      <div class="notice-block dropdown-toggle" id="dropdown--notice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20" data-placement="bottom">
+                      <div class="notice-block dropdown-toggle" id="dropdown--notice" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-offset="10,20" data-placement="bottom">
                         <div class="notice-block__btn notice-block__btn--js notice-block__btn notice-block__btn--active">
                           <svg class="icon icon-bell ">
                             <use xlink:href="img/svg/sprite.svg#bell"></use>
@@ -218,7 +221,7 @@
                   </div>
                   <div class="col">
                     <div class="dropdown">
-                      <div class="pa-block dropdown-toggle" id="dropdown--pa" data-offset="10,20" data-placement="bottom" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                      <div class="pa-block dropdown-toggle" id="dropdown--pa" data-offset="10,20" data-placement="bottom" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                         <svg class="icon icon-down ">
                           <use xlink:href="img/svg/sprite.svg#down"></use>
                         </svg>
@@ -513,7 +516,7 @@
                         и мы пришлем Вам ссылку на восстановление пароля.
                       </div>
                       <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
-                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Текущий пароль:</span></span><span class="col"><input class="content__input form-control" type="password" placeholder="Введите текущий пароль" required="required" id="password-field-1"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Текущий пароль:</span></span><span class="col"><input class="content__input form-control input-path" type="password" placeholder="Введите текущий пароль" required="required" id="password-field-1"/><span class="validate-block valid-feedback bt-flabels__error-desc">
                               <svg class="icon icon-check ">
                                 <use xlink:href="img/svg/sprite.svg#check"></use>
                               </svg></span><span class="validate-block invalid-feedback">
@@ -526,7 +529,7 @@
                       </div>
                       <!-- +e.input-wrap-->
                       <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
-                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Новый пароль:</span></span><span class="col"><input class="content__input form-control" type="password" placeholder="Введите новый пароль" required="required" id="password-field-2"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Новый пароль:</span></span><span class="col"><input class="content__input form-control input-path" type="password" placeholder="Введите новый пароль" required="required" id="password-field-2"/><span class="validate-block valid-feedback bt-flabels__error-desc">
                               <svg class="icon icon-check ">
                                 <use xlink:href="img/svg/sprite.svg#check"></use>
                               </svg></span><span class="validate-block invalid-feedback">
@@ -539,7 +542,7 @@
                       </div>
                       <!-- +e.input-wrap-->
                       <div class="content__input-wrap form-group d-block bt-flabels__wrapper">
-                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Повторите пароль:</span></span><span class="col"><input class="content__input form-control" type="password" placeholder="Повторите новый пароль" required="required" id="password-field-3"/><span class="validate-block valid-feedback bt-flabels__error-desc">
+                        <label class="align-items-center row"><span class="col-md-auto"><span class="content__title-label">Повторите пароль:</span></span><span class="col"><input class="content__input form-control input-path" type="password" placeholder="Повторите новый пароль" required="required" id="password-field-3"/><span class="validate-block valid-feedback bt-flabels__error-desc">
                               <svg class="icon icon-check ">
                                 <use xlink:href="img/svg/sprite.svg#check"></use>
                               </svg></span><span class="validate-block invalid-feedback">

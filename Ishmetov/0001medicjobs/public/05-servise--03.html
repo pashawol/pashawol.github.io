@@ -64,6 +64,9 @@
               </div>
               <div class="col d-none d-md-block">
                 <ul class="top-nav__nav nav-js">
+                  <li class="top-nav__item active w-0"><a class="top-nav__link top-nav__link--active" href="#"></a>
+                  </li>
+                  <!-- надо оставить пустую лишку для скрипта-->
                   <li class="top-nav__item active"><a class="top-nav__link top-nav__link--active" href="#">Мой профиль</a>
                   </li>
                   <li class="top-nav__item"><a class="top-nav__link" href="#">Моя лента</a>
@@ -80,7 +83,7 @@
                 <div class="row align-items-center">
                   <div class="col-auto">
                     <div class="dropdown">
-                      <div class="notice-block dropdown-toggle" id="dropdown--notice" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20" data-placement="bottom">
+                      <div class="notice-block dropdown-toggle" id="dropdown--notice" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-offset="10,20" data-placement="bottom">
                         <div class="notice-block__btn notice-block__btn--js notice-block__btn notice-block__btn--active">
                           <svg class="icon icon-bell ">
                             <use xlink:href="img/svg/sprite.svg#bell"></use>
@@ -218,7 +221,7 @@
                   </div>
                   <div class="col">
                     <div class="dropdown">
-                      <div class="pa-block dropdown-toggle" id="dropdown--pa" data-offset="10,20" data-placement="bottom" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                      <div class="pa-block dropdown-toggle" id="dropdown--pa" data-offset="10,20" data-placement="bottom" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                         <svg class="icon icon-down ">
                           <use xlink:href="img/svg/sprite.svg#down"></use>
                         </svg>
