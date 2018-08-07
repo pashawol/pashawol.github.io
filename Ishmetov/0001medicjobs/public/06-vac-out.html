@@ -82,16 +82,20 @@
               <div class="container">
                 <div class="form-wrap__inner">
                   <div class="form-wrap__main-row row align-items-center justify-content-between">
-                    <div class="col-md col">
-                      <div class="form-wrap__input-wrap form-group mb-0">
-                        <svg class="icon icon-search ">
-                          <use xlink:href="img/svg/sprite.svg#search"></use>
-                        </svg><input class="form-wrap__input form-control" type="text" placeholder="Начните поиск..."/>
+                    <div class="col">
+                      <div class="row small-row align-items-center">
+                        <div class="col-md col">
+                          <div class="form-wrap__input-wrap form-group mb-0">
+                            <svg class="icon icon-search ">
+                              <use xlink:href="img/svg/sprite.svg#search"></use>
+                            </svg><input class="form-wrap__input form-control" type="text" placeholder="Начните поиск..."/>
+                          </div>
+                        </div>
+                        <div class="col-md-auto col-3">
+                          <button class="form-wrap__btn btn btn-success btn-block" type="button">Найти
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-auto col-3">
-                      <button class="form-wrap__btn btn btn-success btn-block" type="button">Найти
-                      </button>
                     </div>
                     <div class="col-lg-auto d-none d-sm-block">
                       <div class="search-adv search-adv--js">
@@ -351,9 +355,7 @@
                 <div class="content__group content__group--vac py-0 border border-gray mb-33">
                   <div class="item-vacancies">
                     <div class="item-vacancies__head row small-row align-items-center">
-                      <div class="col-md-auto">
-                        <div class="item-vacancies__title h5 semi d-inline-block bg-success text-white">Хирург в отделение
-                        </div>
+                      <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1 bg-success text-white" href="#">Хирург в отделение</a>
                       </div>
                       <div class="col">
                         <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -405,16 +407,13 @@
                         </div>
                       </div>
                     </div>
-                    <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                        <div class="col-auto">
-                          <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                          </div>
+                    <div class="item-vacancies__body">
+                      <div class="row small-row align-items-center">
+                        <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                         </div>
-                        <div class="col">
-                          <div class="item-vacancies__name md-s">Семейная клиника
-                          </div>
-                          <div class="small text-secondary">Москва</div>
-                        </div></a>
+                        <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                        </div>
+                      </div>
                       <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                       </div>
                       <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -429,12 +428,12 @@
                         <div class="col-xl-auto">
                           <div class="row small-row">
                             <div class="col-sm-auto">
-                              <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-rez">Отправить резюме
+                              <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-po">Отправить резюме
                               </button>
                             </div>
                             <div class="col-sm-auto dropdown pt-0">
-                              <button class="item-vacancies__btn btn btn-block btn-outline-success dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" data-offset="10,20" data-placement="bottom">Показать контакты
-                              </button>
+                              <div class="item-vacancies__btn btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal-po">Показать контакты
+                              </div>
                               <div class="dropdown__block dropdown-menu small">
                                 <div class="arrow"></div>
                                 <div class="semi mb-2">Муравьева Ирина</div>
@@ -475,9 +474,7 @@
                 <div class="content__group content__group--vac py-0 border-2 border border-success mb-33">
                   <div class="item-vacancies">
                     <div class="item-vacancies__head row small-row align-items-center">
-                      <div class="col-md-auto">
-                        <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                        </div>
+                      <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1 text-body" href="#">Хирург в отделение</a>
                       </div>
                       <div class="col">
                         <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -529,16 +526,13 @@
                         </div>
                       </div>
                     </div>
-                    <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                        <div class="col-auto">
-                          <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                          </div>
+                    <div class="item-vacancies__body">
+                      <div class="row small-row align-items-center">
+                        <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                         </div>
-                        <div class="col">
-                          <div class="item-vacancies__name md-s">Семейная клиника
-                          </div>
-                          <div class="small text-secondary">Москва</div>
-                        </div></a>
+                        <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                        </div>
+                      </div>
                       <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                       </div>
                       <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -553,12 +547,12 @@
                         <div class="col-xl-auto">
                           <div class="row small-row">
                             <div class="col-sm-auto">
-                              <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-rez">Отправить резюме
+                              <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-po">Отправить резюме
                               </button>
                             </div>
                             <div class="col-sm-auto dropdown pt-0">
-                              <button class="item-vacancies__btn btn btn-block btn-outline-success dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" data-offset="10,20" data-placement="bottom">Показать контакты
-                              </button>
+                              <div class="item-vacancies__btn btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal-po">Показать контакты
+                              </div>
                               <div class="dropdown__block dropdown-menu small">
                                 <div class="arrow"></div>
                                 <div class="semi mb-2">Муравьева Ирина</div>
@@ -600,9 +594,7 @@
                   <div class="content__group content__group--vac py-0 border border-gray">
                     <div class="item-vacancies">
                       <div class="item-vacancies__head row small-row align-items-center">
-                        <div class="col-md-auto">
-                          <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                          </div>
+                        <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1 text-body" href="#">Хирург в отделение</a>
                         </div>
                         <div class="col">
                           <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -654,16 +646,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                          <div class="col-auto">
-                            <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                            </div>
+                      <div class="item-vacancies__body">
+                        <div class="row small-row align-items-center">
+                          <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                           </div>
-                          <div class="col">
-                            <div class="item-vacancies__name md-s">Семейная клиника
-                            </div>
-                            <div class="small text-secondary">Москва</div>
-                          </div></a>
+                          <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                          </div>
+                        </div>
                         <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                         </div>
                         <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -678,12 +667,12 @@
                           <div class="col-xl-auto">
                             <div class="row small-row">
                               <div class="col-sm-auto">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-rez">Отправить резюме
+                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-po">Отправить резюме
                                 </button>
                               </div>
                               <div class="col-sm-auto dropdown pt-0">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" data-offset="10,20" data-placement="bottom">Показать контакты
-                                </button>
+                                <div class="item-vacancies__btn btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal-po">Показать контакты
+                                </div>
                                 <div class="dropdown__block dropdown-menu small">
                                   <div class="arrow"></div>
                                   <div class="semi mb-2">Муравьева Ирина</div>
@@ -724,9 +713,7 @@
                   <div class="content__group content__group--vac py-0 border border-gray">
                     <div class="item-vacancies">
                       <div class="item-vacancies__head row small-row align-items-center">
-                        <div class="col-md-auto">
-                          <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                          </div>
+                        <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1 text-body" href="#">Хирург в отделение</a>
                         </div>
                         <div class="col">
                           <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -778,16 +765,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                          <div class="col-auto">
-                            <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                            </div>
+                      <div class="item-vacancies__body">
+                        <div class="row small-row align-items-center">
+                          <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                           </div>
-                          <div class="col">
-                            <div class="item-vacancies__name md-s">Семейная клиника
-                            </div>
-                            <div class="small text-secondary">Москва</div>
-                          </div></a>
+                          <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                          </div>
+                        </div>
                         <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                         </div>
                         <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -802,12 +786,12 @@
                           <div class="col-xl-auto">
                             <div class="row small-row">
                               <div class="col-sm-auto">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-rez">Отправить резюме
+                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-po">Отправить резюме
                                 </button>
                               </div>
                               <div class="col-sm-auto dropdown pt-0">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" data-offset="10,20" data-placement="bottom">Показать контакты
-                                </button>
+                                <div class="item-vacancies__btn btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal-po">Показать контакты
+                                </div>
                                 <div class="dropdown__block dropdown-menu small">
                                   <div class="arrow"></div>
                                   <div class="semi mb-2">Муравьева Ирина</div>
@@ -848,9 +832,7 @@
                   <div class="content__group content__group--vac py-0 border border-gray">
                     <div class="item-vacancies">
                       <div class="item-vacancies__head row small-row align-items-center">
-                        <div class="col-md-auto">
-                          <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                          </div>
+                        <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1 text-body" href="#">Хирург в отделение</a>
                         </div>
                         <div class="col">
                           <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -902,16 +884,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                          <div class="col-auto">
-                            <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                            </div>
+                      <div class="item-vacancies__body">
+                        <div class="row small-row align-items-center">
+                          <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                           </div>
-                          <div class="col">
-                            <div class="item-vacancies__name md-s">Семейная клиника
-                            </div>
-                            <div class="small text-secondary">Москва</div>
-                          </div></a>
+                          <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                          </div>
+                        </div>
                         <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                         </div>
                         <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -926,12 +905,12 @@
                           <div class="col-xl-auto">
                             <div class="row small-row">
                               <div class="col-sm-auto">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-rez">Отправить резюме
+                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-po">Отправить резюме
                                 </button>
                               </div>
                               <div class="col-sm-auto dropdown pt-0">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" data-offset="10,20" data-placement="bottom">Показать контакты
-                                </button>
+                                <div class="item-vacancies__btn btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal-po">Показать контакты
+                                </div>
                                 <div class="dropdown__block dropdown-menu small">
                                   <div class="arrow"></div>
                                   <div class="semi mb-2">Муравьева Ирина</div>
@@ -972,9 +951,7 @@
                   <div class="content__group content__group--vac py-0 border border-gray">
                     <div class="item-vacancies">
                       <div class="item-vacancies__head row small-row align-items-center">
-                        <div class="col-md-auto">
-                          <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                          </div>
+                        <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1 text-body" href="#">Хирург в отделение</a>
                         </div>
                         <div class="col">
                           <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -1026,16 +1003,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                          <div class="col-auto">
-                            <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                            </div>
+                      <div class="item-vacancies__body">
+                        <div class="row small-row align-items-center">
+                          <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                           </div>
-                          <div class="col">
-                            <div class="item-vacancies__name md-s">Семейная клиника
-                            </div>
-                            <div class="small text-secondary">Москва</div>
-                          </div></a>
+                          <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                          </div>
+                        </div>
                         <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                         </div>
                         <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -1050,12 +1024,12 @@
                           <div class="col-xl-auto">
                             <div class="row small-row">
                               <div class="col-sm-auto">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-rez">Отправить резюме
+                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-po">Отправить резюме
                                 </button>
                               </div>
                               <div class="col-sm-auto dropdown pt-0">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" data-offset="10,20" data-placement="bottom">Показать контакты
-                                </button>
+                                <div class="item-vacancies__btn btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal-po">Показать контакты
+                                </div>
                                 <div class="dropdown__block dropdown-menu small">
                                   <div class="arrow"></div>
                                   <div class="semi mb-2">Муравьева Ирина</div>
@@ -1096,9 +1070,7 @@
                   <div class="content__group content__group--vac py-0 border border-gray">
                     <div class="item-vacancies">
                       <div class="item-vacancies__head row small-row align-items-center">
-                        <div class="col-md-auto">
-                          <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                          </div>
+                        <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1 text-body" href="#">Хирург в отделение</a>
                         </div>
                         <div class="col">
                           <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -1150,16 +1122,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                          <div class="col-auto">
-                            <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                            </div>
+                      <div class="item-vacancies__body">
+                        <div class="row small-row align-items-center">
+                          <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                           </div>
-                          <div class="col">
-                            <div class="item-vacancies__name md-s">Семейная клиника
-                            </div>
-                            <div class="small text-secondary">Москва</div>
-                          </div></a>
+                          <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                          </div>
+                        </div>
                         <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                         </div>
                         <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -1174,12 +1143,12 @@
                           <div class="col-xl-auto">
                             <div class="row small-row">
                               <div class="col-sm-auto">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-rez">Отправить резюме
+                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-po">Отправить резюме
                                 </button>
                               </div>
                               <div class="col-sm-auto dropdown pt-0">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" data-offset="10,20" data-placement="bottom">Показать контакты
-                                </button>
+                                <div class="item-vacancies__btn btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal-po">Показать контакты
+                                </div>
                                 <div class="dropdown__block dropdown-menu small">
                                   <div class="arrow"></div>
                                   <div class="semi mb-2">Муравьева Ирина</div>
@@ -1220,9 +1189,7 @@
                   <div class="content__group content__group--vac py-0 border border-gray">
                     <div class="item-vacancies">
                       <div class="item-vacancies__head row small-row align-items-center">
-                        <div class="col-md-auto">
-                          <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                          </div>
+                        <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1 text-body" href="#">Хирург в отделение</a>
                         </div>
                         <div class="col">
                           <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -1274,16 +1241,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                          <div class="col-auto">
-                            <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                            </div>
+                      <div class="item-vacancies__body">
+                        <div class="row small-row align-items-center">
+                          <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                           </div>
-                          <div class="col">
-                            <div class="item-vacancies__name md-s">Семейная клиника
-                            </div>
-                            <div class="small text-secondary">Москва</div>
-                          </div></a>
+                          <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                          </div>
+                        </div>
                         <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                         </div>
                         <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -1298,12 +1262,12 @@
                           <div class="col-xl-auto">
                             <div class="row small-row">
                               <div class="col-sm-auto">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-rez">Отправить резюме
+                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-po">Отправить резюме
                                 </button>
                               </div>
                               <div class="col-sm-auto dropdown pt-0">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" data-offset="10,20" data-placement="bottom">Показать контакты
-                                </button>
+                                <div class="item-vacancies__btn btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal-po">Показать контакты
+                                </div>
                                 <div class="dropdown__block dropdown-menu small">
                                   <div class="arrow"></div>
                                   <div class="semi mb-2">Муравьева Ирина</div>
@@ -1344,9 +1308,7 @@
                   <div class="content__group content__group--vac py-0 border border-gray">
                     <div class="item-vacancies">
                       <div class="item-vacancies__head row small-row align-items-center">
-                        <div class="col-md-auto">
-                          <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                          </div>
+                        <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1 text-body" href="#">Хирург в отделение</a>
                         </div>
                         <div class="col">
                           <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -1398,16 +1360,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                          <div class="col-auto">
-                            <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                            </div>
+                      <div class="item-vacancies__body">
+                        <div class="row small-row align-items-center">
+                          <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                           </div>
-                          <div class="col">
-                            <div class="item-vacancies__name md-s">Семейная клиника
-                            </div>
-                            <div class="small text-secondary">Москва</div>
-                          </div></a>
+                          <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                          </div>
+                        </div>
                         <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                         </div>
                         <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -1422,12 +1381,12 @@
                           <div class="col-xl-auto">
                             <div class="row small-row">
                               <div class="col-sm-auto">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-rez">Отправить резюме
+                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-po">Отправить резюме
                                 </button>
                               </div>
                               <div class="col-sm-auto dropdown pt-0">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" data-offset="10,20" data-placement="bottom">Показать контакты
-                                </button>
+                                <div class="item-vacancies__btn btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal-po">Показать контакты
+                                </div>
                                 <div class="dropdown__block dropdown-menu small">
                                   <div class="arrow"></div>
                                   <div class="semi mb-2">Муравьева Ирина</div>
@@ -1468,9 +1427,7 @@
                   <div class="content__group content__group--vac py-0 border border-gray">
                     <div class="item-vacancies">
                       <div class="item-vacancies__head row small-row align-items-center">
-                        <div class="col-md-auto">
-                          <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                          </div>
+                        <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1 text-body" href="#">Хирург в отделение</a>
                         </div>
                         <div class="col">
                           <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -1522,16 +1479,13 @@
                           </div>
                         </div>
                       </div>
-                      <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                          <div class="col-auto">
-                            <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                            </div>
+                      <div class="item-vacancies__body">
+                        <div class="row small-row align-items-center">
+                          <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                           </div>
-                          <div class="col">
-                            <div class="item-vacancies__name md-s">Семейная клиника
-                            </div>
-                            <div class="small text-secondary">Москва</div>
-                          </div></a>
+                          <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                          </div>
+                        </div>
                         <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                         </div>
                         <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -1546,12 +1500,12 @@
                           <div class="col-xl-auto">
                             <div class="row small-row">
                               <div class="col-sm-auto">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-rez">Отправить резюме
+                                <button class="item-vacancies__btn btn btn-block btn-outline-success" type="button" data-toggle="modal" data-target="#modal-po">Отправить резюме
                                 </button>
                               </div>
                               <div class="col-sm-auto dropdown pt-0">
-                                <button class="item-vacancies__btn btn btn-block btn-outline-success dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" type="button" data-offset="10,20" data-placement="bottom">Показать контакты
-                                </button>
+                                <div class="item-vacancies__btn btn btn-block btn-outline-success" data-toggle="modal" data-target="#modal-po">Показать контакты
+                                </div>
                                 <div class="dropdown__block dropdown-menu small">
                                   <div class="arrow"></div>
                                   <div class="semi mb-2">Муравьева Ирина</div>
@@ -1717,9 +1671,7 @@
             <div class="modal-body">
               <div class="item-vacancies py-0">
                 <div class="item-vacancies__head row small-row align-items-center">
-                  <div class="col-md-auto">
-                    <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                    </div>
+                  <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1" href="#">Хирург в отделение</a>
                   </div>
                   <div class="col">
                     <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -1771,16 +1723,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                    <div class="col-auto">
-                      <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                      </div>
+                <div class="item-vacancies__body">
+                  <div class="row small-row align-items-center">
+                    <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                     </div>
-                    <div class="col">
-                      <div class="item-vacancies__name md-s">Семейная клиника
-                      </div>
-                      <div class="small text-secondary">Москва</div>
-                    </div></a>
+                    <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                    </div>
+                  </div>
                   <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                   </div>
                   <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -1901,9 +1850,7 @@
             <div class="modal-body">
               <div class="item-vacancies pt-0">
                 <div class="item-vacancies__head row small-row align-items-center">
-                  <div class="col-md-auto">
-                    <div class="item-vacancies__title h5 semi d-inline-block">Хирург в отделение
-                    </div>
+                  <div class="col-md-auto"><a class="item-vacancies__title h5 semi d-inline-block op-1" href="#">Хирург в отделение</a>
                   </div>
                   <div class="col">
                     <div class="h6 mt-1 semi">50 000 руб.</div>
@@ -1955,16 +1902,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="item-vacancies__body"><a class="row small-row align-items-center text-body" href="#">
-                    <div class="col-auto">
-                      <div class="item-vacancies__img-wrap"><img src="img/vac-img.png" alt="alt"/>
-                      </div>
+                <div class="item-vacancies__body">
+                  <div class="row small-row align-items-center">
+                    <div class="col-auto"><a class="item-vacancies__img-wrap op-1" href="#"><img src="img/vac-img.png" alt="alt"/></a>
                     </div>
-                    <div class="col">
-                      <div class="item-vacancies__name md-s">Семейная клиника
-                      </div>
-                      <div class="small text-secondary">Москва</div>
-                    </div></a>
+                    <div class="col"><a class="item-vacancies__name md-s op-1 d-block text-body" href="#">Семейная клиника</a><a class="small text-secondary op-1" href="#">Москва</a>
+                    </div>
+                  </div>
                   <div class="item-vacancies__text small">Оказание хирургической помощи населению. Стационар, поликлиника. Стаж работы не менее 3-х лет, действующий сертификат по специальности "Хирургия".
                   </div>
                   <div class="item-vacancies__badge badge badge-warning-l base-fz">Умный
@@ -2091,8 +2035,6 @@
       </div>
       <!--  / модалка входа-->
       <!--  модалка смены профиля-->
-      <button class="btn btn btn-success btn-block" data-target="#modal-po-change" data-toggle="modal" type="button">Смена профиля
-      </button>
       <div class="modal-med modal fade" id="modal-po-change" role="dialog" aria-hidden="true" aria-labelledby="modal-po-change" tabindex="-1">
         <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
           <div class="modal-content modal-win">
