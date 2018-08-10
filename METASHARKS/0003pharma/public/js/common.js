@@ -1,5 +1,19 @@
  jQuery(document).ready(function($) {
 
+	$(".wrapp-hidden   .dropdown, .section  .dropdown").each(function () {
+		$(this).append('<div class="toggle-l"></div>');
+	})
+
+	$('.wrapp-hidden   .dropdown, .section  .dropdown ').on('click', '.toggle-l', function () {
+		$(this).toggleClass("active").prev().slideToggle();
+		$(this).parent().find(".dropdown-link").toggleClass("active")
+		return false;
+	})
+
+	$(".dropdown-link").click(function () {
+		$(this).parent().find(".toggle-l").toggleClass("active")
+
+	})
   // для свг
   svg4everybody({});
   // Custom JS

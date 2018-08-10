@@ -4,23 +4,17 @@
   svg4everybody({});
   // Custom JS
 
+     $(".trop .item-has-children ").each(function () {
+     	$(this).append('<div class="toggle-l"></div>');
+     })
 
-  var url=document.location.href;
-  $.each($(".top-nav__nav a "),function(){
+     $('.trop .item-has-children  ').on('click', '.toggle-l', function () {
+     	$(this).toggleClass("active").prev().slideToggle()
+     	$(this).parent().toggleClass("active")
+     	return false;
+     })
 
-  if(this.href==url){
-    if($(this).hasClass("top-nav__link") == true){
-
-    $(this).addClass('top-nav__link-active');
-    }
-    if($(this).hasClass("footer__link") == true){
-
-    $(this).addClass('footer__link-active');
-    }
-
-  };
-
-  });
+  
       // галерея
   $(".gal").each(function(){
 
