@@ -5,6 +5,7 @@
   // Custom JS
 
  
+// меню
  function rest() {
 
 
@@ -105,8 +106,7 @@
     var w = $(window).width();
    // $(".otz__item .text-wrap ").height('auto').equalHeights();
    //
-
-
+ 
     // скрывает моб меню
     if (w>991){
        $(".toggle-mnu-1").removeClass("on");
@@ -150,58 +150,37 @@ $( window ).on( "load", function() {
  //        return false;
  //    });
 
-
-// табы  . Теперь данные активного таба остается в storage
-$(function() {
-var tab = ('tabs');
-
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
+  var swiper = new Swiper('.carusel-text--js', {
+		slidesPerView: "auto", 
+		loopedSlides: 26,
+		loop: true,
+		direction: 'vertical',
+		freeMode: true,
+		speed: 650,
+		// autoHeight: true,
+		nested: true,
+		roundLengths: true,
+		// effect: 'coverflow',
+		// coverflowEffect: {
+		// 	depth: 1,
+		// 	rotate: 0,
+		// 	stretch: 0,
+		// 	modifier: 1,
+		// 	slideShadows: false,
+		// },
+  	pagination: {
+  		el: '.swiper-pagination',
+			clickable: true,
+  	},
+			slideToClickedSlide: true,
+			centeredSlides: true
   });
-
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
-  $(this)
-      .addClass('active').siblings().removeClass('active')
-      .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-      .eq($(this).index()).fadeIn().addClass('active');
-
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
-
-});
-});
-
-
-
- var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
-
-var   arrl2 = (' <div class="l">'+ icon),
-      arrr2 =(' <div class="r">'+ icon);
- // карусель
- // $('.s-team__slider').slick({
- //    slidesToShow: 3,
- //    slidesToScroll: 1,
- //    dots: false,
- //    speed: 450,
- //    infinite: true,
- //    loop: true,
- //    arrows: true,
- //    // centerMode: true,
- //    // focusOnSelect: true ,
- //     // variableWidth: true,
- //     prevArrow: arrr2,
- //      nextArrow: arrl2,
- //    });
 
 // слайдер цвета в карточке
  var swiper4 = new Swiper('.color-slider', {
       // slidesPerView: 5,
-      slidesPerView: 'auto',
+			slidesPerView: 'auto',
+			
       watchOverflow: true,
       spaceBetween: 0,
       freeMode: true,
@@ -326,17 +305,18 @@ $("form").submit(function() { //Change
    })
 
 
-// var wowAnim = $(".s-dop__col," +
-//                 ".s-pick__col," +
-//                 ".s-condition__col");
-// wowAnim.each(function(i){
+   var wowAnim = $(".s-warning__item," +
+   	".s-protect li," +
+   	".s-condition__col");
+   wowAnim.each(function (i) {
 
-// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-//    var wow = new WOW({ mobile: false });
-//         wow.init();
-
-// });
+   	wowAnim.eq(i).attr("data-wow-delay", i * .1 * 2 + "s");
+   	// $(this).addClass("wow bounceInUp");
 
 
+	 })
+	   var wow = new WOW({
+	   	mobile: false
+	   });
+	   wow.init();
 });
