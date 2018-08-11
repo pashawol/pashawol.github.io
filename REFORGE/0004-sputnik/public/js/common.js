@@ -160,6 +160,8 @@ $( window ).on( "load", function() {
 		// autoHeight: true,
 		nested: true,
 		roundLengths: true,
+		observer: true,
+		observeParents: true,
 		// effect: 'coverflow',
 		// coverflowEffect: {
 		// 	depth: 1,
