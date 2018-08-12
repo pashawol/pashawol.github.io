@@ -370,8 +370,8 @@ $("form").submit(function() { //Change
 if ($("div").is("#map1")) {
 	ymaps.ready(function () {
 		var myMap = new ymaps.Map('map1', {
-				center: [51.67682134332114, 39.246444082451085],
-				zoom: 15,
+				center: [55.72503706901697, 37.39698199999999],
+				zoom: 18,
 				behaviors: ['drag'],
 
 				// controls: ["zoomControl", "fullscreenControl"]
@@ -380,9 +380,9 @@ if ($("div").is("#map1")) {
 			}),
 
 
-			myPlacemark = new ymaps.Placemark([51.677603654725326, 39.24610075969719], {
-				hintContent: 'Воронеж, ул. Уличная, 32, корп. 1',
-				balloonContent: 'Воронеж, ул. Уличная, 32, корп. 1 '
+			myPlacemark = new ymaps.Placemark([55.72503706901697, 37.39698199999999], {
+				hintContent: 'г. Москва, ул. Горбунова 2, офис 301',
+				balloonContent: 'г. Москва, ул. Горбунова 2, офис 301 '
 			}, {
 				// Опции.
 				// Необходимо указать данный тип макета.
@@ -393,7 +393,7 @@ if ($("div").is("#map1")) {
 				iconImageSize: [95, 105],
 				// Смещение левого верхнего угла иконки относительно
 				// её "ножки" (точки привязки).
-				iconImageOffset: [-22, -30]
+				iconImageOffset: [-42, -90]
 			})
 
 		myMap.geoObjects

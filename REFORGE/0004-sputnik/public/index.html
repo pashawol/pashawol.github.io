@@ -75,7 +75,7 @@
                 <div class="col-lg col-md-12 col-sm text-sm-right mb-2">
                   <div><a class="top-line__tel extra h6 text-body tdn" href="tel:8(495)374-85-57">8 (495) 374-85-57</a>
                   </div>
-                  <div><a class="top-line__modal semi tdn" href="#">Заказать звонок</a>
+                  <div><a class="top-line__modal popup-with-move-anim semi tdn" href="#modal-win">Заказать звонок</a>
                   </div>
                 </div>
               </div>
@@ -1939,36 +1939,37 @@
         <div class="footer__foot"><a class="footer__link text-body" href="#" target="_blank">Разработка сайта — <img class="res-i" src="img/logo-bot.png" alt=""/></a>
         </div>
       </footer>
-      <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
-        <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
-          <div class="form-wrap modal-content modal-win">
-            <form>
-              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-              <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="Введите ваш телефон" placeholder="tel" name="tel" required="required"/>
-              </div>
-              <!-- +e.input-wrap-->
-              <button class="form-wrap__btn btn btn-accent btn-block">Отправить
-              </button>
-              <div class="wrap-polite">
-                <div class="custom-input polite">
-                  <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Даю 
-                     <span class="link" data-toggle="modal" data-target="#exampleModal2">согласие </span>на хранение и обработку   персональных данных
-                  </label>
-                </div>
-              </div>
-            </form>
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal modal-form" id="modal-win">
+        <form>
+          <div class="extra h5 text-center pb-3">Оставьте заявку</div>
+          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder=" Укажите ваше имя"/>
           </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Укажите номер телефона"/>
+          </div>
+          <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-warning btn-block" type="submit" value="Пригласить специалиста"/>
+          <div class="polite">
+            <label class="polite__label"> <input class="polite__input" type="checkbox" checked="checked"/><span class="polite__lab">
+              <svg class="icon icon-check ">
+                <use xlink:href="img/svg/sprite.svg#check"></use>
+              </svg></span>
+            </label>Я согласен с  
+            <a class="polite__link" href="Soglasie.pdf" target="_blank"> политикой обработки персональных данных</a>
+          </div>
+        </form>
+      </div>
+      <div class="rew-modal zoom-anim-dialog mfp-hide modal" id="m-rew">
+        <div class="rew-modal__text">
         </div>
       </div>
-      <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
-        <div class=" ttext-center  modal-dialog  modal-dialog-centered  " role="document"> 
-          <div class="form-wrap modal-content modal-win">
-            <form>
-              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button><br/>
-              <div class="h2">Заявка принята</div><br/>
-              <div class="h3">Скоро с Вами свяжутся</div><br/>
-            </form>
-          </div>
+      <div class="modal-polite modal zoom-anim-dialog mfp-hide modal" id="m-polite">
+        <div class="container1">
+          <h2>Политика конфиденциальности</h2>
+          <p>Администрация данной посадочной страницы (Лэндинг) не может передать или раскрыть информацию предоставленную пользователем (далее Пользователь) при регистрации и использовании функций сайта третьим лицам, кроме случаев, описанных законодательством страны, на территории которой пользователь ведет свою деятельность. Для регистрации на посадочной странице, пользователь обязан внести некоторую персональную информацию. Для проверки предоставленных данных, посадочная страница оставляет за собой право потребовать доказательства идентичности в онлайн или офлайн режимах.</p><br/>
+          <p>Лэндинг прилагает все усилия для сбережения в сохранности личных данных Пользователя. Личная информация может быть раскрыта в случаях, описанных законодательством, либо когда администрация сочтет подобные действия необходимыми для соблюдения юридической процедуры, судебного распоряжения или легального процесса необходимого для работы Пользователя с Лэндингом. В других случаях, ни при каких условиях, информация, которую Пользователь передает Лэндингу, не будет раскрыта третьим лицам.</p><br/>
+          <h2>Пользовательское соглашение</h2>
+          <p>Администрация данной посадочной страницы (Лэндинг) не может передать или раскрыть информацию предоставленную пользователем (далее Пользователь) при регистрации и использовании функций сайта третьим лицам, кроме случаев, описанных законодательством страны, на территории которой пользователь ведет свою деятельность. Для регистрации на посадочной странице, пользователь обязан внести некоторую персональную информацию. Для проверки предоставленных данных, посадочная страница оставляет за собой право потребовать доказательства идентичности в онлайн или офлайн режимах.</p><br/>
+          <p>Лэндинг прилагает все усилия для сбережения в сохранности личных данных Пользователя. Личная информация может быть раскрыта в случаях, описанных законодательством, либо когда администрация сочтет подобные действия необходимыми для соблюдения юридической процедуры, судебного распоряжения или легального процесса необходимого для работы Пользователя с Лэндингом. В других случаях, ни при каких условиях, информация, которую Пользователь передает Лэндингу, не будет раскрыта третьим лицам.</p><br/>
         </div>
       </div>
       <!-- modal-->
