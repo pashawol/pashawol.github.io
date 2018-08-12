@@ -12,7 +12,7 @@
  	// Cache selectors
  	var lastId,
  		topMenu = $(".top-nav ul"),
- 		topMenuHeight = 15,
+ 		topMenuHeight = 80,
  		// All list items
  		menuItems = topMenu.find("a"),
  		// Anchors corresponding to menu items
@@ -30,7 +30,7 @@
  			offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
  		$('html, body').stop().animate({
  			scrollTop: offsetTop
- 		}, 300);
+ 		}, 1500);
  		e.preventDefault();
  	});
 
