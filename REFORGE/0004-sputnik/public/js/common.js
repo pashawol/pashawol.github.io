@@ -337,7 +337,7 @@ $("form").submit(function() { //Change
    })
    })
 
-
+// анимация на  блоки
    var wowAnim = $(".s-warning__item," +
    	".s-protect li," +
    	".animate-block");
@@ -351,5 +351,56 @@ $("form").submit(function() { //Change
 	   var wow = new WOW({
 	   	mobile: false
 	   });
-	   wow.init();
+		 wow.init();
+		 
+
+		  // accordion
+		  $(".showhide").click(function () {
+
+
+		  $(".showhide-all").slideUp().parent().removeClass("active"), $(".showhide").removeClass("active"),
+		  	$(this).next("div").filter(function () {
+		  		return "block" == $(this).css("display")
+		  	}).slideUp().parent().removeClass("active"),
+		  	$(this).next("div").filter(function () {
+		  		return "none" == $(this).css("display")
+		  	}).slideDown().prev("div").addClass("active").parent().addClass("active")
+		  })
+ 
+if ($("div").is("#map1")) {
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('map1', {
+				center: [51.67682134332114, 39.246444082451085],
+				zoom: 15,
+				behaviors: ['drag'],
+
+				// controls: ["zoomControl", "fullscreenControl"]
+			}, {
+				searchControlProvider: 'yandex#search'
+			}),
+
+
+			myPlacemark = new ymaps.Placemark([51.677603654725326, 39.24610075969719], {
+				hintContent: 'Воронеж, ул. Уличная, 32, корп. 1',
+				balloonContent: 'Воронеж, ул. Уличная, 32, корп. 1 '
+			}, {
+				// Опции.
+				// Необходимо указать данный тип макета.
+				iconLayout: 'default#image',
+				// Своё изображение иконки метки.
+				iconImageHref: $("#map1").data("img"),
+				// Размеры метки.
+				iconImageSize: [95, 105],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				iconImageOffset: [-22, -30]
+			})
+
+		myMap.geoObjects
+			.add(myPlacemark)
+
+
+
+	});
+}
 });
