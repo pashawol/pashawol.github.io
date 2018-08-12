@@ -193,14 +193,7 @@ $( window ).on( "load", function() {
 		roundLengths: true,
 		observer: true,
 		observeParents: true,
-		// effect: 'coverflow',
-		// coverflowEffect: {
-		// 	depth: 1,
-		// 	rotate: 0,
-		// 	stretch: 0,
-		// 	modifier: 1,
-		// 	slideShadows: false,
-		// },
+	 
   	pagination: {
   		el: '.swiper-pagination',
 			clickable: true,
@@ -208,28 +201,7 @@ $( window ).on( "load", function() {
 			slideToClickedSlide: true,
 			centeredSlides: true
   });
-
-// слайдер цвета в карточке
- var swiper4 = new Swiper('.color-slider', {
-      // slidesPerView: 5,
-			slidesPerView: 'auto',
-			
-      watchOverflow: true,
-      spaceBetween: 0,
-      freeMode: true,
-      slidesPerGroup: 3,
-       // centeredSlides: true,
-      loop: true,
-      loopFillGroupWithBlank: true,
-      touchRatio: 0.2,
-      slideToClickedSlide: true,
-       freeModeMomentum: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-    });
+ 
        // модальное окно
    $('.popup-with-move-anim').magnificPopup({
     type: 'inline',
@@ -247,96 +219,17 @@ $( window ).on( "load", function() {
     mainClass: 'my-mfp-zoom-in'
   });
 
-
- // форма
-$("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: 'action.php', //Change
-      data: th.serialize()
-    }).success(function() {
-          $.magnificPopup.close();
-             $.magnificPopup.open({
-        items: {
-          src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-          type: 'inline'
-        }
-      })
-        // window.location.replace("/thanks.html");
-       setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-        // $.magnificPopup.close();
-      }, 4000);
-    });
-    return false;
-  });
+ $('.popup-with-move-anim').click(function () {
+	 $($(this).attr("href")).find(".extra.h5.text-center.pb-3")
+	 .text($(this).data("title"));
+	 $($(this).attr("href")).find(".form-wrap__btn")
+	 .val($(this).data("btn"));
+   })
 
  // маска на инпут
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
-
-    //Replace all SVG images with inline SVG
-  $('img.img-svg').each(function(){
-    var $img = $(this);
-    var imgClass = $img.attr('class');
-    var imgURL = $img.attr('src');
-
-    $.get(imgURL, function(data) {
-        // Get the SVG tag, ignore the rest
-        var $svg = $(data).find('svg');
-
-        // Add replaced image's classes to the new SVG
-        if(typeof imgClass !== 'undefined') {
-          $svg = $svg.attr('class', imgClass+' replaced-svg');
-        }
-
-        // Remove any invalid XML tags as per http://validator.w3.org
-        $svg = $svg.removeAttr('xmlns:a');
-
-        // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-        if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-        }
-
-
-        // Replace image with new SVG
-        $img.replaceWith($svg);
-
-      }, 'xml');
-
-  });
-
-
-  // кастомный инпут файл
-
-  var file = $(".add-file input[type=file]");
-  file.change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         var name = $(".add-file__filename  ");
-       name.text(filename);
-
-    });
-  // или
-   // $(".dropzone").dropzone({
-   //  url: "/file/post",
-   //  addRemoveLinks: true,
-   //      acceptedFiles: 'image/*',
-   //      uploadMultiple: true,
-   //   });
-
-
-  $(".pretty-embed__bg").each(function(){
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
-
+   
 // анимация на  блоки
    var wowAnim = $(".s-warning__item," +
    	".s-protect li," +
@@ -367,6 +260,7 @@ $("form").submit(function() { //Change
 		  	}).slideDown().prev("div").addClass("active").parent().addClass("active")
 		  })
  
+			// map
 if ($("div").is("#map1")) {
 	ymaps.ready(function () {
 		var myMap = new ymaps.Map('map1', {
@@ -403,4 +297,46 @@ if ($("div").is("#map1")) {
 
 	});
 }
+
+
+// табы  . Теперь данные активного таба остается в storage
+$(function () {
+	var tab = ('tabs');
+
+	$('.' + tab + '__caption').each(function (i) {
+		var storage = localStorage.getItem('tab' + i);
+		if (storage) {
+			$(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
+				.closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
+		}
+	});
+
+	$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+		$(this)
+			.addClass('active').siblings().removeClass('active')
+			.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+			.eq($(this).index()).fadeIn().addClass('active');
+
+		var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
+		localStorage.removeItem('tab' + ulIndex);
+		localStorage.setItem('tab' + ulIndex, $(this).index());
+
+	});
+});
+
+$(".s-about__btn-small").click(function () {
+	$(this)
+		.addClass('active').siblings().removeClass('active')
+		.closest('.s-about').find('.s-about__text-block ').removeClass('active ')
+		.eq($(this).index()).addClass('active');
+})
+
+$(".s-about__text-block ").click(function () {
+	$(this)
+		.addClass('active').siblings().removeClass('active')
+		.closest('.s-about').find('.s-about__btn-small').removeClass('active ')
+		.eq($(this).index()).addClass('active');
+})
+
+
 });
