@@ -24,7 +24,7 @@
             <li><a href="#s-stock">Спец. предложение</a></li>
           </ul>
           <div class="container">
-            <button class="trop__btn btn btn-outline-primary btn-sm btn-block" data-target="#modal-win" data-toggle="modal" href="#">Регистрация
+            <button class="trop__btn btn btn-outline-primary btn-sm btn-block" data-target="#modal-reg" data-toggle="modal" href="#">Регистрация
             </button>
           </div>
         </div>
@@ -57,14 +57,13 @@
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu_item_wpglobus_menu_switch wpglobus-selector-link wpglobus-current-language menu-item-9999999999" id="menu-item-9999999999"><a href="#"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_ru">ru</span></a>
                           <ul class="sub-menu">
                             <li class="menu-item menu-item-type-custom menu-item-object-custom sub_menu_item_wpglobus_menu_switch wpglobus-selector-link menu-item-wpglobus_menu_switch_en" id="menu-item-wpglobus_menu_switch_en"><a href="#"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_en">en</span></a></li>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom sub_menu_item_wpglobus_menu_switch wpglobus-selector-link menu-item-wpglobus_menu_switch_mx" id="menu-item-wpglobus_menu_switch_mx"><a href="#"><span class="wpglobus_flag wpglobus_language_name wpglobus_flag_mx">ua</span></a></li>
                           </ul>
                         </li>
                       </ul>
                     </div>
                   </div>
                   <div class="col-auto d-none d-sm-block">
-                    <button class="top-nav__btn btn btn-outline-primary btn-sm" href="#" data-toggle="modal" data-target="#modal-win">Регистрация
+                    <button class="top-nav__btn btn btn-outline-primary btn-sm" href="#" data-toggle="modal" data-target="#modal-reg">Регистрация
                     </button>
                   </div>
                   <div class="col-auto d-lg-none"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a></div>
@@ -103,6 +102,7 @@
                         <select class="form-wrap__input form-control">
                           <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
                           <option value="">скайп</option>
+                          <option value="">ватцап</option>
                           <option value="">вайбер</option>
                           <option value="">телеграмм</option>
                           <option value="">телефон</option>
@@ -252,6 +252,7 @@
                       <select class="form-wrap__input form-control">
                         <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
                         <option value="">скайп</option>
+                        <option value="">ватцап</option>
                         <option value="">вайбер</option>
                         <option value="">телеграмм</option>
                         <option value="">телефон</option>
@@ -354,7 +355,7 @@
               <div class="s-stock__title h3 extra">Летнее предложение до&nbsp;31&nbsp;августа
               </div>
               <p>Начните сотрудничество прямо сейчас  и&nbsp;<strong>получите скидку в&nbsp;4%  </strong>на&nbsp;Success Fee  в&nbsp;первом отчетном квартале</p>
-              <button class="s-stock__btn btn btn-primary btn-block ttu" type="button">Оставить заявку
+              <button class="s-stock__btn btn btn-primary btn-block ttu" type="button" data-target="#modal-win" data-toggle="modal">Оставить заявку
               </button>
             </div>
           </div>
@@ -482,6 +483,45 @@
           </div>
         </div>
       </footer>
+      <div class="modal fade" id="modal-reg" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
+        <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
+          <div class=" modal-content modal-win ">
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+            <div class="container">
+              <div class="form-wrap">
+                <div class="form-wrap__big-title text-center extra">Оставьте заявку для регистрации 
+                </div>
+                <div class="form-wrap__inner">
+                  <form>
+                    <div class="row">
+                      <div class="col-sm">
+                        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Username/телефон"/>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="col-sm">
+                        <div class="form-wrap__input-wrap form-group">
+                          <select class="form-wrap__input form-control">
+                            <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
+                            <option value="">скайп</option>
+                            <option value="">ватцап</option>
+                            <option value="">вайбер</option>
+                            <option value="">телеграмм</option>
+                            <option value="">телефон</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-4"><input class="form-wrap__btn btn btn-primary btn-block ttu" type="submit" value="Отправить"/>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="small text-white text-center"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
         <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
           <div class=" modal-content modal-win ">
@@ -503,6 +543,7 @@
                           <select class="form-wrap__input form-control">
                             <option class="d-none" value="" disabled="disabled" selected="selected"> Метод связи</option>
                             <option value="">скайп</option>
+                            <option value="">ватцап</option>
                             <option value="">вайбер</option>
                             <option value="">телеграмм</option>
                             <option value="">телефон</option>
