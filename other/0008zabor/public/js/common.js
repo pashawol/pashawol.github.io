@@ -393,7 +393,7 @@ $('.slider-nav2').slick({
 
  
 $('.player_audio').click(function() {
-  if (this.paused == false) {
+  if (this.paused == false  ) {
       this.pause();
       $(this).parent().removeClass("play");
 
@@ -405,6 +405,7 @@ $('.player_audio').click(function() {
 
   }
 });
+
 $('.s-gal__slider').on('beforeChange', function(  currentSlide, nextSlide ){
   // console.log(nextSlide);
     $("audio").trigger("pause").parent().removeClass("play");

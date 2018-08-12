@@ -60,6 +60,27 @@
 
  rest();
 
+ $('.player_audio').click(function () {
+ 	if (this.paused == false) {
+ 		this.pause();
+ 		$(this).parent().removeClass("play");
+
+ 	} else {
+ 		// $('.player_audio').pause();
+ 		$("audio").trigger("pause").parent().removeClass("play");
+ 		this.play();
+ 		$(this).parent().addClass("play");
+
+ 	}
+ });
+ $('.player_audio').each(function () {
+
+	 if ($('.player_audio').stopped == true){
+		 
+		 $(this).parent().removeClass("play");
+		}
+	})
+
       // галерея
   $(".gal").each(function(){
 
@@ -78,7 +99,17 @@
       enabled: true
     }
   });
-  })
+	})
+	
+	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+	 
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+
+		fixedContentPos: false
+	});
 // мобильное меню
    var toggMnu = $(".toggle-mnu-1").click(function () {
 
@@ -141,14 +172,14 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- // $(" .top-nav a").click(function () {
- //        var elementClick = $(this).attr("href");
- //        var destination = $(elementClick).offset().top;
+ $(" .scroll-link").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
 
- //            $('html, body').animate({ scrollTop: destination }, 1100);
+            $('html, body').animate({ scrollTop: destination }, 1100);
 
- //        return false;
- //    });
+        return false;
+    });
 
   var swiper = new Swiper('.carusel-text--js', {
 		slidesPerView: "auto", 
@@ -309,7 +340,7 @@ $("form").submit(function() { //Change
 
    var wowAnim = $(".s-warning__item," +
    	".s-protect li," +
-   	".s-condition__col");
+   	".animate-block");
    wowAnim.each(function (i) {
 
    	wowAnim.eq(i).attr("data-wow-delay", i * .1 * 2 + "s");
