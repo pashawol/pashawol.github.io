@@ -231,16 +231,29 @@ $( window ).on( "load", function() {
 
    
 // анимация на  блоки
-   var wowAnim = $(".s-warning__item," +
-   	".s-protect li," +
-   	".animate-block");
-   wowAnim.each(function (i) {
-
+   var wowAnim = $(".animate-block");
+   wowAnim.each(function (i) { 
    	wowAnim.eq(i).attr("data-wow-delay", i * .1 * 2 + "s");
-   	// $(this).addClass("wow bounceInUp");
-
-
+   	// $(this).addClass("wow bounceInUp"); 
 	 })
+	 
+   $(".s-table__btn").each(function (i) { 
+   	$(".s-table__btn").eq(i).attr("data-wow-delay", i * .1 * 2 + "s");
+   	// $(this).addClass("wow bounceInUp"); 
+	 })
+	 
+   $(".s-warning__item").each(function (i) { 
+   	$(".s-warning__item").eq(i).attr("data-wow-delay", i * .1 * 2 + "s");
+   	// $(this).addClass("wow bounceInUp"); 
+	 })
+	 
+   $(".s-protect li").each(function (i) { 
+   	$(".s-protect li").eq(i).attr("data-wow-delay", i * .1 * 2 + "s");
+   	// $(this).addClass("wow bounceInUp"); 
+	 })
+
+
+	 
 	   var wow = new WOW({
 	   	mobile: false
 	   });

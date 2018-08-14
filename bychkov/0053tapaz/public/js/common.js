@@ -248,14 +248,14 @@
 		
 		$("input[type='tel']").inputmask(
 			// "[9]{1,2}(999)999-99-99"
-			"[9]{1,2}(999)999-99-99"
+			"[9](999)999-99-99"
 			, {
 			autoUnmask: true,
 			showMaskOnHover: false,
 				showMaskOnFocus: false,
 		});
 	  // маска на инпут
-		  var swiper = new Swiper('.swiper-container', {
+	 var galleryThumbs = new Swiper('.s-card__slider', {
 		  	// effect: 'flip',
 		  	// grabCursor: true,
 				init: false,
@@ -263,12 +263,14 @@
 		  	effect: 'coverflow', 
 		  	centeredSlides: true,
 				slidesPerView: 'auto',
+				slideToClickedSlide: true,
 				speed: 650,
 				shortSwipes: false,
 				longSwipes: false,
 				followFinger: false,
 				allowTouchMove: false,
 				touchMoveStopPropagation: false,
+				touchRatio: 0.2,
 		  	coverflowEffect: {
 		  		depth: 15,
 		  		rotate: 0,
@@ -282,12 +284,43 @@
 				},
 			 
 			});
+ 
+	 var galleryTop = new Swiper('.gallery-top', {
+		 // effect: 'flip',
+		 // grabCursor: true,
+		 init: false,
+		 loop: true,
+		 centeredSlides: true,
+		 slidesPerView: 'auto',
+		 slideToClickedSlide: true,
+		 speed: 850,
+		 shortSwipes: false,
+		 longSwipes: false,
+		 followFinger: false,
+		 allowTouchMove: false,
+		 touchMoveStopPropagation: false,
+		 touchRatio: 0.2,
+		 effect: 'coverflow',
+		 coverflowEffect: {
+			 depth: -3,
+			 rotate: 0,
+			 stretch: 0,
+			 modifier: 1,
+			 slideShadows: false,
+		 },
+		 
+	 });
+	 galleryTop.controller.control = galleryThumbs;
+	 galleryThumbs.controller.control = galleryTop;
+
+
 			if ($(".s-card__slide").length > 2){
 				$(".s-card__slide").removeClass("active");
 				$(".swiper-container").removeClass("active");
 				$(".swiper-wrapper").removeClass("justify-content-center")
 				$(".slick-arrow").show();
-				swiper.init();
+				galleryTop.init();
+				galleryThumbs.init();
 			}
 
 });

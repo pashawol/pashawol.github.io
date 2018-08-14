@@ -39,40 +39,40 @@
                 this.createKeyboard('numeric');
                 this.events();
             }
-				},
-					// кастомные клавы
-					numeric_switch__mail: {
-						text: '123',
+        },
+        // кастомные клавы
+        numeric_switch__mail: {
+            text: '123',
             command: function () {
-							this.createKeyboard('numeric__mail');
-							this.events();
+                this.createKeyboard('numeric__mail');
+                this.events();
             }
-					},
-					
-					rus_switch__mail: {
-						text: 'РУС',
+        },
+
+        rus_switch__mail: {
+            text: 'РУС',
             command: function () {
-							this.createKeyboard('russian__mail');
-							this.events();
+                this.createKeyboard('russian__mail');
+                this.events();
             }
-					},
-					
-					eng_switch__mail: {
-						text: 'Eng',
+        },
+
+        eng_switch__mail: {
+            text: 'Eng',
             command: function () {
-							this.createKeyboard('english__mail');
-							this.events();
+                this.createKeyboard('english__mail');
+                this.events();
             }
-					},
-					symbol_switch__mail: {
-						text: '#+=',
-						command: function () {
-							this.createKeyboard('symbolic__mail');
-							this.events();
-						}
-					},
-					// /кастомные клавы
-				
+        },
+        symbol_switch__mail: {
+            text: '#+=',
+            command: function () {
+                this.createKeyboard('symbolic__mail');
+                this.events();
+            }
+        },
+        // /кастомные клавы
+
         layout_switch: {
             text: '&nbsp;',
             command: function () {
@@ -94,78 +94,78 @@
                 this.createKeyboard('symbolic');
                 this.events();
             }
-				},
-				
+        },
+
         symbol_inner: {
             text: 'ввести',
             command: function () {
                 // this.createKeyboard('symbolic');
                 this.events();
             }
-				},
-				
+        },
+
         symbol_rl: {
             text: 'руб.',
             command: function () {
                 // this.createKeyboard('symbolic');
                 this.events();
             }
-				}
+        }
 
-				
+
     };
 
 
     var layouts = {
         selectable: ['english__mail', 'russian__mail', 'russian'],
-        
-				// кастомные клавы
-				english__mail: [
-					['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'backspace',],
-					['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l',],
-					[  'z', 'x', 'c', 'v', 'b', 'n', 'm', '@','.' ],
-					['numeric_switch__mail', 'rus_switch__mail', '_', '-']
-				],
 
-				russian__mail: [
-					['й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'backspace', ],
-					['ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э'],
-					[ 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '@', '.'],
-					['numeric_switch__mail', 'eng_switch__mail', '_', '-']
-				],
+        // кастомные клавы
+        english__mail: [
+            ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'backspace',],
+            ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l',],
+            ['z', 'x', 'c', 'v', 'b', 'n', 'm', '@', '.'],
+            ['numeric_switch__mail', 'rus_switch__mail', '_', '-']
+        ],
+
+        russian__mail: [
+            ['й', 'ц', 'у', 'к', 'е', 'н', 'г', 'ш', 'щ', 'з', 'х', 'backspace',],
+            ['ф', 'ы', 'в', 'а', 'п', 'р', 'о', 'л', 'д', 'ж', 'э'],
+            ['я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', '@', '.'],
+            ['numeric_switch__mail', 'eng_switch__mail', '_', '-']
+        ],
         numeric__mail: [
-					['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace'],
-					['-', '/', ':', ';', '(', ')', '$', '&', '@', '"'],
-					['eng_switch__mail', 'symbol_switch__mail', '.', ',', "'", '?', '!', 'symbol_switch__mail'],
-				 
-				],
-				symbolic__mail: [
-						['[', ']', '{', '}', '#', '%', '^', '*', '+', '=', 'backspace'],
-						['_', '\\', '|', '~', '<', '>'],
-						['eng_switch__mail', 'numeric_switch', '.', ',', '?', '!', "'"],
-				],
+            ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'backspace'],
+            ['-', '/', ':', ';', '(', ')', '$', '&', '@', '"'],
+            ['eng_switch__mail', 'symbol_switch__mail', '.', ',', "'", '?', '!', 'symbol_switch__mail'],
+
+        ],
+        symbolic__mail: [
+            ['[', ']', '{', '}', '#', '%', '^', '*', '+', '=', 'backspace'],
+            ['_', '\\', '|', '~', '<', '>'],
+            ['eng_switch__mail', '.', ',', '?', '!', "'"],
+        ],
         numbers_only: [
-					['1', '2', '3',],
-					['4', '5', '6',],
-					['7', '8', '9',],
-					['0', 'backspace'],
-				],
-				
+            ['1', '2', '3',],
+            ['4', '5', '6',],
+            ['7', '8', '9',],
+            ['0', 'backspace'],
+        ],
+
         litter: [
-					['10 л', '500 ₽', ],
-					['15 л', '1000 ₽', ],
-					['20 л', '1500 ₽', ],
-					['25 л', 'symbol_inner'],
-				],
-				numbers_only_2: [
-					['1', '2', '3', ],
-					['4', '5', '6', ],
-					['7', '8', '9', ],
-					['symbol_rl', '0', 'C'],
-				],
-				// /кастомные клавы
-				
-			}
+            ['10 л', '500 ₽',],
+            ['15 л', '1000 ₽',],
+            ['20 л', '1500 ₽',],
+            ['25 л', 'symbol_inner'],
+        ],
+        numbers_only_2: [
+            ['1', '2', '3',],
+            ['4', '5', '6',],
+            ['7', '8', '9',],
+            ['symbol_rl', '0', 'C'],
+        ],
+        // /кастомные клавы
+
+    }
 
     var shift = false, capslock = false, layout = 'english', layout_id = 0;
 
@@ -266,7 +266,11 @@
 
 
             $(fkeys).on('click', function () {
-                var command = function_keys[$(this).data('command')].command;
+                var command = function_keys[$(this).data('command')];
+
+                if(!command) return;
+                command = command.command;
+
                 if (!command) return;
 
                 command.call(me);
@@ -293,7 +297,7 @@
                 input_node.setSelectionRange(start, end);
             }
 
-            // input.trigger('focus');
+            input[0].dispatchEvent(new Event("InputEvent"));
 
             if (shift && !capslock) {
                 this.toggleShiftOff();
