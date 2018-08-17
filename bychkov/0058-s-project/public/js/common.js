@@ -104,49 +104,11 @@
    $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
 
 
-   
-
-		// map
-		if ($("div").is("#map1")) {
-			ymaps.ready(function () {
-				var myMap = new ymaps.Map('map1', {
-						center: [55.875392072540954, 37.588150415344224],
-						zoom: 17,
-						behaviors: ['drag'],
-
-						// controls: ["zoomControl", "fullscreenControl"]
-					}, {
-						searchControlProvider: 'yandex#search'
-					}),
-
-
-					myPlacemark = new ymaps.Placemark([55.875392072540954, 37.588150415344224], {
-						hintContent: 'Москва, Алтуфьевское ш., 	д.48, корпус 1 ',
-						balloonContent: 'Москва, Алтуфьевское ш., 	д.48, корпус 1 '
-					}, {
-						// Опции.
-						// Необходимо указать данный тип макета.
-						iconLayout: 'default#image',
-						// Своё изображение иконки метки.
-						iconImageHref: $("#map1").data("img"),
-						// Размеры метки.
-						iconImageSize: [78, 71],
-						// Смещение левого верхнего угла иконки относительно
-						// её "ножки" (точки привязки).
-						iconImageOffset: [-42, -180]
-					})
-
-				myMap.geoObjects
-					.add(myPlacemark)
-
-
-
-			});
-		}
-
+  
 	 $('.btn').click(function () {
 		 var text = $(this).data('title'); 
 		 $($(this).data("target")).find(".text--js").text(text + " и получите  ");
 		 $($(this).data("target")).find(".form-wrap__btn").val($(this).data('btn'));
 	   })
 });
+// 3caCXY$KRYZ03*Eclv
