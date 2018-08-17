@@ -3,24 +3,8 @@
   // для свг
   svg4everybody({});
   // Custom JS
-
-
-  var url=document.location.href;
-  $.each($(".top-nav__nav a "),function(){
-
-  if(this.href==url){
-    if($(this).hasClass("top-nav__link") == true){
-
-    $(this).addClass('top-nav__link-active');
-    }
-    if($(this).hasClass("footer__link") == true){
-
-    $(this).addClass('footer__link-active');
-    }
-
-  };
-
-	});
+ 
+ 
 		$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
 
 			type: 'iframe',
@@ -40,118 +24,14 @@
     mainClass: 'mfp-with-zoom mfp-img-mobile',
     image: {
       verticalFit: true,
-      // titleSrc: function(item) {
-      //   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-      // }
+     
     },
     gallery: {
       enabled: true
     }
   });
   })
-// мобильное меню
-   var toggMnu = $(".toggle-mnu-1").click(function () {
-
-    $(".toggle-mnu-1").toggleClass("on");
-    // $("body").toggleClass("fixed");
-    $(".hidden-mnu").toggleClass("active");
-    $("body, html").toggleClass("fixed");
-    return false;
-  });
-    $('.hidden-mnu ul li a').on('click', function () {
-      $(".hidden-mnu .toggle-mnu").click();
-    });
-    $(document).mouseup(function (e) {
-    var container = $(".hidden-mnu.active");
-    if (container.has(e.target).length === 0){
-       $(".toggle-mnu-1").removeClass("on");
-      // $("body").toggleClass("fixed");
-      $(".hidden-mnu").removeClass("active");
-      $("body, html").removeClass("fixed");
-        }
-    });
-
-  function heightses() {
-
-    var w = $(window).width();
-   // $(".otz__item .text-wrap ").height('auto').equalHeights();
-   //
-
-
-    // скрывает моб меню
-  
-    var topH=$("header ").innerHeight();
-
-    $(window).scroll(function(){
-                if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed');
-                }
-                else  {
-                    $('.top-nav  ').removeClass('fixed');
-                }
-            });
-       // конец добавил
-  }
-  
-  if (window.matchMedia("(min-width: 992px)").matches) {
-
-       $(".toggle-mnu-1").removeClass("on");
-        // $("body").removeClass("fixed");
-        $(".hidden-mnu").removeClass("active");
-        $("body").removeClass("fixed");
-  }
-
-
-  $(window).resize(function() {
-    heightses();
-
-  });
-$( window ).on( "load", function() {
- heightses();
-
-})
-
- heightses();
-
-
-
-// листалка по стр
- // $(" .top-nav a").click(function () {
- //        var elementClick = $(this).attr("href");
- //        var destination = $(elementClick).offset().top;
-
- //            $('html, body').animate({ scrollTop: destination }, 1100);
-
- //        return false;
- //    });
-
-
-// табы  . Теперь данные активного таба остается в storage
-$(function() {
-var tab = ('tabs');
-
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
-
-$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
-  $(this)
-      .addClass('active').siblings().removeClass('active')
-      .closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-      .eq($(this).index()).fadeIn().addClass('active');
-
-    var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-    localStorage.removeItem('tab' + ulIndex);
-    localStorage.setItem('tab' + ulIndex, $(this).index());
-
-});
-});
-
-
+ 
   
 	 $(".swiper-carusel").each(function () {
 
@@ -226,46 +106,46 @@ $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', functio
 
    
 
-  // кастомный инпут файл
+		// map
+		if ($("div").is("#map1")) {
+			ymaps.ready(function () {
+				var myMap = new ymaps.Map('map1', {
+						center: [55.875392072540954, 37.588150415344224],
+						zoom: 17,
+						behaviors: ['drag'],
 
-  var file = $(".add-file input[type=file]");
-  file.change(function(){
-         var filename = $(this).val().replace(/.*\\/, "");
-         var name = $(".add-file__filename  ");
-       name.text(filename);
-
-    });
-  // или
-   // $(".dropzone").dropzone({
-   //  url: "/file/post",
-   //  addRemoveLinks: true,
-   //      acceptedFiles: 'image/*',
-   //      uploadMultiple: true,
-   //   });
+						// controls: ["zoomControl", "fullscreenControl"]
+					}, {
+						searchControlProvider: 'yandex#search'
+					}),
 
 
-  $(".pretty-embed__bg").each(function(){
-    // загрузка фона видео
-  $(this).css("background-image",'url(http://img.youtube.com/vi/'  + $(this).data("src")+ '/0.jpg)')
-  // включение видео при клике по блоку
-   $(this).click(function(){
-    $(this).removeClass("on").next()
-    .attr("src", 'https://www.youtube.com/embed/' + $(this).data("src")+'?autoplay=1').addClass("on");
-   })
-   })
+					myPlacemark = new ymaps.Placemark([55.875392072540954, 37.588150415344224], {
+						hintContent: 'Москва, Алтуфьевское ш., 	д.48, корпус 1 ',
+						balloonContent: 'Москва, Алтуфьевское ш., 	д.48, корпус 1 '
+					}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: $("#map1").data("img"),
+						// Размеры метки.
+						iconImageSize: [78, 71],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						iconImageOffset: [-42, -180]
+					})
+
+				myMap.geoObjects
+					.add(myPlacemark)
 
 
-// var wowAnim = $(".s-dop__col," +
-//                 ".s-pick__col," +
-//                 ".s-condition__col");
-// wowAnim.each(function(i){
 
-// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
+			});
+		}
 
-//    var wow = new WOW({ mobile: false });
-//         wow.init();
-
-// });
-
-
+	 $(".s-project__btn").click(function () {
+		 var text = $(this).data('title');
+		 $($(this).data("target")).find(".text--js").text("Оставить заявку на " + text + " и получите  ")
+	   })
 });
