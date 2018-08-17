@@ -144,8 +144,9 @@
 			});
 		}
 
-	 $(".s-project__btn").click(function () {
-		 var text = $(this).data('title');
-		 $($(this).data("target")).find(".text--js").text("Оставить заявку на " + text + " и получите  ")
+	 $('.btn').click(function () {
+		 var text = $(this).data('title'); 
+		 $($(this).data("target")).find(".text--js").text(text + " и получите  ");
+		 $($(this).data("target")).find(".form-wrap__btn").val($(this).data('btn'));
 	   })
 });
