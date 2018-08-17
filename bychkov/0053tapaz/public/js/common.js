@@ -310,16 +310,22 @@
 		 },
 		 
 	 });
-	 galleryTop.controller.control = galleryThumbs;
-	 galleryThumbs.controller.control = galleryTop;
+	 if( $("div").is(".gallery-top")){
+
+		 galleryTop.controller.control = galleryThumbs;
+		 galleryThumbs.controller.control = galleryTop;
+		}
 
 
 			if ($(".s-card__slide").length > 2){
 				$(".s-card__slide").removeClass("active");
 				$(".swiper-container").removeClass("active");
-				$(".swiper-wrapper").removeClass("justify-content-center")
+				$(".swiper-wrapper").removeClass("justify-content-center");
+
 				$(".slick-arrow").show();
+				if( $("div").is(".gallery-top")){
 				galleryTop.init();
+				}
 				galleryThumbs.init();
 			}
 
