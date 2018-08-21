@@ -43,7 +43,7 @@
           <div class="container">
             <div class="header-block__head">
               <h1 class="mono">Рыболовные снасти&nbsp;и аксессуары <span class="text-primary">Mottomo!</span></h1>
-              <div class="h6">Mottomo это качественные и&nbsp;функциональные снасти для ловли рыбы по&nbsp;доступной цене.</div><a class="header-block__btn btn btn-block btn-primary" href="#" data-order="Заявка в шапке">оставить заявку</a>
+              <div class="h6">Mottomo это качественные и&nbsp;функциональные снасти для ловли рыбы по&nbsp;доступной цене.</div><a class="header-block__btn btn btn-block btn-primary" data-target="#modal-win" data-toggle="modal" href="#" data-order="Заявка в шапке">оставить заявку</a>
             </div>
             <div class="header-block__foot">
               <div class="row no-gutters">
@@ -349,22 +349,21 @@
         <div class="container">
           <h2 class="text-center">Остались вопросы?<br/>Закажите обратный звонок</h2>
           <div class="form-wrap">
-            <form>
-              <div class="row">
-                <div class="form-wrap__col col-md">
-                  <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя"/>
-                  </div>
-                  <!-- +e.input-wrap-->
+            <div class="row">
+              <div class="form-wrap__col col-md">
+                <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя"/>
                 </div>
-                <div class="form-wrap__col col-md">
-                  <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="yourmail@gmail.com"/>
-                  </div>
-                  <!-- +e.input-wrap-->
-                </div>
-                <div class="form-wrap__col col-md-auto"><input class="form-wrap__btn btn btn-primary btn-block" type="submit" value="оставить заявку"/>
-                </div>
+                <!-- +e.input-wrap-->
               </div>
-            </form>
+              <div class="form-wrap__col col-md">
+                <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="yourmail@gmail.com"/>
+                </div>
+                <!-- +e.input-wrap-->
+              </div>
+              <div class="form-wrap__col col-md-auto"><input class="form-wrap__btn btn btn-primary btn-block" type="submit" value="оставить заявку"/>
+              </div>
+            </div>
+            <form></form>
           </div>
         </div>
       </section>
@@ -402,10 +401,10 @@
       <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
         <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
           <div class="form-wrap modal-content modal-win">
+            <button class="close m-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+            <div class="h2 text-center mono">Получите бесплатную консультацию от нашего специалиста</div>
+            <p>Заполните форму заявки и наш специалист проконсультирует и ответит на все интересующие Вас вопросы. </p>
             <form>
-              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-              <div class="h2 text-center mono">Получите бесплатную консультацию от нашего специалиста</div>
-              <p>Заполните форму заявки и наш специалист проконсультирует и ответит на все интересующие Вас вопросы. </p>
               <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя"/>
               </div>
               <!-- +e.input-wrap-->
@@ -413,7 +412,7 @@
               </div>
               <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-primary btn-block" type="submit" value="оставить заявку"/>
               <div class="wrap-polite">
-                <div class="custom-input polite">
+                <div class="polite">
                   <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Даю 
                      <span class="link" data-toggle="modal" data-target="#exampleModal2">согласие </span>на хранение и обработку   персональных данных
                   </label>
@@ -424,13 +423,13 @@
         </div>
       </div>
       <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
-        <div class=" ttext-center  modal-dialog  modal-dialog-centered  " role="document"> 
+        <div class=" text-center  modal-dialog  modal-dialog-centered  " role="document"> 
           <div class="form-wrap modal-content modal-win">
-            <form>
-              <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button><br/>
-              <div class="h2">Заявка принята</div><br/>
-              <div class="h3">Скоро с Вами свяжутся</div><br/>
-            </form>
+            <button class="close m-close" data-dismiss="modal" type="button" aria-label="Close"> ×</button>
+            <div class="form-wrap__icon-wrap"><i class="fas fa-check"></i>
+            </div>
+            <div class="h2 mono">Ваша заявка успешно отправлена!</div>
+            <p>Благодарим Вас за отправленную заявку, наш специалист свяжется с Вами в течении 1 часа. </p>
           </div>
         </div>
       </div>
