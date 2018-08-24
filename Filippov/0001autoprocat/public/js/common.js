@@ -377,8 +377,8 @@ $(".data-modal").click(function(){
 
 
  // маска на инпут
-   $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
-
+	 $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
+	
 	 // включение видео
 	   $(".form-wrap__prev-video").each(function(){
 	    $(this).on("click", function(){
@@ -429,4 +429,35 @@ $(".data-modal").click(function(){
 
  })
 
+
+	 //  маске в модалке регистрации звонка
+	 $(".form-wrap__tel-block input[type='tel']").attr("pattern", "[0-9]{2}-[0-9]{2}").inputmask({ "mask": "99-99" });
+
+	 $(".form-wrap__select--reg-call")
+		 .change(function () {
+			 var str = "";
+			 str = $(this).val() ;
+			console.log(str)
+			if(str == ''){
+				$(".tabs-blocks__item").fadeOut();
+
+			}
+			 $(str).fadeIn().siblings().hide();
+			 
+			 
+		 })
+		//  .trigger("change");
+
+		$(function () {
+			var tab = ('tabs-modal');
+
+ 
+			$('.' + tab + '__btns--sm').on('click', '.' + tab + '__col:not(.active)', function (e) {
+				$(this)
+					.addClass('active').siblings().removeClass('active')
+					.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+					.eq($(this).index()).fadeIn().addClass('active');
+ 
+			});
+		});
 });

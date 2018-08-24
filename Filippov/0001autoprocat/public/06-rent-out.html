@@ -5594,6 +5594,342 @@
         </form>
       </div>
       <!-- end #modal-call-->
+      <!-- модалки колцентра--><a class="link btn btn-primary popup-with-move-anim" href="#modal-reg-call-1"> Регистрация звонка 1</a>
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-filter modal-form" id="modal-reg-call-1">
+        <form>
+          <div class="text-center">
+            <div class="form-wrap__title mono ttu">Регистрация звонка
+            </div>
+            <div class="h6 mb-4">Введите последние 4 цифры номера на который позвонил клиент]</div>
+            <div class="form-wrap__tel-block">+7 (XXX) XXX-
+              <input type="tel" placeholder="__-__"/>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- #modal-reg-call-1--><a class="link btn btn-primary popup-with-move-anim" href="#modal-reg-call-2"> Регистрация звонка 2</a>
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-filter modal-form" id="modal-reg-call-2">
+        <form>
+          <div class="text-center">
+            <div class="form-wrap__title mono ttu">Регистрация звонка
+            </div>
+            <div class="form-group m-0">
+              <select class="form-wrap__select form-wrap__select--reg-call form-control h6" name="">
+                <option class="d-none" value=" " selected="selected" disabled="disabled">Выберите тип звонка</option>
+                <option value="#val1">Арендовать или продлить авто</option>
+                <option value="#val2">От клиента: Авто сломалось</option>
+                <option value="#val3">От клиента: эвакуировали или дтп</option>
+                <option value="#val4">От клиента: вернуть залог/депозит</option>
+                <option value="#val5">Любое сотрудничество</option>
+                <option value="#val6">Любой вопрос/просто перезвонить</option>
+              </select>
+            </div>
+          </div>
+          <div class="tabs-blocks">
+            <div class="tabs-blocks__item" id="val1">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">1
+                    </div>
+                    <select class="tabs-blocks__select form-control h6" name="">
+                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите марку</option>
+                      <option value=" ">Выберите марку</option>
+                    </select>
+                  </div>
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">2
+                    </div>
+                    <select class="tabs-blocks__select form-control h6" name="">
+                      <option class="d-none" value="" selected="selected" disabled="disabled">Выберите модель</option>
+                      <option value=" ">Выберите модель</option>
+                    </select>
+                  </div>
+                  <div class="dop-block">
+                    <div class="date-picker-block-js">
+                      <div class="tabs-blocks__form-num form-group m-0">
+                        <div class="tabs-blocks__number">3</div>
+                        <label class="d-block label-date-picker-js">
+                          <input class="form-control datepicker text-left startDate" type="text" placeholder="Начальная дата аренды"/>
+                        </label>
+                      </div>
+                      <div class="tabs-blocks__form-num form-group m-0">
+                        <div class="tabs-blocks__number">4</div>
+                        <label class="d-block label-date-picker-js">
+                          <input class="form-control datepicker text-left endDate" type="text" placeholder="Конечная дата аренды"/>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">5
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="text" placeholder="Имя клиента"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="small left">Если номер телефона будет найден в базе, поле «Имя клиента» будет заполнено автоматически.</div>
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">6
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <textarea class="tabs-blocks__input form-control" placeholder="Комментарий к заказу"></textarea>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+              </div>
+              <div class="mess mess--lab">
+                <div class="mess__title"> прочитать с душой!
+                </div>
+                <p>Спасибо за информацию! Ваш заказ передается в отдел бронирования. В течение 5 минут с вами свяжется наш специалист.</p>
+              </div>
+              <div class="tabs-blocks__btns">
+                <button class="tabs-blocks__btn btn btn-primary" type="submit">Отправить
+                </button>
+                <button class="tabs-blocks__btn btn btn-link" type="reset">Отменить
+                </button>
+              </div>
+            </div>
+            <!-- +e.item#val1-->
+            <div class="tabs-blocks__item" id="val2">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">1
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="tel" placeholder="+7 (___) ___-__-__"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">2
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="text" placeholder="Имя клиента"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+              </div>
+              <div class="mess mess--lab">
+                <div class="mess__title"> прочитать с душой!
+                </div>
+                <p>Спасибо за информацию! В течение 5 минут с вами свяжется наш специалист. Ожидайте звонка.</p>
+              </div>
+              <div class="tabs-blocks__btns">
+                <button class="tabs-blocks__btn btn btn-primary" type="submit">Отправить
+                </button>
+                <button class="tabs-blocks__btn btn btn-link" type="reset">Отменить
+                </button>
+              </div>
+            </div>
+            <!-- +e.item#val2-->
+            <div class="tabs-blocks__item" id="val3">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">1
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="tel" placeholder="+7 (___) ___-__-__"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">2
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="text" placeholder="Имя клиента"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+              </div>
+              <div class="mess mess--lab">
+                <div class="mess__title"> прочитать с душой!
+                </div>
+                <p>Спасибо за информацию! В течение 5 минут с вами свяжется наш специалист. Ожидайте звонка.</p>
+              </div>
+              <div class="tabs-blocks__btns">
+                <button class="tabs-blocks__btn btn btn-primary" type="submit">Отправить
+                </button>
+                <button class="tabs-blocks__btn btn btn-link" type="reset">Отменить
+                </button>
+              </div>
+            </div>
+            <!-- +e.item#val3-->
+            <div class="tabs-blocks__item" id="val4">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">1
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="tel" placeholder="+7 (___) ___-__-__"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">2
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="text" placeholder="Имя клиента"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+              </div>
+              <div class="mess mess--lab">
+                <div class="mess__title"> прочитать с душой!
+                </div>
+                <div class="small">В данный момент остаток средств на вашем счете составляет <strong>0 рублей.</strong><br/>Возврат данной суммы возможен двумя способами:<br/>1. Наличными в нашем офисе.<br/>2. На ваш расчетный счет или карту Сбербанка.<br/><strong>Какой вариант вам удобен?</strong></div>
+              </div>
+              <div class="strong text-center py-3">Какой вариант выбрал клиент?</div>
+              <div class="tabs-modal">
+                <div class="tabs-modal__btns tabs-modal__btns--sm">
+                  <div class="row">
+                    <div class="tabs-modal__col col-md-6">
+                      <button class="tabs-modal__btn btn btn-primary btn-sm btn-block mx-100 w-100" type="button">Клиент выбрал наличные
+                      </button>
+                    </div>
+                    <div class="tabs-modal__col col-md-6">
+                      <button class="tabs-modal__btn btn btn-primary btn-sm btn-block mx-100 w-100" type="button">Клиент выбрал р/с или карту
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs-modal__contents">
+                  <div class="tabs-modal__content">
+                    <div class="mess">
+                      <div class="small">Ждем вас по адресу: Москва, проспект Андропова 8, ТЦ Мегаполис, 4 этаж, в любой день с 10:00 до 22:00.
+                        <div class="strong mb-2">Вам отправить SMS с адресом?</div>
+                      </div>
+                      <button class="mess__btn btn btn-primary btn-sm px-4" type="submit">Отправить клиенту SMS с адресом
+                      </button>
+                    </div>
+                  </div>
+                  <div class="tabs-modal__content">
+                    <div class="mess">
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto mb-2">
+                          <div class="strong">Сначала нажмите кнопку:</div>
+                        </div>
+                        <div class="col-sm-auto mb-2">
+                          <button class="mess__btn btn btn-primary btn-sm px-4" type="submit">Отправить клиенту SMS с паролем
+                          </button>
+                        </div>
+                      </div>
+                      <div class="small">Вам отправлено SMS с вашим логином и паролем на нашем сайте autoprokat24.ru.<br/>Зайдите в ваш личный кабинет на нашем сайте и рядом с балансом нажмите кнопку “Вывести”. Для вывода надо указать реквизиты вашей карты. Там простой и понятный интерфейс. После этого, информация поступит в наш финансовый отдел и вам переведут средства в течение 5 рабочих дней.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center text-gray-700 h6 mt-2 pt-5">Закрыть окно после прочтения.</div>
+            </div>
+            <!-- +e.item#val4-->
+            <div class="tabs-blocks__item" id="val5">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">1
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="text" placeholder="Имя клиента"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">2
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="tel" placeholder="+7 (___) ___-__-__"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">3
+                    </div>
+                    <select class="tabs-blocks__select form-control h6" name="">
+                      <option class="d-none" value=" " selected="selected" disabled="disabled">Тип сотрудничества</option>
+                      <option value="#val1">Тип сотрудничества</option>
+                    </select>
+                  </div>
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">4
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="text" placeholder="Комментарий"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+              </div>
+              <div class="mess mess--lab">
+                <div class="mess__title"> прочитать с душой!
+                </div>
+                <p>Спасибо за информацию! В течение 5 минут с вами свяжется наш специалист. Ожидайте звонка.</p>
+              </div>
+              <div class="tabs-blocks__btns">
+                <button class="tabs-blocks__btn btn btn-primary" type="submit">Отправить
+                </button>
+                <button class="tabs-blocks__btn btn btn-link" type="reset">Отменить
+                </button>
+              </div>
+            </div>
+            <!-- +e.item#val5-->
+            <div class="tabs-blocks__item" id="val6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">1
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="text" placeholder="Имя клиента"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">2
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <input class="tabs-blocks__input form-control" type="tel" placeholder="+7 (___) ___-__-__"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="tabs-blocks__form-num form-group m-0">
+                    <div class="tabs-blocks__number">3
+                    </div>
+                    <div class="tabs-blocks__input-wrap form-group"> <textarea class="tabs-blocks__input form-control" placeholder="Вопрос"></textarea>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+              </div>
+              <div class="mess mess--lab">
+                <div class="mess__title"> прочитать с душой!
+                </div>
+                <p>Спасибо за информацию! В течение 5 минут с вами свяжется наш специалист. Ожидайте звонка.</p>
+              </div>
+              <div class="tabs-blocks__btns">
+                <button class="tabs-blocks__btn btn btn-primary" type="submit">Отправить
+                </button>
+                <button class="tabs-blocks__btn btn btn-link" type="reset">Отменить
+                </button>
+              </div>
+            </div>
+            <!-- +e.item#val6-->
+          </div>
+        </form>
+      </div>
+      <!-- #modal-reg-call-2--><a class="link btn btn-primary popup-with-move-anim" href="#modal-thank-call"> Спасибо!</a>
+      <div class="zoom-anim-dialog mfp-hide modal-win modal-form form-wrap text-center" id="modal-thank-call">
+        <div class="title mono ttu h45 mb-3">Спасибо!<br/>заявка зарегистрирована.
+        </div>
+      </div>
+      <!-- #modal-thank-call-->
+      <!-- модалки колцентра-->
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>

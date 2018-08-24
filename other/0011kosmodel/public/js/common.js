@@ -127,7 +127,8 @@ jQuery(document).ready(function($) {
 						})
 				})
 				// прижать футер к низу
-				$(".main-wrapper").css("padding-bottom", $("footer").height() + 60)
+				// ПОМЕНЯЛ
+				$(".main-wrapper").css("padding-bottom", $("footer").height() + 20)
 				// $(".otz__item .text-wrap ").height('auto').equalHeights();
 				//
 				// скрывает моб меню
