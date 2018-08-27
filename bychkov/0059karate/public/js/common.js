@@ -90,7 +90,7 @@
 			   			breakpoint: 480,
 			   			settings: {
 			   			 
-			   				slidesToShow: 1
+			   				slidesToShow: 2
 			   			}
 			   		}
 			   	]
@@ -152,7 +152,7 @@
  		var t = e.geoObjects.get(0);
  		myMap = new ymaps.Map("map", {
  			center: t.geometry.getCoordinates(),
- 			zoom: 15,
+ 			zoom: 16,
  			controls: []
  		}, {
  			searchControlProvider: "yandex#search"
@@ -166,14 +166,19 @@
  			iconImageOffset: [-25, -75]
  		}), myMap.controls.add("zoomControl"), myMap.behaviors.disable("scrollZoom"), myMap.geoObjects.add(myPlacemark)
  	}), $('a[href="#show_map"]').click(function (e) {
- 		e.preventDefault(), $("#kontakty_box").toggleClass("__na"), $("#kontakty_return_box").toggleClass("__na"), addr = $(this).data("target"), myMap.destroy(), myMap = null;
+ 		e.preventDefault(),    addr = $(this).data("target"), myMap.destroy(), myMap = null;
  		var t = "";
  		switch (addr) {
  			case "Северное Бутово, ул. Феодосийская, 11а":
  				t = "Северное Бутово, ул. Феодосийская, 11а<br><br>Расписание: понедельник, четверг<br>Начинающие: 18:30-19:30<br>Продвинутые: 19:30-21:00";
- 				break;
- 			case "Южное Бутово, Чечерский пр-д, 56":
- 				t = "Южное Бутово, Чечерский пр-д, 56<br><br>Расписание: вторник, пятница<br>Начинающие: 18:30-19:30<br>Продвинутые: 19:30-21:00"
+				 break;
+				 
+				 case "Южное Бутово, Чечерский пр-д, 56":
+				 t = "Южное Бутово, Чечерский пр-д, 56<br><br>Расписание: вторник, пятница<br>Начинающие: 18:30-19:30<br>Продвинутые: 19:30-21:00";
+				 break;
+ 			case "Северное Бутово, ул. Грина, 18 Б":
+ 				t = "Северное Бутово, ул. Грина, 18 Б<br><br>Расписание: понедельник, четверг<br>Начинающие: 18:30-19:30<br>Продвинутые: 19:30-21:00";
+			
  		}
  		return ymaps.geocode(addr, {
  			results: 1
@@ -181,7 +186,7 @@
  			var n = e.geoObjects.get(0);
  			myMap = new ymaps.Map("map", {
  				center: n.geometry.getCoordinates(),
- 				zoom: 15,
+ 				zoom: 16,
  				controls: []
  			}, {
  				searchControlProvider: "yandex#search"
@@ -203,16 +208,18 @@
  	})
  }), $(document).ready(function () {
  	$(".fancy").fancybox({
- 		padding: 0
+		 padding: 0,
+		 width: 'auto',
+		 height: 'auto',
+		//  autoSize: false,
+		//  minWidth: 250,
+		 	// maxWidth: 770,
+		 	// width: 770
  	})
  });
  jQuery(document).ready(function($) {
 
-  // для свг
-  svg4everybody({});
-  // Custom JS
-
-    
+  
 
 
 });

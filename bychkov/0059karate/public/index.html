@@ -60,7 +60,7 @@ $title = $titles[$titleindex]['title'];
               </div>
               <div class="col-auto">
                 <div class="text-right"><a class="header_phone __dnm __dns lptracker_phone" href="tel:+74955555555">+7 495 555 5555</a></div>
-                <div class="text-right"><a class="header_btn fancy" href="#order">Обратный звонок</a></div>
+                <div class="text-right"><a class="header_btn fancy" href="#thanks">Обратный звонок</a></div>
               </div>
             </div>
           </header>
@@ -325,7 +325,7 @@ $title = $titles[$titleindex]['title'];
           <h2 class="o-klube_t title __v2">О карате клубе Дзаншин <span class="d-none d-lg-inline">в Бутово</span></h2>
           <div class="posr">
             <div class="row">
-              <div class="col">
+              <div class="col-md">
                 <div class="o-klube_cnt">
                   <p>Неподражаемый Элвис Пресли, обожаемый Жан-Клод Ван Дамм, непревзойденный Талгат Нигматулин и легендарный Брюс Ли – все они в разное время брали уроки и изучали шотокан каратэ, основы которого стали мощным стимулом для головокружительного успеха и достижений их жизни.</p>
                   <p>Идеальное тело, крепкое здоровье, умение постоять за себя и контролировать собственные эмоции – это лишь малая часть того, что могут дать каждому желающему занятия каратэ и наш «Дзашин» каратэ клуб, основанный в 2005 году.</p>
@@ -636,67 +636,100 @@ $title = $titles[$titleindex]['title'];
         </div>
       </section>
       <!-- /.fotogalereya-->
+      <section class="kontakty">
+        <div class="container-fluid px-0">
+          <div class="row no-gutters">
+            <div class="kontakty__col col-cont col-md-6">
+              <div class="kontakty_box" id="kontakty_box">
+                <h2 class="kontakty_t title __v3">Контакты карате  клуба Дзаншин</h2>
+                <div><a class="tel-link lptracker_phone" href="tel:8(495)9759647">8 (495) 975 96 47</a></div>
+                <div class="kontakty_addr"><span class="kontakty_addr_ic"></span>Северное Бутово, ул. Феодосийская, 11а<br/><a class="kontakty_show-btn tdu extra ttu" data-target="Северное Бутово, ул. Феодосийская, 11а" href="#show_map">Показать на карте</a></div>
+                <div class="kontakty_addr"><span class="kontakty_addr_ic"></span>                    Южное Бутово, Чечерский пр-д, 56<br/><a class="kontakty_show-btn tdu extra ttu" data-target="Южное Бутово, Чечерский пр-д, 56" href="#show_map">Показать на карте</a></div>
+                <div class="kontakty_addr"><span class="kontakty_addr_ic"></span>                    Северное Бутово, ул. Грина, 18 Б<br/><a class="kontakty_show-btn tdu extra ttu" data-target="Северное Бутово, ул. Грина, 18 Б" href="#show_map">Показать на карте</a></div>
+              </div>
+            </div>
+            <div class="kontakty__col col-md-6">
+              <div class="kontakty_map" id="map"></div>
+            </div>
+          </div>
+        </div>
+        <div class="kontakty_map_mobfix" id="map_mobfix"></div>
+      </section>
+      <!-- /.kontakty-->
       <section class="voprosy">
         <div class="container">
-          <h2 class="voprosy_t">Остались вопросы? Задайте их тренеру по карате в Бутово!</h2>
-          <div class="voprosy_descr"><a class="voprosy_phone __mark __a-tdn lptracker_phone" href="tel:+74951351747">+7 495 975 9647</a> или заполните форму обратной связи</div>
-          <div class="voprosy_callback callback">
-            <form class="callback_form" data-name="zakaz-ostalis-voprosy" action="php/send.php" method="post">
-              <input name="title" type="hidden" value="&lt;?php echo $title ?&gt;">
-              <input class="callback_it" name="name" type="text" required="" placeholder="Ваше имя">
-              <input class="callback_it" name="phone" type="tel" required="" placeholder="Ваш телефон">
-              <button class="button callback_btn" type="submit">Отправить</button>
+          <div class="callback">
+            <div class="text-center">
+              <h2>Остались вопросы? </h2>
+              <div class="h4">Задайте их тренеру по карате в Бутово!</div><a class="callback__link-tel lptracker_phone" href="tel:8(495)9759647">8 (495) 975 96 47</a>
+              <div class="h4">Или заполните форму обратной связи</div>
+            </div>
+            <form class="callback_form" data-name="zakaz-besplatnaya-trenirovka" action="php/send.php" method="post">
+              <div class="row">
+                <div class="col-md-4">
+                  <input name="title" type="hidden" value="&lt;?php echo $title ?&gt;">
+                  <input class="callback_it" name="name" type="text" required="" placeholder="Введите ваше имя">
+                </div>
+                <div class="col-md-4">
+                  <input class="callback_it" name="phone" type="tel" required="" placeholder="Введите ваш телефон">
+                </div>
+                <div class="col-md-4">
+                  <button class="button callback_btn w-100" type="submit">Записаться</button>
+                </div>
+              </div>
             </form>
+            <div class="politic text-center">
+              Нажимая кнопку «Записаться», Вы соглашаетесь на обработку <a class="callback__link tdu" href="Soglasie.pdf" target="_blank">персональных данных</a>
+            </div>
           </div>
           <!-- /.callback-->
           <div class="voprosy_dvashketa"></div>
         </div>
       </section>
       <!-- /.voprosy-->
-      <section class="kontakty">
-        <div class="kontakty_map" id="map"></div>
-        <div class="kontakty_map_mobfix" id="map_mobfix"></div>
+      <footer class="footer">
         <div class="container">
-          <div class="kontakty_box" id="kontakty_box">
-            <h2 class="kontakty_t title __v3">Контакты карате клуба в Дзаншин</h2>
-            <div class="kontakty_addr __l"><span class="kontakty_addr_ic"></span>                    Северное Бутово, ул. Грина, 18 Б<br><a class="kontakty_show-btn" data-target="Северное Бутово, ул. Грина, 18 Б" href="#show_map">Показать на карте</a><a class="kontakty_phone __a-tdn lptracker_phone" href="tel:+74959759647">+7 495 975 9647</a></div>
-            <div class="kontakty_addr __r"><span class="kontakty_addr_ic"></span>                    Южное Бутово, Чечерский пр-д, 56<br><a class="kontakty_show-btn" data-target="Южное Бутово, Чечерский пр-д, 56" href="#show_map">Показать на карте</a><a class="kontakty_phone __a-tdn lptracker_phone" href="tel:+74959759647">+7 495 975 9647</a></div>
-            <div class="clearfix"></div>
-            <div class="kontakty_callback callback">
-              <p class="callback_t_p">Запишите ребенка на пробную тренировку</p>
-              <form class="callback_form" data-name="zakaz-kontakty" action="php/send.php" method="post">
-                <input class="callback_it" type="text" required="" placeholder="Ваше имя">
-                <input class="callback_it" type="tel" required="" placeholder="Ваш телефон">
-                <button class="button callback_btn" type="submit">Отправить</button>
-              </form>
+          <div class="row textlmd-left text-center">
+            <div class="col-lg-3 col-md-auto pb-3"><span class="footer_i">©  2005-2018 «Дзаншин»</span></div>
+            <div class="col-lg-4 col-md-auto pb-3"><a class="footer_i" href="mailto:misunov@dzanshin.com">misunov@dzanshin.com</a></div>
+            <div class="col-lg col-md-auto pb-3"><a class="footer_i fancy __dnm" href="#polytics">Политика конфиденциальности</a></div>
+            <div class="col-md-auto pb-3">
+              <div class="soc"><a class="soc__item" href="https://vk.com/dzanshin_karate" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="https://www.facebook.com/Dzanshin" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="https://www.instagram.com/dzanshin.karate" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
             </div>
           </div>
-          <div class="kontakty_return_box __na" id="kontakty_return_box"><a class="kontakty_return_btn" href="#return_kontakty">Вернуться к контактам</a></div>
-          <!-- /.callback-->
-        </div>
-      </section>
-      <!-- /.kontakty-->
-      <footer class="footer">
-        <div class="container"><span class="footer_i">©  2005-2018 «Дзаншин»</span><a class="footer_i" href="mailto:info@dzanshin.com">info@dzanshin.com</a><a class="footer_i footer_phone __a-tdn lptracker_phone" href="tel:+74959759647">+7 495 975 9647</a><a class="footer_i fancy __dnm" href="#polytics">Политика конфиденциальности</a><span class="footer_i __ds">Создание и продвижение сайта - AMisunov.ru совместно с А. Коломыцев</span>
-          <div class="social __v2 footer_i __r footer_social"><a class="social_lk __vk" href="https://vk.com/dzanshin_karate"></a><a class="social_lk __fb" href="https://www.facebook.com/Dzanshin"></a><a class="social_lk __insta" href="https://www.instagram.com/dzanshin.karate"></a></div>
-          <div class="clearfix"></div><a class="footer_i fancy __dm footer_i __r" href="#polytics"><br>Политика конфиденциальности</a><br><span class="__dns">Создание и продвижение сайта - AMisunov.ru совместно с А. Коломыцев</span>
+          <div class="text-center"><span>Создание и продвижение сайта - <a href="http://amisunov.ru/" target="_blank">Amisunov.ru</a></span></div>
         </div>
       </footer>
       <!-- /.footer-->
       <div class="modal" id="order">
         <div class="modal_cnt __form">
-          <p class="modal_t">Заказать звонок</p>
+          <div class="h3 extra text-center mb-3">Заказать бесплатный звонок</div>
           <form class="modal_form" data-name="zakaz-modal" action="php/send.php">
-            <input name="title" type="hidden" value="&lt;?php echo $title ?&gt;">
-            <input class="modal_form_it" name="name" type="text" required="" placeholder="Ваше имя">
-            <input class="modal_form_it" name="phone" type="tel" required="" placeholder="Ваш телефон">
-            <button class="button modal_form_btn" type="submit">Отправить</button>
+            <div class="row">
+              <div class="col-md-4">
+                <input name="title" type="hidden" value="&lt;?php echo $title ?&gt;"/>
+                <input class="callback_it" name="name" type="text" required="" placeholder="Введите ваше имя"/>
+              </div>
+              <div class="col-md-4">
+                <input class="callback_it" name="phone" type="tel" required="" placeholder="Введите ваш телефон"/>
+              </div>
+              <div class="col-md-4">
+                <button class="button callback_btn w-100" type="submit">Заказать</button>
+              </div>
+            </div>
+            <div class="politic text-center">
+              Нажимая кнопку «Записаться», Вы соглашаетесь на обработку <a class="link tdu" href="Soglasie.pdf" target="_blank">персональных данных</a>
+            </div>
           </form>
         </div>
       </div>
       <div class="modal" id="thanks">
         <div class="modal_cnt __msg">
-          <p class="modal_t">Спасибо!</p><span class="modal_tx">Ваше сообщение отправлено</span><br><img src="#" data-lazy="img/msg.png" alt="Ваше сообщение отправлено">
+          <div class="text-center"><img src="img/Shape_10.svg" alt="alt"/>
+            <div class="h3 extra mb-3">Спасибо! Ваша заявка получена</div><br/>
+            <div class="h6">Посмотрите, как проходят наши тренировки</div>
+          </div>
         </div>
       </div>
       <div class="modal" id="error">
@@ -718,9 +751,9 @@ $title = $titles[$titleindex]['title'];
         <div class="modal_cnt __story">
           <div class="trener-story">
             <div class="trener-story_content">
-              <div class="trener-story_img"><img src="#" data-lazy="img/aleksandr-misunov.jpg" alt="АЛЕКСАНДР МИСУНОВ"></div><span class="h1">личная история</span><span class="h2">Как я получил черный пояс</span>
+              <div class="trener-story_img"><img data-lazy="img/aleksandr-misunov.jpg" src="#" alt="АЛЕКСАНДР МИСУНОВ"/></div><span class="h1">личная история</span><span class="h2">Как я получил черный пояс</span>
               <p>Люди часто спрашивают – легко ли получить черный пояс? Много ли нужно тренироваться? И есть ли трудности? Мой ответ на эти вопросы очень простой – черный пояс это годы тренировок, литры пролитого пота и масса усилий.</p><span class="h2">Как я пришел в карате</span>
-              <p>Как и многих ребят в карате меня привела мама, за что я ей очень благодарен.<br>                        Мы жили в небольшом пригороде города Ухта и активностей для ребят в нашем поселке было не так много. В нашей школе было несколько секций. Я год занимался самбо и после того, как секцию закрыли перешел в карате. Одно из самых ярких впечатлений, которое осталось с того времени – это тренер и его помощник с бамбуковой палкой, которой нам частенько прилетало за наши ошибки и лень. Мы всегда были в тонусе, ни на минуту не расслаблялись. В нас развивали не только физическую силу, но и духовность в перемежку с философией, благодаря чему мы никогда не обижали других детей и старались всем помогать. Спасибо моему первому тренеру - А.В. Абрамову за то, что именно он открыл для меня “истину карате” и привил любовь к этому виду спорта.</p><span class="h2">Черный пояс. А долго ли к нему идти? </span>
+              <p>Как и многих ребят в карате меня привела мама, за что я ей очень благодарен.<br/>                        Мы жили в небольшом пригороде города Ухта и активностей для ребят в нашем поселке было не так много. В нашей школе было несколько секций. Я год занимался самбо и после того, как секцию закрыли перешел в карате. Одно из самых ярких впечатлений, которое осталось с того времени – это тренер и его помощник с бамбуковой палкой, которой нам частенько прилетало за наши ошибки и лень. Мы всегда были в тонусе, ни на минуту не расслаблялись. В нас развивали не только физическую силу, но и духовность в перемежку с философией, благодаря чему мы никогда не обижали других детей и старались всем помогать. Спасибо моему первому тренеру - А.В. Абрамову за то, что именно он открыл для меня “истину карате” и привил любовь к этому виду спорта.</p><span class="h2">Черный пояс. А долго ли к нему идти? </span>
               <p>Для каждого путь к черному поясу свой. Кто-то к нему идет в течение десятилетий, кто-то в течение нескольких лет. Кто-то (наверное, большинство) не доходят до него совсем. Я начал заниматься карате в 1995 году, а I ДАН получил в 2005 – это мой путь длительностью в 10 лет от белого пояса к черному, это моя работа и мои усилия. Сейчас у меня II дан и в планах III. Всего в карате 10 данов. Обычно человек сдает на первые 3-4 дана экзамены, а дальнейшие ступени ему присуждаются за вклад в развитие карате. Есть к чему стремиться;)</p>
               <p>Спасибо С.В. Васильеву - моему текущему тренеру и наставнику за то, что не дает останавливаться на достигнутом.</p><span class="h2">А было ли сложно?</span>
               <p>И сложно было и иногда хотелось сдаться. Каждый каратист проходит через это. Кто-то бросает мечту о черном поясе – сдается и уходит из-за сильной нагрузки, кто-то сдается из-за проигрышей, кто-то сдается из-за того, что думал, что будет легко, а оказывается все совсем наоборот. В карате нужно усердно работать, постоянно расти и развиваться. Только так можно достичь результата. Твои достижения в карате прямопропорциональны твоим усилиям. Почему я не сдался? Каждый раз, когда меня посещали мысли о том, что пора уходить, я оборачивался назад. Оборачивался на те годы тренировок, вспоминал, через что мне пришлось пройти, чтобы оказаться там, где я есть. Мне было жалко затраченных сил, чтобы просто сдаться и все бросить и я делал шаг вперед, приближаясь каждый раз к своей мечте о черном поясе.</p>
@@ -739,7 +772,7 @@ $title = $titles[$titleindex]['title'];
         <div class="modal_cnt __story">
           <div class="trener-story">
             <div class="trener-story_content">
-              <div class="trener-story_img"><img src="#" data-lazy="img/anton-kolomycev.jpg" alt="АНТОН КОЛОМЫЦЕВ"></div>
+              <div class="trener-story_img"><img data-lazy="img/anton-kolomycev.jpg" src="#" alt="АНТОН КОЛОМЫЦЕВ"/></div>
             </div>
             <div class="trener-story_footer">
               <div class="trener-story_footer_link"><a href="tel:+79687223081">+7 968 722 3081</a></div>
