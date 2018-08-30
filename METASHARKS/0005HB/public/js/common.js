@@ -70,31 +70,28 @@
 
 
     // скрывает моб меню
-    if (w>991){
-       $(".toggle-mnu-1").removeClass("on");
-        // $("body").removeClass("fixed");
-        $(".hidden-mnu").removeClass("active");
-        $("body").removeClass("fixed");
-    }
+  
     var topH=$("header ").innerHeight();
-    if($(this).scrollTop()>topH){
-                    $('.top-nav  ').addClass('fixed');
 
-                }
-                else if ($(this).scrollTop()<topH){
-                    $('.top-nav  ').removeClass('fixed');
-
-                }
     $(window).scroll(function(){
                 if($(this).scrollTop()>topH){
                     $('.top-nav  ').addClass('fixed');
                 }
-                else if ($(this).scrollTop()<topH){
+                else  {
                     $('.top-nav  ').removeClass('fixed');
                 }
             });
        // конец добавил
   }
+  
+  if (window.matchMedia("(min-width: 992px)").matches) {
+
+       $(".toggle-mnu-1").removeClass("on");
+        // $("body").removeClass("fixed");
+        $(".hidden-mnu").removeClass("active");
+        $("body").removeClass("fixed");
+  }
+
 
   $(window).resize(function() {
     heightses();
@@ -174,7 +171,9 @@ var   arrl2 = (' <div class="l">'+ icon),
       watchOverflow: true,
       spaceBetween: 0,
       freeMode: true,
-      slidesPerGroup: 3,
+      watchOverflow: true,
+			slidesPerGroup: 3,
+			
        // centeredSlides: true,
       loop: true,
       loopFillGroupWithBlank: true,

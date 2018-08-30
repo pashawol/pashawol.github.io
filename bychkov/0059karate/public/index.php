@@ -1,0 +1,1091 @@
+<?php
+include 'php/config.php';
+
+// Случайный заголовок
+$titleindex = array_rand($titles);
+$titleview = $titles[$titleindex]['view'];
+$title = $titles[$titleindex]['title'];
+?>
+<!DOCTYPE html>
+ 
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Карате для детей - школы в Северном и Южном Бутово | Дзаншин</title>
+    <meta name="description" content="Карате для детей в Северном и Южном Бутово. Клуб Дзаншин. Лига профессионалов карате-до «ПРОФИ».">
+    <meta name="keywords" content="каратэ карате для детей в южном северном бутово секция клуб школа дзаншин dzanshin karate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Карате для детей - школы в Северном и Южном Бутово | Дзаншин">
+    <meta property="og:site_name" content="Карате для детей - школы в Северном и Южном Бутово | Дзаншин">
+    <meta property="og:url" content="http://karate.dzanshin.com/">
+    <meta property="og:description" content="Дзаншин - клуб карате для детей в Северном и Южном Бутово. Научим постоять за себя, воспитаем мужской характер, укрепим здоровье, займем ребенка полезным, разовьем навыки общения, адаптируем к реалиям мира">
+    <meta property="og:image" content="img/og.png">
+    <meta property="og:type" content="product">
+    <meta name="twitter:card" content="product">
+    <meta name="twitter:site" content="http://karate.dzanshin.com/">
+    <meta name="twitter:title" content="Карате для детей - школы в Северном и Южном Бутово | Дзаншин">
+    <meta name="twitter:description" content="Дзаншин - клуб карате для детей в Северном и Южном Бутово. Научим постоять за себя, воспитаем мужской характер, укрепим здоровье, займем ребенка полезным, разовьем навыки общения, адаптируем к реалиям мира">
+    <meta name="twitter:image:src" content="img/og.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+		<link href="css/main.min.css" rel="stylesheet">
+		<meta name="theme-color" content="#b5060b">
+  </head>
+  <body>
+    <!-- LPTracker-->
+    <!--if !IE| [if !IE]
+    -->
+    <!-- <noindex>
+      <script src="data:text/javascript;charset=utf-8;base64,ZnVuY3Rpb24gbG9hZHNjcmlwdChlLHQpe3ZhciBuPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInNjcmlwdCIpO24uc3JjPSIvL2xwdHJhY2tlci5ydS9hcGkvIitlO24ub25yZWFkeXN0YXRlY2hhbmdlPXQ7bi5vbmxvYWQ9dDtkb2N1bWVudC5oZWFkLmFwcGVuZENoaWxkKG4pO3JldHVybiAxfXZhciBpbml0X2xzdGF0cz1mdW5jdGlvbigpe2xzdGF0cy5zaXRlX2lkPTE2NjAwO2xzdGF0cy5yZWZlcmVyKCl9O3ZhciBqcXVlcnlfbHN0YXRzPWZ1bmN0aW9uKCl7alFzdGF0Lm5vQ29uZmxpY3QoKTtsb2Fkc2NyaXB0KCJzdGF0c19hdXRvLmpzIixpbml0X2xzdGF0cyl9O2xvYWRzY3JpcHQoImpxdWVyeS0xLjEwLjIubWluLmpzIixqcXVlcnlfbHN0YXRzKQ==" async=""></script>
+    </noindex>-->
+    <!-- [endif]-->
+    <!-- /LPTracker-->
+    <!--if lt IE 8
+    p.browserupgrade
+    	| Вы используете 
+    	strong старый
+    	|  браузер. Пожалуйста 
+    	a(href='http://browsehappy.com/') обновите свой браузер
+    	| 
+    -->
+    <div class="main-wrapper">
+      <section class="offer">
+        <div class="container">
+          <header class="header">
+            <div class="row">
+              <div class="col-sm col-auto"><a class="header_logo" href="/"></a></div>
+              <div class="col-sm-auto order-sm-0 order-last">
+                <div class="soc"><a class="soc__item" href="https://vk.com/dzanshin_karate" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="https://www.facebook.com/Dzanshin" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="https://www.instagram.com/dzanshin.karate" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+              <div class="col-sm-auto col">
+                <div class="text-right"><a class="header_phone __dnm __dns lptracker_phone" href="tel:+74959759647">+7 (495) 975 9647</a></div>
+                <div class="text-right"><a class="header_btn fancy" href="#order" data-order="Обратный звонок с шапки">Обратный звонок</a></div>
+              </div>
+            </div>
+          </header>
+          <!-- /.header-->
+          <h1 class="offer_t"> <span class="text-primary">Карате для детей </span>в&nbsp;Северном и&nbsp;Южном Бутово
+            <!-- ?php echo $titleview ?-->
+          </h1>
+          <ul>
+            <li>Наш опыт в тренерстве карате с 2005 г.
+              <svg class="icon icon-head-i-1 ">
+                <use xlink:href="img/svg/sprite.svg#head-i-1"></use>
+              </svg>
+            </li>
+						<li>5 школ для занятий - 
+							<a class="tdu scroll-link" href="#kontakty">Грина, 18 Б</a>, 
+							<a class="tdu scroll-link" href="#kontakty">Чечерский, 56</a>
+							, <a class="tdu scroll-link" href="#kontakty">Бартеневская, 17  </a>
+							, <a class="tdu scroll-link" href="#kontakty">Поляны, 53 </a>
+							и  <a class="tdu scroll-link" href="#kontakty">бул. Адмирала Ушакова, 4</a>
+              <svg class="icon icon-head-i-2 ">
+                <use xlink:href="img/svg/sprite.svg#head-i-2"></use>
+              </svg>
+            </li>
+            <li>> 110 учеников в настоящее время
+              <svg class="icon icon-head-i-3 ">
+                <use xlink:href="img/svg/sprite.svg#head-i-3"></use>
+              </svg>
+            </li>
+          </ul>
+          <div class="d-sm-none"><a class="btn btn-lg btn-primary btn-block fancy h5" href="#order">Записаться на пробную  тренировку</a></div>
+          <div class="offer_callback callback d-none d-sm-block">
+            <div class="h3 text-center">Запишите ребенка на пробную тренировку</div>
+            <form class="callback_form" data-name="zakaz-pervyy-ekran" action="php/send.php"  >
+              <div class="row">
+                <div class="col-md-4">
+                  <input name="title" type="hidden" value="Заявка "/>
+                  <input class="callback_it" name="name" type="text"  placeholder="Введите ваше имя"/>
+                </div>
+                <div class="col-md-4">
+                  <input class="callback_it" name="phone" type="tel" required="" placeholder="Введите ваш телефон"/>
+                </div>
+                <div class="col-md-4">
+                  <button class="button callback_btn w-100" type="submit">Записаться</button>
+                </div>
+              </div>
+            </form>
+            <div class="politic text-center">
+              Нажимая кнопку «Записаться», Вы соглашаетесь на обработку <a class="link tdu fancy" href="#polytics" target="_blank">персональных данных</a>
+            </div>
+          </div>
+          <!-- /.callback-->
+          <div class="offer_shket"></div>
+        </div>
+      </section>
+      <!-- /.offer-->
+      <!-- start s-number-->
+      <div class="s-number section" id="s-number">
+        <div class="container">
+          <h2 class="video-block_t title __v6">Карате клуб Дзаншин</h2>
+          <div class="row">
+                <div class="col-md-6"><a class="s-number__item scroll-link" href="#trenery" style="background-image: url(img/number-1.jpg);">
+                  <div class="s-number__title"><span class="s-number__bigger">22 </span><span>года</span>
+                  </div>
+                  <div class="s-number__caption">Опыт в карате
+                  </div></a>
+                </div>
+                <!-- .col-6-->
+                <div class="col-md-6"><a class="s-number__item scroll-link" href="#o-klube" style="background-image: url(img/number-2.jpg);">
+                  <div class="s-number__title"><span class="s-number__bigger">14 </span><span>лет</span>
+                  </div>
+                  <div class="s-number__caption">Тренерской работы
+                  </div></a>
+                </div>
+                <!-- .col-6-->
+                <div class="col-md-6"><a class="s-number__item scroll-link" href="#ucheniki" style="background-image: url(img/number-3.jpg);">
+                  <div class="s-number__title"><span class="s-number__bigger">&gt; 110</span><span></span>
+                  </div>
+                  <div class="s-number__caption">Учеников
+                  </div></a>
+                </div>
+                <!-- .col-6-->
+                <div class="col-md-6"><a class="s-number__item scroll-link" href="#kontakty" style="background-image: url(img/number-4.jpg);">
+                  <div class="s-number__title"><span class="s-number__bigger">5 </span><span>школ</span>
+                  </div>
+                  <div class="s-number__caption">Для занятий
+                  </div></a>
+                </div>
+                <!-- .col-6-->
+          </div>
+        </div>
+      </div>
+      <!-- end s-number-->
+      <section class="preimushchestva">
+        <div class="container">
+          <h2 class="preimushchestva_t title __v1">Чему мы&nbsp;научим <span class="d-none d-md-inline">в&nbsp;спортивной  секции в<span class="text-primary">&nbsp;Бутово</span></span></h2>
+          <div class="preimushchestva_i">
+            <div class="row">
+              <div class="col-lg-auto"><img class="preimushchestva_img" src="img/preimushchestva/preimushchestva-1.png" alt="Перимущества карате 1"/></div>
+              <div class="col">
+                <div class="preimushchestva_i_cnt">
+                  <div class="preimushchestva_i_cnt_p">Научим постоять за себя</div>
+                  <p>Умение отстаивать собственные интересы, сказать решительное «нет», когда этого требует ситуация, способность постоять за себя – всему этому ребенка следует учить с ранних лет. Тогда он вырастает внутренне подготовленным к любой конфликтной ситуации, а в случае необходимости способен с достоинством выйти из нее. </p>
+                  <p>Запишите своего ребенка в наш <a class="scroll-link tdu scroll-link" href=".besplatnaya-trenirovka">Клуб Дзаншин </a>, и мы вооружим его необходимыми навыками общения в любой конфликтной ситуации. Мы научим его основным приемам самообороны, которые помогут ему постоять за себя. А регулярные тренировки сделают его организм крепким, волю железной, а характер непоколебимым.<br/><a class="scroll-link ttu extra h5 tdu mt-2" href=".besplatnaya-trenirovka">Записаться в клуб </a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preimushchestva_i">
+            <div class="row">
+              <div class="col-lg-auto"><img class="preimushchestva_img" src="img/preimushchestva/preimushchestva-2.png" alt="Перимущества карате 2"/></div>
+              <div class="col">
+                <div class="preimushchestva_i_cnt">
+                  <div class="preimushchestva_i_cnt_p">Воспитаем мужской характер</div>
+                  <p>Настоящий мужчина – это образчик порядочности, честности, трудолюбия и галантных манер. Такой мужчина всегда открыт и не лукавит, а в случае необходимости умеет постоять за себя и своих близких. Он всегда протянет руку помощи слабому и никогда не станет унижаться. Одно «НО» - настоящими мужчинами не рождаются. Ими становятся, ежедневно закаляя свой характер и развивая собственный потенциал.</p>
+                  <p>Хотите, чтоб ваш сын вырос настоящим мужчиной? Тогда запишите его на занятия в Клуб Дзаншин, где опытные и мудрые наставники проведут его по нелегкому пути формирования мужского характера. Где он день за днем будет становиться мудрее, сильнее, справедливее и вырастет настоящим мужчиной.<br/><a class="scroll-link ttu extra h5 tdu mt-2" href=".besplatnaya-trenirovka">Записаться в клуб </a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preimushchestva_i">
+            <div class="row">
+              <div class="col-lg-auto"><img class="preimushchestva_img" src="img/preimushchestva/preimushchestva-3.png" alt="Перимущества карате 3"/></div>
+              <div class="col">
+                <div class="preimushchestva_i_cnt">
+                  <div class="preimushchestva_i_cnt_p">Укрепим здоровье</div>
+                  <p>Основа здоровья ребенка – это его физическая активность. Только регулярные занятия спортом запускают в организме ребенка необходимый клеточный метаболизм, обеспечивающий правильный обмен веществ и отвечающий за насыщение кислородом всех органов и систем. В противном случае, без достаточной физической активности, организм ребенка становится хилым, а сам он начинает болеть, отставая в развитии от своих сверстников.</p>
+                  <p>Занятия в нашем карате Клубе Дзаншин сполна компенсируют потребность ребенка в физической активности. Его организм начнет формироваться естественным, заложенным самой природой путем. <br/><a class="scroll-link ttu extra h5 tdu mt-2" href=".besplatnaya-trenirovka">Записаться в клуб </a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preimushchestva_i">
+            <div class="row">
+              <div class="col-lg-auto"><img class="preimushchestva_img" src="img/preimushchestva/preimushchestva-4.png" alt="Перимущества карате 4"/></div>
+              <div class="col">
+                <div class="preimushchestva_i_cnt">
+                  <div class="preimushchestva_i_cnt_p">Займем ребенка полезным</div>
+                  <p>Компьютер, планшет, телефон и прочие гаджеты стали настоящими врагами наших детей. Проводя за ними дни напролет, ребенок не только лишает себя живого общения со сверстниками, культивируя собственные страхи и комплексы, но и гробит свое здоровье, в результате чего у него развивается сколиоз и снижается острота зрения.</p>
+                  <p> <a class="tdu scroll-link" href=".besplatnaya-trenirovka">Запишите</a> 
+                    своего ребенка на занятия каратэ в наш Дзаншин Клуб, и мы увлечем его действительно полезным занятием. Регулярные спортивные тренировки не только разовьют его физически и укрепят здоровье, но и будут способствовать формированию твердого характера. Ребенок научится ставить перед собой цели и добиваться их.<br/><a class="scroll-link ttu extra h5 tdu mt-2" href=".besplatnaya-trenirovka">Записаться в клуб </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preimushchestva_i">
+            <div class="row">
+              <div class="col-lg-auto"><img class="preimushchestva_img" src="img/preimushchestva/preimushchestva-5.png" alt="Перимущества карате 5"/></div>
+              <div class="col">
+                <div class="preimushchestva_i_cnt">
+                  <div class="preimushchestva_i_cnt_p">Разовьем навыки общения</div>
+                  <p>Все дети от рождения разные и если для кого-то овладение навыками общения не представляет особого труда, то для других, в силу застенчивости, это становится настоящей проблемой. Раскрыть потенциал ребенка, сделать его открытым, общительным можно только в условиях положительной и дружелюбной атмосферы.</p>
+                  <p>Когда младшие видят в старших ребятах настоящих друзей, а старшие полностью доверяют своим наставникам. Так день за днем ребенок станет общительным и будет с легкостью идти на контакт. Запишите своего ребенка в наш Клуб Дзаншин, где он научится не только навыкам общения, но и сможет раскрыть весь свой  потенциал.<br/><a class="scroll-link ttu extra h5 tdu mt-2" href=".besplatnaya-trenirovka">Записаться в клуб </a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="preimushchestva_i">
+            <div class="row">
+              <div class="col-lg-auto"><img class="preimushchestva_img" src="img/preimushchestva/preimushchestva-6.png" alt="Перимущества карате 6"/></div>
+              <div class="col">
+                <div class="preimushchestva_i_cnt">
+                  <div class="preimushchestva_i_cnt_p">Адаптируем к реалиям мира</div>
+                  <p>Судьба не всегда бывает благосклонна, даже к своим любимчикам. Она способна преподнести неожиданный удар, моральный или физический, к которому ребенок должен быть готов и уметь с честью выйти из неприятной ситуации.</p>
+                  <p>Запишите ребенка на занятия в наш карате Клуб Дзаншин, и мы покажем ему, как распознавать добро и зло, искренность и лукавство, а главное – мы научим его держать удар судьбы и не бояться падений, без которых не бывает громких побед. Мы сделаем его характер закаленным, а чувство справедливости обостренным и ваш ребенок вырастет сильным, достойным человеком.<br/><a class="scroll-link ttu extra h5 tdu mt-2" href=".besplatnaya-trenirovka">Записаться в клуб </a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.preimushchestva-->
+      <!-- start s-test-->
+      <div class="s-test section" id="s-test">
+        <div class="container">
+          <div class="s-test__inner text-center"><img class="d-none d-sm-block" src="img/test-img.png" alt="alt"/>
+            <div class="s-test__text">
+              <div class="h3 extra">Пройдите тест за&nbsp;1&nbsp;минуту и&nbsp;узнайте стоит&nbsp;ли Вашему ребенку заниматся карате?</div><a class="s-test__btn btn btn-primary ttu fancy" href="#modal-test"> Пройти тест</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-test-->
+      <div class="video-block">
+        <div class="container">
+          <h2 class="video-block_t title __v6 d-none d-md-block">Посмотрите видео с наших тренировок в Бутово</h2>
+          <h2 class="video-block_t title __v7 d-md-none">Наши карате видео</h2>
+          <div class="video-block_cnt">
+            <div class="video-block_slider js-video-slider">
+                      <div d="d">
+                        <div class="video-block_slider_i">
+                          <div class="swiper-lazy-preloader"></div>
+                          <iframe class="iframe-hidden" allowfullscreen="" data-src="https://www.youtube.com/embed/riQI-bAEqXE?ecver=2"></iframe>
+                        </div>
+                      </div>
+                      <div d="d">
+                        <div class="video-block_slider_i">
+                          <div class="swiper-lazy-preloader"></div>
+                          <iframe class="iframe-hidden" allowfullscreen="" data-src="https://www.youtube.com/embed/Sk2-ixXlJSo?ecver=2"></iframe>
+                        </div>
+                      </div>
+                      <div d="d">
+                        <div class="video-block_slider_i">
+                          <div class="swiper-lazy-preloader"></div>
+                          <iframe class="iframe-hidden" allowfullscreen="" data-src="https://www.youtube.com/embed/9KZ4SaaHxfI?ecver=2"></iframe>
+                        </div>
+                      </div>
+                      <div d="d">
+                        <div class="video-block_slider_i">
+                          <div class="swiper-lazy-preloader"></div>
+                          <iframe class="iframe-hidden" allowfullscreen="" data-src="https://www.youtube.com/embed/YfIlKS3ig8Q?ecver=2"></iframe>
+                        </div>
+                      </div>
+                      <div d="d">
+                        <div class="video-block_slider_i">
+                          <div class="swiper-lazy-preloader"></div>
+                          <iframe class="iframe-hidden" allowfullscreen="" data-src="https://www.youtube.com/embed/XafFTs1_gEI?ecver=2"></iframe>
+                        </div>
+                      </div>
+                      <div d="d">
+                        <div class="video-block_slider_i">
+                          <div class="swiper-lazy-preloader"></div>
+                          <iframe class="iframe-hidden" allowfullscreen="" data-src="https://www.youtube.com/embed/qldt_5jMGPU?ecver=2"></iframe>
+                        </div>
+                      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="besplatnaya-trenirovka">
+        <div class="container">
+          <div class="callback">
+            <div class="h3 text-center">Запишите ребенка на пробную тренировку</div>
+            <div class="h5 text-center">Oна ни&nbsp;к&nbsp;чему не&nbsp;обязывает, но&nbsp;с&nbsp;вероятностью&nbsp;98%  можем сказать, что вашему ребенку у&nbsp;нас понравится</div>
+            <form class="callback_form" data-name="zakaz-besplatnaya-trenirovka" action="php/send.php" method="post">
+              <div class="row">
+                <div class="col-md-4">
+                  <input name="title" type="hidden" value="<?php echo $title ?>">
+                  <input class="callback_it" name="name" type="text"  placeholder="Введите ваше имя">
+                </div>
+                <div class="col-md-4">
+                  <input class="callback_it" name="phone" type="tel" required="" placeholder="Введите ваш телефон">
+                </div>
+                <div class="col-md-4">
+                  <button class="button callback_btn w-100" type="submit">Записаться</button>
+                </div>
+              </div>
+            </form>
+            <div class="politic text-center">
+              Нажимая кнопку «Записаться», Вы соглашаетесь на обработку <a class="link tdu fancy" href="#polytics" target="_blank">персональных данных</a>
+            </div>
+          </div>
+          <!-- /.callback-->
+        </div>
+        <!-- /.besplatnaya-trenirovka-->
+      </section>
+      <section class="o-klube text-white" id="o-klube">
+        <div class="container">
+          <h2 class="o-klube_t title __v2">О карате клубе Дзаншин <span class="d-none d-lg-inline">в Бутово</span></h2>
+          <div class="posr">
+            <div class="row">
+              <div class="col-md">
+                <div class="o-klube_cnt">
+                  <p>Неподражаемый Элвис Пресли, обожаемый Жан-Клод Ван Дамм, непревзойденный Талгат Нигматулин и легендарный Брюс Ли – все они в разное время брали уроки и изучали шотокан каратэ, основы которого стали мощным стимулом для головокружительного успеха и достижений их жизни.</p>
+                  <p>Идеальное тело, крепкое здоровье, умение постоять за себя и контролировать собственные эмоции – это лишь малая часть того, что могут дать каждому желающему занятия каратэ и наш «Дзашин» каратэ клуб, основанный в 2005 году.</p>
+                  <p>История Клуба «Дзаншин» - это, прежде всего, достижения его воспитанников, которые уже давно и по праву занимают призовые места на соревнованиях различного уровня, а сам Клуб является лидером Лиги профессионалов каратэ-до «Профи». </p>
+                  <p>И в этом немалая заслуга создателей и наставников Клуба – Антона Коломыцева и Александра Мисунова. Являясь обладателями черных поясов по шотокан каратэ, они продолжают путь собственного развития и совершенствования, искренне делясь знаниями, опытом и мастерством со своими воспитанниками.</p>
+                </div>
+              </div>
+              <div class="col-auto"><img class="o-klube_img" src="img/o-klube.png" alt="О клубе"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.o-klube-->
+      <section class="trenery" id="trenery">
+        <div class="trenery_i __v1">
+          <div class="container">
+            <h2 class="trenery_t title __v5">Тренеры карате в Северном и Южном Бутово</h2>
+            <div class="row">
+              <div class="col-md-auto align-self-end order-md-0 order-last text-center"><img class="trenery_i_img __dns" src="img/aleksandr-misunov.png" alt="Александр Мисунов"/></div>
+              <div class="col">
+                <div class="row">
+                  <div class="col-md">
+                    <div class="trenery_i_col __i-1">
+                      <p class="trenery_i_col_p __i-1">Александр Мисунов</p><span class="trenery_i_har"><b>Дата рождения:</b><strong> 11.02.1986</strong></span><span class="trenery_i_har"><b>Начало занятий:</b><strong> сентябрь 1995 г. г. Ухта Республика Коми</strong></span><span class="trenery_i_har"><b>Дата экзамена на пояс:</b><strong> 05.12.1996</strong></span><span class="trenery_i_har"><b>Дата экзамена на черный пояс:</b><strong> 22.05.2005</strong></span><span class="trenery_i_har"><b>Разряд сейчас:</b><strong> II ДАН</strong></span><span class="trenery_i_har"><b>Когда начал тренировать:</b><strong> 11.02.2005</strong></span><span class="trenery_i_har"><b>Специализация карате:</b><strong> ката </strong><span>(техника поединков с воображаемым противником)</span></span>
+                    </div>
+                  </div>
+                  <!-- .col-md-->
+                  <div class="col-md">
+                    <div class="trenery_i_col __i-2"><span class="trenery_i_har"><b class="dop-title">Дополнительные сведения:</b> Закончил школу с золотой медалью, высшее образование РГУ нефти и газа им. И.М. Губкина (инженер трубопроводного транспорта).</span><span class="trenery_i_har"><a class="__a-tdn link-tel" href="tel:+79168245247">+7 916 824 52 47</a></span><span class="trenery_i_har"><a class="link-mail" href="mailto:misunov@dzanshin.com">misunov@dzanshin.com</a></span>
+                      <div class="trenery_i_footer">
+                        <div class="trenery_i_footer_i">
+                          <div class="soc"><a class="soc__item" href="https://vk.com/amisunov" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="https://www.facebook.com/alexander.misunov" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="https://www.instagram.com/alexmisun/" target="_blank"><i class="fab fa-instagram"></i></a>
+                          </div>
+                        </div>
+                        <div class="trenery_i_footer_i"><a class="btn btn btn-block btn-primary fancy" href="#trener1">ЧИТАТЬ ЛИЧНУЮ ИСТОРИЮ</a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="trenery_i __v2">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-auto align-self-end order-md-0 order-last text-center"><img class="trenery_i_img __i-2 __dns" src="img/anton-kolomycev.png" alt="Антон Коломыцев"/></div>
+              <div class="col">
+                <div class="row">
+                  <div class="col-md">
+                    <div class="trenery_i_col __i-1">
+                      <p class="trenery_i_col_p __i-1">Антон Коломыцев</p><span class="trenery_i_har"><b>Дата рождения:</b><strong> 31.07.1988</strong></span><span class="trenery_i_har"><b>Дата экзамена на черный пояс:</b><strong> 15.06.2005</strong></span><span class="trenery_i_har"><b>Разряд сейчас:</b><strong> II ДАН</strong></span><span class="trenery_i_har"><b>Когда начал тренировать:</b><strong> октябрь 2005 г.</strong></span><span class="trenery_i_har"><b>Специализация карате:</b><strong> кумите </strong><span>(прикладные и спортивные бои)</span></span>
+                    </div>
+                  </div>
+                  <!-- .col-md-->
+                  <div class="col-md">
+                    <div class="trenery_i_col __i-2"><span class="trenery_i_har"><b class="dop-title">Дополнительные сведения:</b> Московская государственная академия физической культуры (преподавание каратэ). Среднее техническое образование: ГОУ СПО Политехнический колледж № 31. Высшее образование: Московский технологический университет  по специализации "Менеджмент организаций".</span><span class="trenery_i_har"> <a class="__a-tdn link-tel" href="tel:+7687223081">+7 968 722 30 81</a></span><span class="trenery_i_har"> <a class="link-mail" href="mailto:kolomitsev@dzanshin.com">kolomitsev@dzanshin.com</a></span>
+                      <div class="trenery_i_footer">
+                        <div class="trenery_i_footer_i">
+                          <div class="soc"><a class="soc__item" href="https://vk.com/id108304774" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="https://www.facebook.com/antyanesko" target="_blank"><i class="fab  fa-facebook-f"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.trenery-->
+      <section class="ucheniki" id="ucheniki">
+        <div class="container">
+          <h2 class="ucheniki_t title __v3">Ученики клуба Дзаншин</h2>
+          <div class="ucheniki_cnt">
+            <div class="row">
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-1.jpg" alt="Гаджимагомедов Фуад"/>
+                  <p class="ucheniki_cnt_p">Гаджимагомедов Фуад</p><b>Возраст:</b><strong> 8 лет</strong><br/><b>Занимается:</b><strong> 4 года</strong><br/><b>Пояс:</b><strong style="color:#ff6100"> оранжевый</strong>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-2.jpg" alt="Русаков Сергей"/>
+                  <p class="ucheniki_cnt_p">Русаков Сергей</p><b>Возраст:</b><strong> 13 лет</strong><br/><b>Занимается:</b><strong> 3 года</strong><br/><b>Пояс:</b><strong style="color:#18640e"> зеленый</strong>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-3.jpg" alt="Денисов Олег"/>
+                  <p class="ucheniki_cnt_p">Денисов Олег</p><b>Возраст:</b><strong> 13 лет</strong><br/><b>Занимается:</b><strong> 4 года</strong><br/><b>Пояс:</b><strong style="color:#184d82"> синий</strong>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-4.jpg" alt="Сафронов Владимир"/>
+                  <p class="ucheniki_cnt_p">Сафронов Владимир</p><b>Возраст:</b><strong> 7 лет</strong><br/><b>Занимается:</b><strong> 1 год</strong><br/><b>Пояс:</b><strong style="color: #a9a9a9;"> белый</strong>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-5.jpg" alt="Сызганов Андрей"/>
+                  <p class="ucheniki_cnt_p">Сызганов Андрей</p><b>Возраст:</b><strong> 12 лет</strong><br/><b>Занимается:</b><strong> 3 года</strong><br/><b>Пояс:</b><strong style="color:#ff6100"> оранжевый</strong>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-6.jpg" alt="Леженин Ян"/>
+                  <p class="ucheniki_cnt_p">Леженин Ян</p><b>Возраст:</b><strong> 10 лет</strong><br/><b>Занимается:</b><strong> 3 года</strong><br/><b>Пояс:</b><strong style="color:#ff6100"> оранжевый</strong>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-7.jpg" alt="Сенина Лариса"/>
+                  <p class="ucheniki_cnt_p">Сенина Лариса</p><b>Возраст:</b><strong> 15 лет</strong><br/><b>Занимается:</b><strong> 4 года</strong><br/><b>Пояс:</b><strong style="color:#dca80b"> желтый</strong>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-8.jpg" alt="Ногин Алексей"/>
+                  <p class="ucheniki_cnt_p">Ногин Алексей</p><b>Возраст:</b><strong> 9 лет</strong><br/><b>Занимается:</b><strong> 2 года</strong><br/><b>Пояс:</b><strong style="color:#dca80b"> желтый</strong>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-9.jpg" alt="Долгих Артем"/>
+                  <p class="ucheniki_cnt_p">Долгих Артем</p><b>Возраст:</b><strong> 10 лет</strong><br/><b>Занимается:</b><strong> 1 год</strong><br/><b>Пояс:</b> белый
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-10.jpg" alt="Пискунов Петр"/>
+                  <p class="ucheniki_cnt_p">Пискунов Петр</p><b>Возраст:</b><strong> 12 лет</strong><br/><b>Занимается:</b><strong> 4 года</strong><br/><b>Пояс:</b><strong style="color:#18640e"> зеленый</strong>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-11.jpg" alt="Стрижаков Игорь"/>
+                  <p class="ucheniki_cnt_p">Стрижаков Игорь</p><b>Возраст:</b><strong> 7 лет</strong><br/><b>Занимается:</b><strong> 2 года</strong><br/><b>Пояс:</b><strong style="color:#dca80b"> желтый</strong>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-4 col-sm-6">
+                <div class="ucheniki_i"><img class="ucheniki_i_img" src="img/uchenik-12.jpg" alt="Гусейналиев Рамин"/>
+                  <p class="ucheniki_cnt_p">Гусейналиев Рамин</p><b>Возраст:</b><strong> 12 лет</strong><br/><b>Занимается:</b><strong> 3 года</strong><br/><b>Пояс:</b><strong style="color:#18640e"> зеленый</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.ucheniki-->
+      <section class="otzyvy __ucheniki">
+        <div class="container">
+          <h2 class="otzyvy_t title __v4">Отзывы о Дзаншин карате в Бутово</h2>
+          <div class="otzyvy_nav-tabs"><span class="otzyvy_nav-tabs_i __ac" id="ucheniki-nav" data-tab="ucheniki">Ученики</span><span class="otzyvy_nav-tabs_i" id="roditeli-nav" data-tab="roditeli">Родители</span></div>
+          <div class="tab__slider-js otzyvy_tab __ac">
+            <div class="slider slider-tab-js">
+              <div class="slide">
+                <div class="row">
+                  <div class="slide_col col-lg-6">
+                    <div class="slide_media">
+                      <iframe data-src="https://www.youtube.com/embed/1NKc5QumWsQ" allowfullscreen=""></iframe>
+                    </div>
+                  </div>
+                  <div class="slide_col col-lg-6 __v2">
+                    <h3>МЛАДШАЯ КОМАНДА КАРАТЕ 1356</h3>
+                    <p>Нам нравится заниматься каратэ в Дзаншин Клубе, потому что здесь очень хорошие, веселые и добрые тренера. С ними мы выполняем много разных упражнений - делаем шпагат, качаем пресс, занимаемся на шведской стенке, учимся защищаться. Все это делает нас сильнее и быстрее. Особенно нам нравятся игровые тренировки, на которых бывает очень весело. Здесь мы нашли много новых друзей и стали одной командой. После тренировки нам даже не хочется уходить домой, потому что там скучно и неинтересно, а в Клубе Дзаншин всегда весело и есть чем заняться.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="row">
+                  <div class="slide_col col-lg-6">
+                    <div class="slide_media">
+                      <iframe data-src="https://www.youtube.com/embed/sOurunZhpDs" allowfullscreen=""></iframe>
+                    </div>
+                  </div>
+                  <div class="slide_col col-lg-6 __v2">
+                    <h3>СТАРШАЯ КОМАНДА КАРАТЕ 1356</h3>
+                    <p>В Клуб каратэ Дзаншин мы пришли, чтобы просто не затеряться среди толпы и повысить собственную самооценку. Сегодня все такое одинаковое и серое, что нам просто захотелось заняться чем-то особенным. В итоге мы поняли, что не ошиблись, потому что занятия в Клубе тренируют не только наше тело, но и дух. Нам нравится совершенствоваться и добиваться поставленных целей. И за это мы благодарны своим тренерам. Они настоящие, открытые, добрые и всегда веселые. Они помогают нам во всем и постоянно учат новому. Добиваясь поставленных целей, мы как бы одерживаем победу над самими собой и собственной ленью, и нам это очень нравится.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="row">
+                  <div class="slide_col col-lg-6">
+                    <div class="slide_media">
+                      <iframe data-src="https://www.youtube.com/embed/TU2LphfZ9OI" allowfullscreen=""></iframe>
+                    </div>
+                  </div>
+                  <div class="slide_col col-lg-6 __v2">
+                    <h3>МЛАДШАЯ КОМАНДА КАРАТЕ 1980</h3>
+                    <p>Мы всегда с радостью идем на тренировки в наш Клуб Дзаншин. Здесь никогда не бывает скучно, и каждый день мы узнаем что-то новое. Мы много занимаемся, делаем разные упражнения, учимся защищаться. Мы стали очень сильным и быстрыми и нас стали уважать наши одноклассники. Они нам даже завидуют, когда мы рассказываем о наших тренировках, и тоже хотят начать ходить в наш Клуб. А еще у нас здоровские тренера. Они такие сильные и ловкие и очень добрые. С ними всегда интересно и весело и они всегда нам во всем помогают и поддерживают. Благодаря им мы многому научились и теперь можем защитить не только себя, но и свою семью.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="row">
+                  <div class="slide_col col-lg-6">
+                    <div class="slide_media">
+                      <iframe data-src="https://www.youtube.com/embed/OejmSvZfBCg" allowfullscreen=""></iframe>
+                    </div>
+                  </div>
+                  <div class="slide_col col-lg-6 __v2">
+                    <h3>СТАРШАЯ КОМАНДА КАРАТЕ 1980</h3>
+                    <p>В Клубе Дзаншин нам нравится все! Нам нравится делать упражнения, играть с друзьями, учится новому. Так же нам нравится, что нас учат обороняться и быть сильными, чтобы мы могли защитить себя и свою семью. Здесь прикольно. Мы постоянно чем-то заняты, и время пролетает очень быстро. Еще нам очень нравятся тренера нашего Клуба Дзаншин. Они сильные, умные, веселые и добрые. Они нас учат всему и никогда не ругаются, даже если что-то не получается. Вместе мы учимся преодолевать собственный страх и лень, поэтому мы с каждым днем становимся сильнее и уже ничего не боимся.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab__slider-js otzyvy_tab">
+          <div class="slider slider-tab-js">
+            <div class="slide">
+              <div class="row">
+                <div class="slide_col col-lg-6">
+                  <div class="slide_media">
+                    <iframe class="iframe-hidden"  data-src="https://www.youtube.com/embed/eVz844EyTWw" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+                <div class="slide_col col-lg-6 __v2">
+                  <p class="slide_p">ЭДУАРД ФЕДУЛОВ</p>
+                  <p>Почему мы выбрали карате? Ну, наверное,  это несколько причин: во-первых, хорошая физическая подготовка и физическая нагрузка, во-вторых, это организованность и дисциплина, в-третьих, это повышение у ребёнка веры в самого себя, вера в свои силы. Наверное, всё это возможно благодаря тренерам Александру и Антону. С их стороны я вижу благожелательное и позитивное отношение к ребятам, но вместе с тем, они не допускают излишнего баловства и разболтанности, когда надо словесно приструнят, когда надо физически нагрузят дополнительно. Благодаря этому, обстановка в секции рабочая и дружеская.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="row">
+                <div class="slide_col col-lg-6">
+                  <div class="slide_media">
+                    <iframe class="iframe-hidden"  data-src="https://www.youtube.com/embed/FHZ7y07J7SI" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+                <div class="slide_col col-lg-6 __v2">
+                  <p class="slide_p">НАТАЛЬЯ СЕРОВА</p>
+                  <p>Пришли мы на секцию 2 года назад, когда моему ребёнку было 6 лет, когда он ещё ходил в детский сад. После детского сада оставалось очень много энергии, которую нужно было направить в правильное русло и мы решили найти какую-нибудь секцию, где он выкладывался бы по полной. Поискали в интернете и увидели, что в школе 1980 проходят занятия по карате. В удобное для нас время, 18:30, по понедельникам и четвергам. Позвонили по телефону и тренер пригласил нас на первое пробное бесплатное занятие. Пришли, ребёнку очень понравилось, решили продолжить занятия. Ходим уже 2 года. За эти 2 года уже легко делаем пресс, отжимания, садимся на шпагат. За эти 2 года сдали на 8-й КЮ, на белый пояс с жёлтыми кончиками, успели поучаствовать в соревнованиях, где заняли 3-е место. Не собираемся на этом останавливаться. Цель у нас, чёрный пояс.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="row">
+                <div class="slide_col col-lg-6">
+                  <div class="slide_media">
+                    <iframe class="iframe-hidden"  data-src="https://www.youtube.com/embed/kPx6cJUGMu0" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+                <div class="slide_col col-lg-6 __v2">
+                  <p class="slide_p">НИКИТА ГОЛЕНКОВ</p>
+                  <p>Здравствуйте. Меня Никита зовут, я отец замечательного  шести летнего мальчика Тимофея, который первый год ходит в данную секцию карате. Здесь вообще очень здорово. Здесь два замечательных тренера, которые занимаются с детьми, парни их всех очень сильно любят. Мы занимаемся первый год, даже ещё года нет, и есть очень хорошие результаты. Тиме нравится заниматься карате, уже сдали первый экзамен, есть грамота, так что будем дальше расти и развиваться. Приходите. Здесь здорово.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="row">
+                <div class="slide_col col-lg-6">
+                  <div class="slide_media">
+                    <iframe class="iframe-hidden"  data-src="https://www.youtube.com/embed/KDaG7-JPV0A" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+                <div class="slide_col col-lg-6 __v2">
+                  <p class="slide_p">АННА КОЧЕТКОВА</p>
+                  <p>Я мама Андрея Кочеткова. Мой сын посещает секцию карате уже почти 2 года. Пришёл он заниматься ещё дошкольником и я поначалу подумала, что это совсем не надолго, потому что в этом возрасте ещё очень сложно замотивировать ребёнка, однако через некоторое время увидела горящие глаза ребёнка. Он с таким энтузиазмом рассказывал про то, чем они занимаются на занятии, про своих тренеров и я поняла, что ему начинает нравиться, что он начинает втягиваться в это. Когда он сдал первый экзамен, на 10-й КЮ, на право ношения кимано, получил сертификат, а чуть позже он получил и само кимоно, я увидела что ребёнок прям таки влюбился в карате. Спасибо огромное за это нашим тренерам Александру Сергеевичу и Антону Юрьевичу. Мне очень нравится, как они проводят занятия и очень нравится метод наказания, который они применяют к своим воспитанникам, отжимания на кулаках. Сейчас, совсем недавно, мой сын сдал экзамен на 9-й КЮ и получил заветный Буду паспорт. Теперь он очень гордится этим документом. И я вижу что сейчас для него это стало не просто развлечение, а спорт. Когда нас пригласили поучаствовать в соревнованиях он с удовольствием соглашается. Ему предложили поехать в летний лагерь по карате, он с удовольствием согласился и я естественно его поддержала. Надеюсь что наша дружба с карате на долго. У меня есть ещё младший сын, которого я без раздумья отдам в карате. В общем мне очень нравится, главное конечно же ребёнку.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="row">
+                <div class="slide_col col-lg-6">
+                  <div class="slide_media">
+                    <iframe class="iframe-hidden"  data-src="https://www.youtube.com/embed/o6YltyxeSjM" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+                <div class="slide_col col-lg-6 __v2">
+                  <p class="slide_p">ЖАННА ДЮГАЙ</p>
+                  <p>Мы стали ходить на карате, потому что нашему ребёнку очень нравится. Когда ему говоришь идти на карате, он с удовольствием бежит. Тренерский состав у нас очень приятный, добрый.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="row">
+                <div class="slide_col col-lg-6">
+                  <div class="slide_media">
+                    <iframe class="iframe-hidden"  data-src="https://www.youtube.com/embed/CwwiawWfG8A" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+                <div class="slide_col col-lg-6 __v2">
+                  <p class="slide_p">МАРИНА ПЛОТНИКОВА</p>
+                  <p>Мы ходим на карате в школу № 1174. Нам очень нравится, мы ходим третий год, старший третий год и младший второй год. Очень нравятся тренеры Александр и Антон. Рядом с домом очень удобно. Хорошее отношение, моим детям очень нравится.</p>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="row">
+                <div class="slide_col col-lg-6">
+                  <div class="slide_media">
+                    <iframe class="iframe-hidden"  data-src="https://www.youtube.com/embed/iUZ43jAQhaE" allowfullscreen=""></iframe>
+                  </div>
+                </div>
+                <div class="slide_col col-lg-6 __v2">
+                  <p class="slide_p">СЕРГЕЙ БЕЗБОРОДОВ</p>
+                  <p>Здравствуйте. Мой ребёнок ходит уже полгода на карате. Нам очень нравится, ребёнку тоже нравится. Очень отзывчивые тренеры. Ребёнок стал послушным.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.otzyvy-->
+      <section class="fotogalereya">
+        <div class="container">
+          <h2 class="fotogalereya_t title __v5">Фотогалерея школы карате Дзаншин</h2>
+          <div class="fotogalereya_cnt __ac" id="fotogalereya_slider">
+            <div class="slider gal"><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/1.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/1s.jpg" alt="Фото 1"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/2.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/2s.jpg" alt="Фото 2"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/3.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/3s.jpg" alt="Фото 3"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/4.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/4s.jpg" alt="Фото 4"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/5.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/5s.jpg" alt="Фото 5"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/6.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/6s.jpg" alt="Фото 6"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/7.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/7s.jpg" alt="Фото 7"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/8.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/8s.jpg" alt="Фото 8"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/9.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/9s.jpg" alt="Фото 9"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/10.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/10s.jpg" alt="Фото 10"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/11.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/11s.jpg" alt="Фото 11"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/12.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/12s.jpg" alt="Фото 12"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/13.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/13s.jpg" alt="Фото 13"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/14.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/14s.jpg" alt="Фото 14"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/15.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/15s.jpg" alt="Фото 15"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/16.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/16s.jpg" alt="Фото 16"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/17.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/17s.jpg" alt="Фото 17"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/18.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/18s.jpg" alt="Фото 18"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/19.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/19s.jpg" alt="Фото 19"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/20.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/20s.jpg" alt="Фото 20"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/21.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/21s.jpg" alt="Фото 21"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/22.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/22s.jpg" alt="Фото 22"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/23.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/23s.jpg" alt="Фото 23"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/24.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/24s.jpg" alt="Фото 24"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/25.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/25s.jpg" alt="Фото 25"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/26.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/26s.jpg" alt="Фото 26"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/27.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/27s.jpg" alt="Фото 27"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/28.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/28s.jpg" alt="Фото 28"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/29.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/29s.jpg" alt="Фото 29"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/30.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/30s.jpg" alt="Фото 30"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/31.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/31s.jpg" alt="Фото 31"></a><a class="fotogalereya_i" data-fancybox-group="fotogalereya" href="img/fotogalereya/32.jpg"><img class="fotogalereya_img res-i" src="#" data-lazy="img/fotogalereya/32s.jpg" alt="Фото 32"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /.fotogalereya-->
+      <section class="kontakty" id="kontakty">
+        <div class="container-fluid px-0">
+          <div class="row no-gutters">
+            <div class="kontakty__col col-cont col-md-6">
+              <div class="kontakty_box" id="kontakty_box">
+                <h2 class="kontakty_t title __v3">Контакты карате  клуба Дзаншин</h2>
+								<div><a class="tel-link lptracker_phone" href="tel:8(495)9759647">8 (495) 975 96 47</a></div>
+								
+ 
+								<div c>
+										<a  data-target="Северное Бутово, ул. Грина, 18 Б" href="#show_map" class="kontakty_addr"><span class="kontakty_addr_ic"></span>Северное Бутово, ул. Грина, 18 Б<br/><div class="kontakty_show-btn d-inline-block tdu extra ttu">Показать на карте</div></a>
+								</div>
+								<div	<a data-target="Южное Бутово, Чечерский пр-д, 56" href="#show_map" class="kontakty_addr"><span class="kontakty_addr_ic"></span>Южное Бутово, Чечерский пр-д, 56<br/><div class="kontakty_show-btn d-inline-block tdu extra ttu">Показать на карте</div></a>>
+
+								</div>
+								<div c>
+	<a data-target="Южное Бутово, Бартеневская, 17" href="#show_map" class="kontakty_addr"><span class="kontakty_addr_ic"></span>Южное Бутово, Бартеневская, 17<br/><div class="kontakty_show-btn d-inline-block tdu extra ttu">Показать на карте</div></a>
+								</div>
+								<div c>
+			<a data-target="Южное Бутово, Поляны, 53" href="#show_map" class="kontakty_addr"><span class="kontakty_addr_ic"></span>Южное Бутово, Поляны, 53<br/><div class="kontakty_show-btn d-inline-block tdu extra ttu">Показать на карте</div></a>
+								</div>
+								<div c>
+ <a data-target="бульвар Адмирала Ушакова, 4" href="#show_map" class="kontakty_addr"><span class="kontakty_addr_ic"></span>Южное Бутово, бул. Адмирала Ушакова, 4<br/><div class="kontakty_show-btn d-inline-block tdu extra ttu">Показать на карте</div></a>
+								</div>
+							
+								
+							
+								
+							
+								
+					
+								
+               
+              </div>
+            </div>
+            <div class="kontakty__col col-md-6">
+              <div class="kontakty_map" id="map"></div>
+            </div>
+          </div>
+        </div>
+        <div class="kontakty_map_mobfix" id="map_mobfix"></div>
+      </section>
+      <!-- /.kontakty-->
+      <section class="voprosy">
+        <div class="container">
+          <div class="callback">
+            <div class="text-center">
+              <h2>Остались вопросы? </h2>
+              <div class="h4">Задайте их тренеру по карате в Бутово!</div><a class="callback__link-tel lptracker_phone" href="tel:8(495)9759647">8 (495) 975 96 47</a>
+              <div class="h4">Или заполните форму обратной связи</div>
+            </div>
+            <form class="callback_form" data-name="zakaz-besplatnaya-trenirovka" action="php/send.php" method="post">
+              <div class="row">
+                <div class="col-md-4">
+                  <input name="title" type="hidden" value="Остались вопросы?">
+                  <input class="callback_it" name="name" type="text"  placeholder="Введите ваше имя">
+                </div>
+                <div class="col-md-4">
+                  <input class="callback_it" name="phone" type="tel" required="" placeholder="Введите ваш телефон">
+                </div>
+                <div class="col-md-4">
+                  <button class="button callback_btn w-100" type="submit">Записаться</button>
+                </div>
+              </div>
+            </form>
+            <div class="politic text-center">
+              Нажимая кнопку «Записаться», Вы соглашаетесь на обработку <a class="callback__link tdu fancy" href="#polytics" target="_blank">персональных данных</a>
+            </div>
+          </div>
+          <!-- /.callback-->
+          <div class="voprosy_dvashketa"></div>
+        </div>
+      </section>
+      <!-- /.voprosy-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row textlmd-left text-center">
+            <div class="col-lg-3 col-md-auto pb-3"><span class="footer_i">©  2005-2018 «Дзаншин»</span></div>
+            <div class="col-lg-4 col-md-auto pb-3"><a class="footer_i" href="mailto:misunov@dzanshin.com">misunov@dzanshin.com</a></div>
+            <div class="col-lg col-md-auto pb-3"><a class="footer_i fancy __dnm" href="#polytics">Политика конфиденциальности</a></div>
+            <div class="col-md-auto pb-3">
+              <div class="soc"><a class="soc__item" href="https://vk.com/dzanshin_karate" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="https://www.facebook.com/Dzanshin" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="https://www.instagram.com/dzanshin.karate" target="_blank"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="text-center"><span>Создание и продвижение сайта - amisunov.ru</span></div>
+        </div>
+      </footer>
+      <!-- /.footer-->
+      <div class="modal zoom-anim-dialog mfp-hide modal modal-form" id="order">
+        <div class="modal_cnt __form">
+          <div class="h3 extra text-center mb-3">Заказать бесплатный звонок</div>
+          <form class="modal_form" data-name="zakaz-modal" action="php/send.php">
+            <div class="row">
+              <div class="col-md-4">
+                <input name="title" type="hidden" value="Заявка в модалке"/>
+                <input class="callback_it" name="name" type="text"  placeholder="Введите ваше имя"/>
+              </div>
+              <div class="col-md-4">
+                <input class="callback_it" name="phone" type="tel" required="" placeholder="Введите ваш телефон"/>
+              </div>
+              <div class="col-md-4">
+                <button class="button callback_btn w-100" type="submit">Заказать</button>
+              </div>
+            </div>
+            <div class="politic text-center">
+              Нажимая кнопку «Записаться», Вы соглашаетесь на обработку <a class="link tdu fancy" href="#polytics" target="_blank">персональных данных</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal zoom-anim-dialog mfp-hide modal modal-form" id="thanks">
+        <div class="modal_cnt __msg">
+          <div class="text-center"><img class="text-center d-inline" src="img/Shape_10.svg" alt="alt"/>
+            <div class="h3 extra my-3">Спасибо! Ваша заявка получена</div><br/>
+            <div class="h6">Посмотрите, как проходят наши тренировки</div>
+            <div class="modal-row row">
+                    <div class="col-sm-4">
+                      <div class="video-block_slider_i">
+                        <div class="swiper-lazy-preloader"></div>
+                        <iframe data-src="https://www.youtube.com/embed/riQI-bAEqXE" allowfullscreen=""></iframe>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="video-block_slider_i">
+                        <div class="swiper-lazy-preloader"></div>
+                        <iframe data-src="https://www.youtube.com/embed/9KZ4SaaHxfI" allowfullscreen=""></iframe>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="video-block_slider_i">
+                        <div class="swiper-lazy-preloader"></div>
+                        <iframe data-src="https://www.youtube.com/embed/qldt_5jMGPU" allowfullscreen=""></iframe>
+                      </div>
+                    </div>
+            </div>
+            <div class="h6">Посмотрите, что говорят наши ученики про занятия карате</div>
+            <div class="modal-row row">
+                    <div class="col-sm-4">
+                      <div class="video-block_slider_i">
+                        <div class="swiper-lazy-preloader"></div>
+                        <iframe data-src="https://www.youtube.com/embed/1NKc5QumWsQ" allowfullscreen=""></iframe>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="video-block_slider_i">
+                        <div class="swiper-lazy-preloader"></div>
+                        <iframe data-src="https://www.youtube.com/embed/OejmSvZfBCg" allowfullscreen=""></iframe>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="video-block_slider_i">
+                        <div class="swiper-lazy-preloader"></div>
+                        <iframe data-src="https://www.youtube.com/embed/sOurunZhpDs&amp;t=12s" allowfullscreen=""></iframe>
+                      </div>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal zoom-anim-dialog mfp-hide modal modal-form" id="error">
+        <div class="modal_cnt __msg text-center">
+          <div class="h3 extra my-3"> Ошибка!</div>
+          <div class="h6">Попробуйте отправить заявку еще раз, пожалуйста</div>
+        </div>
+      </div>
+      <div class="modal zoom-anim-dialog mfp-hide modal modal-form" id="polytics">
+        <div class="modal_cnt __msg">
+          <p class="modal_t">Политика конфиденциальности</p>
+          <p>Сайт <a href="http://karate.dzanshin.com/" target="_blank">http://karate.dzanshin.com/</a> уважает ваше право и соблюдает конфиденциальность при заполнении, передачи и хранении ваших конфиденциальных сведений.</p>
+          <p>Размещение заявки на сайте http://karate.dzanshin.com/ означает Ваше согласие на обработку данных и дальнейшей передачи ваших контактных данных «Дзаншин».</p>
+          <p>Под персональными данными подразумевается информация, относящаяся к субъекту персональных данных, в частности фамилия, имя и отчество, дата рождения, адрес, контактные реквизиты (телефон, адрес электронной почты), семейное, имущественное положение и иные данные, относимые Федеральным законом от 27 июля 2006 года № 152-ФЗ «О персональных данных» (далее – «Закон») к категории персональных данных.</p>
+          <p>Целью обработки персональных данных является оказание сайтом <a href="http://karate.dzanshin.com/" target="_blank">http://karate.dzanshin.com/</a> информационно-справочных услуг, а также информирование об оказываемых услугах «Дзаншин».</p>
+          <p>В случае отзыва согласия на обработку своих персональных данных мы обязуемся удалить Ваши персональные данные в срок не позднее 3 рабочих дней. Отзыв согласия можно отправить в электронном виде по адресу: <a href="mailto:info@dzanshin.com">info@dzanshin.com</a>.</p>
+        </div>
+      </div>
+      <div class="modal zoom-anim-dialog mfp-hide modal modal-form" id="trener1">
+        <div class="modal_cnt __story">
+          <div class="trener-story">
+            <div class="trener-story_content">
+              <div class="trener-story_img"><img src="img/aleksandr-misunov.jpg" alt="АЛЕКСАНДР МИСУНОВ"/></div><span class="h1">личная история</span><span class="h2">Как я получил черный пояс</span>
+              <p>Люди часто спрашивают – легко ли получить черный пояс? Много ли нужно тренироваться? И есть ли трудности? Мой ответ на эти вопросы очень простой – черный пояс это годы тренировок, литры пролитого пота и масса усилий.</p><span class="h2">Как я пришел в карате</span>
+              <p>Как и многих ребят в карате меня привела мама, за что я ей очень благодарен.<br/>                        Мы жили в небольшом пригороде города Ухта и активностей для ребят в нашем поселке было не так много. В нашей школе было несколько секций. Я год занимался самбо и после того, как секцию закрыли перешел в карате. Одно из самых ярких впечатлений, которое осталось с того времени – это тренер и его помощник с бамбуковой палкой, которой нам частенько прилетало за наши ошибки и лень. Мы всегда были в тонусе, ни на минуту не расслаблялись. В нас развивали не только физическую силу, но и духовность в перемежку с философией, благодаря чему мы никогда не обижали других детей и старались всем помогать. Спасибо моему первому тренеру - А.В. Абрамову за то, что именно он открыл для меня “истину карате” и привил любовь к этому виду спорта.</p><span class="h2">Черный пояс. А долго ли к нему идти? </span>
+              <p>Для каждого путь к черному поясу свой. Кто-то к нему идет в течение десятилетий, кто-то в течение нескольких лет. Кто-то (наверное, большинство) не доходят до него совсем. Я начал заниматься карате в 1995 году, а I ДАН получил в 2005 – это мой путь длительностью в 10 лет от белого пояса к черному, это моя работа и мои усилия. Сейчас у меня II дан и в планах III. Всего в карате 10 данов. Обычно человек сдает на первые 3-4 дана экзамены, а дальнейшие ступени ему присуждаются за вклад в развитие карате. Есть к чему стремиться;)</p>
+              <p>Спасибо С.В. Васильеву - моему текущему тренеру и наставнику за то, что не дает останавливаться на достигнутом.</p><span class="h2">А было ли сложно?</span>
+              <p>И сложно было и иногда хотелось сдаться. Каждый каратист проходит через это. Кто-то бросает мечту о черном поясе – сдается и уходит из-за сильной нагрузки, кто-то сдается из-за проигрышей, кто-то сдается из-за того, что думал, что будет легко, а оказывается все совсем наоборот. В карате нужно усердно работать, постоянно расти и развиваться. Только так можно достичь результата. Твои достижения в карате прямопропорциональны твоим усилиям. Почему я не сдался? Каждый раз, когда меня посещали мысли о том, что пора уходить, я оборачивался назад. Оборачивался на те годы тренировок, вспоминал, через что мне пришлось пройти, чтобы оказаться там, где я есть. Мне было жалко затраченных сил, чтобы просто сдаться и все бросить и я делал шаг вперед, приближаясь каждый раз к своей мечте о черном поясе.</p>
+              <p>Движение вперед в карате – это как ребенок, который учится ходить, как только он делает первые шаги – он часто падает, но его интерес к новому и неизведанному побеждает и ребенок продолжает попытки сквозь слезы, падения, шишки, он делает свои первые шаги и с каждым разом у него получается все лучше и лучше – и вот он начинает бегать. Согласитесь, что было бы необычно, чтобы после очередного падения он махнул рукой и остался ползать;) В карате тоже самое, но с единственной разницей – карате учатся всю жизнь.</p><span class="h2">Что теперь</span>
+              <p>На текущий момент я занимаюсь разными делами. У меня есть несколько бизнесов, работа и карате. Теперь я не только ученик, но и тренер. Тому, чему я учился эти 20 лет, теперь я учу других мальчишек и девчонок. И кто знает, может кто-то из них тоже дойдет до черного пояса и не бросит свою цель в середине пути, для кого-то в его воспоминаниях я буду первым тренером, а для кого-то наставником, но я точно знаю, что тренировки карате оставят положительный след в жизни каждого.</p>
+              <p>Приводите своих детей к нам на пробную бесплатную тренировку. Уверен, что им у нас понравится!</p>
+            </div>
+            <div class="trener-story_footer">
+              <div class="trener-story_footer_link"><a href="tel:+79168245247">+7 916 824 52 47</a></div>
+              <div class="trener-story_footer_link"><a href="mailto:misunov@dzanshin.com">misunov@dzanshin.com</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal zoom-anim-dialog mfp-hide modal modal-form" id="trener2">
+        <div class="modal_cnt __story">
+          <div class="trener-story">
+            <div class="trener-story_content">
+              <div class="trener-story_img"><img data-lazy="img/anton-kolomycev.jpg" src="#" alt="АНТОН КОЛОМЫЦЕВ"/></div>
+            </div>
+            <div class="trener-story_footer">
+              <div class="trener-story_footer_link"><a href="tel:+79687223081">+7 968 722 3081</a></div>
+              <div class="trener-story_footer_link"><a href="mailto:kolomitsev@dzanshin.com">kolomitsev@dzanshin.com</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal zoom-anim-dialog mfp-hide modal modal-form" id="modal-test">
+        <div class="modal_cnt __msg text-center">
+          <div class="tabs-modal">
+            <div class="tabs-modal__item tabs-modal__item--first active p-0">
+              <div class="s-test p-0">
+                <div class="s-test__inner text-center"><img class="d-none d-sm-block" src="img/test-img.png" alt="alt"/>
+                  <div class="s-test__text">
+                    <div class="h3 extra">Пройдите тест за&nbsp;1&nbsp;минуту и&nbsp;узнайте стоит&nbsp;ли Вашему ребенку заниматся карате?</div>
+                    <button class="s-test__btn btn btn-primary ttu tabs-modal__btn" type="button"> Пройти тест
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-modal__item text-center">
+              <div class="tabs-modal__head">
+                <div class="h5 text-center">Ваш ребенок (Шаг 1 из 7)</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar__pers" style="width:14%">
+                </div>
+              </div>
+              <div class="tabs-modal__body">
+                <div class="tabs-modal__row row">
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">Мальчик
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">Девочка
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-modal__item text-center">
+              <div class="tabs-modal__head">
+                <div class="h5 text-center">Возраст вашего ребенка (Шаг 2 из 7)</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar__pers" style="width:28%">
+                </div>
+              </div>
+              <div class="tabs-modal__body">
+                <div class="tabs-modal__row row">
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">До 8 лет
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">9-13 лет
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">14-18 лет
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-modal__item text-center">
+              <div class="tabs-modal__head">
+                <div class="h5 text-center">Занимается ли ребенок еще каким-нибудь спортом? (Шаг 3 из 7)</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar__pers" style="width:42%">
+                </div>
+              </div>
+              <div class="tabs-modal__body">
+                <div class="tabs-modal__row row">
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">Нет
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">Да
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-modal__item text-center btn-4">
+              <div class="tabs-modal__head">
+                <div class="h5 text-center">Как часто сидит в телефоне/планшете/компьютере (Шаг 4 из 7)</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar__pers" style="width:56%">
+                </div>
+              </div>
+              <div class="tabs-modal__body">
+                <div class="tabs-modal__row row">
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">Это не про нас
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">15 мин в день
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">30 мин в день
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">&gt; часа в день
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-modal__item text-center">
+              <div class="tabs-modal__head">
+                <div class="h5 text-center">Как часто болеет? (Шаг 5 из 7)</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar__pers" style="width:70%">
+                </div>
+              </div>
+              <div class="tabs-modal__body">
+                <div class="tabs-modal__row row">
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">Не болеет
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">&lt; 1 раза в год
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">&gt; 2 раз в год
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-modal__item text-center">
+              <div class="tabs-modal__head">
+                <div class="h5 text-center">Имеет ли лишний вес? (Шаг 6 из 7)</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar__pers" style="width:84%">
+                </div>
+              </div>
+              <div class="tabs-modal__body">
+                <div class="tabs-modal__row row">
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">Нет
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">Да
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-modal__item text-center">
+              <div class="tabs-modal__head">
+                <div class="h5 text-center">Сможет ли постоять за себя? (Шаг 7 из 7)</div>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar__pers" style="width:92%">
+                </div>
+              </div>
+              <div class="tabs-modal__body">
+                <div class="tabs-modal__row row">
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">Нет
+                    </button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="tabs-modal__btn btn btn-primary ttu" type="button">Да
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tabs-modal__item tabs-modal__item--form">
+              <div class="text-center">
+                <div class="tabs-modal__big">Занятия по карате обязательны!
+                </div>
+                <div class="tabs-modal__title tabs-modal__title--sub mb-0">Результат теста: 90%
+                </div>
+                <div class="tabs-modal__title tabs-modal__title--sub">Запишитесь на пробное бесплатное занятие
+                </div>
+              </div>
+              <form class="modal_form" data-name="zakaz-modal-test" action="php/send.php">
+                <div class="row">
+                  <div class="col-md-4">
+                    <input name="title" type="hidden" value="Заявка с теста"/>
+                    <input class="callback_it" name="name" type="text"  placeholder="Введите ваше имя"/>
+                  </div>
+                  <div class="col-md-4">
+                    <input class="callback_it" name="phone" type="tel" required="" placeholder="Введите ваш телефон"/>
+                  </div>
+                  <div class="col-md-4">
+                    <button class="button callback_btn w-100" type="submit">Записаться</button>
+                  </div>
+                </div>
+                <div class="politic text-center">
+                  Нажимая кнопку «Записаться», Вы соглашаетесь на обработку <a class="tabs-modal__link tdu fancy" href="#polytics" target="_blank">персональных данных</a>
+                </div>
+              </form>
+              <div class="text-center">
+                <div class="tabs-modal__foot">
+                  <div class="tabs-modal__foot-text">Поделись результатами теста с&nbsp;друзьями - так тренировки для ребенка будут интереснее!
+                  </div>
+                </div>
+                <div class="soc"><a class="soc__item" href="https://vk.com/dzanshin_karate" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="https://www.facebook.com/Dzanshin" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="https://www.instagram.com/dzanshin.karate" target="_blank"><i class="fab fa-instagram"></i></a><a class="soc__item" href="https://ok.ru/group/55650916433943" target="_blank"><i class="fab fa-odnoklassniki"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.modal-->
+    </div>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+     <!-- <script src="js/jquery.min.js"></script>-->
+    <script src="js/main.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
+		<script src="https://mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    var yaParams = {
+        'abtest_title': '<?php echo $title ?>'
+    };
+    try {
+        var yaCounter35902090 = new Ya.Metrika({
+            id:35902090,
+            params:window.yaParams,
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            ut:"noindex",
+						ecommerce:"dataLayer"
+						
+        });
+    } catch(e) { }
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/35902090?ut=noindex" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </body>
+</html>
