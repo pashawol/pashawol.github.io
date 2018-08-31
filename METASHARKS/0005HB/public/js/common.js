@@ -2,25 +2,39 @@
 
   // для свг
   svg4everybody({});
-  // Custom JS
+	// Custom JS
+	
+	// dropdown  меню
+	$('.dropdown-cat__toggle--js').dropdown({
+		// boundary: 'window',
+		
+		placement: 'bottom',
+	})
+ 
+	$('.dropdown-cat').on('shown.bs.dropdown', function () {
+	 
+		$(".dropdown-cat__title").text("Закрыть");
 
+		$("body").addClass("fixed") 
+	})
+	$('.dropdown-cat').on('hide.bs.dropdown', function () { 
+		$(".dropdown-cat__title").text("Все категории");
+		$("body").removeClass("fixed") 
+	})
 
-  var url=document.location.href;
-  $.each($(".top-nav__nav a "),function(){
+	// custom scrollbar
+	// $(window).on("load",function(){
+	// 	$(".custom-scroll-js").mCustomScrollbar();
+	// });
+	
+	// открыть дочернее меню в dropdown
+	$(".dropdown-cat-has-children__item--js").hover(function () {
+		
+		$(this).closest('.dropdown-cat__menu').find('.dropdown-cat-sub').removeClass('active')
+				.eq($(this).index()).addClass('active');
+		 
+	});
 
-  if(this.href==url){
-    if($(this).hasClass("top-nav__link") == true){
-
-    $(this).addClass('top-nav__link-active');
-    }
-    if($(this).hasClass("footer__link") == true){
-
-    $(this).addClass('footer__link-active');
-    }
-
-  };
-
-  });
       // галерея
   $(".gal").each(function(){
 
@@ -65,9 +79,7 @@
   function heightses() {
 
     var w = $(window).width();
-   // $(".otz__item .text-wrap ").height('auto').equalHeights();
-   //
-
+   
 
     // скрывает моб меню
   
@@ -121,13 +133,7 @@ $( window ).on( "load", function() {
 $(function() {
 var tab = ('tabs');
 
-   $('.' + tab + '__caption').each(function(i) {
-    var storage = localStorage.getItem('tab' + i);
-    if (storage) {
-      $(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-       .closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-    }
-  });
+ 
 
 $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function(e) {
   $(this)
