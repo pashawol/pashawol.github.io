@@ -99,21 +99,15 @@
       $(".hidden-mnu").removeClass("active");
       $("body, html").removeClass("fixed");
         }
-    });
+		});
+		
 		// скрывает лишний текст в отзывах
-		// $('.article-js ').readmore({
-		// 	speed: 475,
-		// 	collapsedHeight: 16,
-		// 	moreLink:  '<a class="  btn btn-sm btn-outline-primary" href="#">Читать полностью</a>',
-		// 	lessLink: '<a class="  btn btn-sm btn-outline-primary" href="#">Скрыть</a>'
-		// });
+ 
 		$('.article-js ').moreLines({
 			linecount: 6,
 			// custom text
   buttontxtmore: '<span class="  btn btn-sm btn-outline-primary" href="#">Читать полностью</span>', 
-  buttontxtless: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>',
-
-  // animation speed in milliseconds
+  buttontxtless: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>', 
   animationspeed: 450
 		});
   function heightses() {
@@ -311,11 +305,12 @@ $('.prod-head__slider-small').slick({
 		responsive: [
 
 				{
-					breakpoint: 575,
+					breakpoint: 1199,
 					settings: {
-						slidesToShow: 4,
+						slidesToShow: 3,
 					}
-				}
+				} 
+
 				// You can unslick at a given breakpoint now by adding:
 				// settings: "unslick"
 				// instead of a settings object

@@ -1727,7 +1727,7 @@
       <div class="prod-head">
         <div class="container">
           <div class="row">
-            <div class="col-5">
+            <div class="col-lg-5">
               <div class="prod-head__sliders">
                 <div class="prod-head__small-row row">
                   <div class="col-sm-2 col-3">
@@ -1828,7 +1828,7 @@
                 </div>
               </div>
               <div class="prod-head__price-block">
-                <div class="row">
+                <div class="prod-head__price-row row">
                   <div class="col-auto">
                     <div class="small-row row align-items-center">
                       <div class="col-auto">
@@ -1867,18 +1867,16 @@
                     | В корзине
                     -->
                   </div>
-                  <div class="col-auto">
-                    <button class="prod-head__btn-click btn btn-link btn-block" type="button"> 
-                      <svg class="icon icon-cursor ">
-                        <use xlink:href="img/svg/sprite.svg#cursor"></use>
-                      </svg>Купить в один клик
-                    </button>
+                  <div class="col-auto"><a class="prod-head__btn-click btn btn-link btn-block popup-with-move-anim" href="#modal-one-click"> 
+                    <svg class="icon icon-cursor ">
+                      <use xlink:href="img/svg/sprite.svg#cursor"></use>
+                    </svg>Купить в один клик</a>
                   </div>
                 </div>
               </div>
               <!-- +e.price-block-->
               <div class="like-block">
-                <div class="row justify-content-between">
+                <div class="like-block__row row justify-content-xl-between align-items-center">
                   <div class="col-auto">
                     <button class="like-block__btn btn btn-sm btn-outline-secondary" type="button">
                       <svg class="icon icon-heart ">
@@ -1916,7 +1914,7 @@
                             </svg>
                           </div>
                         </div>
-                        <div class="col-auto"><a href="#">25 отзывов</a></div>
+                        <div class="col-md-auto"><a href="#">25 отзывов</a></div>
                       </div>
                     </div>
                     <!-- +b.stars-->
@@ -1924,7 +1922,7 @@
                   <div class="col-auto">
                     <div class="soc">
                       <div class="row">
-                        <div class="col-auto">
+                        <div class="col-md-auto">
                           <div class="small">Поделиться:</div>
                         </div>
                         <div class="col"><a class="soc__item" href="" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-instagram"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-twitter"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-vk"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-odnoklassniki"></i></a>
@@ -1940,26 +1938,30 @@
         </div>
         <div class="container">
           <div class="delivery-block border border-secondary">
-            <div class="row align-items-center justify-content-between">
-              <div class="col-auto">
+            <div class="row">
+              <div class="col-md-auto">
                 <div class="delivery-block__title strong text-info">Условия доставки
                 </div>
               </div>
-              <div class="col-auto">
-                <div class="text-gray">Ваш населенный пункт:</div>
-                <div class="text">Краснодар</div>
-              </div>
-              <div class="col-auto">
-                <div class="text-gray">Способ доставки:</div>
-                <div class="text">Курьер</div>
-              </div>
-              <div class="col-auto">
-                <div class="text-gray">Ближайшая дата доставки:</div>
-                <div class="text-primary">19.08.2018</div>
-              </div>
-              <div class="col-auto">
-                <div class="text-gray">Стоимость доставки:</div>
-                <div class="text-primary">280 руб.</div>
+              <div class="col">
+                <div class="delivery-block__row row align-items-center justify-content-lg-between">
+                  <div class="col-md-auto col-6">
+                    <div class="text-gray">Ваш населенный пункт:</div>
+                    <div class="text">Краснодар</div>
+                  </div>
+                  <div class="col-md-auto col-6">
+                    <div class="text-gray">Способ доставки:</div>
+                    <div class="text">Курьер</div>
+                  </div>
+                  <div class="col-md-auto col-6">
+                    <div class="text-gray">Ближайшая дата доставки:</div>
+                    <div class="text-primary">19.08.2018</div>
+                  </div>
+                  <div class="col-md-auto col-6">
+                    <div class="text-gray">Стоимость доставки:</div>
+                    <div class="text-primary">280 руб.</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1977,7 +1979,7 @@
         <div class="container">
           <div class="h4 section-title text-secondary">Отзывы</div>
           <div class="row">
-            <div class="col-8">
+            <div class="col-lg-8">
                     <div class="s-rew-item">
                       <div class="s-rew-item__head">
                         <div class="row">
@@ -2014,7 +2016,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col">
+                          <div class="col-sm order-sm-0 order-last">
                             <div class="text-secondary">Сергеев Валентин 25 августа 2018</div>
                           </div>
                           <div class="col-auto">
@@ -2082,7 +2084,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col">
+                          <div class="col-sm order-sm-0 order-last">
                             <div class="text-secondary">Сергеев Валентин 25 августа 2018</div>
                           </div>
                           <div class="col-auto">
@@ -2612,6 +2614,21 @@
           </div>
         </div>
       </footer>
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-one-click">
+        <form>
+          <div class="form-wrap__title">Введите ваши данные и наш специалист перезвонит Вам в течении 15 минут
+          </div>
+          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <button class="form-wrap__btn btn btn-sm btn-block btn-primary" type="submit">Отправить
+          </button>
+        </form>
+      </div>
+      <!-- modal-->
     </div>
     <script src="js/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/scripts.min.js"></script>
