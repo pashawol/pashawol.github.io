@@ -34,8 +34,9 @@
 	// открыть дочернее меню в dropdown
 	$(".dropdown-cat-has-children__item--js").hover(function () {
 		
-		$(this).closest('.dropdown-cat__menu').find('.dropdown-cat-sub').removeClass('active')
-				.eq($(this).index()).addClass('active');
+		$(this).closest('.dropdown-cat__menu').find(".dropdown-cat-has-children__item--js").removeClass('active');
+		$(this).addClass('active').closest('.dropdown-cat__menu').find('.dropdown-cat-sub').removeClass('active');
+		$(this).closest('.dropdown-cat__menu').find(".dropdown-cat-sub-accordion").eq($(this).index()).find(".dropdown-cat-sub").addClass('active');
 		 
 	});
 
@@ -53,12 +54,15 @@
 		});
 	})
 
-	// accordion
-  $(".dropdown-cat-sub-wrap").on('click', ' .category-accordion', function() {
+	// accordion в меню
+  $(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() {
 		$(this).toggleClass("active").next().slideToggle();
 	})
-
-
+	
+	// accordion в оформлении покупки
+	$(".accordion__toggle").click(function () {
+		$(this).toggleClass("active").next().slideToggle().toggleClass("active");
+	  })
 
       // галерея
   $(".gal").each(function(){
@@ -106,9 +110,9 @@
 		$('.article-js ').moreLines({
 			linecount: 6,
 			// custom text
-  buttontxtmore: '<span class="  btn btn-sm btn-outline-primary" href="#">Читать полностью</span>', 
-  buttontxtless: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>', 
-  animationspeed: 450
+			buttontxtmore: '<span class="  btn btn-sm btn-outline-primary" href="#">Читать полностью</span>', 
+			buttontxtless: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>', 
+			animationspeed: 450
 		});
   function heightses() {
 
