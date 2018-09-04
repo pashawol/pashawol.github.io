@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
-    <div class="main-wrapper">
+    <div class="main-wrapper" id="body">
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="wrapp-hidden">
           <div class="container">
@@ -46,7 +46,7 @@
       </div>
       <!--  мобильное меню-->
       <!-- start HEADER.header-->
-      <header class="header">
+      <header class="header" id="body">
         <!-- start top-nav -->
         <div class="top-nav top-nav--fixed top-nav--js">
           <div class="container">
@@ -1843,28 +1843,6 @@
                     -->
                   </div>
                 </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-4.png" alt="alt"/>
-                    <div class="swiper-lazy-preloader"></div></a>
-                    <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
-                      <div class="item-prod__price-row row justify-content-center align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0"> 1 415 р.</div>
-                        </div>
-                      </div><a class="item-prod__btn btn btn-sm btn-primary" href="#">
-                      <svg class="icon icon-basket ">
-                        <use xlink:href="img/svg/sprite.svg#basket"></use>
-                      </svg>В корзину</a>
-                      <!-- внизу вид кнопки при добавлении товара в корзину-->
-                    </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
-                  </div>
-                </div>
               </div>
             </div>
             <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
@@ -1997,28 +1975,6 @@
                     -->
                   </div>
                 </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-4.png" alt="alt"/>
-                    <div class="swiper-lazy-preloader"></div></a>
-                    <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
-                      <div class="item-prod__price-row row justify-content-center align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0"> 1 415 р.</div>
-                        </div>
-                      </div><a class="item-prod__btn btn btn-sm btn-primary" href="#">
-                      <svg class="icon icon-basket ">
-                        <use xlink:href="img/svg/sprite.svg#basket"></use>
-                      </svg>В корзину</a>
-                      <!-- внизу вид кнопки при добавлении товара в корзину-->
-                    </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
-                  </div>
-                </div>
               </div>
             </div>
             <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
@@ -2109,28 +2065,6 @@
                 </div>
                 <div class="s-catalog__slide swiper-slide">
                   <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-3.png" alt="alt"/>
-                    <div class="swiper-lazy-preloader"></div></a>
-                    <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
-                      <div class="item-prod__price-row row justify-content-center align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0"> 1 415 р.</div>
-                        </div>
-                      </div><a class="item-prod__btn btn btn-sm btn-primary" href="#">
-                      <svg class="icon icon-basket ">
-                        <use xlink:href="img/svg/sprite.svg#basket"></use>
-                      </svg>В корзину</a>
-                      <!-- внизу вид кнопки при добавлении товара в корзину-->
-                    </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
-                  </div>
-                </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-4.png" alt="alt"/>
                     <div class="swiper-lazy-preloader"></div></a>
                     <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
                       <div class="item-prod__price-row row justify-content-center align-items-center">
@@ -2358,7 +2292,7 @@
       <footer class="footer">
         <div class="container">
           <div class="footer__top-row row justify-content-between">
-            <div class="col-xl-3 col-auto"><a class="footer__logo" href="#"><img src="img/logo-vert.png" alt=""/></a>
+            <div class="col-xl-3 col-auto"><a class="footer__logo scroll-link" href="#body"><img src="img/logo-vert.png" alt=""/></a>
               <div class="footer__time">
                 <div class="footer__time-row row">
                   <div class="col-auto">
@@ -2370,7 +2304,7 @@
                 </div>
               </div>
             </div>
-            <div class="col order-lg-0 order-last">
+            <div class="col order-lg-0 order-sm-last">
               <ul class="footer__nav">
                 <li class="footer__item"><a class="footer__link small ttu" href="#">О НАС </a>
                 </li>

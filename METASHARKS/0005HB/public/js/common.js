@@ -167,6 +167,7 @@ $(".delivary-method .custom-input__input" ).change(function () {
 			}
 		});
 		// конец добавил
+		$(".main-wrapper").css("padding-bottom",$("footer").outerHeight())
   }
   
 	// скрывает моб меню 
@@ -192,14 +193,14 @@ $( window ).on( "load", function() {
 
 
 // листалка по стр
- // $(" .top-nav a").click(function () {
- //        var elementClick = $(this).attr("href");
- //        var destination = $(elementClick).offset().top;
+ $(" .scroll-link").click(function () {
+        var elementClick = $(this).attr("href");
+        var destination = $(elementClick).offset().top;
 
- //            $('html, body').animate({ scrollTop: destination }, 1100);
+            $('html, body').animate({ scrollTop: destination }, 1100);
 
- //        return false;
- //    });
+        return false;
+    });
 
 
 // табы  . Теперь данные активного таба остается в storage
@@ -270,6 +271,7 @@ var   arrr2 = (' <div class="l">'+ icon),
 			speed: 750,
 			spaceBetween: 0, 
 			loop: true, 
+			watchOverflow: true, 
 			preloadImages: false, 
 			lazy: true,
 			lazy: {
