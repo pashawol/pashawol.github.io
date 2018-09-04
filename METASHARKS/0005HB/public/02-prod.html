@@ -215,7 +215,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-auto"><a class="top-nav__btn btn btn-outline-primary" href="#">Заказать звонок</a>
+                  <div class="col-auto"><a class="top-nav__btn btn btn-outline-primary popup-with-move-anim" href="#modal-one-click"> Заказать звонок</a>
                   </div>
                 </div>
               </div>
@@ -239,7 +239,7 @@
                     <div class="row">
                       <div class="col-auto d-none d-lg-block">
                         <ul class="dropdown-cat-has-children custom-scroll-js">
-                          <li class="dropdown-cat-has-children__item dropdown-cat-has-children__item--js"><a class="dropdown-cat-has-children__link dropdown-cat-has-children__link--active dropdown-cat-has-children__link--js" href="#">Уход за лицом</a>
+                          <li class="dropdown-cat-has-children__item dropdown-cat-has-children__item--js"><a class="dropdown-cat-has-children__link dropdown-cat-has-children__link--js" href="#">Уход за лицом</a>
                           </li>
                           <li class="dropdown-cat-has-children__item dropdown-cat-has-children__item--js"><a class="dropdown-cat-has-children__link" href="#">Уход за лицом</a>
                           </li>
@@ -1732,7 +1732,7 @@
               <div class="h2">Parachute Coconut Oil Кокосовое Масло, 100 мл</div>
               <div class="values">
                 <div class="row align-items-center">
-                  <div class="col-auto">
+                  <div class="col-md-auto">
                     <div class="small">Объем, мл:</div>
                   </div>
                   <div class="col-auto">
@@ -1750,49 +1750,51 @@
                 </div>
               </div>
               <div class="prod-head__price-block">
-                <div class="prod-head__price-row row">
-                  <div class="col-auto">
-                    <div class="small-row row align-items-center">
-                      <div class="col-auto">
-                        <div class="prod-head__price-old small strike">1 415 р.
+                <div class="prod-head__price-block-wrap">
+                  <div class="prod-head__price-row row">
+                    <div class="col-auto">
+                      <div class="small-row row align-items-center">
+                        <div class="col-auto">
+                          <div class="prod-head__price-old small strike">1 415 р.
+                          </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="prod-head__stock">-160р.
+                          </div>
                         </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="prod-head__stock">-160р.
+                      <div class="prod-head__price">12 415 р.
+                      </div>
+                      <div class="prod-head__point">250 баллов
+                        <div class="popover-toggle popover-toggle--qu" data-toggle="popover" data-content="Мы осуществляем доставку бесплатно при заказе товаров на 2900 р. и больше">?
                         </div>
                       </div>
                     </div>
-                    <div class="prod-head__price">12 415 р.
-                    </div>
-                    <div class="prod-head__point">250 баллов
-                      <div class="popover-toggle popover-toggle--qu" data-toggle="popover" data-content="Мы осуществляем доставку бесплатно при заказе товаров на 2900 р. и больше">?
+                    <div class="col-auto">
+                      <div class="block-add">
+                        <div class="w-100">Количество</div>
+                        <div class="block-add__btn block-add__btn--minus">
+                        </div>
+                        <input class="form-control" type="text" value="1"/>
+                        <div class="block-add__btn block-add__btn--plus btn">
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-auto">
-                    <div class="block-add">
-                      <div class="w-100">Количество</div>
-                      <div class="block-add__btn block-add__btn--minus">
-                      </div>
-                      <input class="form-control" type="text" value="1"/>
-                      <div class="block-add__btn block-add__btn--plus btn">
-                      </div>
+                    <div class="col-auto"><a class="prod-head__btn btn btn-primary" href="#">
+                      <svg class="icon icon-basket ">
+                        <use xlink:href="img/svg/sprite.svg#basket"></use>
+                      </svg>В корзину</a>
+                      <!-- внизу вид кнопки при добавлении товара в корзину-->
+                      <!-- +e.A.btn.btn.active.btn-primary(href="#")
+                      +icon("basket")
+                      | В корзине
+                      -->
                     </div>
-                  </div>
-                  <div class="col-auto"><a class="prod-head__btn btn btn-primary" href="#">
-                    <svg class="icon icon-basket ">
-                      <use xlink:href="img/svg/sprite.svg#basket"></use>
-                    </svg>В корзину</a>
-                    <!-- внизу вид кнопки при добавлении товара в корзину-->
-                    <!-- +e.A.btn.btn.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    -->
-                  </div>
-                  <div class="col-auto"><a class="prod-head__btn-click btn btn-link btn-block popup-with-move-anim" href="#modal-one-click"> 
-                    <svg class="icon icon-cursor ">
-                      <use xlink:href="img/svg/sprite.svg#cursor"></use>
-                    </svg>Купить в один клик</a>
+                    <div class="col-auto"><a class="prod-head__btn-click btn btn-link btn-block popup-with-move-anim" href="#modal-one-click"> 
+                      <svg class="icon icon-cursor ">
+                        <use xlink:href="img/svg/sprite.svg#cursor"></use>
+                      </svg>Купить в один клик</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1809,7 +1811,7 @@
                   <div class="col-auto">
                     <div class="stars">
                       <div class="stars__row row">
-                        <div class="col-md-auto">
+                        <div class="col-md-auto col-12">
                           <div class="stars__item stars__item--active">
                             <svg class="icon icon-star ">
                               <use xlink:href="img/svg/sprite.svg#star"></use>
@@ -1836,7 +1838,7 @@
                             </svg>
                           </div>
                         </div>
-                        <div class="col-md-auto"><a href="#">25 отзывов</a></div>
+                        <div class="col-md-auto col-12"><a href="#">25 отзывов</a></div>
                       </div>
                     </div>
                     <!-- +b.stars-->
@@ -2227,16 +2229,16 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-                <svg class="icon icon-left-arr-small ">
-                  <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-                </svg>
-              </div>
-              <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-                <svg class="icon icon-left-arr-small ">
-                  <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-                </svg>
-              </div>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+              <svg class="icon icon-left-arr-small ">
+                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+              <svg class="icon icon-left-arr-small ">
+                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
+              </svg>
             </div>
           </div>
         </div>
@@ -2381,16 +2383,16 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-                <svg class="icon icon-left-arr-small ">
-                  <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-                </svg>
-              </div>
-              <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-                <svg class="icon icon-left-arr-small ">
-                  <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-                </svg>
-              </div>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+              <svg class="icon icon-left-arr-small ">
+                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+              <svg class="icon icon-left-arr-small ">
+                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
+              </svg>
             </div>
           </div>
         </div>

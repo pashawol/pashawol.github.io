@@ -54,9 +54,26 @@
 		});
 	})
 
-	// accordion в меню
-  $(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() {
-		$(this).toggleClass("active").next().slideToggle();
+
+		// accordion в меню
+		// $(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() {
+		// 	$(this).toggleClass("active").next().slideToggle();
+		// 	if (($(this).offset().top ) >= ($(' html, body').height() / 2)){
+		// 		$('.custom-scroll-js').animate({ scrollTop: $(this).offset().top + topHeader}, 1100);
+		// 	}
+		// })
+		// accordion в меню
+		$(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() {
+			$(this).closest('.custom-scroll-js').find('.dropdown-cat-sub.active').removeClass('active').slideUp();
+			$(this).addClass("active").next().slideDown().addClass("active");
+			$(this).each(function () {
+				
+				var topHeader = $(".header").offset().top + $(".header").height();
+				if (($(this).offset().top ) >= ($('body, html').height() *  .8) && $(this).hasClass("active") == true){
+					$('.custom-scroll-js').animate({ scrollTop: ($(this).position().top ) + topHeader}, 1100);
+				}
+				$(this).attr("title",$(this).offset().top  );
+			})
 	})
 	
 	// accordion в оформлении покупки
@@ -97,7 +114,7 @@
     });
     $(document).mouseup(function (e) {
     var container = $(".hidden-mnu.active");
-    if (container.has(e.target).length === 0){
+    if (container.has(e.target).length === 0 && $(".top-nav").has(e.target).length === 0){
        $(".toggle-mnu-1").removeClass("on");
       // $("body").toggleClass("fixed");
       $(".hidden-mnu").removeClass("active");
@@ -218,20 +235,20 @@ var   arrr2 = (' <div class="l">'+ icon),
 		var swiper4 = new Swiper($(this), {
 		  // slidesPerView: 5,
 			slidesPerView: 4,
-			
+			slidesPerGroup: 4,
 			breakpoints: { 
 				768: {
 					slidesPerView: 2, 
+					slidesPerGroup: 2,
 				}, 
 			 	992: {
 					slidesPerView: 3, 
+					slidesPerGroup: 3,
 				}
 			}, 
 			speed: 750,
 			spaceBetween: 0, 
-			loop: true,
-			loopFillGroupWithBlank: true,
-			touchRatio: 0.2, 
+			loop: true, 
 			preloadImages: false, 
 			lazy: true,
 			lazy: {
@@ -250,23 +267,25 @@ var   arrr2 = (' <div class="l">'+ icon),
 
 		// слайдер цвета в карточке
 		var swiper5 = new Swiper($(this), {
-		  // slidesPerView: 5,
+			// slidesPerView: 5,
+			
 			slidesPerView: 6, 
-			slidesPerGroup: 2,
+			slidesPerGroup: 6,
 			breakpoints: { 
 
 				768: {
 					slidesPerView: 3, 
+					slidesPerGroup: 3,
 				}, 
 			 	992: {
-					slidesPerView: 4, 
+					slidesPerView: 4,
+					slidesPerGroup: 4, 
 				}
 			}, 
 			speed: 750,
 			spaceBetween: 0, 
 			loop: true,
-			loopFillGroupWithBlank: true,
-			touchRatio: 0.2, 
+		  
 			preloadImages: false, 
 			lazy: true,
 			lazy: {
