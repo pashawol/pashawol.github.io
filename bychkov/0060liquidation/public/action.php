@@ -12,7 +12,9 @@ $mail->CharSet = 'utf-8';
 ///от кого письмо  
 $mail->setFrom('info@info.com');
 
- $mail->addAddress('wol1414@gmail.com');
+//  $mail->addAddress('wol1414@gmail.com');
+ $mail->addAddress('regfirmltd@gmail.com');
+ $mail->addAddress('dropfirm@protonmail.com');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 

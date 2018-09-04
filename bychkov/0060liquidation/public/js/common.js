@@ -115,9 +115,13 @@
 		
  
   $('[data-target="#modal-win"]').click(function () {
+			$("#thanks .h4").text($(this).data("tt"));
+			$("#thanks p").text($(this).data('pt'));
+			
 			$("#modal-win .h4").text($(this).data("title"));
 			$("#modal-win p").text($(this).data('par'));
-			$("#modal-win .btn").text($(this).data('btn'));
+
+			$("#modal-win .btn").text($(this).data('btn')).removeClass("btn-primary").removeClass("btn-danger").addClass($(this).data('btnclass'));
 			$("#modal-win .order").val($(this).data('order'));
 	  })
 
@@ -143,5 +147,13 @@ $("form").submit(function() { //Change
 
  
 
-
+	 document.ondragstart = noselect; 
+	 // запрет на перетаскивание 
+	 document.onselectstart = noselect; 
+	 // запрет на выделение элементов страницы 
+	 document.oncontextmenu = noselect; 
+	 // запрет на выведение контекстного меню 
+	 function noselect() {return false;} 
 });
+
+ 
