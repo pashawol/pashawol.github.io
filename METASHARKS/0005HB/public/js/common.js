@@ -5,7 +5,12 @@
 	// Custom JS
 	
 	// dropdown  меню
- 
+	// $(".s-order").stick_in_parent({
+	// 	offset_top: $(".top-nav--fixed").height() + 10,
+	// 	inner_scrolling: true,
+	//  //  recalc_every: true,
+	// });
+
 	$('.dropdown-cat__toggle--js').click(function () {
 		$(this).next().toggle().parents(".dropdown-cat").toggleClass("show");
 	 $(this).parents(".dropdown-cat").hasClass("show")?($(".dropdown-cat__title").text("Закрыть"),$("body").addClass("fixed-drop"))  : ($(".dropdown-cat__title").text("Все категории"), $("body").removeClass("fixed-drop")); 
@@ -62,19 +67,35 @@
 		// 		$('.custom-scroll-js').animate({ scrollTop: $(this).offset().top + topHeader}, 1100);
 		// 	}
 		// })
-		// accordion в меню
-		$(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() {
-			$(this).closest('.custom-scroll-js').find('.dropdown-cat-sub.active').removeClass('active').slideUp();
-			$(this).addClass("active").next().slideDown().addClass("active");
-			$(this).each(function () {
-				
-				var topHeader = $(".header").offset().top + $(".header").height();
-				if (($(this).offset().top ) >= ($('body, html').height() *  .8) && $(this).hasClass("active") == true){
-					$('.custom-scroll-js').animate({ scrollTop: ($(this).position().top ) + topHeader}, 1100);
+// accordion в меню
+var $catalog_nav = $('.catalog-nav');
+$(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() {
+		var $el = $(this),
+				$dropdown_cat_sub_accordion = $el.parent('.dropdown-cat-sub-accordion');
+		if ($el.hasClass('active')) return false;
+		//скрываем то есть удаляем класс active
+		$('.dropdown-cat-sub.active,.category-accordion.active', $catalog_nav).removeClass('active');
+		$el.addClass("active").next().addClass("active");
+		var h = 0;
+		$('.dropdown-cat-sub-accordion', $catalog_nav).each(function(index, el) {
+				if (el == $dropdown_cat_sub_accordion[0]) {
+						return false;
 				}
-				$(this).attr("title",$(this).offset().top  );
-			})
-	})
+				h += $(el).innerHeight();
+		});
+		$('.custom-scroll-js').animate({
+				scrollTop: h
+		}, 500);
+ 
+});
+
+//  табы  в выборе способа доставки
+$(".delivary-method .custom-input__input" ).change(function () {
+	var index = $(this).parents('.delivary-col').index();
+	console.log(index);
+	$(this).closest('.delivary-method').find('.delivary-item').hide().removeClass('active')
+	.eq(index).fadeIn().addClass('active');
+  })
 	
 	// accordion в оформлении покупки
 	$(".accordion__toggle").click(function () {

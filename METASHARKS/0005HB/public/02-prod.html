@@ -215,7 +215,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-auto"><a class="top-nav__btn btn btn-outline-primary popup-with-move-anim" href="#modal-one-click"> Заказать звонок</a>
+                  <div class="col-auto"><a class="top-nav__btn btn btn-outline-primary popup-with-move-anim" href="#modal-call"> Заказать звонок</a>
                   </div>
                 </div>
               </div>
@@ -2544,21 +2544,53 @@
           </div>
         </div>
       </footer>
-      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-one-click">
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
         <form>
           <div class="form-wrap__title">Введите ваши данные и наш специалист перезвонит Вам в течении 15 минут
           </div>
           <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя"/>
           </div>
           <!-- +e.input-wrap-->
-          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон"/>
+          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
           </div>
           <!-- +e.input-wrap-->
           <button class="form-wrap__btn btn btn-sm btn-block btn-primary" type="submit">Отправить
           </button>
         </form>
       </div>
-      <!-- modal-->
+      <!-- #modal-call-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-one-click">
+        <form>
+          <div class="form-wrap__title">Купить в 1 клик
+          </div>
+          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваше email" required="required"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" required="required"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Комментарий"></textarea>
+          </div>
+          <!-- +e.input-wrap-->
+          <button class="form-wrap__btn btn btn-sm btn-block btn-primary" type="submit">Заказать
+          </button>
+        </form>
+      </div>
+      <!-- #modal-one-click-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-pay-method">
+        <form>
+          <div class="form-wrap__title">Выберите способ оплаты
+          </div>
+          <button class="form-wrap__btn-lg btn btn-lg btn-block btn-outline-primary" type="submit">Оплата при получении
+          </button>
+          <button class="form-wrap__btn-lg btn btn-lg btn-block btn-outline-primary" type="submit">Безналичная оплата
+          </button>
+        </form>
+      </div>
+      <!-- #modal-call-->
     </div>
     <script src="js/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/scripts.min.js"></script>

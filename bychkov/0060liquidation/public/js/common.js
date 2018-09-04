@@ -84,12 +84,12 @@
 
 			// слайдер цвета в карточке
 			var swiper5 = new Swiper('.s-gal__slider--js', {
-				slidesPerView: 1, 
+				// slidesPerView: 1, 
 				spaceBetween: 0, 
+				// initialSlide: 2,
 				watchOverflow: true, 
 				loop: true,
-				speed: 600,
-				loopFillGroupWithBlank: true, 
+				speed: 600, 
 				preloadImages: false, 
 				lazy: true,
 				loadPrevNext: true,
@@ -97,19 +97,15 @@
 					nextEl: ('.swiper-button-next'),
 				 prevEl: ('.swiper-button-prev'),
 			 },
-				effect: 'flip',
-				grabCursor: true,
-				pagination: {
-					el: '.swiper-pagination',
-				},
-				
+			 autoplay: {
+				delay: 5000,
+			},
 			});
-			var counter = $('.swiper-counter');
-			var currentCount = '01'; 
-			counter.append(currentCount); 
+			var counter = $('.swiper-counter'); 
+			counter.text('01'); 
 			swiper5.on('slideChange', function () {
-				var index = swiper5.activeIndex ;
-				index < 10 ? counter.text('0' + index) : counter.text(index);
+				var index = swiper5.realIndex +1 ;
+				counter.text('0' + index);
 		
 		});
 		
