@@ -1859,27 +1859,80 @@
         <div class="container">
           <div class="delivery-block border border-secondary">
             <div class="row">
-              <div class="col-md-auto">
-                <div class="delivery-block__title strong text-info">Условия доставки
+              <div class="col-lg-auto">
+                <div class="delivery-block__title strong text-info">
+                  <div class="row small-row align-items-center">
+                    <div class="col-auto">
+                      <svg class="icon icon-shipped ">
+                        <use xlink:href="img/svg/sprite.svg#shipped"></use>
+                      </svg>
+                    </div>
+                    <div class="col"> Условия доставки</div>
+                  </div>
                 </div>
               </div>
               <div class="col">
                 <div class="delivery-block__row row align-items-center justify-content-lg-between">
                   <div class="col-md-auto col-6">
                     <div class="text-gray">Ваш населенный пункт:</div>
-                    <div class="text">Краснодар</div>
+                    <div class="dropdown">
+                      <div class="text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="7,7">Краснодар</div>
+                      <div class="form-wrap form-wrap--dropdown-menu dropdown-menu p-3">
+                        <div class="arrow"></div>
+                        <form>
+                          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control form-control-sm" type="text" placeholder="Начните вводить название"/>
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__block small">
+                            <div class="form-wrap__item">Краснодар
+                            </div>
+                            <div class="form-wrap__item">Ростов - на - Дону
+                            </div>
+                            <div class="form-wrap__item">Москва
+                            </div>
+                            <div class="form-wrap__item">Санкт-Петербург
+                            </div>
+                            <div class="form-wrap__item">Еще город
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-md-auto col-6">
-                    <div class="text-gray">Способ доставки:</div>
-                    <div class="text">Курьер</div>
+                    <div class="text-gray">Способ доставки: </div>
+                    <div class="dropdown">
+                      <div class="text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="7,7">Курьер</div>
+                      <div class="form-wrap form-wrap--dropdown-menu dropdown-menu p-3">
+                        <div class="arrow"></div>
+                        <form>
+                          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control form-control-sm" type="text" placeholder="Начните вводить название"/>
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__block small">
+                            <div class="form-wrap__item">Краснодар
+                            </div>
+                            <div class="form-wrap__item">Ростов - на - Дону
+                            </div>
+                            <div class="form-wrap__item">Москва
+                            </div>
+                            <div class="form-wrap__item">Санкт-Петербург
+                            </div>
+                            <div class="form-wrap__item">Еще город
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-md-auto col-6">
                     <div class="text-gray">Ближайшая дата доставки:</div>
                     <div class="text-primary">19.08.2018</div>
                   </div>
                   <div class="col-md-auto col-6">
-                    <div class="text-gray">Стоимость доставки:</div>
-                    <div class="text-primary">280 руб.</div>
+                    <div class="text-gray">Стоимость доставки:</div><span class="text-primary"> 280 руб. </span>бесплатно от 2900 р. 
+                    <div class="popover-toggle popover-toggle--qu" data-toggle="popover" data-content="Мы осуществляем доставку бесплатно при заказе товаров на 2900 р. и больше">?
+                    </div>
                   </div>
                 </div>
               </div>
