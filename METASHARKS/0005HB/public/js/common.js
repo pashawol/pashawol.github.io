@@ -152,6 +152,9 @@ $(".delivary-method .custom-input__input" ).change(function () {
 			buttontxtless: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>', 
 			animationspeed: 450
 		});
+
+
+ 
   function heightses() {
 
     var w = $(window).width();

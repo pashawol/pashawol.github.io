@@ -94,12 +94,10 @@
               </div>
               <div class="col-auto">
                 <div class="row align-items-center">
-                  <div class="col-auto">
-                    <div class="top-nav__po top-nav__po--fixed">
-                      <svg class="icon icon-user ">
-                        <use xlink:href="img/svg/sprite.svg#user"></use>
-                      </svg>
-                    </div>
+                  <div class="col-auto"><a class="top-nav__po top-nav__po--fixed d-block popup-with-move-anim" href="#modal-po">
+                    <svg class="icon icon-user ">
+                      <use xlink:href="img/svg/sprite.svg#user"></use>
+                    </svg></a>
                   </div>
                   <div class="col-auto">
                     <div class="top-nav__search-toggle top-nav__search-toggle--js">
@@ -159,17 +157,15 @@
                       </li>
                     </ul>
                   </div>
-                  <div class="col-auto">
-                    <div class="top-nav__po">
-                      <div class="row">
-                        <div class="col-auto">
-                          <svg class="icon icon-user ">
-                            <use xlink:href="img/svg/sprite.svg#user"></use>
-                          </svg>
-                        </div>
-                        <div class="col">Вход</div>
+                  <div class="col-auto"><a class="top-nav__po d-block popup-with-move-anim" href="#modal-po">
+                    <div class="row">
+                      <div class="col-auto">
+                        <svg class="icon icon-user ">
+                          <use xlink:href="img/svg/sprite.svg#user"></use>
+                        </svg>
                       </div>
-                    </div>
+                      <div class="col">Вход</div>
+                    </div></a>
                   </div>
                   <div class="col-auto">
                     <div class="top-nav__time">
@@ -1742,6 +1738,58 @@
                     <div class="form-wrap__input-wrap form-wrap__input-wrap--addr form-group"><input class="form-wrap__input form-wrap__input--addr form-control" type="text" placeholder="Населенный пункт"/>
                       <button class="form-wrap__btn-addr btn btn-sm btn-outline-primary" type="button">Изменить
                       </button>
+                      <div class="addr-result">
+                        <div class="addr-result__block">
+                          <div class="addr-result__item"> 
+                            <div class="addr-result__row row">
+                              <div class="col-auto">94005 </div>
+                              <div class="col"><span class="text-gray">п. Натухаевский, Московская область, Сергеевский район</span></div>
+                            </div>
+                          </div>
+                          <div class="addr-result__item"> 
+                            <div class="addr-result__row row">
+                              <div class="col-auto">94005 </div>
+                              <div class="col"><span class="text-gray">п. Натухаевский, Московская область, Сергеевский район</span></div>
+                            </div>
+                          </div>
+                          <div class="addr-result__item"> 
+                            <div class="addr-result__row row">
+                              <div class="col-auto">94005 </div>
+                              <div class="col"><span class="text-gray">п. Натухаевский, Московская область, Сергеевский район</span></div>
+                            </div>
+                          </div>
+                          <div class="addr-result__item"> 
+                            <div class="addr-result__row row">
+                              <div class="col-auto">94005 </div>
+                              <div class="col"><span class="text-gray">п. Натухаевский, Московская область, Сергеевский район</span></div>
+                            </div>
+                          </div>
+                          <div class="addr-result__item"> 
+                            <div class="addr-result__row row">
+                              <div class="col-auto">94005 </div>
+                              <div class="col"><span class="text-gray">п. Натухаевский, Московская область, Сергеевский район</span></div>
+                            </div>
+                          </div>
+                          <div class="addr-result__item"> 
+                            <div class="addr-result__row row">
+                              <div class="col-auto">94005 </div>
+                              <div class="col"><span class="text-gray">п. Натухаевский, Московская область, Сергеевский район</span></div>
+                            </div>
+                          </div>
+                          <div class="addr-result__item"> 
+                            <div class="addr-result__row row">
+                              <div class="col-auto">94005 </div>
+                              <div class="col"><span class="text-gray">п. Натухаевский, Московская область, Сергеевский район</span></div>
+                            </div>
+                          </div>
+                          <div class="addr-result__item"> 
+                            <div class="addr-result__row row">
+                              <div class="col-auto">94005 </div>
+                              <div class="col"><span class="text-gray">п. Натухаевский, Московская область, Сергеевский район</span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="delivary-method">
                       <div class="row">
@@ -2018,6 +2066,30 @@
           </div>
         </div>
       </footer>
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-po">
+        <form>
+          <div class="form-wrap__title">Введите Ваши данные
+          </div>
+          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail" required="required"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Пароль" required="required"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="row">
+            <div class="col-auto">
+              <button class="form-wrap__btn-po btn btn-sm btn-primary" type="submit">Войти
+              </button>
+            </div>
+            <div class="col">
+              <button class="form-wrap__btn-po btn btn-sm btn-block btn-outline-primary" type="submit">Зарегистрироваться
+              </button>
+            </div>
+          </div>
+          <div class="text-center pt-3"> <a class="small" href="#">Забыли пароль? </a></div>
+        </form>
+      </div>
+      <!-- #modal-po-->
       <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
         <form>
           <div class="form-wrap__title">Введите ваши данные и наш специалист перезвонит Вам в течении 15 минут
