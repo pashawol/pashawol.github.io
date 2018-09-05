@@ -200,8 +200,8 @@
         <div class="container">
           <div class="header-block__title-sub header-block__title-sub--issue h6 ttu">Аренда авто без водителя
           </div>
-          <h1 class="header-block__title header-block__title--issue"> <span class="d-block">пункт выдачи:</span><span class="d-inline-block bg-primary text-body">метро ботанический сад</span>
-          </h1><a class="header-block__btn header-block__btn--issue btn btn btn-block btn-outline-white" href="#">Изменить пункт выдачи</a>
+          <h1 class="header-block__title header-block__title--issue"> <span class="d-block">пункт выдачи:</span><span class="d-inline-block bg-primary text-body px-1">метро ботанический сад</span>
+          </h1><a class="header-block__btn header-block__btn--issue btn btn btn-block btn-outline-white popup-with-move-anim" href="#modal-issue">Изменить пункт выдачи</a>
         </div>
       </div>
       <!-- end header-block-->
@@ -411,8 +411,8 @@
           <!-- end .row-->
         </div>
       </div>
-      <div class="section bg-gray">
-        <div class="h2 text-center mono">еще 100 моделей сейчас на&nbsp;центральной автостоянке автопрокат&nbsp;24</div><a class="btn btn btn-block btn-primary" href="#">Посмотреть все автомобили</a>
+      <div class="s-100 section bg-gray">
+        <div class="h2 text-center mono">еще 100 моделей сейчас на&nbsp;центральной&nbsp;автостоянке автопрокат&nbsp;24</div><a class="s-100__btn btn btn-block btn-primary" href="#">Посмотреть все автомобили</a>
       </div>
       <footer class="footer">
         <div class="footer__head">
@@ -2210,6 +2210,33 @@
         </div>
       </div>
       <!-- #modal-thank-call-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-issue">
+        <form>
+          <div class="text-center">
+            <div class="form-wrap__title mono ttu"> 
+            </div>
+            <div class="h6 mb-4"> найдите ближайший пункт выдачи автопрокат24</div>
+            <div class="form-search">
+              <div class="form-wrap">
+                <form> 
+                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Начните вводить станцию метро или город"/>
+                  </div>
+                  <button class="form-wrap__btn">
+                    <svg class="icon icon-search ">
+                      <use xlink:href="img/svg/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="form-wrap__btn-wrap">
+              <button class="form-wrap__btn btn btn-primary btn-block">Выбрать
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- end #modal-issue-->
       <!-- модалки колцентра-->
     </div>
     <script src="js/jquery.min.js"></script>
