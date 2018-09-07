@@ -59,12 +59,11 @@ $(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() 
 		$(this).addClass('active').closest('.dropdown-cat__menu').find('.dropdown-cat-sub').removeClass('active');
 		$(this).closest('.dropdown-cat__menu').find(".dropdown-cat-sub-accordion").eq($(this).index()).find(".dropdown-cat-sub").addClass('active');
 		 $(".dropdown-cat__menu").addClass('active');
-		},
-		function () {
-			$(".dropdown-cat__menu").removeClass('active');
-
-	  }
+		}
 	);
+	$(".dropdown-cat__menu").hover(function () {
+		$(".dropdown-cat__menu.active, .dropdown-cat-sub.active, .dropdown-cat-has-children__item--js.active, .category-accordion.active").removeClass('active');
+	})
 
 
 		$(document).mouseup(function (e) {
