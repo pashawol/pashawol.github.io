@@ -16,36 +16,7 @@
 	 $(this).parents(".dropdown-cat").hasClass("show")?($(".dropdown-cat__title").text("Закрыть"),$("body").addClass("fixed-drop"))  : ($(".dropdown-cat__title").text("Все категории"), $("body").removeClass("fixed-drop")); 
 	 
 		})
-		$(document).mouseup(function (e) {
-			var container = $(".dropdown-cat.show");
-			if (container.has(e.target).length === 0){
-				 $(".dropdown-cat__menu").hide();
-				// $("body").toggleClass("fixed");
-				$(".dropdown-cat__title").text("Все категории");
-				$(".dropdown-cat").removeClass("show");
-				$("body").removeClass("fixed-drop");
-					}
-			});
-
- 
-
-			// open search-block 
-	$(".top-nav__search-toggle--js").click(function () {
-		$(".search-block--js").slideToggle()
-		.find(".form-control").focus();
-		})
-		
- 
-	// открыть дочернее меню в dropdown
-	$(".dropdown-cat-has-children__item--js").hover(function () {
-		
-		$(this).closest('.dropdown-cat__menu').find(".dropdown-cat-has-children__item--js").removeClass('active');
-		$(this).addClass('active').closest('.dropdown-cat__menu').find('.dropdown-cat-sub').removeClass('active');
-		$(this).closest('.dropdown-cat__menu').find(".dropdown-cat-sub-accordion").eq($(this).index()).find(".dropdown-cat-sub").addClass('active');
-		 
-	});
-
-	//Assigning the h2 markup to accordion title
+			//Assigning the h2 markup to accordion title
 	$(".dropdown-cat__menu").each(function () {
 		var $categoryTabs = $(this);
 		var itemCount = 0;
@@ -57,17 +28,9 @@
 				$categoryTabs.find('.category-accordion:eq(' + itemCount + ')').append(innertext);
 				itemCount++;
 		});
-	})
+	});
 
-
-		// accordion в меню
-		// $(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() {
-		// 	$(this).toggleClass("active").next().slideToggle();
-		// 	if (($(this).offset().top ) >= ($(' html, body').height() / 2)){
-		// 		$('.custom-scroll-js').animate({ scrollTop: $(this).offset().top + topHeader}, 1100);
-		// 	}
-		// })
-// accordion в меню
+	// accordion в меню
 var $catalog_nav = $('.catalog-nav');
 $(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() {
 		var $el = $(this),
@@ -88,6 +51,55 @@ $(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() 
 		}, 500);
  
 });
+
+	// открыть дочернее меню в dropdown
+	$(".dropdown-cat-has-children__item--js").hover(function () {
+		
+		$(this).closest('.dropdown-cat__menu').find(".dropdown-cat-has-children__item--js").removeClass('active');
+		$(this).addClass('active').closest('.dropdown-cat__menu').find('.dropdown-cat-sub').removeClass('active');
+		$(this).closest('.dropdown-cat__menu').find(".dropdown-cat-sub-accordion").eq($(this).index()).find(".dropdown-cat-sub").addClass('active');
+		 $(".dropdown-cat__menu").addClass('active');
+		},
+		function () {
+			$(".dropdown-cat__menu").removeClass('active');
+
+	  }
+	);
+
+
+		$(document).mouseup(function (e) {
+			var container = $(".dropdown-cat.show");
+			if (container.has(e.target).length === 0){
+				 $(".dropdown-cat__menu").hide();
+				// $("body").toggleClass("fixed");
+				$(".dropdown-cat__title").text("Все категории");
+				$(".dropdown-cat").removeClass("show");
+				$("body").removeClass("fixed-drop");
+				$(".dropdown-cat-has-children__item--js").removeClass('active');
+				$('.dropdown-cat-sub').removeClass('active');
+				$('.dropdown-cat-sub.active,.category-accordion.active, .dropdown-cat__menu.active', $catalog_nav).removeClass('active');
+					}
+			});
+
+ 
+
+			// open search-block 
+	$(".top-nav__search-toggle--js").click(function () {
+		$(".search-block--js").slideToggle()
+		.find(".form-control").focus();
+		})
+		
+ 
+
+
+		// accordion в меню
+		// $(".dropdown-cat-sub-accordion").on('click', ' .category-accordion', function() {
+		// 	$(this).toggleClass("active").next().slideToggle();
+		// 	if (($(this).offset().top ) >= ($(' html, body').height() / 2)){
+		// 		$('.custom-scroll-js').animate({ scrollTop: $(this).offset().top + topHeader}, 1100);
+		// 	}
+		// })
+
 
 //  табы  в выборе способа доставки
 $(".delivary-method .custom-input__input" ).change(function () {

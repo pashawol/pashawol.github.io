@@ -1905,23 +1905,18 @@
                       <div class="text dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="7,7">Курьер</div>
                       <div class="form-wrap form-wrap--dropdown-menu dropdown-menu p-3">
                         <div class="arrow"></div>
-                        <form>
-                          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control form-control-sm" type="text" placeholder="Начните вводить название"/>
+                        <div class="form-wrap__block small">
+                          <div class="form-wrap__item">Краснодар
                           </div>
-                          <!-- +e.input-wrap-->
-                          <div class="form-wrap__block small">
-                            <div class="form-wrap__item">Краснодар
-                            </div>
-                            <div class="form-wrap__item">Ростов - на - Дону
-                            </div>
-                            <div class="form-wrap__item">Москва
-                            </div>
-                            <div class="form-wrap__item">Санкт-Петербург
-                            </div>
-                            <div class="form-wrap__item">Еще город
-                            </div>
+                          <div class="form-wrap__item">Ростов - на - Дону
                           </div>
-                        </form>
+                          <div class="form-wrap__item">Москва
+                          </div>
+                          <div class="form-wrap__item">Санкт-Петербург
+                          </div>
+                          <div class="form-wrap__item">Еще город
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -2463,7 +2458,7 @@
         <div class="container">
           <div class="footer__top-row row justify-content-between">
             <div class="col-xl-3 col-auto"><a class="footer__logo scroll-link" href="#body"><img src="img/logo-vert.png" alt=""/></a>
-              <div class="footer__time">
+              <div class="footer__time d-none d-sm-block">
                 <div class="footer__time-row row">
                   <div class="col-auto">
                     <svg class="icon icon-clock ">
@@ -2498,6 +2493,18 @@
                 </li>
               </ul>
             </div>
+            <div class="col-12 d-sm-none">
+              <div class="footer__time">
+                <div class="footer__time-row row">
+                  <div class="col-auto">
+                    <svg class="icon icon-clock ">
+                      <use xlink:href="img/svg/sprite.svg#clock"></use>
+                    </svg>
+                  </div>
+                  <div class="col">Время работы   с 10:00 до 18:00</div>
+                </div>
+              </div>
+            </div>
             <div class="col-sm-auto">
               <div class="footer__head-row row justify-content-between">
                 <div class="col-auto">
@@ -2524,7 +2531,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col-auto">
+                <div class="col-sm-auto col-6">
                   <div class="footer__delivery">
                     <div class="h5 strong text-info">Бесплатная доставка</div>
                     <div class="small"> При заказе от 2900 р. и выше</div>
@@ -2537,14 +2544,16 @@
         <div class="footer__foot">
           <div class="container">
             <div class="row">
-              <div class="col-xl-4 col-md-auto">
+              <div class="col-xl-4 col-md-auto text-sm-left text-center">
                 <div class="footer__small">© 2014 — 2018 Happy Birdie
                 </div>
                 <div class="footer__small">Сайт защищен с использованием технологии SSL.
                 </div>
               </div>
+            </div>
+            <div class="row">
               <div class="col"><a class="icon-yandex tdu ttu" target="_blank" href="https://market.yandex.ru/shop/323050/reviews"> <img class="mr-2" src="img/ya-icon.png" alt="alt"/>Отзывы о нас</a></div>
-              <div class="col-sm-auto"><img class="res-i" src="img/pay-method.png" alt="alt"/></div>
+              <div class="col-auto"><img class="res-i" src="img/pay-method.png" alt="alt"/></div>
             </div>
           </div>
         </div>
