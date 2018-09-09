@@ -4,6 +4,9 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
+	$('.popover-dismiss').popover({
+		trigger: 'focus'
+	})
 
 	var url = document.location.href;
 	$.each($(".top-nav__nav a "), function () {
@@ -41,6 +44,16 @@ jQuery(document).ready(function ($) {
 		});
 	})
 	// мобильное меню
+	
+	$(".wrapp-hidden .menu-item-has-children ").each(function(){
+		$(this).append('<div class="toggle-l"></div>');
+	})
+
+	$( '.wrapp-hidden .menu-item-has-children  ').on('click', '.toggle-l', function(){
+			$(this).prev().slideToggle().parent().toggleClass("active");
+			return false;
+		}) 
+
 	var toggMnu = $(".toggle-mnu-1").click(function () {
 
 		$(".toggle-mnu-1").toggleClass("on");
@@ -54,7 +67,7 @@ jQuery(document).ready(function ($) {
 	});
 	$(document).mouseup(function (e) {
 		var container = $(".hidden-mnu.active");
-		if (container.has(e.target).length === 0) {
+		if (container.has(e.target).length === 0&& $(".top-nav").has(e.target).length === 0) {
 			$(".toggle-mnu-1").removeClass("on");
 			// $("body").toggleClass("fixed");
 			$(".hidden-mnu").removeClass("active");
@@ -71,16 +84,21 @@ jQuery(document).ready(function ($) {
 
 		// скрывает моб меню
 
-		var topH = $("header ").innerHeight();
-
+		var topH = $(".top-nav").height();
+		var topH2 = $("header ").height() ;
 		$(window).scroll(function () {
-			if ($(this).scrollTop() > topH) {
+			if ($(this).scrollTop() > topH ) {
+				$('.top-nav  ').addClass('fixed-ready');
+			} else 
+				$('.top-nav  ').removeClass('fixed-ready'); 
+	 
+			if ($(this).scrollTop() > topH2) {
 				$('.top-nav  ').addClass('fixed');
-			}
-			else {
+			} else
 				$('.top-nav  ').removeClass('fixed');
-			}
 		});
+
+		// конец добавил
 		// конец добавил
 	}
 
@@ -230,7 +248,9 @@ jQuery(document).ready(function ($) {
 	});
 
 	// маска на инпут
-	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({ "mask": "+7(999)999-99-99" });
+	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
+		"mask": "+7(999)999-99-99"
+	});
 
 
 	//Replace all SVG images with inline SVG
