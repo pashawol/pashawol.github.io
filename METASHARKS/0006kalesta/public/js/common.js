@@ -155,11 +155,11 @@ $(".slider-js").each(function () {
 			loadPrevNext: true,
 		},
 		navigation: {
-			nextEl: $(this).parent().find('.swiper-button-next'),
-		 prevEl: $(this).parent().find('.swiper-button-prev'),
+			nextEl: $(this).parents(".pos-r").find('.swiper-button-next'),
+		 prevEl: $(this).parents(".pos-r").find('.swiper-button-prev'),
 	 },
 	 pagination: {
-    el: $(this).parent().find('.swiper-pagination'),
+    el: $(this).parents(".pos-r").find('.swiper-pagination'),
 		type: 'bullets',
 		clickable: true,
   },
