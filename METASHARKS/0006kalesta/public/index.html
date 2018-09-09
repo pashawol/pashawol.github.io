@@ -72,7 +72,7 @@
                           <use xlink:href="img/svg/sprite.svg#calculator"></use>
                         </svg>Калькулятор</a>
                       </div>
-                      <div class="top-nav__hide-block col-auto d-none d-md-block"> <a class="insta-link" href="#" target="_blank"><img src="img/instagram.svg" alt="alt"/></a>
+                      <div class="top-nav__hide-block top-nav__hide-block--insta col-auto d-none d-md-block"> <a class="insta-link" href="#" target="_blank"><img src="img/instagram.svg" alt="alt"/></a>
                       </div>
                     </div>
                   </div>
@@ -210,41 +210,484 @@
       <!-- end HEADER.header-->
       <!-- start header-block-->
       <div class="header-block container-full" id="header-block">
-        <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+        <div class="pos-r">
+          <div class="slider-js swiper-container" data-speed="60000">
+            <div class="swiper-wrapper">
+              <div class="header-block__slide swiper-slide swiper-lazy" data-background="img/head-slide.jpg">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="container">
+                  <div class="header-block__block">
+                    <div class="header-block__title h1 ttu">Внутреняя отделка  загородных домов
+                    </div>
+                    <div class="h5">При заказе комплекса работ - 10% скидка</div><a class="header-block__btn btn btn-lg btn-block btn-warning" href="#">Узнать больше</a>
+                    <div class="header-block__small">Акция ограничена по времени узнайте больше, чтобы не пропустить свою скидку
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-block__slide swiper-slide swiper-lazy" data-background="img/head-slide.jpg">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="container">
+                  <div class="header-block__block">
+                    <div class="header-block__title h1 ttu">Внутреняя отделка  загородных домов
+                    </div>
+                    <div class="h5">При заказе комплекса работ - 10% скидка</div><a class="header-block__btn btn btn-lg btn-block btn-warning" href="#">Узнать больше</a>
+                    <div class="header-block__small">Акция ограничена по времени узнайте больше, чтобы не пропустить свою скидку
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header-block__slide swiper-slide swiper-lazy" data-background="img/head-slide.jpg">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="container">
+                  <div class="header-block__block">
+                    <div class="header-block__title h1 ttu">Внутреняя отделка  загородных домов
+                    </div>
+                    <div class="h5">При заказе комплекса работ - 10% скидка</div><a class="header-block__btn btn btn-lg btn-block btn-warning" href="#">Узнать больше</a>
+                    <div class="header-block__small">Акция ограничена по времени узнайте больше, чтобы не пропустить свою скидку
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-none d-md-block">
+            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+              <svg class="icon icon-arr-right ">
+                <use xlink:href="img/svg/sprite.svg#arr-right"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+              <svg class="icon icon-arr-left ">
+                <use xlink:href="img/svg/sprite.svg#arr-left"></use>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end header-block-->
+      <div class="container-full">
+        <div class="calc bg-light">
+          <div class="container">
+            <div class="form-wrap">
+              <form>
+                <div class="row align-items-center">
+                  <div class="col-xl-auto col-lg-12 col-md pb-2">
+                    <div class="form-wrap__title mb-2">Быстрый расчет  стоимости работ
+                    </div>
+                  </div>
+                  <div class="col-md-auto col-12"> 
+                    <div class="row small-row">
+                      <div class="col-md-auto col pb-2">
+                        <div class="form-wrap__input-wrap form-group">
+                          <select class="form-wrap__input form-control">
+                            <option value="" selected="selected" desabled="desabled">Вид работ</option>
+                            <option value="">Вид работ</option>
+                            <option value="">Вид работ</option>
+                            <option value="">Вид работ</option>
+                          </select>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="col-auto pb-2">
+                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-wrap__input form-wrap__input--count" type="text" placeholder="0"/>
+                          <div class="form-wrap__caption small">м2
+                          </div>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg col-md-8">
+                    <div class="row small-row">
+                      <div class="col-md-6 pb-2">
+                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Ваше имя"/>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="col-md-6 pb-2">
+                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="+ 7 (___) ___ - __ - __"/>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-auto col-md-4 pb-2">
+                    <div class="row">
+                      <div class="col-md-12 col-6">
+                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__btn btn btn-warning" type="submit" value="Рассчитать"/>
+                        </div>
+                      </div>
+                      <div class="col d-md-none">Итого:
+                        <div class="h4">56 000 р.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col order-lg-0 order-last">
+                    <label class="custom-input custom-input--polite smallest d-block"><input class="custom-input__input custom-input__input--polite" type="checkbox"/><span class="custom-input__lab"> </span><span class="custom-input__text">Я соглашаетесь с <a class="tdu text-body" href="#"> политикой конфиденциальности  </a>и условиями обработки  <a class="tdu text-body" href="#"> персональных данных</a><span class="d-block text-gray">* Данный рассчет является примерным. Окончательную цену может назвать наш специалист по телефону</span></span>
+                    </label>
+                  </div>
+                  <div class="col-xl-auto col-lg-4 text-xl-left text-lg-right">
+                    <div class="row align-items-center">
+                      <div class="col-xl-auto col-lg-12 col-md-auto pb-2 d-none d-lg-block">
+                        <div class="h3 mb-0">Итого: 56 000 руб*</div>
+                      </div>
+                      <div class="col-xl-auto col-lg-12 col-md-auto pb-2"><a class="form-wrap__reset text-body tdu" href="#">Рассчитать заново</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- start s-servises-->
       <div class="s-servises section" id="s-servises">
         <div class="container">
-          <h2 class="text-center">s-servises</h2>
-          <div class="row"></div>
+          <h2 class="text-center ttu">Наши услуги</h2>
+          <div class="row">
+                <div class="s-servises__col col-xl col-lg-3 col-md-4 col-6"><a class="s-servises__item" href="#">
+                  <div class="row">
+                    <div class="col-sm-auto"><span class="s-servises__img-wrap">
+                      <svg class="icon icon-servises-1 ">
+                        <use xlink:href="img/svg/sprite.svg#servises-1"></use>
+                      </svg></span>
+                    </div>
+                    <div class="col">Строительство загородных домов</div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-servises__col col-xl col-lg-3 col-md-4 col-6"><a class="s-servises__item" href="#">
+                  <div class="row">
+                    <div class="col-sm-auto"><span class="s-servises__img-wrap">
+                      <svg class="icon icon-servises-2 ">
+                        <use xlink:href="img/svg/sprite.svg#servises-2"></use>
+                      </svg></span>
+                    </div>
+                    <div class="col">Отделка загородных домов</div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-servises__col col-xl col-lg-3 col-md-4 col-6"><a class="s-servises__item" href="#">
+                  <div class="row">
+                    <div class="col-sm-auto"><span class="s-servises__img-wrap">
+                      <svg class="icon icon-servises-3 ">
+                        <use xlink:href="img/svg/sprite.svg#servises-3"></use>
+                      </svg></span>
+                    </div>
+                    <div class="col">Покраска деревянных домов</div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-servises__col col-xl col-lg-3 col-md-4 col-6"><a class="s-servises__item" href="#">
+                  <div class="row">
+                    <div class="col-sm-auto"><span class="s-servises__img-wrap">
+                      <svg class="icon icon-servises-4 ">
+                        <use xlink:href="img/svg/sprite.svg#servises-4"></use>
+                      </svg></span>
+                    </div>
+                    <div class="col">Штукатурные фасады загородных домов</div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-servises__col col-xl col-lg-3 col-md-4 col-6"><a class="s-servises__item" href="#">
+                  <div class="row">
+                    <div class="col-sm-auto"><span class="s-servises__img-wrap">
+                      <svg class="icon icon-servises-5 ">
+                        <use xlink:href="img/svg/sprite.svg#servises-5"></use>
+                      </svg></span>
+                    </div>
+                    <div class="col">Устройство внутренних коммуникаций</div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-servises__col col-xl col-lg-3 col-md-4 col-6"><a class="s-servises__item" href="#">
+                  <div class="row">
+                    <div class="col-sm-auto"><span class="s-servises__img-wrap">
+                      <svg class="icon icon-servises-6 ">
+                        <use xlink:href="img/svg/sprite.svg#servises-6"></use>
+                      </svg></span>
+                    </div>
+                    <div class="col">Проектирование и изготовление лестниц</div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-servises__col col-xl col-lg-3 col-md-4 col-6"><a class="s-servises__item" href="#">
+                  <div class="row">
+                    <div class="col-sm-auto"><span class="s-servises__img-wrap">
+                      <svg class="icon icon-servises-7 ">
+                        <use xlink:href="img/svg/sprite.svg#servises-7"></use>
+                      </svg></span>
+                    </div>
+                    <div class="col">Устройство внешних коммуникаций</div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-servises__col col-xl col-lg-3 col-md-4 col-6"><a class="s-servises__item" href="#">
+                  <div class="row">
+                    <div class="col-sm-auto"><span class="s-servises__img-wrap">
+                      <svg class="icon icon-servises-8 ">
+                        <use xlink:href="img/svg/sprite.svg#servises-8"></use>
+                      </svg></span>
+                    </div>
+                    <div class="col">Установка буронабивных свай</div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-servises__col col-xl col-lg-3 col-md-4 col-6"><a class="s-servises__item" href="#">
+                  <div class="row">
+                    <div class="col-sm-auto"><span class="s-servises__img-wrap">
+                      <svg class="icon icon-servises-9 ">
+                        <use xlink:href="img/svg/sprite.svg#servises-9"></use>
+                      </svg></span>
+                    </div>
+                    <div class="col">Устройство въездных групп</div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-servises__col col-xl col-lg-3 col-md-4 col-6"><a class="s-servises__item" href="#">
+                  <div class="row">
+                    <div class="col-sm-auto"><span class="s-servises__img-wrap">
+                      <svg class="icon icon-servises-10 ">
+                        <use xlink:href="img/svg/sprite.svg#servises-10"></use>
+                      </svg></span>
+                    </div>
+                    <div class="col">Отмостка вокруг дома</div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-->
+          </div>
         </div>
       </div>
       <!-- end s-servises-->
       <!-- start s-trust-->
-      <div class="s-trust section" id="s-trust">
+      <div class="s-trust section bg-light" id="s-trust">
         <div class="container">
-          <h2 class="text-center">s-trust</h2>
-          <div class="row"></div>
+          <h2 class="text-center ttu">Почему нам можно доверить свое жилье</h2>
+          <div class="row">
+                <div class="s-trust__col col-lg-4 col-md-4 col-6">
+                  <div class="s-trust__item">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="s-trust__img-wrap"><img class="res-i" src="img/why-1.png" alt="alt"/>
+                        </div>
+                      </div>
+                      <div class="col">Высокая квалификация сотрудников</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-trust__col col-lg-4 col-md-4 col-6">
+                  <div class="s-trust__item">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="s-trust__img-wrap"><img class="res-i" src="img/why-2.png" alt="alt"/>
+                        </div>
+                      </div>
+                      <div class="col">Предоставление услуг высочайшего класса</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-trust__col col-lg-4 col-md-4 col-6">
+                  <div class="s-trust__item">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="s-trust__img-wrap"><img class="res-i" src="img/why-3.png" alt="alt"/>
+                        </div>
+                      </div>
+                      <div class="col">Огромный опыт работы</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-trust__col col-lg-4 col-md-4 col-6">
+                  <div class="s-trust__item">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="s-trust__img-wrap"><img class="res-i" src="img/why-4.png" alt="alt"/>
+                        </div>
+                      </div>
+                      <div class="col">Гарантия на все работы 3 года</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-trust__col col-lg-4 col-md-4 col-6">
+                  <div class="s-trust__item">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="s-trust__img-wrap"><img class="res-i" src="img/why-5.png" alt="alt"/>
+                        </div>
+                      </div>
+                      <div class="col">Работаем официально по договору</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-trust__col col-lg-4 col-md-4 col-6">
+                  <div class="s-trust__item">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="s-trust__img-wrap"><img class="res-i" src="img/why-6.png" alt="alt"/>
+                        </div>
+                      </div>
+                      <div class="col">Фиксированные цены без переплат</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-trust__col col-lg-4 col-md-4 col-6">
+                  <div class="s-trust__item">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="s-trust__img-wrap"><img class="res-i" src="img/why-7.png" alt="alt"/>
+                        </div>
+                      </div>
+                      <div class="col">Собственное проектного бюро</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-trust__col col-lg-4 col-md-4 col-6">
+                  <div class="s-trust__item">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="s-trust__img-wrap"><img class="res-i" src="img/why-8.png" alt="alt"/>
+                        </div>
+                      </div>
+                      <div class="col">Индивидуальная работа с каждым клиентом</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-->
+                <div class="s-trust__col col-lg-4 col-md-4 col-6">
+                  <div class="s-trust__item">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="s-trust__img-wrap"><img class="res-i" src="img/why-9.png" alt="alt"/>
+                        </div>
+                      </div>
+                      <div class="col">Уборка мусора после ремонта</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-->
+          </div>
         </div>
       </div>
       <!-- end s-trust-->
       <!-- start s-stocks-->
-      <div class="s-stocks section" id="s-stocks">
-        <div class="container">
-          <h2 class="text-center">s-stocks</h2>
-          <div class="row"></div>
+      <div class="s-stocks section container-full" id="s-stocks">
+        <h2 class="text-center ttu">Акции</h2>
+        <div class="pos-r">
+          <div class="slider-js swiper-container" data-speed="60000">
+            <div class="swiper-wrapper">
+              <div class="s-stocks__slide swiper-slide swiper-lazy" data-background="img/stock.jpg">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="s-stocks__block">
+                        <div class="s-stocks__title h1 ttu">Бесплатный замер на&nbsp;любом объекте
+                        </div>
+                        <div class="h5">Раскрытие темы акции в одну строку</div>
+                      </div>
+                    </div>
+                    <div class="col-md-auto"><a class="s-stocks__btn btn btn-lg btn-block btn-danger" href="#">Узнать больше</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-stocks__slide swiper-slide swiper-lazy" data-background="img/stock.jpg">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="s-stocks__block">
+                        <div class="s-stocks__title h1 ttu">Бесплатный замер на&nbsp;любом объекте
+                        </div>
+                        <div class="h5">Раскрытие темы акции в одну строку</div>
+                      </div>
+                    </div>
+                    <div class="col-md-auto"><a class="s-stocks__btn btn btn-lg btn-block btn-danger" href="#">Узнать больше</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-stocks__slide swiper-slide swiper-lazy" data-background="img/stock.jpg">
+                <div class="swiper-lazy-preloader"></div>
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="s-stocks__block">
+                        <div class="s-stocks__title h1 ttu">Бесплатный замер на&nbsp;любом объекте
+                        </div>
+                        <div class="h5">Раскрытие темы акции в одну строку</div>
+                      </div>
+                    </div>
+                    <div class="col-md-auto"><a class="s-stocks__btn btn btn-lg btn-block btn-danger" href="#">Узнать больше</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="d-none d-md-block">
+            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+              <svg class="icon icon-arr-right ">
+                <use xlink:href="img/svg/sprite.svg#arr-right"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+              <svg class="icon icon-arr-left ">
+                <use xlink:href="img/svg/sprite.svg#arr-left"></use>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-stocks-->
       <!-- start s-work-->
       <div class="s-work section" id="s-work">
         <div class="container">
-          <h2 class="text-center">s-work</h2>
-          <div class="row"></div>
+          <h2 class="text-center ttu">Как МЫ рабоатем</h2>
+          <div class="row">
+                <div class="s-work__col col-lg-4 col-sm-6">
+                  <div class="s-work__item">Расчет стоимости стройматериалов и проведения работ, составление сметы.
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-work__col col-lg-4 col-sm-6">
+                  <div class="s-work__item">Заключение договора. Это можно сделать в нашем офисе либо наш сотрудник приедет к вам
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-work__col col-lg-4 col-sm-6">
+                  <div class="s-work__item">Обсуждение всех вопросов касательно предстоящих работ.
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-work__col col-lg-4 col-sm-6">
+                  <div class="s-work__item">Проведение работ, сдача выполняется по этапам. В конце каждой стадии подписывается промежуточный акт
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-work__col col-lg-4 col-sm-6">
+                  <div class="s-work__item">По завершению всех работ выполнение уборки помещения и проверка отделочных работ и инженерных систем
+                  </div>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+            <div class="s-work__col col-lg-4 col-sm-6">
+              <div class="s-work__item"><a class="s-work__btn btn btn-block btn-primary" href="#">Подписание акта приемки</a>
+              </div>
+            </div>
+            <!-- +e.col.col-lg-4.col-sm-6-->
+          </div>
         </div>
       </div>
       <!-- end s-work-->
@@ -280,9 +723,7 @@
           <div class="form-wrap modal-content modal-win">
             <form>
               <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-              <div class="form-wrap__input-wrap form-group">
-                <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Введите ваш телефон" name="tel" required="required"/>
-                </label>
+              <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/> 
               </div>
               <!-- +e.input-wrap-->
               <button class="form-wrap__btn btn btn-accent btn-block">Отправить
