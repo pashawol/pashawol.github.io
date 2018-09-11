@@ -77,18 +77,18 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
-	$(".s-buttons__item").hover(function () {
+	$(".s-buttons__item--js").hover(function () {
 		$(this).toggleClass("active").find("ul").slideToggle(150);
 	  })
 	function heightses() {
 
 		var w = $(window).width();
-		$(".s-buttons__item").height('auto').equalHeights();
+		$(".s-buttons__item--js").height('auto').equalHeights();
 		//
 
-		$(".s-buttons__item-wrap").each(function () {
+		$(".s-buttons__item-wrap--js").each(function () {
 			var th = $(this);
-			th.height('auto').height(th.find(".s-buttons__item").height());
+			th.height('auto').height(th.find(".s-buttons__item--js").height());
 		})
 
 		// скрывает моб меню
