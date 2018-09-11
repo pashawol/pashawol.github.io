@@ -8,6 +8,8 @@ jQuery(document).ready(function ($) {
 		trigger: 'focus'
 	})
 
+
+
 	var url = document.location.href;
 	$.each($(".top-nav__nav a "), function () {
 
@@ -75,12 +77,19 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
+	$(".s-buttons__item").hover(function () {
+		$(this).toggleClass("active").find("ul").slideToggle(150);
+	  })
 	function heightses() {
 
 		var w = $(window).width();
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
+		$(".s-buttons__item").height('auto').equalHeights();
 		//
 
+		$(".s-buttons__item-wrap").each(function () {
+			var th = $(this);
+			th.height('auto').height(th.find(".s-buttons__item").height());
+		})
 
 		// скрывает моб меню
 
@@ -115,10 +124,10 @@ jQuery(document).ready(function ($) {
 		heightses();
 
 	});
-	$(window).on("load", function () {
-		heightses();
+	// $(window).on("load", function () {
+	// 	heightses();
 
-	})
+	// })
 
 	heightses();
 
