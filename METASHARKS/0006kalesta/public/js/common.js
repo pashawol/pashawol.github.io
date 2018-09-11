@@ -176,6 +176,52 @@ $(".slider-js").each(function () {
  });
 })
 
+$(".carusel-js").each(function () {
+
+	// слайдер цвета в карточке
+	var swiper = new Swiper($(this), {
+		slidesPerView: 4,
+		// slidesPerView: 1, 
+		speed: 750,
+		spaceBetween: 0, 
+		loop: true,  
+		preloadImages: false, 
+		lazy: true,
+		autoplay: {
+			delay: $(this).data("speed"),
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+		navigation: {
+			nextEl: $(this).parents(".pos-r").find('.swiper-button-next'),
+		 prevEl: $(this).parents(".pos-r").find('.swiper-button-prev'),
+	 },
+	 pagination: {
+    el: $(this).parents(".pos-r").find('.swiper-pagination'),
+		type: 'bullets',
+		clickable: true,
+	},
+	breakpoints: {
+		 
+		991: {
+			slidesPerView: 3,
+			// spaceBetween: 30,
+		},
+		767: {
+			slidesPerView: 2,
+			// spaceBetween: 20,
+		},
+		420: {
+			slidesPerView: 1,
+			// spaceBetween: 10,
+		}
+	}
+	 
+ });
+})
+
+
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
