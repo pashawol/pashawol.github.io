@@ -12,14 +12,14 @@ jQuery(document).ready(function ($) {
 	// });
 	
 	// дробдаун в шапке , остальные категории
-	// $('.dropdown-cat__toggle--cat-js').hover(function () {
-	// 	$(this).next().toggle().parents(".dropdown-cat").toggleClass("show");
-	// 	$(this).parents(".dropdown-cat").hasClass("show") ? $("body").addClass("fixed-drop") : $("body").removeClass("fixed-drop"); 
+	$('.dropdown-cat--other-js').hover(function () {
+		$(this).toggleClass("show").find('.dropdown-cat__menu').fadeToggle(100);
+		$(this).hasClass("show") ? $("body").addClass("fixed-drop") : $("body").removeClass("fixed-drop"); 
 	 
-	// 	})
+		})
 	// дробдаун в шапке , все категории
 	$('.dropdown-cat__toggle--js').click(function () {
-		$(this).next().toggleClass("active").toggle().parents(".dropdown-cat").toggleClass("show");
+		$(this).next().toggle().parents(".dropdown-cat").toggleClass("show");
 		$(this).parents(".dropdown-cat").hasClass("show") ? ($(".dropdown-cat__title").text("Закрыть"), $("body").addClass("fixed-drop")) : ($(".dropdown-cat__title").text("Все категории"), $("body").removeClass("fixed-drop"));
 
 	})
