@@ -143,6 +143,24 @@ jQuery(document).ready(function ($) {
 	       return false;
 	   });
 
+	// слайдер цвета в карточке
+	var swiper2 = new Swiper('.slider-more-js', {
+		// slidesPerView: 5,
+		// slidesPerView: 1, 
+		speed: 750,
+		spaceBetween: 0, 
+		loop: true,  
+		preloadImages: false, 
+		lazy: true,
+		autoplay: {
+			delay: $('.slider-more-js').data("speed"),
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+	 
+ });
+ 
 
   
 //  слайдр  в шапке
@@ -174,12 +192,20 @@ $(".slider-js").each(function () {
   },
 	 
  });
+ if( $("div").is(".slider-more-js")){ 
+	//  galleryTop.controller.control = galleryThumbs;
+	swiper.controller.control = swiper2;
+	}
+
 })
+ 
+
+
 
 $(".carusel-js").each(function () {
 
 	// слайдер цвета в карточке
-	var swiper = new Swiper($(this), {
+	var swiper3 = new Swiper($(this), {
 		slidesPerView: 4,
 		// slidesPerView: 1, 
 		speed: 750,
