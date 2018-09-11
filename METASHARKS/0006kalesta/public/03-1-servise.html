@@ -226,12 +226,16 @@
         </div>
         <div class="header-block header-block--bg header-block--page-inner bgs" style="background-image: url(img/servise-inner.jpg);">
           <div class="container">
-            <div class="ttu">
-              <h1>Строительство загородных домов</h1>
+            <div class="row">
+              <div class="col">
+                <h1>Строительство загородных домов</h1>
+              </div>
+              <div class="col-lg-4"><a class="header-block__btn btn btn-lg btn-block btn-warning popup-with-move-anim" href="#modal-call">Заказать</a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="container">
+        <div class="container py-5">
           <p>Сегодня множество компаний занимаются возведением загородных домов и коттеджей из дерева. Компания Kalesta выделяется на их фоне благодаря тому, что она готова предложить своим клиентам потрясающее соотношение цены и качества выполнения строительных работ. Экономии удается достичь путем сочетания передовых технологий и грамотного проектирования.</p>
           <p>Решение воспользоваться услугами компании Kalesta позволяет свести к минимуму затраты нервов, времени и сил, а также финансовых средств. Наличие каталога типовых проектов загородных домов и коттеджей позволяет быстро выбрать подходящий вариант, удовлетворяющий все требования клиента. Заказчикам совсем не обязательно контролировать все этапы строительства, поскольку все работы выполняются высококвалифицированными специалистами, гарантирующими качественный результат.</p>
         </div>
@@ -242,14 +246,14 @@
           <div class="container">
             <div class="form-wrap">
               <form>
-                <div class="h3">Расчет примерной стоимости работ</div>
-                <div class="row align-items-center">
-                  <div class="col-md-auto col-12"> 
-                    <div class="row small-row">
-                      <div class="col-md-auto col pb-2">
-                        <p>Выберите вид работ:</p>
+                <div class="h3 pb-2">Расчет примерной стоимости работ </div>
+                <div class="row"> 
+                  <div class="col-lg-8 col-md-7">
+                    <div class="row">
+                      <div class="col-xl-6 col-lg-5 pb-2">
+                        <div class="pb-1">Выберите вид работ:</div>
                         <div class="form-wrap__input-wrap form-group">
-                          <select class="form-wrap__input form-control">
+                          <select class="form-wrap__input form-control w-100">
                             <option class="d-none" value="" selected="selected" disabled="disabled">Вид работ</option>
                             <option value="">Вид работ</option>
                             <option value="">Вид работ</option>
@@ -258,30 +262,26 @@
                         </div>
                         <!-- +e.input-wrap-->
                       </div>
-                      <div class="col-auto pb-2">
-                        <p>Площадь помещения</p>
-                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-wrap__input form-wrap__input--count" type="text" placeholder="0"/>
+                      <div class="col pb-2">
+                        <div class="pb-1">Площадь <span class="d-none d-sm-inline">помещения</span></div>
+                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control form-wrap__input form-wrap__input--count w-100" type="text" placeholder="0"/>
                           <div class="form-wrap__caption small">м2
                           </div>
                         </div>
                         <!-- +e.input-wrap-->
                       </div>
+                      <div class="col-lg-3 col-6 pb-2 pt-4">
+                        <button class="form-wrap__btn btn btn-warning" type="button">Рассчитать
+                        </button>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-lg-auto col-md-4 pb-2">
-                    <div class="row">
-                      <div class="col-md-12 col-6">
-                        <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__btn btn btn-warning" type="submit" value="Рассчитать"/>
-                        </div>
-                      </div>
-                      <div class="col d-md-none">Итого:
-                        <div class="h4">56 000 р.</div>
-                      </div>
-                    </div>
+                  <div class="col pb-2 pt-4">
+                    <div class="h3 text-md-right text-center">Итого: 56 000 руб*</div>
                   </div>
                 </div>
-                <div class="form-wrap__foot"> <span class="text-gray">*Данный рассчет является примерным. </span>Окончательную цену узнайте у нашего специалиста по телефону <a class="text-body" href="tel:+7495740-37-29">+7 495 740 - 37 - 29 </a> 
-                  или оставьте заявку на <a class="tdu popup-with-move-anim text-warning" href="#modal-call">обратный звонок</a>
+                <div class="form-wrap__foot pb-3"><span class="text-gray">*Данный рассчет является примерным. </span>Окончательную цену узнайте у нашего специалиста по телефону <a class="text-body" href="tel:+7495740-37-29">+7 495 740 - 37 - 29 </a> 
+                  или оставьте  <a class="tdu popup-with-move-anim text-warning" href="#modal-call">заявку на обратный звонок</a>
                 </div>
               </form>
             </div>
@@ -428,6 +428,83 @@
         </div>
       </div>
       <!-- end s-examples-->
+      <!-- start s-price-->
+      <div class="s-price section" id="s-price">
+        <div class="container">
+          <h2 class="text-center">Прайс-лист на работы</h2>
+        </div>
+        <div class="s-price__sub-title container-full">
+          <div class="container h5">Штукатурка</div>
+        </div>
+        <div class="container">
+          <table class="table table-striped table-light">
+            <tr>
+              <th>№ п.п</th>
+              <th>Наименование работ</th>
+              <th>Ед. изм.</th>
+              <th>Цена за единицу</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+              <td>кв.м</td>
+              <td>550 р.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Утепление фасада на клей и дюбельгриб</td>
+              <td>кв.м.</td>
+              <td>15 550 р.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Оштукатуривание столбов штукатурной смесью</td>
+              <td>кв.м.</td>
+              <td>2 550 р.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Оштукатуривание откосов штукатурной смесью </td>
+              <td>кв.м.</td>
+              <td>3 350 550 р.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Оштукатуривание откосов декоративной  штукатуркой </td>
+              <td>кв.м.</td>
+              <td>550 р.</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Демонтаж-монтаж водосточной системы</td>
+              <td>кв.м.</td>
+              <td>550 р.</td>
+            </tr>
+          </table>
+        </div>
+        <div class="s-price__sub-title container-full">
+          <div class="container">
+            <div class="h5">Отмостка</div>
+          </div>
+        </div>
+        <div class="container">
+          <table class="table table-striped table-light">
+            <tr>
+              <th>№ п.п</th>
+              <th>Наименование работ</th>
+              <th>Ед. изм.</th>
+              <th>Цена за единицу</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+              <td>кв.м</td>
+              <td>550 р.</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!-- end s-price-->
       <!-- start s-example-doc-->
       <div class="s-example-doc section bg-light">
         <div class="container">
