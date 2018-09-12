@@ -7,25 +7,7 @@ jQuery(document).ready(function ($) {
 	$('.popover-dismiss').popover({
 		trigger: 'focus'
 	})
-
-
-
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			}
-
-		};
-
-	});
+ 
 	// галерея
 	$(".gal").each(function () {
 
@@ -36,9 +18,7 @@ jQuery(document).ready(function ($) {
 			mainClass: 'mfp-with-zoom mfp-img-mobile',
 			image: {
 				verticalFit: true,
-				// titleSrc: function(item) {
-				//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-				// }
+		 
 			},
 			gallery: {
 				enabled: true
@@ -246,8 +226,7 @@ $(".carusel-js").each(function () {
 	 
  });
 })
-
-
+ 
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -265,79 +244,13 @@ $(".carusel-js").each(function () {
 		mainClass: 'my-mfp-zoom-in'
 	});
 
-
-	// форма
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			$.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-			}, 4000);
-		});
-		return false;
-	});
-
+ 
 	// маска на инпут
 	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
 		"mask": "+7(999)999-99-99"
 	});
 
  
-
-	// кастомный инпут файл
-
-	var file = $(".add-file input[type=file]");
-	file.change(function () {
-		var filename = $(this).val().replace(/.*\\/, "");
-		var name = $(".add-file__filename  ");
-		name.text(filename);
-
-	});
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
-
-	$(".pretty-embed__bg").each(function () {
-		// загрузка фона видео
-		$(this).css("background-image", 'url(http://img.youtube.com/vi/' + $(this).data("src") + '/0.jpg)')
-		// включение видео при клике по блоку
-		$(this).click(function () {
-			$(this).removeClass("on").next()
-				.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
-		})
-	})
-
-
-	// var wowAnim = $(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
-
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	// });
-
+ 
 
 });
