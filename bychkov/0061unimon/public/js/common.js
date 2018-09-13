@@ -41,6 +41,16 @@ jQuery(document).ready(function ($) {
 		});
 	})
 	// мобильное меню
+
+	$(".wrapp-hidden .menu-item-has-children ").each(function(){
+		$(this).append('<div class="toggle-l"></div>');
+	})
+
+	$( '.wrapp-hidden .menu-item-has-children  ').on('click', '.toggle-l', function(){
+			$(this).prev().slideToggle().parent().toggleClass("active");
+			return false;
+		}) 
+
 	var toggMnu = $(".toggle-mnu-1").click(function () {
 
 		$(".toggle-mnu-1").toggleClass("on");
@@ -71,8 +81,7 @@ jQuery(document).ready(function ($) {
 
 		// скрывает моб меню
 
-		var topH = $("header ").innerHeight();
-
+		var topH = $(".header-block ").innerHeight();
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > topH) {
 				$('.top-nav  ').addClass('fixed');
