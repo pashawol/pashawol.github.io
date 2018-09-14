@@ -74,11 +74,7 @@ jQuery(document).ready(function ($) {
 
 	function heightses() {
 
-		var w = $(window).width();
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		//
-
-
+		var w = $(window).width(); 
 		// скрывает моб меню
 
 		var topH = $(".header-block ").innerHeight();
@@ -124,77 +120,78 @@ jQuery(document).ready(function ($) {
 
 	//        return false;
 	//    });
+	var icon = '<svg class="icon icon-arr-left "><use xlink:href="img/svg/sprite.svg#arr-left">';
 
+	var arrr2 = (' <div class="l">' + icon),
+		arrl2 = (' <div class="r">' + icon);
+	//  слайдер в  карточке товара
+$(' .s-gal__slider-big').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dots: false,
+	speed: 450,
+	asNavFor: '.s-gal__slider-small',
+	infinite: false,
+	loop: true,
+	arrows: false,
 
-	// табы  . Теперь данные активного таба остается в storage
-	$(function () {
-		var tab = ('tabs');
+});
+$('.s-gal__slider-small').slick({
+	slidesToShow: 7,
+	slidesToScroll: 1,
+	dots: false,
+	speed: 450,
+	infinite: false,
+	loop: true,
+	arrows: true,
+	prevArrow: arrr2,
+	nextArrow: arrl2,
+	focusOnSelect: true,
+	asNavFor: '.s-gal__slider-big',
+	responsive: [
 
-		$('.' + tab + '__caption').each(function (i) {
-			var storage = localStorage.getItem('tab' + i);
-			if (storage) {
-				$(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-					.closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
+		{
+			breakpoint: 1199,
+			settings: {
+				slidesToShow: 6,
 			}
-		});
-
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
-			var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-			localStorage.removeItem('tab' + ulIndex);
-			localStorage.setItem('tab' + ulIndex, $(this).index());
-
-		});
-	});
-
-
-
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
-
-	var arrl2 = (' <div class="l">' + icon),
-		arrr2 = (' <div class="r">' + icon);
-	// карусель
-	// $('.s-team__slider').slick({
-	//    slidesToShow: 3,
-	//    slidesToScroll: 1,
-	//    dots: false,
-	//    speed: 450,
-	//    infinite: true,
-	//    loop: true,
-	//    arrows: true,
-	//    // centerMode: true,
-	//    // focusOnSelect: true ,
-	//     // variableWidth: true,
-	//     prevArrow: arrr2,
-	//      nextArrow: arrl2,
-	//    });
-
-	// слайдер цвета в карточке
-	var swiper4 = new Swiper('.color-slider', {
-		// slidesPerView: 5,
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		spaceBetween: 0,
-		freeMode: true,
-		watchOverflow: true,
-		slidesPerGroup: 3,
-
-		// centeredSlides: true,
-		loop: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
 		},
+		
+		{
+			breakpoint: 991,
+			settings: {
+				slidesToShow: 5,
+			}
+		},
+		
+		{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 4,
+			}
+		},
+		
+		{
+			breakpoint: 575,
+			settings: {
+				slidesToShow: 3,
+			}
+		},
+		
 
-	});
+
+		// You can unslick at a given breakpoint now by adding:
+		// settings: "unslick"
+		// instead of a settings object
+	]
+	// swipeToSlide: false
+}); 
+
+$('.s-gal__slider-big, .s-gal__slider-small')
+.on('lazyLoaded', function(event, slick, image, imageSource){
+		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+});
+
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
