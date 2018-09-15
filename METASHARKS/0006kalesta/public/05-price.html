@@ -228,80 +228,390 @@
         </div>
       </div>
       <!-- start s-price-->
-      <div class="s-price section pt-0">
+      <!-- добавил clsss .tabs-->
+      <div class="s-price section pt-0 tabs">
         <div class="container">
-          <div class="s-price__head"><a class="s-price__btn btn btn-outline-secondary" href="#">Отделка деревянного дома</a><a class="s-price__btn btn btn-outline-secondary" href="#">Покраска</a><a class="s-price__btn btn btn-outline-secondary" href="#">ОВК</a><a class="s-price__btn btn btn-outline-secondary" href="#">Электромонтаж</a><a class="s-price__btn btn btn-outline-secondary active" href="#">Отмостка и штукатурка</a>
+          <!-- добавил clsss resp-tabs-list-->
+          <div class="s-price__head resp-tabs-list">
+            <!-- добавил изменил на button .resp-tab-btn-->
+            <button class="s-price__btn btn btn-outline-secondary resp-tab-btn" type="button">Отделка деревянного дома
+            </button>
+            <!-- добавил изменил на button .resp-tab-btn-->
+            <button class="s-price__btn btn btn-outline-secondary resp-tab-btn" type="button">Покраска
+            </button>
+            <!-- добавил изменил на button .resp-tab-btn-->
+            <button class="s-price__btn btn btn-outline-secondary resp-tab-btn" type="button">ОВК
+            </button>
+            <!-- добавил изменил на button .resp-tab-btn-->
+            <button class="s-price__btn btn btn-outline-secondary resp-tab-btn" type="button">Электромонтаж
+            </button>
+            <!-- добавил изменил на button .resp-tab-btn-->
+            <button class="s-price__btn btn btn-outline-secondary resp-tab-btn" type="button">Отмостка и штукатурка
+            </button>
           </div>
         </div>
-        <div class="s-price__sub-title container-full">
-          <div class="container h5">Штукатурка</div>
-        </div>
-        <div class="container">
-          <table class="table table-striped table-light">
-            <tr>
-              <th>№ п.п</th>
-              <th>Наименование работ</th>
-              <th>Ед. изм.</th>
-              <th>Цена за единицу</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
-              <td>кв.м</td>
-              <td>550 р.</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Утепление фасада на клей и дюбельгриб</td>
-              <td>кв.м.</td>
-              <td>15 550 р.</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Оштукатуривание столбов штукатурной смесью</td>
-              <td>кв.м.</td>
-              <td>2 550 р.</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Оштукатуривание откосов штукатурной смесью </td>
-              <td>кв.м.</td>
-              <td>3 350 550 р.</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Оштукатуривание откосов декоративной  штукатуркой </td>
-              <td>кв.м.</td>
-              <td>550 р.</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Демонтаж-монтаж водосточной системы</td>
-              <td>кв.м.</td>
-              <td>550 р.</td>
-            </tr>
-          </table>
-        </div>
-        <div class="s-price__sub-title container-full">
-          <div class="container">
-            <div class="h5">Отмостка</div>
+        <!-- добавил обертку-->
+        <div class="resp-tabs-container">
+          <div>
+            <div class="s-price__sub-title container-full">
+              <div class="container h5">Штукатурка</div>
+            </div>
+            <div class="container">
+              <table class="table table-striped table-light">
+                <tr>
+                  <th>№ п.п</th>
+                  <th>Наименование работ</th>
+                  <th>Ед. изм.</th>
+                  <th>Цена за единицу</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+                  <td>кв.м</td>
+                  <td>550 р.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Утепление фасада на клей и дюбельгриб</td>
+                  <td>кв.м.</td>
+                  <td>15 550 р.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Оштукатуривание столбов штукатурной смесью</td>
+                  <td>кв.м.</td>
+                  <td>2 550 р.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Оштукатуривание откосов штукатурной смесью </td>
+                  <td>кв.м.</td>
+                  <td>3 350 550 р.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Оштукатуривание откосов декоративной  штукатуркой </td>
+                  <td>кв.м.</td>
+                  <td>550 р.</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Демонтаж-монтаж водосточной системы</td>
+                  <td>кв.м.</td>
+                  <td>550 р.</td>
+                </tr>
+              </table>
+            </div>
+            <div class="s-price__sub-title container-full">
+              <div class="container">
+                <div class="h5">Отмостка</div>
+              </div>
+            </div>
+            <div class="container">
+              <table class="table table-striped table-light">
+                <tr>
+                  <th>№ п.п</th>
+                  <th>Наименование работ</th>
+                  <th>Ед. изм.</th>
+                  <th>Цена за единицу</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+                  <td>кв.м</td>
+                  <td>550 р.</td>
+                </tr>
+              </table>
+            </div>
           </div>
-        </div>
-        <div class="container">
-          <table class="table table-striped table-light">
-            <tr>
-              <th>№ п.п</th>
-              <th>Наименование работ</th>
-              <th>Ед. изм.</th>
-              <th>Цена за единицу</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
-              <td>кв.м</td>
-              <td>550 р.</td>
-            </tr>
-          </table>
+          <div>
+            <div class="s-price__sub-title container-full">
+              <div class="container h5">Штукатурка</div>
+            </div>
+            <div class="container">
+              <table class="table table-striped table-light">
+                <tr>
+                  <th>№ п.п</th>
+                  <th>Наименование работ</th>
+                  <th>Ед. изм.</th>
+                  <th>Цена за единицу</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+                  <td>кв.м</td>
+                  <td>550 р.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Утепление фасада на клей и дюбельгриб</td>
+                  <td>кв.м.</td>
+                  <td>15 550 р.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Оштукатуривание столбов штукатурной смесью</td>
+                  <td>кв.м.</td>
+                  <td>2 550 р.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Оштукатуривание откосов штукатурной смесью </td>
+                  <td>кв.м.</td>
+                  <td>3 350 550 р.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Оштукатуривание откосов декоративной  штукатуркой </td>
+                  <td>кв.м.</td>
+                  <td>550 р.</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Демонтаж-монтаж водосточной системы</td>
+                  <td>кв.м.</td>
+                  <td>550 р.</td>
+                </tr>
+              </table>
+            </div>
+            <div class="s-price__sub-title container-full">
+              <div class="container">
+                <div class="h5">Отмостка</div>
+              </div>
+            </div>
+            <div class="container">
+              <table class="table table-striped table-light">
+                <tr>
+                  <th>№ п.п</th>
+                  <th>Наименование работ</th>
+                  <th>Ед. изм.</th>
+                  <th>Цена за единицу</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+                  <td>кв.м</td>
+                  <td>550 р.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div class="s-price__sub-title container-full">
+              <div class="container h5">Штукатурка</div>
+            </div>
+            <div class="container">
+              <table class="table table-striped table-light">
+                <tr>
+                  <th>№ п.п</th>
+                  <th>Наименование работ</th>
+                  <th>Ед. изм.</th>
+                  <th>Цена за единицу</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+                  <td>кв.м</td>
+                  <td>550 р.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Утепление фасада на клей и дюбельгриб</td>
+                  <td>кв.м.</td>
+                  <td>15 550 р.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Оштукатуривание столбов штукатурной смесью</td>
+                  <td>кв.м.</td>
+                  <td>2 550 р.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Оштукатуривание откосов штукатурной смесью </td>
+                  <td>кв.м.</td>
+                  <td>3 350 550 р.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Оштукатуривание откосов декоративной  штукатуркой </td>
+                  <td>кв.м.</td>
+                  <td>550 р.</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Демонтаж-монтаж водосточной системы</td>
+                  <td>кв.м.</td>
+                  <td>550 р.</td>
+                </tr>
+              </table>
+            </div>
+            <div class="s-price__sub-title container-full">
+              <div class="container">
+                <div class="h5">Отмостка</div>
+              </div>
+            </div>
+            <div class="container">
+              <table class="table table-striped table-light">
+                <tr>
+                  <th>№ п.п</th>
+                  <th>Наименование работ</th>
+                  <th>Ед. изм.</th>
+                  <th>Цена за единицу</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+                  <td>кв.м</td>
+                  <td>550 р.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div class="s-price__sub-title container-full">
+              <div class="container h5">Штукатурка</div>
+            </div>
+            <div class="container">
+              <table class="table table-striped table-light">
+                <tr>
+                  <th>№ п.п</th>
+                  <th>Наименование работ</th>
+                  <th>Ед. изм.</th>
+                  <th>Цена за единицу</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+                  <td>кв.м</td>
+                  <td>550 р.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Утепление фасада на клей и дюбельгриб</td>
+                  <td>кв.м.</td>
+                  <td>15 550 р.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Оштукатуривание столбов штукатурной смесью</td>
+                  <td>кв.м.</td>
+                  <td>2 550 р.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Оштукатуривание откосов штукатурной смесью </td>
+                  <td>кв.м.</td>
+                  <td>3 350 550 р.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Оштукатуривание откосов декоративной  штукатуркой </td>
+                  <td>кв.м.</td>
+                  <td>550 р.</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Демонтаж-монтаж водосточной системы</td>
+                  <td>кв.м.</td>
+                  <td>550 р.</td>
+                </tr>
+              </table>
+            </div>
+            <div class="s-price__sub-title container-full">
+              <div class="container">
+                <div class="h5">Отмостка</div>
+              </div>
+            </div>
+            <div class="container">
+              <table class="table table-striped table-light">
+                <tr>
+                  <th>№ п.п</th>
+                  <th>Наименование работ</th>
+                  <th>Ед. изм.</th>
+                  <th>Цена за единицу</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+                  <td>кв.м</td>
+                  <td>550 р.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div>
+            <div class="s-price__sub-title container-full">
+              <div class="container h5">Штукатурка</div>
+            </div>
+            <div class="container">
+              <table class="table table-striped table-light">
+                <tr>
+                  <th>№ п.п</th>
+                  <th>Наименование работ</th>
+                  <th>Ед. изм.</th>
+                  <th>Цена за единицу</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+                  <td>кв.м</td>
+                  <td>550 р.</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Утепление фасада на клей и дюбельгриб</td>
+                  <td>кв.м.</td>
+                  <td>15 550 р.</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Оштукатуривание столбов штукатурной смесью</td>
+                  <td>кв.м.</td>
+                  <td>2 550 р.</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Оштукатуривание откосов штукатурной смесью </td>
+                  <td>кв.м.</td>
+                  <td>3 350 550 р.</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Оштукатуривание откосов декоративной  штукатуркой </td>
+                  <td>кв.м.</td>
+                  <td>550 р.</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Демонтаж-монтаж водосточной системы</td>
+                  <td>кв.м.</td>
+                  <td>550 р.</td>
+                </tr>
+              </table>
+            </div>
+            <div class="s-price__sub-title container-full">
+              <div class="container">
+                <div class="h5">Отмостка</div>
+              </div>
+            </div>
+            <div class="container">
+              <table class="table table-striped table-light">
+                <tr>
+                  <th>№ п.п</th>
+                  <th>Наименование работ</th>
+                  <th>Ед. изм.</th>
+                  <th>Цена за единицу</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Оштукатуривание стен штукатурной смесьюz по маякам (толщиной до 20 мм)</td>
+                  <td>кв.м</td>
+                  <td>550 р.</td>
+                </tr>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-price-->

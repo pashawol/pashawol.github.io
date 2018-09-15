@@ -131,6 +131,7 @@ jQuery(document).ready(function ($) {
 		spaceBetween: 0, 
 		loop: true,  
 		preloadImages: false, 
+		watchOverflow: true,
 		lazy: true,
 		autoplay: {
 			delay: $('.slider-more-js').data("speed"),
@@ -155,6 +156,9 @@ $(".slider-js").each(function () {
 		loop: true,  
 		preloadImages: false, 
 		lazy: true,
+		watchOverflow: true,
+		watchOverflow: true,
+		
 		autoplay: {
 			delay: $(this).data("speed"),
 		},
@@ -192,6 +196,7 @@ $(".carusel-js").each(function () {
 		spaceBetween: 0, 
 		loop: true,  
 		preloadImages: false, 
+		watchOverflow: true,
 		lazy: true,
 		autoplay: {
 			delay: $(this).data("speed"),
@@ -250,7 +255,9 @@ $(".carusel-js").each(function () {
 		"mask": "+7(999)999-99-99"
 	});
 
- 
+		// адаптивные табы
+	$('.tabs').easyResponsiveTabs();
+
  
 
 });
