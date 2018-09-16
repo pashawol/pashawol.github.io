@@ -464,5 +464,9 @@ $(".pretty-embed__bg").each(function () {
 	$(".tel-block__link ").each(function () {
 		var str = $(this).attr('href');
 		$(this).attr('href', str.replace(/\s/g, ''));
-	  })
+		})
+		$(".tr-history").click(function () {
+			$(this).toggleClass("active").next().fadeToggle();
+			$(this).find(".s-po__toggle").toggleClass("active");
+		  })
 });
