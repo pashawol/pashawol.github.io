@@ -455,5 +455,8 @@ $(".pretty-embed__bg").each(function () {
 
 // });
 
-
+	// скрыть/показать меню в ЛК 
+	$(".aside__btn--js").click(function () {
+		$(this).toggleClass("active").next().slideToggle();
+	})
 });
