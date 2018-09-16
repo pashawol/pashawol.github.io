@@ -112,14 +112,14 @@ jQuery(document).ready(function ($) {
 
 
 	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
+	$(" .scroll-link").click(function () {
+	       var elementClick = $(this).attr("href");
+	       var destination = $(elementClick).offset().top;
 
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
+	           $('html, body').animate({ scrollTop: destination }, 1100);
 
-	//        return false;
-	//    });
+	       return false;
+	   });
 	var icon = '<svg class="icon icon-arr-left "><use xlink:href="img/svg/sprite.svg#arr-left">';
 
 	var arrr2 = (' <div class="l">' + icon),
@@ -131,22 +131,23 @@ $(' .s-gal__slider-big').slick({
 	dots: false,
 	speed: 450,
 	asNavFor: '.s-gal__slider-small',
-	infinite: false,
+	infinite: true,
 	loop: true,
 	arrows: false,
-
+	swipe: false,
 });
 $('.s-gal__slider-small').slick({
 	slidesToShow: 7,
 	slidesToScroll: 1,
 	dots: false,
 	speed: 450,
-	infinite: false,
+	infinite: true,
 	loop: true,
 	arrows: true,
 	prevArrow: arrr2,
 	nextArrow: arrl2,
-	focusOnSelect: true,
+	swipe: false,
+	// focusOnSelect: true,
 	asNavFor: '.s-gal__slider-big',
 	responsive: [
 
@@ -193,11 +194,11 @@ $('.s-gal__slider-big, .s-gal__slider-small')
 });
  
 	// маска на инпут
-	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({ "mask": "+7(999)999-99-99" });
+	// $("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({ "mask": "+7(999)999-99-99" });
 
 	$('[data-target="#modal-win"]').click(function () {
 	 
-		$("#modal-win .h3").text($(this).data("title"));
+		$("#modal-win .h3").html($(this).data("title"));
 		$("#modal-win .btn").text($(this).data('btn')); 
 		$("#modal-win .order").val($(this).data('order'));
 	})

@@ -101,7 +101,7 @@
               </div>
             </div>
           </div>
-          <div class="d-none d-md-block"><a class="header-block__btn btn btn-lg btn-block btn-primary" href="#" data-toggle="modal" data-target="#modal-win" data-title="Бесплатный подбор  решения" data-order="Бесплатный подбор  решения" data-btn="Подобрать решение">Бесплатный подбор решения</a>
+          <div class="d-none d-md-block"><a class="header-block__btn btn btn-lg btn-block btn-primary scroll-link" href="#form-wrap">Бесплатный подбор решения</a>
           </div>
         </div>
         <div class="header-block__before">
@@ -156,95 +156,97 @@
                     <!-- .col-xl-auto.col-md-6-->
             </div>
           </div>
-          <div class="form-wrap">
-            <div class="form-wrap__before">
-            </div>
-            <div class="form-wrap__after">
-            </div>
-            <div class="text-center">
-              <div class="d-none d-md-block">
-                <div class="form-wrap__big-title h3 strong text-white">Заполните форму и&nbsp;мы&nbsp;бесплатно подберем 3&nbsp;варианта решения
+          <div id="form-wrap">
+            <div class="form-wrap">
+              <div class="form-wrap__before">
+              </div>
+              <div class="form-wrap__after">
+              </div>
+              <div class="text-center">
+                <div class="d-none d-md-block">
+                  <div class="form-wrap__big-title h3 strong text-white">Заполните форму и&nbsp;мы&nbsp;бесплатно подберем 3&nbsp;варианта решения
+                  </div>
+                  <div class="form-wrap__sub-title text-white">Оптимальные по цене и функционалу именно для Вашей задачи
+                  </div>
                 </div>
-                <div class="form-wrap__sub-title text-white">Оптимальные по цене и функционалу именно для Вашей задачи
+                <div class="form-wrap__big-title h3 strong text-white d-md-none">Бесплатный подбор оборудования
                 </div>
               </div>
-              <div class="form-wrap__big-title h3 strong text-white d-md-none">Бесплатный подбор оборудования
-              </div>
-            </div>
-            <form>
-              <div class="row">
-                <div class="col-lg-6 d-none d-md-block">
-                  <div class="form-wrap__input-wrap form-group">
-                    <label><span class="form-wrap__icon-wrap">
-                      <svg class="icon icon-user ">
-                        <use xlink:href="img/svg/sprite.svg#user"></use>
-                      </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="text" placeholder="Как Вас зовут?"/>
-                    </label>
-                  </div>
-                  <!-- +e.input-wrap-->
-                </div>
-                <div class="col-lg-6 order-lg-0 order-1">
-                  <div class="form-wrap__input-wrap form-group">
-                    <label><span class="form-wrap__icon-wrap">
-                      <svg class="icon icon-mail ">
-                        <use xlink:href="img/svg/sprite.svg#mail"></use>
-                      </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="email" placeholder="Электронная почта"/>
-                    </label>
-                  </div>
-                  <!-- +e.input-wrap-->
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-wrap__input-wrap form-group">
-                    <label><span class="form-wrap__icon-wrap">
-                      <svg class="icon icon-tel ">
-                        <use xlink:href="img/svg/sprite.svg#tel"></use>
-                      </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="tel" placeholder="Номер телефона"/>
-                    </label>
-                  </div>
-                  <!-- +e.input-wrap-->
-                </div>
-                <div class="col-lg-6 d-none d-md-block">
-                  <div class="form-wrap__input-wrap form-group">
-                    <label><span class="form-wrap__icon-wrap">
-                      <svg class="icon icon-map ">
-                        <use xlink:href="img/svg/sprite.svg#map"></use>
-                      </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="text" placeholder="Где находится объект"/>
-                    </label>
-                  </div>
-                  <!-- +e.input-wrap-->
-                </div>
-                <div class="col-12 order-md-0 order-first">
-                  <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Опишите Вашу задачу"></textarea>
-                  </div>
-                  <!-- +e.input-wrap-->
-                </div>
-              </div>
-              <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-0 order-last">
-                  <button class="form-wrap__btn btn btn-lg btn-block btn-primary" type="submit"><span class="d-none d-md-block">Бесплатный подбор решения</span><span class="d-md-none">Отправить заявку</span>
-                  </button>
-                </div>
-                <div class="col-lg-6 text-white d-none d-md-block">
-                  <div class="h6">Нужен ли монтаж</div>
-                  <div class="row">
-                    <div class="col-auto pt-1">
-                      <label class="custom-input"><input class="custom-input__input" type="radio" name="installation"/><span class="custom-input__lab"></span><span class="custom-input__small">Да</span>
+              <form>
+                <div class="row">
+                  <div class="col-lg-6 d-none d-md-block">
+                    <div class="form-wrap__input-wrap form-group">
+                      <label><span class="form-wrap__icon-wrap">
+                        <svg class="icon icon-user ">
+                          <use xlink:href="img/svg/sprite.svg#user"></use>
+                        </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="text" placeholder="Как Вас зовут?"/>
                       </label>
                     </div>
-                    <div class="col-auto pt-1">
-                      <label class="custom-input"><input class="custom-input__input" type="radio" name="installation"/><span class="custom-input__lab"></span><span class="custom-input__small">Нет</span>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-6 order-lg-0 order-1">
+                    <div class="form-wrap__input-wrap form-group">
+                      <label><span class="form-wrap__icon-wrap">
+                        <svg class="icon icon-mail ">
+                          <use xlink:href="img/svg/sprite.svg#mail"></use>
+                        </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="email" placeholder="Электронная почта"/>
                       </label>
                     </div>
-                    <div class="col-auto pt-1">
-                      <label class="custom-input"><input class="custom-input__input" type="radio" name="installation"/><span class="custom-input__lab"></span><span class="custom-input__small">Не решил</span>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-wrap__input-wrap form-group">
+                      <label><span class="form-wrap__icon-wrap">
+                        <svg class="icon icon-tel ">
+                          <use xlink:href="img/svg/sprite.svg#tel"></use>
+                        </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="tel" placeholder="Номер телефона"/>
                       </label>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-6 d-none d-md-block">
+                    <div class="form-wrap__input-wrap form-group">
+                      <label><span class="form-wrap__icon-wrap">
+                        <svg class="icon icon-map ">
+                          <use xlink:href="img/svg/sprite.svg#map"></use>
+                        </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="text" placeholder="Где находится объект"/>
+                      </label>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-12 order-md-0 order-first">
+                    <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Опишите Вашу задачу"></textarea>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+                <div class="row align-items-center">
+                  <div class="col-lg-6 order-lg-0 order-last">
+                    <button class="form-wrap__btn btn btn-lg btn-block btn-primary" type="submit"><span class="d-none d-md-block">Бесплатный подбор решения</span><span class="d-md-none">Отправить заявку</span>
+                    </button>
+                  </div>
+                  <div class="col-lg-6 text-white d-none d-md-block">
+                    <div class="h6">Нужен ли монтаж</div>
+                    <div class="row">
+                      <div class="col-auto pt-1">
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="installation"/><span class="custom-input__lab"></span><span class="custom-input__small">Да</span>
+                        </label>
+                      </div>
+                      <div class="col-auto pt-1">
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="installation"/><span class="custom-input__lab"></span><span class="custom-input__small">Нет</span>
+                        </label>
+                      </div>
+                      <div class="col-auto pt-1">
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="installation"/><span class="custom-input__lab"></span><span class="custom-input__small">Не решил</span>
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
+              </form>
+              <div class="polite">
+                Нажимая кнопку «Бесплатный подбор решения», Вы соглашаетесь на <a class="polite__link tdu d-inline-block" href="Soglasie.pdf" target="_blank"> обработку персональных данных</a>
               </div>
-            </form>
-            <div class="polite">
-              Нажимая кнопку «Бесплатный подбор решения», Вы соглашаетесь на <a class="polite__link tdu d-inline-block" href="Soglasie.pdf" target="_blank"> обработку персональных данных</a>
             </div>
           </div>
         </div>
@@ -314,38 +316,22 @@
           <div class="row">
             <div class="col-lg-7">
               <div class="s-gal__slider-big-wrap">
-                <div class="s-gal__slider-big">
-                  <div class="s-gal__slide s-gal__slide--big swiper-slide">
-                    <div class="s-gal__img-wrap s-gal__img-wrap--big img-bg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/>
-                    </div>
+                <div class="s-gal__slider-big gal">
+                  <div class="s-gal__slide s-gal__slide--big swiper-slide"><a class="s-gal__img-wrap s-gal__img-wrap--big img-bg d-block" href="img/slide.jpg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/></a>
                   </div>
-                  <div class="s-gal__slide s-gal__slide--big swiper-slide">
-                    <div class="s-gal__img-wrap s-gal__img-wrap--big img-bg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/>
-                    </div>
+                  <div class="s-gal__slide s-gal__slide--big swiper-slide"><a class="s-gal__img-wrap s-gal__img-wrap--big img-bg d-block" href="img/slide.jpg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/></a>
                   </div>
-                  <div class="s-gal__slide s-gal__slide--big swiper-slide">
-                    <div class="s-gal__img-wrap s-gal__img-wrap--big img-bg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/>
-                    </div>
+                  <div class="s-gal__slide s-gal__slide--big swiper-slide"><a class="s-gal__img-wrap s-gal__img-wrap--big img-bg d-block" href="img/slide.jpg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/></a>
                   </div>
-                  <div class="s-gal__slide s-gal__slide--big swiper-slide">
-                    <div class="s-gal__img-wrap s-gal__img-wrap--big img-bg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/>
-                    </div>
+                  <div class="s-gal__slide s-gal__slide--big swiper-slide"><a class="s-gal__img-wrap s-gal__img-wrap--big img-bg d-block" href="img/slide.jpg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/></a>
                   </div>
-                  <div class="s-gal__slide s-gal__slide--big swiper-slide">
-                    <div class="s-gal__img-wrap s-gal__img-wrap--big img-bg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/>
-                    </div>
+                  <div class="s-gal__slide s-gal__slide--big swiper-slide"><a class="s-gal__img-wrap s-gal__img-wrap--big img-bg d-block" href="img/slide.jpg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/></a>
                   </div>
-                  <div class="s-gal__slide s-gal__slide--big swiper-slide">
-                    <div class="s-gal__img-wrap s-gal__img-wrap--big img-bg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/>
-                    </div>
+                  <div class="s-gal__slide s-gal__slide--big swiper-slide"><a class="s-gal__img-wrap s-gal__img-wrap--big img-bg d-block" href="img/slide.jpg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/></a>
                   </div>
-                  <div class="s-gal__slide s-gal__slide--big swiper-slide">
-                    <div class="s-gal__img-wrap s-gal__img-wrap--big img-bg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/>
-                    </div>
+                  <div class="s-gal__slide s-gal__slide--big swiper-slide"><a class="s-gal__img-wrap s-gal__img-wrap--big img-bg d-block" href="img/slide.jpg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/></a>
                   </div>
-                  <div class="s-gal__slide s-gal__slide--big swiper-slide">
-                    <div class="s-gal__img-wrap s-gal__img-wrap--big img-bg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/>
-                    </div>
+                  <div class="s-gal__slide s-gal__slide--big swiper-slide"><a class="s-gal__img-wrap s-gal__img-wrap--big img-bg d-block" href="img/slide.jpg"><img src="#" data-lazy="img/slide.jpg" alt="alt"/></a>
                   </div>
                 </div>
               </div>
@@ -408,13 +394,11 @@
                 <div class="s-api__barcode d-none d-md-block"><img src="img/apl.jpg" alt="alt"/>
                 </div><a href="#" title="title"><img src="img/btn-1.png" alt="alt"/></a>
               </div>
-              <div class="col order-md-0 order-first">
+              <div class="col order-md-0 order-first gal text-md-left text-center">
                 <div class="s-api__before">
                   <div class="s-api__before-inner">
                   </div>
-                </div>
-                <div class="s-api__phone-wrap"><img src="img/phone.png" alt="alt"/>
-                </div>
+                </div><a class="s-api__phone-wrap" href="img/phone.png"><img src="img/phone.png" alt="alt"/></a>
               </div>
               <div class="col-md-auto text-center">
                 <div class="s-api__barcode d-none d-md-block"><img src="img/apl.jpg" alt="alt"/>
@@ -443,7 +427,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-1.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Температуры</div>
+                    <div class="col h6 mb-0">Температуры<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -455,7 +440,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-2.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Наличия 220/380В</div>
+                    <div class="col h6 mb-0">Наличия 220/380В<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -467,7 +453,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-3.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Уровня жидкости</div>
+                    <div class="col h6 mb-0">Уровня жидкости<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -479,7 +466,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-4.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Влажности воздуха и почвы</div>
+                    <div class="col h6 mb-0">Влажности воздуха и почвы<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -491,7 +479,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-5.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Освещенности</div>
+                    <div class="col h6 mb-0">Освещенности<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -503,7 +492,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-6.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Протечки воды</div>
+                    <div class="col h6 mb-0">Протечки воды<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -515,7 +505,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-7.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Движения и открытия</div>
+                    <div class="col h6 mb-0">Движения и открытия<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -527,7 +518,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-8.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Давления</div>
+                    <div class="col h6 mb-0">Давления<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -539,7 +531,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-9.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Потока жидкости</div>
+                    <div class="col h6 mb-0">Потока жидкости<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -551,7 +544,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-10.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Задымления и пламени</div>
+                    <div class="col h6 mb-0">Задымления и пламени<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -563,7 +557,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-11.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Счетчики</div>
+                    <div class="col h6 mb-0">Счетчики<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -575,7 +570,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-12.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Концентрации газов</div>
+                    <div class="col h6 mb-0">Концентрации газов<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -587,7 +583,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-13.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Напряжения и силы тока</div>
+                    <div class="col h6 mb-0">Напряжения и силы тока<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -599,7 +596,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-14.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Дальномеры</div>
+                    <div class="col h6 mb-0">Дальномеры<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -611,7 +609,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-15.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Хим. состава воды</div>
+                    <div class="col h6 mb-0">Хим. состава воды<br/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -627,7 +626,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-16.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Сухой контакт (замыкание/размыкание)</div>
+                    <div class="col h6 mb-0">Сухой контакт <br/><span>(замыкание/размыкание)</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -639,7 +639,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-17.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Аналоговые (4-20 мА, 0-10В и др.)</div>
+                    <div class="col h6 mb-0">Аналоговые <br/><span>(4-20 мА, 0-10В и др.)</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -651,7 +652,8 @@
                       <div class="s-type__img-wrap"><img class="res-i" src="img/type-i-18.png" alt=""/>
                       </div>
                     </div>
-                    <div class="col h6 mb-0">Цифровые. (RS-485/Modbus, 1-wire, i2c, SPI и др.)</div>
+                    <div class="col h6 mb-0">Цифровые. <br/><span>(RS-485/Modbus, 1-wire, i2c, SPI и др.)</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -846,17 +848,16 @@
                     <div class="s-prod__item-before">
                     </div>
                     <div class="row align-items-center">
-                      <div class="col-lg-auto col-6">
+                      <div class="col-lg-auto col-5">
                         <div class="s-prod__img-wrap"><img class="res-i" src="img/prod-1.png" alt=""/>
                         </div>
                       </div>
-                      <div class="col-lg col-6">
+                      <div class="col-lg col-7">
                         <div class="s-prod__title h2 strong">UniBox
                         </div>
                         <div class="small d-none d-lg-block">Простой и дешевый контроллер, для распределенных объектов</div>
                         <div class="h4 strong">4 000  ₽ </div>
-                        <div><a class="s-prod__more small tdu text-white" href="#">Подробнее</a>
-                        </div>
+                        <!-- div: +e.A.more.small.tdu.text-white(href="#") Подробнее-->
                       </div>
                     </div>
                     <div class="small d-lg-none">Простой и дешевый контроллер, для распределенных объектов</div>
@@ -868,17 +869,16 @@
                     <div class="s-prod__item-before">
                     </div>
                     <div class="row align-items-center">
-                      <div class="col-lg-auto col-6">
+                      <div class="col-lg-auto col-5">
                         <div class="s-prod__img-wrap"><img class="res-i" src="img/prod-2.png" alt=""/>
                         </div>
                       </div>
-                      <div class="col-lg col-6">
+                      <div class="col-lg col-7">
                         <div class="s-prod__title h2 strong">WirenBoard
                         </div>
                         <div class="small d-none d-lg-block">Универсальный промышленный Linux-контроллер</div>
                         <div class="h4 strong">от 18 000  ₽</div>
-                        <div><a class="s-prod__more small tdu text-white" href="#">Подробнее</a>
-                        </div>
+                        <!-- div: +e.A.more.small.tdu.text-white(href="#") Подробнее-->
                       </div>
                     </div>
                     <div class="small d-lg-none">Универсальный промышленный Linux-контроллер</div>
@@ -890,17 +890,16 @@
                     <div class="s-prod__item-before">
                     </div>
                     <div class="row align-items-center">
-                      <div class="col-lg-auto col-6">
+                      <div class="col-lg-auto col-5">
                         <div class="s-prod__img-wrap"><img class="res-i" src="img/prod-3.png" alt=""/>
                         </div>
                       </div>
-                      <div class="col-lg col-6">
+                      <div class="col-lg col-7">
                         <div class="s-prod__title h2 strong">Аура
                         </div>
                         <div class="small d-none d-lg-block">Несложный контроллер, проводные и беспроводные модули</div>
                         <div class="h4 strong">9 800  ₽ </div>
-                        <div><a class="s-prod__more small tdu text-white" href="#">Подробнее</a>
-                        </div>
+                        <!-- div: +e.A.more.small.tdu.text-white(href="#") Подробнее-->
                       </div>
                     </div>
                     <div class="small d-lg-none">Несложный контроллер, проводные и беспроводные модули</div>
@@ -912,17 +911,16 @@
                     <div class="s-prod__item-before">
                     </div>
                     <div class="row align-items-center">
-                      <div class="col-lg-auto col-6">
+                      <div class="col-lg-auto col-5">
                         <div class="s-prod__img-wrap"><img class="res-i" src="img/prod-4.png" alt=""/>
                         </div>
                       </div>
-                      <div class="col-lg col-6">
+                      <div class="col-lg col-7">
                         <div class="s-prod__title h2 strong">AJAX
                         </div>
                         <div class="small d-none d-lg-block">Современная беспроводная охранная системы</div>
                         <div class="h4 strong">8 000  ₽</div>
-                        <div><a class="s-prod__more small tdu text-white" href="#">Подробнее</a>
-                        </div>
+                        <!-- div: +e.A.more.small.tdu.text-white(href="#") Подробнее-->
                       </div>
                     </div>
                     <div class="small d-lg-none">Современная беспроводная охранная системы</div>
@@ -934,17 +932,16 @@
                     <div class="s-prod__item-before">
                     </div>
                     <div class="row align-items-center">
-                      <div class="col-lg-auto col-6">
+                      <div class="col-lg-auto col-5">
                         <div class="s-prod__img-wrap"><img class="res-i" src="img/prod-5.png" alt=""/>
                         </div>
                       </div>
-                      <div class="col-lg col-6">
+                      <div class="col-lg col-7">
                         <div class="s-prod__title h2 strong">Bolid
                         </div>
                         <div class="small d-none d-lg-block">Модульная система от одного из лидеров рынка</div>
                         <div class="h4 strong">12 000  ₽</div>
-                        <div><a class="s-prod__more small tdu text-white" href="#">Подробнее</a>
-                        </div>
+                        <!-- div: +e.A.more.small.tdu.text-white(href="#") Подробнее-->
                       </div>
                     </div>
                     <div class="small d-lg-none">Модульная система от одного из лидеров рынка</div>
@@ -956,17 +953,16 @@
                     <div class="s-prod__item-before">
                     </div>
                     <div class="row align-items-center">
-                      <div class="col-lg-auto col-6">
+                      <div class="col-lg-auto col-5">
                         <div class="s-prod__img-wrap"><img class="res-i" src="img/prod-6.png" alt=""/>
                         </div>
                       </div>
-                      <div class="col-lg col-6">
+                      <div class="col-lg col-7">
                         <div class="s-prod__title h2 strong">Stemax
                         </div>
                         <div class="small d-none d-lg-block">Охранно-пожарная проводная система</div>
                         <div class="h4 strong">9 900  ₽</div>
-                        <div><a class="s-prod__more small tdu text-white" href="#">Подробнее</a>
-                        </div>
+                        <!-- div: +e.A.more.small.tdu.text-white(href="#") Подробнее-->
                       </div>
                     </div>
                     <div class="small d-lg-none">Охранно-пожарная проводная система</div>
@@ -1050,8 +1046,8 @@
                   <div class="s-advantages__item">
                     <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-1.png" alt=""/>
                     </div>
-                    <div class="h6 strong">Нет затрат на приобретение сервера, лицензий ПО и зарплату системному администратору</div>
-                    <div class="small">Поддержку инфраструктуры для хранения и бесперебойного доступа к данным —  мы берем на себя (SLA 99%)</div>
+                    <div class="h6 strong">Нет затрат на приобретение<br/>сервера, лицензий ПО и зарплату<br/>системному администратору</div>
+                    <div class="small">Поддержку инфраструктуры для хранения<br/>и бесперебойного доступа к данным — <br/>мы берем на себя (SLA 99%)</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
@@ -1059,8 +1055,8 @@
                   <div class="s-advantages__item">
                     <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-2.png" alt=""/>
                     </div>
-                    <div class="h6 strong">Для работы с системой достаточно браузера</div>
-                    <div class="small">Не надо устанавливать специальное ПО на рабочие компьютеры</div>
+                    <div class="h6 strong">Для работы с системой<br/>достаточно браузера</div>
+                    <div class="small">Не&nbsp;надо устанавливать специальное<br/>ПО&nbsp;на&nbsp;рабочие компьютеры</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
@@ -1068,8 +1064,8 @@
                   <div class="s-advantages__item">
                     <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-3.png" alt=""/>
                     </div>
-                    <div class="h6 strong">Можно работать через приложение на смартфоне</div>
-                    <div class="small">Есть бесплатные мобильные приложения для Android и iOS</div>
+                    <div class="h6 strong">Можно работать через<br/>приложение на&nbsp;смартфоне</div>
+                    <div class="small">Есть бесплатные мобильные приложения<br/>для Android и&nbsp;iOS</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
@@ -1077,8 +1073,8 @@
                   <div class="s-advantages__item">
                     <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-4.png" alt=""/>
                     </div>
-                    <div class="h6 strong">Доступ к системе из любой точки мира, где есть Интернет</div>
-                    <div class="small">Удобно для сотрудников в разъездах,  мобильных групп реагирования и руководства</div>
+                    <div class="h6 strong">Доступ к&nbsp;системе из&nbsp;любой точки мира,<br/>где есть Интернет</div>
+                    <div class="small">Удобно для сотрудников в&nbsp;разъездах, <br/>мобильных групп реагирования<br/>и&nbsp;руководства</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
@@ -1086,8 +1082,8 @@
                   <div class="s-advantages__item">
                     <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-5.png" alt=""/>
                     </div>
-                    <div class="h6 strong">Серверную инфраструктуру предоставляет «Mail.ru Group»</div>
-                    <div class="small">Данные хранятся на территории РФ, в независимых ЦОДах уровня TIER III, с тройной репликацией</div>
+                    <div class="h6 strong">Серверную инфраструктуру<br/>предоставляет &laquo;Mail.ru Group&raquo;</div>
+                    <div class="small">Данные хранятся на&nbsp;территории&nbsp;РФ,<br/>в&nbsp;независимых ЦОДах уровня TIER III,<br/>с&nbsp;тройной репликацией</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
@@ -1095,8 +1091,8 @@
                   <div class="s-advantages__item">
                     <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-6.png" alt=""/>
                     </div>
-                    <div class="h6 strong">Не надо заниматься обновлением ПО</div>
-                    <div class="small">В облаке всегда актуальная и стабильная версия системы</div>
+                    <div class="h6 strong">Не&nbsp;надо заниматься<br/>обновлением&nbsp;ПО</div>
+                    <div class="small">В&nbsp;облаке всегда актуальная и&nbsp;стабильная<br/>версия системы</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
@@ -1104,8 +1100,8 @@
                   <div class="s-advantages__item">
                     <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-7.png" alt=""/>
                     </div>
-                    <div class="h6 strong">Территориально распределенные объекты на одном экране</div>
-                    <div class="small">Не требуется много серверов и их синхронизации</div>
+                    <div class="h6 strong">Территориально распределенные<br/>объекты на&nbsp;одном экране </div>
+                    <div class="small">Не&nbsp;требуется много серверов<br/>и&nbsp;их&nbsp;синхронизации</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
@@ -1113,8 +1109,8 @@
                   <div class="s-advantages__item">
                     <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-8.png" alt=""/>
                     </div>
-                    <div class="h6 strong">Уникальный механизм  обработки тревог</div>
-                    <div class="small">Оператор отражает действия  по устранению, а руководитель  видит это на мобильном</div>
+                    <div class="h6 strong">Уникальный механизм <br/>обработки тревог</div>
+                    <div class="small">Оператор отражает действия <br/>по&nbsp;устранению, а&nbsp;руководитель <br/>видит это на&nbsp;мобильном</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
@@ -1122,13 +1118,13 @@
                   <div class="s-advantages__item">
                     <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-9.png" alt=""/>
                     </div>
-                    <div class="h6 strong">Возможность доработки  системы под ваши задачи</div>
-                    <div class="small">Подключим к облаку ваше оборудование,  переделаем интерфейс и дизайн системы</div>
+                    <div class="h6 strong">Возможность доработки <br/>системы под ваши задачи</div>
+                    <div class="small">Подключим к&nbsp;облаку ваше оборудование, <br/>переделаем интерфейс и&nbsp;дизайн системы</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
           </div>
-          <div class="text-center d-md-none"><a class="s-advantages__btn btn btn-primary px-5" href="#" target="_blank">Скачать презентацию</a>
+          <div class="text-center d-md-none"><a class="s-advantages__btn btn btn-primary px-5" href="#" data-toggle="modal" data-target="#modal-win" data-title="Заполните форму для&amp;nbsp;скачивания " data-order="Заполните форму для скачивания " data-btn="Отправить">Скачать презентацию</a>
           </div>
         </div>
       </div>
@@ -1195,7 +1191,7 @@
         <div class="container">
           <h2><span>Кому нужна система «Unimon»?</span></h2>
           <div class="row">
-                <div class="col-lg-4 col-sm-6">
+                <div class="s-whom__col col-lg-4 col-sm-6">
                   <div class="s-whom__item">
                     <div class="s-whom__img-wrap"><img class="res-i" src="img/whom-i-1.png" alt=""/>
                     </div>
@@ -1204,7 +1200,7 @@
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
-                <div class="col-lg-4 col-sm-6">
+                <div class="s-whom__col col-lg-4 col-sm-6">
                   <div class="s-whom__item">
                     <div class="s-whom__img-wrap"><img class="res-i" src="img/whom-i-2.png" alt=""/>
                     </div>
@@ -1213,7 +1209,7 @@
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
-                <div class="col-lg-4 col-sm-6">
+                <div class="s-whom__col col-lg-4 col-sm-6">
                   <div class="s-whom__item">
                     <div class="s-whom__img-wrap"><img class="res-i" src="img/whom-i-3.png" alt=""/>
                     </div>
@@ -1222,7 +1218,7 @@
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
-                <div class="col-lg-4 col-sm-6">
+                <div class="s-whom__col col-lg-4 col-sm-6">
                   <div class="s-whom__item">
                     <div class="s-whom__img-wrap"><img class="res-i" src="img/whom-i-4.png" alt=""/>
                     </div>
@@ -1231,7 +1227,7 @@
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
-                <div class="col-lg-4 col-sm-6">
+                <div class="s-whom__col col-lg-4 col-sm-6">
                   <div class="s-whom__item">
                     <div class="s-whom__img-wrap"><img class="res-i" src="img/whom-i-5.png" alt=""/>
                     </div>
@@ -1240,7 +1236,7 @@
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
-                <div class="col-lg-4 col-sm-6">
+                <div class="s-whom__col col-lg-4 col-sm-6">
                   <div class="s-whom__item">
                     <div class="s-whom__img-wrap"><img class="res-i" src="img/whom-i-6.png" alt=""/>
                     </div>
