@@ -203,4 +203,9 @@ $('.s-gal__slider-big, .s-gal__slider-small')
 		$("#modal-win .order").val($(this).data('order'));
 	})
 
+	// убираем пробелы в телефоне
+	$(".top-line__tel, .s-contact__tel").each(function () {
+		var str = $(this).attr('href');
+		$(this).attr('href', str.replace(/\s/g, ''));
+	  })
 });
