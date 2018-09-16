@@ -459,4 +459,10 @@ $(".pretty-embed__bg").each(function () {
 	$(".aside__btn--js").click(function () {
 		$(this).toggleClass("active").next().slideToggle();
 	})
+
+	// убираем пробелы в телефоне
+	$(".tel-block__link ").each(function () {
+		var str = $(this).attr('href');
+		$(this).attr('href', str.replace(/\s/g, ''));
+	  })
 });
