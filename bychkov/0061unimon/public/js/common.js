@@ -147,7 +147,7 @@ $('.s-gal__slider-small').slick({
 	prevArrow: arrr2,
 	nextArrow: arrl2,
 	swipe: false,
-	// focusOnSelect: true,
+	focusOnSelect: true,
 	asNavFor: '.s-gal__slider-big',
 	responsive: [
 
