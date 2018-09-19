@@ -46,15 +46,15 @@ jQuery(document).ready(function ($) {
 		$(this).append('<div class="toggle-l"></div>');
 	})
 
-	$('.wrapp-hidden .menu-item-has-children > a  ').click(  function () {
+	$('.wrapp-hidden .menu-item-has-children > a  ').click(function () {
 		// $('.sub-menu').slideUp();
 		$(this).next('.sub-menu').slideToggle()
-		.parent().toggleClass("active")
-		.siblings().removeClass('active').find('.sub-menu').slideUp();
+			.parent().toggleClass("active")
+			.siblings().removeClass('active').find('.sub-menu').slideUp();
 		return false;
 	})
 
-  
+
 	var toggMnu = $(".toggle-mnu-1").click(function () {
 
 		$(".toggle-mnu-1").toggleClass("on");
@@ -69,28 +69,31 @@ jQuery(document).ready(function ($) {
 	$(document).mouseup(function (e) {
 		var container = $(".hidden-mnu.active");
 		if (container.has(e.target).length === 0) {
-				$(".toggle-mnu-1").removeClass("on");
+			$(".toggle-mnu-1").removeClass("on");
 			// $("body").toggleClass("fixed");
 			$(".hidden-mnu").removeClass("active");
 			$("body, html").removeClass("fixed");
 		}
 	});
 
-		$('#mobile-mnu').swipe({
+	$('#mobile-mnu').swipe({
 		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
 			if (direction == 'left') {
-				$(".toggle-mnu-1").removeClass("on"); 
+				$(".toggle-mnu-1").removeClass("on");
 				$(".hidden-mnu").removeClass("active");
-				$("body, html").removeClass("fixed"); 
-		}
-		if (direction == 'right') {
-			$(".toggle-mnu-1").removeClass("on"); 
-			$(".hidden-mnu").removeClass("active");
-			$("body, html").removeClass("fixed"); 
-		}
-				
-		}
+				$("body, html").removeClass("fixed");
+			}
+			if (direction == 'right') {
+				$(".toggle-mnu-1").removeClass("on");
+				$(".hidden-mnu").removeClass("active");
+				$("body, html").removeClass("fixed");
+			}
+		},
+		triggerOnTouchEnd: false,
 	});
+
+
+
 
 	function heightses() {
 
@@ -236,23 +239,23 @@ jQuery(document).ready(function ($) {
 	$("div").each(function () {
 
 		var wowAnim = $(this).find(".s-work__col," +
-		".s-pick__col," +
-		".s-schema__col-wow," +
-		// ".s-gal__col-wow," +
-		// ".s-type__col-wow," +
-		// ".s-control__col-wow," +
-		// ".s-advantages__col-wow," +
-		// ".s-tuning__col-wow," +
-		// ".s-prod__col--wow," +
-		// ".s-whom__col--wow," +
-		".s-condition__col");
-		wowAnim.map(function (i) { 
-			wowAnim.eq(i).attr("data-wow-delay", i * .1 * 1.5 + "s"); 
-			
+			".s-pick__col," +
+			".s-schema__col-wow," +
+			// ".s-gal__col-wow," +
+			// ".s-type__col-wow," +
+			// ".s-control__col-wow," +
+			// ".s-advantages__col-wow," +
+			// ".s-tuning__col-wow," +
+			// ".s-prod__col--wow," +
+			// ".s-whom__col--wow," +
+			".s-condition__col");
+		wowAnim.map(function (i) {
+			wowAnim.eq(i).attr("data-wow-delay", i * .1 * 1.5 + "s");
+
 		});
 	})
-						var wow = new WOW({
-							mobile: false
-						});
-						wow.init();
+	var wow = new WOW({
+		mobile: false
+	});
+	wow.init();
 });
