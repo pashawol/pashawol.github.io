@@ -42,64 +42,47 @@ jQuery(document).ready(function ($) {
 	})
 	// мобильное меню
 
-	$(".wrapp-hidden .menu-item-has-children ").each(function () {
+	$(".wrapp-hidden .menu-item-has-children>a ").each(function (e) {
 		$(this).append('<div class="toggle-l"></div>');
 	})
 
-	$('.wrapp-hidden .menu-item-has-children  ').on('click', '.toggle-l', function () {
-		$(this).prev().slideToggle().parent().toggleClass("active");
+	$('.wrapp-hidden .menu-item-has-children > a  ').click(  function () {
+		// $('.sub-menu').slideUp();
+		$(this).next('.sub-menu').slideToggle()
+		.parent().toggleClass("active")
+		.siblings().removeClass('active').find('.sub-menu').slideUp();
 		return false;
 	})
 
-	var slideout = new Slideout({
-		'panel': document.getElementById('panel'),
-		'menu': document.getElementById('mobile-mnu'),
-		'padding': 280,
-		'tolerance': 70
-	});
+  
+	var toggMnu = $(".toggle-mnu-1").click(function () {
 
-	// Toggle button
-	$('.toggle-button').click(function () {
-		slideout.toggle();
-		// $('#panel').toggleClass("fixed");
+		$(".toggle-mnu-1").toggleClass("on");
+		// $("body").toggleClass("fixed");
+		$(".hidden-mnu").toggleClass("active");
+		$("body, html").toggleClass("fixed");
+		return false;
 	});
-	$('#mobile-mnu').swipe({
-		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-			slideout.toggle();
-			// console.log(direction);
-			// $('.toggle-button').toggleClass("on");
-		}
-	});
-	slideout.on('beforeopen', function () {
-		$('.toggle-button').addClass("on");
-		$('#panel').addClass("fixed");
-	});
-
-	slideout.on('beforeclose', function () {
-		$('.toggle-button').removeClass("on");
-		$('#panel').removeClass("fixed");
-	});
-
-	// var toggMnu = $(".toggle-mnu-1").click(function () {
-
-	// 	$(".toggle-mnu-1").toggleClass("on");
-	// 	// $("body").toggleClass("fixed");
-	// 	$(".hidden-mnu").toggleClass("active");
-	// 	$("body, html").toggleClass("fixed");
-	// 	return false;
-	// });
-	// $('.hidden-mnu ul li a').on('click', function () {
+	// $('.hidden-mnu ul li:not(.menu-item-has-children)>a').on('click', function () {
 	// 	$(".hidden-mnu .toggle-mnu").click();
 	// });
-	// $(document).mouseup(function (e) {
-	// 	var container = $(".hidden-mnu.active");
-	// 	if (container.has(e.target).length === 0) {
-	// 		$(".toggle-mnu-1").removeClass("on");
-	// 		// $("body").toggleClass("fixed");
-	// 		$(".hidden-mnu").removeClass("active");
-	// 		$("body, html").removeClass("fixed");
-	// 	}
-	// });
+	$(document).mouseup(function (e) {
+		var container = $(".hidden-mnu.active");
+		if (container.has(e.target).length === 0) {
+				$(".toggle-mnu-1").removeClass("on");
+			// $("body").toggleClass("fixed");
+			$(".hidden-mnu").removeClass("active");
+			$("body, html").removeClass("fixed");
+		}
+	});
+
+		$('#mobile-mnu').swipe({
+		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+				$(".toggle-mnu-1").removeClass("on"); 
+				$(".hidden-mnu").removeClass("active");
+				$("body, html").removeClass("fixed"); 
+		}
+	});
 
 	function heightses() {
 
