@@ -247,13 +247,13 @@ jQuery(document).ready(function ($) {
 		var wowAnim = $(this).find(".s-work__col," +
 		".s-pick__col," +
 		".s-schema__col-wow," +
-		".s-gal__col-wow," +
-		".s-type__col-wow," +
-		".s-control__col-wow," +
-		".s-advantages__col-wow," +
-		".s-tuning__col-wow," +
-		".s-prod__col--wow," +
-		".s-whom__col--wow," +
+		// ".s-gal__col-wow," +
+		// ".s-type__col-wow," +
+		// ".s-control__col-wow," +
+		// ".s-advantages__col-wow," +
+		// ".s-tuning__col-wow," +
+		// ".s-prod__col--wow," +
+		// ".s-whom__col--wow," +
 		".s-condition__col");
 		wowAnim.map(function (i) { 
 			wowAnim.eq(i).attr("data-wow-delay", i * .1 * 1.5 + "s"); 
