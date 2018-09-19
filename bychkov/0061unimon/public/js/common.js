@@ -78,9 +78,17 @@ jQuery(document).ready(function ($) {
 
 		$('#mobile-mnu').swipe({
 		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+			if (direction == 'left') {
 				$(".toggle-mnu-1").removeClass("on"); 
 				$(".hidden-mnu").removeClass("active");
 				$("body, html").removeClass("fixed"); 
+		}
+		if (direction == 'right') {
+			$(".toggle-mnu-1").removeClass("on"); 
+			$(".hidden-mnu").removeClass("active");
+			$("body, html").removeClass("fixed"); 
+		}
+				
 		}
 	});
 
