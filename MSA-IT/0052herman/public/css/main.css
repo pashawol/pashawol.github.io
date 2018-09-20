@@ -3873,7 +3873,7 @@ select.form-control:focus::-ms-value {
 .top-line {
   position: absolute;
   left: 0;
-  top: 70px;
+  top: 3.88889rem;
   z-index: 2;
   width: 100%;
   width: 100%;
@@ -3882,7 +3882,20 @@ select.form-control:focus::-ms-value {
 .top-line__inner {
   margin-left: auto;
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 30px 20px 30px 25px;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.66667rem 1.11111rem 1.66667rem 1.38889rem;
+}
+
+.top-line__inner > * {
+  min-width: 100%;
 }
 
 .top-line__inner .row {
@@ -3916,12 +3929,12 @@ select.form-control:focus::-ms-value {
 
 .top-line__link {
   color: #4a4a4a;
-  font-size: 18px;
+  font-size: 1.22222rem;
   font-weight: 100;
 }
 
 .top-line__logo {
-  width: 290px;
+  width: 16.11111rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3948,10 +3961,10 @@ select.form-control:focus::-ms-value {
 }
 
 .top-line__link--tel .icon {
-  font-size: 24px;
-  margin-right: 10px;
+  font-size: 1.33333rem;
+  margin-right: 0.55556rem;
   position: relative;
-  top: 5px;
+  top: 0.27778rem;
 }
 
 .top-nav {
@@ -4176,23 +4189,23 @@ select.form-control:focus::-ms-value {
 }
 
 .header-block__slide {
-  padding-top: 279px;
-  padding-bottom: 45px;
-  min-height: 720px;
+  padding-top: 15.5rem;
+  padding-bottom: 2.5rem;
+  min-height: 40rem;
 }
 
 .header-block__text-block {
   background-color: rgba(255, 255, 255, 0.95);
-  max-width: 570px;
+  max-width: 31.66667rem;
 }
 
 .header-block__text-block-head {
-  padding: 30px 30px 20px;
+  padding: 1.66667rem 1.66667rem 1.11111rem;
   border-bottom: 1px solid rgba(200, 200, 200, 0.9);
 }
 
 .header-block__text-block-body {
-  padding: 30px 30px;
+  padding: 1.66667rem 1.66667rem;
 }
 
 .s-contact {
@@ -4222,18 +4235,18 @@ select.form-control:focus::-ms-value {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 40px;
+  padding: 2.22222rem 2.22222rem;
 }
 
 .s-about__sub-title {
-  font-size: 36px;
-  max-width: 380px;
+  font-size: 2rem;
+  max-width: 21.11111rem;
   line-height: 1.3;
 }
 
 .s-about__sub-title span {
   background-color: #ffa817;
-  outline: 6px solid #ffa817;
+  outline: 0.33333rem solid #ffa817;
 }
 
 .s-about p {
@@ -8436,7 +8449,7 @@ a {
   }
 
   .top-line__inner {
-    padding: 30px 40px 30px 45px;
+    padding: 1.66667rem 2.22222rem 1.66667rem 2.5rem;
   }
 
   .top-line__nav {
@@ -8447,10 +8460,6 @@ a {
   .top-line__nav > * {
     padding-left: 1.33333rem;
     padding-right: 1.33333rem;
-  }
-
-  .top-line__link {
-    font-size: 22px;
   }
 }
 
