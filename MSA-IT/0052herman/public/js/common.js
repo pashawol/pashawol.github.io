@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
 	})
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
-		
+
 		$(".toggle-mnu-1").toggleClass("on");
 		// $("body").toggleClass("fixed");
 		$(".hidden-mnu").toggleClass("active");
@@ -61,25 +61,9 @@ jQuery(document).ready(function ($) {
 			$("body, html").removeClass("fixed");
 		}
 	});
-	// закрыть меню при горизонтальном свайпе
-	$('.hidden-mnu.active').swipe({
-		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-			if (direction == 'left') {
-				$(".toggle-mnu-1").removeClass("on");
-				$(".hidden-mnu.active").removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-			if (direction == 'right') {
-				$(".toggle-mnu-1").removeClass("on");
-				$(".hidden-mnu.active").removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-		},
-		triggerOnTouchEnd: false,
-	});
-	// / закрыть меню при горизонтальном свайпе
+ 
 	// /закрыть/открыть мобильное меню
-	
+
 	function heightses() {
 
 		var w = $(window).width();
@@ -167,43 +151,20 @@ jQuery(document).ready(function ($) {
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
 	// карусель
-	// $('.s-team__slider').slick({
-	//    slidesToShow: 3,
-	//    slidesToScroll: 1,
-	//    dots: false,
-	//    speed: 450,
-	//    infinite: true,
-	//    loop: true,
-	//    arrows: true,
-	//    // centerMode: true,
-	//    // focusOnSelect: true ,
-	//     // variableWidth: true,
-	//     prevArrow: arrr2,
-	//      nextArrow: arrl2,
-	//    });
+	$('.header-block__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: false,
+		// prevArrow: arrr2,
+		// nextArrow: arrl2,
+	});
 
 	// слайдер цвета в карточке
-	var swiper4 = new Swiper('.color-slider', {
-		// slidesPerView: 5,
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		spaceBetween: 0,
-		freeMode: true,
-		watchOverflow: true,
-		slidesPerGroup: 3,
 
-		// centeredSlides: true,
-		loop: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-
-	});
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -315,8 +276,8 @@ jQuery(document).ready(function ($) {
 	$(".top-line__tel, .s-contact__tel").each(function () {
 		var str = $(this).attr('href');
 		$(this).attr('href', str.replace(/\s/g, ''));
-		})
-		// $(".wow-wrap").each(function () {
+	})
+	// $(".wow-wrap").each(function () {
 	// var wowAnim = $(this).find(".s-dop__col," +
 	//                 ".s-pick__col," +
 	//                 ".s-condition__col");
