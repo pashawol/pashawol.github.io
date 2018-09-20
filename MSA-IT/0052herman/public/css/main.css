@@ -3256,6 +3256,34 @@ select.form-control:focus::-ms-value {
   background-color: #fff;
 }
 
+.slick-dots {
+  text-align: center;
+  margin-left: -4px;
+  margin-right: -4px;
+  padding-top: 20px;
+}
+
+.slick-dots li {
+  margin: 4px;
+  width: 7px;
+  height: 7px;
+  background-color: #363636;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+}
+
+.slick-dots li button {
+  display: none;
+}
+
+.slick-dots li:hover,.slick-dots li.slick-active {
+  background-color: #fda930;
+}
+
 .icon {
   display: inline-block;
   width: 1em;
@@ -3539,7 +3567,7 @@ select.form-control:focus::-ms-value {
 .top-line {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 70px;
   z-index: 2;
   width: 100%;
   width: 100%;
@@ -3548,7 +3576,7 @@ select.form-control:focus::-ms-value {
 .top-line__inner {
   margin-left: auto;
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 7px 20px 7px 25px;
+  padding: 30px 20px 30px 25px;
 }
 
 .top-line__inner .row {
@@ -3565,13 +3593,13 @@ select.form-control:focus::-ms-value {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-left: -0.9375rem;
-  margin-right: -0.9375rem;
+  margin-left: -0.625rem;
+  margin-right: -0.625rem;
 }
 
 .top-line__nav > * {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
 }
 
 .top-line__item {
@@ -3582,7 +3610,7 @@ select.form-control:focus::-ms-value {
 
 .top-line__link {
   color: #4a4a4a;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 100;
 }
 
@@ -3611,6 +3639,13 @@ select.form-control:focus::-ms-value {
 .top-line__main-row > * {
   padding-left: 0.375rem;
   padding-right: 0.375rem;
+}
+
+.top-line__link--tel .icon {
+  font-size: 24px;
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
 }
 
 .top-nav {
@@ -3836,6 +3871,8 @@ select.form-control:focus::-ms-value {
 
 .header-block__slide {
   padding-top: 279px;
+  padding-bottom: 45px;
+  min-height: 720px;
 }
 
 .header-block__text-block {
@@ -3849,7 +3886,7 @@ select.form-control:focus::-ms-value {
 }
 
 .header-block__text-block-body {
-  padding: 30px 30px 20px;
+  padding: 30px 30px;
 }
 
 .s-contact {
@@ -6740,6 +6777,24 @@ a {
 
   .text-xxl-center {
     text-align: center !important;
+  }
+
+  .top-line__inner {
+    padding: 30px 40px 30px 45px;
+  }
+
+  .top-line__nav {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+
+  .top-line__nav > * {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .top-line__link {
+    font-size: 22px;
   }
 }
 
