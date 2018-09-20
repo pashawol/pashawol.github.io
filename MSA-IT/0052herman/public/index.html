@@ -16,25 +16,53 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="toggle-mnu toggle-mnu-1"><span></span></div>
-        <div class="wrapp-hidden"> 
-          <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">О нас</a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Шоу-рум</a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Наши объекты</a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Отзывы</a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Карьера</a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Контакты</a>
-            </li>
-          </ul>
-          <div class="text-right"></div>
+        <div class="wrapp-hidden"> <a class="trop__logo" href="/"><img class="res-i" src="img/logo.png" alt=""/></a>
+          <div class="row">
+            <div class="col-7">
+              <ul class="trop__nav">
+                <li class="trop__item"><a class="trop__link" href="#">О нас</a>
+                </li>
+                <li class="trop__item"><a class="trop__link" href="#">Шоу-рум</a>
+                </li>
+                <li class="trop__item"><a class="trop__link" href="#">Наши объекты</a>
+                </li>
+                <li class="trop__item"><a class="trop__link" href="#">Отзывы</a>
+                </li>
+                <li class="trop__item"><a class="trop__link" href="#">Карьера</a>
+                </li>
+                <li class="trop__item"><a class="trop__link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-5">
+              <ul class="trop__nav">
+                <li class="trop__item"><a class="trop__link" href="#">Акции</a>
+                </li>
+                <li class="trop__item"><a class="trop__link" href="#">Продукция</a>
+                </li>
+                <li class="trop__item"><a class="trop__link" href="#">Сервис </a>
+                </li>
+                <li class="trop__item"><a class="trop__link" href="#">Новости</a>
+                </li>
+                <li class="trop__item"><a class="trop__link" href="#">Видео</a>
+                </li>
+                <li class="trop__item"><a class="trop__link" href="#">Статьи</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div><a class="trop__btn btn btn-sm btn-outline-warning" href="#">
+            <svg class="icon icon-pensil ">
+              <use xlink:href="img/svg/sprite.svg#pensil"></use>
+            </svg>Напишите нам</a>
+          </div>
+          <div><a class="trop__link trop__link--tel" href="tel:+7 915 15-15-151"> 
+            <svg class="icon icon-tel ">
+              <use xlink:href="img/svg/sprite.svg#tel"></use>
+            </svg>+7 915 15-15-151</a>
+          </div>
         </div>
       </div>
       <!--  мобильное меню-->
@@ -45,7 +73,7 @@
           <div class="container">
             <div class="top-nav__inner">
               <div class="row">
-                <div class="col">
+                <div class="col d-none d-lg-block">
                   <ul class="top-nav__nav">
                     <li class="top-nav__item"><a class="top-nav__link" href="#">О нас</a>
                     </li>
@@ -61,10 +89,20 @@
                     </li>
                   </ul>
                 </div>
-                <div class="col-auto"><a class="top-nav__btn btn btn-outline-warning" href="#">
-                  <svg class="icon icon-pensil ">
-                    <use xlink:href="img/svg/sprite.svg#pensil"></use>
-                  </svg>Напишите нам</a>
+                <div class="col-auto">
+                  <div class="d-none d-sm-block"><a class="top-nav__btn btn btn-sm btn-outline-warning" href="#">
+                    <svg class="icon icon-pensil ">
+                      <use xlink:href="img/svg/sprite.svg#pensil"></use>
+                    </svg>Напишите нам</a>
+                  </div>
+                  <div class="d-sm-none"><a class="top-nav__link top-nav__link--tel" href="tel:+7 915 15-15-151"> 
+                    <svg class="icon icon-tel ">
+                      <use xlink:href="img/svg/sprite.svg#tel"></use>
+                    </svg>+7 915 15-15-151</a>
+                  </div>
+                </div>
+                <div class="col d-lg-none">
+                  <div class="toggle-mnu toggle-mnu-1"><span></span></div>
                 </div>
               </div>
             </div>
@@ -75,31 +113,33 @@
         <div class="top-line">
           <div class="container">
             <div class="top-line__main-row row">
-              <div class="col-auto"><a class="top-line__logo" href="/"><img class="res-i" src="img/logo.png" alt=""/></a>
+              <div class="col-sm-auto col"><a class="top-line__logo" href="/"><img class="res-i" src="img/logo.png" alt=""/></a>
               </div>
-              <div class="col">
+              <div class="col-sm col-auto d-none d-sm-block">
                 <div class="top-line__inner">
-                  <div class="row">
-                    <div class="col">
-                      <ul class="top-line__nav">
-                        <li class="top-line__item"><a class="top-line__link" href="#">Акции</a>
-                        </li>
-                        <li class="top-line__item"><a class="top-line__link" href="#">Продукция</a>
-                        </li>
-                        <li class="top-line__item"><a class="top-line__link" href="#">Сервис </a>
-                        </li>
-                        <li class="top-line__item"><a class="top-line__link" href="#">Новости</a>
-                        </li>
-                        <li class="top-line__item"><a class="top-line__link" href="#">Видео</a>
-                        </li>
-                        <li class="top-line__item"><a class="top-line__link" href="#">Статьи</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-auto"><a class="top-line__link top-line__link--tel" href="tel:+7 915 15-15-151"> 
-                      <svg class="icon icon-tel ">
-                        <use xlink:href="img/svg/sprite.svg#tel"></use>
-                      </svg>+7 915 15-15-151</a>
+                  <div>
+                    <div class="row">
+                      <div class="col d-none d-lg-block">
+                        <ul class="top-line__nav">
+                          <li class="top-line__item"><a class="top-line__link" href="#">Акции</a>
+                          </li>
+                          <li class="top-line__item"><a class="top-line__link" href="#">Продукция</a>
+                          </li>
+                          <li class="top-line__item"><a class="top-line__link" href="#">Сервис </a>
+                          </li>
+                          <li class="top-line__item"><a class="top-line__link" href="#">Новости</a>
+                          </li>
+                          <li class="top-line__item"><a class="top-line__link" href="#">Видео</a>
+                          </li>
+                          <li class="top-line__item"><a class="top-line__link" href="#">Статьи</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-lg-auto text-right"><a class="top-line__link top-line__link--tel" href="tel:+7 915 15-15-151"> 
+                        <svg class="icon icon-tel ">
+                          <use xlink:href="img/svg/sprite.svg#tel"></use>
+                        </svg>+7 915 15-15-151</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -135,7 +175,9 @@
                 <div class="header-block__text-block-body">
                   <div class="h6 strong">Специальная техника</div>
                   <p>656031 г. Барнаул, пр-д Полюсный,39</p>
-                  <p>E-mail: vip@sp-e.ru, dve@sp-e.ru<br/>www.sp-e.shoermannpartner.ru</p>
+                  <p>E-mail: vip@sp-e.ru, dve@sp-e.ru<br/>www.sp-e.shoermannpartner.ru
+                    www.sp-e.shoermannpartner.ru
+                  </p>
                 </div>
               </div>
             </div>
@@ -147,7 +189,9 @@
       <!-- start s-about-->
       <div class="s-about section" id="s-about">
         <div class="container">
-          <h2 class="text-center">Компания ”Специальная электроника” это </h2>
+          <div class="section-title text-center text-secondary">
+            <h2>Компания ”Специальная электроника” это </h2>
+          </div>
           <div class="row">
             <div class="s-about__col col-lg-6">
               <div class="s-about__img-wrap img-bg" style="background-image: url(img/about-img.jpg);"><img src="img/about-img.jpg" alt="alt"/>
@@ -163,25 +207,143 @@
               <p>Мы по-настоящему гордимся нашей командой специалистов – профессионалов своего дела, творческих и ярких личностей, работающих дружно и эффективно.</p>
             </div>
           </div>
+          <div class="s-about__banner bg-primary text-white">
+            <div class="row">
+              <div class="col-lg-6"><img class="res-i" src="img/about-img2.jpg" alt="alt"/></div>
+              <div class="col-lg-6">
+                <div class="s-about__banner-text">
+                  <div class="s-about__banne-textr-head">
+                    <div class="h4 ttu">Дом – это то место, где мы чувствуем себя в безопасности</div>
+                    <div class="h4 fw-300">Ворота и двери от № 1 в Европе по выгодной цене:  сэкономьте до 30%!</div>
+                  </div>
+                  <div class="s-about__banne-textr-foot">
+                    <div class="small"><a class="text-warning" href="#">Перейти к акции « Ворота и двери года »</a></div>
+                    <div class="small"><a class="text-warning" href="#">Перейти к акции « Входные двери »</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-about-->
-      <!-- start s-form-->
-      <section class="s-form section" id="s-form">
+      <!-- start s-prod-->
+      <div class="s-prod section" id="s-prod">
         <div class="container">
-          <h2 class="text-center">s-form</h2>
-          <div class="row"></div>
+          <div class="section-title text-center text-secondary">
+            <h2>Продукция</h2>
+          </div>
+          <div class="s-prod__row row">
+            <div class="s-prod__col col-xl-3 col-lg-4 col-sm-6"><a class="s-prod__item img-bg text-body tdn" href="#" style="background-image: url(img/prod-1.jpg);"><img class="res-i" src="img/prod-1.jpg" alt=""/>
+              <div class="s-prod__title">Гаражные ворота
+              </div></a>
+            </div>
+            <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
+            <div class="s-prod__col col-xl-3 col-lg-4 col-sm-6"><a class="s-prod__item img-bg text-body tdn" href="#" style="background-image: url(img/prod-2.jpg);"><img class="res-i" src="img/prod-2.jpg" alt=""/>
+              <div class="s-prod__title">Приводы
+              </div></a>
+            </div>
+            <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
+            <div class="s-prod__col col-xl-3 col-lg-4 col-sm-6"><a class="s-prod__item img-bg text-body tdn" href="#" style="background-image: url(img/prod-3.jpg);"><img class="res-i" src="img/prod-3.jpg" alt=""/>
+              <div class="s-prod__title">Входные двери
+              </div></a>
+            </div>
+            <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
+            <div class="s-prod__col col-xl-3 col-lg-4 col-sm-6"><a class="s-prod__item img-bg text-body tdn" href="#" style="background-image: url(img/prod-4.jpg);"><img class="res-i" src="img/prod-4.jpg" alt=""/>
+              <div class="s-prod__title">Промышленные ворота
+              </div></a>
+            </div>
+            <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
+            <div class="s-prod__col col-xl-3 col-lg-4 col-sm-6"><a class="s-prod__item img-bg text-body tdn" href="#" style="background-image: url(img/prod-5.jpg);"><img class="res-i" src="img/prod-5.jpg" alt=""/>
+              <div class="s-prod__title">Перегрузочная техника
+              </div></a>
+            </div>
+            <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
+            <div class="s-prod__col col-xl-3 col-lg-4 col-sm-6"><a class="s-prod__item img-bg text-body tdn" href="#" style="background-image: url(img/prod-6.jpg);"><img class="res-i" src="img/prod-6.jpg" alt=""/>
+              <div class="s-prod__title">Двери
+              </div></a>
+            </div>
+            <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
+            <div class="s-prod__col col-xl-3 col-lg-4 col-sm-6"><a class="s-prod__item img-bg text-body tdn" href="#" style="background-image: url(img/prod-7.jpg);"><img class="res-i" src="img/prod-7.jpg" alt=""/>
+              <div class="s-prod__title">Коробки
+              </div></a>
+            </div>
+            <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
+          </div>
         </div>
-      </section>
-      <!-- end s-form-->
-      <!-- start s-contact-->
-      <section class="s-contact section" id="s-contact">
+      </div>
+      <!-- end s-prod-->
+      <!-- start s-news-->
+      <div class="s-news section" id="s-news">
         <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"><a href="#"></a></div>
+          <div class="section-title text-center text-secondary">
+            <h2>Новости</h2>
+          </div>
+          <div class="row">
+                <div class="s-news__col col-sm-6">
+                  <div class="s-news__item">
+                    <div class="row">
+                      <div class="col-auto"><a class="s-news__img-wrap img-bg text-body tdn" href="#" style="background-image: url(img/prod-1.jpg);"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                      </div>
+                      <div class="col fw-300">
+                        <div class="s-news__title">Наши лучшие спецпредложения
+                        </div>
+                        <div class="s-news__text">Немецкое качество в каждой детали
+                        </div><a class="small tdu" href="#">подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.col.col-sm-6-->
+                <div class="s-news__col col-sm-6">
+                  <div class="s-news__item">
+                    <div class="row">
+                      <div class="col-auto"><a class="s-news__img-wrap img-bg text-body tdn" href="#" style="background-image: url(img/prod-2.jpg);"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
+                      </div>
+                      <div class="col fw-300">
+                        <div class="s-news__title">Привод для дверей PortaMatic
+                        </div>
+                        <div class="s-news__text">Благодаря новому, разработанному компанией Hörmann приводу ...
+                        </div><a class="small tdu" href="#">подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.col.col-sm-6-->
+                <div class="s-news__col col-sm-6">
+                  <div class="s-news__item">
+                    <div class="row">
+                      <div class="col-auto"><a class="s-news__img-wrap img-bg text-body tdn" href="#" style="background-image: url(img/prod-3.jpg);"><img class="res-i" src="img/prod-3.jpg" alt=""/></a>
+                      </div>
+                      <div class="col fw-300">
+                        <div class="s-news__title">Горячая линия Hörmann в России
+                        </div>
+                        <div class="s-news__text">8-800-5556-987
+                        </div><a class="small tdu" href="#">подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.col.col-sm-6-->
+                <div class="s-news__col col-sm-6">
+                  <div class="s-news__item">
+                    <div class="row">
+                      <div class="col-auto"><a class="s-news__img-wrap img-bg text-body tdn" href="#" style="background-image: url(img/prod-4.jpg);"><img class="res-i" src="img/prod-4.jpg" alt=""/></a>
+                      </div>
+                      <div class="col fw-300">
+                        <div class="s-news__title">Наши лучшие спецпредложения
+                        </div>
+                        <div class="s-news__text">Немецкое качество в каждой детали
+                        </div><a class="small tdu" href="#">подробнее</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.col.col-sm-6-->
+          </div>
         </div>
-      </section>
-      <!-- end s-contact-->
+      </div>
+      <!-- end s-news-->
       <footer class="footer">
         <div class="container">footer</div>
       </footer>
