@@ -15,7 +15,7 @@
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
+  --breakpoint-xl: 1280px;
   --breakpoint-xxl: 1600px;
   --font-family-sans-serif: "roboto", sans-serif;
   --font-family-monospace: monospace;
@@ -3305,11 +3305,9 @@ html {
   -webkit-overflow-scrolling: touch;
   background-position: center top;
   background-repeat: no-repeat;
-  background-image: url(../screen/main.jpg);
 }
 
 body {
-  opacity: .7;
   min-height: 10000px;
   background-color: transparent;
 }
@@ -4480,7 +4478,6 @@ select.form-control:focus::-ms-value {
   position: relative;
   height: 0;
   padding-bottom: 70%;
-  width: 11.11111rem;
   display: block;
   position: relative;
 }
@@ -4492,7 +4489,8 @@ select.form-control:focus::-ms-value {
 }
 
 .s-news__title {
-  font-size: 1.44444rem;
+  padding-top: 0.55556rem;
+  font-size: 1.33333rem;
   max-width: 410px;
 }
 
@@ -5443,6 +5441,15 @@ a {
   .s-about p {
     line-height: 1.56;
     margin-bottom: 1.33333rem;
+  }
+
+  .s-news__img-wrap {
+    width: 11.11111rem;
+  }
+
+  .s-news__title {
+    font-size: 1.44444rem;
+    padding-top: 0;
   }
 
   .modal-text {
@@ -7099,9 +7106,9 @@ a {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
   .container {
-    max-width: 1140px;
+    max-width: 1240px;
   }
 
   .col-xl {
