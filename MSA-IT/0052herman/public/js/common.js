@@ -175,33 +175,34 @@ jQuery(document).ready(function ($) {
 	});
  
 	$('.s-solon__slider--js').slick({
-		slidesToShow: 4,
+		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
 		speed: 450,
 		infinite: true,
 		loop: true,
 		arrows: false,
+		mobileFirst: true,
 		// prevArrow: arrr2,
 		// nextArrow: arrl2,
 		responsive: [
 			{
-				breakpoint: 1279,
+				breakpoint: 1280,
 				settings: {
-					slidesToShow: 3,
+					slidesToShow: 4,
 				
 				}
 			},
 			{
-				breakpoint: 991,
+				breakpoint: 992,
 				settings: {
-					slidesToShow: 2, 
+					slidesToShow: 3, 
 				}
 			},
 			{
-				breakpoint: 575,
+				breakpoint: 576,
 				settings: {
-					slidesToShow: 1, 
+					slidesToShow: 2, 
 				}
 			}
 			// You can unslick at a given breakpoint now by adding:
