@@ -40,6 +40,17 @@ jQuery(document).ready(function ($) {
 			}
 		});
 	})
+	// видео в модалке
+	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		// disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		
+		fixedContentPos: false
+	});
+	// /видео в модалке
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
 
