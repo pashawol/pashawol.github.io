@@ -161,7 +161,7 @@ jQuery(document).ready(function ($) {
 
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
-	// карусель
+	// слайдер
 	$('.header-block__slider--js').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -173,8 +173,48 @@ jQuery(document).ready(function ($) {
 		// prevArrow: arrr2,
 		// nextArrow: arrl2,
 	});
-
-	// слайдер цвета в карточке
+ 
+	$('.s-solon__slider--js').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: false,
+		// prevArrow: arrr2,
+		// nextArrow: arrl2,
+		responsive: [
+			{
+				breakpoint: 1279,
+				settings: {
+					slidesToShow: 3,
+				
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 2, 
+				}
+			},
+			{
+				breakpoint: 575,
+				settings: {
+					slidesToShow: 1, 
+				}
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+	});
+ 
+	// срабытывает при lazy  загрузке изображений. Ставить картинки в фон блок
+	$('.s-solon__slider--js')
+	.on('lazyLoaded', function(event, slick, image, imageSource){
+			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+	});
 
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
