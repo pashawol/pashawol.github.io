@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-
+	
 	// для свг
 	svg4everybody({});
 	// Custom JS
@@ -61,22 +61,7 @@ jQuery(document).ready(function ($) {
 	function heightses() {
 
 		var w = $(window).width();
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		//
-
-
-		// скрывает моб меню
-
-		var topH = $("header ").innerHeight();
-
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > topH) {
-				$('.top-nav  ').addClass('fixed');
-			} else {
-				$('.top-nav  ').removeClass('fixed');
-			}
-		});
-		// конец добавил
+		$(".main-wrapper").css("padding-bottom", $('footer').height() + 30)
 	}
 
 	if (window.matchMedia("(min-width: 992px)").matches) {
@@ -91,12 +76,7 @@ jQuery(document).ready(function ($) {
 	$(window).resize(function () {
 		heightses();
 
-	});
-	$(window).on("load", function () {
-		heightses();
-
-	})
-
+	}); 
 	heightses();
 
 
@@ -113,7 +93,7 @@ jQuery(document).ready(function ($) {
 		return false;
 	});
 
-  
+
 	// слайдер
 	$('.header-block__slider--js').slick({
 		slidesToShow: 1,
@@ -157,15 +137,22 @@ jQuery(document).ready(function ($) {
 				settings: {
 					slidesToShow: 2,
 				}
-			} 
+			}
 		]
 	});
+
+
+
 
 	// срабытывает при lazy  загрузке изображений. Ставит картинки  фоном блок
 	$('.s-solon__slider--js')
 		.on('lazyLoaded', function (event, slick, image, imageSource) {
 			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 		});
+
+
+
+
 
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
@@ -184,12 +171,12 @@ jQuery(document).ready(function ($) {
 		mainClass: 'my-mfp-zoom-in'
 	});
 
- 
+
 	// маска на инпут
 	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
 		"mask": "+7(999)999-99-99"
 	});
- 
+
 
 	// кастомный инпут файл
 
@@ -224,17 +211,79 @@ jQuery(document).ready(function ($) {
 		var str = $(this).attr('href');
 		$(this).attr('href', str.replace(/\s/g, ''));
 	})
- 
+
 	// аккордион  в боковом меню
 	$('.aside__item--has-children > a  ').click(function () {
 		// $('.sub-menu').slideUp();
-		$(this).toggleClass("active").next('.aside-sub-menu').slideToggle().toggleClass("active");
+		$(this).toggleClass("active").next('.aside-sub-menu').slideToggle().parent().toggleClass("active");
 		return false;
 	})
 	// аккордион  в боковом меню
 
-		// скрыть/показать боковом меню
-		$(".aside__btn--js").click(function () {
-			$(this).toggleClass("active").next().slideToggle().parent().toggleClass("active");
-		})
+	// скрыть/показать боковом меню
+	$(".aside__btn--js").click(function () {
+		$(this).toggleClass("active").next().slideToggle().parent().toggleClass("active");
+	})
 });
+
+
+// слайдер на стр товара
+var $gallery = $('.s-content__slider--js');
+var slideCount = null;
+jQuery(document).ready(function ($) {
+	var icon = '<svg class="icon icon-arr-right "><use  xlink:href="img/svg/sprite.svg#arr-right"></use> </svg>',
+			arrr2 = (' <div class="l">' + icon),
+			arrl2 = (' <div class="r">' + icon);
+	$gallery.slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: true,
+		mobileFirst: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		appendArrows:'.slide-count-wrap',
+		responsive: [{
+				breakpoint: 1280,
+				settings: {
+					slidesToShow: 5,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 3,
+				}
+			}
+		]
+	});
+});
+
+$gallery.on('init', function (event, slick) {
+	slideCount = slick.slideCount;
+	setSlideCount();
+	setCurrentSlideNumber(slick.currentSlide);
+});
+
+$gallery.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+	setCurrentSlideNumber(nextSlide);
+});
+
+function setSlideCount() {
+	var $el = $('.slide-count-wrap').find('.total');
+	$el.text(slideCount);
+}
+
+function setCurrentSlideNumber(currentSlide) {
+	var $el = $('.slide-count-wrap').find('.current');
+	$el.text(currentSlide + 1);
+}

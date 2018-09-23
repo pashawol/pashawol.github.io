@@ -9653,10 +9653,6 @@ strong,.strong {
   position: relative;
 }
 
-.form-wrap__input--addr:focus ~ .addr-result {
-  display: block;
-}
-
 .form-wrap__input-wrap--addr {
   margin-bottom: 25px;
 }
@@ -9725,6 +9721,10 @@ strong,.strong {
 
 .form-wrap__foot-row {
   padding-bottom: 30px;
+}
+
+.addr-result.active {
+  display: block;
 }
 
 .top-nav {
