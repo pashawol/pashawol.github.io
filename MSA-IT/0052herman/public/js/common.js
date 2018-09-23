@@ -225,5 +225,16 @@ jQuery(document).ready(function ($) {
 		$(this).attr('href', str.replace(/\s/g, ''));
 	})
  
+	// аккордион  в боковом меню
+	$('.aside__item--has-children > a  ').click(function () {
+		// $('.sub-menu').slideUp();
+		$(this).toggleClass("active").next('.aside-sub-menu').slideToggle().toggleClass("active");
+		return false;
+	})
+	// аккордион  в боковом меню
 
+		// скрыть/показать боковом меню
+		$(".aside__btn--js").click(function () {
+			$(this).toggleClass("active").next().slideToggle().parent().toggleClass("active");
+		})
 });

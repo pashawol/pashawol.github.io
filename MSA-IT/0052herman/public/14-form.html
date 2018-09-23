@@ -69,30 +69,17 @@
       <!-- start HEADER.header-->
       <header class="header header--page">
         <!-- start top-nav-->
-        <div class="top-nav">
+        <div class="top-nav top-nav--main">
           <div class="container">
             <div class="row">
               <div class="col-auto d-none d-sm-block"><a class="top-nav__logo" href="#"><img class="res-i" src="img/logo.png" alt=""/></a>
               </div>
+              <div class="col-auto d-none d-sm-block"><a class="top-nav__btn top-nav__btn--send btn btn-sm btn-warning strong" href="#">Отправить заявку</a>
+              </div>
               <div class="col">
                 <div class="top-nav__inner">
                   <div class="row">
-                    <div class="col d-none d-lg-block">
-                      <ul class="top-nav__nav">
-                        <li class="top-nav__item"><a class="top-nav__link" href="#">О нас</a>
-                        </li>
-                        <li class="top-nav__item"><a class="top-nav__link" href="#">Шоу-рум</a>
-                        </li>
-                        <li class="top-nav__item"><a class="top-nav__link" href="#">Наши объекты</a>
-                        </li>
-                        <li class="top-nav__item"><a class="top-nav__link" href="#">Отзывы</a>
-                        </li>
-                        <li class="top-nav__item"><a class="top-nav__link" href="#">Карьера</a>
-                        </li>
-                        <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты</a>
-                        </li>
-                      </ul>
-                    </div>
+                    <div class="col d-none d-lg-block"></div>
                     <div class="col-auto">
                       <div class="d-none d-sm-block"><a class="top-nav__btn btn btn-sm btn-outline-warning" href="#">
                         <svg class="icon icon-pensil ">
@@ -115,45 +102,6 @@
           </div>
         </div>
         <!-- end top-nav-->
-        <!-- start .top-line-->
-        <div class="top-line">
-          <div class="container">
-            <div class="top-line__main-row row">
-              <div class="col-sm-auto col"><a class="top-line__logo" href="/"><img class="res-i" src="img/logo.png" alt=""/></a>
-              </div>
-              <div class="col-sm col-auto d-none d-sm-block">
-                <div class="top-line__inner">
-                  <div>
-                    <div class="row">
-                      <div class="col d-none d-lg-block">
-                        <ul class="top-line__nav">
-                          <li class="top-line__item"><a class="top-line__link top-line__link--active" href="#">Акции</a>
-                          </li>
-                          <li class="top-line__item"><a class="top-line__link" href="#">Продукция</a>
-                          </li>
-                          <li class="top-line__item"><a class="top-line__link" href="#">Сервис </a>
-                          </li>
-                          <li class="top-line__item"><a class="top-line__link" href="#">Новости</a>
-                          </li>
-                          <li class="top-line__item"><a class="top-line__link" href="#">Видео</a>
-                          </li>
-                          <li class="top-line__item"><a class="top-line__link" href="#">Статьи</a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="col-lg-auto text-right"><a class="top-line__link top-line__link--tel" href="tel:+7915 15-15-151"> 
-                        <svg class="icon icon-tel ">
-                          <use xlink:href="img/svg/sprite.svg#tel"></use>
-                        </svg>+7 915 15-15-151</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end .top-line-->
       </header>
       <!-- end HEADER.header-->
       <div class="page-title">
@@ -166,24 +114,108 @@
       <!-- start s-form-->
       <section class="s-form section" id="s-form">
         <div class="container">
-          <div class="s-form__inner bg-gray">
-            <div class="s-form__title h3 fw-300 text-secondary text-center pb-0">А еще Вы можете написать нам:
+          <div class="s-form__inner-send">
+            <div class="s-form__title h3 strong text-secondary text-center">Для создания сайта заполните данные
             </div>
-            <div class="strong text-secondary text-center pb-4">Ваш отзыв будетопубликован после проверки модератором</div>
             <div class="form-wrap">
               <form>
-                <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя *"/>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Название фирмы *"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Контактное лицо (ФИО) *"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Должность *"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон *"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваш адрес *"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш email *"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
                 </div>
-                <!-- +e.input-wrap-->
-                <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон *"/>
+                <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="О вас *"></textarea>
                 </div>
-                <!-- +e.input-wrap-->
-                <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш email *"/>
+                <!-- +e.input-wrap--><span class="form-wrap__input-wrap form-group d-block">
+                <label><span class="add-file">
+                  <input class="d-none" name="file" type="file"/><span class="add-file__filename text-left form-control">Загрузить логотип</span><span class="add-file__btn btn btn-warning">
+                  <svg class="icon icon-input-file ">
+                    <use xlink:href="img/svg/sprite.svg#input-file"></use>
+                  </svg></span></span>
+                </label></span>
+                <div class="block-checkbox">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="block-checkbox__group">
+                        <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text strong">Гаражные секционные ворота</span>
+                        </label>
+                        <div class="block-checkbox__sub">
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Гаражные секционные ворота</span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Подъемно-поворотные ворота Berry</span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Гаражные рулонные ворота RollMatic</span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Откатные секционные ворот</span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Гаражные боковые ворота</span>
+                          </label>
+                        </div>
+                      </div>
+                      <!-- /+e.group-->
+                      <div class="block-checkbox__group">
+                        <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text strong">Гаражные секционные ворота</span>
+                        </label>
+                      </div>
+                      <!-- /+e.group-->
+                      <div class="block-checkbox__group">
+                        <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text strong">Гаражные секционные ворота</span>
+                        </label>
+                      </div>
+                      <!-- /+e.group-->
+                    </div>
+                    <!-- /.col-lg-6-->
+                    <div class="col-lg-6">
+                      <div class="block-checkbox__group">
+                        <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text strong">Двери</span>
+                        </label>
+                        <div class="block-checkbox__sub">
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Входные двери</span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Входные двери Termo65 и Термо46</span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Межкомнотные двери</span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Функциональные двери Вашего дома</span>
+                          </label>
+                          <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Гаражные боковые двери</span>
+                          </label>
+                        </div>
+                      </div>
+                      <!-- /+e.group-->
+                      <div class="block-checkbox__group">
+                        <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text strong">Перегрузочная техника</span>
+                        </label>
+                      </div>
+                      <!-- /+e.group-->
+                      <div class="block-checkbox__group">
+                        <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text strong">Промышленные ворота</span>
+                        </label>
+                      </div>
+                      <!-- /+e.group-->
+                    </div>
+                    <!-- /.col-lg-6-->
+                  </div>
                 </div>
-                <!-- +e.input-wrap-->
-                <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Ваше сообщение *"></textarea>
-                </div>
-                <!-- +e.input-wrap-->
                 <div class="text-center">
                   <div class="form-wrap__capcha-wrap d-inline-block"><img class="res-i" src="img/capcha.jpg" alt=""/>
                   </div>
