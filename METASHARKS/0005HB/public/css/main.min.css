@@ -9522,13 +9522,27 @@ strong,.strong {
 }
 
 .s-catalog__col {
-  margin-bottom: 45px;
+  margin-bottom: 20px;
 }
 
 .s-catalog__head {
   border-bottom: 1px solid #f55f00;
-  padding-bottom: 9px;
-  margin-bottom: 40px;
+  padding-bottom: 4px;
+  margin-bottom: 20px;
+}
+
+.s-catalog__head .col-md-auto {
+  margin-bottom: 8px;
+}
+
+.s-catalog__head .row {
+  margin-left: -0.33333rem;
+  margin-right: -0.33333rem;
+}
+
+.s-catalog__head .row > * {
+  padding-left: 0.33333rem;
+  padding-right: 0.33333rem;
 }
 
 .s-catalog__head .row {
@@ -9569,8 +9583,8 @@ strong,.strong {
 
 .s-catalog__foot {
   border-top: 2px solid #f55f00;
-  margin-top: 34px;
-  padding-top: 35px;
+  margin-top: 15px;
+  padding-top: 15px;
 }
 
 .s-catalog__foot .row {
@@ -9582,8 +9596,8 @@ strong,.strong {
 
 .s-catalog .quantity {
   cursor: pointer;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   -webkit-transition: all 0.36s;
   -o-transition: all 0.36s;
   transition: all 0.36s;
@@ -9625,11 +9639,15 @@ strong,.strong {
 }
 
 .item-prod__img-wrap {
-  height: 227px;
-  line-height: 227px;
+  height: 160px;
+  line-height: 160px;
   vertical-align: middle;
   display: block;
   margin-bottom: 12px;
+}
+
+.item-prod__img-wrap img {
+  max-height: 100%;
 }
 
 .item-prod__caption {
@@ -12202,6 +12220,16 @@ a {
     height: 316.94px;
   }
 
+  .s-catalog .quantity {
+    width: 32px;
+    height: 32px;
+  }
+
+  .item-prod__img-wrap {
+    height: 227px;
+    line-height: 227px;
+  }
+
   .s-news__small {
     padding: 27px 20px;
   }
@@ -13227,6 +13255,28 @@ a {
     margin-right: 6px;
   }
 
+  .s-catalog__col {
+    margin-bottom: 45px;
+  }
+
+  .s-catalog__head .col-md-auto {
+    margin-bottom: 0;
+  }
+
+  .s-catalog__head {
+    margin-bottom: 40px;
+  }
+
+  .s-catalog__head .row {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  .s-catalog__head .row > * {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .s-basket td:nth-child(1) {
     width: 10%;
   }
@@ -14147,6 +14197,11 @@ a {
   .s-catalog__carusel {
     margin-left: 15px;
     margin-right: 15px;
+  }
+
+  .s-catalog__foot {
+    margin-top: 34px;
+    padding-top: 35px;
   }
 
   .s-brands__carusel {
