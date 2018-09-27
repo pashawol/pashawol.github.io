@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
     <link rel="stylesheet" href="libs/swiper-4.2.0/swiper.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
-    <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css">
-    <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css">
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -2346,110 +2345,193 @@
         <!-- end catalog-nav-->
       </header>
       <!-- end HEADER.header-->
-      <!-- start header-block-->
-      <div class="header-block">
-        <div class="header-block__arrow-wrap">
-          <div class="container"></div>
-        </div>
-        <div class="header-block__slider"><a class="header-block__slide img-bg" href="#" style="background-color: #F9D908;background-image: url(img/head.jpg);"><img src="img/head.jpg" alt=""/></a>
-          <!-- / +e.slide(style="background-color: #F9D908;")--><a class="header-block__slide img-bg" href="#" style="background-color: #F97;background-image: url(img/head.jpg);"><img src="img/head.jpg" alt=""/></a>
-          <!-- / +e.slide(style="background-color: #F97;")-->
-        </div>
-      </div>
-      <div class="header-block">
-        <div class="header-block__foot">
-          <div class="container">
-            <div class="row">
-                  <div class="header-block__col col-md-3 col-6">
-                    <div class="header-block__item">
+      <div class="container">
+        <div class="border-top border-light"></div>
+        <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Уход за лицом и телом</a><span class="breadcrumb-item active"> Parachute</span>
+        </nav>
+        <div class="catalog-title h2">Уход за лицом и телом</div>
+        <div class="row">
+          <div class="col-lg-3">
+            <!-- start aside-->
+            <div class="aside">
+              <button class="aside__btn aside__btn--js btn btn-block btn-info d-lg-none ttu" type="button">Фильтр товаров
+              </button>
+              <div class="aside-filter aside-filter--js d-lg-block">
+                <div class="aside-filter__main-title h4">Подобрать товар
+                </div><a class="aside-filter__reset text-primary small" href="#">
+                <svg class="icon icon-close ">
+                  <use xlink:href="img/svg/sprite.svg#close"></use>
+                </svg>Сбросить фильтр</a>
+                <div class="aside-filter__group hover-block active">
+                  <div class="aside-filter__title small showhide active">Цена, р
+                  </div>
+                  <div class="showhide-all">
+                    <div class="aside-filter__rang-wrap slider-rang-wrap">
                       <div class="row">
-                        <div class="col-lg-auto text-center"><img class="res-img" src="img/head-i-1.png" alt=""/></div>
-                        <div class="col text-center text-lg-left">Более 5000 товаров  известных мировых косметических брендов</div>
+                        <div class="col-auto">
+                          <label class="aside-filter__input-wrap"> <span class="aside-filter__input aside-filter__input-minus input-slider-range">
+                            <input class="minus" type="text" value="1"/></span>
+                          </label>
+                        </div>
+                        <div class="col-auto">
+                          <label class="aside-filter__input-wrap"> <span class="aside-filter__input aside-filter__input-plus input-slider-range">
+                            <input class="plus" type="text" value="1000"/></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="aside-filter__range aside-filter__range--1 slider-range filter">
+                        <div class="filter__custom-handle custom-handle_minn ui-slider-handle">
+                        </div>
+                        <div class="filter__custom-handle_maxx ui-slider-handle">
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <!-- +e.col.col-4-->
-                  <div class="header-block__col col-md-3 col-6">
-                    <div class="header-block__item">
-                      <div class="row">
-                        <div class="col-lg-auto text-center"><img class="res-img" src="img/head-i-2.png" alt=""/></div>
-                        <div class="col text-center text-lg-left">Вся продукция, которая представлена на сайте - всегда в наличии!</div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- +e.col.col-4-->
-                  <div class="header-block__col col-md-3 col-6">
-                    <div class="header-block__item">
-                      <div class="row">
-                        <div class="col-lg-auto text-center"><img class="res-img" src="img/head-i-3.png" alt=""/></div>
-                        <div class="col text-center text-lg-left">Напрямую сотрудничаем  с официальными дистрибьюторами </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- +e.col.col-4-->
-                  <div class="header-block__col col-md-3 col-6">
-                    <div class="header-block__item">
-                      <div class="row">
-                        <div class="col-lg-auto text-center"><img class="res-img" src="img/head-i-4.png" alt=""/></div>
-                        <div class="col text-center text-lg-left">Самые выгодные цены и разнообразие Акций для наших клиентов</div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- +e.col.col-4-->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end header-block-->
-      <!-- start s-stock-->
-      <div class="s-stock section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6"><a class="s-stock__item" href="#">
-              <div class="s-stock__img-wrap"><img class="res-i" src="img/dop-1.jpg" alt=""/>
-              </div>
-              <div class="s-stock__foot">
-                <div class="s-stock__caption">Краткое описание дополнительной акции или распродажи, или акцентного банера на товары
                 </div>
-                <svg class="icon icon-arr-right ">
-                  <use xlink:href="img/svg/sprite.svg#arr-right"></use>
-                </svg>
-              </div></a>
-            </div>
-            <!-- .col-lg-6-->
-            <div class="col-md-6"><a class="s-stock__item" href="#">
-              <div class="s-stock__img-wrap"><img class="res-i" src="img/dop-2.jpg" alt=""/>
-              </div>
-              <div class="s-stock__foot">
-                <div class="s-stock__caption">Краткое описание дополнительной акции или распродажи, или акцентного банера на товары
+                <!-- +e.group-->
+                <div class="aside-filter__group hover-block">
+                  <div class="aside-filter__title small showhide">Объем
+                  </div>
+                  <div class="showhide-all">
+                    <div class="aside-filter__rang-wrap slider-rang-wrap">
+                      <div class="row">
+                        <div class="col-auto">
+                          <label class="aside-filter__input-wrap"> <span class="aside-filter__input aside-filter__input-minus input-slider-range">
+                            <input class="minus" type="text" value="1"/></span>
+                          </label>
+                        </div>
+                        <div class="col-auto">
+                          <label class="aside-filter__input-wrap"> <span class="aside-filter__input aside-filter__input-plus input-slider-range">
+                            <input class="plus" type="text" value="1000"/></span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="aside-filter__range aside-filter__range--1 slider-range filter">
+                        <div class="filter__custom-handle custom-handle_minn ui-slider-handle">
+                        </div>
+                        <div class="filter__custom-handle_maxx ui-slider-handle">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <svg class="icon icon-arr-right ">
-                  <use xlink:href="img/svg/sprite.svg#arr-right"></use>
-                </svg>
-              </div></a>
-            </div>
-            <!-- .col-lg-6-->
-          </div>
-        </div>
-      </div>
-      <!-- end s-stock-->
-      <!-- start s-catalog-->
-      <div class="s-catalog">
-        <div class="container">
-          <div class="section-head">
-            <div class="row align-items-baseline">
-              <div class="col-auto">
-                <div class="h2 mb-0">Новинки</div>
+                <!-- +e.group-->
+                <div class="aside-filter__group hover-block">
+                  <div class="aside-filter__title small showhide">Тип продукта
+                  </div>
+                  <div class="showhide-all">
+                    <div>
+                      <label class="custom-input aside-popover-toggle" data-toggle="popover" data-content="Показать 25 товаров"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Молочко</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Набор</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Спрей</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Шампунь</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.group-->
+                <div class="aside-filter__group hover-block">
+                  <div class="aside-filter__title small showhide">Бренд
+                  </div>
+                  <div class="showhide-all">
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">	A-DERMA</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">AHAVA</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">AMERICAN CREW</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">ARAVIA PROFESSIONAL</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">AVENE</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">BATISTE</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Be Hair</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">BIODERMA</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.group-->
+                <div class="aside-filter__group hover-block">
+                  <div class="aside-filter__title small showhide">Применение
+                  </div>
+                  <div class="showhide-all">
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">	A-DERMA</span>
+                      </label>
+                    </div>
+                    <div>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">AHAVA</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.group-->
               </div>
-              <div class="col-auto"><a class="small" href="#">Все  новинки</a></div>
             </div>
+            <!-- end aside-->
           </div>
-          <div class="pos-r">
-            <div class="s-catalog__carusel s-catalog__carusel--js swiper-container">
-              <div class="swiper-wrapper">
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-1.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
+          <div class="col-lg-9">
+            <!-- start s-catalog-->
+            <div class="s-catalog pt-0">
+              <div class="s-catalog__head small">
+                <div class="row">
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-auto">Сортировать по:</div>
+                      <div class="col-auto">
+                        <select>
+                          <option value="">↑ Цена</option>
+                          <option value="">↓ Цена</option>
+                          <option value="">↑ Цена</option>
+                          <option value="">↓ Цена</option>
+                        </select>
+                      </div>
+                      <div class="col-auto"><a class="tdu text-body" href="#">Скидки</a></div>
+                      <div class="col-auto"><a class="tdu text-body" href="#">Новинки</a></div>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="row">
+                      <div class="col">Показывать по: </div>
+                      <div class="col-auto">
+                        <div class="quantity">12</div>
+                        <div class="quantity active">24</div>
+                        <div class="quantity">36</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="s-catalog__col col-4">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-1.png" alt=""/></a>
                     <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
                       <div class="item-prod__price-row row justify-content-center align-items-center">
                         <div class="col-auto">
@@ -2467,18 +2549,16 @@
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
                       <!-- внизу вид кнопки при добавлении товара в корзину-->
+                      <!-- +e.A.btn.btn.btn-sm.active.btn-primary(href="#")
+                      +icon("basket")
+                      | В корзине
+                      -->
                     </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
                   </div>
                 </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-2.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
+                <!-- +e.col.col-4-->
+                <div class="s-catalog__col col-4">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-2.png" alt=""/></a>
                     <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл АП+ бальзам  АП+ бальзам 400мл АП+ бальзам   </a>
                       <div class="item-prod__price-row row justify-content-center align-items-center">
                         <div class="col-auto">
@@ -2496,18 +2576,16 @@
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
                       <!-- внизу вид кнопки при добавлении товара в корзину-->
+                      <!-- +e.A.btn.btn.btn-sm.active.btn-primary(href="#")
+                      +icon("basket")
+                      | В корзине
+                      -->
                     </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
                   </div>
                 </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-3.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
+                <!-- +e.col.col-4-->
+                <div class="s-catalog__col col-4">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-3.png" alt=""/></a>
                     <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
                       <div class="item-prod__price-row row justify-content-center align-items-center">
                         <div class="col-auto">
@@ -2518,18 +2596,16 @@
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
                       <!-- внизу вид кнопки при добавлении товара в корзину-->
+                      <!-- +e.A.btn.btn.btn-sm.active.btn-primary(href="#")
+                      +icon("basket")
+                      | В корзине
+                      -->
                     </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
                   </div>
                 </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-4.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
+                <!-- +e.col.col-4-->
+                <div class="s-catalog__col col-4">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-4.png" alt=""/></a>
                     <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
                       <div class="item-prod__price-row row justify-content-center align-items-center">
                         <div class="col-auto">
@@ -2540,48 +2616,16 @@
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
                       <!-- внизу вид кнопки при добавлении товара в корзину-->
+                      <!-- +e.A.btn.btn.btn-sm.active.btn-primary(href="#")
+                      +icon("basket")
+                      | В корзине
+                      -->
                     </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-              <svg class="icon icon-left-arr-small ">
-                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-              </svg>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-              <svg class="icon icon-left-arr-small ">
-                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end s-catalog-->
-      <!-- start s-catalog-->
-      <div class="s-catalog">
-        <div class="container">
-          <div class="section-head">
-            <div class="row align-items-baseline">
-              <div class="col-auto">
-                <div class="h2 mb-0">Спецпредложения</div>
-              </div>
-              <div class="col-auto"><a class="small" href="#">Все спецпредложения</a></div>
-            </div>
-          </div>
-          <div class="pos-r">
-            <div class="s-catalog__carusel s-catalog__carusel--js swiper-container">
-              <div class="swiper-wrapper">
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-1.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
+                <!-- +e.col.col-4-->
+                <div class="s-catalog__col col-4">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-1.png" alt=""/></a>
                     <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
                       <div class="item-prod__price-row row justify-content-center align-items-center">
                         <div class="col-auto">
@@ -2599,18 +2643,16 @@
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
                       <!-- внизу вид кнопки при добавлении товара в корзину-->
+                      <!-- +e.A.btn.btn.btn-sm.active.btn-primary(href="#")
+                      +icon("basket")
+                      | В корзине
+                      -->
                     </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
                   </div>
                 </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-2.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
+                <!-- +e.col.col-4-->
+                <div class="s-catalog__col col-4">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-2.png" alt=""/></a>
                     <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл АП+ бальзам  АП+ бальзам 400мл АП+ бальзам   </a>
                       <div class="item-prod__price-row row justify-content-center align-items-center">
                         <div class="col-auto">
@@ -2628,18 +2670,16 @@
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
                       <!-- внизу вид кнопки при добавлении товара в корзину-->
+                      <!-- +e.A.btn.btn.btn-sm.active.btn-primary(href="#")
+                      +icon("basket")
+                      | В корзине
+                      -->
                     </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
                   </div>
                 </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-3.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
+                <!-- +e.col.col-4-->
+                <div class="s-catalog__col col-4">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-3.png" alt=""/></a>
                     <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
                       <div class="item-prod__price-row row justify-content-center align-items-center">
                         <div class="col-auto">
@@ -2650,18 +2690,16 @@
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
                       <!-- внизу вид кнопки при добавлении товара в корзину-->
+                      <!-- +e.A.btn.btn.btn-sm.active.btn-primary(href="#")
+                      +icon("basket")
+                      | В корзине
+                      -->
                     </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
                   </div>
                 </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-4.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
+                <!-- +e.col.col-4-->
+                <div class="s-catalog__col col-4">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-4.png" alt=""/></a>
                     <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
                       <div class="item-prod__price-row row justify-content-center align-items-center">
                         <div class="col-auto">
@@ -2672,329 +2710,65 @@
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
                       <!-- внизу вид кнопки при добавлении товара в корзину-->
+                      <!-- +e.A.btn.btn.btn-sm.active.btn-primary(href="#")
+                      +icon("basket")
+                      | В корзине
+                      -->
                     </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
+                  </div>
+                </div>
+                <!-- +e.col.col-4-->
+                <div class="s-catalog__col col-4">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-4.png" alt=""/></a>
+                    <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
+                      <div class="item-prod__price-row row justify-content-center align-items-center">
+                        <div class="col-auto">
+                          <div class="h5 mb-0"> 1 415 р.</div>
+                        </div>
+                      </div><a class="item-prod__btn btn btn-sm btn-primary" href="#">
+                      <svg class="icon icon-basket ">
+                        <use xlink:href="img/svg/sprite.svg#basket"></use>
+                      </svg>В корзину</a>
+                      <!-- внизу вид кнопки при добавлении товара в корзину-->
+                      <!-- +e.A.btn.btn.btn-sm.active.btn-primary(href="#")
+                      +icon("basket")
+                      | В корзине
+                      -->
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-4-->
+              </div>
+              <div class="s-catalog__foot small">
+                <div class="row">
+                  <div class="col">
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#"> <span class="d-none d-md-block">Предыдущая</span><span class="d-md-none" aria-hidden="true">&laquo;</span></a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#"> <span class="d-none d-md-block">Следующая</span><span class="d-md-none" aria-hidden="true">&raquo;</span></a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="col-auto">
+                    <div class="row">
+                      <div class="col">Показывать по: </div>
+                      <div class="col-auto">
+                        <div class="quantity">12</div>
+                        <div class="quantity active">24</div>
+                        <div class="quantity">36</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-              <svg class="icon icon-left-arr-small ">
-                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-              </svg>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-              <svg class="icon icon-left-arr-small ">
-                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-              </svg>
-            </div>
+            <!-- end s-catalog-->
           </div>
         </div>
       </div>
-      <!-- end s-catalog-->
-      <!-- start s-catalog-->
-      <div class="s-catalog">
-        <div class="container">
-          <div class="section-head">
-            <div class="row align-items-baseline">
-              <div class="col-auto">
-                <div class="h2 mb-0">Популярные товары</div>
-              </div>
-              <div class="col-auto"><a class="small" href="#">Все популярные товары</a></div>
-            </div>
-          </div>
-          <div class="pos-r">
-            <div class="s-catalog__carusel s-catalog__carusel--js swiper-container">
-              <div class="swiper-wrapper">
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-1.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
-                    <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
-                      <div class="item-prod__price-row row justify-content-center align-items-center">
-                        <div class="col-auto">
-                          <div class="strike">1 415 р.</div>
-                        </div>
-                        <div class="col-auto">
-                          <div class="item-prod__stock">-160р.
-                          </div>
-                        </div>
-                        <div class="col-auto">
-                          <div class="h5 mb-0"> 1 415 р.</div>
-                        </div>
-                      </div><a class="item-prod__btn btn btn-sm btn-primary" href="#">
-                      <svg class="icon icon-basket ">
-                        <use xlink:href="img/svg/sprite.svg#basket"></use>
-                      </svg>В корзину</a>
-                      <!-- внизу вид кнопки при добавлении товара в корзину-->
-                    </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
-                  </div>
-                </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-2.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
-                    <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл АП+ бальзам  АП+ бальзам 400мл АП+ бальзам   </a>
-                      <div class="item-prod__price-row row justify-content-center align-items-center">
-                        <div class="col-auto">
-                          <div class="strike">1 415 р.</div>
-                        </div>
-                        <div class="col-auto">
-                          <div class="item-prod__stock">-160р.
-                          </div>
-                        </div>
-                        <div class="col-auto">
-                          <div class="h5 mb-0"> 1 415 р.</div>
-                        </div>
-                      </div><a class="item-prod__btn btn btn-sm btn-primary" href="#">
-                      <svg class="icon icon-basket ">
-                        <use xlink:href="img/svg/sprite.svg#basket"></use>
-                      </svg>В корзину</a>
-                      <!-- внизу вид кнопки при добавлении товара в корзину-->
-                    </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
-                  </div>
-                </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-3.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
-                    <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
-                      <div class="item-prod__price-row row justify-content-center align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0"> 1 415 р.</div>
-                        </div>
-                      </div><a class="item-prod__btn btn btn-sm btn-primary" href="#">
-                      <svg class="icon icon-basket ">
-                        <use xlink:href="img/svg/sprite.svg#basket"></use>
-                      </svg>В корзину</a>
-                      <!-- внизу вид кнопки при добавлении товара в корзину-->
-                    </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
-                  </div>
-                </div>
-                <div class="s-catalog__slide swiper-slide">
-                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img swiper-lazy" src="#" data-src="img/prod-4.png" alt=""/>
-                    <div class="swiper-lazy-preloader"></div></a>
-                    <div class="item-prod__caption"><a class="item-prod__title small" href="#">LA ROCHE POSAY Липикар АП+ бальзам 400мл</a>
-                      <div class="item-prod__price-row row justify-content-center align-items-center">
-                        <div class="col-auto">
-                          <div class="h5 mb-0"> 1 415 р.</div>
-                        </div>
-                      </div><a class="item-prod__btn btn btn-sm btn-primary" href="#">
-                      <svg class="icon icon-basket ">
-                        <use xlink:href="img/svg/sprite.svg#basket"></use>
-                      </svg>В корзину</a>
-                      <!-- внизу вид кнопки при добавлении товара в корзину-->
-                    </div>
-                    <!-- 	+e.A.btn.btn.btn-sm.active.btn-primary(href="#")
-                    +icon("basket")
-                    | В корзине
-                    
-                    
-                    -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-              <svg class="icon icon-left-arr-small ">
-                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-              </svg>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-              <svg class="icon icon-left-arr-small ">
-                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end s-catalog-->
-      <!-- start s-brands-->
-      <div class="s-brands">
-        <div class="container">
-          <div class="section-head">
-            <div class="row align-items-baseline">
-              <div class="col-auto">
-                <div class="h2 mb-0">Бренды</div>
-              </div>
-              <div class="col-auto"><a class="small" href="#">Все бренды</a></div>
-            </div>
-          </div>
-          <div class="pos-r">
-            <div class="s-brands__carusel s-brands__carusel--js swiper-container">
-              <div class="swiper-wrapper">
-                <div class="s-brands__slide swiper-slide text-center">
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-1.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-2.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloade"></div>
-                  </div>
-                </div>
-                <div class="s-brands__slide swiper-slide text-center">
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-2.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-3.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloade"></div>
-                  </div>
-                </div>
-                <div class="s-brands__slide swiper-slide text-center">
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-3.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-4.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloade"></div>
-                  </div>
-                </div>
-                <div class="s-brands__slide swiper-slide text-center">
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-4.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-5.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloade"></div>
-                  </div>
-                </div>
-                <div class="s-brands__slide swiper-slide text-center">
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-5.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-6.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloade"></div>
-                  </div>
-                </div>
-                <div class="s-brands__slide swiper-slide text-center">
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-1.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-2.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloade"></div>
-                  </div>
-                </div>
-                <div class="s-brands__slide swiper-slide text-center">
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-2.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-3.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloade"></div>
-                  </div>
-                </div>
-                <div class="s-brands__slide swiper-slide text-center">
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-3.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-4.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloade"></div>
-                  </div>
-                </div>
-                <div class="s-brands__slide swiper-slide text-center">
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-4.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-5.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloade"></div>
-                  </div>
-                </div>
-                <div class="s-brands__slide swiper-slide text-center">
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-5.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloader"></div>
-                  </div>
-                  <div class="s-brands__slide-inner"><a href="#"><img class="res-i swiper-lazy" src="#" data-src="img/brend-6.jpg" alt=""/></a>
-                    <div class="swiper-lazy-preloade"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-              <svg class="icon icon-left-arr-small ">
-                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-              </svg>
-            </div>
-            <div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-              <svg class="icon icon-left-arr-small ">
-                <use xlink:href="img/svg/sprite.svg#left-arr-small"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end s-brands-->
-      <!-- start s-news-->
-      <div class="s-news section">
-        <div class="container">
-          <div class="section-head border-0">
-            <div class="row align-items-baseline">
-              <div class="col-auto">
-                <div class="h2 mb-0">Новости</div>
-              </div>
-              <div class="col-auto"><a class="small" href="#">Все новости</a></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="s-news__main"><a class="s-news__img-wrap-main img-bg" href="#" style="background-image: url(img/news-1.jpg);"><img src="img/news-1.jpg" alt=""/></a><a class="s-news__link h6 d-block text-body" href="#">Представляем вашему вниманию профессиональные средства COCOCHOCO</a>
-                <div class="small">COCOCHOCO - признанный лидер в производстве профессиональных средств для эффективного восстановления. Вся продукция разработана и произведена на родине многих видов высококачественной косметики, получившей общемировое признание, в Израиле. Благодаря накопленному опыту, во всех продуктах по уходу за волосами использованы передовые технологии</div>
-              </div>
-            </div>
-            <div class="col-lg-6"><a class="s-news__small" href="#">
-              <div class="row">
-                <div class="col-auto">
-                  <div class="s-news__img-wrap-small img-bg" style="background-image: url(img/news-2.jpg);"><img src="img/news-2.jpg" alt=""/>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="h6 text-body">JANSSEN</div>
-                  <div class="small text-body">JANSSEN Cosmetics – признанный лидирующий бренд наконец на нашем сайте!</div>
-                  <div class="date">01/06/2018</div>
-                </div>
-              </div></a><a class="s-news__small" href="#">
-              <div class="row">
-                <div class="col-auto">
-                  <div class="s-news__img-wrap-small img-bg" style="background-image: url(img/news-2.jpg);"><img src="img/news-2.jpg" alt=""/>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="h6 text-body">JANSSEN</div>
-                  <div class="small text-body">JANSSEN Cosmetics – признанный лидирующий бренд наконец на нашем сайте!</div>
-                  <div class="date">01/06/2018</div>
-                </div>
-              </div></a><a class="s-news__small" href="#">
-              <div class="row">
-                <div class="col-auto">
-                  <div class="s-news__img-wrap-small img-bg" style="background-image: url(img/news-2.jpg);"><img src="img/news-2.jpg" alt=""/>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="h6 text-body">JANSSEN</div>
-                  <div class="small text-body">JANSSEN Cosmetics – признанный лидирующий бренд наконец на нашем сайте!</div>
-                  <div class="date">01/06/2018</div>
-                </div>
-              </div></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- end s-news-->
       <footer class="footer">
         <div class="container">
           <div class="footer__top-row row justify-content-between">
@@ -3192,7 +2966,7 @@
     <script src="libs/swiper-4.2.0/swiper.min.js"></script>
     <script src="libs/jquery.morelines.min.js"></script>
     <script src="libs/jquery.inputmask.bundle.min.js"></script>
-    <script src="libs/ion.rangeSlider-2.2.0/js/ion.rangeSlider.js"></script>
+    <script src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
