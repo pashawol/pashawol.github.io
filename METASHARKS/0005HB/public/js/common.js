@@ -18,9 +18,9 @@ jQuery(document).ready(function ($) {
 	 
 		})
 	// дробдаун в шапке , все категории
-	$('.dropdown-cat__toggle--js').click(function () {
-		$(this).next().toggle().parents(".dropdown-cat").toggleClass("show");
-		$(this).parents(".dropdown-cat").hasClass("show") ? ($(".dropdown-cat__title").text("Закрыть"), $("body").addClass("fixed-drop")) : ($(".dropdown-cat__title").text("Все категории"), $("body").removeClass("fixed-drop"));
+	$('.col-auto .dropdown-cat').hover(function () {
+		$(this).toggleClass("show").find('.dropdown-cat__menu').toggle();
+		$(this).hasClass("show") ? ($(".dropdown-cat__title").text("Закрыть"), $("body").addClass("fixed-drop")) : ($(".dropdown-cat__title").text("Все категории"), $("body").removeClass("fixed-drop"));
 
 	})
 	
@@ -80,8 +80,8 @@ $(document).mouseup(function (e) {
 	if (container.has(e.target).length === 0) {
 		$(".dropdown-cat__menu").hide();
 		// $("body").toggleClass("fixed");
-		$(".dropdown-cat__title").text("Все категории");
-		$(".dropdown-cat").removeClass("show");
+		// $(".dropdown-cat__title").text("Все категории");
+		// $(".dropdown-cat").removeClass("show");
 		$("body").removeClass("fixed-drop");
 		$(".dropdown-cat-has-children__item--js").removeClass('active');
 		$('.dropdown-cat-sub').removeClass('active');
@@ -110,12 +110,12 @@ $(".top-nav__search-toggle--js").click(function () {
 
 
 //  табы  в выборе способа доставки
-$(".delivary-method .custom-input__input").change(function () {
-	var index = $(this).parents('.delivary-col').index();
-	console.log(index);
-	$(this).closest('.delivary-method').find('.delivary-item').hide().removeClass('active')
-		.eq(index).fadeIn().addClass('active');
-})
+//$(".delivary-method .custom-input__input").change(function () {
+//	var index = $(this).parents('.delivary-col').index();
+//	console.log(index);
+//	$(this).closest('.delivary-method').find('.delivary-item').hide().removeClass('active')
+//		.eq(index).fadeIn().addClass('active');
+//})
 
 // accordion в оформлении покупки
 $(".accordion__toggle").click(function () {
