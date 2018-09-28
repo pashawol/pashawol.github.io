@@ -330,7 +330,7 @@ template {
   display: none !important;
 }
 
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+h1,h2,h3,h4,h5,h6,.h1,.h2,.header-block h1,.h3,.h4,.h5,.h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 500;
@@ -342,12 +342,12 @@ h1,.h1 {
   font-size: 2.5rem;
 }
 
-h2,.h2 {
-  font-size: 3.2rem;
+h2,.h2,.header-block h1 {
+  font-size: 3rem;
 }
 
 h3,.h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 h4,.h4 {
@@ -462,7 +462,7 @@ mark,.mark {
   margin-left: auto;
 }
 
-.row {
+.row,.header-block ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -484,7 +484,7 @@ mark,.mark {
   padding-left: 0;
 }
 
-.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col,.col-auto,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm,.col-sm-auto,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-md,.col-md-auto,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg,.col-lg-auto,.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl,.col-xl-auto {
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col,.col-auto,.header-block li,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm,.col-sm-auto,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-md,.col-md-auto,.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg,.col-lg-auto,.col-xl-1,.col-xl-2,.col-xl-3,.col-xl-4,.col-xl-5,.col-xl-6,.col-xl-7,.col-xl-8,.col-xl-9,.col-xl-10,.col-xl-11,.col-xl-12,.col-xl,.col-xl-auto {
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -503,7 +503,7 @@ mark,.mark {
   max-width: 100%;
 }
 
-.col-auto {
+.col-auto,.header-block li {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
@@ -771,8 +771,8 @@ mark,.mark {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
-  -webkit-border-radius: 0.25rem;
-          border-radius: 0.25rem;
+  -webkit-border-radius: 0.125rem;
+          border-radius: 0.125rem;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2082,7 +2082,7 @@ body {
 }
 
 .small {
-  font-size: 0.93333rem;
+  font-size: 0.875rem;
 }
 
 .tdn {
@@ -2104,11 +2104,11 @@ body {
 }
 
 h2 {
-  margin-bottom: 2em;
+  margin-bottom: 1.875em;
 }
 
 body,html {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 body {
@@ -2394,7 +2394,7 @@ select.form-control {
   background-image: url(../img/svg/bott.svg);
   background-repeat: no-repeat;
   background-position: 97% 50%;
-  padding-right: 1.53333rem;
+  padding-right: 1.4375rem;
   -webkit-appearance: none !important;
      -moz-appearance: none !important;
           appearance: none !important;
@@ -2457,15 +2457,15 @@ select.form-control:focus::-ms-value {
   background-image: none !important;
   text-shadow: none;
   font-family: "Source Sans Pro";
-  font-size: 0.93333rem;
+  font-size: 0.875rem;
   text-align: left;
   border: 1px solid #dadada;
   background-color: #fff;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   height: auto;
-  -webkit-border-radius: 0.4rem;
-          border-radius: 0.4rem;
+  -webkit-border-radius: 0.375rem;
+          border-radius: 0.375rem;
   -webkit-transition: all 0.36s;
   -o-transition: all 0.36s;
   transition: all 0.36s;
@@ -2480,8 +2480,8 @@ select.form-control:focus::-ms-value {
   background-color: #dadada;
   height: 100%;
   width: 40px;
-  -webkit-border-radius: 0.4rem;
-          border-radius: 0.4rem;
+  -webkit-border-radius: 0.375rem;
+          border-radius: 0.375rem;
   text-align: center;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAYAAAAVibZIAAAA40lEQVRIS9XVXRXCMAwF4HsVgARQABLAATgAZeAAHIAEJIADUFBOdtqdwdKk7OeBPa7pl61JW8J5QghLAKcYtiV58+bQCojgBcA0xj0BrD04iypgyu/CKmqARXALLQBd+AP9ATThGg0h7AAcvMoq4601rtAeYDPHnuRRXnAgMOEVLKg086LDb2tTHiRnZvN3TfRH6MBreic5H6f6o/RpqnCPfn0B2JC8Jkvb+zI4KWwnAVff52vulCqBVbDaptoXxdPKgrNgFo3Fk7tJg03QRDOwC7poAz7HZZIq97tNCzugFfYGUK5wGWWE5JYAAAAASUVORK5CYII=);
   background-position: center;
@@ -2496,8 +2496,8 @@ select.form-control:focus::-ms-value {
 }
 
 .jq-selectbox li {
-  font-size: 1.06667rem;
-  padding: 0.66667em 10px 0.66667em;
+  font-size: 1rem;
+  padding: 0.625em 10px 0.625em;
 }
 
 .jq-selectbox li:hover {
@@ -2507,7 +2507,7 @@ select.form-control:focus::-ms-value {
 .custom-input {
   display: block;
   margin: auto;
-  margin-bottom: 1.33333rem;
+  margin-bottom: 1.25rem;
   cursor: pointer;
   position: relative;
   padding-left: 35px;
@@ -2615,7 +2615,7 @@ select.form-control:focus::-ms-value {
   border: none;
   border-bottom: solid 1px;
   height: auto;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   outline: 0 !important;
 }
 
@@ -2676,34 +2676,76 @@ select.form-control:focus::-ms-value {
 }
 
 .top-nav {
-  padding-top: 15px;
   position: absolute;
   width: 100%;
   top: 100%;
   z-index: 20;
-  padding-top: 3px;
   -webkit-transition: all 0.36s;
   -o-transition: all 0.36s;
   transition: all 0.36s;
-  padding-bottom: 10px;
+  padding-top: 52px;
   top: 0;
   left: 0;
+}
+
+.top-nav::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 820px;
+  height: 1px;
+  background-color: #e8e8e8;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
 }
 
 .top-nav.fixed {
   bottom: auto;
   margin-top: 0;
   background-color: #fff;
+  position: fixed;
+  padding-top: 0;
 }
 
-.top-nav__nav {
-  text-align: center;
-  list-style-type: none;
+.top-nav.fixed::after {
+  width: 100%;
 }
 
-.top-nav__item {
-  display: inline-block;
+.top-nav ul {
   list-style-type: none;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.top-nav ul > * {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.top-nav li {
+  list-style-type: none;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.top-nav a {
+  display: block;
+  padding: 15px 17px;
+  color: #000000;
+  text-decoration: none !important;
+  border-bottom: 3px solid transparent;
+}
+
+.top-nav a:hover {
+  border-color: #00731c;
 }
 
 .toggle-mnu {
@@ -2853,6 +2895,58 @@ select.form-control:focus::-ms-value {
 
 .header-block {
   display: block;
+  background-image: url(../img/head-img.png);
+  padding-top: 220px;
+  padding-bottom: 1px;
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-color: #f4f4f4;
+}
+
+.header-block h1 {
+  text-transform: uppercase;
+  text-transform: uppercase;
+  padding-bottom: 0.375em;
+}
+
+.header-block__btn {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 286px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 95px;
+}
+
+.header-block ul {
+  padding-left: 25px;
+}
+
+.header-block li {
+  max-width: 260px;
+  line-height: 1;
+  list-style-type: none;
+  padding-left: 53px;
+  margin-bottom: 30px;
+}
+
+.header-block li::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border: 7px solid #fff;
+  -webkit-transform: rotate(1deg);
+      -ms-transform: rotate(1deg);
+          transform: rotate(1deg);
+  background-color: #1f761e;
+  -webkit-box-shadow: 0 0 0 10px rgba(231, 231, 231, 0.45);
+          box-shadow: 0 0 0 10px rgba(231, 231, 231, 0.45);
+  position: absolute;
+  left: 0;
+  top: 10px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
 }
 
 .s-form {
@@ -2879,7 +2973,7 @@ a {
 }
 
 #foot-dialog h3 {
-  font-size: 2.4em;
+  font-size: 2.25em;
 }
 
 .mfp-close {
@@ -2937,6 +3031,10 @@ a {
 
 @font-face {
   font-family:"Source Sans Pro";font-style:normal;font-weight:600;src:url("../fonts/SourceSansPro-SemiBold/SourceSansPro-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/SourceSansPro-SemiBold/SourceSansPro-SemiBold.woff") format("woff"), url("../fonts/SourceSansPro-SemiBold/SourceSansPro-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Source Sans Pro";font-style:normal;font-weight:700;src:url("../fonts/SourceSansPro-Bold/SourceSansPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SourceSansPro-Bold/SourceSansPro-Bold.woff") format("woff"), url("../fonts/SourceSansPro-Bold/SourceSansPro-Bold.ttf") format("truetype");
 }
 
 @font-face {
