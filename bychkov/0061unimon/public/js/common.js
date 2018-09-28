@@ -213,10 +213,10 @@ jQuery(document).ready(function($) {
         image.parent().css('background-image', 'url(' + image.attr('src') + ')');
     });
 
-    $('[data-target="#modal-win"]').click(function() {
-        $("#modal-win .h3").html($(this).data("title"));
-        $("#modal-win .btn, #modal-win .btn-name-js ").text($(this).data('btn'));
-        $("#modal-win .order").val($(this).data('order'));
+    $('[data-toggle="modal"]').click(function() {
+        $(".modal.fade .h3").html($(this).data("title"));
+        $(".modal.fade .btn, .modal.fade .btn-name-js ").text($(this).data('btn'));
+        $(".modal.fade .order").val($(this).data('order'));
 
         var par=$(this).data('par');
         $('[name="link"]').val(par);
@@ -224,7 +224,7 @@ jQuery(document).ready(function($) {
     })
 
     $('.btn-name-js').each(function(index, el) {
-    	if($(el).parents('#modal-win').length>0){
+    	if($(el).parents('.modal.fade').length>0){
 
     	}else{
     		console.log(el);
