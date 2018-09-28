@@ -538,7 +538,7 @@
                 </div>
                 <!-- +e.col.col-md-6-->
           </div>
-          <div class=" wow fadeIn " data-wow-offset="80" data-wow-duration=".6s">
+          <div class=" wow fadeIn  d-none d-md-block" data-wow-offset="80" data-wow-duration=".6s">
             <div class="form-wrap">
               <div class="form-wrap__before">
               </div>
@@ -610,7 +610,7 @@
           </div>
           <div class="s-type__title-block h4 strong d-none d-md-block wow fadeInUp" data-wow-offset="80" data-wow-duration=".6s">Типы датчиков
           </div>
-          <div class="s-type__row row">
+          <div class="row">
               <div class="s-type__col-wow col-lg-4 col-sm-6 wow fadeInRight" data-wow-offset="80" data-wow-duration=".6s">
                 <div class="s-type__item">
                   <div class="row">
@@ -886,11 +886,54 @@
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
           </div>
+          <div class="d-md-none py-3">
+            <div class="form-wrap"> 
+              <div class="text-center">
+                <div class="form-wrap__big-title h3 strong text-white">Консультация специалиста  по&nbsp;подбору решения
+                </div>
+              </div>
+              <form>
+                <div class="row">
+                  <div class="col-lg">
+                    <div class="row row-small">
+                      <div class="col-md-6">
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><span class="form-wrap__icon-wrap">
+                            <svg class="icon icon-user ">
+                              <use xlink:href="img/svg/sprite.svg#user"></use>
+                            </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="text" placeholder="Как Вас зовут?"/>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><span class="form-wrap__icon-wrap">
+                            <svg class="icon icon-tel ">
+                              <use xlink:href="img/svg/sprite.svg#tel"></use>
+                            </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="tel" placeholder="Номер телефона"/>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-auto">
+                    <button class="form-wrap__btn btn btn-block btn-primary" type="submit"><span>Заказать консультацию</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div class="polite">Нажимая кнопку «<span class="btn-name-js">Заказать консультацию</span>», Вы соглашаетесь на 
+                <a class="polite__link tdu d-inline-block" href="Soglasie.pdf" target="_blank"> обработку персональных данных</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-control-->
       <!-- start s-mode-->
-      <div class="s-mode section" id="s-mode">
+      <div class="s-mode s-mode--3 section d-none d-md-block" id="s-mode">
         <div class="container">
           <h2 class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"><span>Режимы управления оборудованием</span></h2>
           <div class="row justify-content-center text-lg-left text-center">
@@ -947,105 +990,80 @@
       </div>
       <!-- end s-mode-->
       <!-- start s-save-->
-      <div class="s-save section" id="s-save">
+      <div class="s-save section d-none d-lg-block" id="s-save">
         <div class="container">
           <h2 class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"><span>Система спасает от аварий и проблем</span></h2>
-          <div class="row"></div>
+          <div class="row">
+            <div class="col-auto">
+                  <div class="s-save__item">Отключится электричество <img src="img/img-3/save-1.png" alt="alt"/>
+                  </div>
+                  <!-- +e.item-->
+                  <div class="s-save__item">Замерзнет редуктор газа<img src="img/img-3/save-2.png" alt="alt"/>
+                  </div>
+                  <!-- +e.item-->
+                  <div class="s-save__item">Снизится давление<img src="img/img-3/save-3.png" alt="alt"/>
+                  </div>
+                  <!-- +e.item-->
+                  <div class="s-save__item">Проблемы с вытяжкой<img src="img/img-3/save-4.png" alt="alt"/>
+                  </div>
+                  <!-- +e.item-->
+                  <div class="s-save__item">Забутанивание газгольдера<img src="img/img-3/save-5.png" alt="alt"/>
+                  </div>
+                  <!-- +e.item-->
+                  <div class="s-save__item">Поломка котла<img src="img/img-3/save-6.png" alt="alt"/>
+                  </div>
+                  <!-- +e.item-->
+            </div>
+            <div class="col-auto">
+                  <div class="s-save__item">Остановится котел<img src="img/img-3/save-7.png" alt="alt"/>
+                  </div>
+                  <!-- +e.item-->
+                  <div class="s-save__item">Дом промерзнет<img src="img/img-3/save-8.png" alt="alt"/>
+                  </div>
+                  <!-- +e.item-->
+                  <div class="s-save__item">Лопнут радиаторы и трубы<img src="img/img-3/save-9.png" alt="alt"/>
+                  </div>
+                  <!-- +e.item-->
+                  <div class="s-save__item">Затопит дом<img src="img/img-3/save-10.png" alt="alt"/>
+                  </div>
+                  <!-- +e.item-->
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-save-->
       <!-- start s-advantages-->
-      <div class="s-advantages section" id="s-advantages">
-        <div class="s-advantages__before">
-          <div class="s-advantages__before-inner">
-          </div>
-        </div>
+      <div class="s-advantages s-advantages--3 s-advantages--control-temp section" id="s-advantages">
         <div class="container">
-          <h2 class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"><span class="d-none d-md-inline-block">9&nbsp;преимуществ мониторинга с&nbsp;Unimon</span><span class="d-md-none">Преимущества<br/> мониторинга с Unimon</span></h2>
+          <h2 class="text-center  wow fadeInUp " data-wow-offset="80" data-wow-duration=".6s"> <span>Система позволяет экономить</span></h2>
           <div class="row">
-                <div class="s-advantages__col-wow col-lg-4 col-sm-6 wow fadeInLeft" data-wow-offset="80" data-wow-duration=".6s">
-                  <div class="s-advantages__item">
-                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-1.png" alt=""/>
-                    </div>
-                    <div class="h6 strong">Нет затрат на приобретение<br/>сервера, лицензий ПО и зарплату<br/>системному администратору</div>
-                    <div class="small">Поддержку инфраструктуры для хранения<br/> и бесперебойного доступа к данным — <br/> мы берем на себя (SLA 99%)</div>
+                <div class="s-advantages__col-wow col-lg-4 col-md-6 wow fadeInLeft" data-wow-offset="80" data-wow-duration=".6s">
+                  <div class="s-advantages__item s-advantages__item--3 s-advantages__item--control-temp text-lg-left text-center">
+                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/img-3/ec-1.png" alt=""/>
+                    </div> 
+                    <div class="h6">Разогревайте дом к приезду</div>
+                    <div class="small">В&nbsp;остальное время поддерживайте минимально достаточную температуру</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
-                <div class="s-advantages__col-wow col-lg-4 col-sm-6 wow fadeInLeft" data-wow-offset="80" data-wow-duration=".6s">
-                  <div class="s-advantages__item">
-                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-2.png" alt=""/>
-                    </div>
-                    <div class="h6 strong">Для работы с системой<br/> достаточно браузера</div>
-                    <div class="small">Не&nbsp;надо устанавливать специальное<br/> ПО&nbsp;на&nbsp;рабочие компьютеры</div>
+                <div class="s-advantages__col-wow col-lg-4 col-md-6 wow fadeInLeft" data-wow-offset="80" data-wow-duration=".6s">
+                  <div class="s-advantages__item s-advantages__item--3 s-advantages__item--control-temp text-lg-left text-center">
+                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/img-3/ec-2.png" alt=""/>
+                    </div> 
+                    <div class="h6">Топите ночью по&nbsp;более дешевому тарифу</div>
+                    <div class="small">Днем тратьте электроэнергию  по&nbsp;минимуму</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
-                <div class="s-advantages__col-wow col-lg-4 col-sm-6 wow fadeInLeft" data-wow-offset="80" data-wow-duration=".6s">
-                  <div class="s-advantages__item">
-                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-3.png" alt=""/>
-                    </div>
-                    <div class="h6 strong">Можно работать через<br/> приложение на&nbsp;смартфоне</div>
-                    <div class="small">Есть бесплатные мобильные приложения<br/> для Android и&nbsp;iOS</div>
+                <div class="s-advantages__col-wow col-lg-4 col-md-6 wow fadeInLeft" data-wow-offset="80" data-wow-duration=".6s">
+                  <div class="s-advantages__item s-advantages__item--3 s-advantages__item--control-temp text-lg-left text-center">
+                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/img-3/ec-3.png" alt=""/>
+                    </div> 
+                    <div class="h6">Система подстраивается  под погоду на&nbsp;улице</div>
+                    <div class="small">Днем тратьте электроэнергию  по&nbsp;минимуму</div>
                   </div>
                 </div>
                 <!-- .col-lg-4.col-sm-6-->
-                <div class="s-advantages__col-wow col-lg-4 col-sm-6 wow fadeInLeft" data-wow-offset="80" data-wow-duration=".6s">
-                  <div class="s-advantages__item">
-                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-4.png" alt=""/>
-                    </div>
-                    <div class="h6 strong">Доступ к&nbsp;системе из&nbsp;любой точки мира,<br/> где есть Интернет</div>
-                    <div class="small">Удобно для сотрудников в&nbsp;разъездах, <br/>мобильных групп реагирования<br/>и&nbsp;руководства</div>
-                  </div>
-                </div>
-                <!-- .col-lg-4.col-sm-6-->
-                <div class="s-advantages__col-wow col-lg-4 col-sm-6 wow fadeInLeft d-none d-sm-block" data-wow-offset="80" data-wow-duration=".6s">
-                  <div class="s-advantages__item">
-                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-5.png" alt=""/>
-                    </div>
-                    <div class="h6 strong">Серверную инфраструктуру<br/>предоставляет &laquo;Mail.ru Group&raquo;</div>
-                    <div class="small">Данные хранятся на&nbsp;территории&nbsp;РФ,<br/>в&nbsp;независимых ЦОДах уровня TIER III,<br/>с&nbsp;тройной репликацией</div>
-                  </div>
-                </div>
-                <!-- .col-lg-4.col-sm-6-->
-                <div class="s-advantages__col-wow col-lg-4 col-sm-6 wow fadeInLeft d-none d-sm-block" data-wow-offset="80" data-wow-duration=".6s">
-                  <div class="s-advantages__item">
-                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-6.png" alt=""/>
-                    </div>
-                    <div class="h6 strong">Не&nbsp;надо заниматься<br/>обновлением&nbsp;ПО</div>
-                    <div class="small">В&nbsp;облаке всегда актуальная и&nbsp;стабильная<br/>версия системы</div>
-                  </div>
-                </div>
-                <!-- .col-lg-4.col-sm-6-->
-                <div class="s-advantages__col-wow col-lg-4 col-sm-6 wow fadeInLeft d-none d-sm-block" data-wow-offset="80" data-wow-duration=".6s">
-                  <div class="s-advantages__item">
-                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-7.png" alt=""/>
-                    </div>
-                    <div class="h6 strong">Территориально распределенные<br/>объекты на&nbsp;одном экране </div>
-                    <div class="small">Не&nbsp;требуется много серверов<br/>и&nbsp;их&nbsp;синхронизации</div>
-                  </div>
-                </div>
-                <!-- .col-lg-4.col-sm-6-->
-                <div class="s-advantages__col-wow col-lg-4 col-sm-6 wow fadeInLeft d-none d-sm-block" data-wow-offset="80" data-wow-duration=".6s">
-                  <div class="s-advantages__item">
-                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-8.png" alt=""/>
-                    </div>
-                    <div class="h6 strong">Уникальный механизм <br/>обработки тревог</div>
-                    <div class="small">Оператор отражает действия <br/>по&nbsp;устранению, а&nbsp;руководитель <br/>видит это на&nbsp;мобильном</div>
-                  </div>
-                </div>
-                <!-- .col-lg-4.col-sm-6-->
-                <div class="s-advantages__col-wow col-lg-4 col-sm-6 wow fadeInLeft" data-wow-offset="80" data-wow-duration=".6s">
-                  <div class="s-advantages__item">
-                    <div class="s-advantages__img-wrap"><img class="res-i" src="img/advantages-i-9.png" alt=""/>
-                    </div>
-                    <div class="h6 strong">Возможность доработки <br/>системы под ваши задачи</div>
-                    <div class="small">Подключим к&nbsp;облаку ваше оборудование, <br/>переделаем интерфейс и&nbsp;дизайн системы</div>
-                  </div>
-                </div>
-                <!-- .col-lg-4.col-sm-6-->
-          </div>
-          <div class="text-center d-md-none  wow bounceIn" data-wow-offset="80" data-wow-duration=".6s"><a class="s-advantages__btn btn btn-primary px-5" href="#" data-toggle="modal" data-target="#modal-win" data-title="Заполните форму для&amp;nbsp;скачивания " data-order="Заполните форму для скачивания " data-btn="Отправить"><span>Скачать презентацию</span></a>
           </div>
         </div>
       </div>
@@ -1179,150 +1197,157 @@
       <!-- end s-api-->
       <!-- start s-logo-->
       <div class="s-logo section" id="s-logo">
-        <div class="container">
-          <h2 class="text-center">s-logo</h2>
-          <div class="row"></div>
+        <div class="s-logo__head">
+          <div class="container">
+            <h2 class="text-center"><span>Работает со всеми видами систем отопления</span></h2>
+            <div class="row"></div>
+          </div>
+        </div>
+        <div class="s-logo__body">
+          <div class="container">
+            <ul>
+              <li>Газовые котлы</li>
+              <li>Электро котлы</li>
+              <li>Твердотопливные котлы</li>
+              <li>Пеллетные котлы</li>
+              <li>Конверторы</li>
+              <li>Теплый пол</li>
+              <li>ТЭНы</li>
+              <li>Тепловые пушки</li>
+            </ul>
+            <div class="s-logo__row row">
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-1.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-2.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-3.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-4.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-5.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-6.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-7.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-8.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-9.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-10.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-11.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-12.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-13.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-14.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+              <div class="s-logo__col col col-2">
+                <div class="s-logo__item"><img class="res-i" src="img/img-3/logo-15.png" alt=""/>
+                </div>
+              </div>
+              <!-- +e.col.col-->
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-logo-->
       <!-- start s-work-->
-      <div class="s-work section" id="s-work">
-        <div class="s-work__before wow fadeInLeft" data-wow-offset="120" data-wow-duration=".8s">
+      <div class="s-work-2 section" id="s-work">
+        <div class="s-work-2__before wow fadeInLeft" data-wow-offset="120" data-wow-duration=".8s">
         </div>
         <div class="container">
-          <div class="d-none d-md-block">
-            <h2 class=" wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s"><span>Как мы работаем</span></h2>
-            <div class="row">
-                    <div class="s-work__col col-xl-auto col-md-6 wow bounceInLeft" data-wow-offset="80" data-wow-duration=".8s">
-                      <div class="s-work__item">
-                        <div class="s-work__item-before">
-                        </div>
-                        <div class="h6 strong">Подберём оптимальное оборудование</div>
-                        <div class="small">Минимальное по&nbsp;цене, но&nbsp;закрывающие <br/>все ваши задачи</div>
+          <h2 class="text-center  wow fadeInUp " data-wow-offset="80" data-wow-duration=".8s"><span>Как мы работаем</span></h2>
+          <div class="row">
+                <div class="s-work-2__col col-lg-auto col-sm-6 tex-center wow bounceInLeft" data-wow-offset="80" data-wow-duration=".8s">
+                  <div class="s-work-2__item">
+                    <div class="s-work-2__img-wrap">
+                      <div class="s-work-2__img-wrap-inner"><img class="res-i" src="img/img-2/work-i-2-1.png" alt=""/>
                       </div>
                     </div>
-                    <!-- .col-xl-auto.col-md-6-->
-                    <div class="s-work__col col-xl-auto col-md-6 wow bounceInLeft" data-wow-offset="80" data-wow-duration=".8s">
-                      <div class="s-work__item">
-                        <div class="s-work__item-before">
-                        </div>
-                        <div class="h6 strong">Сами все купим, соберем, настроим, подключим</div>
-                        <div class="small">Вы&nbsp;получаете систему, которая уже работает &laquo;из&nbsp;коробки&raquo;, <br/>достаточно включить и&nbsp;залогиниться в&nbsp;личный кабинет</div>
+                    <div class="h6">Собираем систему</div>
+                  </div>
+                </div>
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-work-2__col col-lg-auto col-sm-6 tex-center wow bounceInLeft" data-wow-offset="80" data-wow-duration=".8s">
+                  <div class="s-work-2__item">
+                    <div class="s-work-2__img-wrap">
+                      <div class="s-work-2__img-wrap-inner"><img class="res-i" src="img/img-2/work-i-2-2.png" alt=""/>
                       </div>
                     </div>
-                    <!-- .col-xl-auto.col-md-6-->
-                    <div class="s-work__col col-xl-auto col-md-6 wow bounceInLeft" data-wow-offset="80" data-wow-duration=".8s">
-                      <div class="s-work__item">
-                        <div class="s-work__item-before">
-                        </div>
-                        <div class="h6 strong">Смонтируем и&nbsp;запустим систему на&nbsp;объекте</div>
-                        <div class="small">Либо поручите монтаж по&nbsp;нашей подробной инструкции <br/>своим сотрудникам или региональному дистрибутору.</div>
+                    <div class="h6">Настраиваем ее&nbsp;под вас</div>
+                  </div>
+                </div>
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-work-2__col col-lg-auto col-sm-6 tex-center wow bounceInLeft" data-wow-offset="80" data-wow-duration=".8s">
+                  <div class="s-work-2__item">
+                    <div class="s-work-2__img-wrap">
+                      <div class="s-work-2__img-wrap-inner"><img class="res-i" src="img/img-2/work-i-2-3.png" alt=""/>
                       </div>
                     </div>
-                    <!-- .col-xl-auto.col-md-6-->
-                    <div class="s-work__col col-xl-auto col-md-6 wow bounceInLeft" data-wow-offset="80" data-wow-duration=".8s">
-                      <div class="s-work__item">
-                        <div class="s-work__item-before">
-                        </div>
-                        <div class="h6 strong">Техподдержка</div>
-                        <div class="small">После запуска системы осуществляем поддержку, обслуживание, <br/>проверку датчиков и&nbsp;обновление системы</div>
+                    <div class="h6">Проходим поверку</div>
+                  </div>
+                </div>
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-work-2__col col-lg-auto col-sm-6 tex-center wow bounceInLeft" data-wow-offset="80" data-wow-duration=".8s">
+                  <div class="s-work-2__item">
+                    <div class="s-work-2__img-wrap">
+                      <div class="s-work-2__img-wrap-inner"><img class="res-i" src="img/img-2/work-i-2-4.png" alt=""/>
                       </div>
                     </div>
-                    <!-- .col-xl-auto.col-md-6-->
-            </div>
+                    <div class="h6">Бесплатно доставляем по&nbsp;России</div>
+                  </div>
+                </div>
+                <!-- +e.col.col-xl-4.col-md-6-->
           </div>
-          <div class=" wow fadeInUp " id="form-wrap" data-wow-offset="80" data-wow-duration=".8s">
-            <div class="form-wrap">
-              <div class="form-wrap__before">
-              </div>
-              <div class="form-wrap__after">
-              </div>
-              <div class="text-center">
-                <div class="d-none d-md-block">
-                  <div class="form-wrap__big-title h3 strong text-white">Заполните форму и&nbsp;мы&nbsp;бесплатно подберем 3&nbsp;варианта решения
-                  </div>
-                  <div class="form-wrap__sub-title text-white">Оптимальные по цене и функционалу именно для Вашей задачи
-                  </div>
-                </div>
-                <div class="form-wrap__big-title h3 strong text-white d-md-none">Бесплатный подбор оборудования
-                </div>
-              </div>
-              <form>
-                <div class="row">
-                  <div class="col-lg-6 d-none d-md-block">
-                    <div class="form-wrap__input-wrap form-group">
-                      <label><span class="form-wrap__icon-wrap">
-                        <svg class="icon icon-user ">
-                          <use xlink:href="img/svg/sprite.svg#user"></use>
-                        </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="text" placeholder="Как Вас зовут?"/>
-                      </label>
-                    </div>
-                    <!-- +e.input-wrap-->
-                  </div>
-                  <div class="col-lg-6 order-lg-0 order-1">
-                    <div class="form-wrap__input-wrap form-group">
-                      <label><span class="form-wrap__icon-wrap">
-                        <svg class="icon icon-mail ">
-                          <use xlink:href="img/svg/sprite.svg#mail"></use>
-                        </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="email" placeholder="Электронная почта"/>
-                      </label>
-                    </div>
-                    <!-- +e.input-wrap-->
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="form-wrap__input-wrap form-group">
-                      <label><span class="form-wrap__icon-wrap">
-                        <svg class="icon icon-tel ">
-                          <use xlink:href="img/svg/sprite.svg#tel"></use>
-                        </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="tel" placeholder="Номер телефона"/>
-                      </label>
-                    </div>
-                    <!-- +e.input-wrap-->
-                  </div>
-                  <div class="col-lg-6 d-none d-md-block">
-                    <div class="form-wrap__input-wrap form-group">
-                      <label><span class="form-wrap__icon-wrap">
-                        <svg class="icon icon-map ">
-                          <use xlink:href="img/svg/sprite.svg#map"></use>
-                        </svg></span><input class="form-wrap__input form-control form-wrap__input-icon" type="text" placeholder="Где находится объект"/>
-                      </label>
-                    </div>
-                    <!-- +e.input-wrap-->
-                  </div>
-                  <div class="col-12 order-md-0 order-first">
-                    <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Опишите Вашу задачу"></textarea>
-                    </div>
-                    <!-- +e.input-wrap-->
-                  </div>
-                </div>
-                <div class="row align-items-center">
-                  <div class="col-lg-6 order-lg-0 order-last">
-                    <button class="form-wrap__btn btn btn-lg btn-block btn-primary" type="submit"><span class="d-none d-md-block">Бесплатный подбор решения</span><span class="d-md-none">Отправить заявку</span>
-                    </button>
-                  </div>
-                  <div class="col-lg-6 text-white d-none d-md-block">
-                    <div class="h6">Нужен ли монтаж</div>
-                    <div class="row">
-                      <div class="col-auto pt-1">
-                        <label class="custom-input"><input class="custom-input__input" type="radio" name="installation"/><span class="custom-input__lab"></span><span class="custom-input__small">Да</span>
-                        </label>
-                      </div>
-                      <div class="col-auto pt-1">
-                        <label class="custom-input"><input class="custom-input__input" type="radio" name="installation"/><span class="custom-input__lab"></span><span class="custom-input__small">Нет</span>
-                        </label>
-                      </div>
-                      <div class="col-auto pt-1">
-                        <label class="custom-input"><input class="custom-input__input" type="radio" name="installation"/><span class="custom-input__lab"></span><span class="custom-input__small">Не решил</span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <div class="polite">Нажимая кнопку «<span class="d-none d-md-inline">Бесплатный подбор решения</span><span class="d-md-none">Отправить заявку</span>», Вы соглашаетесь на 
-                <a class="polite__link tdu d-inline-block" href="Soglasie.pdf" target="_blank"> обработку персональных данных</a>
-              </div>
-            </div>
+          <div class="s-work-2__block text-center wow fadeInUp" data-wow-offset="80" data-wow-duration=".6s">
+            <div class="h2 strong">Результат</div>
+            <div class="h5 strong">Система работает &laquo;из&nbsp;коробки&raquo; <br/>после включения питания</div>
+            <p>Остается только закрепить датчики <br/>и&nbsp;проложить провода к&nbsp;ним  <br/>(<span class="d-none d-md-inline">до&nbsp;200&nbsp;км от&nbsp;Москвы </span>можем помочь и&nbsp;с&nbsp;этим)</p><a class="s-work-2__btn btn btn-lg btn-secondary btn-block strong" href="#" data-toggle="modal" data-target="#modal-win" data-title="Скачать инструкцию по монтажу" data-order="Скачать инструкцию по монтажу" data-btn="Скачать"><span class="d-none d-sm-block">Скачать инструкцию по монтажу</span><span class="d-sm-none">Инструкция по монтажу</span></a>
           </div>
         </div>
       </div>
