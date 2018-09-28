@@ -57,7 +57,7 @@
         <!-- start header-block-->
         <div class="header-block" id="header-block">
           <div class="container">
-            <h1> <strong class="d-block text-primary">стажировки</strong>в успешных компаниях</h1><a class="header-block__btn btn btn-primary" href="#">узнать подробнее</a>
+            <h1> <strong class="d-block text-primary">стажировки</strong>в успешных компаниях</h1><a class="header-block__btn btn btn-primary" data-target="#modal-win" data-toggle="modal" href="#" data-order="Заявка в шапке">узнать подробнее</a>
             <ul>
               <li>Познакомитесь  <br/>с&nbsp;топ-менеджментом&nbsp;и владельцами компаний</li>
               <li>Вы&nbsp;увидите<br/> внутреннюю кухню лидеров рынка</li>
@@ -349,7 +349,7 @@
                         <div class="s-timing__text-group"> 
                           <div class="strong">Детали:  </div> трансфер и питание включены, подарок каждому участнику 
                         </div>
-                      </div><a class="s-timing__btn btn btn-block btn-primary" href="#">скачать программу</a>
+                      </div><a class="s-timing__btn btn btn-block btn-primary" data-target="#modal-win-email" data-toggle="modal" href="#" data-order="Скачать программу">скачать программу</a>
                     </div>
                   </div>
                 </div>
@@ -409,7 +409,7 @@
                         </div>
                         <div class="s-timing__text-group"> <strong>Детали:  </strong> питание включено, подарок каждому участнику. 
                         </div>
-                      </div><a class="s-timing__btn btn btn-block btn-primary" href="#">скачать программу</a>
+                      </div><a class="s-timing__btn btn btn-block btn-primary" data-target="#modal-win-email" data-toggle="modal" href="#" data-order="Скачать программу">скачать программу</a>
                     </div>
                   </div>
                 </div>
@@ -571,24 +571,50 @@
         </div>
       </footer>
     </div>
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
-      <div class="text-center">
-        <div class="form-wrap__title h3 ttu">Обратный звонок
+    <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
+      <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
+        <div class="form-wrap modal-content modal-win">
+          <button class="close m-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+          <div class="h2 text-cente">Получите бесплатную консультацию от&nbsp;нашего специалиста</div>
+          <p>аполните форму заявки и&nbsp;наш специалист проконсультирует и&nbsp;ответит на&nbsp;все интересующие Вас вопросы.</p>
+          <form>
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7(___)___-__-__"/>
+            </div>
+            <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-primary btn-block" type="submit" value="оставить заявку"/>
+          </form>
         </div>
-        <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
-      </div>
-      <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" required="required"/>
-      </div>
-      <!-- +e.input-wrap-->
-      <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
-      </div>
-      <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
-      <div class="polite">
-        Нажимая кнопку "отправить заявку", Вы соглашаетесь на обработку 
-        <a class="form-wrap__link tdu" href="Soglasie.pdf" target="_blank"> персональных данных.</a>
       </div>
     </div>
-    <!-- #modal-call-->
+    <div class="modal fade" id="modal-win-email" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
+      <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
+        <div class="form-wrap modal-content modal-win">
+          <button class="close m-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+          <div class="h2 text-cente">Заполните заявку</div>
+          <p>Заполните форму заявки и&nbsp;наш специалист пришлет Вам всю необходимую информацию.</p>
+          <form>
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="you@mail.ru"/>
+            </div>
+            <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-primary btn-block" type="submit" value="оставить заявку"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
+      <div class=" text-center  modal-dialog  modal-dialog-centered  " role="document"> 
+        <div class="form-wrap modal-content modal-win">
+          <button class="close m-close" data-dismiss="modal" type="button" aria-label="Close"> ×</button>
+          <div class="form-wrap__icon-wrap"><i class="fas fa-check"></i>
+          </div>
+          <div class="thank-text strong-ttu">Ваша заявка успешно<br/>отправлена!</div>
+        </div>
+      </div>
+    </div>
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
