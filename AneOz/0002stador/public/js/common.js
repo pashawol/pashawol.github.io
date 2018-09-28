@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
 	// для свг
 	svg4everybody({});
 	// Custom JS
-  
+
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
 
@@ -67,7 +67,7 @@ jQuery(document).ready(function ($) {
 		// конец добавил
 	}
 
-	if (window.matchMedia("(min-width: 992px)").matches) {
+	if (window.matchMedia("(min-width: 768px)").matches) {
 
 		$(".toggle-mnu-1").removeClass("on");
 		// $("body").removeClass("fixed");
@@ -91,39 +91,66 @@ jQuery(document).ready(function ($) {
 
 	// листалка по стр
 	$(" .top-nav a").click(function () {
-	       var elementClick = $(this).attr("href");
-	       var destination = $(elementClick).offset().top;
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
 
-	           $('html, body').animate({ scrollTop: destination }, 1100);
+		$('html, body').animate({
+			scrollTop: destination
+		}, 1100);
 
-	       return false;
-	   });
+		return false;
+	});
 
 
- 
 
 
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
-
-	var arrl2 = (' <div class="l">' + icon),
-		arrr2 = (' <div class="r">' + icon);
 	// карусель
-	$('.s-team__slider').slick({
-	   slidesToShow: 3,
-	   slidesToScroll: 1,
-	   dots: false,
-	   speed: 450,
-	   infinite: true,
-	   loop: true,
-	   arrows: true,
-	   // centerMode: true,
-	   // focusOnSelect: true ,
-	    // variableWidth: true,
-	    prevArrow: arrr2,
-	     nextArrow: arrl2,
-	   });
+	$('.s-logo__slider--js').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		// infinite: true,
+		loop: true,
+		arrows: false,
+		mobileFirst: true,
+		responsive: [{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 6,
+			 
+				}
+			},
 
-	 
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 5 
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 4,
+				 
+				}
+			},
+			
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 3,
+				 
+				}
+			}
+
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+	});
+
+
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -141,13 +168,13 @@ jQuery(document).ready(function ($) {
 		mainClass: 'my-mfp-zoom-in'
 	});
 
- 
+
 
 	// маска на инпут
 	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
 		"mask": "+7(999)999-99-99"
 	});
- 
+
 
 
 });
