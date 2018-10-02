@@ -6,6 +6,11 @@ jQuery(document).ready(function ($) {
 		$(".showhide").click(function () {
 			$(this).toggleClass("active").next().slideToggle().parents().toggleClass("active");
 		})
+
+			// скрыть/показать меню в ЛК 
+	$(".filter-aside__btn--js").click(function () {
+		$(this).toggleClass("active").next().slideToggle();
+	})
 	// Custom JS
 
 	$(".top-line__search-toggle--js").click(function () {
@@ -130,9 +135,12 @@ jQuery(document).ready(function ($) {
 	//    });
 
  
+	var icon = '<svg class="icon icon-arr-prev "><use xlink:href="img/svg/sprite.svg#arr-prev">';
 
+	var arrr2 = (' <div class="l">' + icon),
+		arrl2 = (' <div class="r">' + icon);
  
-	// карусель
+	// слайдер в карточке
 	$('.header-block__slider').slick({
 	   slidesToShow: 1,
 	   slidesToScroll: 1,
@@ -141,7 +149,37 @@ jQuery(document).ready(function ($) {
 	   infinite: true,
 	   loop: true,
 	   arrows: false, 
-	   });
+		 });
+		 
+
+		 $('.kart-head__slider-big').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			speed: 450,
+			asNavFor: '.kart-head__slider-small',
+			infinite: false,
+			loop: false,
+			arrows: true,
+			prevArrow: arrr2,
+			nextArrow: arrl2,
+		});
+	 $('.kart-head__slider-small').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				dots: false,
+				speed: 450,
+				infinite: false,
+				loop: false,
+				arrows: false,
+				// centerMode: true,
+
+				focusOnSelect: true ,
+				asNavFor:  '.kart-head__slider-big',
+
+				// swipeToSlide: false
+				});
+ 
  
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({

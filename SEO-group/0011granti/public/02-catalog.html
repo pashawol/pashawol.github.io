@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>02_Catalog</title>
+    <meta name="description" content="о чем страница">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <!-- Custom Browsers Color-->
+    <meta name="theme-color" content="#3361d8">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- start HEADER.header-->
+      <header class="header">
+        <!-- start top-nav-->
+        <div class="top-nav">
+          <div class="container">
+            <div class="row">
+              <div class="col d-md-none"><a class="top-nav__logo" href="/"><img src="img/logo.png" height="40" alt=""/></a>
+              </div>
+              <div class="col d-none d-md-block">
+                <ul class="top-nav__nav">
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Главная</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">О компании </a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Доставка</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Для юр.лиц</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Полезное</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-auto"><a class="top-nav__favorites" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="16" viewBox="0 0 17 16" class="icon icon-like"><defs><path id="2ekpa" d="M1215.97 11.77c-.24-2.77-2.18-4.77-4.6-4.77-1.61 0-3.09.88-3.92 2.28a4.4 4.4 0 0 0-3.82-2.28c-2.42 0-4.36 2-4.6 4.77-.02.12-.1.76.14 1.81a7.8 7.8 0 0 0 2.35 3.98l5.93 5.44 6.02-5.44a7.8 7.8 0 0 0 2.36-3.98c.24-1.05.16-1.69.14-1.81z"/><clipPath id="2ekpb"><use   xlink:href="#2ekpa"/></clipPath></defs><g><g transform="translate(-1199 -7)"><use   xlink:href="#2ekpa"/><use  fill-opacity="0" stroke="#000" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#2ekpb&quot;)" xlink:href="#2ekpa"/></g></g></svg>Избранное <span class="top-nav__favorites-count">25</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end top-nav-->
+        <!-- start .top-line-->
+        <div class="top-line">
+          <div class="container">
+            <div class="row">
+              <div class="col-auto d-none d-md-block"><a class="top-line__logo" href="/"><img class="res-i" src="img/logo.png" alt=""/></a>
+              </div>
+              <div class="col">
+                <div><a class="top-line__tel-link" href="tel:+7 (495) 000-00-00">+7 (495) 000-00-00</a>
+                </div>
+                <div class="d-none d-sm-block">
+                  <div class="d-none d-lg-block">Режим работы </div>пн-пт: 10:00&nbsp;&mdash; 21:00; сб-вс: выходной
+                </div>
+                <div class="pb-2 d-none d-sm-block">e-mail: <a href="mailto:info@granti-group.ru">info@granti-group.ru</a></div>
+              </div>
+              <div class="col-lg-4 order-lg-0 order-last">
+                <div class="fw-500 h6 d-none d-lg-block">Осуществляем доставку в&nbsp;Москве&nbsp;и&nbsp;Московской области</div>
+                <div class="search-block search-block--top-line d-sm-block">
+                  <form><input class="search-block__input" type="text" placeholder="Поиск"/>
+                    <button class="search-block__btn" type="button">
+                      <svg class="icon icon-search ">
+                        <use xlink:href="img/svg/sprite.svg#search"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-xl-2 col-sm-auto d-none d-sm-block">
+                <div><a class="top-line__btn btn-danger" href="#">Заказать звонок</a>
+                </div>
+                <div class="d-none d-lg-block"><a class="top-line__basket" href="#">
+                  <svg class="icon icon-basket ">
+                    <use xlink:href="img/svg/sprite.svg#basket"></use>
+                  </svg>Ваша корзина пуста</a>
+                </div>
+              </div>
+              <div class="col-auto d-sm-none">
+                <div class="top-line__search-toggle top-line__search-toggle--js">
+                  <svg class="icon icon-search ">
+                    <use xlink:href="img/svg/sprite.svg#search"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end .top-line-->
+        <!-- start cat-nav-->
+        <div class="cat-nav">
+          <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+              <div class="d-lg-none"><a class="cat-nav__basket" href="#">
+                <svg class="icon icon-basket ">
+                  <use xlink:href="img/svg/sprite.svg#basket"></use>
+                </svg>Ваша корзина пуста</a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav"> 
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Типы дверей</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"><a class="dropdown-item" href="#">  Глухие двери</a><a class="dropdown-item" href="#">  Остекленные двери</a><a class="dropdown-item" href="#">  Раздвижные двери</a><a class="dropdown-item" href="#">  Двери-гармошки</a><a class="dropdown-item active" href="#">  Складные двери</a></div>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#">Типы помещений</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Типы материалов</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">по цветам</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">по ценам</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">по свойствам</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">по размерам</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <!-- end cat-nav-->
+      </header>
+      <!-- end HEADER.header-->
+      <div class="container">
+        <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Каталог</a><span class="breadcrumb-item active">В квартиру</span>
+        </nav>
+      </div>
+      <div class="s-content pt-4 bg-gray-100">
+        <div class="container">
+          <h1 class="h2 text-center">В квартиру</h1>
+          <p>Двери – это безопасность членов семьи, защита жилища и его «обложка». По тому как выглядят двери гости могут судить о том, что ждет их дальше внутри. Вот почему так важно выбрать подходящие именно вам двери. Мы предлагаем качественные входные и межкомнатные двери отечественного производства!</p>
+          <p>Двери – это безопасность членов семьи, защита жилища и его «обложка». По тому как выглядят двери гости могут судить о том, что ждет их дальше внутри. Вот почему так важно выбрать подходящие именно вам двери. Мы предлагаем качественные входные и межкомнатные двери отечественного производства!</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="sort-panel">
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col-auto">Сортировать по:</div>
+                <div class="col-auto">
+                  <select class="sort-panel__select form-control">
+                    <option value="#">Популярности</option>
+                    <option value="#">Популярности</option>
+                    <option value="#">Популярности</option>
+                    <option value="#">Популярности</option>
+                    <option value="#">Популярности</option>
+                  </select>
+                </div>
+                <div class="col-auto">Выводить по:</div>
+                <div class="col-auto">
+                  <select class="sort-panel__select sort-panel__select--count form-control">
+                    <option value="#">20</option>
+                    <option value="#">20</option>
+                    <option value="#">20</option>
+                    <option value="#">20</option>
+                    <option value="#">20</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <div class="row">
+                <div class="col-auto">Вид:</div>
+                <div class="col"><a class="sort-panel__btn active" href="#"> 
+                  <svg class="icon icon-view-1 ">
+                    <use xlink:href="img/svg/sprite.svg#view-1"></use>
+                  </svg></a><a class="sort-panel__btn" href="#"> 
+                  <svg class="icon icon-view-2 ">
+                    <use xlink:href="img/svg/sprite.svg#view-2"></use>
+                  </svg></a><a class="sort-panel__btn" href="#"> 
+                  <svg class="icon icon-view-3 ">
+                    <use xlink:href="img/svg/sprite.svg#view-3"></use>
+                  </svg></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-auto">
+            <!-- start filter-aside-->
+            <div class="filter-aside" id="filter">
+              <button class="filter-aside__btn filter-aside__btn--js btn btn-block btn-primary d-lg-none ttu" type="button">Фильтр товаров
+              </button>
+              <div class="d-lg-block">
+                <div class="filter-aside__wrapper filter-aside__wrapper--js">
+                  <div class="filter-aside__title">Фильтр
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide"> Тип помещения
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>Панельный монолит </span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>Камень </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide">Материал 
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>до 100м2 </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide"> Сторона открывания
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>до 100м2 </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide"> Со стеклом
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>до 100м2 </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide">С терморазрывом 
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>до 100м2 </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide">Двустворчатые 
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>до 100м2 </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide">Утепленные 
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>до 100м2 </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide">Уличные 
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>до 100м2 </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide">С зеркалом 
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>до 100м2 </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide">Размеры 
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>2100х860 </span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>2000х860 </span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>1980х900 </span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>2800х2100 </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-aside__item hover-block">
+                    <div class="filter-aside__item-title h6 showhide">Цена
+                      <svg class="icon icon-toggle ">
+                        <use xlink:href="img/svg/sprite.svg#toggle"></use>
+                      </svg>
+                    </div>
+                    <div class="showhide-all">
+                      <div>
+                        <label class="custom-input filter-aside__input-wrap"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span> <span>2800х2100 </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div><a class="filter-aside__reset tdu" href="#">Сбросить все фильтры</a>
+              </div>
+            </div>
+            <!-- end filter-aside-->
+          </div>
+          <div class="col">
+            <!-- start s-catalog-->
+            <div class="s-catalog">
+              <div class="row">
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-1.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-2.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная 
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-3.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-1.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-2.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная 
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-3.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-1.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-2.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная 
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-3.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-1.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-2.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная 
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-3.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-1.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-2.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная 
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-3.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-1.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-2.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная 
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-3.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-1.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-2.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная 
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+                <div class="item-prod-col col-md-4 col-6">
+                  <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" src="img/prod-3.jpg" alt=""/></a>
+                    <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+                    </div>
+                    <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                    </div>
+                    <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
+                  </div>
+                </div>
+                <!-- .col-md-4-->
+              </div>
+              <nav class="pagination-wrap" aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item page-item-arr disabled"><span class="page-link page-link--arr" aria-label="Предыдущая"><span aria-hidden="true">
+                        <svg class="icon icon-arr-prev ">
+                          <use xlink:href="img/svg/sprite.svg#arr-prev"></use>
+                        </svg></span><span class="d-none d-md-inline">Предыдущая</span></span></li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item"><a class="page-link" href="#">...</a></li>
+                  <li class="page-item"><a class="page-link" href="#">12</a></li>
+                  <li class="page-item page-item-arr"><a class="page-link page-link--arr" href="#" aria-label="Следующая"><span class="d-none d-md-inline">Следующая</span><span aria-hidden="true">
+                        <svg class="icon icon-arr-next ">
+                          <use xlink:href="img/svg/sprite.svg#arr-next"></use>
+                        </svg></span></a></li>
+                </ul>
+              </nav>
+            </div>
+            <!-- end s-catalog-->
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-md-4"><a class="footer__logo" href="/"><img src="img/logo-foot.png" alt=""/></a>
+            </div>
+            <div class="col">
+              <div class="row">
+                <div class="col-auto">
+                  <ul>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Полезное</a></li>
+                    <li><a href="#">Контакты </a></li>
+                  </ul>
+                </div>
+                <div class="col-auto">
+                  <ul>
+                    <li><a href="#">В квартиру</a></li>
+                    <li><a href="#">В коттедж</a></li>
+                    <li><a href="#">МДФ</a></li>
+                    <li><a href="#">Утепленные</a></li>
+                    <li><a href="#">Уличные</a></li>
+                    <li><a href="#">Двухстворчатые</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-auto">
+              <div><a class="footer__tel-link" href="tel:+7 (495) 000-00-00">+7 (495) 000-00-00</a>
+              </div>
+              <div>
+                <div class="d-none d-lg-block">Режим работы </div>пн-пт: 10:00&nbsp;&mdash; 21:00; <br/>сб-вс: выходной
+              </div>
+              <div class="pb-2">e-mail: <a href="mailto:info@granti-group.ru">info@granti-group.ru</a><a class="footer__btn btn-danger" href="#">Заказать звонок</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
+      <form>
+        <div class="text-center">
+          <div class="form-wrap__title h3 ttu">Обратный звонок
+          </div>
+          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+        </div>
+        <div class="form-wrap__input-wrap">
+          <label><span class="form-wrap__title">text</span><input class="form-wrap__input" type="Ваше Имя" required="required"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap">
+          <label><span class="form-wrap__title">tel</span><input class="form-wrap__input" type="Ваш телефон" required="required"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
+        <div class="politic">
+          Отправляя заявку Вы даете
+          <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
+          
+          на&#160;обработку персональных данных
+        </div>
+      </form>
+    </div>
+    <!-- #modal-call-->
+    <!-- modal-->
+    <script src="js/jquery.min.js"></script>
+    <script src="libs/popper.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
