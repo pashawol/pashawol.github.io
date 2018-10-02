@@ -304,10 +304,10 @@
           <h2 class=" wow fadeInUp " data-wow-offset="120" data-wow-duration="1.1s"><span>Общая схема работы системы</span></h2>
           <div class="row no-gutters align-items-center">
             <div class="s-schema__col-wow col-lg-6 wow fadeInLeft" data-wow-offset="120" data-wow-duration="1.1s">
-              <div class="s-schema__group s-schema__group--3">
+              <div class="s-schema__group s-schema__group--3 mb-3">
                 <div class="h5 strong">Контролирует датчики</div>
                 <div class="small">15+ видов покозателей</div>
-                <div class="row mb-5">
+                <div class="row mb-3">
                   <div class="col-auto">
                     <div class="s-schema__img-wrap"><img src="img/img-3/schema-i-3-1.png" alt=""/>
                     </div>
@@ -1529,6 +1529,15 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
+      <div class=" ttext-center  modal-dialog  modal-dialog-centered  " role="document"> 
+        <div class="form-wrap modal-content modal-win text-center">
+          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+          <div class="h3 strong text-center text-white pb-3">Форма успешно  отправлена</div><br/>
+          <p>Спасибо за&nbsp;обращение! Наши специалисты свяжуться  с&nbsp;Вами в&nbsp;ближайшее время</p><br/>
+        </div>
+      </div>
+    </div>
     <div class="modal fade" id="modal-win-big" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
       <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
         <div class="form-wrap modal-content modal-win">
@@ -1564,7 +1573,9 @@
               </label>
             </div>
             <!-- +e.input-wrap-->
-            <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Описание"></textarea>
+            <div class="form-wrap__input-wrap form-group">
+              <label><textarea class="form-wrap__input form-control" placeholder="Описание"></textarea>
+              </label>
             </div>
             <!-- +e.input-wrap-->
             <button class="form-wrap__btn btn btn-block btn-primary" type="submit" value="">
@@ -1603,7 +1614,12 @@
               </label>
             </div>
             <!-- +e.input-wrap-->
-            <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Куда доставка"></textarea>
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__icon-wrap">
+                <svg class="icon icon-map ">
+                  <use xlink:href="img/svg/sprite.svg#map"></use>
+                </svg></span><textarea class="form-wrap__input form-control form-wrap__input-icon" placeholder="Куда доставка"></textarea>
+              </label>
             </div>
             <!-- +e.input-wrap-->
             <button class="form-wrap__btn btn btn-block btn-primary" type="submit" value="">
@@ -1642,7 +1658,12 @@
               </label>
             </div>
             <!-- +e.input-wrap-->
-            <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Населенный пункт"></textarea>
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__icon-wrap">
+                <svg class="icon icon-map ">
+                  <use xlink:href="img/svg/sprite.svg#map"></use>
+                </svg></span><textarea class="form-wrap__input form-control form-wrap__input-icon" placeholder="Населенный пункт"></textarea>
+              </label>
             </div>
             <!-- +e.input-wrap-->
             <button class="form-wrap__btn btn btn-block btn-primary" type="submit" value="">
@@ -1651,15 +1672,6 @@
           <div class="polite">Нажимая кнопку «<span class="btn-name-js"></span>», Вы соглашаетесь на 
             <a class="polite__link tdu d-inline-block" href="Soglasie.pdf" target="_blank"> обработку персональных данных</a>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
-      <div class=" ttext-center  modal-dialog  modal-dialog-centered  " role="document"> 
-        <div class="form-wrap modal-content modal-win text-center">
-          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-          <div class="h3 strong text-center text-white pb-3">Форма успешно  отправлена</div><br/>
-          <p>Спасибо за&nbsp;обращение! Наши специалисты свяжуться  с&nbsp;Вами в&nbsp;ближайшее время</p><br/>
         </div>
       </div>
     </div>

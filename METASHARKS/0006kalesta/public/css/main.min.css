@@ -5872,6 +5872,23 @@ strong,.strong {
   margin-top: 2.66667em;
 }
 
+.table_calc .custom-input {
+  padding-left: 7px;
+}
+
+.tab_content table.table_calc td:nth-child(3),.tab_content table.table_calc th:nth-child(3) {
+  text-align: center !important;
+}
+
+.tab_content table.table_calc td:nth-child(4),.tab_content table.table_calc th:nth-child(4) {
+  max-width: 115px;
+  text-align: center !important;
+}
+
+.tab_content table.table_calc td:nth-child(5),.tab_content table.table_calc th:nth-child(5) {
+  text-align: center !important;
+}
+
 .icon {
   display: inline-block;
   width: 1em;
@@ -6226,7 +6243,8 @@ strong,.strong {
 
 .calc .form-wrap__input--count {
   width: 92px;
-  padding-right: 35px;
+  padding-right: 25px;
+  padding-left: 15px;
 }
 
 .calc .form-wrap__btn {
@@ -6235,7 +6253,7 @@ strong,.strong {
 
 .calc .form-wrap__caption {
   position: absolute;
-  right: 15px;
+  right: 5px;
   top: 13px;
 }
 
@@ -8592,6 +8610,10 @@ a {
 
   .text-sm-center {
     text-align: center !important;
+  }
+
+  .tab_content table.table_calc td:nth-child(5),.tab_content table.table_calc th:nth-child(5) {
+    width: 115px;
   }
 
   .s-buttons__item-inner {
@@ -11578,6 +11600,16 @@ a {
   .btn-lg {
     padding-top: 1.12rem;
     padding-bottom: 1.12rem;
+  }
+
+  .tab_content table.table_calc td,.tab_content table.table_calc th {
+    padding: 0 0.6rem;
+  }
+
+  .tab_content table.table_calc td:nth-child(1),.tab_content table.table_calc th:nth-child(1) {
+    padding: 0;
+    padding-right: 17px;
+    padding-left: 3px;
   }
 }
 
