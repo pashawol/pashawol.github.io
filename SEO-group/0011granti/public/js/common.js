@@ -2,6 +2,10 @@ jQuery(document).ready(function ($) {
 
 	// для свг
 	svg4everybody({});
+		// accordion
+		$(".showhide").click(function () {
+			$(this).toggleClass("active").next().slideToggle().parents().toggleClass("active");
+		})
 	// Custom JS
 
 	$(".top-line__search-toggle--js").click(function () {
