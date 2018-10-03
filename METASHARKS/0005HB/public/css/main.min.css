@@ -8815,6 +8815,28 @@ strong,.strong {
   padding-bottom: 0;
 }
 
+.top-nav__po--btn {
+  width: 238px;
+}
+
+.top-nav__po--btn .row {
+  margin-left: -0.33333rem;
+  margin-right: -0.33333rem;
+}
+
+.top-nav__po--btn .row > * {
+  padding-left: 0.33333rem;
+  padding-right: 0.33333rem;
+}
+
+.top-nav__po--btn .col {
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  max-width: 170px;
+}
+
 .top-nav__po .icon {
   color: #0085a0;
   font-size: 1.2rem;
@@ -10098,7 +10120,7 @@ strong,.strong {
 
 .prod-head__price-block {
   border-bottom: 1px solid #ececec;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding-bottom: 5px;
 }
 
@@ -10122,9 +10144,7 @@ strong,.strong {
 }
 
 .values {
-  border-top: 1px solid #ececec;
-  margin-top: 30px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .values .small {
@@ -13455,6 +13475,10 @@ a {
             align-items: center;
   }
 
+  .prod-head__price-block {
+    margin-bottom: 30px;
+  }
+
   .s-basket td:nth-child(1) {
     width: 10%;
   }
@@ -13478,6 +13502,14 @@ a {
   .tr-history > td {
     position: relative;
     border-bottom: 6px solid #fff;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .values {
+    border-top: 1px solid #ececec;
+    margin-top: 30px;
+    padding-top: 20px;
   }
 }
 
@@ -15316,6 +15348,13 @@ a {
 }
 
 @media (max-width: 767.98px) {
+  .prod-head__price-row {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
   .tr-history {
     display: -webkit-box;
     display: -webkit-flex;
@@ -15379,24 +15418,17 @@ a {
     padding-right: 0.2rem;
   }
 
-  .prod-head__price-block-wrap {
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .prod-head .like-block {
-    max-width: 260px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .prod-head .stars {
     max-width: 120px;
   }
 
   .prod-head .stars .col-md-auto {
     max-width: 120px;
+  }
+
+  .prod-head .soc {
+    max-width: 160px;
+    margin: auto;
   }
 
   .s-basket table {

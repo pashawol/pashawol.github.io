@@ -92,12 +92,9 @@ jQuery(document).ready(function ($) {
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
-	function heightses() {
-
-		var w = $(window).width();
-
+	function heightses() { 
 		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
+		$(".s-catalog__slide .item-prod__title ").height('auto').equalHeights();
 		//
  
 	}
@@ -180,6 +177,33 @@ jQuery(document).ready(function ($) {
 				// swipeToSlide: false
 				});
  
+
+	$('.s-catalog__slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		mobileFirst: true, 
+		arrows: true, 
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4, 
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3 
+				}
+			} 
+		]
+		});
  
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
@@ -241,6 +265,20 @@ jQuery(document).ready(function ($) {
 
 	// });
 	// });
+
+	// табы  . Теперь данные активного таба остается в storage
+	$(function () {
+		var tab = ('tabs');
+ 
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			$(this)
+				.addClass('active').siblings().removeClass('active')
+				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
+				.eq($(this).index()).fadeIn().addClass('active');
+ 
+	});
+	});
+
 
 
 });
