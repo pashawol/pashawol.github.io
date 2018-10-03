@@ -9,7 +9,7 @@
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <!-- Custom Browsers Color-->
-    <meta name="theme-color" content="#3361d8">
+    <meta name="theme-color" content="#5983f0">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -194,76 +194,105 @@
           </div>
           <!-- end s-basket-->
         </div>
+        <!-- start s-order-->
+        <div class="s-order">
+          <div class="container">
+            <div class="row">
+              <div class="s-order__col col-md-8">
+                <div class="form-wrap">
+                  <form>
+                    <div class="form-wrap__inner">
+                      <div class="h2">Оформление заказа</div>
+                      <div class="form-wrap__input-wrap">
+                        <label><span class="form-wrap__title">Имя*</span><input class="form-wrap__input" type="text" placeholder="Введите Ваше имя"/>
+                        </label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-wrap">
+                        <label><span class="form-wrap__title">Телефон*</span><input class="form-wrap__input" type="tel" placeholder="+7 (___) ___-__-__"/>
+                          <div class="form-wrap__text-after">Позвоним для подтверждения заказа
+                          </div>
+                        </label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-wrap">
+                        <label><span class="form-wrap__title">E-mail</span><input class="form-wrap__input" type="email" placeholder="Необязательно"/>
+                          <div class="form-wrap__text-after">На него придет подтверждение заказа
+                          </div>
+                        </label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-wrap"><textarea class="form-wrap__input form-wrap__input--text" placeholder="Комментарии (необязательно)"></textarea>
+                      </div>
+                      <button class="form-wrap__btn btn-danger" type="button">Оформить заказ
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="s-order__col col">
+                <div class="s-order__text-block h-100">
+                  <div class="h2">Информация о доставке</div>
+                  <div class="s-order__text-group h6">Осуществляем доставку по&nbsp;Москве и&nbsp;Московской области
+                  </div>
+                  <div class="s-order__text-group">Доставка по Москве (в пределах МКАД) <strong class="ttu text-danger">бесплатно</strong>
+                  </div>
+                  <div class="s-order__text-group">Доставка по Московской области <strong class="ttu text-danger">бесплатно</strong>
+                  </div>
+                  <div class="s-order__text-group">Также осуществляем доставку в регионы.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end s-order-->
       </div>
-      <!-- start s-catalog-->
-      <div class="s-catalog section">
+      <!-- start s-as-->
+      <div class="s-as section" id="s-as">
         <div class="container">
-          <h2 class="text-center">Возможно Вас заинтересует</h2>
-          <div class="s-catalog__slider">
-            <div class="s-catalog__slide">
-              <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" data-lazy="img/prod-1.jpg" alt=""/></a>
-                <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
+          <h2 class="text-center">Как купить двери?</h2>
+          <div class="row">
+                <div class="s-as__col col-lg col-sm-6">
+                  <div class="s-as__item">
+                    <div class="s-as__img-wrap"><img src="img/s-as-1.svg" alt=""/>
+                    </div>
+                    <div class="s-as__caption">Выбираете дверь. Оставляете заявку на сайте или звоните нам по телефону.
+                    </div>
+                  </div>
                 </div>
-                <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                <!-- +e.col.col-lg.col-sm-6-->
+                <div class="s-as__col col-lg col-sm-6">
+                  <div class="s-as__item">
+                    <div class="s-as__img-wrap"><img src="img/s-as-2.svg" alt=""/>
+                    </div>
+                    <div class="s-as__caption">С Вами связывается менеджер для уточнения деталей и подтверждения заказа.
+                    </div>
+                  </div>
                 </div>
-                <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
-              </div>
-            </div>
-            <!-- .col-md-4-->
-            <div class="s-catalog__slide">
-              <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" data-lazy="img/prod-2.jpg" alt=""/></a>
-                <div class="item-prod__title">Дверь межкомнатная, деревянная 
+                <!-- +e.col.col-lg.col-sm-6-->
+                <div class="s-as__col col-lg col-sm-6">
+                  <div class="s-as__item">
+                    <div class="s-as__img-wrap"><img src="img/s-as-3.svg" alt=""/>
+                    </div>
+                    <div class="s-as__caption">В удобное для Вас время выезжает специалист и делает замер дверных проемов.
+                    </div>
+                  </div>
                 </div>
-                <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
+                <!-- +e.col.col-lg.col-sm-6-->
+                <div class="s-as__col col-lg col-sm-6">
+                  <div class="s-as__item">
+                    <div class="s-as__img-wrap"><img src="img/s-as-4.svg" alt=""/>
+                    </div>
+                    <div class="s-as__caption">Мы доставляем и устанавливаем двери. Вы оплачиваете заказ и радуетесь!
+                    </div>
+                  </div>
                 </div>
-                <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
-              </div>
-            </div>
-            <!-- .col-md-4-->
-            <div class="s-catalog__slide">
-              <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" data-lazy="img/prod-3.jpg" alt=""/></a>
-                <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
-                </div>
-                <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
-                </div>
-                <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
-              </div>
-            </div>
-            <!-- .col-md-4-->
-            <div class="s-catalog__slide">
-              <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" data-lazy="img/prod-1.jpg" alt=""/></a>
-                <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
-                </div>
-                <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
-                </div>
-                <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
-              </div>
-            </div>
-            <!-- .col-md-4-->
-            <div class="s-catalog__slide">
-              <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" data-lazy="img/prod-2.jpg" alt=""/></a>
-                <div class="item-prod__title">Дверь межкомнатная, деревянная 
-                </div>
-                <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
-                </div>
-                <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
-              </div>
-            </div>
-            <!-- .col-md-4-->
-            <div class="s-catalog__slide">
-              <div class="item-prod text-center"><a class="item-prod__img-wrap" href="#"><img class="res-img" data-lazy="img/prod-3.jpg" alt=""/></a>
-                <div class="item-prod__title">Дверь межкомнатная, деревянная, со вставками из стекла, 2000х860
-                </div>
-                <div class="item-prod__price">Цена <span class="item-prod__bigger">12 500 </span>руб.
-                </div>
-                <div><a class="tdu" href="#">Подробнее</a></div><a class="item-prod__btn btn" href="#">Купить в 1 клик</a>
-              </div>
-            </div>
-            <!-- .col-md-4-->
+                <!-- +e.col.col-lg.col-sm-6-->
           </div>
         </div>
       </div>
-      <!-- end s-catalog-->
+      <!-- end s-as-->
       <footer class="footer">
         <div class="container">
           <div class="row">
@@ -304,33 +333,6 @@
         </div>
       </footer>
     </div>
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
-      <form>
-        <div class="text-center">
-          <div class="form-wrap__title h3 ttu">Обратный звонок
-          </div>
-          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
-        </div>
-        <div class="form-wrap__input-wrap">
-          <label><span class="form-wrap__title">text</span><input class="form-wrap__input" type="Ваше Имя" required="required"/>
-          </label>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap">
-          <label><span class="form-wrap__title">tel</span><input class="form-wrap__input" type="Ваш телефон" required="required"/>
-          </label>
-        </div>
-        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
-        <div class="politic">
-          Отправляя заявку Вы даете
-          <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
-          
-          на&#160;обработку персональных данных
-        </div>
-      </form>
-    </div>
-    <!-- #modal-call-->
-    <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/popper.min.js"></script>
     <script src="js/scripts.min.js"></script>
