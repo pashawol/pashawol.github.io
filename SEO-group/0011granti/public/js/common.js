@@ -17,22 +17,7 @@ jQuery(document).ready(function ($) {
 		$(".search-block--top-line").slideToggle().find("input").focus();
 		
 	})
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			}
-
-		};
-
-	});
+	 
 	// галерея
 	$(".gal").each(function () {
 
@@ -73,24 +58,7 @@ jQuery(document).ready(function ($) {
 			$("body, html").removeClass("fixed");
 		}
 	});
-	// закрыть меню при горизонтальном свайпе
-	$('.hidden-mnu.active').swipe({
-		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-			if (direction == 'left') {
-				$(".toggle-mnu-1").removeClass("on");
-				$(".hidden-mnu.active").removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-			if (direction == 'right') {
-				$(".toggle-mnu-1").removeClass("on");
-				$(".hidden-mnu.active").removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-		},
-		triggerOnTouchEnd: false,
-	});
-	// / закрыть меню при горизонтальном свайпе
-	// /закрыть/открыть мобильное меню
+ 
 
 	function heightses() { 
 		// $(".main-wrapper").css("margin-bottom", $('footer').height())
@@ -229,42 +197,14 @@ jQuery(document).ready(function ($) {
 	});
 
  
-	// кастомный инпут файл
-
-	var file = $(".add-file input[type=file]");
-	file.change(function () {
-		var filename = $(this).val().replace(/.*\\/, "");
-		var name = $(".add-file__filename  ");
-		name.text(filename);
-
-	});
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
+	 
  
 	// убираем пробелы в телефоне
 	$(".top-line__tel-link, .s-contact__tel").each(function () {
 		var str = $(this).attr('href');
 		$(this).attr('href', str.replace(/\s/g, ''));
 	})
-	// $(".wow-wrap").each(function () {
-	// var wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
-
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	// });
-	// });
+	 
 
 	// табы  . Теперь данные активного таба остается в storage
 	$(function () {
