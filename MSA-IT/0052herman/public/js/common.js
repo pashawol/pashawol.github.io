@@ -14,9 +14,9 @@ jQuery(document).ready(function ($) {
 			mainClass: 'mfp-with-zoom mfp-img-mobile',
 			image: {
 				verticalFit: true,
-				// titleSrc: function(item) {
-				//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-				// }
+				titleSrc: function(item) {
+				  return  item.el.data('source') ;
+				}
 			},
 			gallery: {
 				enabled: true
@@ -194,18 +194,7 @@ jQuery(document).ready(function ($) {
 	//      acceptedFiles: 'image/*',
 	//      uploadMultiple: true,
 	//   });
-
-
-	$(".pretty-embed__bg").each(function () {
-		// загрузка фона видео
-		$(this).css("background-image", 'url(http://img.youtube.com/vi/' + $(this).data("src") + '/0.jpg)')
-		// включение видео при клике по блоку
-		$(this).click(function () {
-			$(this).removeClass("on").next()
-				.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
-		})
-	})
-
+ 
 	// убираем пробелы в телефоне
 	$(".top-line__tel, .s-contact__tel").each(function () {
 		var str = $(this).attr('href');

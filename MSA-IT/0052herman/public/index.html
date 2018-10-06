@@ -53,12 +53,12 @@
               </ul>
             </div>
           </div>
-          <div><a class="trop__btn btn btn-sm btn-outline-warning" href="#">
+          <div><a class="trop__btn btn btn-sm btn-outline-warning popup-with-move-anim" href="#modal-call">
             <svg class="icon icon-pensil ">
               <use xlink:href="img/svg/sprite.svg#pensil"></use>
             </svg>Напишите нам</a>
           </div>
-          <div><a class="trop__link trop__link--tel" href="tel:+7915 15-15-151"> 
+          <div><a class="trop__link trop__link--tel" href="tel:+791515-15-151"> 
             <svg class="icon icon-tel ">
               <use xlink:href="img/svg/sprite.svg#tel"></use>
             </svg>+7 915 15-15-151</a>
@@ -90,12 +90,12 @@
                   </ul>
                 </div>
                 <div class="col-auto">
-                  <div class="d-none d-sm-block"><a class="top-nav__btn btn btn-sm btn-outline-warning" href="#">
+                  <div class="d-none d-sm-block"><a class="top-nav__btn btn btn-sm btn-outline-warning popup-with-move-anim" href="#modal-call">
                     <svg class="icon icon-pensil ">
                       <use xlink:href="img/svg/sprite.svg#pensil"></use>
                     </svg>Напишите нам</a>
                   </div>
-                  <div class="d-sm-none"><a class="top-nav__link top-nav__link--tel" href="tel:+7915 15-15-151"> 
+                  <div class="d-sm-none"><a class="top-nav__link top-nav__link--tel" href="tel:+791515-15-151"> 
                     <svg class="icon icon-tel ">
                       <use xlink:href="img/svg/sprite.svg#tel"></use>
                     </svg>+7 915 15-15-151</a>
@@ -284,7 +284,7 @@
                       <div class="col-sm-auto"><a class="s-news__img-wrap img-bg text-body tdn" href="#" style="background-image: url(img/prod-1.jpg);"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
                       </div>
                       <div class="col fw-300">
-                        <div class="s-news__title">Наши лучшие спецпредложения
+                        <div class="s-news__title"><a class="text-body" href="#">Наши лучшие спецпредложения</a>
                         </div>
                         <div class="s-news__text">Немецкое качество в каждой детали
                         </div><a class="small tdu" href="#">подробнее</a>
@@ -299,7 +299,7 @@
                       <div class="col-sm-auto"><a class="s-news__img-wrap img-bg text-body tdn" href="#" style="background-image: url(img/prod-2.jpg);"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
                       </div>
                       <div class="col fw-300">
-                        <div class="s-news__title">Привод для дверей PortaMatic
+                        <div class="s-news__title"><a class="text-body" href="#">Привод для дверей PortaMatic</a>
                         </div>
                         <div class="s-news__text">Благодаря новому, разработанному компанией Hörmann приводу ...
                         </div><a class="small tdu" href="#">подробнее</a>
@@ -314,7 +314,7 @@
                       <div class="col-sm-auto"><a class="s-news__img-wrap img-bg text-body tdn" href="#" style="background-image: url(img/prod-3.jpg);"><img class="res-i" src="img/prod-3.jpg" alt=""/></a>
                       </div>
                       <div class="col fw-300">
-                        <div class="s-news__title">Горячая линия Hörmann в России
+                        <div class="s-news__title"><a class="text-body" href="#">Горячая линия Hörmann в России</a>
                         </div>
                         <div class="s-news__text">8-800-5556-987
                         </div><a class="small tdu" href="#">подробнее</a>
@@ -329,7 +329,7 @@
                       <div class="col-sm-auto"><a class="s-news__img-wrap img-bg text-body tdn" href="#" style="background-image: url(img/prod-4.jpg);"><img class="res-i" src="img/prod-4.jpg" alt=""/></a>
                       </div>
                       <div class="col fw-300">
-                        <div class="s-news__title">Наши лучшие спецпредложения
+                        <div class="s-news__title"><a class="text-body" href="#">Наши лучшие спецпредложения</a>
                         </div>
                         <div class="s-news__text">Немецкое качество в каждой детали
                         </div><a class="small tdu" href="#">подробнее</a>
@@ -389,7 +389,7 @@
               <div class="col-sm-auto">
                 E-mail:  <a class="footer__foot-link" href="mailto:info@hormann.ru">info@hormann.ru</a>
               </div>
-              <div class="col-sm-auto"><a class="footer__btn btn btn-sm btn-outline-white" href="#">
+              <div class="col-sm-auto"><a class="footer__btn btn btn-sm btn-outline-white popup-with-move-anim" href="#modal-call"> 
                 <svg class="icon icon-pensil ">
                   <use xlink:href="img/svg/sprite.svg#pensil"></use>
                 </svg>Напишите нам</a>
@@ -403,6 +403,36 @@
         </div>
       </footer>
     </div>
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
+      <form>
+        <div class="img-wrap"> </div>
+        <div class="text-center">
+          <div class="form-wrap__title h3">Напишите нам
+          </div>
+        </div>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше имя *" required="required"/>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш email *" required="required"/>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Ваше сообщение *" required="required"></textarea>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="text-center">
+          <div class="form-wrap__capcha-wrap d-inline-block"><img class="res-i" src="img/capcha.jpg" alt=""/>
+          </div>
+        </div>
+        <div class="form-wrap__polite h5">
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite"/><span class="custom-input__lab"></span>
+          </label><a class="form-wrap__polite-link text-secondary tdu h5 fw-300" href="#">Я согласен на обработку персональных данных</a>
+        </div>
+        <button class="form-wrap__btn btn btn-lg btn-block btn-warning ttu small strong" href="#">Отправить
+        </button>
+      </form>
+    </div>
+    <!-- #modal-call-->
+    <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>

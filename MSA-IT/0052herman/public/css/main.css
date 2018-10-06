@@ -7885,6 +7885,10 @@ select.form-control:focus::-ms-value {
   padding-bottom: 0.55556em;
 }
 
+.mfp-bg {
+  background-color: #363865;
+}
+
 .icon {
   display: inline-block;
   width: 1em;
@@ -9710,9 +9714,40 @@ select.form-control:focus::-ms-value {
   top: 2px;
 }
 
+.footer__foot.border-0 {
+  padding-bottom: 30px;
+}
+
 .modal-win {
   display: block;
   position: relative;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 28px;
+  max-width: 570px;
+  padding-top: 28px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.modal-win .h3 {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.modal-win .mfp-close {
+  color: #363865;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.modal-win .form-wrap__polite {
+  margin-bottom: 20px;
+}
+
+.modal-win .form-wrap__polite a {
+  margin-left: 30px;
 }
 
 a {
@@ -9725,6 +9760,47 @@ a {
 
 #foot-dialog h3 {
   font-size: 2em;
+}
+
+.mfp-close {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-decoration: none;
+  text-align: center;
+  opacity: .65;
+  font-style: normal;
+  font-size: 28px;
+  font-family: Arial, Baskerville, monospace;
+  overflow: visible;
+  cursor: pointer;
+  background: 0 0;
+  border: 0;
+  display: block;
+  outline: 0;
+  padding: 0;
+  z-index: 1046;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #2c2c2c;
+  opacity: 1;
+  font-size: 50px;
+  font-weight: 100;
+  width: 56px;
+  height: 56px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  line-height: 56px;
+  text-align: center;
+  margin-top: -5px;
+  margin-right: -5px;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
 }
 
 .polite .link {
@@ -10801,6 +10877,23 @@ a {
   .footer__nav-list {
     -webkit-columns: 4;
             columns: 4;
+  }
+
+  .modal-win {
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-top: 0;
+  }
+
+  .modal-win .img-wrap {
+    margin-left: -28px;
+    margin-right: -28px;
+    position: relative;
+  }
+
+  .modal-win .img-wrap::before {
+    content: url(../img/modal-img.jpg);
+    max-width: 100%;
   }
 
   .modal-text {
