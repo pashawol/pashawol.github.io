@@ -14,9 +14,7 @@ jQuery(document).ready(function ($) {
 			mainClass: 'mfp-with-zoom mfp-img-mobile',
 			image: {
 				verticalFit: true,
-				// titleSrc: function(item) {
-				//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-				// }
+			 
 			},
 			gallery: {
 				enabled: true
@@ -66,12 +64,7 @@ jQuery(document).ready(function ($) {
 	function heightses() {
 
 		var w = $(window).width();
-
-		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		//
-
-
+ 
 		// скрывает моб меню
 
 		var topH = $("header ").innerHeight();
@@ -118,33 +111,7 @@ jQuery(document).ready(function ($) {
 	       return false;
 	   });
 
-
-	// табы  . Теперь данные активного таба остается в storage
-	$(function () {
-		var tab = ('tabs');
-
-		$('.' + tab + '__caption').each(function (i) {
-			var storage = localStorage.getItem('tab' + i);
-			if (storage) {
-				$(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-					.closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-			}
-		});
-
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
-			var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-			localStorage.removeItem('tab' + ulIndex);
-			localStorage.setItem('tab' + ulIndex, $(this).index());
-
-		});
-	});
-
-
+ 
 
 	var icon = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="28" viewBox="0 0 15 28"><defs><path id="ht76a" d="M1203.69 3666.71c-.2.2-.43.29-.7.29a.99.99 0 0 1-.7-1.69l12.32-12.31-12.32-12.31a.99.99 0 1 1 1.4-1.4l13.02 13.01a.99.99 0 0 1 0 1.4z"/></defs><g><g transform="translate(-1202 -3639)"><use xlink:href="#ht76a"/></g></g></svg>';
 
@@ -164,6 +131,18 @@ jQuery(document).ready(function ($) {
 	    // variableWidth: true,
 	    prevArrow: arrr2,
 	     nextArrow: arrl2,
+	   });
+	$('.s-rew__slider').slick({
+	   slidesToShow: 1,
+	   slidesToScroll: 1,
+	   dots: true,
+	   speed: 450,
+	   infinite: true,
+	   
+	   arrows: false,
+	   // centerMode: true,
+	   // focusOnSelect: true ,
+	    // variableWidth: true, 
 	   });
 
 	// слайдер цвета в карточке
@@ -213,5 +192,11 @@ jQuery(document).ready(function ($) {
 	// адаптивные табы
 	$('.tabs').easyResponsiveTabs();
 
-
+	$('.s-prod__text-block').readmore({
+    speed: 475,
+		maxHeight: 60,
+		// embedCSS: false,
+		moreLink: '<a class="btn-more" href="#">Подробнее</a>',
+		lessLink: '<a class="btn-more" href="#">Скрыть</a>',
+});
 });
