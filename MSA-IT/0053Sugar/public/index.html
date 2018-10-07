@@ -9,7 +9,9 @@
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <!-- Custom Browsers Color-->
-    <meta name="theme-color" content="#3361d8">
+    <meta name="theme-color" content="#009746">
+    <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -18,59 +20,89 @@
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="toggle-mnu toggle-mnu-1"><span></span></div>
         <div class="wrapp-hidden"> 
-          <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">Продукция </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Услуги  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Акции </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
-            </li>
-          </ul>
+          <div class="trop__nav">
+            <div class="trop__nav-item trop__nav-item--has-sub-menu"><a class="trop__nav-link" href="#">Журнал</a>
+              <div class="sub-menu"><a class="sub-menu__link sub-menu__link--active" href="#">О журнале</a><a class="sub-menu__link" href="#">Редакция</a><a class="sub-menu__link" href="#">Подписка</a><a class="sub-menu__link" href="#">Архив</a><a class="sub-menu__link" href="#">Редакционный совет</a><a class="sub-menu__link" href="#">Авторам</a><a class="sub-menu__link" href="#">Рекламодателям</a>
+              </div>
+            </div>
+            <div class="trop__nav-item"><a class="trop__nav-link trop__nav-link--active" href="#">Аналитика</a>
+            </div>
+            <div class="trop__nav-item"><a class="trop__nav-link" href="#">Новости </a>
+            </div>
+            <div class="trop__nav-item"><a class="trop__nav-link" href="#">Мероприятия</a>
+            </div>
+            <div class="trop__nav-item"><a class="trop__nav-link" href="#">Сайт БУ</a>
+            </div>
+            <div class="trop__nav-item"><a class="trop__nav-link" href="#"> Евразийская сахарная ассоциация</a>
+            </div>
+          </div>
           <div class="text-right"></div>
         </div>
       </div>
       <!--  мобильное меню-->
       <!-- start HEADER.header-->
       <header class="header">
-        <!-- start .top-line-->
-        <div class="top-line">
-        </div>
-        <!-- end .top-line-->
         <!-- start top-nav-->
         <div class="top-nav">
           <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-              </li>
-            </ul>
+            <div class="row">
+              <div class="col-auto">
+                <div class="row row--small align-items-center">
+                  <div class="col-auto"><a class="top-nav__logo" href="#"><img src="img/logo.png" alt=""/></a>
+                  </div>
+                  <div class="col d-none d-xl-block">
+                    <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-odnoklassniki"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="top-nav__title strong"><span class="text-primary h4 mb-0">С</span>оюз <br/><span class="text-primary h4 mb-0">С</span>ахаропроизводителей <br/><span class="text-primary h4 mb-0">Р</span>оссии
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row justify-content-end">
+                  <div class="col-auto"><a class="top-nav__link top-nav__link--mail" href="mailto:sugar@mail.ru">
+                    <svg class="icon icon-email ">
+                      <use xlink:href="img/svg/sprite.svg#email"></use>
+                    </svg>sugar@mail.ru</a>
+                  </div>
+                  <div class="col-auto"><a class="top-nav__link top-nav__link--tel" href="tel:(900)111-11-11">
+                    <svg class="icon icon-tel ">
+                      <use xlink:href="img/svg/sprite.svg#tel"></use>
+                    </svg>(900) 111-11-11</a>
+                  </div>
+                  <div class="col-auto"><a class="top-nav__link top-nav__link--login" href="#">
+                    <svg class="icon icon-user ">
+                      <use xlink:href="img/svg/sprite.svg#user"></use>
+                    </svg>Войти / Регистрация</a>
+                  </div>
+                </div>
+                <div class="row justify-content-end">
+                  <div class="col d-none d-xl-block">
+                    <div class="top-nav__nav">
+                      <div class="top-nav__nav-item top-nav__nav-item--has-sub-menu"><a class="top-nav__nav-link" href="#">Журнал</a>
+                        <div class="sub-menu"><a class="sub-menu__link sub-menu__link--active" href="#">О журнале</a><a class="sub-menu__link" href="#">Редакция</a><a class="sub-menu__link" href="#">Подписка</a><a class="sub-menu__link" href="#">Архив</a><a class="sub-menu__link" href="#">Редакционный совет</a><a class="sub-menu__link" href="#">Авторам</a><a class="sub-menu__link" href="#">Рекламодателям</a>
+                        </div>
+                      </div>
+                      <div class="top-nav__nav-item"><a class="top-nav__nav-link top-nav__nav-link--active" href="#">Аналитика</a>
+                      </div>
+                      <div class="top-nav__nav-item"><a class="top-nav__nav-link" href="#">Новости </a>
+                      </div>
+                      <div class="top-nav__nav-item"><a class="top-nav__nav-link" href="#">Мероприятия</a>
+                      </div>
+                      <div class="top-nav__nav-item"><a class="top-nav__nav-link" href="#">Сайт БУ</a>
+                      </div>
+                      <div class="top-nav__nav-item"><a class="top-nav__nav-link" href="#"> Евразийская сахарная ассоциация</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-auto"><a class="top-nav__search-link" href="#">
+                    <svg class="icon icon-search ">
+                      <use xlink:href="img/svg/sprite.svg#search"></use>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end top-nav-->
@@ -78,12 +110,111 @@
       <!-- end HEADER.header-->
       <!-- start header-block-->
       <div class="header-block" id="header-block">
-        <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+        <div class="header-block__slider">
+          <div class="header-block__slide img-bg" style="background-image: url(img/head-1.jpg);"><img class="res-i" src="img/head-1.jpg" alt=""/>
+            <div class="container">
+              <div class="header-block__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <span>1</span>
+              </div><a class="header-block__btn" href="#">
+              <svg class="icon icon-arr-right ">
+                <use xlink:href="img/svg/sprite.svg#arr-right"></use>
+              </svg></a>
+            </div>
+          </div>
+          <div class="header-block__slide img-bg" style="background-image: url(img/head-2.jpg);"><img class="res-i" src="img/head-2.jpg" alt=""/>
+            <div class="container">
+              <div class="header-block__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <span>2</span>
+              </div><a class="header-block__btn" href="#">
+              <svg class="icon icon-arr-right ">
+                <use xlink:href="img/svg/sprite.svg#arr-right"></use>
+              </svg></a>
+            </div>
+          </div>
+          <div class="header-block__slide img-bg" style="background-image: url(img/head-3.jpg);"><img class="res-i" src="img/head-3.jpg" alt=""/>
+            <div class="container">
+              <div class="header-block__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <span>3</span>
+              </div><a class="header-block__btn" href="#">
+              <svg class="icon icon-arr-right ">
+                <use xlink:href="img/svg/sprite.svg#arr-right"></use>
+              </svg></a>
+            </div>
+          </div>
+          <div class="header-block__slide img-bg" style="background-image: url(img/head-4.jpg);"><img class="res-i" src="img/head-4.jpg" alt=""/>
+            <div class="container">
+              <div class="header-block__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <span>4</span>
+              </div><a class="header-block__btn" href="#">
+              <svg class="icon icon-arr-right ">
+                <use xlink:href="img/svg/sprite.svg#arr-right"></use>
+              </svg></a>
+            </div>
+          </div>
+          <div class="header-block__slide img-bg" style="background-image: url(img/head-5.jpg);"><img class="res-i" src="img/head-5.jpg" alt=""/>
+            <div class="container">
+              <div class="header-block__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <span>5</span>
+              </div><a class="header-block__btn" href="#">
+              <svg class="icon icon-arr-right ">
+                <use xlink:href="img/svg/sprite.svg#arr-right"></use>
+              </svg></a>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end header-block-->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <!-- start s-news-->
+            <div class="s-news section" id="s-news">
+              <div class="container">
+                <h2 class="text-center">s-news</h2>
+                <div class="row"></div>
+              </div>
+            </div>
+            <!-- end s-news-->
+            <!-- start s-map-->
+            <div class="s-map section" id="s-map">
+              <div class="container">
+                <h2 class="text-center">s-map</h2>
+                <div class="row"></div>
+              </div>
+            </div>
+            <!-- end s-map-->
+            <!-- start s-patner-->
+            <div class="s-patner section" id="s-patner">
+              <div class="container">
+                <h2 class="text-center">s-patner</h2>
+                <div class="row"></div>
+              </div>
+            </div>
+            <!-- end s-patner-->
+            <!-- start s-calendar-->
+            <div class="s-calendar section" id="s-calendar">
+              <div class="container">
+                <h2 class="text-center">s-calendar</h2>
+                <div class="row"></div>
+              </div>
+            </div>
+            <!-- end s-calendar-->
+            <!-- start s-menu-->
+            <div class="s-menu section" id="s-menu">
+              <div class="container">
+                <h2 class="text-center">s-menu</h2>
+                <div class="row"></div>
+              </div>
+            </div>
+            <!-- end s-menu-->
+          </div>
+          <div class="col-auto">
+            <!-- start aside-->
+            <div class="aside section" id="aside">
+              <div class="container">
+                <h2 class="text-center">aside</h2>
+                <div class="row"></div>
+              </div>
+            </div>
+            <!-- end aside-->
+          </div>
+        </div>
+      </div>
       <!-- start s-form-->
       <section class="s-form section" id="s-form">
         <div class="container">
@@ -132,7 +263,11 @@
     <!-- #modal-call-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
+    <script src="libs/jquery.inputmask.bundle.min.js"></script>
+    <script src="libs/jquery.touchSwipe.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
