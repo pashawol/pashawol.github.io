@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
-	
+
 	var url = document.location.href;
 	$.each($(".top-nav__nav a "), function () {
 
@@ -40,6 +40,17 @@ jQuery(document).ready(function ($) {
 			}
 		});
 	})
+
+
+
+	// мобильное меню
+	$(".trop__nav-item--has-sub-menu   ").each(function (e) {
+		$(this).append('<div class="toggle-l"></div>');
+	})
+	$('.trop__nav-item--has-sub-menu  ').on('click', '.toggle-l', function () {
+		$(this).prev().slideToggle().parent().toggleClass("active");
+		return false;
+	})
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
 
@@ -49,9 +60,7 @@ jQuery(document).ready(function ($) {
 		$("body, html").toggleClass("fixed");
 		return false;
 	});
-	$('.hidden-mnu ul li a').on('click', function () {
-		$(".hidden-mnu .toggle-mnu").click();
-	});
+
 	$(document).mouseup(function (e) {
 		var container = $(".hidden-mnu.active");
 		if (container.has(e.target).length === 0) {
@@ -126,59 +135,71 @@ jQuery(document).ready(function ($) {
 
 
 	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
+	$(" .scroll-link").click(function () {
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
 
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
+		$('html, body').animate({
+			scrollTop: destination
+		}, 1100);
 
-	//        return false;
-	//    });
-
-
-	// табы  . Теперь данные активного таба остается в storage
-	$(function () {
-		var tab = ('tabs');
-
-		$('.' + tab + '__caption').each(function (i) {
-			var storage = localStorage.getItem('tab' + i);
-			if (storage) {
-				$(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-					.closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-			}
-		});
-
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
-			var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-			localStorage.removeItem('tab' + ulIndex);
-			localStorage.setItem('tab' + ulIndex, $(this).index());
-
-		});
+		return false;
 	});
 
 
 
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+
+	var icon = '<svg  width="9" height="15" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 9 15"><defs><path d="M1555.75184,1567.21126l7.70325,7.70322l-0.70713,0.70723l-0.34321,-0.34323l-6.70131,6.72841l-0.69031,-0.69132l6.70072,-6.72803l-6.66914,-6.66951z" id="Path-0"/></defs> <g transform="matrix(1,0,0,1,-1555,-1567)"><g> <use xlink:href="#Path-0"  fill-opacity="1"/></g></g></svg>';
 
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
 	// карусель
-	$('.header-block__slider').slick({
-	   slidesToShow: 1,
-	   slidesToScroll: 1,
-	   dots: false,
-	   speed: 450,
-	   infinite: true,
-	   loop: true,
-	   arrows: false, 
-	   });
+	$('.slider-js').each(function (params) {
+		
+	$(this).slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			speed: 450,
+			infinite: true,
+			loop: true,
+			arrows: true,
+			prevArrow: arrr2,
+			nextArrow: arrl2,
+			// adaptiveHeight: true,
+			appendArrows: 	$(this).parent().find(' .arrow-wrap'),
+		});
+	})
 
- 
+
+	$('.s-patner__slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		mobileFirst: true,
+		arrows: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		adaptiveHeight: true,
+		appendArrows: '.s-patner .arrow-wrap',
+		responsive: [{
+				breakpoint: 1300,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3
+				}
+			}
+		]
+	});
+
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -196,7 +217,7 @@ jQuery(document).ready(function ($) {
 		mainClass: 'my-mfp-zoom-in'
 	});
 
- 
+
 	// маска на инпут
 	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
 		"mask": "+7(999)999-99-99"
@@ -282,5 +303,61 @@ jQuery(document).ready(function ($) {
 	// });
 	// });
 
-
+	// оценить сайт
+	// тут все настройки  ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html
+	$("#range_45").ionRangeSlider({ 
+    values: [
+			"плохо", "средне", "хорошо", "отлично", "вааще!"
+		],
+		from: 3,
+		grid: true,
+		grid_snap: true,
+		force_edges: true,
+		hide_min_max: true,
+    hide_from_to: true,
+    // hide_grid_text: true,
+    onStart: function (data) {
+        $('.range-rezult--js').text(data.from_value);
+    },
+    onChange: function (data) {
+        $('.range-rezult--js').text(data.from_value);
+    },
+    onFinish: function (data) {
+        $('.range-rezult--js').text(data.from_value);
+    },
+    onUpdate: function (data) {
+        $('.range-rezult--js').text(data.from_value);
+    }
 });
+
+
+
+// // всплывашка в карте 
+$(' .js-show-area').each(function () { 
+	var th = $(this);
+	thContent = $('#'+th.data('zone'));
+	th.popover({
+		template: '<div class="popover popover-map" role="tooltip"><div class="popover-close"></div><div class="popover-body"></div></div>',
+	 
+		container: '.svg-map',
+		placement: 'auto'
+	});
+	th.on('shown.bs.popover', function () {
+		$(".popover-body").html($('#'+th.data('zone')).html()); 
+		th.addClass('active').siblings().removeClass('active').popover('hide');;
+		 
+	})
+	
+	th.on('hide.bs.popover', function () { 
+		th.removeClass('active');
+	})
+	
+ 
+	$("body").on('click', '.popover-close', function () {
+		th.popover('hide');
+
+		})
+})
+ 
+});
+ 
