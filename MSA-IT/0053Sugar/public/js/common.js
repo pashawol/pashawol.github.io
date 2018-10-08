@@ -146,6 +146,12 @@ jQuery(document).ready(function ($) {
 		return false;
 	});
 
+		$('.s-magazine-body__btn').click(function () {
+			var thd =  $(this).attr("href");
+			$(this).addClass("active").siblings().removeClass('active');
+			$('.s-magazine-body__item-group').removeClass("active");
+			$(thd).addClass("active");
+		  })
 
 
 
