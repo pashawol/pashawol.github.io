@@ -206,6 +206,11 @@ jQuery(document).ready(function ($) {
 		]
 	});
 
+	$('.slider-js')
+	.on('lazyLoaded', function(event, slick, image, imageSource){
+			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+	});
+
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
