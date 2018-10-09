@@ -351,7 +351,7 @@ $(' .js-show-area').each(function () {
 		template: '<div class="popover popover-map" role="tooltip"><div class="popover-close"></div><div class="popover-body"></div></div>',
 	 
 		container: '.svg-map',
-		placement: 'auto'
+		// placement: 'auto'
 	});
 	th.on('shown.bs.popover', function () {
 		$(".popover-body").html($('#'+th.data('zone')).html()); 
