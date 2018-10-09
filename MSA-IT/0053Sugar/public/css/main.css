@@ -8826,6 +8826,8 @@ strong,.strong {
 .custom-input {
   display: block;
   margin: auto;
+  font-size: 0.85714rem;
+  font-weight: 300;
   margin-bottom: 1.42857rem;
   cursor: pointer;
   position: relative;
@@ -8871,8 +8873,7 @@ strong,.strong {
 .custom-input__input[type="radio"] + .custom-input__lab {
   left: 0;
   display: block;
-  top: 50%;
-  margin-top: -0.49714rem;
+  margin-top: 3px;
   width: 0.99429rem;
   height: 0.99429rem;
   border: 1px solid #757575;
@@ -8959,10 +8960,6 @@ strong,.strong {
   background-color: #009746;
 }
 
-.form-wrap__input {
-  resize: none;
-}
-
 .form-wrap__btn {
   cursor: pointer;
 }
@@ -8970,6 +8967,10 @@ strong,.strong {
 .form-wrap label {
   width: 100%;
   display: block;
+}
+
+.form-wrap textarea {
+  height: 120px;
 }
 
 .parsley-error {
