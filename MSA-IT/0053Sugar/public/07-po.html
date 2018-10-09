@@ -133,10 +133,119 @@
             <h1> Личный кабинет</h1>
           </div>
           <!-- start s-po-->
-          <div class="s-po section" id="s-po">
-            <div class="container">
-              <h2 class="fw-900 mono text-center">s-po</h2>
-              <div class="row"></div>
+          <div class="s-po">
+            <div class="row no-gutters">
+              <div class="col-lg-3">
+                <div class="s-po-aside">
+                  <button class="s-po-aside__btn s-po-aside__btn--js d-lg-none ttu" type="button">Меню личного кабинета 
+                  </button>
+                  <div class="s-po-aside__nav s-po-aside__nav--js d-lg-block"><a class="s-po-aside__link s-po-aside__link--active" href="#"> 
+                    <svg class="icon icon-po-1 ">
+                      <use xlink:href="img/svg/sprite.svg#po-1"></use>
+                    </svg>Персональные данные </a><a class="s-po-aside__link" href="#"> 
+                    <svg class="icon icon-po-2 ">
+                      <use xlink:href="img/svg/sprite.svg#po-2"></use>
+                    </svg>Способ и адреса доставки</a><a class="s-po-aside__link" href="#"> 
+                    <svg class="icon icon-po-3 ">
+                      <use xlink:href="img/svg/sprite.svg#po-3"></use>
+                    </svg>Архив подписок</a><a class="s-po-aside__link" href="#"> 
+                    <svg class="icon icon-po-4 ">
+                      <use xlink:href="img/svg/sprite.svg#po-4"></use>
+                    </svg>Сменить пароль</a>
+                  </div>
+                </div>
+              </div>
+              <!-- /.col-3-->
+              <div class="col">
+                <div class="s-po-body">
+                  <div class="h6 mono fw-900 ttu pb-3">Ваши персональные данные</div>
+                  <div class="form-wrap">
+                    <form>
+                      <div class="form-wrap__group">
+                        <div class="row">
+                          <div class="col-sm-auto">
+                            <label class="custom-input"><input class="custom-input__input" type="radio" name="rad-1"/><span class="custom-input__lab"></span><span class="custom-input__text">Представитель компании</span>
+                            </label>
+                          </div>
+                          <div class="col-sm-auto">
+                            <label class="custom-input"><input class="custom-input__input" type="radio" name="rad-1"/><span class="custom-input__lab"></span><span class="custom-input__text">Частное лицо</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="email" placeholder="E-mail"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Телефон"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Фамилия"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Имя"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Должность"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Сфера деятельности"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- +e.group-->
+                      <div class="form-wrap__group">
+                        <div class="h6 mono strong ttu">РЕКВИЗИТЫ КОМАНИИ</div>
+                        <div class="mono mb-3">Для отправки бухгалтерских документов</div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="ИНН"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="КПП"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Юридическое название"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Адрес"/>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- +e.group-->
+                      <div class="form-wrap__foot-row row align-items-center">
+                        <div class="col-auto">
+                          <button class="form-wrap__btn" type="submit">Сохранить
+                          </button>
+                        </div>
+                        <div class="col"><a class="small strong text-body tdu" href="#">Отменить</a></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- /.s-po-body-->
+              </div>
+              <!-- /.col-->
             </div>
           </div>
           <!-- end s-po-->

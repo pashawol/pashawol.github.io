@@ -349,26 +349,33 @@ $(' .js-show-area').each(function () {
 	thContent = $('#'+th.data('zone'));
 	th.popover({
 		template: '<div class="popover popover-map" role="tooltip"><div class="popover-close"></div><div class="popover-body"></div></div>',
-	 
+		
 		container: '.svg-map',
 		// placement: 'auto'
 	});
 	th.on('shown.bs.popover', function () {
 		$(".popover-body").html($('#'+th.data('zone')).html()); 
 		th.addClass('active').siblings().removeClass('active').popover('hide');;
-		 
+		
 	})
 	
 	th.on('hide.bs.popover', function () { 
 		th.removeClass('active');
 	})
 	
- 
+	
 	$("body").on('click', '.popover-close', function () {
 		th.popover('hide');
-
-		})
+		
+	})
 })
+// / всплывашка в карте 
  
+
+// скрыть/показать меню в ЛК 
+$(".s-po-aside__btn--js").click(function () {
+	$(this).toggleClass("active").next().slideToggle();
+})
+
 });
  
