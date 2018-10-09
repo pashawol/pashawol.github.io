@@ -10067,6 +10067,10 @@ strong,.strong {
   text-decoration: none !important;
 }
 
+.s-calendar table .NewsCalNews {
+  padding-top: 0 !important;
+}
+
 .s-calendar table .NewsCalNews a {
   background-color: #009746;
 }
@@ -10116,6 +10120,130 @@ strong,.strong {
 }
 
 .s-calendar__scroll {
+  max-height: 380px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.aside-calendar__bar--top-left {
+  border-top: 1px solid  #b3b3b3;
+  border-bottom: 1px solid  #b3b3b3;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.aside-calendar .NewsCalHeader {
+  font-family: Montserrat, sans-serif;
+  color: #484a53;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.aside-calendar td {
+  width: 14.28571%;
+}
+
+.aside-calendar td:not(.NewsCalHeader) {
+  border: 1px solid #bdbdbd;
+  background-color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 2px 2px;
+  height: 32px;
+}
+
+.aside-calendar td.NewsCalOtherMonth {
+  background-color: transparent;
+  cursor: default;
+}
+
+.aside-calendar td:hover:not(.NewsCalOtherMonth):not(.NewsCalHeader),.aside-calendar td.NewsCalToday {
+  border: 1px solid #009746;
+  background-color: #c4e6d4;
+}
+
+.aside-calendar table {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.aside-calendar table a {
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 7px;
+          border-radius: 7px;
+  background-color: #484a53;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  line-height: 14px;
+  vertical-align: middle;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-left: auto;
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.aside-calendar table .NewsCalNews a {
+  background-color: #009746;
+}
+
+.aside-calendar__bar--top-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aside-calendar__bar--top-left a i {
+  color: #456f59;
+  font-size: 1.42857rem;
+}
+
+.aside-calendar__bar--top-left a:hover i {
+  color: #009746;
+}
+
+.aside-calendar__month {
+  color: #484a53;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.aside-calendar__year {
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  background-color: #609378;
+  color: #ffffff;
+  border: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 5px 9px;
+  outline: none !important;
+}
+
+.aside-calendar__scroll {
   max-height: 380px;
   overflow-x: hidden;
   overflow-y: auto;
