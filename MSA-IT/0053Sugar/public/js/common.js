@@ -4,23 +4,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
-
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			}
-
-		};
-
-	});
+ 
 	// галерея
 	$(".gal").each(function () {
 
@@ -88,30 +72,9 @@ jQuery(document).ready(function ($) {
 	});
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
+ 
 
-	function heightses() {
-
-		var w = $(window).width();
-
-		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		//
-
-
-		// скрывает моб меню
-
-		var topH = $("header ").innerHeight();
-
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > topH) {
-				$('.top-nav  ').addClass('fixed');
-			} else {
-				$('.top-nav  ').removeClass('fixed');
-			}
-		});
-		// конец добавил
-	}
-
+	// скрывает / показывает мобильное меню при медиа запросе
 	if (window.matchMedia("(min-width: 992px)").matches) {
 
 		$(".toggle-mnu-1").removeClass("on");
@@ -120,20 +83,7 @@ jQuery(document).ready(function ($) {
 		$("body").removeClass("fixed");
 	}
 
-
-	$(window).resize(function () {
-		heightses();
-
-	});
-	$(window).on("load", function () {
-		heightses();
-
-	})
-
-	heightses();
-
-
-
+ 
 	// листалка по стр
 	$(" .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
@@ -146,6 +96,7 @@ jQuery(document).ready(function ($) {
 		return false;
 	});
 
+	// кнопки листание на стр журнала
 		$('.s-magazine-body__btn').click(function () {
 			var thd =  $(this).attr("href");
 			$(this).addClass("active").siblings().removeClass('active');
@@ -154,7 +105,7 @@ jQuery(document).ready(function ($) {
 		  })
 
 
-
+// слайдеры
 	var icon = '<svg  width="9" height="15" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 9 15"><defs><path d="M1555.75184,1567.21126l7.70325,7.70322l-0.70713,0.70723l-0.34321,-0.34323l-6.70131,6.72841l-0.69031,-0.69132l6.70072,-6.72803l-6.66914,-6.66951z" id="Path-0"/></defs> <g transform="matrix(1,0,0,1,-1555,-1567)"><g> <use xlink:href="#Path-0"  fill-opacity="1"/></g></g></svg>';
 
 	var arrl2 = (' <div class="l">' + icon),
@@ -234,86 +185,8 @@ jQuery(document).ready(function ($) {
 		"mask": "+7(999)999-99-99"
 	});
 
-
-	//Replace all SVG images with inline SVG
-	$('img.img-svg').each(function () {
-		var $img = $(this);
-		var imgClass = $img.attr('class');
-		var imgURL = $img.attr('src');
-
-		$.get(imgURL, function (data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = $(data).find('svg');
-
-			// Add replaced image's classes to the new SVG
-			if (typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass + ' replaced-svg');
-			}
-
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a');
-
-			// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-			}
-
-
-			// Replace image with new SVG
-			$img.replaceWith($svg);
-
-		}, 'xml');
-
-	});
-
-
-	// кастомный инпут файл
-
-	var file = $(".add-file input[type=file]");
-	file.change(function () {
-		var filename = $(this).val().replace(/.*\\/, "");
-		var name = $(".add-file__filename  ");
-		name.text(filename);
-
-	});
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
-
-	$(".pretty-embed__bg").each(function () {
-		// загрузка фона видео
-		$(this).css("background-image", 'url(http://img.youtube.com/vi/' + $(this).data("src") + '/0.jpg)')
-		// включение видео при клике по блоку
-		$(this).click(function () {
-			$(this).removeClass("on").next()
-				.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
-		})
-	})
-
-	// убираем пробелы в телефоне
-	$(".top-line__tel, .s-contact__tel").each(function () {
-		var str = $(this).attr('href');
-		$(this).attr('href', str.replace(/\s/g, ''));
-	})
-	// $(".wow-wrap").each(function () {
-	// var wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
-
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	// });
-	// });
-
+ 
+   
 	// оценить сайт
 	// тут все настройки  ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html
 	$("#range_45").ionRangeSlider({ 
