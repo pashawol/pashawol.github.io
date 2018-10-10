@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
- 
+
 	// галерея
 	$(".gal").each(function () {
 
@@ -72,7 +72,7 @@ jQuery(document).ready(function ($) {
 	});
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
- 
+
 
 	// скрывает / показывает мобильное меню при медиа запросе
 	if (window.matchMedia("(min-width: 992px)").matches) {
@@ -83,7 +83,7 @@ jQuery(document).ready(function ($) {
 		$("body").removeClass("fixed");
 	}
 
- 
+
 	// листалка по стр
 	$(" .scroll-link").click(function () {
 		var elementClick = $(this).attr("href");
@@ -97,23 +97,23 @@ jQuery(document).ready(function ($) {
 	});
 
 	// кнопки листание на стр журнала
-		$('.s-magazine-body__btn').click(function () {
-			var thd =  $(this).attr("href");
-			$(this).addClass("active").siblings().removeClass('active');
-			$('.s-magazine-body__item-group').removeClass("active");
-			$(thd).addClass("active");
-		  })
+	$('.s-magazine-body__btn').click(function () {
+		var thd = $(this).attr("href");
+		$(this).addClass("active").siblings().removeClass('active');
+		$('.s-magazine-body__item-group').removeClass("active");
+		$(thd).addClass("active");
+	})
 
 
-// слайдеры
+	// слайдеры
 	var icon = '<svg  width="9" height="15" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 9 15"><defs><path d="M1555.75184,1567.21126l7.70325,7.70322l-0.70713,0.70723l-0.34321,-0.34323l-6.70131,6.72841l-0.69031,-0.69132l6.70072,-6.72803l-6.66914,-6.66951z" id="Path-0"/></defs> <g transform="matrix(1,0,0,1,-1555,-1567)"><g> <use xlink:href="#Path-0"  fill-opacity="1"/></g></g></svg>';
 
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
 	// карусель
 	$('.slider-js').each(function (params) {
-		
-	$(this).slick({
+
+		$(this).slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			dots: false,
@@ -124,7 +124,7 @@ jQuery(document).ready(function ($) {
 			prevArrow: arrr2,
 			nextArrow: arrl2,
 			// adaptiveHeight: true,
-			appendArrows: 	$(this).parent().find(' .arrow-wrap'),
+			appendArrows: $(this).parent().find(' .arrow-wrap'),
 		});
 	})
 
@@ -158,9 +158,9 @@ jQuery(document).ready(function ($) {
 	});
 
 	$('.slider-js')
-	.on('lazyLoaded', function(event, slick, image, imageSource){
+		.on('lazyLoaded', function (event, slick, image, imageSource) {
 			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-	});
+		});
 
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
@@ -185,12 +185,12 @@ jQuery(document).ready(function ($) {
 		"mask": "+7(999)999-99-99"
 	});
 
- 
-   
+
+
 	// оценить сайт
 	// тут все настройки  ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html
-	$("#range_45").ionRangeSlider({ 
-    values: [
+	$("#range_45").ionRangeSlider({
+		values: [
 			"плохо", "средне", "хорошо", "отлично", "вааще!"
 		],
 		from: 3,
@@ -198,57 +198,56 @@ jQuery(document).ready(function ($) {
 		grid_snap: true,
 		force_edges: true,
 		hide_min_max: true,
-    hide_from_to: true,
-    // hide_grid_text: true,
-    onStart: function (data) {
-        $('.range-rezult--js').text(data.from_value);
-    },
-    onChange: function (data) {
-        $('.range-rezult--js').text(data.from_value);
-    },
-    onFinish: function (data) {
-        $('.range-rezult--js').text(data.from_value);
-    },
-    onUpdate: function (data) {
-        $('.range-rezult--js').text(data.from_value);
-    }
-});
-
-
-
-// // всплывашка в карте 
-$(' .js-show-area').each(function () { 
-	var th = $(this);
-	thContent = $('#'+th.data('zone'));
-	th.popover({
-		template: '<div class="popover popover-map" role="tooltip"><div class="popover-close"></div><div class="popover-body"></div></div>',
-		
-		container: '.svg-map',
-		// placement: 'auto'
+		hide_from_to: true,
+		// hide_grid_text: true,
+		onStart: function (data) {
+			$('.range-rezult--js').text(data.from_value);
+		},
+		onChange: function (data) {
+			$('.range-rezult--js').text(data.from_value);
+		},
+		onFinish: function (data) {
+			$('.range-rezult--js').text(data.from_value);
+		},
+		onUpdate: function (data) {
+			$('.range-rezult--js').text(data.from_value);
+		}
 	});
-	th.on('shown.bs.popover', function () {
-		$(".popover-body").html($('#'+th.data('zone')).html()); 
-		th.addClass('active').siblings().removeClass('active').popover('hide');;
-		
-	})
-	
-	th.on('hide.bs.popover', function () { 
-		th.removeClass('active');
-	})
-	
-	
-	$("body").on('click', '.popover-close', function () {
-		th.popover('hide');
-		
-	})
-})
-// / всплывашка в карте 
- 
 
-// скрыть/показать меню в ЛК 
-$(".s-po-aside__btn--js").click(function () {
-	$(this).toggleClass("active").next().slideToggle();
-})
+
+
+	// // всплывашка в карте 
+	$(' .js-show-area').each(function () {
+		var th = $(this);
+		thContent = $('#' + th.data('zone'));
+		th.popover({
+			template: '<div class="popover popover-map" role="tooltip"><div class="popover-close"></div><div class="popover-body"></div></div>',
+
+			container: '.svg-map',
+			// placement: 'auto'
+		});
+		th.on('shown.bs.popover', function () {
+			$(".popover-body").html($('#' + th.data('zone')).html());
+			th.addClass('active').siblings().removeClass('active').popover('hide');;
+
+		})
+
+		th.on('hide.bs.popover', function () {
+			th.removeClass('active');
+		})
+
+
+		$("body").on('click', '.popover-close', function () {
+			th.popover('hide');
+
+		})
+	})
+	// / всплывашка в карте 
+
+
+	// скрыть/показать меню в ЛК 
+	$(".s-po-aside__btn--js").click(function () {
+		$(this).toggleClass("active").next().slideToggle();
+	})
 
 });
- 
