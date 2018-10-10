@@ -1033,7 +1033,7 @@ mark,.mark {
   font-size: 0.85714rem;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color: transparent;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   -webkit-border-radius: 0;
@@ -1052,7 +1052,7 @@ mark,.mark {
 
 .form-control:focus {
   color: #495057;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -1101,7 +1101,7 @@ select.form-control::-ms-expand {
 
 select.form-control:focus::-ms-value {
   color: #495057;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .form-control-file,.form-control-range {
@@ -8968,7 +8968,6 @@ strong,.strong {
 
 .custom-input {
   display: block;
-  margin: auto;
   font-size: 0.85714rem;
   font-weight: 300;
   margin-bottom: 1.42857rem;
@@ -9104,7 +9103,6 @@ strong,.strong {
 }
 
 .form-wrap label {
-  width: 100%;
   display: block;
 }
 
@@ -9133,6 +9131,39 @@ strong,.strong {
   width: 246px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.form-wrap .tabs__caption {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-wrap .tabs__btn {
+  background-color: #e2eae6;
+  margin-bottom: 0;
+  margin-right: 2px;
+  padding: 15px 5px;
+  padding-left: 30px;
+  border-top: 4px solid transparent;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+}
+
+.form-wrap .tabs__btn .custom-input__lab {
+  left: 10px;
+}
+
+.form-wrap .tabs__btn:hover,.form-wrap .tabs__btn.active {
+  border-color: #119d52;
+  background-color: #ebf3ef;
+}
+
+.form-wrap .tabs__content {
+  background-color: #ebf3ef;
+  padding: 30px 15px;
 }
 
 .parsley-error {
@@ -11161,6 +11192,10 @@ strong,.strong {
   background-image: url(../img/footer-bg.jpg);
 }
 
+.footer input {
+  background-color: #ffffff;
+}
+
 .footer__title {
   padding-top: 1.42857em;
   display: block;
@@ -12246,6 +12281,15 @@ a {
     text-align: center !important;
   }
 
+  .form-wrap .tabs__btn {
+    padding: 20px 40px;
+    padding-left: 60px;
+  }
+
+  .form-wrap .tabs__btn .custom-input__lab {
+    left: 30px;
+  }
+
   .top-nav__link {
     margin-bottom: 15px;
     margin-top: 0;
@@ -13172,6 +13216,10 @@ a {
   .s-404 {
     padding-top: 5rem;
     padding-bottom: 5rem;
+  }
+
+  .form-wrap .tabs__content {
+    padding: 50px 30px;
   }
 
   .top-nav__link--login {
@@ -15105,6 +15153,10 @@ a {
 
   .table-responsive-sm > .table-bordered {
     border: 0;
+  }
+
+  .form-control {
+    padding: 10px;
   }
 }
 
