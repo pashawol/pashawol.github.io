@@ -158,7 +158,8 @@ jQuery(document).ready(function ($) {
 		return false;
 	});
 	// var icon = '<svg class="icon icon-arr-left "><use xlink:href="/wp-content/themes/unimon/img/svg/sprite.svg#arr-left">';
-	var icon = '<svg class="icon icon-arr-left "><use xlink:href="/img/svg/sprite.svg#arr-left">';
+ 
+	var icon = '<svg  class="icon icon-arr-left " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33" height="33" viewBox="0 0 33 33"><defs><path id="d6foa" d="M472 3319.5a16.5 16.5 0 1 1 33 0 16.5 16.5 0 0 1-33 0zm20.07 7.75l-7.73-7.75 7.73-7.76-1.54-1.53-9.26 9.29 9.26 9.29z"/></defs><g><g transform="translate(-472 -3303)"><use xlink:href="#d6foa"/></g></g></svg>';
 	var arrr2 = (' <div class="l">' + icon),
 		arrl2 = (' <div class="r">' + icon);
 	//  слайдер в  карточке товара
