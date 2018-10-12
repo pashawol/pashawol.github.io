@@ -78,7 +78,7 @@
                     <div class="top-nav__link top-nav__link--login">
                       <svg class="icon icon-user ">
                         <use xlink:href="img/svg/sprite.svg#user"></use>
-                      </svg><a class="text-white" href="#"> Войти  </a> 
+                      </svg><a class="text-white popup-with-move-anim" href="#modal-login"> Войти  </a> 
                       /  
                        <a class="text-white" href="#"> Регистрация </a>
                     </div>
@@ -568,6 +568,30 @@
       </form>
     </div>
     <!-- #modal-call-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-login">
+      <form>
+        <div class="text-center">
+          <div class="pb-3">
+            <div class="form-wrap__title h4 ttu mono strong">Авторизация
+            </div>
+            <div class="mt-2"><a class="tdu small" href="#">Еще не зарегистрированы?</a></div>
+          </div>
+        </div>
+        <div class="form-wrap__input-wrap form-group"> 
+          <label><span class="mono strong d-block">Ваш логин</span><input class="form-wrap__input form-control" type="text" placeholder="Логин или email" required="required"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group"> 
+          <label><span class="mono strong d-block">Пароль</span><input class="form-wrap__input form-control" type="text" placeholder="Пароль" required="required"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="text-right mb-3"><a class="tdu small" href="#">Забыли пароль?</a></div><input class="form-wrap__btn mb-4 btn-block" type="submit" value="Войти"/>
+        <div class="text-center"><a class="tdu small fw-300" href="#">Отменить</a></div>
+      </form>
+    </div>
+    <!-- #modal-login-->
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-sub">
       <form>
         <div class="text-center">
