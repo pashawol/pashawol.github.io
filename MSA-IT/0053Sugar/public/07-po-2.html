@@ -163,82 +163,124 @@
                     <form>
                       <div class="form-wrap__group">
                         <div class="pb-3">
-                          <label class="custom-input"><input class="custom-input__input" type="radio" name="rad-2"/><span class="custom-input__lab"></span><span class="custom-input__text"><span class="d-block fw-500">Доставка на проспект Независимости 5</span><span>240060, г. Минск, пр. Независимости д. 5, кор. 1, офис 6, доставка курьером, Печатная версия</span></span>
-                            <div class="small row row--small">
-                              <div class="col-auto"><a class="tdu text-primary" href="#">Редактировать</a></div>
-                              <div class="col-auto"><a class="tdu text-body" href="#">Удалить</a></div>
-                            </div>
+                          <label class="custom-input"><input class="custom-input__input" type="radio" name="rad-2"/><span class="custom-input__lab"></span><span class="custom-input__text"><span class="d-block fw-500">Доставка на проспект Независимости 5</span><span>240060, г. Минск, пр. Независимости д. 5, кор. 1, офис 6, доставка курьером, Печатная версия</span></span><span class="small row row--small"><span class="col-auto"><a class="tdu text-primary" href="#">Редактировать</a></span><span class="col-auto"><a class="tdu text-body" href="#">Удалить</a></span></span>
                           </label>
                         </div>
                         <div class="pb-3">
-                          <label class="custom-input"><input class="custom-input__input" type="radio" name="rad-2"/><span class="custom-input__lab"></span><span class="custom-input__text"><span class="d-block fw-500">Доставка на улицу Советскую 7</span><span>240060, г. Минск, ул. Советская д. 7, кор. 1, кв 89, доставка почтой, Печатная версия</span></span>
-                            <div class="small row row--small">
-                              <div class="col-auto"><a class="tdu text-primary" href="#">Редактировать</a></div>
-                              <div class="col-auto"><a class="tdu text-body" href="#">Удалить</a></div>
-                            </div>
+                          <label class="custom-input"><input class="custom-input__input" type="radio" name="rad-2"/><span class="custom-input__lab"></span><span class="custom-input__text"><span class="d-block fw-500">Доставка на улицу Советскую 7</span><span>240060, г. Минск, ул. Советская д. 7, кор. 1, кв 89, доставка почтой, Печатная версия</span></span><span class="small row row--small"><span class="col-auto"><a class="tdu text-primary" href="#">Редактировать</a></span><span class="col-auto"><a class="tdu text-body" href="#">Удалить</a></span></span>
                           </label>
                         </div>
                       </div>
                       <!-- +e.group-->
                       <div class="form-wrap__group">
                         <div class="h6 mono strong ttu pb-2">Добавить доставку</div>
-                        <div class="row">
-                          <div class="col-sm-auto">
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="rad-3"/><span class="custom-input__lab"></span><span class="custom-input__text fw-500">Доставка курьером</span>
+                        <div class="tabs">
+                          <div class="tabs__caption"> 
+                            <label class="custom-input tabs__btn active pt-0 border-0 bg-transparent"><input class="custom-input__input" name="rad-3" type="radio" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text fw-500">Доставка курьером</span>
+                            </label>
+                            <label class="custom-input tabs__btn pt-0 border-0 bg-transparent"><input class="custom-input__input" type="radio" name="rad-3"/><span class="custom-input__lab"></span><span class="custom-input__text fw-500">Доставка Почтой</span>
                             </label>
                           </div>
-                          <div class="col-sm-auto">
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="rad-3"/><span class="custom-input__lab"></span><span class="custom-input__text fw-500">Доставка Почтой</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-12">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="ИНН"/>
+                          <div>
+                            <div class="tabs__content p-0 active">
+                              <div class="row"> 
+                                <div class="col-12">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="ИНН"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Почтовый индекс"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Город"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Улица"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-3 col-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Дом"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-3 col-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Корпус"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-3 col-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Строение"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-3 col-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Офис/кв."/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-wrap__input-wrap form-group">
+                                    <label><textarea class="form-wrap__input form-control" placeholder="Комментарий"></textarea>
+                                    </label>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                              </div>
                             </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-4">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Почтовый индекс"/>
+                            <!-- .tabs__content.p-0-->
+                            <div class="tabs__content p-0">
+                              <div class="row"> 
+                                <div class="col-md-4">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Почтовый индекс"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Город"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Улица"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-3 col-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Дом"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-3 col-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Корпус"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-3 col-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Строение"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-3 col-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Офис/кв."/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-wrap__input-wrap form-group">
+                                    <label><textarea class="form-wrap__input form-control" placeholder="Комментарий"></textarea>
+                                    </label>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                              </div>
                             </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-4">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Город"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-4">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Улица"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-3 col-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Дом"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-3 col-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Корпус"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-3 col-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Строение"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-3 col-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Офис/кв."/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-12">
-                            <div class="form-wrap__input-wrap form-group">
-                              <label><textarea class="form-wrap__input form-control" placeholder="Комментарий"></textarea>
-                              </label>
-                            </div>
-                            <!-- +e.input-wrap-->
+                            <!-- .tabs__content.p-0-->
                           </div>
                         </div>
                       </div>
@@ -338,7 +380,7 @@
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group"> 
-          <label><span class="mono strong d-block"></span>
+          <label><span class="mono strong d-block">Выберите время</span>
             <select class="form-wrap__input form-control">
               <option value="" selected="selected" disabled="disabled">Выберите время для звонка</option>
               <option value="">10</option>
@@ -347,6 +389,14 @@
             </select>
           </label>
         </div><input class="form-wrap__btn mb-4 btn-block" type="submit" value="Заказать"/>
+        <div class="polite">
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite"/><span class="custom-input__lab"></span>
+          </label>Отправляя заявку Вы даете
+          
+          <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
+          
+          на&#160;обработку персональных данных
+        </div>
         <div class="text-center"><a class="tdu small fw-300" href="#">Отменить</a></div>
       </form>
     </div>

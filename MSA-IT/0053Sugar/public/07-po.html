@@ -161,78 +161,135 @@
                   <div class="h6 mono strong ttu pb-3">Ваши персональные данные</div>
                   <div class="form-wrap">
                     <form>
-                      <div class="form-wrap__group">
-                        <div class="row">
-                          <div class="col-sm-auto">
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="rad-1"/><span class="custom-input__lab"></span><span class="custom-input__text fw-500">Представитель компании</span>
-                            </label>
-                          </div>
-                          <div class="col-sm-auto">
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="rad-1"/><span class="custom-input__lab"></span><span class="custom-input__text fw-500">Частное лицо</span>
-                            </label>
-                          </div>
+                      <div class="tabs">
+                        <div class="tabs__caption"> 
+                          <label class="custom-input tabs__btn active py-0 border-0 bg-transparent"><input class="custom-input__input" name="rad-1" type="radio" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text fw-500">Представитель компании</span>
+                          </label>
+                          <label class="custom-input tabs__btn py-0 border-0 bg-transparent"><input class="custom-input__input" type="radio" name="rad-1"/><span class="custom-input__lab"></span><span class="custom-input__text fw-500">Частное лицо</span>
+                          </label>
                         </div>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="email" placeholder="E-mail"/>
+                        <div>
+                          <div class="tabs__content p-0 active">
+                            <div class="form-wrap__group">
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="email" placeholder="E-mail"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Телефон"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Фамилия"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Имя"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Должность"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Сфера деятельности"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                              </div>
                             </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Телефон"/>
+                            <!-- +e.group-->
+                            <div class="form-wrap__group">
+                              <div class="h6 mono strong ttu">РЕКВИЗИТЫ КОМАНИИ</div>
+                              <div class="mono mb-3">Для отправки бухгалтерских документов</div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="ИНН"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="КПП"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Юридическое название"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Адрес"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                              </div>
                             </div>
-                            <!-- +e.input-wrap-->
+                            <!-- +e.group-->
                           </div>
-                          <div class="col-md-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Фамилия"/>
+                          <!-- .tabs__content.active-->
+                          <div class="tabs__content p-0">
+                            <div class="form-wrap__group">
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="email" placeholder="E-mail"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="tel" placeholder="Телефон"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Фамилия"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Имя"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                              </div>
                             </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Имя"/>
+                            <!-- +e.group-->
+                            <div class="form-wrap__group">
+                              <div class="h6 mono strong ttu">Адрес </div>
+                              <div class="row"> 
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Город"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Улица"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Дом"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Квартира"/>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                              </div>
                             </div>
-                            <!-- +e.input-wrap-->
+                            <!-- +e.group-->
                           </div>
-                          <div class="col-md-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Должность"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Сфера деятельности"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
+                          <!--  .tabs__content -->
                         </div>
                       </div>
-                      <!-- +e.group-->
-                      <div class="form-wrap__group">
-                        <div class="h6 mono strong ttu">РЕКВИЗИТЫ КОМАНИИ</div>
-                        <div class="mono mb-3">Для отправки бухгалтерских документов</div>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="ИНН"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="КПП"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Юридическое название"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control" type="text" placeholder="Адрес"/>
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                        </div>
-                      </div>
-                      <!-- +e.group-->
                       <div class="form-wrap__foot-row row align-items-center justify-content-lg-start justify-content-center">
                         <div class="col-auto">
                           <button class="form-wrap__btn" type="submit">Сохранить
@@ -329,7 +386,7 @@
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group"> 
-          <label><span class="mono strong d-block"></span>
+          <label><span class="mono strong d-block">Выберите время</span>
             <select class="form-wrap__input form-control">
               <option value="" selected="selected" disabled="disabled">Выберите время для звонка</option>
               <option value="">10</option>
@@ -338,6 +395,14 @@
             </select>
           </label>
         </div><input class="form-wrap__btn mb-4 btn-block" type="submit" value="Заказать"/>
+        <div class="polite">
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite"/><span class="custom-input__lab"></span>
+          </label>Отправляя заявку Вы даете
+          
+          <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
+          
+          на&#160;обработку персональных данных
+        </div>
         <div class="text-center"><a class="tdu small fw-300" href="#">Отменить</a></div>
       </form>
     </div>
