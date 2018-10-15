@@ -557,28 +557,28 @@ jQuery(document).ready(function ($) {
 	})
 
 
-	$(".trop__item--dropdown ").each(function(){
+	$(".trop__item--dropdown ").each(function () {
 		$(this).append('<div class="toggle-l"></div>');
 	})
 
-	$( '.trop__item--dropdown  ').on('click', '.toggle-l', function(){
-			$(this).prev().slideToggle().parent().toggleClass("active");
-			return false;
-		}) 
+	$('.trop__item--dropdown  ').on('click', '.toggle-l', function () {
+		$(this).prev().slideToggle().parent().toggleClass("active");
+		return false;
+	})
 
 
-		
+//  для  менб брэндов
 	$('.top-nav__item--dropdown-js').hover(
 		function () {
 			$(this).show("show");
-		 $("html, .top-nav.fixed").addClass("fixed-brand"); 
+			$("html, .top-nav.fixed").addClass("fixed-brand");
 		},
-		
+
 		function () {
 			$(this).removeClass("show");
-			$("html, .top-nav.fixed").removeClass("fixed-brand"); 
-	
-		}, 
-		)
+			$("html, .top-nav.fixed").removeClass("fixed-brand");
+
+		},
+	)
 
 });
