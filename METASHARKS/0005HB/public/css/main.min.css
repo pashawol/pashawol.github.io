@@ -8986,6 +8986,18 @@ strong,.strong {
   z-index: 980 !important;
 }
 
+.top-nav__item--dropdown-js::before {
+  content: '';
+  background-color: #fff;
+  bottom: -2px;
+  width: 108px;
+  left: 50%;
+  margin-left: -54px;
+  position: absolute;
+  height: 2px;
+  z-index: 3002;
+}
+
 .top-nav__item--dropdown-js a {
   position: relative;
 }
@@ -9012,7 +9024,7 @@ strong,.strong {
 }
 
 .top-nav__item--dropdown-js:hover > a {
-  z-index: 2000;
+  z-index: 3000;
 }
 
 .top-nav__item--dropdown-js:hover > a::before {
