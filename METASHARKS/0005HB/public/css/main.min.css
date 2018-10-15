@@ -8261,6 +8261,40 @@ strong,.strong {
   margin-top: 10px;
 }
 
+.site-map {
+  padding-bottom: 30px;
+}
+
+.site-map__item {
+  display: block;
+}
+
+.site-map__link {
+  padding-left: 25px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.site-map__link--main {
+  position: relative;
+  font-weight: 700;
+}
+
+.site-map__link--main::before {
+  content: '';
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0.53333rem;
+  background-color: #f55f00;
+  width: 1.06667rem;
+  height: 2px;
+}
+
+.site-map__link--sub {
+  margin-left: 10px;
+}
+
 .icon {
   display: inline-block;
   width: 1em;
@@ -9757,11 +9791,11 @@ strong,.strong {
   font-size: 0.86667rem;
 }
 
-.dropdown-cat--other-js.show .dropdown-cat__toggle {
+.dropdown-cat--other-js:hover .dropdown-cat__toggle,.dropdown-cat--other-js.show .dropdown-cat__toggle {
   background-color: transparent !important;
 }
 
-.dropdown-cat--other-js.show .dropdown-cat__toggle::before {
+.dropdown-cat--other-js:hover .dropdown-cat__toggle::before,.dropdown-cat--other-js.show .dropdown-cat__toggle::before {
   background-color: #fff;
 }
 
