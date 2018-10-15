@@ -12,17 +12,18 @@ jQuery(document).ready(function ($) {
 	// });
 
 	// дробдаун в шапке , остальные категории
-	$('.dropdown-cat--other-js').hover(function () {
-		$(this).toggleClass("show").find('.dropdown-cat__menu').fadeToggle(100);
-		$(this).hasClass("show") ? $("body").addClass("fixed-drop") : $("body").removeClass("fixed-drop");
+	// $('.dropdown-cat--other-js').hover(function () {
+	// 	$(this).toggleClass("show").find('.dropdown-cat__menu').fadeToggle(100);
+	// 	$(this).hasClass("show") ? $("body").addClass("fixed-drop") : $("body").removeClass("fixed-drop");
 
-	})
+	// })
 	// дробдаун в шапке , все категории
-	$('.col-auto .dropdown-cat').hover(function () {
-		$(this).toggleClass("show").find('.dropdown-cat__menu').toggle();
-		$(this).hasClass("show") ? ($(".dropdown-cat__title").text("Закрыть"), $("body").addClass("fixed-drop")) : ($(".dropdown-cat__title").text("Все категории"), $("body").removeClass("fixed-drop"));
+	// $('.col-auto .dropdown-cat').hover(function () {
+	// 	$(this).toggleClass("show").find('.dropdown-cat__menu').toggle();
+	// 	$(this).hasClass("show") ? ($(".dropdown-cat__title").text("Закрыть"), $("body").addClass("fixed-drop")) : ($(".dropdown-cat__title").text("Все категории"), $("body").removeClass("fixed-drop"));
 
-	})
+	// })
+
 
 
 	//Assigning the h2 markup to accordion title
@@ -74,19 +75,19 @@ jQuery(document).ready(function ($) {
 	})
 
 
-	$(document).mouseup(function (e) {
-		var container = $(".dropdown-cat.show");
-		if (container.has(e.target).length === 0) {
-			$(".dropdown-cat__menu").hide();
-			// $("body").toggleClass("fixed");
-			// $(".dropdown-cat__title").text("Все категории");
-			// $(".dropdown-cat").removeClass("show");
-			$("body").removeClass("fixed-drop");
-			$(".dropdown-cat-has-children__item--js").removeClass('active');
-			$('.dropdown-cat-sub').removeClass('active');
-			$('.dropdown-cat-sub.active,.category-accordion.active, .dropdown-cat__menu.active', $catalog_nav).removeClass('active');
-		}
-	});
+	// $(document).mouseup(function (e) {
+	// 	var container = $(".dropdown-cat.show");
+	// 	if (container.has(e.target).length === 0) {
+	// 		$(".dropdown-cat__menu").hide();
+	// 		// $("body").toggleClass("fixed");
+	// 		// $(".dropdown-cat__title").text("Все категории");
+	// 		// $(".dropdown-cat").removeClass("show");
+	// 		$("body").removeClass("fixed-drop");
+	// 		$(".dropdown-cat-has-children__item--js").removeClass('active');
+	// 		$('.dropdown-cat-sub').removeClass('active');
+	// 		$('.dropdown-cat-sub.active,.category-accordion.active, .dropdown-cat__menu.active', $catalog_nav).removeClass('active');
+	// 	}
+	// });
 
 
 
@@ -554,4 +555,30 @@ jQuery(document).ready(function ($) {
 	$(".showhide").click(function () {
 		$(this).toggleClass("active").next().slideToggle().parents().toggleClass("active");
 	})
+
+
+	$(".trop__item--dropdown ").each(function(){
+		$(this).append('<div class="toggle-l"></div>');
+	})
+
+	$( '.trop__item--dropdown  ').on('click', '.toggle-l', function(){
+			$(this).prev().slideToggle().parent().toggleClass("active");
+			return false;
+		}) 
+
+
+		
+	$('.top-nav__item--dropdown-js').hover(
+		function () {
+			$(this).show("show");
+		 $("html, .top-nav.fixed").addClass("fixed-brand"); 
+		},
+		
+		function () {
+			$(this).removeClass("show");
+			$("html, .top-nav.fixed").removeClass("fixed-brand"); 
+	
+		}, 
+		)
+
 });
