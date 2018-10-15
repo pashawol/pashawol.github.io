@@ -235,10 +235,7 @@ jQuery(document).ready(function ($) {
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 				.eq($(this).index()).fadeIn().addClass('active');
-
-			var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-			localStorage.removeItem('tab' + ulIndex);
-			localStorage.setItem('tab' + ulIndex, $(this).index());
+ 
 
 		});
 	});
@@ -496,7 +493,10 @@ jQuery(document).ready(function ($) {
 
 	// ui slider
 	$(".aside-filter__group").each(function () {
+	 
 
+	
+	  
 		var
 			th = $(this),
 			handle_min = th.find('.minus'),
@@ -551,12 +551,13 @@ jQuery(document).ready(function ($) {
 
 
 
+
 	// accordion
 	$(".showhide").click(function () {
 		$(this).toggleClass("active").next().slideToggle().parents().toggleClass("active");
 	})
 
-
+// аккордион в моб меню
 	$(".trop__item--dropdown ").each(function () {
 		$(this).append('<div class="toggle-l"></div>');
 	})
@@ -566,7 +567,17 @@ jQuery(document).ready(function ($) {
 		return false;
 	})
 
+	$('.breadcrumb').slick({
+		dots: false,
+		arrows: false,
+		infinite: false,
+		loop: false,
+		speed: 450,
+		slidesToShow: 1,
+		// centerMode: true,
 
+		variableWidth: true
+	});
 //  для  менб брэндов
 	$('.top-nav__item--dropdown-js').hover(
 		function () {
@@ -578,7 +589,9 @@ jQuery(document).ready(function ($) {
 			$(this).removeClass("show");
 			$("html, .top-nav.fixed").removeClass("fixed-brand");
 
-		},
-	)
+		}
+	);
 
+	// для jq UI
+	$(".aside-filter__range--1").draggable();
 });
