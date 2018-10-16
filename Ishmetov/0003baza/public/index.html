@@ -17,9 +17,104 @@
       <div class="row no-gutters">
         <div class="aside-col col-auto">
           <!-- start s-catalog-->
-          <div class="s-catalog section" id="s-catalog">
-            <h2>s</h2>
-            <div class="row"></div>
+          <div class="s-catalog">
+            <div class="s-catalog__head">
+              <div class="search-block">
+                <div class="form-wrap">
+                  <form>
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Поиск по товарам"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <button class="form-wrap__btn" type="submit">
+                      <svg class="icon icon-search ">
+                        <use xlink:href="img/svg/sprite.svg#search"></use>
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="s-catalog__body">
+              <ul>
+                <li><a href="#">ГСМ</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+                <li><a href="#">Клейкие ленты</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+                <li><a href="#">Колёса и ролики</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+                <li><a href="#">Металлическая мебель</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+                <li><a href="#">Материалы безопасности</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+                <li><a href="#">Конструкционные материалы</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+                <li><a href="#">Резино-технические изделия</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+                <li><a href="#">Соединения и крепеж</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+                <li><a href="#">Асбесто-технические изделия</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+                <li><a href="#">Спецодежда</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+                <li><a href="#">Такелаж</a>
+                    <li><a href="#">Резина</a></li>
+                    <li><a href="#">Ремни приводные</a></li>
+                    <li><a href="#">Рукава (шланги)</a></li>
+                    <li><a href="#">Тормозная лента</a></li>
+                    <li><a href="#">Уплотнения</a></li>
+                </li>
+              </ul>
+            </div>
           </div>
           <!-- end s-catalog-->
         </div>
@@ -124,14 +219,10 @@
           </div>
           <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
         </div>
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">text</span><input class="form-wrap__input form-control" type="Ваше Имя" required="required"/>
-          </label>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" required="required"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Ваш телефон" required="required"/>
-          </label>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
         </div>
         <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
         <div class="politic">
