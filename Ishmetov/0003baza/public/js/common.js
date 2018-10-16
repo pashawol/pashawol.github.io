@@ -184,11 +184,35 @@ jQuery(document).ready(function ($) {
 	//      uploadMultiple: true,
 	//   });
 
-  
+  // аккордион в боковом меню
 	$(".s-catalog__link--js").click(function (e) {
 		e.preventDefault();
 		var accord = $(this).next();
 		accord.hasClass("active") ?  (accord.slideUp().removeClass("active"), $(this).removeClass("active")) : (accord.slideDown().addClass("active"), $(this).addClass("active"));
+		
+	})
+	// показать список товаров
+	$('.s-catalog__link--sub-js').click(function () {
+		$('.s-catalog__link--sub-category-js, .s-catalog--sub-prod-js ').removeClass('active');
+		$(this).toggleClass('active').parent().siblings().find('.s-catalog__link--sub-js ').removeClass('active');
+		
+		!$(this).hasClass("active") ? $('.s-catalog--sub-category-js').removeClass('active') : $('.s-catalog--sub-category-js').addClass('active');
+		
+	})
+	
+	// показать  товар
+		$('.s-catalog__link--sub-category-js').click(function () {
+			$(this).toggleClass('active').parent().siblings().find('.s-catalog__link--sub-category-js ').removeClass('active');
+
+			!$(this).hasClass("active") ? $('.s-catalog--sub-prod-js').removeClass('active') : $('.s-catalog--sub-prod-js').addClass('active');
+			
+			})
+			
+		$('.s-catalog__close').click(function () {
+			$('.s-catalog__link--sub-category-js, .s-catalog--sub-prod-js ').removeClass('active');
+
 		 
-	  })
+			})
+
+			
 });
