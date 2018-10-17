@@ -10,13 +10,21 @@ jQuery(document).ready(function ($) {
 		$(this).find("a").magnificPopup({
 			type: 'image',
 			closeOnContentClick: false,
-			closeBtnInside: false,
+			closeBtnInside: true,
 			mainClass: 'mfp-with-zoom mfp-img-mobile',
 			image: {
-				verticalFit: true,
+			 
+				cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+			
+				titleSrc: 'title', // Attribute of the target element that contains caption for the slide.
+				// Or the function that should return the title. For example:
 				// titleSrc: function(item) {
-				//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+				//   return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
 				// }
+			
+				verticalFit: true, // Fits image in area vertically
+			
+				// tError: '<a href="%url%">The image</a> could not be loaded.' // Error message
 			},
 			gallery: {
 				enabled: true
@@ -213,14 +221,14 @@ jQuery(document).ready(function ($) {
 	$('.hidden-mnu ul li a').on('click', function () {
 		$(".hidden-mnu .toggle-mnu").click();
 	});
-	$(document).mouseup(function (e) {
-		var container = $(".s-catalog");
-		if (container.has(e.target).length === 0) {
-			// $(".toggle-mnu-1").removeClass("on");
-			// $("body").toggleClass("fixed");
-			$(".s-catalog--sub-category-js.active, .s-catalog__link--sub-js.active").removeClass("active");
-			$("body, html").removeClass("fixed");
-		}
-	});
+	// $(document).mouseup(function (e) {
+	// 	var container = $(".s-catalog");
+	// 	if (container.has(e.target).length === 0  ) {
+	// 		// $(".toggle-mnu-1").removeClass("on");
+	// 		// $("body").toggleClass("fixed");
+	// 		$(".s-catalog--sub-category-js.active, .s-catalog__link--sub-js.active").removeClass("active");
+	// 		$("body, html").removeClass("fixed");
+	// 	}
+	// });
  
 });
