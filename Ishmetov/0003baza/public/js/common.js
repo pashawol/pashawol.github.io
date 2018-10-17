@@ -174,7 +174,7 @@ jQuery(document).ready(function ($) {
 			})
 			
 		$('.s-catalog__close').click(function () {
-			$('.s-catalog__link--sub-category-js, .s-catalog--sub-prod-js, .s-catalog__link--sub-js ').removeClass('active');
+			$('.s-catalog__link--sub-category-js, .s-catalog--sub-prod-js ').removeClass('active');
 			$("body, html").removeClass("fixed")
 		 
 			})
