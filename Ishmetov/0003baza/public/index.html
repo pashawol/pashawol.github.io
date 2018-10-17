@@ -16,21 +16,35 @@
     <div class="main-wrapper">
       <div class="row no-gutters">
         <div class="aside-col col-auto">
+          <div class="toggle-menu-js"><span></span></div>
           <!-- start s-catalog-->
-          <div class="s-catalog">
+          <div class="s-catalog s-catalog--menu-js">
             <div class="s-catalog__head">
-              <div class="search-block">
-                <div class="form-wrap">
-                  <form>
-                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Поиск по товарам"/>
+              <div class="s-catalog__head-inner">
+                <div class="row">
+                  <div class="col">
+                    <div class="search-block">
+                      <div class="form-wrap">
+                        <form>
+                          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Поиск по товарам"/>
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <button class="form-wrap__btn" type="submit">
+                            <svg class="icon icon-search ">
+                              <use xlink:href="img/svg/sprite.svg#search"></use>
+                            </svg>
+                          </button>
+                        </form>
+                      </div>
                     </div>
-                    <!-- +e.input-wrap-->
-                    <button class="form-wrap__btn" type="submit">
-                      <svg class="icon icon-search ">
-                        <use xlink:href="img/svg/sprite.svg#search"></use>
+                  </div>
+                  <div class="col-auto d-lg-none">
+                    <div class="s-catalog__close s-catalog__close--menu-js">
+                      <svg class="icon icon-close ">
+                        <use xlink:href="img/svg/sprite.svg#close"></use>
                       </svg>
-                    </button>
-                  </form>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1206,14 +1220,39 @@
             </div>
           </div>
           <div class="s-catalog s-catalog--sub s-catalog--sub-category-js">
-            <div class="s-catalog__head">
+            <div class="s-catalog__head s-catalog__head--category">
+              <div class="s-catalog__head-inner">
+                <div class="s-catalog__small-row row">
+                  <div class="col d-none d-xxxl-block">
+                    <div class="s-catalog__text-sort text-gray">Сортировать:
+                    </div>
+                  </div>
+                  <div class="col-xxxl-auto col">
+                    <button class="s-catalog__btn-sort s-catalog__btn-sort--active s-catalog__btn-sort--active-up" type="button">по цене
+                      <svg class="icon icon-sort ">
+                        <use xlink:href="img/svg/sprite.svg#sort"></use>
+                      </svg>
+                    </button>
+                    <button class="s-catalog__btn-sort" type="button">по наименованию
+                    </button>
+                  </div>
+                  <div class="col-auto d-lg-none">
+                    <div class="s-catalog__close s-catalog__close--category-js">
+                      <svg class="icon icon-close ">
+                        <use xlink:href="img/svg/sprite.svg#close"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="s-catalog__body"><ul>
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1000</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1000</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1226,8 +1265,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-970</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-970</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1240,8 +1280,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-975</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-975</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1254,8 +1295,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1020</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1020</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1268,8 +1310,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1035</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1035</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1282,8 +1325,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1045</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1045</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1296,8 +1340,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1054</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1054</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1310,8 +1355,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-860</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-860</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1324,8 +1370,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1220 &quot;Rubena&quot;</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1220 &quot;Rubena&quot;</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1338,8 +1385,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1100</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1100</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1352,8 +1400,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1115</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1115</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1366,8 +1415,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1220 &quot;Rubena&quot;</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1220 &quot;Rubena&quot;</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1380,8 +1430,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1125</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1125</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1394,8 +1445,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1125</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1125</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1408,8 +1460,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1125</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1125</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1422,8 +1475,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1125</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1125</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1436,8 +1490,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1125</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1125</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1450,8 +1505,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1125</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1125</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1464,8 +1520,9 @@
               <li class="s-catalog__item s-catalog__item--sub s-catalog__item--js"><a class="s-catalog__link s-catalog__link--sub s-catalog__link--sub-category-js" href="#">
                 <div class="w-100">
                   <div class="row">
-                    <div class="col">Ремень поликлиновой 6РК-1125</div>
-                    <div class="col-auto"><span class="s-catalog__price">410₽<span class="s-catalog__smaller text-gray">/шт.</span></span>
+                    <div class="col"><span class="s-catalog__title-link">Ремень поликлиновой 6РК-1125</span>
+                    </div>
+                    <div class="col-auto"><span class="s-catalog__price">410₽ <span class="s-catalog__smaller text-gray">/шт.</span></span>
                     </div>
                   </div>
                   <div class="s-catalog__toggle">
@@ -1478,11 +1535,25 @@
             </div>
           </div>
           <div class="s-catalog s-catalog--sub s-catalog--sub-prod s-catalog--sub-prod-js">
-            <div class="s-catalog__head">
-              <div class="s-catalog__close">
-                <svg class="icon icon-close ">
-                  <use xlink:href="img/svg/sprite.svg#close"></use>
-                </svg>
+            <div class="s-catalog__head py-0 pr-0">
+              <div class="s-catalog__head-inner s-catalog__head-inner--prod"> 
+                <div class="s-catalog__big-row row">
+                  <div class="col-auto"><a class="s-catalog__head-link" href="#">
+                    <svg class="icon icon-map ">
+                      <use xlink:href="img/svg/sprite.svg#map"></use>
+                    </svg><span> Адреса магазинов</span></a>
+                  </div>
+                  <div class="col-auto"><a class="s-catalog__head-link" href="#">
+                    <svg class="icon icon-box ">
+                      <use xlink:href="img/svg/sprite.svg#box"></use>
+                    </svg><span> Доставка и оплата </span></a>
+                  </div>
+                </div>
+                <div class="s-catalog__close s-catalog__close--prod-js">
+                  <svg class="icon icon-close ">
+                    <use xlink:href="img/svg/sprite.svg#close"></use>
+                  </svg>
+                </div>
               </div>
             </div>
             <div class="s-catalog__body">
@@ -1490,13 +1561,25 @@
                 <div class="prod-card__title">Ремень поликлиновой 6РК-1020
                 </div>
                 <div class="row">
-                  <div class="col-auto gal"><a class="prod-card__img-wrap" href="img/prod.png"><span><img src="img/prod.png" alt=""/></span></a>
+                  <div class="col-xxxl-6 col-lg-auto col-sm-5 gal"><a class="prod-card__img-wrap" href="img/prod.png"><span><img src="img/prod.png" alt=""/></span></a>
                   </div>
                   <div class="col">
                     <div class="prod-card__text">Поликлиновой ремень представляет собой плоский ремень с клиновидными ручьями расположенными параллельно и состоящие из износостойчивой резиновой смеси. Данный ремень имеет высокий КПД и высокую износостойкость. С помощью него можно передавать вразещния с большими передаточными отношениями. Данные ремень имеет сечение РК.
                     </div>
-                    <div class="prod-card__price">410 ₽ <span class="prod-card__smaller text-gray">/шт.</span>
-                    </div><a class="prod-card__btn" href="#">Оставить заявку</a>
+                    <div class="d-none d-xxl-block">
+                      <div class="prod-card__price">410 ₽ <span class="prod-card__smaller text-gray">/шт.</span>
+                      </div><a class="prod-card__btn" href="#">Оставить заявку</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-xl-block d-xxl-none">
+                  <div class="row align-items-center">
+                    <div class="col-xxxl-6 col-lg-auto col-sm-5 col-auto">
+                      <div class="prod-card__price">410 ₽ <span class="prod-card__smaller text-gray">/шт. </span>
+                      </div>
+                    </div>
+                    <div class="col"><a class="prod-card__btn" href="#">Оставить заявку</a>
+                    </div>
                   </div>
                 </div>
                 <table>
