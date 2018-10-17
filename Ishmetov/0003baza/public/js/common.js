@@ -23,43 +23,8 @@ jQuery(document).ready(function ($) {
 			}
 		});
 	})
-	// закрыть/открыть мобильное меню
-	var toggMnu = $(".toggle-mnu-1").click(function () {
 
-		$(".toggle-mnu-1").toggleClass("on");
-		// $("body").toggleClass("fixed");
-		$(".hidden-mnu").toggleClass("active");
-		$("body, html").toggleClass("fixed");
-		return false;
-	});
-	$('.hidden-mnu ul li a').on('click', function () {
-		$(".hidden-mnu .toggle-mnu").click();
-	});
-	$(document).mouseup(function (e) {
-		var container = $(".hidden-mnu.active");
-		if (container.has(e.target).length === 0) {
-			$(".toggle-mnu-1").removeClass("on");
-			// $("body").toggleClass("fixed");
-			$(".hidden-mnu").removeClass("active");
-			$("body, html").removeClass("fixed");
-		}
-	});
-	// закрыть меню при горизонтальном свайпе
-	$('.hidden-mnu.active').swipe({
-		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-			if (direction == 'left') {
-				$(".toggle-mnu-1").removeClass("on");
-				$(".hidden-mnu.active").removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-			if (direction == 'right') {
-				$(".toggle-mnu-1").removeClass("on");
-				$(".hidden-mnu.active").removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-		},
-		triggerOnTouchEnd: false,
-	});
+ 
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
@@ -196,7 +161,7 @@ jQuery(document).ready(function ($) {
 		$('.s-catalog__link--sub-category-js, .s-catalog--sub-prod-js ').removeClass('active');
 		$(this).toggleClass('active').parent().siblings().find('.s-catalog__link--sub-js ').removeClass('active');
 		
-		!$(this).hasClass("active") ? $('.s-catalog--sub-category-js').removeClass('active') : $('.s-catalog--sub-category-js').addClass('active');
+		!$(this).hasClass("active") ? ($('.s-catalog--sub-category-js').removeClass('active'), $("body, html").removeClass("fixed")) : ($('.s-catalog--sub-category-js').addClass('active'), $("body, html").addClass("fixed"));
 		
 	})
 	
@@ -204,15 +169,36 @@ jQuery(document).ready(function ($) {
 		$('.s-catalog__link--sub-category-js').click(function () {
 			$(this).toggleClass('active').parent().siblings().find('.s-catalog__link--sub-category-js ').removeClass('active');
 
-			!$(this).hasClass("active") ? $('.s-catalog--sub-prod-js').removeClass('active') : $('.s-catalog--sub-prod-js').addClass('active');
+			!$(this).hasClass("active") ? ($('.s-catalog--sub-prod-js').removeClass('active')) : ($('.s-catalog--sub-prod-js').addClass('active'));
 			
 			})
 			
 		$('.s-catalog__close').click(function () {
-			$('.s-catalog__link--sub-category-js, .s-catalog--sub-prod-js ').removeClass('active');
-
+			$('.s-catalog__link--sub-category-js, .s-catalog--sub-prod-js, .s-catalog__link--sub-js ').removeClass('active');
+			$("body, html").removeClass("fixed")
 		 
 			})
 
-			
+				// закрыть/открыть мобильное меню
+	var toggMnu = $(".toggle-mnu-1").click(function () {
+
+		$(".toggle-mnu-1").toggleClass("on");
+		// $("body").toggleClass("fixed");
+		$(".hidden-mnu").toggleClass("active");
+		$("body, html").toggleClass("fixed");
+		return false;
+	});
+	$('.hidden-mnu ul li a').on('click', function () {
+		$(".hidden-mnu .toggle-mnu").click();
+	});
+	$(document).mouseup(function (e) {
+		var container = $(".s-catalog");
+		if (container.has(e.target).length === 0) {
+			// $(".toggle-mnu-1").removeClass("on");
+			// $("body").toggleClass("fixed");
+			$(".s-catalog--sub-category-js.active, .s-catalog__link--sub-js.active").removeClass("active");
+			$("body, html").removeClass("fixed");
+		}
+	});
+ 
 });

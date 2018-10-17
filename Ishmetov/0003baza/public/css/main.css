@@ -4229,6 +4229,10 @@ html {
   background-repeat: no-repeat;
 }
 
+html.fixed {
+  overflow: hidden;
+}
+
 body {
   background-color: transparent;
 }
@@ -4327,7 +4331,6 @@ body,html {
 body {
   min-width: 320px;
   position: relative;
-  overflow: hidden;
 }
 
 body::before {
@@ -4340,13 +4343,14 @@ body::before {
   -webkit-transition: all 0.36s ease;
   -o-transition: all 0.36s ease;
   transition: all 0.36s ease;
-  background-color: #000000;
+  background-color: #fff;
   opacity: 0;
   z-index: -1;
   top: 0;
 }
 
 body.fixed {
+  overflow: hidden;
   position: absolute;
   width: 100%;
   left: 0;
@@ -4356,7 +4360,7 @@ body.fixed {
 
 body.fixed::before {
   z-index: 999;
-  opacity: 0.76;
+  opacity: 0.75;
 }
 
 .main-wrapper {
@@ -5246,7 +5250,6 @@ select.form-control:focus::-ms-value {
 }
 
 .s-catalog--sub.active {
-  margin-left: 1px;
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
           transform: translate(0, 0);
@@ -5318,10 +5321,11 @@ select.form-control:focus::-ms-value {
   border-bottom: 1px solid #f3f3f3;
   text-decoration: none !important;
   min-height: 2.77778rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -6646,6 +6650,16 @@ a {
 
   .text-sm-center {
     text-align: center !important;
+  }
+
+  html {
+    margin-right: -webkit-calc(-1 * (100vw - 100%));
+    margin-right: calc(-1 * (100vw - 100%));
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-right: 20px;
   }
 
   body,html {
