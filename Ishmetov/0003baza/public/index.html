@@ -25,16 +25,14 @@
                   <div class="col">
                     <div class="search-block">
                       <div class="form-wrap">
-                        <form>
-                          <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Поиск по товарам"/>
-                          </div>
-                          <!-- +e.input-wrap-->
-                          <button class="form-wrap__btn" type="submit">
-                            <svg class="icon icon-search ">
-                              <use xlink:href="img/svg/sprite.svg#search"></use>
-                            </svg>
-                          </button>
-                        </form>
+                        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Поиск по товарам"/>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <button class="form-wrap__btn-search" type="submit">
+                          <svg class="icon icon-search ">
+                            <use xlink:href="img/svg/sprite.svg#search"></use>
+                          </svg>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1578,7 +1576,7 @@
                       <div class="prod-card__price">410 ₽ <span class="prod-card__smaller text-gray">/шт. </span>
                       </div>
                     </div>
-                    <div class="col"><a class="prod-card__btn" href="#">Оставить заявку</a>
+                    <div class="col"><a class="prod-card__btn popup-with-move-anim" href="#modal-order">Оставить заявку</a>
                     </div>
                   </div>
                 </div>
@@ -1706,28 +1704,55 @@
         </div>
       </div>
     </div>
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
-      <form>
-        <div class="text-center">
-          <div class="form-wrap__title h3 ttu">Обратный звонок
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-order">
+      <div class="form-wrap__modal-group form-wrap__modal-group--head"> Оставить заявку 
+        <div class="close-modal">
+          <svg class="icon icon-close ">
+            <use xlink:href="img/svg/sprite.svg#close"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="form-wrap__modal-group form-wrap__modal-group--prod">
+        <div class="row">
+          <div class="col-auto">
+            <div class="form-wrap__img-wrap"><span><img src="img/prod.png" alt=""/></span>
+            </div>
           </div>
-          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+          <div class="col">
+            <div class="form-wrap__name">Ремень поликлиновой 6РК-1020
+            </div>
+            <div class="form-wrap__price">410 ₽ <span class="form-wrap__smaller text-gray">/шт.</span>
+            </div>
+          </div>
         </div>
-        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" required="required"/>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
-        </div>
-        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
-        <div class="politic">
-          Отправляя заявку Вы даете
-          <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
-          
-          на&#160;обработку персональных данных
-        </div>
-      </form>
+      </div>
+      <div class="form-wrap__modal-group form-wrap__modal-group--body">
+        <form>
+          <label class="form-wrap__input-wrap form-group"> <span class="form-wrap__title">ФИО:</span><input class="form-wrap__input form-control" type="text"/>
+          </label>
+          <!-- +e.input-wrap-->
+          <label class="form-wrap__input-wrap form-group"> <span class="form-wrap__title">E-mail:</span><input class="form-wrap__input form-control" type="email"/>
+          </label>
+          <!-- +e.input-wrap-->
+          <label class="form-wrap__input-wrap form-group"> <span class="form-wrap__title">Телефон:</span><input class="form-wrap__input form-control" type="tel" placeholder="+_(___) ___-__-__"/>
+          </label>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__foot-row row">
+            <div class="col-sm-auto">
+              <div class="form-wrap__polite">
+                <label class="custom-input"><input class="custom-input__input" type="checkbox" name="ch" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Я согласен(а) на обработку и хранение моих персональных данных в соответствии с Условиями</span>
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <button class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit"> Отправить
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-    <!-- #modal-call-->
+    <!-- #modal-order-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/popper.min.js"></script>

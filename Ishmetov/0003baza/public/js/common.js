@@ -134,8 +134,8 @@ jQuery(document).ready(function ($) {
  
 
 	// маска на инпут
-	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
-		"mask": "+7(999)999-99-99"
+	$("input[type='tel']").attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
+		"mask": "+9(999)999-99-99"
 	});
 
  
