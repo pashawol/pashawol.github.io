@@ -149,19 +149,13 @@ jQuery(document).ready(function ($) {
 		name.text(filename);
 
 	});
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
+ 
+	$('body').prepend('<div class="catalog-bg">');
   // аккордион в боковом меню
 	$(".s-catalog__link--js").click(function (e) {
 		e.preventDefault();
 		var accord = $(this).next();
-		accord.hasClass("active") ?  (accord.slideUp().removeClass("active"), $(this).removeClass("active")) : (accord.slideDown().addClass("active"), $(this).addClass("active"));
+		accord.hasClass("active") ?  (accord.slideUp(200).removeClass("active"), $(this).removeClass("active")) : (accord.slideDown(200).addClass("active"), $(this).addClass("active"));
 		
 	})
 	// показать список товаров
@@ -169,7 +163,8 @@ jQuery(document).ready(function ($) {
 		$('.s-catalog__link--sub-category-js, .s-catalog--sub-prod-js ').removeClass('active');
 		$(this).toggleClass('active').parent().siblings().find('.s-catalog__link--sub-js ').removeClass('active');
 		
-		!$(this).hasClass("active") ? ($('.s-catalog--sub-category-js').removeClass('active'), $("body, html").removeClass("fixed")) : ($('.s-catalog--sub-category-js').addClass('active'), $("body, html").addClass("fixed"));
+
+		!$(this).hasClass("active") ? ($('.s-catalog--sub-category-js ').removeClass('active'), $("body, html").removeClass("fixed"), $('.close-menu-wrap').removeClass('close-hidden')) : ($('.s-catalog--sub-category-js, .s-catalog--menu-js').addClass('active'), $("body, html").addClass("fixed"), $('.close-menu-wrap').addClass('close-hidden'));
 		
 	})
 	
@@ -187,9 +182,24 @@ jQuery(document).ready(function ($) {
 				
 			})
 			
-			// закрыть окно категории
-		$('.s-catalog__close--category-js').click(function () {
+			// закрыть окно категории клик по белому фону
+		$('.catalog-bg ').click(function () {
+			$('.s-catalog--menu-js, .s-catalog__link--sub-js, .s-catalog--sub-category-js, .s-catalog__link--sub-category-js, .s-catalog--sub-prod-js ').removeClass('active');
+			$("body, html").removeClass("fixed").removeClass("fixed-mob");
+			
+		})
+		
+		// закрыть окно категории
+
+		function CloseCategry( ) {
 			$('.s-catalog__link--sub-js, .s-catalog--sub-category-js, .s-catalog__link--sub-category-js, .s-catalog--sub-prod-js ').removeClass('active');
+			
+		}
+
+		
+		$('  .s-catalog__close--category-js').click(function () {
+			CloseCategry();
+			$('.close-menu-wrap').toggleClass('close-hidden');
 			// $("body, html").removeClass("fixed")
 		 
 			})
@@ -197,38 +207,17 @@ jQuery(document).ready(function ($) {
 			
 			// закрыть окно меню 
 		$('.s-catalog__close--menu-js').click(function () {
+			CloseCategry();
 			$('.s-catalog--menu-js ').removeClass('active');
-			$("body, html").removeClass("fixed")
-			$('.s-catalog__close--category-js').click();
-		 
+			$("body, html").removeClass("fixed").removeClass("fixed-mob");
 			})
 
 		$(".toggle-menu-js").click(function () {
-			$('.s-catalog--menu-js ').addClass('active');
-			$("body, html").addClass("fixed");
+			$('.s-catalog--menu-js ').addClass('active'); 
+			$("body, html").toggleClass("fixed-mob");
 		
 		 
 			})
-				// закрыть/открыть мобильное меню
-	var toggMnu = $(".toggle-mnu-1").click(function () {
-
-		$(".toggle-mnu-1").toggleClass("on");
-		// $("body").toggleClass("fixed");
-		$(".hidden-mnu").toggleClass("active");
-		$("body, html").toggleClass("fixed");
-		return false;
-	});
-	$('.hidden-mnu ul li a').on('click', function () {
-		$(".hidden-mnu .toggle-mnu").click();
-	});
-	// $(document).mouseup(function (e) {
-	// 	var container = $(".s-catalog");
-	// 	if (container.has(e.target).length === 0  ) {
-	// 		// $(".toggle-mnu-1").removeClass("on");
-	// 		// $("body").toggleClass("fixed");
-	// 		$(".s-catalog--sub-category-js.active, .s-catalog__link--sub-js.active").removeClass("active");
-	// 		$("body, html").removeClass("fixed");
-	// 	}
-	// });
  
+
 });

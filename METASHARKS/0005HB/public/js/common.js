@@ -492,62 +492,62 @@ jQuery(document).ready(function ($) {
 
 
 	// ui slider
-	$(".aside-filter__group").each(function () {
+	// $(".aside-filter__group").each(function () {
 	 
 
 	
 	  
-		var
-			th = $(this),
-			handle_min = th.find('.minus'),
-			handle_max = th.find('.plus'),
-			minn = parseInt(handle_min.val()),
-			maxx = parseInt(handle_max.val());
+	// 	var
+	// 		th = $(this),
+	// 		handle_min = th.find('.minus'),
+	// 		handle_max = th.find('.plus'),
+	// 		minn = parseInt(handle_min.val()),
+	// 		maxx = parseInt(handle_max.val());
 
 
 
-		th.find(".aside-filter__range--1").slider({
-			min: minn,
-			max: maxx,
-			values: [minn, maxx],
-			range: true,
-			stop: function (event, ui) {
-				handle_min.val(ui.values[0]);
-				handle_max.val(ui.values[1]);
-			},
-			slide: function (event, ui) {
-				handle_min.val(ui.values[0]);
-				handle_max.val(ui.values[1]);
-			}
-		});
-		handle_min.change(function () {
-			var value1 = handle_min.val();
-			var value2 = handle_max.val();
+	// 	th.find(".aside-filter__range--1").slider({
+	// 		min: minn,
+	// 		max: maxx,
+	// 		values: [minn, maxx],
+	// 		range: true,
+	// 		stop: function (event, ui) {
+	// 			handle_min.val(ui.values[0]);
+	// 			handle_max.val(ui.values[1]);
+	// 		},
+	// 		slide: function (event, ui) {
+	// 			handle_min.val(ui.values[0]);
+	// 			handle_max.val(ui.values[1]);
+	// 		}
+	// 	});
+	// 	handle_min.change(function () {
+	// 		var value1 = handle_min.val();
+	// 		var value2 = handle_max.val();
 
-			if (parseInt(value1) > parseInt(value2)) {
-				value1 = value2;
-				handle_min.val(value1);
-			}
-			th.find(".aside-filter__range--1").slider("values", 0, value1);
-		});
+	// 		if (parseInt(value1) > parseInt(value2)) {
+	// 			value1 = value2;
+	// 			handle_min.val(value1);
+	// 		}
+	// 		th.find(".aside-filter__range--1").slider("values", 0, value1);
+	// 	});
 
 
-		handle_max.change(function () {
-			var value1 = handle_min.val();
-			var value2 = handle_max.val();
+	// 	handle_max.change(function () {
+	// 		var value1 = handle_min.val();
+	// 		var value2 = handle_max.val();
 
-			if (value2 > 1000) {
-				value2 = 1000;
-				handle_max.val(1000)
-			}
+	// 		if (value2 > 1000) {
+	// 			value2 = 1000;
+	// 			handle_max.val(1000)
+	// 		}
 
-			if (parseInt(value1) > parseInt(value2)) {
-				value2 = value1;
-				handle_max.val(value2);
-			}
-			th.find(".aside-filter__range--1").slider("values", 1, value2);
-		});
-	});
+	// 		if (parseInt(value1) > parseInt(value2)) {
+	// 			value2 = value1;
+	// 			handle_max.val(value2);
+	// 		}
+	// 		th.find(".aside-filter__range--1").slider("values", 1, value2);
+	// 	});
+	// });
 
 
 
@@ -591,7 +591,60 @@ jQuery(document).ready(function ($) {
 
 		}
 	);
+		// $(".dropdown-cat, .top-nav__item--dropdown").hover(
+		// 	function () { 
+		// 		setTimeout(function() { $(this).toggleClass("hover-block"); }, 1000);
+		// 	})
 
-	// для jq UI
-	$(".aside-filter__range--1").draggable();
-});
+		// замедление ховера в меню
+			var $li = $('.dropdown-cat, .top-nav__item--dropdown').hover(
+				function () {
+						var self = this;
+						hovertimer = setTimeout(function(){
+								$(self).addClass('hover-block');
+								// $("html, .top-nav.fixed").addClass("fixed-brand");
+							}, 200);
+						},
+						function () {
+							// clearTimeout(hovertimer);
+							// $li.removeClass('hover-block');
+							// $("html, .top-nav.fixed").removeClass("fixed-brand");
+				}
+		);
+			// для jq UI
+		// тут все настройки  ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html
+
+		$('.slider-rang-wrap').each(function ( ) {
+			var th = $(this);
+		var slider	= th.find(".range-slider").ionRangeSlider({
+				type: "double", 
+				grid: false,
+				min: 0,
+				max: 1000,
+				grid_snap: false,
+				force_edges: true,
+				hide_min_max: true,
+				hide_from_to: true,
+				// hide_grid_text: true,
+				onStart: function (data) {
+					th.find('.minus').val(data.from);
+					th.find('.plus').val(data.to);
+				},
+				onChange: function (data) {
+					th.find('.minus').val(data.from);
+					th.find('.plus').val(data.to);
+				},
+				onFinish: function (data) {
+					th.find('.minus').val(data.from);
+					th.find('.plus').val(data.to);
+				},
+				onUpdate: function (data) {
+					th.find('.minus').val(data.from);
+					th.find('.plus').val(data.to);
+				}
+			});
+
+ 
+
+	});
+		});
