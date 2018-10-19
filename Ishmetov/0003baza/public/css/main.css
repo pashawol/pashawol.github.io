@@ -326,7 +326,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.section-title,.h3,.h4,.h5,.h6 {
 }
 
 h1,.h1 {
-  font-size: 2.66667rem;
+  font-size: 1.6rem;
 }
 
 h2,.h2,.section-title {
@@ -3196,7 +3196,7 @@ a {
 }
 
 .page-title {
-  margin-bottom: 1.66667em;
+  margin-bottom: 1em;
 }
 
 .section {
@@ -4251,11 +4251,21 @@ img.mfp-img {
   display: block;
 }
 
+.s-content {
+  font-size: 1.11111rem;
+}
+
+.s-content .container-inner {
+  max-width: 1170px;
+}
+
 .s-content p {
   color: #545557;
   font-size: 1.11111rem;
   line-height: 1.5;
   margin-bottom: 1.77778em;
+  position: relative;
+  z-index: 22;
 }
 
 .s-content p strong,.s-content p a {
@@ -4265,6 +4275,33 @@ img.mfp-img {
 
 .s-content p a:hover {
   color: #545557;
+}
+
+.s-content .strong {
+  margin-bottom: 0.55556em;
+}
+
+.s-content ul {
+  list-style-type: none;
+  position: relative;
+  z-index: 22;
+}
+
+.s-content li {
+  position: relative;
+  padding-left: 14px;
+}
+
+.s-content li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: #fbc400;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  left: 0;
+  top: 0.55556em;
+  position: absolute;
 }
 
 .s-content__slider {
@@ -4285,6 +4322,15 @@ img.mfp-img {
   position: relative;
   height: 0;
   padding-bottom: 71.33333%;
+}
+
+.s-content .delievary-img {
+  position: relative;
+  margin-top: -26%;
+  max-width: 100%;
+  max-height: auto;
+  display: block;
+  margin-left: auto;
 }
 
 .s-contact {
@@ -6084,6 +6130,10 @@ a {
 }
 
 @media (min-width: 768px) {
+  h1,.h1 {
+    font-size: 1.86667rem;
+  }
+
   .col-md {
     -webkit-flex-basis: 0;
         -ms-flex-preferred-size: 0;
@@ -6889,6 +6939,10 @@ a {
 
   .text-md-center {
     text-align: center !important;
+  }
+
+  .page-title {
+    margin-bottom: 1.16667em;
   }
 
   .form-wrap__modal-group {
@@ -7793,6 +7847,10 @@ a {
 }
 
 @media (min-width: 1060px) {
+  h1,.h1 {
+    font-size: 2.4rem;
+  }
+
   .container {
     max-width: 768px;
   }
@@ -8604,6 +8662,10 @@ a {
     text-align: center !important;
   }
 
+  .page-title {
+    margin-bottom: 1.5em;
+  }
+
   .section {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -8720,6 +8782,10 @@ a {
 }
 
 @media (min-width: 1200px) {
+  h1,.h1 {
+    font-size: 2.66667rem;
+  }
+
   .container {
     max-width: 970px;
   }
@@ -9529,6 +9595,10 @@ a {
 
   .text-xl-center {
     text-align: center !important;
+  }
+
+  .page-title {
+    margin-bottom: 1.66667em;
   }
 
   .top-line .region-block {
