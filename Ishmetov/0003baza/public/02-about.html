@@ -9,12 +9,14 @@
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" href="img/favicon/favicon.ico">
     <!-- Custom Browsers Color-->
-    <meta name="theme-color" content="#3361d8">
+    <meta name="theme-color" content="$primary">
+    <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="row no-gutters">
+      <div class="row no-gutters main-row">
         <div class="aside-col col-auto">
           <div class="toggle-menu-js"><span></span></div>
           <!-- start s-catalog-->
@@ -2405,11 +2407,31 @@
           <!-- start s-content-->
           <div class="s-content section" id="s-content">
             <div class="container">
-              <h1>О компании</h1>
-              <p>Сеть магазинов промышленных товаров «БАЗА» существует на рынке с 2006 года и присутствует в городах: Нижний Новгород, Казань, Самара и Тольятти. Компания успешно развивается в направлении комплексного снабжения торговых и промышленных предприятий полным ассортиментом качественной продукции.</p>
-              <p>Узнать о наличии интересующего вас товара вы можете по телефону: +7 (846) 231-29-84 или оставив заявку на товар в нашем каталоге. Забрать товар вы можете в любом нашем магазине заранее уточнив о наличии по телефону. Также компания «БАЗА» осуществляет доставку товара в регионы транспортной компанией по выбору клиента (доставка до ТК - бесплатно). Условия доставки обсуждаются с менеджером индивидуально.</p>
-              <div class="row gal">
-                <div class="s-content__col col-3"><a class="s-content__img-wrap" href="#"></a>
+              <div class="container-inner">
+                <div class="page-title">
+                  <h1>О компании</h1>
+                </div>
+                <p>Сеть магазинов промышленных товаров «БАЗА» существует на рынке с 2006 года и присутствует в городах: <a href="#">Нижний Новгород</a>, <a href="#">Казань</a>, <a href="#">Самара </a>и  
+                   <a href="#">Тольятти </a>. Компания успешно развивается в направлении комплексного снабжения торговых и промышленных предприятий полным ассортиментом качественной продукции.
+                </p>
+                <p>
+                  Узнать о наличии интересующего вас товара вы можете по телефону:  <a href="tel:+7(846)231-29-84">+7 (846) 231-29-84 </a>или оставив заявку на товар в нашем каталоге. Забрать товар вы можете в любом нашем магазине заранее уточнив о наличии по телефону. Также компания «БАЗА» осуществляет доставку товара в регионы транспортной компанией по выбору клиента (доставка до ТК - бесплатно). Условия доставки обсуждаются с менеджером индивидуально.</p>
+                <div class="s-content__slider gal">
+                  <div class="s-content__slide"><a class="s-content__img-wrap img-bg" href="img/gal.jpg"><img src="#" data-lazy="img/gal.jpg" alt=""/></a>
+                  </div>
+                  <!-- +e.slide-->
+                  <div class="s-content__slide"><a class="s-content__img-wrap img-bg" href="img/gal.jpg"><img src="#" data-lazy="img/gal.jpg" alt=""/></a>
+                  </div>
+                  <!-- +e.slide-->
+                  <div class="s-content__slide"><a class="s-content__img-wrap img-bg" href="img/gal.jpg"><img src="#" data-lazy="img/gal.jpg" alt=""/></a>
+                  </div>
+                  <!-- +e.slide-->
+                  <div class="s-content__slide"><a class="s-content__img-wrap img-bg" href="img/gal.jpg"><img src="#" data-lazy="img/gal.jpg" alt=""/></a>
+                  </div>
+                  <!-- +e.slide-->
+                  <div class="s-content__slide"><a class="s-content__img-wrap img-bg" href="img/gal.jpg"><img src="#" data-lazy="img/gal.jpg" alt=""/></a>
+                  </div>
+                  <!-- +e.slide-->
                 </div>
               </div>
             </div>
@@ -2497,6 +2519,7 @@
     <script src="libs/bootstrap/tooltip.js"></script>
     <script src="libs/bootstrap/popover.js"></script>
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
     <script src="libs/jquery.inputmask.bundle.min.js"></script>
     <script src="libs/jquery.touchSwipe.min.js"></script>

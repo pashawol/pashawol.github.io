@@ -35,30 +35,7 @@ jQuery(document).ready(function ($) {
  
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
-
-	function heightses() {
-
-		var w = $(window).width();
-
-		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		//
-
-
-		// скрывает моб меню
-
-		var topH = $("header ").innerHeight();
-
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > topH) {
-				$('.top-nav  ').addClass('fixed');
-			} else {
-				$('.top-nav  ').removeClass('fixed');
-			}
-		});
-		// конец добавил
-	}
-
+ 
 	if (window.matchMedia("(min-width: 992px)").matches) {
 
 		$(".toggle-mnu-1").removeClass("on");
@@ -67,19 +44,7 @@ jQuery(document).ready(function ($) {
 		$("body").removeClass("fixed");
 	}
 
-
-	$(window).resize(function () {
-		heightses();
-
-	});
-	$(window).on("load", function () {
-		heightses();
-
-	})
-
-	heightses();
-
-
+ 
 
 	// листалка по стр
 	// $(" .top-nav a").click(function () {
@@ -98,22 +63,37 @@ jQuery(document).ready(function ($) {
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
 	// карусель
-	// $('.s-team__slider').slick({
-	//    slidesToShow: 3,
-	//    slidesToScroll: 1,
-	//    dots: false,
-	//    speed: 450,
-	//    infinite: true,
-	//    loop: true,
-	//    arrows: true,
-	//    // centerMode: true,
-	//    // focusOnSelect: true ,
-	//     // variableWidth: true,
-	//     prevArrow: arrr2,
-	//      nextArrow: arrl2,
-	//    });
-
-	// слайдер цвета в карточке
+	$('.s-content__slider').slick({
+	   slidesToShow: 2,
+	   slidesToScroll: 1,
+	   dots: false,
+	   speed: 450,
+	   infinite: true,
+	   loop: true,
+		 arrows: true,
+		 mobileFirst: true, 
+			prevArrow: arrl2,
+			nextArrow: arrr2,
+			responsive: [{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 4,
+					 
+					}
+				},
+				{
+					breakpoint: 576,
+					settings: {
+						slidesToShow: 3,
+						
+					}
+				}  
+			]
+	   });
+ $('.s-content__slider')
+ 	.on('lazyLoaded', function (event, slick, image, imageSource) {
+ 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+ 	});
  
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
