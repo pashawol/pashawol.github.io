@@ -3439,6 +3439,7 @@ body.fixed .catalog-bg {
 
 .slick-arrow.l {
   left: 0.27778rem;
+  padding-right: 0.16667rem;
 }
 
 .slick-arrow.l svg {
@@ -3449,6 +3450,47 @@ body.fixed .catalog-bg {
 
 .slick-arrow.r {
   right: 0.27778rem;
+  padding-left: 0.16667rem;
+}
+
+.mfp-arrow {
+  outline: 0  !important;
+  margin-top: -1.16667rem !important;
+  width: 2.33333rem;
+  height: 2.33333rem;
+  line-height: 3.03333rem;
+  background-color: rgba(28, 29, 30, 0.5) !important;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-align: center;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.mfp-arrow::before,.mfp-arrow::after {
+  display: none;
+}
+
+.mfp-arrow:hover {
+  background-color: rgba(28, 29, 30, 0.8) !important;
+}
+
+.mfp-arrow svg {
+  width: 0.77778rem;
+  height: 1.32222rem;
+}
+
+.mfp-arrow svg path {
+  fill: #fff;
+}
+
+.mfp-arrow-left svg {
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 * {
@@ -3606,6 +3648,10 @@ html {
 
 html.fixed {
   overflow: hidden;
+}
+
+img.mfp-img {
+  padding: 0;
 }
 
 .icon {
@@ -8582,10 +8628,22 @@ a {
     right: 0.83333rem;
   }
 
+  .mfp-arrow {
+    width: 3.33333rem;
+    height: 3.33333rem;
+    line-height: 4rem;
+    margin-top: -1.66667rem !important;
+  }
+
   html {
     margin-right: -webkit-calc(-1 * (100vw - 100%));
     margin-right: calc(-1 * (100vw - 100%));
     overflow-x: hidden;
+  }
+
+  .mfp-figure .mfp-close {
+    right: 30px !important;
+    top: 30px !important;
   }
 
   .s-content__slider {
