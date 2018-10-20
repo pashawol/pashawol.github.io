@@ -1168,7 +1168,7 @@ select.form-control-lg:not([size]):not([multiple]) {
   width: 100%;
 }
 
-.btn,.form-wrap__btn,.s-catalog__btn-sort,.prod-card__btn {
+.btn,.s-404__btn,.form-wrap__btn,.s-catalog__btn-sort,.prod-card__btn {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -1191,36 +1191,36 @@ select.form-control-lg:not([size]):not([multiple]) {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-.btn:hover,.form-wrap__btn:hover,.s-catalog__btn-sort:hover,.prod-card__btn:hover,.btn:focus,.form-wrap__btn:focus,.s-catalog__btn-sort:focus,.prod-card__btn:focus {
+.btn:hover,.s-404__btn:hover,.form-wrap__btn:hover,.s-catalog__btn-sort:hover,.prod-card__btn:hover,.btn:focus,.s-404__btn:focus,.form-wrap__btn:focus,.s-catalog__btn-sort:focus,.prod-card__btn:focus {
   text-decoration: none;
 }
 
-.btn:focus,.form-wrap__btn:focus,.s-catalog__btn-sort:focus,.prod-card__btn:focus,.btn.focus,.focus.form-wrap__btn,.focus.s-catalog__btn-sort,.focus.prod-card__btn {
+.btn:focus,.s-404__btn:focus,.form-wrap__btn:focus,.s-catalog__btn-sort:focus,.prod-card__btn:focus,.btn.focus,.focus.s-404__btn,.focus.form-wrap__btn,.focus.s-catalog__btn-sort,.focus.prod-card__btn {
   outline: 0;
 }
 
-.btn.disabled,.disabled.form-wrap__btn,.disabled.s-catalog__btn-sort,.disabled.prod-card__btn,.btn:disabled,.form-wrap__btn:disabled,.s-catalog__btn-sort:disabled,.prod-card__btn:disabled {
+.btn.disabled,.disabled.s-404__btn,.disabled.form-wrap__btn,.disabled.s-catalog__btn-sort,.disabled.prod-card__btn,.btn:disabled,.s-404__btn:disabled,.form-wrap__btn:disabled,.s-catalog__btn-sort:disabled,.prod-card__btn:disabled {
   opacity: 0.65;
 }
 
-.btn:not(:disabled):not(.disabled),.form-wrap__btn:not(:disabled):not(.disabled),.s-catalog__btn-sort:not(:disabled):not(.disabled),.prod-card__btn:not(:disabled):not(.disabled) {
+.btn:not(:disabled):not(.disabled),.s-404__btn:not(:disabled):not(.disabled),.form-wrap__btn:not(:disabled):not(.disabled),.s-catalog__btn-sort:not(:disabled):not(.disabled),.prod-card__btn:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
 
-.btn:not(:disabled):not(.disabled):active,.form-wrap__btn:not(:disabled):not(.disabled):active,.s-catalog__btn-sort:not(:disabled):not(.disabled):active,.prod-card__btn:not(:disabled):not(.disabled):active,.btn:not(:disabled):not(.disabled).active,.form-wrap__btn:not(:disabled):not(.disabled).active,.s-catalog__btn-sort:not(:disabled):not(.disabled).active,.prod-card__btn:not(:disabled):not(.disabled).active {
+.btn:not(:disabled):not(.disabled):active,.s-404__btn:not(:disabled):not(.disabled):active,.form-wrap__btn:not(:disabled):not(.disabled):active,.s-catalog__btn-sort:not(:disabled):not(.disabled):active,.prod-card__btn:not(:disabled):not(.disabled):active,.btn:not(:disabled):not(.disabled).active,.s-404__btn:not(:disabled):not(.disabled).active,.form-wrap__btn:not(:disabled):not(.disabled).active,.s-catalog__btn-sort:not(:disabled):not(.disabled).active,.prod-card__btn:not(:disabled):not(.disabled).active {
   background-image: none;
 }
 
-a.btn.disabled,a.disabled.form-wrap__btn,a.disabled.s-catalog__btn-sort,a.disabled.prod-card__btn,fieldset:disabled a.btn,fieldset:disabled a.form-wrap__btn,fieldset:disabled a.s-catalog__btn-sort,fieldset:disabled a.prod-card__btn {
+a.btn.disabled,a.disabled.s-404__btn,a.disabled.form-wrap__btn,a.disabled.s-catalog__btn-sort,a.disabled.prod-card__btn,fieldset:disabled a.btn,fieldset:disabled a.s-404__btn,fieldset:disabled a.form-wrap__btn,fieldset:disabled a.s-catalog__btn-sort,fieldset:disabled a.prod-card__btn {
   pointer-events: none;
 }
 
-.btn-primary,.form-wrap__btn,.prod-card__btn {
+.btn-primary,.s-404__btn,.form-wrap__btn,.prod-card__btn {
   color: #212529;
   border-color: #fbc400;
 }
 
-.btn-primary.disabled,.disabled.form-wrap__btn,.disabled.prod-card__btn,.btn-primary:disabled,.form-wrap__btn:disabled,.prod-card__btn:disabled {
+.btn-primary.disabled,.disabled.s-404__btn,.disabled.form-wrap__btn,.disabled.prod-card__btn,.btn-primary:disabled,.s-404__btn:disabled,.form-wrap__btn:disabled,.prod-card__btn:disabled {
   color: #212529;
   background-color: #fbc400;
   border-color: #fbc400;
@@ -1348,7 +1348,7 @@ a.btn.disabled,a.disabled.form-wrap__btn,a.disabled.s-catalog__btn-sort,a.disabl
   pointer-events: none;
 }
 
-.btn-primary,.form-wrap__btn,.prod-card__btn {
+.btn-primary,.s-404__btn,.form-wrap__btn,.prod-card__btn {
   background-color: #fbc400;
   position: relative;
   overflow: hidden;
@@ -1357,7 +1357,7 @@ a.btn.disabled,a.disabled.form-wrap__btn,a.disabled.s-catalog__btn-sort,a.disabl
   color: #1c1d1e !important;
 }
 
-.btn-primary::before,.form-wrap__btn::before,.prod-card__btn::before {
+.btn-primary::before,.s-404__btn::before,.form-wrap__btn::before,.prod-card__btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1378,7 +1378,7 @@ a.btn.disabled,a.disabled.form-wrap__btn,a.disabled.s-catalog__btn-sort,a.disabl
   transition: transform .3s,opacity .3s,background-color .3s,-webkit-transform .3s;
 }
 
-.btn-primary::after,.form-wrap__btn::after,.prod-card__btn::after {
+.btn-primary::after,.s-404__btn::after,.form-wrap__btn::after,.prod-card__btn::after {
   content: "";
   position: absolute;
   bottom: 2px;
@@ -1391,7 +1391,7 @@ a.btn.disabled,a.disabled.form-wrap__btn,a.disabled.s-catalog__btn-sort,a.disabl
   transition: all .2s ease 0s;
 }
 
-.btn-primary:hover::before,.form-wrap__btn:hover::before,.prod-card__btn:hover::before,.btn-primary:active::before,.form-wrap__btn:active::before,.prod-card__btn:active::before {
+.btn-primary:hover::before,.s-404__btn:hover::before,.form-wrap__btn:hover::before,.prod-card__btn:hover::before,.btn-primary:active::before,.s-404__btn:active::before,.form-wrap__btn:active::before,.prod-card__btn:active::before {
   opacity: 1;
   background-color: #fff;
   -webkit-transform: rotate(0deg);
@@ -1402,11 +1402,11 @@ a.btn.disabled,a.disabled.form-wrap__btn,a.disabled.s-catalog__btn-sort,a.disabl
           transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
 
-.btn-primary:hover::after,.form-wrap__btn:hover::after,.prod-card__btn:hover::after,.btn-primary:active::after,.form-wrap__btn:active::after,.prod-card__btn:active::after {
+.btn-primary:hover::after,.s-404__btn:hover::after,.form-wrap__btn:hover::after,.prod-card__btn:hover::after,.btn-primary:active::after,.s-404__btn:active::after,.form-wrap__btn:active::after,.prod-card__btn:active::after {
   background-color: transparent;
 }
 
-.btn-lg,.btn-group-lg > .btn,.btn-group-lg > .form-wrap__btn,.btn-group-lg > .s-catalog__btn-sort,.btn-group-lg > .prod-card__btn,.form-wrap__btn,.prod-card__btn {
+.btn-lg,.btn-group-lg > .btn,.btn-group-lg > .s-404__btn,.btn-group-lg > .form-wrap__btn,.btn-group-lg > .s-catalog__btn-sort,.btn-group-lg > .prod-card__btn,.s-404__btn,.form-wrap__btn,.prod-card__btn {
   padding: 0.8rem 1rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -1414,7 +1414,7 @@ a.btn.disabled,a.disabled.form-wrap__btn,a.disabled.s-catalog__btn-sort,a.disabl
           border-radius: 3.33333rem;
 }
 
-.btn-sm,.btn-group-sm > .btn,.btn-group-sm > .form-wrap__btn,.btn-group-sm > .s-catalog__btn-sort,.btn-group-sm > .prod-card__btn,.s-catalog__btn-sort {
+.btn-sm,.btn-group-sm > .btn,.btn-group-sm > .s-404__btn,.btn-group-sm > .form-wrap__btn,.btn-group-sm > .s-catalog__btn-sort,.btn-group-sm > .prod-card__btn,.s-catalog__btn-sort {
   padding: 0.35rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -1650,7 +1650,7 @@ input[type="submit"].btn-block,input.form-wrap__btn[type="submit"],input[type="r
   vertical-align: middle;
 }
 
-.btn-group > .btn,.btn-group > .form-wrap__btn,.btn-group > .s-catalog__btn-sort,.btn-group > .prod-card__btn,.btn-group-vertical > .btn,.btn-group-vertical > .form-wrap__btn,.btn-group-vertical > .s-catalog__btn-sort,.btn-group-vertical > .prod-card__btn {
+.btn-group > .btn,.btn-group > .s-404__btn,.btn-group > .form-wrap__btn,.btn-group > .s-catalog__btn-sort,.btn-group > .prod-card__btn,.btn-group-vertical > .btn,.btn-group-vertical > .s-404__btn,.btn-group-vertical > .form-wrap__btn,.btn-group-vertical > .s-catalog__btn-sort,.btn-group-vertical > .prod-card__btn {
   position: relative;
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 auto;
@@ -1658,15 +1658,15 @@ input[type="submit"].btn-block,input.form-wrap__btn[type="submit"],input[type="r
           flex: 0 1 auto;
 }
 
-.btn-group > .btn:hover,.btn-group > .form-wrap__btn:hover,.btn-group > .s-catalog__btn-sort:hover,.btn-group > .prod-card__btn:hover,.btn-group-vertical > .btn:hover,.btn-group-vertical > .form-wrap__btn:hover,.btn-group-vertical > .s-catalog__btn-sort:hover,.btn-group-vertical > .prod-card__btn:hover {
+.btn-group > .btn:hover,.btn-group > .s-404__btn:hover,.btn-group > .form-wrap__btn:hover,.btn-group > .s-catalog__btn-sort:hover,.btn-group > .prod-card__btn:hover,.btn-group-vertical > .btn:hover,.btn-group-vertical > .s-404__btn:hover,.btn-group-vertical > .form-wrap__btn:hover,.btn-group-vertical > .s-catalog__btn-sort:hover,.btn-group-vertical > .prod-card__btn:hover {
   z-index: 1;
 }
 
-.btn-group > .btn:focus,.btn-group > .form-wrap__btn:focus,.btn-group > .s-catalog__btn-sort:focus,.btn-group > .prod-card__btn:focus,.btn-group > .btn:active,.btn-group > .form-wrap__btn:active,.btn-group > .s-catalog__btn-sort:active,.btn-group > .prod-card__btn:active,.btn-group > .btn.active,.btn-group > .active.form-wrap__btn,.btn-group > .active.s-catalog__btn-sort,.btn-group > .active.prod-card__btn,.btn-group-vertical > .btn:focus,.btn-group-vertical > .form-wrap__btn:focus,.btn-group-vertical > .s-catalog__btn-sort:focus,.btn-group-vertical > .prod-card__btn:focus,.btn-group-vertical > .btn:active,.btn-group-vertical > .form-wrap__btn:active,.btn-group-vertical > .s-catalog__btn-sort:active,.btn-group-vertical > .prod-card__btn:active,.btn-group-vertical > .btn.active,.btn-group-vertical > .active.form-wrap__btn,.btn-group-vertical > .active.s-catalog__btn-sort,.btn-group-vertical > .active.prod-card__btn {
+.btn-group > .btn:focus,.btn-group > .s-404__btn:focus,.btn-group > .form-wrap__btn:focus,.btn-group > .s-catalog__btn-sort:focus,.btn-group > .prod-card__btn:focus,.btn-group > .btn:active,.btn-group > .s-404__btn:active,.btn-group > .form-wrap__btn:active,.btn-group > .s-catalog__btn-sort:active,.btn-group > .prod-card__btn:active,.btn-group > .btn.active,.btn-group > .active.s-404__btn,.btn-group > .active.form-wrap__btn,.btn-group > .active.s-catalog__btn-sort,.btn-group > .active.prod-card__btn,.btn-group-vertical > .btn:focus,.btn-group-vertical > .s-404__btn:focus,.btn-group-vertical > .form-wrap__btn:focus,.btn-group-vertical > .s-catalog__btn-sort:focus,.btn-group-vertical > .prod-card__btn:focus,.btn-group-vertical > .btn:active,.btn-group-vertical > .s-404__btn:active,.btn-group-vertical > .form-wrap__btn:active,.btn-group-vertical > .s-catalog__btn-sort:active,.btn-group-vertical > .prod-card__btn:active,.btn-group-vertical > .btn.active,.btn-group-vertical > .active.s-404__btn,.btn-group-vertical > .active.form-wrap__btn,.btn-group-vertical > .active.s-catalog__btn-sort,.btn-group-vertical > .active.prod-card__btn {
   z-index: 1;
 }
 
-.btn-group .btn + .btn,.btn-group .form-wrap__btn + .btn,.btn-group .s-catalog__btn-sort + .btn,.btn-group .prod-card__btn + .btn,.btn-group .btn + .form-wrap__btn,.btn-group .form-wrap__btn + .form-wrap__btn,.btn-group .s-catalog__btn-sort + .form-wrap__btn,.btn-group .prod-card__btn + .form-wrap__btn,.btn-group .btn + .s-catalog__btn-sort,.btn-group .form-wrap__btn + .s-catalog__btn-sort,.btn-group .s-catalog__btn-sort + .s-catalog__btn-sort,.btn-group .prod-card__btn + .s-catalog__btn-sort,.btn-group .btn + .prod-card__btn,.btn-group .form-wrap__btn + .prod-card__btn,.btn-group .s-catalog__btn-sort + .prod-card__btn,.btn-group .prod-card__btn + .prod-card__btn,.btn-group .btn + .btn-group,.btn-group .form-wrap__btn + .btn-group,.btn-group .s-catalog__btn-sort + .btn-group,.btn-group .prod-card__btn + .btn-group,.btn-group .btn-group + .btn,.btn-group .btn-group + .form-wrap__btn,.btn-group .btn-group + .s-catalog__btn-sort,.btn-group .btn-group + .prod-card__btn,.btn-group .btn-group + .btn-group,.btn-group-vertical .btn + .btn,.btn-group-vertical .form-wrap__btn + .btn,.btn-group-vertical .s-catalog__btn-sort + .btn,.btn-group-vertical .prod-card__btn + .btn,.btn-group-vertical .btn + .form-wrap__btn,.btn-group-vertical .form-wrap__btn + .form-wrap__btn,.btn-group-vertical .s-catalog__btn-sort + .form-wrap__btn,.btn-group-vertical .prod-card__btn + .form-wrap__btn,.btn-group-vertical .btn + .s-catalog__btn-sort,.btn-group-vertical .form-wrap__btn + .s-catalog__btn-sort,.btn-group-vertical .s-catalog__btn-sort + .s-catalog__btn-sort,.btn-group-vertical .prod-card__btn + .s-catalog__btn-sort,.btn-group-vertical .btn + .prod-card__btn,.btn-group-vertical .form-wrap__btn + .prod-card__btn,.btn-group-vertical .s-catalog__btn-sort + .prod-card__btn,.btn-group-vertical .prod-card__btn + .prod-card__btn,.btn-group-vertical .btn + .btn-group,.btn-group-vertical .form-wrap__btn + .btn-group,.btn-group-vertical .s-catalog__btn-sort + .btn-group,.btn-group-vertical .prod-card__btn + .btn-group,.btn-group-vertical .btn-group + .btn,.btn-group-vertical .btn-group + .form-wrap__btn,.btn-group-vertical .btn-group + .s-catalog__btn-sort,.btn-group-vertical .btn-group + .prod-card__btn,.btn-group-vertical .btn-group + .btn-group {
+.btn-group .btn + .btn,.btn-group .s-404__btn + .btn,.btn-group .form-wrap__btn + .btn,.btn-group .s-catalog__btn-sort + .btn,.btn-group .prod-card__btn + .btn,.btn-group .btn + .s-404__btn,.btn-group .s-404__btn + .s-404__btn,.btn-group .form-wrap__btn + .s-404__btn,.btn-group .s-catalog__btn-sort + .s-404__btn,.btn-group .prod-card__btn + .s-404__btn,.btn-group .btn + .form-wrap__btn,.btn-group .s-404__btn + .form-wrap__btn,.btn-group .form-wrap__btn + .form-wrap__btn,.btn-group .s-catalog__btn-sort + .form-wrap__btn,.btn-group .prod-card__btn + .form-wrap__btn,.btn-group .btn + .s-catalog__btn-sort,.btn-group .s-404__btn + .s-catalog__btn-sort,.btn-group .form-wrap__btn + .s-catalog__btn-sort,.btn-group .s-catalog__btn-sort + .s-catalog__btn-sort,.btn-group .prod-card__btn + .s-catalog__btn-sort,.btn-group .btn + .prod-card__btn,.btn-group .s-404__btn + .prod-card__btn,.btn-group .form-wrap__btn + .prod-card__btn,.btn-group .s-catalog__btn-sort + .prod-card__btn,.btn-group .prod-card__btn + .prod-card__btn,.btn-group .btn + .btn-group,.btn-group .s-404__btn + .btn-group,.btn-group .form-wrap__btn + .btn-group,.btn-group .s-catalog__btn-sort + .btn-group,.btn-group .prod-card__btn + .btn-group,.btn-group .btn-group + .btn,.btn-group .btn-group + .s-404__btn,.btn-group .btn-group + .form-wrap__btn,.btn-group .btn-group + .s-catalog__btn-sort,.btn-group .btn-group + .prod-card__btn,.btn-group .btn-group + .btn-group,.btn-group-vertical .btn + .btn,.btn-group-vertical .s-404__btn + .btn,.btn-group-vertical .form-wrap__btn + .btn,.btn-group-vertical .s-catalog__btn-sort + .btn,.btn-group-vertical .prod-card__btn + .btn,.btn-group-vertical .btn + .s-404__btn,.btn-group-vertical .s-404__btn + .s-404__btn,.btn-group-vertical .form-wrap__btn + .s-404__btn,.btn-group-vertical .s-catalog__btn-sort + .s-404__btn,.btn-group-vertical .prod-card__btn + .s-404__btn,.btn-group-vertical .btn + .form-wrap__btn,.btn-group-vertical .s-404__btn + .form-wrap__btn,.btn-group-vertical .form-wrap__btn + .form-wrap__btn,.btn-group-vertical .s-catalog__btn-sort + .form-wrap__btn,.btn-group-vertical .prod-card__btn + .form-wrap__btn,.btn-group-vertical .btn + .s-catalog__btn-sort,.btn-group-vertical .s-404__btn + .s-catalog__btn-sort,.btn-group-vertical .form-wrap__btn + .s-catalog__btn-sort,.btn-group-vertical .s-catalog__btn-sort + .s-catalog__btn-sort,.btn-group-vertical .prod-card__btn + .s-catalog__btn-sort,.btn-group-vertical .btn + .prod-card__btn,.btn-group-vertical .s-404__btn + .prod-card__btn,.btn-group-vertical .form-wrap__btn + .prod-card__btn,.btn-group-vertical .s-catalog__btn-sort + .prod-card__btn,.btn-group-vertical .prod-card__btn + .prod-card__btn,.btn-group-vertical .btn + .btn-group,.btn-group-vertical .s-404__btn + .btn-group,.btn-group-vertical .form-wrap__btn + .btn-group,.btn-group-vertical .s-catalog__btn-sort + .btn-group,.btn-group-vertical .prod-card__btn + .btn-group,.btn-group-vertical .btn-group + .btn,.btn-group-vertical .btn-group + .s-404__btn,.btn-group-vertical .btn-group + .form-wrap__btn,.btn-group-vertical .btn-group + .s-catalog__btn-sort,.btn-group-vertical .btn-group + .prod-card__btn,.btn-group-vertical .btn-group + .btn-group {
   margin-left: -2px;
 }
 
@@ -1688,18 +1688,18 @@ input[type="submit"].btn-block,input.form-wrap__btn[type="submit"],input[type="r
   width: auto;
 }
 
-.btn-group > .btn:first-child,.btn-group > .form-wrap__btn:first-child,.btn-group > .s-catalog__btn-sort:first-child,.btn-group > .prod-card__btn:first-child {
+.btn-group > .btn:first-child,.btn-group > .s-404__btn:first-child,.btn-group > .form-wrap__btn:first-child,.btn-group > .s-catalog__btn-sort:first-child,.btn-group > .prod-card__btn:first-child {
   margin-left: 0;
 }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle),.btn-group > .form-wrap__btn:not(:last-child):not(.dropdown-toggle),.btn-group > .s-catalog__btn-sort:not(:last-child):not(.dropdown-toggle),.btn-group > .prod-card__btn:not(:last-child):not(.dropdown-toggle),.btn-group > .btn-group:not(:last-child) > .btn,.btn-group > .btn-group:not(:last-child) > .form-wrap__btn,.btn-group > .btn-group:not(:last-child) > .s-catalog__btn-sort,.btn-group > .btn-group:not(:last-child) > .prod-card__btn {
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),.btn-group > .s-404__btn:not(:last-child):not(.dropdown-toggle),.btn-group > .form-wrap__btn:not(:last-child):not(.dropdown-toggle),.btn-group > .s-catalog__btn-sort:not(:last-child):not(.dropdown-toggle),.btn-group > .prod-card__btn:not(:last-child):not(.dropdown-toggle),.btn-group > .btn-group:not(:last-child) > .btn,.btn-group > .btn-group:not(:last-child) > .s-404__btn,.btn-group > .btn-group:not(:last-child) > .form-wrap__btn,.btn-group > .btn-group:not(:last-child) > .s-catalog__btn-sort,.btn-group > .btn-group:not(:last-child) > .prod-card__btn {
   -webkit-border-top-right-radius: 0;
           border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
           border-bottom-right-radius: 0;
 }
 
-.btn-group > .btn:not(:first-child),.btn-group > .form-wrap__btn:not(:first-child),.btn-group > .s-catalog__btn-sort:not(:first-child),.btn-group > .prod-card__btn:not(:first-child),.btn-group > .btn-group:not(:first-child) > .btn,.btn-group > .btn-group:not(:first-child) > .form-wrap__btn,.btn-group > .btn-group:not(:first-child) > .s-catalog__btn-sort,.btn-group > .btn-group:not(:first-child) > .prod-card__btn {
+.btn-group > .btn:not(:first-child),.btn-group > .s-404__btn:not(:first-child),.btn-group > .form-wrap__btn:not(:first-child),.btn-group > .s-catalog__btn-sort:not(:first-child),.btn-group > .prod-card__btn:not(:first-child),.btn-group > .btn-group:not(:first-child) > .btn,.btn-group > .btn-group:not(:first-child) > .s-404__btn,.btn-group > .btn-group:not(:first-child) > .form-wrap__btn,.btn-group > .btn-group:not(:first-child) > .s-catalog__btn-sort,.btn-group > .btn-group:not(:first-child) > .prod-card__btn {
   -webkit-border-top-left-radius: 0;
           border-top-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;
@@ -1719,12 +1719,12 @@ input[type="submit"].btn-block,input.form-wrap__btn[type="submit"],input[type="r
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split,.btn-group-sm > .btn + .dropdown-toggle-split,.btn-group-sm > .form-wrap__btn + .dropdown-toggle-split,.btn-group-sm > .s-catalog__btn-sort + .dropdown-toggle-split,.btn-group-sm > .prod-card__btn + .dropdown-toggle-split,.s-catalog__btn-sort + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split,.btn-group-sm > .btn + .dropdown-toggle-split,.btn-group-sm > .s-404__btn + .dropdown-toggle-split,.btn-group-sm > .form-wrap__btn + .dropdown-toggle-split,.btn-group-sm > .s-catalog__btn-sort + .dropdown-toggle-split,.btn-group-sm > .prod-card__btn + .dropdown-toggle-split,.s-catalog__btn-sort + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
-.btn-lg + .dropdown-toggle-split,.btn-group-lg > .btn + .dropdown-toggle-split,.btn-group-lg > .form-wrap__btn + .dropdown-toggle-split,.btn-group-lg > .s-catalog__btn-sort + .dropdown-toggle-split,.btn-group-lg > .prod-card__btn + .dropdown-toggle-split,.form-wrap__btn + .dropdown-toggle-split,.prod-card__btn + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split,.btn-group-lg > .btn + .dropdown-toggle-split,.btn-group-lg > .s-404__btn + .dropdown-toggle-split,.btn-group-lg > .form-wrap__btn + .dropdown-toggle-split,.btn-group-lg > .s-catalog__btn-sort + .dropdown-toggle-split,.btn-group-lg > .prod-card__btn + .dropdown-toggle-split,.s-404__btn + .dropdown-toggle-split,.form-wrap__btn + .dropdown-toggle-split,.prod-card__btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -1745,34 +1745,34 @@ input[type="submit"].btn-block,input.form-wrap__btn[type="submit"],input[type="r
           justify-content: center;
 }
 
-.btn-group-vertical .btn,.btn-group-vertical .form-wrap__btn,.btn-group-vertical .s-catalog__btn-sort,.btn-group-vertical .prod-card__btn,.btn-group-vertical .btn-group {
+.btn-group-vertical .btn,.btn-group-vertical .s-404__btn,.btn-group-vertical .form-wrap__btn,.btn-group-vertical .s-catalog__btn-sort,.btn-group-vertical .prod-card__btn,.btn-group-vertical .btn-group {
   width: 100%;
 }
 
-.btn-group-vertical > .btn + .btn,.btn-group-vertical > .form-wrap__btn + .btn,.btn-group-vertical > .s-catalog__btn-sort + .btn,.btn-group-vertical > .prod-card__btn + .btn,.btn-group-vertical > .btn + .form-wrap__btn,.btn-group-vertical > .form-wrap__btn + .form-wrap__btn,.btn-group-vertical > .s-catalog__btn-sort + .form-wrap__btn,.btn-group-vertical > .prod-card__btn + .form-wrap__btn,.btn-group-vertical > .btn + .s-catalog__btn-sort,.btn-group-vertical > .form-wrap__btn + .s-catalog__btn-sort,.btn-group-vertical > .s-catalog__btn-sort + .s-catalog__btn-sort,.btn-group-vertical > .prod-card__btn + .s-catalog__btn-sort,.btn-group-vertical > .btn + .prod-card__btn,.btn-group-vertical > .form-wrap__btn + .prod-card__btn,.btn-group-vertical > .s-catalog__btn-sort + .prod-card__btn,.btn-group-vertical > .prod-card__btn + .prod-card__btn,.btn-group-vertical > .btn + .btn-group,.btn-group-vertical > .form-wrap__btn + .btn-group,.btn-group-vertical > .s-catalog__btn-sort + .btn-group,.btn-group-vertical > .prod-card__btn + .btn-group,.btn-group-vertical > .btn-group + .btn,.btn-group-vertical > .btn-group + .form-wrap__btn,.btn-group-vertical > .btn-group + .s-catalog__btn-sort,.btn-group-vertical > .btn-group + .prod-card__btn,.btn-group-vertical > .btn-group + .btn-group {
+.btn-group-vertical > .btn + .btn,.btn-group-vertical > .s-404__btn + .btn,.btn-group-vertical > .form-wrap__btn + .btn,.btn-group-vertical > .s-catalog__btn-sort + .btn,.btn-group-vertical > .prod-card__btn + .btn,.btn-group-vertical > .btn + .s-404__btn,.btn-group-vertical > .s-404__btn + .s-404__btn,.btn-group-vertical > .form-wrap__btn + .s-404__btn,.btn-group-vertical > .s-catalog__btn-sort + .s-404__btn,.btn-group-vertical > .prod-card__btn + .s-404__btn,.btn-group-vertical > .btn + .form-wrap__btn,.btn-group-vertical > .s-404__btn + .form-wrap__btn,.btn-group-vertical > .form-wrap__btn + .form-wrap__btn,.btn-group-vertical > .s-catalog__btn-sort + .form-wrap__btn,.btn-group-vertical > .prod-card__btn + .form-wrap__btn,.btn-group-vertical > .btn + .s-catalog__btn-sort,.btn-group-vertical > .s-404__btn + .s-catalog__btn-sort,.btn-group-vertical > .form-wrap__btn + .s-catalog__btn-sort,.btn-group-vertical > .s-catalog__btn-sort + .s-catalog__btn-sort,.btn-group-vertical > .prod-card__btn + .s-catalog__btn-sort,.btn-group-vertical > .btn + .prod-card__btn,.btn-group-vertical > .s-404__btn + .prod-card__btn,.btn-group-vertical > .form-wrap__btn + .prod-card__btn,.btn-group-vertical > .s-catalog__btn-sort + .prod-card__btn,.btn-group-vertical > .prod-card__btn + .prod-card__btn,.btn-group-vertical > .btn + .btn-group,.btn-group-vertical > .s-404__btn + .btn-group,.btn-group-vertical > .form-wrap__btn + .btn-group,.btn-group-vertical > .s-catalog__btn-sort + .btn-group,.btn-group-vertical > .prod-card__btn + .btn-group,.btn-group-vertical > .btn-group + .btn,.btn-group-vertical > .btn-group + .s-404__btn,.btn-group-vertical > .btn-group + .form-wrap__btn,.btn-group-vertical > .btn-group + .s-catalog__btn-sort,.btn-group-vertical > .btn-group + .prod-card__btn,.btn-group-vertical > .btn-group + .btn-group {
   margin-top: -2px;
   margin-left: 0;
 }
 
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),.btn-group-vertical > .form-wrap__btn:not(:last-child):not(.dropdown-toggle),.btn-group-vertical > .s-catalog__btn-sort:not(:last-child):not(.dropdown-toggle),.btn-group-vertical > .prod-card__btn:not(:last-child):not(.dropdown-toggle),.btn-group-vertical > .btn-group:not(:last-child) > .btn,.btn-group-vertical > .btn-group:not(:last-child) > .form-wrap__btn,.btn-group-vertical > .btn-group:not(:last-child) > .s-catalog__btn-sort,.btn-group-vertical > .btn-group:not(:last-child) > .prod-card__btn {
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle),.btn-group-vertical > .s-404__btn:not(:last-child):not(.dropdown-toggle),.btn-group-vertical > .form-wrap__btn:not(:last-child):not(.dropdown-toggle),.btn-group-vertical > .s-catalog__btn-sort:not(:last-child):not(.dropdown-toggle),.btn-group-vertical > .prod-card__btn:not(:last-child):not(.dropdown-toggle),.btn-group-vertical > .btn-group:not(:last-child) > .btn,.btn-group-vertical > .btn-group:not(:last-child) > .s-404__btn,.btn-group-vertical > .btn-group:not(:last-child) > .form-wrap__btn,.btn-group-vertical > .btn-group:not(:last-child) > .s-catalog__btn-sort,.btn-group-vertical > .btn-group:not(:last-child) > .prod-card__btn {
   -webkit-border-bottom-right-radius: 0;
           border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 0;
           border-bottom-left-radius: 0;
 }
 
-.btn-group-vertical > .btn:not(:first-child),.btn-group-vertical > .form-wrap__btn:not(:first-child),.btn-group-vertical > .s-catalog__btn-sort:not(:first-child),.btn-group-vertical > .prod-card__btn:not(:first-child),.btn-group-vertical > .btn-group:not(:first-child) > .btn,.btn-group-vertical > .btn-group:not(:first-child) > .form-wrap__btn,.btn-group-vertical > .btn-group:not(:first-child) > .s-catalog__btn-sort,.btn-group-vertical > .btn-group:not(:first-child) > .prod-card__btn {
+.btn-group-vertical > .btn:not(:first-child),.btn-group-vertical > .s-404__btn:not(:first-child),.btn-group-vertical > .form-wrap__btn:not(:first-child),.btn-group-vertical > .s-catalog__btn-sort:not(:first-child),.btn-group-vertical > .prod-card__btn:not(:first-child),.btn-group-vertical > .btn-group:not(:first-child) > .btn,.btn-group-vertical > .btn-group:not(:first-child) > .s-404__btn,.btn-group-vertical > .btn-group:not(:first-child) > .form-wrap__btn,.btn-group-vertical > .btn-group:not(:first-child) > .s-catalog__btn-sort,.btn-group-vertical > .btn-group:not(:first-child) > .prod-card__btn {
   -webkit-border-top-left-radius: 0;
           border-top-left-radius: 0;
   -webkit-border-top-right-radius: 0;
           border-top-right-radius: 0;
 }
 
-.btn-group-toggle > .btn,.btn-group-toggle > .form-wrap__btn,.btn-group-toggle > .s-catalog__btn-sort,.btn-group-toggle > .prod-card__btn,.btn-group-toggle > .btn-group > .btn,.btn-group-toggle > .btn-group > .form-wrap__btn,.btn-group-toggle > .btn-group > .s-catalog__btn-sort,.btn-group-toggle > .btn-group > .prod-card__btn {
+.btn-group-toggle > .btn,.btn-group-toggle > .s-404__btn,.btn-group-toggle > .form-wrap__btn,.btn-group-toggle > .s-catalog__btn-sort,.btn-group-toggle > .prod-card__btn,.btn-group-toggle > .btn-group > .btn,.btn-group-toggle > .btn-group > .s-404__btn,.btn-group-toggle > .btn-group > .form-wrap__btn,.btn-group-toggle > .btn-group > .s-catalog__btn-sort,.btn-group-toggle > .btn-group > .prod-card__btn {
   margin-bottom: 0;
 }
 
-.btn-group-toggle > .btn input[type="radio"],.btn-group-toggle > .form-wrap__btn input[type="radio"],.btn-group-toggle > .s-catalog__btn-sort input[type="radio"],.btn-group-toggle > .prod-card__btn input[type="radio"],.btn-group-toggle > .btn input[type="checkbox"],.btn-group-toggle > .form-wrap__btn input[type="checkbox"],.btn-group-toggle > .s-catalog__btn-sort input[type="checkbox"],.btn-group-toggle > .prod-card__btn input[type="checkbox"],.btn-group-toggle > .btn-group > .btn input[type="radio"],.btn-group-toggle > .btn-group > .form-wrap__btn input[type="radio"],.btn-group-toggle > .btn-group > .s-catalog__btn-sort input[type="radio"],.btn-group-toggle > .btn-group > .prod-card__btn input[type="radio"],.btn-group-toggle > .btn-group > .btn input[type="checkbox"],.btn-group-toggle > .btn-group > .form-wrap__btn input[type="checkbox"],.btn-group-toggle > .btn-group > .s-catalog__btn-sort input[type="checkbox"],.btn-group-toggle > .btn-group > .prod-card__btn input[type="checkbox"] {
+.btn-group-toggle > .btn input[type="radio"],.btn-group-toggle > .s-404__btn input[type="radio"],.btn-group-toggle > .form-wrap__btn input[type="radio"],.btn-group-toggle > .s-catalog__btn-sort input[type="radio"],.btn-group-toggle > .prod-card__btn input[type="radio"],.btn-group-toggle > .btn input[type="checkbox"],.btn-group-toggle > .s-404__btn input[type="checkbox"],.btn-group-toggle > .form-wrap__btn input[type="checkbox"],.btn-group-toggle > .s-catalog__btn-sort input[type="checkbox"],.btn-group-toggle > .prod-card__btn input[type="checkbox"],.btn-group-toggle > .btn-group > .btn input[type="radio"],.btn-group-toggle > .btn-group > .s-404__btn input[type="radio"],.btn-group-toggle > .btn-group > .form-wrap__btn input[type="radio"],.btn-group-toggle > .btn-group > .s-catalog__btn-sort input[type="radio"],.btn-group-toggle > .btn-group > .prod-card__btn input[type="radio"],.btn-group-toggle > .btn-group > .btn input[type="checkbox"],.btn-group-toggle > .btn-group > .s-404__btn input[type="checkbox"],.btn-group-toggle > .btn-group > .form-wrap__btn input[type="checkbox"],.btn-group-toggle > .btn-group > .s-catalog__btn-sort input[type="checkbox"],.btn-group-toggle > .btn-group > .prod-card__btn input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none;
@@ -3574,11 +3574,9 @@ readers do not read off random characters that represent icons */.sr-only {
 html {
   background-position: center top;
   background-repeat: no-repeat;
-  background-image: url(../screen/5.jpg);
 }
 
 body {
-  opacity: .7;
   background-color: transparent;
 }
 
@@ -4127,6 +4125,20 @@ img.mfp-img {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
+  color: #292b2e;
+  font-size: 1.11111rem;
+}
+
+.s-404 .text-gray {
+  font-size: 1.66667rem;
+  color: #7b7d7f;
+  margin-top: -1.11111em;
+}
+
+.s-404__btn {
+  margin-top: 1.94444em;
+  width: 300px;
+  font-size: 1.11111rem;
 }
 
 .icon {
@@ -5710,7 +5722,7 @@ a {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-  .btn,.form-wrap__btn,.s-catalog__btn-sort,.prod-card__btn {
+  .btn,.s-404__btn,.form-wrap__btn,.s-catalog__btn-sort,.prod-card__btn {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
@@ -12346,7 +12358,7 @@ a {
             box-shadow: none !important;
   }
 
-  a:not(.btn):not(.form-wrap__btn):not(.s-catalog__btn-sort):not(.prod-card__btn) {
+  a:not(.btn):not(.s-404__btn):not(.form-wrap__btn):not(.s-catalog__btn-sort):not(.prod-card__btn) {
     text-decoration: underline;
   }
 
