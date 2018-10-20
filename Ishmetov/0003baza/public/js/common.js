@@ -17,52 +17,19 @@ jQuery(document).ready(function ($) {
 			mainClass: 'mfp-with-zoom mfp-img-mobile',
 			image: {
 			 
-				cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
-			
-				// Or the function that should return the title. For example:
-				// titleSrc: function(item) {
-				//   return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-				// }
-			
-				verticalFit: true, // Fits image in area vertically
-			
-				// tError: '<a href="%url%">The image</a> could not be loaded.' // Error message
+				cursor: 'mfp-zoom-out-cur', // Class that adds  
+				verticalFit: true, // Fits image in area  
 			},
 			gallery: {
 				enabled: true,
 					arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%">' + icon + '</button>', // markup of an arrow button
-						titleSrc: 'title', // Attribute of the target element that contains caption for the slide.
+						titleSrc: 'title', // Attribute of the  
 			}
 		});
 	})
 
  
-	// / закрыть меню при горизонтальном свайпе
-	// /закрыть/открыть мобильное меню
  
-	if (window.matchMedia("(min-width: 992px)").matches) {
-
-		$(".toggle-mnu-1").removeClass("on");
-		// $("body").removeClass("fixed");
-		$(".hidden-mnu").removeClass("active");
-		$("body").removeClass("fixed");
-	}
-
- 
-
-	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
-
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
-
-	//        return false;
-	//    });
-
- 
-
-
 
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
@@ -203,5 +170,8 @@ jQuery(document).ready(function ($) {
 		 
 			})
  
+ 
+var wow = new WOW({ mobile: false });
+		 wow.init();
 
 });
