@@ -3574,9 +3574,11 @@ readers do not read off random characters that represent icons */.sr-only {
 html {
   background-position: center top;
   background-repeat: no-repeat;
+  background-image: url(../screen/5.jpg);
 }
 
 body {
+  opacity: .7;
   background-color: transparent;
 }
 
@@ -3713,6 +3715,7 @@ body.fixed .catalog-bg {
 .main-wrapper {
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .slick-slide img {
@@ -4103,6 +4106,27 @@ html.fixed {
 
 img.mfp-img {
   padding: 0;
+}
+
+.s-404 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
 }
 
 .icon {
