@@ -616,11 +616,9 @@ html {
   -webkit-overflow-scrolling: touch;
   background-position: center top;
   background-repeat: no-repeat;
-  background-image: url(../screen/main.jpg);
 }
 
 body {
-  opacity: .7;
   background-color: transparent;
 }
 
@@ -1008,6 +1006,7 @@ select.form-control:focus::-ms-value {
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(../img/head.jpg);
+  background-position: top center;
 }
 
 .header__title-top {
@@ -1107,6 +1106,21 @@ select.form-control:focus::-ms-value {
   background-repeat: no-repeat;
 }
 
+.header__price--old span {
+  position: relative;
+}
+
+.header__price--old span::before {
+  content: url(../img/close.png);
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .s-contact {
   display: block;
 }
@@ -1185,9 +1199,24 @@ select.form-control:focus::-ms-value {
   font-size: 100px;
 }
 
+.footer__price--old span {
+  position: relative;
+}
+
+.footer__price--old span::before {
+  content: url(../img/close-2.png);
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .footer .img-prod {
   position: relative;
-  margin-top: -340px;
+  margin-top: -420px;
   left: -40px;
 }
 
