@@ -352,7 +352,13 @@
       <!-- start header-block-->
       <div class="header-block" id="header-block">
         <div class="container">
-          <div class="header-block__nav d-none d-md-flex"><a class="header-block__link" href="#">Электродные шлемы MCScap </a><a class="header-block__link" href="#">Электроды, гель и аксессуары</a><a class="header-block__link" href="#">Мобильная система NeoRecCap</a>
+          <div class="header-block__nav d-none d-md-flex">
+            <div class="header-block__link header-block__link--dropdown"><a href="#">Электродные шлемы MCScap </a>
+              <div class="header-block__dropdown-menu"> 
+                <div class="header-block__dropdown-menu-inner"><a href="#">Электронные шлемы MCScap</a><a href="#">Электроды, гель и аксессуары</a><a href="#">Электроды</a><a href="#">Текстильные шлемы</a><a href="#">Адаптеры</a><a href="#">Гель и аксессуары</a><a href="#">Мобильная система NeoRecCap</a>
+                </div>
+              </div>
+            </div><a class="header-block__link" href="#">Электроды, гель и аксессуары</a><a class="header-block__link" href="#">Мобильная система NeoRecCap</a>
           </div>
           <h1>Официальный интернет-магазин ЭЭГ аксессуаров MCScap</h1>
           <div class="header-block__img-wrap"><img class="res-i" src="img/head-img.png" alt=""/>
@@ -948,7 +954,7 @@
             </div>
           </div>
         </div>
-      </footer><a class="btn btn btn-danger popup-with-move-anim" href="#modal-reg">регистрация</a>
+      </footer><a class="btn btn btn-danger popup-with-move-anim" href="#modal-reg">регистрация</a><a class="btn btn btn-danger popup-with-move-anim" href="#modal-password-recovery">Забыли пароль?  </a><a class="btn btn btn-danger popup-with-move-anim" href="#modal-password-recovery-2">Забыли пароль?   2</a><a class="btn btn btn-danger popup-with-move-anim" href="#modal-thanks">modal-thanks</a>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-inner">
       <form>
@@ -956,7 +962,7 @@
         </div>
         <div class="form-wrap__input-wrap form-group">
           <label><span class="form-wrap__title-label">Логин</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
-          </label>
+          </label> 
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
@@ -969,30 +975,74 @@
         <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Войти 
         </button>
         <div class="form-wrap__foot row row row--small small justify-content-center">
-          <div class="col-auto"><a href="#">Забыли пароль?    </a></div>
+          <div class="col-auto"><a class="popup-with-move-anim" href="#modal-password-recovery">Забыли пароль?    </a></div>
           <div class="col-auto text-gray"> | </div>
-          <div class="col-auto"><a href="#">   Регистрация</a></div>
+          <div class="col-auto"><a class="popup-with-move-anim" href="#modal-reg">   Регистрация</a></div>
         </div>
       </form>
     </div>
     <!-- #modal-inner-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-password-recovery">
+      <form>
+        <div class="form-wrap__title h6">Востановления пароля
+        </div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><span class="form-wrap__title-label">Введите Ваш e-mail</span><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Востановить пароль
+        </button>
+        <div class="form-wrap__foot row row row--small small justify-content-center">
+          <div class="col-auto"><a class="popup-with-move-anim" href="#modal-inner">Вход в личный кабинет    </a></div>
+          <div class="col-auto text-gray"> | </div>
+          <div class="col-auto"><a class="popup-with-move-anim" href="#modal-reg">   Регистрация</a></div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-password-recovery-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-password-recovery-2">
+      <form>
+        <div class="form-wrap__title h6">Востановления пароля
+        </div>
+        <p>Мы отправили на Ваш e-mail <a href="mailto:sample@sample.com">sample@sample.com  </a>код для сброса пароля, введите его в поле ниже и измените пароль</p>
+        <div class="form-wrap__input-wrap form-group">
+          <label><span class="form-wrap__title-label">Код из письма</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><span class="form-wrap__title-label">Новый пароль</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><span class="form-wrap__title-label">Подтвердите пароль</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Изменить пароль
+        </button>
+      </form>
+    </div>
+    <!-- #modal-password-recovery-2-->
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-reg">
       <form>
-        <div class="form-wrap__title h6">Вход в личный кабинет
+        <div class="form-wrap__title h6">Регистрация
         </div>
         <div class="form-wrap__input-wrap form-group">
           <label><span class="form-wrap__title-label">Фамилия</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
-          </label>
+          </label> 
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
           <label><span class="form-wrap__title-label">Имя</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
-          </label>
+          </label> 
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
           <label><span class="form-wrap__title-label">E-mail</span><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/>
-          </label>
+          </label> 
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
@@ -1003,19 +1053,29 @@
         <div class="form-wrap__input-wrap form-group">
           <label><span class="form-wrap__title-label">Повторите пароль</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
           </label>
+          <div class="small text-danger">Пароли не совпадают</div>
         </div>
         <!-- +e.input-wrap-->
-        <div class="small text-danger">Пароли не совпадают</div>
-        <label class="custom-input"><input class="custom-input__input" type="checkbox" name="reg"/><span class="custom-input__lab"></span><span class="custom-input__text small">Запомнить меня</span>
-        </label>
+        <div class="form-wrap__captcha"><img class="res-i" src="img/captcha.png" alt=""/>
+        </div>
         <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Зарегистрироваться
         </button>
-        <div class="form-wrap__foot">
+        <div class="form-wrap__foot small text-center">
           или   <a class="popup-with-move-anim" href="#modal-inner">Войдите</a>, если у вас уже есть аккаунт
         </div>
       </form>
     </div>
     <!-- #modal-reg-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-thanks">
+      <form>
+        <div class="form-wrap__title h6">Благодарность
+        </div><img class="res-i mb-3" src="img/thank.jpg" alt=""/>
+        <p>Текст благодарности в одну или несколько строк, также возможность использовать изображение под заголовком</p>
+        <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Продолжить покупки
+        </button>
+      </form>
+    </div>
+    <!-- #modal-thanks-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/popper.min.js"></script>

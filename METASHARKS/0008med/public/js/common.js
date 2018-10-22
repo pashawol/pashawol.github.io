@@ -258,13 +258,13 @@ jQuery(document).ready(function ($) {
 	});
 
 	// показать поиск в меню
-	$(".top-nav__btn--search , .search-block__btn--close ").click(function(e){
+	$(".top-nav__btn--search , .search-block__btn--close").click(function(e){
 		e.preventDefault();
 		$(".search-block").toggle().find("input").focus();
 	})
 
 		// замедление ховера в меню
-		var $li = $('.header .dropdown-cat').hover(
+		var $li = $('.header .dropdown-cat , .header-block__link--dropdown').hover(
 			function () {
 					var self = this;
 					hovertimer = setTimeout(function(){
