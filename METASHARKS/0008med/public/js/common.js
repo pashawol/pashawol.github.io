@@ -278,4 +278,16 @@ jQuery(document).ready(function ($) {
 						$("html, .top-nav.fixed").removeClass("fixed-brand");
 			}
 	);
+
+			// для плаваюещего label
+	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('label').addClass('empty');
+
+$('input').keyup(function () {
+  if ($(this).val().trim() !== '') {
+    $(this).closest('label').removeClass('empty');
+  } else {
+    $(this).closest('label').addClass('empty');
+  }
 });
+});
+

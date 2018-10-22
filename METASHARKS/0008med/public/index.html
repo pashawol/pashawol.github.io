@@ -249,7 +249,7 @@
                   <use xlink:href="img/svg/sprite.svg#search"></use>
                 </svg></a>
               </div>
-              <div class="col-auto"><a class="top-nav__btn top-nav__btn--profile" href="#">
+              <div class="col-auto"><a class="top-nav__btn top-nav__btn--profile popup-with-move-anim" href="#modal-inner">
                 <svg class="icon icon-user ">
                   <use xlink:href="img/svg/sprite.svg#user"></use>
                 </svg></a>
@@ -948,34 +948,74 @@
             </div>
           </div>
         </div>
-      </footer>
+      </footer><a class="btn btn btn-danger popup-with-move-anim" href="#modal-reg">регистрация</a>
     </div>
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-inner">
       <form>
-        <div class="text-center">
-          <div class="form-wrap__title h3 ttu">Обратный звонок
-          </div>
-          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+        <div class="form-wrap__title h6">Вход в личный кабинет
         </div>
         <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">text</span><input class="form-wrap__input form-control" type="Ваше Имя" required="required"/>
+          <label><span class="form-wrap__title-label">Логин</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
           </label>
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Ваш телефон" required="required"/>
+          <label><span class="form-wrap__title-label">Пароль</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
           </label>
         </div>
-        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
-        <div class="politic">
-          Отправляя заявку Вы даете
-          <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
-          
-          на&#160;обработку персональных данных
+        <!-- +e.input-wrap-->
+        <label class="custom-input"><input class="custom-input__input" type="checkbox" name="inner"/><span class="custom-input__lab"></span><span class="custom-input__text small">Запомнить меня</span>
+        </label>
+        <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Войти 
+        </button>
+        <div class="form-wrap__foot row row row--small small justify-content-center">
+          <div class="col-auto"><a href="#">Забыли пароль?    </a></div>
+          <div class="col-auto text-gray"> | </div>
+          <div class="col-auto"><a href="#">   Регистрация</a></div>
         </div>
       </form>
     </div>
-    <!-- #modal-call-->
+    <!-- #modal-inner-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-reg">
+      <form>
+        <div class="form-wrap__title h6">Вход в личный кабинет
+        </div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><span class="form-wrap__title-label">Фамилия</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><span class="form-wrap__title-label">Имя</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><span class="form-wrap__title-label">E-mail</span><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><span class="form-wrap__title-label">Пароль</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><span class="form-wrap__title-label">Повторите пароль</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="small text-danger">Пароли не совпадают</div>
+        <label class="custom-input"><input class="custom-input__input" type="checkbox" name="reg"/><span class="custom-input__lab"></span><span class="custom-input__text small">Запомнить меня</span>
+        </label>
+        <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Зарегистрироваться
+        </button>
+        <div class="form-wrap__foot">
+          или   <a class="popup-with-move-anim" href="#modal-inner">Войдите</a>, если у вас уже есть аккаунт
+        </div>
+      </form>
+    </div>
+    <!-- #modal-reg-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/popper.min.js"></script>
