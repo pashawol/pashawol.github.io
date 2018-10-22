@@ -150,7 +150,7 @@ jQuery(document).ready(function ($) {
 
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
-	// карусель
+	// слайдер   одинарный
 	$('.s-slider').slick({
 	   slidesToShow: 1,
 	   slidesToScroll: 1,
@@ -169,7 +169,7 @@ jQuery(document).ready(function ($) {
 			 nextArrow: arrl2,
 			 adaptiveHeight: true
 	   });
-		 
+		//  карусель в каталоге
 	$('.s-catalog__slider').slick({
 	   slidesToShow: 3,
 	   slidesToScroll: 3,
@@ -199,6 +199,48 @@ jQuery(document).ready(function ($) {
 			]
 	   });
 		 
+		 //  слайдер в  карточке товара
+	$(' .prod-head__slider-big').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		asNavFor: '.prod-head__slider-small',
+		infinite: false,
+		loop: false,
+		arrows: false,
+
+	});
+	$('.prod-head__slider-small').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: false,
+		loop: false,
+		arrows: false,
+		vertical: true,
+		verticalSwiping: true,
+		// centerMode: true,
+
+		focusOnSelect: true,
+		asNavFor: '.prod-head__slider-big',
+		responsive: [
+
+			{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 3,
+				}
+			}
+
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+		// swipeToSlide: false
+	});
+
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
