@@ -61,29 +61,7 @@ jQuery(document).ready(function ($) {
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
-	function heightses() {
-
-		var w = $(window).width();
-
-		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		//
-
-
-		// скрывает моб меню
-
-		var topH = $("header ").height();
-
-		$(window).scroll(function () {
-			if ($(this).scrollTop() > 0) {
-				$('.top-nav  ').addClass('fixed');
-			} else {
-				$('.top-nav  ').removeClass('fixed');
-			}
-		});
-		// конец добавил
-	}
-
+ 
 	if (window.matchMedia("(min-width: 992px)").matches) {
 
 		$(".toggle-mnu-1").removeClass("on");
@@ -92,18 +70,14 @@ jQuery(document).ready(function ($) {
 		$("body").removeClass("fixed");
 	}
 
-
-	$(window).resize(function () {
-		heightses();
-
+// изменить размер меню при скроле
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 0) {
+			$('.top-nav  ').addClass('fixed');
+		} else {
+			$('.top-nav  ').removeClass('fixed');
+		}
 	});
-	$(window).on("load", function () {
-		heightses();
-
-	})
-
-	heightses();
-
 
 
 	// листалка по стр
@@ -142,7 +116,35 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+// выравнивает высоту в миниатюрах
+	function heightses() {
 
+		
+		
+		$(".s-catalog").each(function(){
+			// if (window.matchMedia("(min-width: 992px)").matches) {
+				$(this).find(".item-prod__title").height('auto').equalHeights();
+				$(this).find(".item-prod__text").height('auto').equalHeights();
+				// $(this).find(".item-prod__caption").height('auto').equalHeights();
+			// }
+				$(this).find(".item-prod__inner").height('auto').equalHeights();
+				$(this).find(".item-prod").height('auto').height($(this).find(".item-prod__inner").height());
+				// $(this).find(".item-prod__inner").height('auto').equalHeights();
+			})
+			
+  }
+
+  $(window).resize(function() {
+    heightses();
+   
+  });
+ 
+
+ heightses();
+// показывает скрытый блок в миниатюрах
+ $(".item-prod").hover(function(){
+  $(this).find(".item-prod__toggle-block").slideToggle(100);
+ })
 
 	var icon = '<svg   viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="black"/> </svg>';
 
@@ -184,7 +186,17 @@ jQuery(document).ready(function ($) {
 			
 	    prevArrow: arrr2,
 			 nextArrow: arrl2,
-			 adaptiveHeight: true
+			//  adaptiveHeight: true
+			responsive: [
+				{
+					breakpoint: 991,
+					settings: {
+					 
+						slidesToShow: 2,
+						slidesToScroll: 2,
+					}
+				} 
+			]
 	   });
 		 
 	// модальное окно
