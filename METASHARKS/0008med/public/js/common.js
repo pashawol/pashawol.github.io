@@ -263,6 +263,19 @@ jQuery(document).ready(function ($) {
 		$(".search-block").toggle().find("input").focus();
 	})
 
-	
-
+		// замедление ховера в меню
+		var $li = $('.header .dropdown-cat').hover(
+			function () {
+					var self = this;
+					hovertimer = setTimeout(function(){
+							$(self).addClass('hover-block');
+							// $("html, .top-nav.fixed").addClass("fixed-brand");
+						}, 500);
+					},
+					function () {
+						clearTimeout(hovertimer);
+						$li.removeClass('hover-block');
+						$("html, .top-nav.fixed").removeClass("fixed-brand");
+			}
+	);
 });
