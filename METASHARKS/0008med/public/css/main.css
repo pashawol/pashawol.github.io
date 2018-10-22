@@ -4585,6 +4585,11 @@ body {
   background-color: #1c9b91;
 }
 
+.page-title {
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
 .ttu {
   text-transform: uppercase;
 }
@@ -5031,6 +5036,21 @@ a {
 .icon-user {
   font-size: 35rem;
   width: 1em;
+}
+
+.icon-variant-1 {
+  font-size: 1.9rem;
+  width: 0.94737em;
+}
+
+.icon-variant-2 {
+  font-size: 1.9rem;
+  width: 0.94737em;
+}
+
+.icon-variant-3 {
+  font-size: 1.9rem;
+  width: 0.94737em;
 }
 
 .icon-video {
@@ -6491,6 +6511,142 @@ a {
 
 .s-catalog .slick-arrow.r {
   right: 15px;
+}
+
+.s-catalog__col {
+  margin-bottom: 30px;
+}
+
+.s-catalog__head {
+  background-color: #eaf3f2;
+  padding: 5px 15px;
+  position: relative;
+  z-index: 30;
+  margin-bottom: 20px;
+}
+
+.s-catalog__head .col-md-auto {
+  margin-bottom: 8px;
+}
+
+.s-catalog__head .row,.s-catalog__head .top-nav__nav {
+  margin-left: -0.3125rem;
+  margin-right: -0.3125rem;
+}
+
+.s-catalog__head .row > *,.s-catalog__head .top-nav__nav > * {
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
+}
+
+.s-catalog__option {
+  cursor: pointer;
+  border: none;
+  background-image: url(../img/svg/bot.svg);
+  background-repeat: no-repeat;
+  background-position: 97% 55%;
+  padding-right: 1.25rem;
+  -webkit-background-size: 10px 10px;
+          background-size: 10px;
+  -webkit-appearance: none;
+  outline: none !important;
+  cursor: pointer;
+ /* Webkit */
+  -moz-appearance: none;
+ /* FF */
+  -ms-appearance: none;
+ /* Edge */
+  appearance: none;
+ /* Future */;
+}
+
+.s-catalog__option::-ms-expand {
+  display: none;
+}
+
+.s-catalog__option:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+
+.s-catalog__select {
+  position: relative;
+}
+
+.s-catalog__d-none {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 5px 0;
+  width: 150px;
+  z-index: 20;
+  display: none;
+}
+
+.s-catalog__d-none a {
+  display: block;
+  padding: 5px;
+  text-decoration: none !important;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+}
+
+.s-catalog__d-none a:hover {
+  color: #ffffff;
+  background-color: #17a2b8;
+}
+
+.s-catalog__select:hover .s-catalog__d-none {
+  display: block;
+}
+
+.s-catalog__foot {
+  border-top: 2px solid #1c9b91;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+
+.s-catalog__foot .row,.s-catalog__foot .top-nav__nav {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.s-catalog .variant {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #858585;
+}
+
+.s-catalog .variant:hover,.s-catalog .variant.active {
+  color: #ffffff;
+  background-color: #1c9b91;
+}
+
+.s-catalog .variant .icon {
+  font-size: 1.125rem;
 }
 
 .item-prod {
@@ -8548,6 +8704,11 @@ a {
     font-size: 1.875rem;
   }
 
+  .s-catalog .variant {
+    width: 40px;
+    height: 40px;
+  }
+
   .item-prod .row,.item-prod .top-nav__nav {
     margin-top: 30px;
   }
@@ -9509,6 +9670,31 @@ a {
   .s-catalog__slider::after {
     right: -webkit-calc(100% + 15px);
     right: calc(100% + 15px);
+  }
+
+  .s-catalog__head .col-md-auto {
+    margin-bottom: 0;
+  }
+
+  .s-catalog__head {
+    margin-bottom: 40px;
+  }
+
+  .s-catalog__head .row,.s-catalog__head .top-nav__nav {
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
+  }
+
+  .s-catalog__head .row > *,.s-catalog__head .top-nav__nav > * {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+
+  .s-catalog__head .row .row,.s-catalog__head .top-nav__nav .row,.s-catalog__head .row .top-nav__nav,.s-catalog__head .top-nav__nav .top-nav__nav {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .s-pick-up__img-wrap {
@@ -10493,6 +10679,11 @@ a {
 
   .header-block h1 {
     font-size: 3.125rem;
+  }
+
+  .s-catalog__foot {
+    margin-top: 34px;
+    padding-top: 35px;
   }
 
   .s-catalog {
