@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
- 
+
 	// галерея
 	$(".gal").each(function () {
 
@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
 			closeBtnInside: false,
 			mainClass: 'mfp-with-zoom mfp-img-mobile',
 			image: {
-				verticalFit: true, 
+				verticalFit: true,
 			},
 			gallery: {
 				enabled: true
@@ -61,7 +61,7 @@ jQuery(document).ready(function ($) {
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
- 
+
 	if (window.matchMedia("(min-width: 992px)").matches) {
 
 		$(".toggle-mnu-1").removeClass("on");
@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
 		$("body").removeClass("fixed");
 	}
 
-// изменить размер меню при скроле
+	// изменить размер меню при скроле
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 0) {
 			$('.top-nav  ').addClass('fixed');
@@ -95,56 +95,47 @@ jQuery(document).ready(function ($) {
 	$(function () {
 		var tab = ('tabs');
 
-		$('.' + tab + '__caption').each(function (i) {
-			var storage = localStorage.getItem('tab' + i);
-			if (storage) {
-				$(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-					.closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-			}
-		});
-
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 				.eq($(this).index()).fadeIn().addClass('active');
 
-			var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-			localStorage.removeItem('tab' + ulIndex);
-			localStorage.setItem('tab' + ulIndex, $(this).index());
-
 		});
 	});
 
-// выравнивает высоту в миниатюрах
+	// выравнивает высоту в миниатюрах
 	function heightses() {
 
-		
-		
-		$(".s-catalog").each(function(){
+
+
+		$(".s-catalog").each(function () {
 			// if (window.matchMedia("(min-width: 992px)").matches) {
-				$(this).find(".item-prod__title").height('auto').equalHeights();
-				$(this).find(".item-prod__text").height('auto').equalHeights();
-				// $(this).find(".item-prod__caption").height('auto').equalHeights();
+			$(this).find(".item-prod__title").height('auto').equalHeights();
+			$(this).find(".item-prod__text").height('auto').equalHeights();
+			// $(this).find(".item-prod__caption").height('auto').equalHeights();
 			// }
-				$(this).find(".item-prod__inner").height('auto').equalHeights();
-				$(this).find(".item-prod").height('auto').height($(this).find(".item-prod__inner").height());
-				// $(this).find(".item-prod__inner").height('auto').equalHeights();
-			})
-			
-  }
+			$(this).find(".item-prod__inner").height('auto').equalHeights();
+			$(this).find(".item-prod").height('auto').height($(this).find(".item-prod__inner").height());
+			// $(this).find(".item-prod__inner").height('auto').equalHeights();
+		})
 
-  $(window).resize(function() {
-    heightses();
-   
-  });
- 
+	}
+	$(window).on("load", function () {
+		heightses();
 
- heightses();
-// показывает скрытый блок в миниатюрах
- $(".item-prod").hover(function(){
-  $(this).find(".item-prod__toggle-block").slideToggle(100);
- })
+	})
+	$(window).resize(function () {
+		heightses();
+
+	});
+
+
+	heightses();
+	// показывает скрытый блок в миниатюрах
+	$(".item-prod").hover(function () {
+		$(this).find(".item-prod__toggle-block").slideToggle(100);
+	})
 
 	var icon = '<svg   viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="black"/> </svg>';
 
@@ -152,95 +143,115 @@ jQuery(document).ready(function ($) {
 		arrr2 = (' <div class="r">' + icon);
 	// слайдер   одинарный
 	$('.s-slider').slick({
-	   slidesToShow: 1,
-	   slidesToScroll: 1,
-	   dots: false,
-	   speed: 450,
-	   infinite: true,
-	   loop: true,
-		 arrows: true,
-		//  autoplay: true,
-  	// autoplaySpeed: 3000,
-	   // centerMode: true,
-	   // focusOnSelect: true ,
-			// variableWidth: true,
-			
-	    prevArrow: arrr2,
-			 nextArrow: arrl2,
-			 adaptiveHeight: true
-	   });
-		//  карусель в каталоге
-	$('.s-catalog__slider').slick({
-	   slidesToShow: 3,
-	   slidesToScroll: 3,
-	   dots: false,
-	   speed: 450,
-	   infinite: true,
-	   loop: true,
-		 arrows: true,
-		//  autoplay: true,
-  	// autoplaySpeed: 3000,
-	   // centerMode: true,
-	   // focusOnSelect: true ,
-			// variableWidth: true,
-			
-	    prevArrow: arrr2,
-			 nextArrow: arrl2,
-			//  adaptiveHeight: true
-			responsive: [
-				{
-					breakpoint: 991,
-					settings: {
-					 
-						slidesToShow: 2,
-						slidesToScroll: 2,
-					}
-				} 
-			]
-	   });
-		 
-		 //  слайдер в  карточке товара
-	$(' .prod-head__slider-big').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
 		speed: 450,
-		asNavFor: '.prod-head__slider-small',
-		infinite: false,
-		loop: false,
-		arrows: false,
+		infinite: true,
+		loop: true,
+		arrows: true,
+		//  autoplay: true,
+		// autoplaySpeed: 3000,
+		// centerMode: true,
+		// focusOnSelect: true ,
+		// variableWidth: true,
 
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		adaptiveHeight: true
 	});
-	$('.prod-head__slider-small').slick({
-		slidesToShow: 5,
-		slidesToScroll: 1,
+	//  карусель в каталоге
+	$('.s-catalog__slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 3,
 		dots: false,
 		speed: 450,
-		infinite: false,
-		loop: false,
-		arrows: false,
-		vertical: true,
-		verticalSwiping: true,
-		// centerMode: true,
+		infinite: true,
+		loop: true,
+		arrows: true,
+		//  autoplay: true,
+		// autoplaySpeed: 3000, 
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		responsive: [{
+			breakpoint: 991,
+			settings: {
 
-		focusOnSelect: true,
-		asNavFor: '.prod-head__slider-big',
-		responsive: [
-
-			{
-				breakpoint: 1199,
-				settings: {
-					slidesToShow: 3,
-				}
+				slidesToShow: 2,
+				slidesToScroll: 2,
 			}
-
-			// You can unslick at a given breakpoint now by adding:
-			// settings: "unslick"
-			// instead of a settings object
-		]
-		// swipeToSlide: false
+		}]
 	});
+	$(".prod-head__sliders").each(function () {
+		var th = $(this);
 
+
+		//  слайдер в  карточке товара
+		th.find(' .prod-head__slider-big').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			speed: 450,
+			asNavFor: th.find(' .prod-head__slider-small'),
+			infinite: false,
+			loop: false,
+			arrows: false,
+
+		});
+		th.find('.col-xl-auto .prod-head__slider-small').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			dots: false,
+			speed: 450,
+			infinite: false,
+			loop: false,
+			arrows: false,
+			vertical: true,
+			verticalSwiping: true,
+			focusOnSelect: true,
+			asNavFor: th.find('.prod-head__slider-big'),
+			responsive: [{
+					breakpoint: 1199,
+					settings: {
+						slidesToShow: 3,
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 4,
+						vertical: false,
+						verticalSwiping: false,
+					}
+				},
+				
+			]
+			// swipeToSlide: false
+		});
+		
+		
+		
+		th.find(' .prod-head__slider-small--modal').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			dots: false,
+			speed: 450,
+			infinite: false,
+			loop: false,
+			arrows: false,
+			
+			focusOnSelect: true,
+			asNavFor: th.find('.prod-head__slider-big'),
+			
+		});
+		
+	})
+
+
+	$('[href="#modal-prod"]').click(function () {
+
+		$("#modal-prod").find(".slick-slider").slick('refresh');
+	})
 	// модальное окно
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -258,13 +269,13 @@ jQuery(document).ready(function ($) {
 		mainClass: 'my-mfp-zoom-in'
 	});
 
- 
+
 	// маска на инпут
 	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
 		"mask": "+7(999)999-99-99"
 	});
 
- 
+
 	// кастомный инпут файл
 
 	var file = $(".add-file input[type=file]");
@@ -282,54 +293,76 @@ jQuery(document).ready(function ($) {
 	//      uploadMultiple: true,
 	//   });
 
-  
- $(".top-nav__btn--basket").click(function(e){
-	 e.preventDefault();
-	$(this)
-	.next().toggleClass("show")
-	.parent().toggleClass("show");
- })
+
+	$(".top-nav__btn--basket").click(function (e) {
+		e.preventDefault();
+		$(this)
+			.next().toggleClass("show")
+			.parent().toggleClass("show");
+	})
 
 	$(document).mouseup(function (e) {
 		var container = $(".basket-dropdown.show");
-		if (container.parent().has(e.target).length === 0 ) {
+		if (container.parent().has(e.target).length === 0) {
 			container.removeClass("show")
-			.prev().attr("aria-expanded", "false")
-			.parent().removeClass("show");
+				.prev().attr("aria-expanded", "false")
+				.parent().removeClass("show");
 		}
 	});
 
 	// показать поиск в меню
-	$(".top-nav__btn--search , .search-block__btn--close").click(function(e){
+	$(".top-nav__btn--search , .search-block__btn--close").click(function (e) {
 		e.preventDefault();
 		$(".search-block").toggle().find("input").focus();
 	})
 
-		// замедление ховера в меню
-		var $li = $('.header .dropdown-cat , .header-block__link--dropdown').hover(
-			function () {
-					var self = this;
-					hovertimer = setTimeout(function(){
-							$(self).addClass('hover-block');
-							// $("html, .top-nav.fixed").addClass("fixed-brand");
-						}, 500);
-					},
-					function () {
-						clearTimeout(hovertimer);
-						$li.removeClass('hover-block');
-						$("html, .top-nav.fixed").removeClass("fixed-brand");
-			}
+	// замедление ховера в меню
+	var $li = $('.header .dropdown-cat , .header-block__link--dropdown').hover(
+		function () {
+			var self = this;
+			hovertimer = setTimeout(function () {
+				$(self).addClass('hover-block');
+				// $("html, .top-nav.fixed").addClass("fixed-brand");
+			}, 500);
+		},
+		function () {
+			clearTimeout(hovertimer);
+			$li.removeClass('hover-block');
+			$("html, .top-nav.fixed").removeClass("fixed-brand");
+		}
 	);
 
-			// для плаваюещего label
+	// для плаваюещего label
 	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('label').addClass('empty');
 
-$('input').keyup(function () {
-  if ($(this).val().trim() !== '') {
-    $(this).closest('label').removeClass('empty');
-  } else {
-    $(this).closest('label').addClass('empty');
-  }
-});
-});
+	$('input').keyup(function () {
+		if ($(this).val().trim() !== '') {
+			$(this).closest('label').removeClass('empty');
+		} else {
+			$(this).closest('label').addClass('empty');
+		}
+	});
 
+	$('.breadcrumb, .tabs__caption').slick({
+		dots: false,
+		arrows: false,
+		infinite: false,
+		loop: false,
+		speed: 450,
+		slidesToShow: 1,
+		// centerMode: true,
+
+		variableWidth: true
+	});
+
+	// видеоо в модалке
+	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+
+		fixedContentPos: false
+	});
+});
