@@ -271,9 +271,9 @@ jQuery(document).ready(function ($) {
 
 
 	// маска на инпут
-	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
-		"mask": "+7(999)999-99-99"
-	});
+	// $("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
+	// 	"mask": "+7(999)999-99-99"
+	// });
 
 
 	// кастомный инпут файл
@@ -335,7 +335,7 @@ jQuery(document).ready(function ($) {
 	// для плаваюещего label
 	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('label').addClass('empty');
 
-	$('input').keyup(function () {
+	$('input, textarea').keyup(function () {
 		if ($(this).val().trim() !== '') {
 			$(this).closest('label').removeClass('empty');
 		} else {
@@ -343,7 +343,7 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
-	$('.breadcrumb, .tabs__caption').slick({
+	$('.s-order-nav, .breadcrumb, .tabs__caption').slick({
 		dots: false,
 		arrows: false,
 		infinite: false,

@@ -15,6 +15,7 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  min-height: 100vh;
 }
 
 @-ms-viewport {
@@ -697,7 +698,7 @@ body,html {
 body {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1560px;
+  /* max-width: 1560px; */
   min-width: 320px;
   position: relative;
 }
@@ -997,7 +998,9 @@ select.form-control:focus::-ms-value {
 }
 
 .header__logo {
-  margin-top: 50px;
+    margin-top: 15px;
+    height: 110px;
+	width: 80px;
 }
 
 .header__head {
@@ -1005,22 +1008,29 @@ select.form-control:focus::-ms-value {
           background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url(../img/head.jpg);
+  background-image: url(../img/fon_b1.jpg);
   background-position: top center;
+  min-height: calc(100vh - 54px);
+  display: flex;
+  /* justify-content: space-around; */
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
 }
 
 .header__title-top {
   position: relative;
-  font-size: 100px;
+  font-size: 58px;
   text-transform: uppercase;
   z-index: 1;
   color: #ffffff;
   font-family: 'Bebas Neue Regular';
-  width: 792px;
-  height: 140px;
+  width: 860px;
+  height:     height: 115px;;
   overflow: hidden;
   text-align: right;
-  margin-right: -50px;
+  /* margin-right: -50px; */
+      margin-top: 15px;
   padding-right: 30px;
 }
 
@@ -1045,9 +1055,10 @@ select.form-control:focus::-ms-value {
 .header__text {
   font-family: 'A Futura Round';
   color: #fff;
-  padding-top: 6.875rem;
-  font-size: 67px;
+  padding-top: 0.875rem;
+  font-size: 27px;
   line-height: 1.2;
+  text-align: right;
 }
 
 .header__prod {
@@ -1058,18 +1069,19 @@ select.form-control:focus::-ms-value {
 .header__big {
   color: #fe0000;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 29px;
 }
 
 .header__text-block {
   font-family: 'Bebas Neue Regular';
-  font-size: 100px;
+  font-size: 40px;
   color: #ffffff;
   position: relative;
   z-index: 1;
   max-width: 695px;
-  margin-top: 35px;
-  padding-top: 15px;
+    margin-top: 0px;
+    padding-top: 26px;
+	padding-right: 60px;
 }
 
 .header__text-block::before {
@@ -1081,7 +1093,7 @@ select.form-control:focus::-ms-value {
 }
 
 .header__white-block {
-  height: 640px;
+  /*height: 220px;*/
   background-position: center top;
   margin-top: -60px;
   position: relative;
@@ -1092,7 +1104,7 @@ select.form-control:focus::-ms-value {
   transform: skewY(-5deg);
 }
 
-.header__white-block::before {
+/**.header__white-block::before {
   content: '';
   position: absolute;
   background-image: url(../img/hand.png);
@@ -1104,16 +1116,23 @@ select.form-control:focus::-ms-value {
   -ms-transform: skewY(5deg);
   transform: skewY(5deg);
   background-repeat: no-repeat;
-}
+}**/
 
 .header__price--old span {
   position: relative;
 }
 
 .header__price--old span::before {
-  content: url(../img/close.png);
+  /* content: url(../img/close.png); */
+  content: '';
+  background-image: url(../img/close.png);
   position: absolute;
   position: absolute;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1125,7 +1144,55 @@ select.form-control:focus::-ms-value {
   display: block;
 }
 
-.footer {
+.header__text-block2 {
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    z-index: 1;
+    color: #ffffff;
+    font-family: 'Bebas Neue Regular';
+    width: 1020px;
+    margin-left: auto;
+    /*height: 115px;*/
+    overflow: hidden;
+    text-align: right;
+    /* margin-right: -50px; */
+    margin-top: 0px;
+    padding-right: 30px;
+	margin-bottom: 15px;
+}
+.header__text-block2::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 0;
+    left: 475px;
+    width: 690px;
+  height: 100%;
+  background-color: #e04443;
+  background-image: -webkit-gradient(linear, left top, right top, from(#d05313), to(#d68d04));
+  background-image: -webkit-linear-gradient(left, #d05313 0%, #d68d04 100%);
+  background-image: -o-linear-gradient(left, #d05313 0%, #d68d04 100%);
+  background-image: linear-gradient(to right, #d05313 0%, #d68d04 100%);
+  -webkit-transform: skewX(-30deg);
+  -ms-transform: skewX(-30deg);
+  transform: skewX(-30deg);
+}
+.partners {
+    background: rgba(255,255,255,0.5);
+	padding: 10px;
+}
+
+.fon_w {
+    background-color: rgba(255,255,255,0.5);
+    padding: 15px;
+}
+.fon_wr {
+    background-color: rgba(255,255,255,0.8);
+    padding: 15px;
+}
+
+.fon_bunny {
   position: relative;
   z-index: 4;
   margin-top: -160px;
@@ -1138,7 +1205,26 @@ select.form-control:focus::-ms-value {
   -ms-transform: skewY(-2deg);
   transform: skewY(-2deg);
 }
-
+.fon_Rover {
+  position: relative;
+  z-index: 4;
+  margin-top: 25px;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/fon_b.jpg);
+  -webkit-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+}
+.modal_text {
+    display: block;
+    z-index: 9999;
+    color: #fff;
+	    margin-top: 20px;
+		float: right;
+}
 .footer__inner {
   -webkit-transform: skewY(2deg);
   -ms-transform: skewY(2deg);
@@ -1183,7 +1269,7 @@ select.form-control:focus::-ms-value {
 .footer__text {
   font-family: 'A Futura Round';
   padding-top: 1.5625rem;
-  font-size: 67px;
+  font-size: 55px;
   line-height: 1.2;
   text-align: right;
 }
@@ -1196,7 +1282,7 @@ select.form-control:focus::-ms-value {
 .footer__big {
   color: #fe0000;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 52px;
 }
 
 .footer__price--old span {
@@ -1235,8 +1321,8 @@ select.form-control:focus::-ms-value {
   text-align: center;
   background-color: #444444;
   color: #ffffff;
-  padding-top: 30px;
-  padding-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 @font-face {
@@ -2077,8 +2163,8 @@ select.form-control:focus::-ms-value {
   }
 
   .container {
-    padding-left: 50px;
-    padding-right: 50px;
+    /* padding-left: 50px; */
+    /* padding-right: 50px; */
   }
 }
 
@@ -2351,4 +2437,12 @@ select.form-control:focus::-ms-value {
   .offset-xl-11 {
     margin-left: 91.66667%;
   }
+}
+
+.col-7 img{
+  max-height: 340px;
+}
+
+.text-body{
+  color: #000000;
 }

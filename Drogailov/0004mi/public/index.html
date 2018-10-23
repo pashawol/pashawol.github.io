@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>title</title>
@@ -7,11 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=1200">
     <meta property="og:image" content="path/to/image.jpg">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#3361d8">
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/modal.css">
   </head>
+  
   <body>
     <div class="main-wrapper">
       <!-- start HEADER.header-->
@@ -24,59 +27,256 @@
                 </div>
               </div>
               <div class="col-auto">
-                <div class="header__title-top">Робот-конструктор
+                <div class="header__title-top">Робот-конструктор по отличной цене
                 </div>
               </div>
             </div>
-            <div class="header__text">
-              <div class="header__brand">Xiaomi Mi
+			
+          <div class=" ">
+            <div class="row">
+				<div class="col-6">
+					<div class="row">
+						<div class="col-7">
+							<img class="res-i" src="img/MiBunnyRobotBuilder.png" alt=""/>
+						</div>
+						<div class="col-5">
+						
+							<div class="header__text">
+							  <div class="header__brand">Xiaomi Mi
+							  </div>
+							  <div class="header__prod">Bunny Robot Builder
+							  </div>
+							  <div class="header__price"><span class="header__big">289,99  </span>руб.
+							  </div>
+							  <div class="header__price header__price--old"> <span>315 </span>руб.
+							  </div>
+							</div>
+							<div class="modal_text">
+							  <label title="Подробнее" class="btn" for="modal-1">Подробнее</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="row">
+						<div class="col-7">
+							<img class="res-i" src="img/robot.png" alt=""/>
+						</div>
+						<div class="col-5">
+							<div class="header__text text-body">
+							  <div class="header__brand">Xiaomi Mi
+							  </div>
+							  <div class="header__prod">Robot Builder Rover
+							  </div>
+							  <div class="header__price"><span class="header__big">299,99  </span>руб.
+							  </div>
+							  <div class="header__price header__price--old"> <span>349 </span>руб.
+							  </div>
+							</div>
+							<div class="modal_text">
+							  <label title="Подробнее" class="btn" for="modal-2">Подробнее</label>
+							</div>
+						</div>
+					</div>
+				</div>
               </div>
-              <div class="header__prod">Bunny Robot Builder
-              </div>
-              <div class="header__price"><span class="header__big">289,99  </span>руб.
-              </div>
-              <div class="header__price header__price--old"> <span>315 </span>руб.
-              </div>
-            </div>
-            <div class="header__text-block">по отличной цене
-            </div>
-          </div>
-        </div>
-        <div class="header__white-block">
-        </div>
+			  
+			  <div class="row">
+				<div class="header__text-block2">в магазинах сетей - официальных партнеров:</div>
+			  </div>
+			  
+			  
+      </div>
+			
+      <!--div class="header__text-block">в магазинах сетей - официальных партнеров:</div-->
+    </div>
+    <div class="partners ">
+      <div class="container">
+  
+        <div class="row">
+          <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
+          <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
+          <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
+          <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
+          <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
+          <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
+        </div>  
+      </div>
+    </div>
+  </div>
+		
+    <!--div class="header__white-block">
+        </div-->
+		
       </header>
       <!-- end HEADER.header-->
+	  
+	  
+<div class="modalform">
+  <input class="modal-open" id="modal-1" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-1"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Конструктор Mi Bunny Block Robot</h2>
+        <label class="btn-close" for="modal-1" aria-hidden="true">&times;</label>
+      </div>
+      <div class="modal-body">
+         
+<h3>Высокоточная конструкция привода</h3>
+
+<p><strong>Радость сборки с каждой новой деталью</strong><br />
+Все 978 деталей робота Mi Bunny отливаются на высокоточной пресс-форме. Конструкция шестеренок, цепи и карданного вала, выполненная с особой точностью гарантирует высокоэффективное функционирование.<br />
+Выполнен из экологически чистого материала<br />
+&nbsp;</p>
+<img class="res-i" src="img/Bunny/b.png" alt=""/>
+
+<h3>Робот со встроенным балансирующим устройством</h3>
+
+<p><strong>Автоматически держит равновесие</strong><br />
+Mi Bunny, как и смартфон, имеет встроенный процессор и даже специальную операционную систему, позволяющую делать его движения невероятно гармоничными. Благодаря работе принципа обратного маятника, Mi Bunny может не только держать равновесие на месте, но также и благополучно передвигаться с тремя килограммами груза. Главный контроллер включает 4 разъема типа USB-C, что позволяет пользоваться другим оборудованием во время зарядки робота.<br />
+&nbsp;</p>
+<img class="res-i" src="img/Bunny/e.png" alt=""/>
+
+
+<h3>Мощный электродвигатель</h3>
+
+<p><strong>Высокоточный контроль направления</strong><br />
+Робот Mi Bunny оснащён парой мощных щёточных мотор-колес со скоростью вращения 170 об./мин и крутящим моментом 25 Н·см. Mi Bunny умеет держать равновесие не только с собственным весом, но и с нагрузкой в 3 кг. Электродвигатель оснащен оптическим кодирующим диском, который позволяет точно определять задаваемую скорость и угол направления. Помимо этого, для защиты от чрезмерной силы тока, электродвигатель автоматически включает безопасный режим работы при заклинивании ротора, предотвращая возгорание.<br />
+&nbsp;</p>
+<img class="res-i" src="img/Bunny/c1.png" alt=""/>
+<img class="res-i" src="img/Bunny/d.png" alt=""/>
+
+<h3>Используйте телефон для управления Вашим роботом</h3>
+
+<p><strong>3 режима контроля</strong><br />
+Для контроля действий Mi Bunny достаточно установить специальное приложение на телефон. Три режима контроля откроют пространство для Ваших фантазий и сделают управление лёгкой и приятной задачей. *<br />
+*существует приложение для ОС Android и iOS<br />
+&nbsp;</p>
+<img class="res-i" src="img/Bunny/f.png" alt=""/>
+
+<h3>Блочное графическое программирование</h3>
+
+<p><strong>Основы интеллекта у игрушки</strong><br />
+Научить робота танцу? Или научить его принимать милый образ? Со специальным методом графического программирования Mi Bunny может и не такое. Со сложным специальным кодом управления блочной графикой, взятым за основу обучения в виде игры, робот легко поддается обучению, а Вы получаете нескончаемый поток удовольствия поиска новых возможностей.<br />
+&nbsp;</p>
+<img class="res-i" src="img/Bunny/g.png" alt=""/>
+
+<h3>Прими вызов</h3>
+
+<p>Придумай ещё больше способов игры с Mi Bunny<br />
+*Указанные данные получены в лабораторных условиях. На практике могут получиться иные результаты из-за различных внешних воздействий окружающей среды.<br />
+<br />
+&nbsp;</p>
+<img class="res-i" src="img/Bunny/h.png" alt=""/>
+
+			  
+			  
+
+      </div>
+    </div>
+  </div>
+</div>
+	  
+	  
+<div class="modalform">
+  <input class="modal-open" id="modal-2" type="checkbox" hidden>
+  <div class="modal-wrap" aria-hidden="true" role="dialog">
+    <label class="modal-overlay" for="modal-2"></label>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2>Робот-конструктор Xiaomi Mi Bunny MITU Block Robot</h2>
+        <label class="btn-close" for="modal-2" aria-hidden="true">&times;</label>
+      </div>
+      <div class="modal-body">
+			
+			
+<h3>Мощная гусеничная боевая машина</h3>
+<img class="res-i" src="img/Rover/1_0.jpg" alt=""/>
+
+
+
+
+<h3>Прекрасно преодолевает местность с гусеничным шасси</h3>
+<p><strong>Победа и слава приходят вместе!</strong><br />
+Супермощная способность преодоления препятствий механизированного робота-конструктора Xiaomi Mi Bunny MITU Block Robot обеспечивается благодаря шасси гусеничного типа. Элементы гусеничного полотна изготовлены из легкого высокопрочного материала, который имеет уникальное армирование, которое увеличивает прочность конструкции и повышает сцепление с различными поверхностями. Механизированный робот-конструктор Xiaomi Mi Bunny MITU Block Robot с гусеничной лентой даже находясь на поверхности со сложным рельефом легко справляется с препятствиями и дарит тебе невиданное веселье.<br />
+&nbsp;</p>
+<img class="res-i" src="img/Rover/3_0.jpg" alt=""/>
+
+
+<h3>Быстрая работа процессов</h3>
+<p><strong>Мощный аккумулятор</strong><br />
+За основное управление механизированным роботом-конструктором Xiaomi Mi Bunny MITU Block Robot отвечает группа 32-битных процессоров ARM Cortex Mx, отличающаяся высокой скоростью быстродействия. Модуль главного управления оснащен тремя встроенными литиевыми аккумуляторами емкостью 1650 мАч, поэтому время работы еще дольше.<br />
+&nbsp;</p>
+<img class="res-i" src="img/Rover/4_0.jpg" alt=""/>
+
+
+<h3>Высокоточные комплектующие</h3>
+
+<p><strong>Собирать еще приятней</strong><br />
+Механизированный робот-конструктор Xiaomi Mi Bunny MITU Block Robot с гусеничной лентой состоит из 1086 деталей, выплавленных под давлением в высокоточных пресс-формах. Включает в себя 6 зубчатых колес, модули червячного привода, карданный вал, гусеничное полотно и т. д., именно эти детали составляют точную и высокопроизводительную структуру механической передачи робота. Все детали механизированного робота-конструктора Xiaomi Mitu Robot  прошли сертификацию Европейского союза RoSH, подтверждающую безопасность и экологичность материалов, поэтому его можно спокойно использовать.<br />
+</p>
+<img class="res-i" src="img/Rover/5_0.jpg" alt=""/>
+
+<h3>Вариации режимов управления</h3>
+<p>
+Усовершенствованное приложение для робота-конструктора предоставляет возможность выбора из еще большего количества режимов контроля. Оптимизированный режим дистанционного управления, более мощный режим программирования с новой функцией голосового управления, дает вам еще больше возможностей и радости в игровом процессе.<br />
+&nbsp;</p>
+<img class="res-i" src="img/Rover/6_0.jpg" alt=""/>
+
+<h3>Усовершенствованный режим голосового управления</h3>
+
+<p><strong>Легкий контроль</strong><br />
+Режим джойстика унаследовал интуитивно понятный интерфейс предыдущей версии, добавлена функция редактирования, управление может быть основано на пользовательских привычках или же уникальных настройках, заданных игроком, что позволяет еще легче и проще контролировать игровой процесс.<br />
+<br />
+&nbsp;</p>
+<img class="res-i" src="img/Rover/2_0.jpg" alt=""/>
+
+<h3>Усовершенствованный режим программирования</h3>
+
+<p><strong>Брось вызов реальности!</strong><br />
+Механизированный робот-конструктор Xiaomi Mi Bunny MITU Block Robot  имеет уникальный графический режим программирования, изначально сложный профессиональный код команд, имеет графический вид, легко учиться, ведь выбор программ превращается в увлекательную игру, которая таит в себе неисчерпаемое море радости и веселья.  После обновления режим программирования получил множество новых функций для управления, игровой процесс, который бросает тебе еще больше вызовов.<br />
+<br />
+&nbsp;</p>
+<img class="res-i" src="img/Rover/7_0.jpg" alt=""/>			  
+			  
+<h3>Понимание голосовых команд</h3>
+
+<p><strong>Управление следует твоим желаниям</strong><br />
+Механизированный робот-конструктор Xiaomi Mi Bunny MITU Block Robot  имеет новую функцию интерактивного голосового управления, для управления роботом можно использовать телефон для ввода голосовых команд. Он подарит множество поводов для радости. Робот может точно различать такие команды как «вперед», «назад», «стоп», «левый поворот» и множество других ключевых слов для голосового управления. Освободи свои руки, попробуй использовать голос для связи с механизированным роботом-конструктором Xiaomi Robot!<br />
+<br />
+&nbsp;</p>
+<img class="res-i" src="img/Rover/8_0.jpg" alt=""/>				  
+			  
+	
+<h3>Вариативный конструктор</h3>
+
+<p><strong>Реализуй свой творческий потенциал</strong><br />
+Механизированный робот-конструктор Xiaomi с гусеничной лентой имеет множество новых комплектующих. Помимо этих деталей для создания сложных фигур из официального каталога, ты можешь также использовать их для проектирования собственных креативных фигур, твоя фантазия несомненно способна создать бесконечное множество головоломок.<br />
+<br />
+&nbsp;</p>
+<img class="res-i" src="img/Rover/9_0.jpg" alt=""/>	
+<img class="res-i" src="img/Rover/10_0.jpg" alt=""/>	
+<img class="res-i" src="img/Rover/11_0.jpg" alt=""/>	
+
+
+			
+      </div>
+    </div>
+  </div>
+</div>
+
+	
+			
       <footer class="footer">
-        <div class="footer__inner">
-          <div class="container">
-            <div class="footer__text-block"> <span>с 1 ноября по 31 декабря </span>
-            </div>
-            <div class="footer__text">
-              <div class="footer__brand">Xiaomi Mi
-              </div>
-              <div class="footer__prod">Robot Builder Rover
-              </div>
-              <div class="footer__price"><span class="footer__big">299,99 </span>руб.
-              </div>
-              <div class="footer__price footer__price--old"> <span>349  </span> руб. 
-              </div>
-            </div><img class="img-prod" src="img/robot.png" alt=""/>
-            <div class="footer__bot-text">Торопись приобрести в магазинах - официальных партнеров:
-            </div>
-            <div class="row">
-              <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
-              <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
-              <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
-              <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
-              <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
-              <div class="col-4"><img class="res-i" src="img/logo1.svg" alt=""/></div>
-            </div>
-          </div>
+
           <div class="footer__foot">
-            <div class="container"> все права защищены</div>
+            <div class="container"> 
+				&copy; 2018 mi-xiaomi.by Все права защищены. ООО "ТрайдексБелПлюс" УНН 191623092 | Телефон для справок: 8 (017) 362-76-81</div>
           </div>
-        </div>
+
       </footer>
+	  
     </div>
     <script src="js/jquery.min.js"></script>
   </body>
