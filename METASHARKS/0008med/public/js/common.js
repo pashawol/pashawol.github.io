@@ -6,21 +6,16 @@ jQuery(document).ready(function ($) {
 
 
 	// галерея
-	$(".gal").each(function () {
-
-		$(this).find("a").magnificPopup({
-			type: 'image',
-			closeOnContentClick: false,
-			closeBtnInside: false,
-			mainClass: 'mfp-with-zoom mfp-img-mobile',
-			image: {
-				verticalFit: true,
-			},
-			gallery: {
-				enabled: true
-			}
-		});
-	})
+	$('[data-fancybox]').fancybox({
+		// protect    : true, 
+		toolbar    : false,
+		smallBtn   : true,
+		buttons : [
+			'zoom',
+			// 'thumbs',
+			'close'
+		]
+	});
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
 
