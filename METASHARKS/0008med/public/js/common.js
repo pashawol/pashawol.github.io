@@ -172,6 +172,8 @@ jQuery(document).ready(function ($) {
 		infinite: true,
 		loop: true,
 		arrows: true,
+		adaptiveHeight: true,
+		// appendArrows: '.s-slider-wrap .container',
 		//  autoplay: true,
 		// autoplaySpeed: 3000,
 		// centerMode: true,
@@ -183,6 +185,51 @@ jQuery(document).ready(function ($) {
 		adaptiveHeight: true
 	});
 	//  карусель в каталоге
+	$('.s-patner__slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: true,
+		mobileFirst: true,
+		//  autoplay: true,
+		// autoplaySpeed: 3000, 
+		prevArrow: arrl2,
+		nextArrow: arrr2,
+		responsive: [
+		 
+			{
+			breakpoint: 480,
+			settings: { 
+				slidesToShow: 3, 
+			}
+		},
+		
+			{
+			breakpoint: 576,
+			settings: { 
+				slidesToShow: 4, 
+			}
+		},
+		
+			{
+			breakpoint: 768,
+			settings: { 
+				slidesToShow: 5, 
+			}
+		},
+		
+			{
+			breakpoint: 992,
+			settings: { 
+				slidesToShow: 6, 
+			}
+		} 
+	]
+	});
+	
 	$('.s-catalog__slider').slick({
 		slidesToShow: 3,
 		slidesToScroll: 3,
@@ -204,6 +251,7 @@ jQuery(document).ready(function ($) {
 			}
 		}]
 	});
+
 	$(".prod-head__sliders").each(function () {
 		var th = $(this);
 
@@ -335,7 +383,7 @@ jQuery(document).ready(function ($) {
 	// показать поиск в меню
 	$(".top-nav__btn--search , .search-block__btn--close").click(function (e) {
 		e.preventDefault();
-		$(".search-block").toggle().find("input").focus();
+		$(".search-block").fadeToggle().find("input").focus();
 	})
 
 	// замедление ховера в меню
