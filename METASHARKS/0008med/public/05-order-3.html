@@ -431,14 +431,24 @@
               <div class="form-wrap">
                 <div class="border border-light">
                   <div class="form-wrap__block">
-                    <div class="row no-gutters">
-                      <label class="custom-input"><input class="custom-input__input" type="radio" name="pay-math"/><span class="custom-input__lab"></span><span class="row mb-2 justify-content-between"><span class="col-md-11"><span class="custom-input__text custom-input__text--title h6 strong">Оплата по счету<img src="img/pay-1.svg" alt=""/></span><span class="text-gray d-block mb-1"> <strong>Продажа осуществляется через ООО "Биомедицинские приборы", официальное торговое представительство ООО "МКС"</strong>Оплата производится безналичным расчетом для юридических и физических лиц (РФ).  Если Вы оплачиваете как юридическое лицо, то заполните поля ниже и нажмите кнопку "Далее".</span></span></span>
-                      </label>
-                      <!-- +b.LABEL.custom-input-->
-                      <label class="custom-input"><input class="custom-input__input" type="radio" name="pay-math"/><span class="custom-input__lab"></span><span class="row mb-2 justify-content-between"><span class="col-md-11"><span class="custom-input__text custom-input__text--title h6 strong">Оплата банковской картой<img src="img/pay-2.png" alt=""/></span><span class="text-gray d-block mb-1">Прием платежей через ПАО Сбербанк</span></span></span>
-                      </label>
-                      <!-- +b.LABEL.custom-input-->
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="pay-math"/><span class="custom-input__lab"></span><span class="row mb-2 justify-content-between"><span class="col-md-11"><span class="custom-input__text custom-input__text--title h6 strong">Оплата по счету<img src="img/pay-1.svg" alt=""/></span><span class="text-gray d-block mb-1"> <strong>Продажа осуществляется через ООО "Биомедицинские приборы", официальное торговое представительство ООО "МКС"</strong>Оплата производится безналичным расчетом для юридических и физических лиц (РФ).  Если Вы оплачиваете как юридическое лицо, то заполните поля ниже и нажмите кнопку "Далее".</span></span></span>
+                    </label>
+                    <!-- +b.LABEL.custom-input-->
+                    <div class="input-pay-method-wrap">
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><span class="form-wrap__title-label">Название организации</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+                        </label> 
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><span class="form-wrap__title-label">ИНН</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+                        </label> 
+                      </div>
+                      <!-- +e.input-wrap-->
                     </div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="pay-math"/><span class="custom-input__lab"></span><span class="row mb-2 justify-content-between"><span class="col-md-11"><span class="custom-input__text custom-input__text--title h6 strong">Оплата банковской картой<img src="img/pay-2.png" alt=""/></span><span class="text-gray d-block mb-1">Прием платежей через ПАО Сбербанк</span></span></span>
+                    </label>
+                    <!-- +b.LABEL.custom-input-->
                   </div>
                 </div><a class="form-wrap__btn form-wrap__btn--next" href="#">Далее</a>
               </div>
@@ -518,16 +528,16 @@
                 </div>
               </div>
             </div>
-            <div class="footer__row row d-md-none">
-              <div class="col-auto"><a class="footer__logo" href="#"><img src="img/logo-foot.svg" alt=""/></a>
-              </div>
-              <div class="col-auto">
-                <div class="text-gray mb-1">© МКС. Все права защищены</div>
-                <div class="mb-1"><a class="text-gray tdu" href="#">Пользовательское соглашение</a></div>
-                <div class="mb-1"><a class="text-gray tdu" href="#">Политика конфиденциальности</a></div>
-              </div>
-              <div class="col-auto"><a href="#"><img src="img/youtube.svg" alt=""/></a></div>
+          </div>
+          <div class="footer__row row d-md-none">
+            <div class="col-auto"><a class="footer__logo" href="#"><img src="img/logo-foot.svg" alt=""/></a>
             </div>
+            <div class="col-auto">
+              <div class="text-gray mb-1">© МКС. Все права защищены</div>
+              <div class="mb-1"><a class="text-gray tdu" href="#">Пользовательское соглашение</a></div>
+              <div class="mb-1"><a class="text-gray tdu" href="#">Политика конфиденциальности</a></div>
+            </div>
+            <div class="col-auto"><a href="#"><img src="img/youtube.svg" alt=""/></a></div>
           </div>
         </div><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-reg">регистрация</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-password-recovery">Забыли пароль?  </a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-password-recovery-2">Забыли пароль?   2</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-thanks">modal-thanks</a>
       </footer>
