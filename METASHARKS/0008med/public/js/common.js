@@ -132,9 +132,36 @@ jQuery(document).ready(function ($) {
 
 
 	heightses();
+
+	var $li = $('.header .dropdown-cat , .header-block__link--dropdown').hover(
+		function () {
+			var self = this;
+			hovertimer = setTimeout(function () {
+				$(self).addClass('hover-block');
+				// $("html, .top-nav.fixed").addClass("fixed-brand");
+			}, 500);
+		},
+		function () {
+			clearTimeout(hovertimer);
+			$li.removeClass('hover-block');
+			$("html, .top-nav.fixed").removeClass("fixed-brand");
+		}
+	);
 	// показывает скрытый блок в миниатюрах
-	$(".item-prod").hover(function () {
-		$(this).find(".item-prod__toggle-block").slideToggle(100);
+	$(".item-prod").each(function(){ 
+		var item = $(this).find(".item-prod__toggle-block");
+		$(this).hover(
+		 
+		function () {
+			hovertimer = setTimeout(function () {
+				item.slideDown(100);
+			}, 500);
+		},
+		function () {
+			clearTimeout(hovertimer);
+			item.slideUp(100);
+		}
+		)
 	})
 
 	var icon = '<svg   viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="black"/> </svg>';
@@ -156,8 +183,8 @@ jQuery(document).ready(function ($) {
 		// focusOnSelect: true ,
 		// variableWidth: true,
 
-		prevArrow: arrr2,
-		nextArrow: arrl2,
+		prevArrow: arrl2,
+		nextArrow: arrr2,
 		adaptiveHeight: true
 	});
 	//  карусель в каталоге
@@ -171,8 +198,8 @@ jQuery(document).ready(function ($) {
 		arrows: true,
 		//  autoplay: true,
 		// autoplaySpeed: 3000, 
-		prevArrow: arrr2,
-		nextArrow: arrl2,
+		prevArrow: arrl2,
+		nextArrow: arrr2,
 		responsive: [{
 			breakpoint: 991,
 			settings: {
@@ -370,5 +397,10 @@ jQuery(document).ready(function ($) {
 		// скрыть/показать меню в ЛК 
 		$(".aside__btn--js").click(function () {
 			$(this).toggleClass("active").next().slideToggle();
+		})
+
+		$(".trop .dropdown-cat__link--toggle-js").click(function(e){
+			e.preventDefault;
+			$(this).next().slideToggle();
 		})
 });
