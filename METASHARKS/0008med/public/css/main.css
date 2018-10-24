@@ -5159,6 +5159,11 @@ a {
   width: 1.35938em;
 }
 
+.icon-print {
+  font-size: 2.2rem;
+  width: 0.95455em;
+}
+
 .icon-search {
   font-size: 2.1rem;
   width: 1em;
@@ -8185,6 +8190,7 @@ a {
 
 .s-po {
   margin-top: 15px;
+  padding-bottom: 30px;
 }
 
 .s-po__section {
@@ -8287,20 +8293,14 @@ a {
 
 .s-po__label-status {
   display: block;
-  max-width: 180px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  color: #3A3A3A;
-  text-align: center;
-  padding: 8px 12px;
 }
 
 .s-po__label-status--success {
-  background: #68D179;
+  color: #33b457;
 }
 
-.s-po__label-status--cansel {
-  background: #D5E2D7;
+.s-po__label-status--blue {
+  color: #3e7acb;
 }
 
 .s-po__label-status--expect {
@@ -8312,9 +8312,6 @@ a {
   position: absolute;
   right: 10px;
   top: 10px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  background-color: #ffffff;
   width: 30.83px;
   height: 33.79px;
   text-align: center;
@@ -8339,6 +8336,7 @@ a {
   stroke: #000000;
   color: transparent;
   font-size: 16px;
+  stroke-width: 4px;
   -webkit-transition: all 0.36s;
   -o-transition: all 0.36s;
   transition: all 0.36s;
@@ -8348,19 +8346,14 @@ a {
   background-color: #17a2b8;
 }
 
-.s-po__toggle:hover .icon {
-  stroke: #ffffff;
-}
-
-.s-po__toggle.active {
-  background-color: #17a2b8;
-}
-
 .s-po__toggle.active .icon {
-  stroke: #ffffff;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.s-basket {
+  padding: 20px;
 }
 
 .s-basket--favorites {
@@ -8419,11 +8412,9 @@ a {
 }
 
 .tr-history > td {
-  -webkit-border-radius: 0.3125rem;
-          border-radius: 0.3125rem;
   vertical-align: middle;
   vertical-align: middle;
-  height: 48px;
+  height: 55px;
   padding: 10px 10px;
   margin: 0;
 }
@@ -8448,14 +8439,9 @@ a {
 }
 
 .tr-toggle > td .inner-block {
+  border: 1px solid #f5f5f5;
   margin-bottom: 6px;
   border-top: none;
-  padding: 12px 12px 40px;
-  margin-right: -1px;
-}
-
-.tr-toggle .s-basket {
-  padding-left: 10px;
 }
 
 .tr-toggle .s-basket table {
@@ -8464,6 +8450,28 @@ a {
 
 .tr-toggle .s-basket table tr:last-child td {
   border: none;
+}
+
+.tr-toggle .s-basket td:nth-child(1) {
+  width: 120px;
+}
+
+.smallest {
+  font-size: 11px;
+}
+
+.icon-print {
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+.s-po__head {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.s-po__head .col-auto:first-child {
+  width: 15%;
 }
 
 .s-form {
@@ -10714,7 +10722,7 @@ a {
   }
 
   .s-po__label-status {
-    margin-right: 25px;
+    margin-right: 35px;
   }
 
   .s-basket--favorites table td:nth-child(2) {
@@ -10723,7 +10731,7 @@ a {
 
   .tr-history > td {
     position: relative;
-    border-bottom: 6px solid #fff;
+    border-bottom: 3px solid #fff;
   }
 
   .footer__row {
@@ -11551,6 +11559,11 @@ a {
     padding-bottom: 0.9375em;
   }
 
+  .main-wrapper {
+    min-height: 100vh;
+    padding-bottom: 388px;
+  }
+
   .header {
     min-height: 108px;
   }
@@ -11833,6 +11846,29 @@ a {
 
   .s-basket--favorites table td:nth-child(2) {
     width: 39.58678%;
+  }
+
+  .tr-toggle .s-basket td:nth-child(2) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-left: 10px;
+    width: 49.57265%;
+  }
+
+  .tr-toggle .s-basket td:nth-child(3),.tr-toggle .s-basket td:nth-child(4) {
+    width: 17.09402%;
+  }
+
+  .tr-toggle .s-basket__img-wrap {
+    width: 120px;
+    height: 120px;
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
   }
 
   .modal-win--lg {
@@ -13130,7 +13166,7 @@ a {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    border-bottom: 6px solid #fff;
+    border-bottom: 3px solid #fff;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -13144,6 +13180,8 @@ a {
   .tr-history > td {
     width: 100%;
     padding-top: 0;
+    -webkit-border-radius: 0;
+            border-radius: 0;
     height: auto;
     padding-bottom: 12px;
   }
