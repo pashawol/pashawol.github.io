@@ -6556,6 +6556,69 @@ a {
 
 .s-content ol {
   list-style-type: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  counter-reset: num;
+}
+
+.s-content ol ol {
+  counter-reset: num2;
+}
+
+.s-content ol ol ol {
+  counter-reset: num3;
+}
+
+.s-content ol > li {
+  position: relative;
+}
+
+.s-content ol > li .h5::before,.s-content ol > li .s-about__title::before {
+  counter-increment: num;
+ /* Увеличиваем значение счетчика */
+  content: counter(num) ". ";
+ /* Выводим значение в виде 1., 2.*/;
+}
+
+.s-content ol > li > ol {
+  padding-left: 25px;
+}
+
+.s-content ol > li > ol ol {
+  padding-left: 15px;
+}
+
+.s-content ol ol li {
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 1em;
+}
+
+.s-content ol ol li:before {
+ /* Список второго уровня */
+  counter-increment: num2;
+ /* Увеличиваем значение счетчика */
+  content: counter(num) "." counter(num2) ".";
+ /* Выводим значение типа 2.1, 2.2,... */
+  background: #9DE9E3;
+  margin-right: 5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.s-content ol ol ol li {
+  padding-left: 55px;
+}
+
+.s-content ol ol ol li:before {
+ /* Список второго уровня */
+  counter-increment: num3;
+ /* Увеличиваем значение счетчика */
+  content: counter(num) "." counter(num2) "." counter(num3) ".";
+ /* Выводим значение типа 2.1, 2.2,... */;
 }
 
 .s-contact {
