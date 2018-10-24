@@ -398,4 +398,10 @@ jQuery(document).ready(function ($) {
 			e.preventDefault;
 			$(this).next().slideToggle();
 		})
+
+		// показать историю заказов
+		$(".tr-history").click(function () {
+			$(this).toggleClass("active").next().fadeToggle();
+			$(this).find(".s-po__toggle").toggleClass("active");
+		})
 });
