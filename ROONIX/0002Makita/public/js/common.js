@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
-
+	
 	var url = document.location.href;
 	$.each($(".top-nav__nav a "), function () {
 
@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
 	})
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
-		
+
 		$(".toggle-mnu-1").toggleClass("on");
 		// $("body").toggleClass("fixed");
 		$(".hidden-mnu").toggleClass("active");
@@ -79,10 +79,12 @@ jQuery(document).ready(function ($) {
 	});
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
-	
+
 	function heightses() {
 
 		var w = $(window).width();
+
+		// $(".main-wrapper").css("margin-bottom", $('footer').height())
 		// $(".otz__item .text-wrap ").height('auto').equalHeights();
 		//
 
@@ -94,8 +96,7 @@ jQuery(document).ready(function ($) {
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > topH) {
 				$('.top-nav  ').addClass('fixed');
-			}
-			else {
+			} else {
 				$('.top-nav  ').removeClass('fixed');
 			}
 		});
@@ -248,7 +249,9 @@ jQuery(document).ready(function ($) {
 	});
 
 	// маска на инпут
-	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({ "mask": "+7(999)999-99-99" });
+	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
+		"mask": "+7(999)999-99-99"
+	});
 
 
 	//Replace all SVG images with inline SVG
@@ -315,8 +318,8 @@ jQuery(document).ready(function ($) {
 	$(".top-line__tel, .s-contact__tel").each(function () {
 		var str = $(this).attr('href');
 		$(this).attr('href', str.replace(/\s/g, ''));
-		})
-		// $(".wow-wrap").each(function () {
+	})
+	// $(".wow-wrap").each(function () {
 	// var wowAnim = $(this).find(".s-dop__col," +
 	//                 ".s-pick__col," +
 	//                 ".s-condition__col");
