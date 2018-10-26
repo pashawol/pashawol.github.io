@@ -12,7 +12,8 @@ $mail->CharSet = 'utf-8';
 ///от кого письмо  
 $mail->setFrom('info@info.com');
 
- $mail->addAddress('wol1414@gmail.com');
+//  $mail->addAddress('wol1414@gmail.com');
+ $mail->addAddress('gonlineschool@gmail.com');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 
@@ -36,7 +37,7 @@ $html = '
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
     }
     if (!empty($_POST['email'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вопрос:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td>';
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Емэйл:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td>';
     }
 
     if (!empty($_POST['comment'])) {
@@ -47,18 +48,18 @@ $html = '
         $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Техника:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['tech']) . '</b></td></tr>';
     }
     
-    if (!empty($_POST['go[]'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вы когда либо проходили какое-ибудь онлайн-обучение?</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['go[]']) . '</b></td></tr>';
+    if (!empty($_POST['go'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вы когда либо проходили какое-нибудь онлайн-обучение?</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['go']) . '</b></td></tr>';
     }
 
     
-    if (!empty($_POST['time[]'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вы когда либо проходили какое-ибудь онлайн-обучение?</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['time[]']) . '</b></td></tr>';
+    if (!empty($_POST['time'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вы часто пользуетесь Excel или Google Таблицами?</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['time']) . '</b></td></tr>';
     }
 
     
-    if (!empty($_POST['lesson[]'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вы когда либо проходили какое-ибудь онлайн-обучение?</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['lesson[]']) . '</b></td></tr>';
+    if (!empty($_POST['lesson'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">  Хотите ли Вы получить на почту образовательные материалы Онлайн-школы профессионального использования сервисов Google?</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['lesson']) . '</b></td></tr>';
     }
 
     
