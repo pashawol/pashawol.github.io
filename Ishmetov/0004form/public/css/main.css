@@ -8,9 +8,6 @@
  */:root {
   --blue: #007bff;
   --primary: #4a8bf5;
-  --secondary: #6c757d;
-  --success: #28a745;
-  --danger: #dc3545;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -145,8 +142,8 @@ a {
 }
 
 a:hover {
-  color: #0d5fe6;
-  text-decoration: underline;
+  color: #0a4bb5;
+  text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -1801,6 +1798,9 @@ select.form-control:focus::-ms-value {
 
 a {
   outline: 0 !important;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
 }
 
 .modal-form {
