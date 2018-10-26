@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
 			setTimeout(function () {
 				// Done Functions
 				th.trigger("reset");
-				// window.location.replace("/");
+				window.location.replace("https://yasobe.ru/na/googletab");
 				// $.magnificPopup.close();
 			}, 4000);
 		});
