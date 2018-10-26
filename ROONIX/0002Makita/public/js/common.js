@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
-	
+
 	var url = document.location.href;
 	$.each($(".top-nav__nav a "), function () {
 
@@ -21,25 +21,7 @@ jQuery(document).ready(function ($) {
 		};
 
 	});
-	// галерея
-	$(".gal").each(function () {
 
-		$(this).find("a").magnificPopup({
-			type: 'image',
-			closeOnContentClick: false,
-			closeBtnInside: false,
-			mainClass: 'mfp-with-zoom mfp-img-mobile',
-			image: {
-				verticalFit: true,
-				// titleSrc: function(item) {
-				//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-				// }
-			},
-			gallery: {
-				enabled: true
-			}
-		});
-	})
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
 
@@ -136,27 +118,17 @@ jQuery(document).ready(function ($) {
 	//    });
 
 
-	// табы  . Теперь данные активного таба остается в storage
+	// табы  . 
 	$(function () {
 		var tab = ('tabs');
 
-		$('.' + tab + '__caption').each(function (i) {
-			var storage = localStorage.getItem('tab' + i);
-			if (storage) {
-				$(this).find('.' + tab + '__btn').removeClass('active').eq(storage).addClass('active')
-					.closest('.' + tab).find('.' + tab + '__content').removeClass('active').eq(storage).addClass('active');
-			}
-		});
+
 
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 				.eq($(this).index()).fadeIn().addClass('active');
-
-			var ulIndex = $('.' + tab + '__caption').index($(this).parents('.' + tab + '__caption'));
-			localStorage.removeItem('tab' + ulIndex);
-			localStorage.setItem('tab' + ulIndex, $(this).index());
 
 		});
 	});
@@ -168,44 +140,44 @@ jQuery(document).ready(function ($) {
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
 	// карусель
-	// $('.s-team__slider').slick({
-	//    slidesToShow: 3,
-	//    slidesToScroll: 1,
-	//    dots: false,
-	//    speed: 450,
-	//    infinite: true,
-	//    loop: true,
-	//    arrows: true,
-	//    // centerMode: true,
-	//    // focusOnSelect: true ,
-	//     // variableWidth: true,
-	//     prevArrow: arrr2,
-	//      nextArrow: arrl2,
-	//    });
-
-	// слайдер цвета в карточке
-	var swiper4 = new Swiper('.color-slider', {
-		// slidesPerView: 5,
-		slidesPerView: 'auto',
-		watchOverflow: true,
-		spaceBetween: 0,
-		freeMode: true,
-		watchOverflow: true,
-		slidesPerGroup: 3,
-
-		// centeredSlides: true,
+	$('.s-team__slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: true,
 		loop: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-
+		arrows: true,
+		// centerMode: true,
+		// focusOnSelect: true ,
+		// variableWidth: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
 	});
-	// модальное окно
+
+	// slider
+	// var swiper4 = new Swiper('.color-slider', {
+	// 	// slidesPerView: 5,
+	// 	slidesPerView: 'auto',
+	// 	watchOverflow: true,
+	// 	spaceBetween: 0,
+	// 	freeMode: true,
+	// 	watchOverflow: true,
+	// 	slidesPerGroup: 3,
+
+	// 	// centeredSlides: true,
+	// 	loop: true,
+	// 	loopFillGroupWithBlank: true,
+	// 	touchRatio: 0.2,
+	// 	slideToClickedSlide: true,
+	// 	freeModeMomentum: true,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
+	// 	},
+
+	// });
+	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
 
@@ -222,8 +194,30 @@ jQuery(document).ready(function ($) {
 		mainClass: 'my-mfp-zoom-in'
 	});
 
+	// / modal window
 
-	// форма
+	// modal галерея
+	$(".gal").each(function () {
+
+		$(this).find("a").magnificPopup({
+			type: 'image',
+			closeOnContentClick: false,
+			closeBtnInside: false,
+			mainClass: 'mfp-with-zoom mfp-img-mobile',
+			image: {
+				verticalFit: true,
+				// titleSrc: function(item) {
+				//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+				// }
+			},
+			gallery: {
+				enabled: true
+			}
+		});
+	})
+	// /modal галерея
+
+	// form
 	$("form").submit(function () { //Change
 		var th = $(this);
 		$.ajax({
@@ -247,11 +241,22 @@ jQuery(document).ready(function ($) {
 		});
 		return false;
 	});
+	// /form
 
-	// маска на инпут
-	$("input[type='tel']").attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({
-		"mask": "+7(999)999-99-99"
-	});
+	// mask for input
+	var customOptions = {
+		onKeyPress: function (val, e, field, options) {
+
+			if (val.replace(/\D/g, '').length === 2) {
+				val = val.replace('8', '');
+				field.val(val);
+			}
+			field.mask("+7(000)000-00-00", options);
+		}
+	};
+	$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").mask("+7(000)000-00-00", customOptions);
+
+	// / mask for input
 
 
 	//Replace all SVG images with inline SVG

@@ -106,12 +106,12 @@ jQuery(document).ready(function ($) {
 
 		$(".s-catalog").each(function () {
 			// if (window.matchMedia("(min-width: 992px)").matches) {
-			$(this).find(".item-prod__title").height('auto').equalHeights();
-			$(this).find(".item-prod__text").height('auto').equalHeights();
+			$(this).find(".item-prod__title--js").height('auto').equalHeights();
+			$(this).find(".item-prod__text--js").height('auto').equalHeights();
 			// $(this).find(".item-prod__caption").height('auto').equalHeights();
 			// }
-			$(this).find(".item-prod__inner").height('auto').equalHeights();
-			$(this).find(".item-prod").height('auto').height($(this).find(".item-prod__inner").height());
+			$(this).find(".item-prod__inner--js").height('auto').equalHeights();
+			$(this).find(".item-prod--js").height('auto').height($(this).find(".item-prod__inner--js").height());
 			// $(this).find(".item-prod__inner").height('auto').equalHeights();
 		})
 
@@ -451,5 +451,10 @@ jQuery(document).ready(function ($) {
 		$(".tr-history").click(function () {
 			$(this).toggleClass("active").next().fadeToggle();
 			$(this).find(".s-po__toggle").toggleClass("active");
+		})
+
+
+		$(".face-input").change(function(){
+		 $(this).hasClass("fiz-input") ? $(".toggle-block").fadeOut() : $(".toggle-block").fadeIn()
 		})
 });

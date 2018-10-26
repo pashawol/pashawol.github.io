@@ -453,46 +453,48 @@
                       </div>
                     </div>
                     <div class="col">
-                      <div class="form-wrap__block bg-secondary">
+                      <div class="form-wrap__block bg-secondary h-100">
                         <div class="row row--md">
                           <div class="col-6 my-2">
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="face"/><span class="custom-input__lab"></span><span class="custom-input__text">Юридическое лицо</span>
+                            <label class="custom-input"><input class="custom-input__input face-input" type="radio" name="face"/><span class="custom-input__lab"></span><span class="custom-input__text">Юридическое лицо</span>
                             </label>
                             <!-- +b.LABEL.custom-input-->
                           </div>
                           <div class="col-6 my-2">
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="face"/><span class="custom-input__lab"></span><span class="custom-input__text">Физическое лицо </span>
+                            <label class="custom-input"><input class="custom-input__input face-input fiz-input" type="radio" name="face"/><span class="custom-input__lab"></span><span class="custom-input__text">Физическое лицо </span>
                             </label>
                             <!-- +b.LABEL.custom-input-->
                           </div>
                         </div>
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><span class="form-wrap__title-label">Название организации</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
-                          </label> 
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="row row--md">
-                          <div class="col-6">
-                            <div class="form-wrap__input-wrap form-group">
-                              <label><span class="form-wrap__title-label">ИНН</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
-                              </label> 
-                            </div>
-                            <!-- +e.input-wrap-->
+                        <div class="toggle-block">
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><span class="form-wrap__title-label">Название организации</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+                            </label> 
                           </div>
-                          <div class="col-6">
-                            <div class="form-wrap__input-wrap form-group">
-                              <label><span class="form-wrap__title-label">КПП</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
-                              </label> 
+                          <!-- +e.input-wrap-->
+                          <div class="row row--md">
+                            <div class="col-6">
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><span class="form-wrap__title-label">ИНН</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
                             </div>
-                            <!-- +e.input-wrap-->
+                            <div class="col-6">
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><span class="form-wrap__title-label">КПП</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                            </div>
                           </div>
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><span class="form-wrap__title-label">Юридический адрес компании</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="mb-3"> Адрес для доставки</div>
                         </div>
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><span class="form-wrap__title-label">Юридический адрес компании</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
-                          </label> 
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="mb-3"> Адрес для доставки</div>
                         <div class="form-wrap__input-wrap form-group">
                           <label><span class="form-wrap__title-label">Улица и номер дома</span><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
                           </label> 
@@ -545,7 +547,8 @@
                   <div class="mb-1"><a class="text-gray tdu" href="#">Пользовательское соглашение</a></div>
                   <div class="mb-1"><a class="text-gray tdu" href="#">Политика конфиденциальности</a></div>
                 </div>
-                <div class="col-auto"><a href="#"><img src="img/youtube.svg" alt=""/></a></div>
+                <div class="col-auto"><a class="footer__youtube-link" href="#"><img src="img/youtube.svg" alt=""/></a>
+                </div>
               </div>
             </div>
             <div class="col-md-3">
@@ -596,15 +599,16 @@
                 </div>
               </div>
             </div>
-            <div class="footer__row row d-md-none">
-              <div class="col-auto"><a class="footer__logo" href="#"><img src="img/logo-foot.svg" alt=""/></a>
-              </div>
-              <div class="col-auto">
-                <div class="text-gray mb-1">© МКС. Все права защищены</div>
-                <div class="mb-1"><a class="text-gray tdu" href="#">Пользовательское соглашение</a></div>
-                <div class="mb-1"><a class="text-gray tdu" href="#">Политика конфиденциальности</a></div>
-              </div>
-              <div class="col-auto"><a href="#"><img src="img/youtube.svg" alt=""/></a></div>
+          </div>
+          <div class="footer__row row d-md-none">
+            <div class="col-auto"><a class="footer__logo" href="#"><img src="img/logo-foot.svg" alt=""/></a>
+            </div>
+            <div class="col-auto">
+              <div class="text-gray mb-1">© МКС. Все права защищены</div>
+              <div class="mb-1"><a class="text-gray tdu" href="#">Пользовательское соглашение</a></div>
+              <div class="mb-1"><a class="text-gray tdu" href="#">Политика конфиденциальности</a></div>
+            </div>
+            <div class="col-auto"><a class="footer__youtube-link" href="#"><img src="img/youtube.svg" alt=""/></a>
             </div>
           </div>
         </div><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-reg">регистрация</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-password-recovery">Забыли пароль?  </a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-password-recovery-2">Забыли пароль?   2</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-thanks">modal-thanks</a>
