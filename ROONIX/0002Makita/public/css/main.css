@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */:root {
   --primary: #007bff;
+  --gray: #848e99;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -41,7 +42,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: #3b4256;
   text-align: left;
 }
 
@@ -1223,8 +1224,16 @@ a.text-primary:hover,a.text-primary:focus {
   color: #0062cc !important;
 }
 
+.text-gray {
+  color: #848e99 !important;
+}
+
+a.text-gray:hover,a.text-gray:focus {
+  color: #6a7480 !important;
+}
+
 .text-body {
-  color: #212529 !important;
+  color: #3b4256 !important;
 }
 
 .text-muted {
@@ -3022,7 +3031,7 @@ select.form-control:focus::-ms-value {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #28a745;
+  background-color: #5eb984;
   opacity: 0;
   width: 10px;
   height: 10px;
@@ -3031,7 +3040,7 @@ select.form-control:focus::-ms-value {
 }
 
 .custom-input__input[type="checkbox"]:checked + .custom-input__lab {
-  background-color: #28a745;
+  background-color: #5eb984;
 }
 
 .custom-input__input:checked + .custom-input__lab::after {
@@ -3067,7 +3076,7 @@ select.form-control:focus::-ms-value {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-  border-color: #28a745 transparent transparent transparent;
+  border-color: #5eb984 transparent transparent transparent;
   border-style: solid;
   border-width: 7px 7px 0 7px;
 }
@@ -3080,12 +3089,12 @@ select.form-control:focus::-ms-value {
 }
 
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
-  border-color: transparent transparent #28a745 transparent;
+  border-color: transparent transparent #5eb984 transparent;
   border-width: 0 7px 7px 7px;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background-color: #28a745;
+  background-color: #5eb984;
 }
 
 .form-wrap__input-wrap {
@@ -3356,7 +3365,7 @@ a {
   z-index: 1046;
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #212529;
+  color: #3b4256;
   opacity: 1;
   font-size: 50px;
   font-weight: 100;
