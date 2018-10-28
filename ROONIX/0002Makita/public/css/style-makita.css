@@ -26,6 +26,14 @@ a.bg-primary:hover,a.bg-primary:focus,button.bg-primary:hover,button.bg-primary:
   background-color: #fff !important;
 }
 
+a.bg-white:hover,a.bg-white:focus,button.bg-white:hover,button.bg-white:focus {
+  background-color: #e6e6e6 !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
 .bg-transparent {
   background-color: transparent !important;
 }
@@ -80,6 +88,10 @@ a.bg-primary:hover,a.bg-primary:focus,button.bg-primary:hover,button.bg-primary:
 
 .border-primary {
   border-color: #fa3f3e !important;
+}
+
+.border-white {
+  border-color: #fff !important;
 }
 
 .border-white {
@@ -209,38 +221,72 @@ a:hover {
           box-shadow: 0 0 0 0.2rem rgba(244, 244, 248, 0.5);
 }
 
-.btn-primary {
+.btn-primary,.top-line__btn-basket {
   color: #fff;
   background-color: #fa3f3e;
   border-color: #fa3f3e;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,.top-line__btn-basket:hover {
   color: #fff;
   background-color: #f91a19;
   border-color: #f90e0c;
 }
 
-.btn-primary:focus,.btn-primary.focus {
+.btn-primary:focus,.top-line__btn-basket:focus,.btn-primary.focus,.focus.top-line__btn-basket {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(250, 63, 62, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(250, 63, 62, 0.5);
 }
 
-.btn-primary.disabled,.btn-primary:disabled {
+.btn-primary.disabled,.disabled.top-line__btn-basket,.btn-primary:disabled,.top-line__btn-basket:disabled {
   color: #fff;
   background-color: #fa3f3e;
   border-color: #fa3f3e;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,.show > .btn-primary.dropdown-toggle {
+.btn-primary:not(:disabled):not(.disabled):active,.top-line__btn-basket:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,.top-line__btn-basket:not(:disabled):not(.disabled).active,.show > .btn-primary.dropdown-toggle,.show > .dropdown-toggle.top-line__btn-basket {
   color: #fff;
   background-color: #f90e0c;
   border-color: #f20806;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,.show > .btn-primary.dropdown-toggle:focus {
+.btn-primary:not(:disabled):not(.disabled):active:focus,.top-line__btn-basket:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,.top-line__btn-basket:not(:disabled):not(.disabled).active:focus,.show > .btn-primary.dropdown-toggle:focus,.show > .dropdown-toggle.top-line__btn-basket:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(250, 63, 62, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(250, 63, 62, 0.5);
+}
+
+.btn-white {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-white:hover {
+  color: #212529;
+  background-color: #ececec;
+  border-color: #e6e6e6;
+}
+
+.btn-white:focus,.btn-white.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.btn-white.disabled,.btn-white:disabled {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-white:not(:disabled):not(.disabled):active,.btn-white:not(:disabled):not(.disabled).active,.show > .btn-white.dropdown-toggle {
+  color: #212529;
+  background-color: #e6e6e6;
+  border-color: #dfdfdf;
+}
+
+.btn-white:not(:disabled):not(.disabled):active:focus,.btn-white:not(:disabled):not(.disabled).active:focus,.show > .btn-white.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
 }
 
 .btn-outline-header-bg {
@@ -345,19 +391,77 @@ a:hover {
           box-shadow: 0 0 0 0.2rem rgba(250, 63, 62, 0.5);
 }
 
+.btn-outline-white {
+  color: #fff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #fff;
+}
+
+.btn-outline-white:hover {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-white:focus,.btn-outline-white.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-white.disabled,.btn-outline-white:disabled {
+  color: #fff;
+  background-color: transparent;
+}
+
+.btn-outline-white:not(:disabled):not(.disabled):active,.btn-outline-white:not(:disabled):not(.disabled).active,.show > .btn-outline-white.dropdown-toggle {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-white:not(:disabled):not(.disabled):active:focus,.btn-outline-white:not(:disabled):not(.disabled).active:focus,.show > .btn-outline-white.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
 .mono {
   font-family: monospace;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Tahoma, sans-serif;
   background-color: #fff;
+}
+
+.header {
+  background-color: #d7252c;
+}
+
+.top-nav__link {
+  color: #ffffff !important;
+}
+
+.top-nav__link .icon {
+  stroke: #FFF;
+}
+
+.top-line {
+  color: #ffffff;
+}
+
+.top-line__link {
+  color: #ffffff !important;
+}
+
+.top-line__link .icon {
+  stroke: #FFF;
 }/*==========  Mobile First  ==========*//*==========  Desktop First  ==========*//* Large Devices, Wide Screens *//* Medium Devices, Desktops *//* Small Devices, Tablets *//* Extra Small Devices, Phones *//* Custom, iPhone Retina */@font-face {
-  font-family:"roboto";font-style:normal;font-weight:normal;src:url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  font-family:Tahoma;font-style:normal;font-weight:normal;src:url("../fonts/Tahoma/Tahoma.woff2") format("woff2"), url("../fonts/Tahoma/Tahoma.woff") format("woff"), url("../fonts/Tahoma/Tahoma.ttf") format("truetype");
 }
 
 @font-face {
-  font-family:"roboto";font-style:normal;font-weight:bold;src:url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+  font-family:Tahoma;font-style:normal;font-weight:bold;src:url("../fonts/Tahoma-Bold/Tahoma-Bold.woff2") format("woff2"), url("../fonts/Tahoma-Bold/Tahoma-Bold.woff") format("woff"), url("../fonts/Tahoma-Bold/Tahoma-Bold.ttf") format("truetype");
 }
 
 @media (max-width: 991.98px) {
