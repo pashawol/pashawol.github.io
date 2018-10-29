@@ -85,6 +85,7 @@ jQuery(document).ready(function ($) {
 		// конец добавил
 	}
 
+
 	if (window.matchMedia("(min-width: 992px)").matches) {
 
 		$(".toggle-mnu-1").removeClass("on");
@@ -140,43 +141,107 @@ jQuery(document).ready(function ($) {
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
 	// карусель
-	$('.s-team__slider').slick({
-		slidesToShow: 3,
+	$('.header-block__slider').slick({
+		slidesToShow: 1,
 		slidesToScroll: 1,
-		dots: false,
 		speed: 450,
 		infinite: true,
 		loop: true,
-		arrows: true,
+		dots: true,
+		arrows: false,
 		// centerMode: true,
 		// focusOnSelect: true ,
 		// variableWidth: true,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
+		// prevArrow: arrr2,
+		// nextArrow: arrl2,
 	});
 
-	// slider
-	// var swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
 
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
+	$('.s-catalog__slider').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		speed: 450,
+		infinite: false,
+		loop: false,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		appendArrows: '.s-catalog .arrow-wrap',
+		responsive: [{
 
-	// });
+			breakpoint: 1299,
+			settings: {
+				slidesToShow: 2,
+			}
+
+		}]
+	});
+	$('.s-logo__slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		speed: 450,
+		infinite: false,
+		loop: false,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		appendArrows: '.s-logo .arrow-wrap',
+		responsive: [{
+
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 3,
+			}
+
+		}]
+	});
+
+	$('.s-sert__slider').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		speed: 450,
+		infinite: false,
+		loop: false,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		appendArrows: '.s-sert .arrow-wrap',
+		mobileFirst:true,
+		responsive: [
+			{ 
+			breakpoint: 1299,
+			settings: {
+				slidesToShow: 6,
+			}
+		},
+		
+			{ 
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 5,
+			}
+		} 
+	]
+	});
+
+	$(' .tabs__caption').slick({
+		dots: false,
+		arrows: false,
+		infinite: false,
+		loop: false,
+		speed: 450,
+		slidesToShow: 1,
+		// centerMode: true,
+
+		variableWidth: true
+	});
+
+	$('.s-catalog__btn--more-js').click(function () {
+		$('.s-catalog').find(".s-catalog__slide:hidden").slideDown();
+		$(this).hide();
+	})
+	$('.s-sert__btn--more-js').click(function () {
+		$('.s-sert').find(".s-sert__slide:hidden").slideDown();
+		$(this).hide();
+	})
+
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -197,51 +262,27 @@ jQuery(document).ready(function ($) {
 	// / modal window
 
 	// modal галерея
-	$(".gal").each(function () {
-
-		$(this).find("a").magnificPopup({
-			type: 'image',
-			closeOnContentClick: false,
-			closeBtnInside: false,
-			mainClass: 'mfp-with-zoom mfp-img-mobile',
-			image: {
-				verticalFit: true,
-				// titleSrc: function(item) {
-				//   return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-				// }
-			},
-			gallery: {
-				enabled: true
-			}
+		// галерея
+		$('[data-fancybox]').fancybox({
+			protect    : true, 
+			toolbar    : true,
+			smallBtn   : true,
+			loop: true,
+			keyboard: true, 
+			buttons: [
+				"zoom",
+				// "share",
+				// "slideShow",
+				'info',
+				"fullScreen",
+				// "download",
+				"thumbs",
+				"close"
+			],
+		
 		});
-	})
 	// /modal галерея
 
-	// form
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			$.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-			}, 4000);
-		});
-		return false;
-	});
-	// /form
 
 	// mask for input
 	var customOptions = {
@@ -338,5 +379,12 @@ jQuery(document).ready(function ($) {
 	// });
 	// });
 
+	$(".catalog-nav__btn-toggle").click(function () {
+		$(this).toggleClass("active").next().toggleClass("active");
+	})
+	
+	$(".footer__title").click(function () {
+		$(this).toggleClass("active").next().slideToggle().toggleClass("active");
+	})
 
 });

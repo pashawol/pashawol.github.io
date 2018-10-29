@@ -11,16 +11,24 @@
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#3361d8">
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+    <link rel="stylesheet" href="/libs/fancybox-master/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/style-makita.min.css">
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
-        <div class="toggle-mnu toggle-mnu-1"><span></span></div>
-        <div class="wrapp-hidden"> 
+        <div class="wrapp-hidden">
+          <div class="trop__head"> 
+            <div class="toggle-mnu toggle-mnu-1"><span> </span></div><a class="trop__logo" href="#"><img class="res-i img-svg" src="img/makita-01.svg" alt=""/></a>
+          </div>
+          <div class="catalog-nav">
+            <div class="catalog-nav__btn-toggle"><span></span>Каталог товаров
+            </div>
+            <div class="catalog-nav__dropdown"><a class="catalog-nav__link" href="#">Аккумуляторные инструменты</a><a class="catalog-nav__link" href="#">Пневматические инструменты</a><a class="catalog-nav__link" href="#">Болгарки (УШМ)</a><a class="catalog-nav__link" href="#">Бороздоделы (штроборезы)</a><a class="catalog-nav__link" href="#">Воздуходувки</a><a class="catalog-nav__link" href="#">Гайковёрты</a><a class="catalog-nav__link" href="#">Гвоздезабиватели</a><a class="catalog-nav__link" href="#">Граверы</a><a class="catalog-nav__link" href="#">Дрели</a><a class="catalog-nav__link" href="#">Дрели-шуруповёрты</a><a class="catalog-nav__link" href="#">Измерительная техника</a><a class="catalog-nav__link" href="#">Клеевые пистолеты</a><a class="catalog-nav__link" href="#">Лобзики</a><a class="catalog-nav__link" href="#">Мойки высокого давления</a><a class="catalog-nav__link" href="#">Наборы инструментов</a><a class="catalog-nav__link" href="#">Ножницы</a><a class="catalog-nav__link" href="#">Отбойные молотки</a><a class="catalog-nav__link" href="#">Отвёртки</a><a class="catalog-nav__link" href="#">Перфораторы</a><a class="catalog-nav__link" href="#">Пилы</a><a class="catalog-nav__link" href="#">Пылесосы</a><a class="catalog-nav__link" href="#">Реноваторы (резаки)</a><a class="catalog-nav__link" href="#">Рубанки</a><a class="catalog-nav__link" href="#">Радиоприёмники</a><a class="catalog-nav__link" href="#">Технические фены</a><a class="catalog-nav__link" href="#"> Точило</a><a class="catalog-nav__link" href="#"> Фонари</a><a class="catalog-nav__link" href="#"> Фрезеры</a><a class="catalog-nav__link" href="#"> Шлифовальные машины</a><a class="catalog-nav__link" href="#"> Шуруповёрты</a><a class="catalog-nav__link" href="#"> Аксессуары, расходные материалы </a>
+            </div>
+          </div>
           <ul class="trop__nav">
             <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
             </li>
@@ -34,15 +42,14 @@
             </li>
             <li class="trop__item"><a class="trop__link" href="#">Гарантия</a>
             </li>
-          </ul>
-          <div class="text-right"></div>
+          </ul><a class="trop__link" href="#">  Вход / Регистрация </a>
         </div>
       </div>
       <!--  мобильное меню-->
       <!-- start HEADER.header-->
       <header class="header">
         <!-- start top-nav-->
-        <div class="top-nav">
+        <div class="top-nav d-none d-lg-block">
           <div class="container">
             <div class="row">
               <div class="col">
@@ -74,9 +81,12 @@
         <div class="top-line">
           <div class="container">
             <div class="row align-items-center">
-              <div class="col-3"><a class="top-line__logo" href="#"><img class="res-i" src="img/makita-01.svg" alt=""/></a>
+              <div class="col-auto d-lg-none">
+                <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
               </div>
-              <div class="col-9">
+              <div class="aside-col col text-md-left text-center"><a class="top-line__logo" href="#"><img class="res-i" src="img/makita-01.svg" alt=""/></a>
+              </div>
+              <div class="main-col col-lg-9 col-auto d-none d-md-block">
                 <div class="row align-items-center">
                   <div class="col">
                     <div class="top-line__contact-group">
@@ -85,7 +95,7 @@
                       </svg><a class="top-line__link top-line__link--phone" href="tel:+7(495)530-70-07">  +7 (495) 530-70-07</a><a class="top-line__link smallest" href="#">Заказать обратный звонок</a>
                     </div>
                   </div>
-                  <div class="col-auto">
+                  <div class="col-auto d-none d-lg-block">
                     <div class="top-line__nav">
                       <div class="top-line__item"><a class="top-line__link" href="#">Акции</a>
                       </div>
@@ -99,10 +109,22 @@
                   </div>
                 </div>
               </div>
+              <div class="col-auto d-lg-none"><a class="top-line__btn-basket">
+                <svg class="icon icon-basket ">
+                  <use xlink:href="img/svg/sprite.svg#basket"></use>
+                </svg><span class="d-md-inline d-none">Корзина пуста</span></a>
+              </div>
             </div>
             <div class="row align-items-center">
-              <div class="col-3"></div>
-              <div class="col-9">
+              <div class="aside-col col-3 d-none d-lg-block">
+                <div class="catalog-nav active not-click">
+                  <div class="catalog-nav__btn-toggle active not-click"><span></span>Каталог товаров
+                  </div>
+                  <div class="catalog-nav__dropdown active not-click"><a class="catalog-nav__link" href="#">Аккумуляторные инструменты</a><a class="catalog-nav__link" href="#">Пневматические инструменты</a><a class="catalog-nav__link" href="#">Болгарки (УШМ)</a><a class="catalog-nav__link" href="#">Бороздоделы (штроборезы)</a><a class="catalog-nav__link" href="#">Воздуходувки</a><a class="catalog-nav__link" href="#">Гайковёрты</a><a class="catalog-nav__link" href="#">Гвоздезабиватели</a><a class="catalog-nav__link" href="#">Граверы</a><a class="catalog-nav__link" href="#">Дрели</a><a class="catalog-nav__link" href="#">Дрели-шуруповёрты</a><a class="catalog-nav__link" href="#">Измерительная техника</a><a class="catalog-nav__link" href="#">Клеевые пистолеты</a><a class="catalog-nav__link" href="#">Лобзики</a><a class="catalog-nav__link" href="#">Мойки высокого давления</a><a class="catalog-nav__link" href="#">Наборы инструментов</a><a class="catalog-nav__link" href="#">Ножницы</a><a class="catalog-nav__link" href="#">Отбойные молотки</a><a class="catalog-nav__link" href="#">Отвёртки</a><a class="catalog-nav__link" href="#">Перфораторы</a><a class="catalog-nav__link" href="#">Пилы</a><a class="catalog-nav__link" href="#">Пылесосы</a><a class="catalog-nav__link" href="#">Реноваторы (резаки)</a><a class="catalog-nav__link" href="#">Рубанки</a><a class="catalog-nav__link" href="#">Радиоприёмники</a><a class="catalog-nav__link" href="#">Технические фены</a><a class="catalog-nav__link" href="#"> Точило</a><a class="catalog-nav__link" href="#"> Фонари</a><a class="catalog-nav__link" href="#"> Фрезеры</a><a class="catalog-nav__link" href="#"> Шлифовальные машины</a><a class="catalog-nav__link" href="#"> Шуруповёрты</a><a class="catalog-nav__link" href="#"> Аксессуары, расходные материалы </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col main-col">
                 <div class="top-line__row row align-items-center">
                   <div class="col">
                     <div class="search-block">
@@ -117,7 +139,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-auto"><a class="top-line__btn-basket">
+                  <div class="col-auto d-none d-lg-block"><a class="top-line__btn-basket">
                     <svg class="icon icon-basket ">
                       <use xlink:href="img/svg/sprite.svg#basket"></use>
                     </svg>Корзина пуста</a>
@@ -130,78 +152,565 @@
         <!-- end .top-line-->
       </header>
       <!-- end HEADER.header-->
-      <div class="row row--main">
-        <div class="col-4">
-          <!-- start aside-->
-          <div class="aside section" id="aside">
-            <div class="container">
-              <div class="section-title text-center">
-                <h2>aside</h2>
+      <div class="container">
+        <div class="row row--main">
+          <div class="aside-col col-lg-3 order-lg-0 order-last"></div>
+          <div class="main-col col-lg-9">
+            <!-- start header-block-->
+            <div class="header-block">
+              <div class="header-block__slider">
+                <div class="header-block__slide">
+                  <div class="header-block__item" style="background-image: url(img/banners.jpg);">
+                    <div class="header-block__title">Длинный текст акции в две или три строки с ценой в рублях
+                    </div><a class="header-block__btn btn-primary" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- +e.slide-->
+                <div class="header-block__slide">
+                  <div class="header-block__item" style="background-image: url(img/banners.jpg);">
+                    <div class="header-block__title">Длинный текст акции в две или три строки с ценой в рублях
+                    </div><a class="header-block__btn btn-primary" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- +e.slide-->
+                <div class="header-block__slide">
+                  <div class="header-block__item" style="background-image: url(img/banners.jpg);">
+                    <div class="header-block__title">Длинный текст акции в две или три строки с ценой в рублях
+                    </div><a class="header-block__btn btn-primary" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- +e.slide-->
+                <div class="header-block__slide">
+                  <div class="header-block__item" style="background-image: url(img/banners.jpg);">
+                    <div class="header-block__title">Длинный текст акции в две или три строки с ценой в рублях
+                    </div><a class="header-block__btn btn-primary" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- +e.slide-->
               </div>
-              <div class="row"></div>
             </div>
-          </div>
-          <!-- end aside-->
-        </div>
-        <div class="col-8">
-          <!-- start header-block-->
-          <div class="header-block" id="header-block">
-            <div class="container">
-              <h1></h1>
-              <div class="row"></div>
-            </div>
-          </div>
-          <!-- end header-block-->
-          <!-- start s-catalog-->
-          <div class="s-catalog section" id="s-catalog">
-            <div class="container">
-              <div class="section-title text-center">
-                <h2>s-catalog</h2>
+            <!-- end header-block-->
+            <!-- start s-catalog-->
+            <div class="s-catalog section">
+              <div class="section-title">
+                <div class="row">
+                  <div class="col">
+                    <h2>Новинки</h2>
+                  </div>
+                  <div class="col-auto d-none d-sm-block">
+                    <div class="arrow-wrap"></div>
+                  </div>
+                </div>
               </div>
-              <div class="row"></div>
-            </div>
-          </div>
-          <!-- end s-catalog-->
-          <!-- start s-why-->
-          <div class="s-why section" id="s-why">
-            <div class="container">
-              <div class="section-title text-center">
-                <h2>s-why</h2>
+              <div class="s-catalog__slider">
+                <div class="s-catalog__slide">
+                  <div class="item-prod"> 
+                    <div class="item-prod__img-wrap">
+                      <div class="item-prod__labels">
+                        <div class="item-prod__label bg-success">New
+                        </div>
+                      </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                    </div>
+                    <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span>
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span>
+                    </div>
+                    <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="strong">33 593 р. </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="strong small text-success">Есть в наличии</div>
+                      </div>
+                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                    <div class="item-prod__row row">
+                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                      </div>
+                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                      </div>
+                    </div>
+                    <div class="item-prod__caption">
+                      <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                      <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                    </div>
+                    <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                  </div>
+                </div>
+                <div class="s-catalog__slide">
+                  <div class="item-prod"> 
+                    <div class="item-prod__img-wrap">
+                      <div class="item-prod__labels">
+                        <div class="item-prod__label bg-success">New
+                        </div>
+                      </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                    </div>
+                    <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span>
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span>
+                    </div>
+                    <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="strong">33 593 р. </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="strong small text-success">Есть в наличии</div>
+                      </div>
+                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                    <div class="item-prod__row row">
+                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                      </div>
+                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                      </div>
+                    </div>
+                    <div class="item-prod__caption">
+                      <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                      <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                    </div>
+                    <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                  </div>
+                </div>
+                <div class="s-catalog__slide">
+                  <div class="item-prod"> 
+                    <div class="item-prod__img-wrap">
+                      <div class="item-prod__labels">
+                        <div class="item-prod__label bg-success">New
+                        </div>
+                      </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                    </div>
+                    <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span>
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span>
+                    </div>
+                    <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="strong">33 593 р. </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="strong small text-success">Есть в наличии</div>
+                      </div>
+                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                    <div class="item-prod__row row">
+                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                      </div>
+                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                      </div>
+                    </div>
+                    <div class="item-prod__caption">
+                      <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                      <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                    </div>
+                    <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                  </div>
+                </div>
+                <div class="s-catalog__slide">
+                  <div class="item-prod"> 
+                    <div class="item-prod__img-wrap">
+                      <div class="item-prod__labels">
+                        <div class="item-prod__label bg-success">New
+                        </div>
+                      </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                    </div>
+                    <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span class="active">
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span><span>
+                        <svg class="icon icon-star-active ">
+                          <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                        </svg></span>
+                    </div>
+                    <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <div class="strong">33 593 р. </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="strong small text-success">Есть в наличии</div>
+                      </div>
+                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                    <div class="item-prod__row row">
+                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                      </div>
+                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                      </div>
+                    </div>
+                    <div class="item-prod__caption">
+                      <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                      <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                    </div>
+                    <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                  </div>
+                </div>
               </div>
-              <div class="row"></div>
-            </div>
-          </div>
-          <!-- end s-why-->
-          <!-- start s-logo-->
-          <div class="s-logo section" id="s-logo">
-            <div class="container">
-              <div class="section-title text-center">
-                <h2>s-logo</h2>
+              <div class="d-sm-none">
+                <button class="s-catalog__btn s-catalog__btn--more-js btn-secondary" type="button">Показать еще
+                </button>
               </div>
-              <div class="row"></div>
             </div>
+            <!-- end s-catalog-->
+            <!-- start s-sert-->
+            <div class="s-sert section" id="s-sert">
+              <div class="section-title">
+                <div class="row">
+                  <div class="col">
+                    <h2>Наши сертификаты</h2>
+                  </div>
+                  <div class="col-auto d-none d-sm-block">
+                    <div class="arrow-wrap"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-sert__slider">
+                <div class="s-sert__slide"><a href="img/gal.jpg" data-fancybox="images"><img class="res-i" src="img/gal.jpg" alt=""/></a>
+                </div>
+                <!-- +e.slide-->
+                <div class="s-sert__slide"><a href="img/gal.jpg" data-fancybox="images"><img class="res-i" src="img/gal.jpg" alt=""/></a>
+                </div>
+                <!-- +e.slide-->
+                <div class="s-sert__slide"><a href="img/gal.jpg" data-fancybox="images"><img class="res-i" src="img/gal.jpg" alt=""/></a>
+                </div>
+                <!-- +e.slide-->
+                <div class="s-sert__slide"><a href="img/gal.jpg" data-fancybox="images"><img class="res-i" src="img/gal.jpg" alt=""/></a>
+                </div>
+                <!-- +e.slide-->
+                <div class="s-sert__slide"><a href="img/gal.jpg" data-fancybox="images"><img class="res-i" src="img/gal.jpg" alt=""/></a>
+                </div>
+                <!-- +e.slide-->
+                <div class="s-sert__slide"><a href="img/gal.jpg" data-fancybox="images"><img class="res-i" src="img/gal.jpg" alt=""/></a>
+                </div>
+                <!-- +e.slide-->
+                <div class="s-sert__slide"><a href="img/gal.jpg" data-fancybox="images"><img class="res-i" src="img/gal.jpg" alt=""/></a>
+                </div>
+                <!-- +e.slide-->
+              </div>
+              <div class="d-sm-none">
+                <button class="s-sert__btn s-sert__btn--more-js btn-secondary" type="button">Показать еще
+                </button>
+              </div>
+            </div>
+            <!-- end s-sert-->
+            <!-- start s-why-->
+            <div class="s-why section" id="s-why">
+              <div class="section-title">
+                <h2>Почему выбирают нас</h2>
+              </div>
+              <div class="tabs">
+                <div class="tabs__caption">
+                  <div class="tabs__btn active">
+                    <svg class="icon icon-why-1 ">
+                      <use xlink:href="img/svg/sprite.svg#why-1"></use>
+                    </svg>Скидки
+                  </div>
+                  <div class="tabs__btn">
+                    <svg class="icon icon-why-2 ">
+                      <use xlink:href="img/svg/sprite.svg#why-2"></use>
+                    </svg>Гарантия
+                  </div>
+                  <div class="tabs__btn">
+                    <svg class="icon icon-why-3 ">
+                      <use xlink:href="img/svg/sprite.svg#why-3"></use>
+                    </svg>Официальный дилер
+                  </div>
+                  <div class="tabs__btn">
+                    <svg class="icon icon-why-4 ">
+                      <use xlink:href="img/svg/sprite.svg#why-4"></use>
+                    </svg>Доставка
+                  </div>
+                </div>
+                <div class="tabs__wrap">
+                  <div class="tabs__content active">
+                    <div class="tabs__head">
+                      <div class="row">
+                        <div class="col-md-auto mb-2">
+                          <div class="tabs__img-circle-wrap"><img class="res-i" src="img/why-img.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col mb-2">
+                          <div class="h3 strong">Дарим мощные скидки за регистрацию</div>
+                          <div class="text-gray"> Скидка при регистрации на сайте<br/>Скидка от объёма закупки товара <br/>Акции на инструмент и аксессуары</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="h2 strong"> Pt-Line.ru</div>
+                    <div class="smallest text-gray">
+                      <p>Японский концерн Makita является одним из безоговорочных лидеров рынка различного оборудования и техники. Корпорация никогда не останавливается на достигнутых целях, постоянно принимая технологические решения, которые ложатся в основу производства нового бытового и профессионального инструмента. К продажам техники Макита компания «ЛайнТулс» приступила в 2009 году, став официальным дилером этого производителя. В настоящее время мы предлагаем множество моделей разнообразной техники Makita, которую вы можете приобрести в интернет-магазине makita-line.ru</p>
+                      <p>Даже у самого надежного инструмента порой случаются поломки. Именно поэтому нами был открыт сервисный центр Makita, где профессионалы с богатым опытом оперативно проведут диагностику, выяснят характер неисправности, после чего проведут ремонт. Техника, отремонтированная нами, прослужит вам еще долгое время. Те, кто ремонтирует инструмент своими руками, могут зайти на наш сайт и купить оригинальные запасные части. Если вас интересуют цены на запчасти и стоимость услуг, которые предоставляет сервис-центр Makita, то они вполне демократичны. </p>
+                      <p>К продажам инструмента корпорации DeWALT компания «ЛайнТулс» приступила с 2016 года, выступив в роли ее официального дилера. Приобрести фирменную технику и аксессуары этого производителя можно в интернет-магазине dewalt-line. ru. Нами был учтен удачный опыт сотрудничества с концерном Makita, поэтому мы создали сервисный центр, где каждый может отремонтировать технику DeWalt, а уж оперативность и качество мы гарантируем! В интернет-магазине elitech-line. ru вы можете приобрести оборудование и инструменты компании «Элитек», а купить одноразовые и многоразовые пылесборники для пылесосов различных марок можно в интернет-магазине prom-mechok. ru.</p>
+                    </div>
+                  </div>
+                  <!-- /+e.content-->
+                  <div class="tabs__content">
+                    <div class="tabs__head">
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="tabs__img-circle-wrap"><img class="res-i" src="img/why-img.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="h3 strong">Дарим мощные скидки за регистрацию</div>
+                          <div class="text-gray"> Скидка при регистрации на сайте<br/>Скидка от объёма закупки товара <br/>Акции на инструмент и аксессуары</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="h2 strong"> Pt-Line.ru</div>
+                    <div class="smallest text-gray">
+                      <p>Японский концерн Makita является одним из безоговорочных лидеров рынка различного оборудования и техники. Корпорация никогда не останавливается на достигнутых целях, постоянно принимая технологические решения, которые ложатся в основу производства нового бытового и профессионального инструмента. К продажам техники Макита компания «ЛайнТулс» приступила в 2009 году, став официальным дилером этого производителя. В настоящее время мы предлагаем множество моделей разнообразной техники Makita, которую вы можете приобрести в интернет-магазине makita-line.ru</p>
+                      <p>Даже у самого надежного инструмента порой случаются поломки. Именно поэтому нами был открыт сервисный центр Makita, где профессионалы с богатым опытом оперативно проведут диагностику, выяснят характер неисправности, после чего проведут ремонт. Техника, отремонтированная нами, прослужит вам еще долгое время. Те, кто ремонтирует инструмент своими руками, могут зайти на наш сайт и купить оригинальные запасные части. Если вас интересуют цены на запчасти и стоимость услуг, которые предоставляет сервис-центр Makita, то они вполне демократичны. </p>
+                      <p>К продажам инструмента корпорации DeWALT компания «ЛайнТулс» приступила с 2016 года, выступив в роли ее официального дилера. Приобрести фирменную технику и аксессуары этого производителя можно в интернет-магазине dewalt-line. ru. Нами был учтен удачный опыт сотрудничества с концерном Makita, поэтому мы создали сервисный центр, где каждый может отремонтировать технику DeWalt, а уж оперативность и качество мы гарантируем! В интернет-магазине elitech-line. ru вы можете приобрести оборудование и инструменты компании «Элитек», а купить одноразовые и многоразовые пылесборники для пылесосов различных марок можно в интернет-магазине prom-mechok. ru.</p>
+                    </div>
+                  </div>
+                  <!-- /+e.content-->
+                  <div class="tabs__content">
+                    <div class="tabs__head">
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="tabs__img-circle-wrap"><img class="res-i" src="img/why-img.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="h3 strong">Дарим мощные скидки за регистрацию</div>
+                          <div class="text-gray"> Скидка при регистрации на сайте<br/>Скидка от объёма закупки товара <br/>Акции на инструмент и аксессуары</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="h2 strong"> Pt-Line.ru</div>
+                    <div class="smallest text-gray">
+                      <p>Японский концерн Makita является одним из безоговорочных лидеров рынка различного оборудования и техники. Корпорация никогда не останавливается на достигнутых целях, постоянно принимая технологические решения, которые ложатся в основу производства нового бытового и профессионального инструмента. К продажам техники Макита компания «ЛайнТулс» приступила в 2009 году, став официальным дилером этого производителя. В настоящее время мы предлагаем множество моделей разнообразной техники Makita, которую вы можете приобрести в интернет-магазине makita-line.ru</p>
+                      <p>Даже у самого надежного инструмента порой случаются поломки. Именно поэтому нами был открыт сервисный центр Makita, где профессионалы с богатым опытом оперативно проведут диагностику, выяснят характер неисправности, после чего проведут ремонт. Техника, отремонтированная нами, прослужит вам еще долгое время. Те, кто ремонтирует инструмент своими руками, могут зайти на наш сайт и купить оригинальные запасные части. Если вас интересуют цены на запчасти и стоимость услуг, которые предоставляет сервис-центр Makita, то они вполне демократичны. </p>
+                      <p>К продажам инструмента корпорации DeWALT компания «ЛайнТулс» приступила с 2016 года, выступив в роли ее официального дилера. Приобрести фирменную технику и аксессуары этого производителя можно в интернет-магазине dewalt-line. ru. Нами был учтен удачный опыт сотрудничества с концерном Makita, поэтому мы создали сервисный центр, где каждый может отремонтировать технику DeWalt, а уж оперативность и качество мы гарантируем! В интернет-магазине elitech-line. ru вы можете приобрести оборудование и инструменты компании «Элитек», а купить одноразовые и многоразовые пылесборники для пылесосов различных марок можно в интернет-магазине prom-mechok. ru.</p>
+                    </div>
+                  </div>
+                  <!-- /+e.content-->
+                  <div class="tabs__content">
+                    <div class="tabs__head">
+                      <div class="row">
+                        <div class="col-auto">
+                          <div class="tabs__img-circle-wrap"><img class="res-i" src="img/why-img.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="h3 strong">Дарим мощные скидки за регистрацию</div>
+                          <div class="text-gray"> Скидка при регистрации на сайте<br/>Скидка от объёма закупки товара <br/>Акции на инструмент и аксессуары</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="h2 strong"> Pt-Line.ru</div>
+                    <div class="smallest text-gray">
+                      <p>Японский концерн Makita является одним из безоговорочных лидеров рынка различного оборудования и техники. Корпорация никогда не останавливается на достигнутых целях, постоянно принимая технологические решения, которые ложатся в основу производства нового бытового и профессионального инструмента. К продажам техники Макита компания «ЛайнТулс» приступила в 2009 году, став официальным дилером этого производителя. В настоящее время мы предлагаем множество моделей разнообразной техники Makita, которую вы можете приобрести в интернет-магазине makita-line.ru</p>
+                      <p>Даже у самого надежного инструмента порой случаются поломки. Именно поэтому нами был открыт сервисный центр Makita, где профессионалы с богатым опытом оперативно проведут диагностику, выяснят характер неисправности, после чего проведут ремонт. Техника, отремонтированная нами, прослужит вам еще долгое время. Те, кто ремонтирует инструмент своими руками, могут зайти на наш сайт и купить оригинальные запасные части. Если вас интересуют цены на запчасти и стоимость услуг, которые предоставляет сервис-центр Makita, то они вполне демократичны. </p>
+                      <p>К продажам инструмента корпорации DeWALT компания «ЛайнТулс» приступила с 2016 года, выступив в роли ее официального дилера. Приобрести фирменную технику и аксессуары этого производителя можно в интернет-магазине dewalt-line. ru. Нами был учтен удачный опыт сотрудничества с концерном Makita, поэтому мы создали сервисный центр, где каждый может отремонтировать технику DeWalt, а уж оперативность и качество мы гарантируем! В интернет-магазине elitech-line. ru вы можете приобрести оборудование и инструменты компании «Элитек», а купить одноразовые и многоразовые пылесборники для пылесосов различных марок можно в интернет-магазине prom-mechok. ru.</p>
+                    </div>
+                  </div>
+                  <!-- /+e.content-->
+                </div>
+              </div>
+            </div>
+            <!-- end s-why-->
+            <!-- start s-logo-->
+            <div class="s-logo section" id="s-logo">
+              <div class="section-title">
+                <div class="row">
+                  <div class="col">
+                    <h2>Наши направления</h2>
+                  </div>
+                  <div class="col-auto d-none d-sm-block">
+                    <div class="arrow-wrap"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-logo__slider">
+                <div class="s-logo__slide">
+                  <div class="s-logo__img-wrap"><span><img class="res-i" src="img/logo-1.svg" alt=""/></span>
+                  </div>
+                </div>
+                <!-- +e.slide-->
+                <div class="s-logo__slide">
+                  <div class="s-logo__img-wrap"><span><img class="res-i" src="img/logo-2.png" alt=""/></span>
+                  </div>
+                </div>
+                <!-- +e.slide-->
+                <div class="s-logo__slide">
+                  <div class="s-logo__img-wrap"><span><img class="res-i" src="img/logo-3.svg" alt=""/></span>
+                  </div>
+                </div>
+                <!-- +e.slide-->
+                <div class="s-logo__slide">
+                  <div class="s-logo__img-wrap"><span><img class="res-i" src="img/logo-4.svg" alt=""/></span>
+                  </div>
+                </div>
+                <!-- +e.slide-->
+                <div class="s-logo__slide">
+                  <div class="s-logo__img-wrap"><span><img class="res-i" src="img/logo-5.svg" alt=""/></span>
+                  </div>
+                </div>
+                <!-- +e.slide-->
+              </div>
+            </div>
+            <!-- end s-logo-->
           </div>
-          <!-- end s-logo-->
         </div>
       </div>
-      <!-- start s-form-->
-      <section class="s-form section" id="s-form">
-        <div class="container">
-          <h2 class="text-center">s-form</h2>
-          <div class="row"></div>
-        </div>
-      </section>
-      <!-- end s-form-->
-      <!-- start s-contact-->
-      <div class="s-contact section" id="s-contact">
-        <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"><a href="#"></a></div>
-        </div>
-      </div>
-      <!-- end s-contact-->
       <footer class="footer">
-        <div class="container">footer</div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="footer__group">
+                <div class="footer__title h4"> Pt-Line.ru
+                </div>
+                <div class="footer__toggle-block">
+                  <div class="footer__item"><a class="footer__link" href="#">О компании</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Каталог продукции</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Сервисный центр</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Контакты и реквизиты</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Аксессуары и расходное</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Запчасти</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer__group">
+                <div class="footer__title h4"> Покупателю
+                </div>
+                <div class="footer__toggle-block">
+                  <div class="footer__item"><a class="footer__link" href="#">Как заказать</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Как оплатить</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Как получить</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Акции и скидки</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Личный кабинет</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Акции</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer__group">
+                <div class="footer__title h4"> Информация
+                </div>
+                <div class="footer__toggle-block">
+                  <div class="footer__item"><a class="footer__link" href="#">О политике обработки персональных данных.</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Статьи</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Оптовым клиентам</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Гарантия</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer__group">
+                <div class="footer__title h4"> Обратная связь
+                </div>
+                <div class="footer__toggle-block">
+                  <div><a class="footer__tel" href="tel:+7(495)530-70-07">+7 (495) 530-70-07</a>
+                  </div>
+                  <div><a class="footer__link tdu" href="#">Обратный звонок</a>
+                  </div>
+                  <div class="small text-gray">Пн-Пт 8:15 до 18:30, Сб 10:00 до 15:00</div>
+                  <div><a class="footer__link" href="mailto:zakaz@pt-line.ru">zakaz@pt-line.ru</a>
+                  </div>
+                  <div class="soc"><a class="soc__item" href="#" target="_blank"><i class="fab  fa-vk"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab fa-twitter"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab fa-instagram"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab fa-odnoklassniki"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__foot">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl my-2">
+                <div class="smallest">PROFESSIONAL TOOLS, PT-LINE.RU © 2017 ГОД. ВСЕ ПРАВА ЗАЩИЩЕНЫ, КОПИРОВАНИЕ МАТЕРИАЛОВ ЗАПРЕЩЕНО. САЙТ НОСИТ ИСКЛЮЧИТЕЛЬНО ФОРМАЦИОННЫЙ ХАРАКТЕР. ПоЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</div>
+              </div>
+              <div class="col-xl-auto col my-1 order-md-0 order-first">
+                <div class="row row--small">
+                  <div class="col-auto my-1"><small>Мы принимаем к оплате</small></div>
+                  <div class="col-auto my-1"><img class="res-i" src="img/pay-foot.png" alt=""/></div>
+                </div>
+              </div>
+              <div class="col-auto my-2">
+                <div class="row row--small">
+                  <div class="col-auto"><small>Сделано c любовью  </small></div>
+                  <div class="col-auto"><a class="text-white strong" href="https://www.roonix.ru/" target="_blank">Roonix</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
@@ -232,6 +741,7 @@
     <!-- #modal-call-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
+    <script src="libs/fancybox-master/jquery.fancybox.min.js"></script>
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
