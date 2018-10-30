@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
     <link rel="stylesheet" href="/libs/fancybox-master/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css">
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/style-makita.min.css">
   </head>
@@ -163,7 +165,94 @@
           <h1>Аккумуляторные дрели</h1>
         </div>
         <div class="row row--main">
-          <div class="aside-col col-lg-3 order-lg-0 order-last"></div>
+          <div class="aside-col col-lg-3 order-lg-0 order-last">
+            <!-- start aside-->
+            <div class="aside">
+              <button class="aside__btn aside__btn--js btn btn-block btn-info d-lg-none ttu" type="button">Фильтр товаров
+              </button>
+              <div class="aside-filter aside-filter--js d-lg-block">
+                <div class="aside-filter__group">
+                  <div class="aside-filter__title text-gray strong">Категория товара
+                  </div>
+                  <select class="aside-filter__select form-control">
+                    <option selected="selected">Аккумуляторные ножницы</option>
+                    <option>Аккумуляторные ножницы</option>
+                    <option>Аккумуляторные ножницы</option>
+                    <option>Аккумуляторные ножницы</option>
+                  </select>
+                </div>
+                <!-- +e.group-->
+                <div class="aside-filter__group">
+                  <div class="aside-filter__title text-gray strong">Наличие товара
+                  </div>
+                  <div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="nal"/><span class="custom-input__lab"></span><span class="custom-input__text">Только в наличии</span>
+                    </label>
+                  </div>
+                  <div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="nal"/><span class="custom-input__lab"></span><span class="custom-input__text">Все</span>
+                    </label>
+                  </div>
+                </div>
+                <!-- +e.group-->
+                <div class="aside-filter__group">
+                  <div class="aside-filter__title text-gray strong">Мощность, Вт
+                  </div>
+                  <select class="aside-filter__select form-control">
+                    <option selected="selected">Все</option>
+                    <option>Аккумуляторные ножницы</option>
+                    <option>Аккумуляторные ножницы</option>
+                  </select>
+                </div>
+                <!-- +e.group-->
+                <div class="aside-filter__group">
+                  <div class="aside-filter__title text-gray strong">Число ударов на холостом ходу
+                  </div>
+                  <select class="aside-filter__select form-control">
+                    <option selected="selected">Все</option>
+                    <option>Аккумуляторные ножницы</option>
+                    <option>Аккумуляторные ножницы</option>
+                  </select>
+                </div>
+                <!-- +e.group-->
+                <div class="aside-filter__group">
+                  <div class="aside-filter__title text-gray strong">Цена, руб
+                  </div>
+                  <div class="aside-filter__rang-wrap slider-rang-wrap">
+                    <div class="row">
+                      <div class="col-auto">
+                        <label class="aside-filter__input-wrap"> <span class="aside-filter__input aside-filter__input-minus input-slider-range">
+                          <input class="minus" type="text" value="1"/></span>
+                        </label>
+                      </div>
+                      <div class="col-auto">
+                        <label class="aside-filter__input-wrap"> <span class="aside-filter__input aside-filter__input-plus input-slider-range">
+                          <input class="plus" type="text" value="1000"/></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="aside-filter__range aside-filter__range--1 slider-range filter">
+                      <input class="range-slider" type="text"/>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.group-->
+                <div class="aside-filter__group">
+                  <div class="row">
+                    <div class="col-6">
+                      <button class="aside-filter__btn btn-primary" ype="button">Применить
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button class="aside-filter__btn btn-secondary" ype="button">Сбросить
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end aside-->
+          </div>
           <div class="main-col col-lg-9">
             <div class="s-catalog-head">
               <div class="row">
@@ -179,12 +268,12 @@
                 </div>
                 <div class="col-auto">
                   <div class="s-catalog-head__btn-group">
-                    <button class="s-catalog-head__btn" type="button">
+                    <button class="s-catalog-head__btn active" type="button">
                       <svg class="icon icon-view-1 ">
                         <use xlink:href="img/svg/sprite.svg#view-1"></use>
                       </svg>
                     </button>
-                    <button class="s-catalog-head__btn active" type="button">
+                    <button class="s-catalog-head__btn" type="button">
                       <svg class="icon icon-view-2 ">
                         <use xlink:href="img/svg/sprite.svg#view-2"></use>
                       </svg>
@@ -225,18 +314,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -277,18 +370,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -329,18 +426,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -381,18 +482,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -433,18 +538,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -485,18 +594,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -537,18 +650,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -589,18 +706,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -641,18 +762,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -693,18 +818,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -745,18 +874,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -797,18 +930,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -849,18 +986,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -901,18 +1042,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -953,18 +1098,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -1005,18 +1154,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -1057,18 +1210,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -1109,18 +1266,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -1161,18 +1322,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -1213,18 +1378,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -1265,18 +1434,22 @@
                     </div>
                     <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
                     </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="strong">33 593 р. </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="row">
+                        <div class="col">
+                          <div class="strong">33 593 р. </div>
+                        </div>
+                        <div class="col-auto">
+                          <div class="strong small text-success">Есть в наличии</div>
+                        </div>
                       </div>
-                      <div class="col-auto">
-                        <div class="strong small text-success">Есть в наличии</div>
-                      </div>
-                    </div><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
-                    <div class="item-prod__row row">
-                      <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
-                      </div>
-                      <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                      <div class="item-prod__row row">
+                        <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                        </div>
+                        <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                        </div>
                       </div>
                     </div>
                     <div class="item-prod__caption">
@@ -1442,6 +1615,7 @@
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
+    <script src="libs/ion.rangeSlider-2.2.0/js/ion.rangeSlider.min.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
     <script src="libs/jquery.touchSwipe.min.js"></script>
     <script src="js/common.js"></script>

@@ -203,22 +203,21 @@ jQuery(document).ready(function ($) {
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 		appendArrows: '.s-sert .arrow-wrap',
-		mobileFirst:true,
-		responsive: [
-			{ 
-			breakpoint: 1299,
-			settings: {
-				slidesToShow: 6,
+		mobileFirst: true,
+		responsive: [{
+				breakpoint: 1299,
+				settings: {
+					slidesToShow: 6,
+				}
+			},
+
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 5,
+				}
 			}
-		},
-		
-			{ 
-			breakpoint: 767,
-			settings: {
-				slidesToShow: 5,
-			}
-		} 
-	]
+		]
 	});
 
 	$(' .tabs__caption').slick({
@@ -262,25 +261,25 @@ jQuery(document).ready(function ($) {
 	// / modal window
 
 	// modal галерея
-		// галерея
-		$('[data-fancybox]').fancybox({
-			protect    : true, 
-			toolbar    : true,
-			smallBtn   : true,
-			loop: true,
-			keyboard: true, 
-			buttons: [
-				"zoom",
-				// "share",
-				// "slideShow",
-				'info',
-				"fullScreen",
-				// "download",
-				"thumbs",
-				"close"
-			],
-		
-		});
+	// галерея
+	$('[data-fancybox]').fancybox({
+		protect: true,
+		toolbar: true,
+		smallBtn: true,
+		loop: true,
+		keyboard: true,
+		buttons: [
+			"zoom",
+			// "share",
+			// "slideShow",
+			'info',
+			"fullScreen",
+			// "download",
+			"thumbs",
+			"close"
+		],
+
+	});
 	// /modal галерея
 
 
@@ -382,9 +381,48 @@ jQuery(document).ready(function ($) {
 	$(".catalog-nav__btn-toggle").click(function () {
 		$(this).toggleClass("active").next().toggleClass("active");
 	})
-	
+
 	$(".footer__title").click(function () {
 		$(this).toggleClass("active").next().slideToggle().toggleClass("active");
 	})
 
+
+	
+	// тут все настройки  ionden.com/a/plugins/ion.rangeSlider/demo_interactions.html
+
+	$('.slider-rang-wrap').each(function () {
+		var th = $(this),
+			inMinus = th.find('.minus'),
+			inPlus = th.find('.plus');
+		var slider = th.find(".range-slider").ionRangeSlider({
+			type: "double",
+			grid: false,
+			min: 0,
+			max: 1000,
+			grid_snap: false,
+			force_edges: true,
+			hide_min_max: true,
+			hide_from_to: true,
+			// hide_grid_text: true,
+			onStart: function (data) {
+				inMinus.val(data.from);
+				inPlus.val(data.to);
+			},
+			onChange: function (data) {
+				inMinus.val(data.from);
+				inPlus.val(data.to);
+			},
+			onFinish: function (data) {
+				inMinus.val(data.from);
+				inPlus.val(data.to);
+			},
+			onUpdate: function (data) {
+				inMinus.val(data.from);
+				inPlus.val(data.to);
+			}
+		});
+
+
+
+	});
 });
