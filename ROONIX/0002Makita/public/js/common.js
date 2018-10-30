@@ -220,6 +220,40 @@ jQuery(document).ready(function ($) {
 		]
 	});
 
+
+	$('.card-head__slider-big').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		asNavFor: '.card-head__slider-small',
+		infinite: false,
+		loop: false,
+			arrows: false,
+
+	});
+ $('.card-head__slider-small').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			dots: false,
+			speed: 450,
+			infinite: false,
+			loop: false,
+			 arrows: true,
+			prevArrow: arrl2,
+			nextArrow: arrr2,
+			// centerMode: true,
+
+			focusOnSelect: true ,
+			asNavFor:  '.card-head__slider-big',
+
+			// swipeToSlide: false
+			});
+$('.card-head__slider-big, .card-head__slider-small, .carusel')
+.on('lazyLoaded', function(event, slick, image, imageSource){
+image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+});
+
 	$(' .tabs__caption').slick({
 		dots: false,
 		arrows: false,
@@ -425,4 +459,9 @@ jQuery(document).ready(function ($) {
 
 
 	});
+
+		// скрыть/показать фильтр
+		$(".aside__btn--js").click(function () {
+			$(this).toggleClass("active").next().slideToggle();
+		})
 });

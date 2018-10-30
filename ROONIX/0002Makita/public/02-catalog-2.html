@@ -113,10 +113,10 @@
                   </div>
                 </div>
               </div>
-              <div class="col-auto d-lg-none"><a class="top-line__btn-basket">
+              <div class="col-auto d-lg-none"><a class="top-line__btn-basket active" href="#"><span class="top-line__icon-wrap">
                 <svg class="icon icon-basket ">
                   <use xlink:href="img/svg/sprite.svg#basket"></use>
-                </svg><span class="d-md-inline d-none">Корзина пуста</span></a>
+                </svg><span class="top-line__btn-count">6</span></span></a>
               </div>
             </div>
             <div class="row align-items-center">
@@ -145,10 +145,9 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-auto d-none d-lg-block"><a class="top-line__btn-basket">
+                  <div class="col-auto d-none d-lg-block"><a class="top-line__btn-basket active" href="#"><span class="top-line__icon-wrap">
                     <svg class="icon icon-basket ">
                       <use xlink:href="img/svg/sprite.svg#basket"></use>
-                    </svg>Корзина пуста</a>
                   </div>
                 </div>
               </div>
@@ -165,10 +164,10 @@
           <h1>Аккумуляторные дрели</h1>
         </div>
         <div class="row row--main">
-          <div class="aside-col col-lg-3 order-lg-0 order-last">
+          <div class="aside-col col-lg-3">
             <!-- start aside-->
             <div class="aside">
-              <button class="aside__btn aside__btn--js btn btn-block btn-info d-lg-none ttu" type="button">Фильтр товаров
+              <button class="aside__btn aside__btn--js btn btn-block btn-secondary d-lg-none" type="button">Фильтровать
               </button>
               <div class="aside-filter aside-filter--js d-lg-block">
                 <div class="aside-filter__group">
@@ -218,16 +217,17 @@
                 <div class="aside-filter__group">
                   <div class="aside-filter__title text-gray strong">Цена, руб
                   </div>
+                  <!--  в корне  в slier-range.php пример подключения слайдера с обраткой- делал другой проггер на битрикс-->
                   <div class="aside-filter__rang-wrap slider-rang-wrap">
                     <div class="row">
-                      <div class="col-auto">
+                      <div class="col-6">
                         <label class="aside-filter__input-wrap"> <span class="aside-filter__input aside-filter__input-minus input-slider-range">
-                          <input class="minus" type="text" value="1"/></span>
+                          <input class="form-control minus" type="text" value="1"/></span>
                         </label>
                       </div>
-                      <div class="col-auto">
+                      <div class="col-6">
                         <label class="aside-filter__input-wrap"> <span class="aside-filter__input aside-filter__input-plus input-slider-range">
-                          <input class="plus" type="text" value="1000"/></span>
+                          <input class="form-control plus" type="text" value="1000"/></span>
                         </label>
                       </div>
                     </div>
@@ -266,7 +266,7 @@
                         </select></span></span>
                   </label>
                 </div>
-                <div class="col-auto">
+                <div class="col-auto d-none d-md-block">
                   <div class="s-catalog-head__btn-group">
                     <button class="s-catalog-head__btn active" type="button">
                       <svg class="icon icon-view-1 ">
@@ -287,7 +287,7 @@
             <!-- start s-catalog-->
             <div class="s-catalog section">
               <div class="s-catalog__row row">
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -342,8 +342,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -398,8 +398,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -454,8 +454,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -510,8 +510,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -566,8 +566,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -622,8 +622,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -678,8 +678,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -734,8 +734,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -790,8 +790,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -846,8 +846,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -902,8 +902,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -958,8 +958,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -1014,8 +1014,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -1070,8 +1070,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -1126,8 +1126,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -1182,8 +1182,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -1238,8 +1238,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -1294,8 +1294,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -1350,8 +1350,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -1406,8 +1406,8 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
+                <!-- +e.col.col-xl-4.col-md-6-->
+                <div class="s-catalog__col col-xl-4 col-md-6">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
                       <div class="item-prod__labels">
@@ -1462,7 +1462,7 @@
                   </div>
                   <!-- +b.item-prod -->
                 </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
+                <!-- +e.col.col-xl-4.col-md-6-->
               </div>
               <button class="s-catalog__btn s-catalog__btn--more-js btn-secondary" type="button">Показать еще
               </button>
