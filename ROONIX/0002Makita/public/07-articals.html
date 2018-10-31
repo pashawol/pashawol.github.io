@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Catalog_1 level</title>
+    <title>Статьи</title>
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
@@ -118,7 +118,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-auto d-lg-none"><a class="top-line__btn-basket btn" href="#"><span class="top-line__icon-wrap">
+              <div class="col-auto d-lg-none"><a class="top-line__btn-basket btn active" href="#"><span class="top-line__icon-wrap">
                 <svg class="icon icon-basket ">
                   <use xlink:href="img/svg/sprite.svg#basket"></use>
                 </svg><span class="top-line__btn-count">6</span></span></a>
@@ -126,14 +126,11 @@
             </div>
             <div class="row align-items-center">
               <div class="aside-col col-3 d-none d-lg-block">
-                <div class="catalog-nav active not-click">
-                  <div class="catalog-nav__btn-toggle active not-click"><span></span>Каталог товаров
+                <div class="catalog-nav">
+                  <div class="catalog-nav__btn-toggle"><span></span>Каталог товаров
                   </div>
-                  <div class="catalog-nav__dropdown active not-click">
+                  <div class="catalog-nav__dropdown">
                     <div class="catalog-nav__inner"><a class="catalog-nav__link" href="#">Аккумуляторные инструменты</a><a class="catalog-nav__link" href="#">Пневматические инструменты</a><a class="catalog-nav__link" href="#">Болгарки (УШМ)</a><a class="catalog-nav__link" href="#">Бороздоделы (штроборезы)</a><a class="catalog-nav__link" href="#">Воздуходувки</a><a class="catalog-nav__link" href="#">Гайковёрты</a><a class="catalog-nav__link" href="#">Гвоздезабиватели</a><a class="catalog-nav__link" href="#">Граверы</a><a class="catalog-nav__link" href="#">Дрели</a><a class="catalog-nav__link" href="#">Дрели-шуруповёрты</a><a class="catalog-nav__link" href="#">Измерительная техника</a><a class="catalog-nav__link" href="#">Клеевые пистолеты</a><a class="catalog-nav__link" href="#">Лобзики</a><a class="catalog-nav__link" href="#">Мойки высокого давления</a><a class="catalog-nav__link" href="#">Наборы инструментов</a><a class="catalog-nav__link" href="#">Ножницы</a><a class="catalog-nav__link" href="#">Отбойные молотки</a><a class="catalog-nav__link" href="#">Отвёртки</a><a class="catalog-nav__link" href="#">Перфораторы</a><a class="catalog-nav__link" href="#">Пилы</a><a class="catalog-nav__link" href="#">Пылесосы</a><a class="catalog-nav__link" href="#">Реноваторы (резаки)</a><a class="catalog-nav__link" href="#">Рубанки</a><a class="catalog-nav__link" href="#">Радиоприёмники</a><a class="catalog-nav__link" href="#">Технические фены</a><a class="catalog-nav__link" href="#"> Точило</a><a class="catalog-nav__link" href="#"> Фонари</a><a class="catalog-nav__link" href="#"> Фрезеры</a><a class="catalog-nav__link" href="#"> Шлифовальные машины</a><a class="catalog-nav__link" href="#"> Шуруповёрты</a><a class="catalog-nav__link" href="#"> Аксессуары, расходные материалы </a>
-                    </div>
-                    <div class="aside-banner" style="background-image: url(img/banner-aside.jpg);">
-                      <div class="h3 text-white">Длинный заголовок баннера</div>
                     </div>
                   </div>
                 </div>
@@ -142,21 +139,19 @@
                 <div class="top-line__row row align-items-center">
                   <div class="col">
                     <div class="search-block">
-                      <div class="form-wrap">
-                        <form class="js-form-validate"><input class="form-wrap__input form-control" type="text" placeholder="Поиск товаров на названию или артикулу"/>
-                          <button class="form-wrap__btn" type="submit">
-                            <svg class="icon icon-search ">
-                              <use xlink:href="img/svg/sprite.svg#search"></use>
-                            </svg>
-                          </button>
-                        </form>
-                      </div>
+                      <form><input class="search-block__input form-control" type="text" placeholder="Поиск товаров на названию или артикулу"/>
+                        <button class="search-block__btn" type="submit">
+                          <svg class="icon icon-search ">
+                            <use xlink:href="img/svg/sprite.svg#search"></use>
+                          </svg>
+                        </button>
+                      </form>
                     </div>
                   </div>
-                  <div class="col-auto d-none d-lg-block"><a class="top-line__btn-basket btn" href="#"><span class="top-line__icon-wrap">
+                  <div class="col-auto d-none d-lg-block"><a class="top-line__btn-basket btn active" href="#"><span class="top-line__icon-wrap">
                     <svg class="icon icon-basket ">
                       <use xlink:href="img/svg/sprite.svg#basket"></use>
-                    </svg><span class="top-line__btn-count">6</span></span><span class="text">Корзина пуста </span></a>
+                    </svg><span class="top-line__btn-count">6</span></span><span class="text">Корзина</span><span class="strong text-danger">12 430 р.</span></a>
                   </div>
                 </div>
               </div>
@@ -167,252 +162,57 @@
       </header>
       <!-- end HEADER.header-->
       <div class="container">
-        <div class="row row--main">
-          <div class="aside-col col-lg-3 order-lg-0 order-last"></div>
-          <div class="main-col col-lg-9">
-            <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Каталог</a><span class="breadcrumb-item active">Аккумуляторные инструменты</span>
-            </nav>
-            <div class="page-title">
-              <h1>Аккумуляторные инструменты</h1>
-            </div>
-            <div class="head-text">При необходимости шлифовки различных материалов, удаления с поверхности мелких неровностей, дефектов, окалины либо ржавчины, чистки лакокрасочных покрытий, избавления от застарелых пятен грязи не обойтись без угловой шлифовальной машины, или болгарки. Этот инструмент незаменим также при резке арматуры, труб, прутов, плоских и профилированных металлических листов. Однако чтобы выполнять определенные работы в конкретных условиях, нужна УШМ определенного типа с соответствующей оснасткой.
-            </div>
-            <!-- start s-catalog-->
-            <div class="s-catalog section">
-              <div class="s-catalog__row row">
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные ножницы</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Наборы аккумуляторных инструментов</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные шлифмашины</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные ножницы</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Наборы аккумуляторных инструментов</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные шлифмашины</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные ножницы</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Наборы аккумуляторных инструментов</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные шлифмашины</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные ножницы</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Наборы аккумуляторных инструментов</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные шлифмашины</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные ножницы</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Наборы аккумуляторных инструментов</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные шлифмашины</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные ножницы</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Наборы аккумуляторных инструментов</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные шлифмашины</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные ножницы</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Наборы аккумуляторных инструментов</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-                <div class="s-catalog__col col-md-4 col-sm-6">
-                  <div class="item-prod text-center">
-                    <div class="item-prod__img-wrap item-prod__img-wrap--category"><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                    </div>
-                    <div class="item-prod__title h4"><a href="#">Аккумуляторные шлифмашины</a>
-                    </div>
-                  </div>
-                  <!-- +b.item-prod -->
-                </div>
-                <!-- +e.col.col-md-4.col-sm-6-->
-              </div>
-            </div>
-            <!-- end s-catalog-->
-            <div class="s-content section"> 
-              <div class="section-title">
-                <h2>Видео инструментов Макита</h2>
-              </div>
-              <div class="video-block"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/frhAL3G1U38" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              </div>
-            </div>
-            <!--+b.s-content.section-->
-            <div class="s-content section"> 
-              <div class="section-title">
-                <h2>Pt-Line.ru</h2>
-              </div>
-              <div class="smallest text-gray">
-                <p>Японский концерн Makita является одним из безоговорочных лидеров рынка различного оборудования и техники. Корпорация никогда не останавливается на достигнутых целях, постоянно принимая технологические решения, которые ложатся в основу производства нового бытового и профессионального инструмента. К продажам техники Макита компания «ЛайнТулс» приступила в 2009 году, став официальным дилером этого производителя. В настоящее время мы предлагаем множество моделей разнообразной техники Makita, которую вы можете приобрести в интернет-магазине makita-line.ru</p>
-                <p>Даже у самого надежного инструмента порой случаются поломки. Именно поэтому нами был открыт сервисный центр Makita, где профессионалы с богатым опытом оперативно проведут диагностику, выяснят характер неисправности, после чего проведут ремонт. Техника, отремонтированная нами, прослужит вам еще долгое время. Те, кто ремонтирует инструмент своими руками, могут зайти на наш сайт и купить оригинальные запасные части. Если вас интересуют цены на запчасти и стоимость услуг, которые предоставляет сервис-центр Makita, то они вполне демократичны. </p>
-                <p>К продажам инструмента корпорации DeWALT компания «ЛайнТулс» приступила с 2016 года, выступив в роли ее официального дилера. Приобрести фирменную технику и аксессуары этого производителя можно в интернет-магазине dewalt-line. ru. Нами был учтен удачный опыт сотрудничества с концерном Makita, поэтому мы создали сервисный центр, где каждый может отремонтировать технику DeWalt, а уж оперативность и качество мы гарантируем! В интернет-магазине elitech-line. ru вы можете приобрести оборудование и инструменты компании «Элитек», а купить одноразовые и многоразовые пылесборники для пылесосов различных марок можно в интернет-магазине prom-mechok. ru.</p>
-              </div>
-            </div>
-            <!--+b.s-content.section-->
+        <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">О компании</a><span class="breadcrumb-item active">Статьи</span>
+        </nav>
+        <div class="page-title">
+          <h1>Статьи</h1>
+        </div>
+        <div class="row row--md">
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-5">
+            <div class="small text-gray mb-2">21.11.2017</div>
+            <div class="small">Среди профессионалов бытует мнение, что Makita совсем не ломается и служит максимально долго. Благодаря лояльной ценовой политике компании, которая была разработана специально для России, Макита стала излюбленной фирмой как профессиональных, так и домашних мастеров.</div>
           </div>
+          <!-- .col-lg-3.col-md-4.col-sm-6-->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-5">
+            <div class="small text-gray mb-2">21.11.2017</div>
+            <div class="small">Среди профессионалов бытует мнение, что Makita совсем не ломается и служит максимально долго. Благодаря лояльной ценовой политике компании, которая была разработана специально для России, Макита стала излюбленной фирмой как профессиональных, так и домашних мастеров.</div>
+          </div>
+          <!-- .col-lg-3.col-md-4.col-sm-6-->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-5">
+            <div class="small text-gray mb-2">21.11.2017</div>
+            <div class="small">Среди профессионалов бытует мнение, что Makita совсем не ломается и служит максимально долго. Благодаря лояльной ценовой политике компании, которая была разработана специально для России, Макита стала излюбленной фирмой как профессиональных, так и домашних мастеров.</div>
+          </div>
+          <!-- .col-lg-3.col-md-4.col-sm-6-->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-5">
+            <div class="small text-gray mb-2">21.11.2017</div>
+            <div class="small">Среди профессионалов бытует мнение, что Makita совсем не ломается и служит максимально долго. Благодаря лояльной ценовой политике компании, которая была разработана специально для России, Макита стала излюбленной фирмой как профессиональных, так и домашних мастеров.</div>
+          </div>
+          <!-- .col-lg-3.col-md-4.col-sm-6-->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-5">
+            <div class="small text-gray mb-2">21.11.2017</div>
+            <div class="small">Среди профессионалов бытует мнение, что Makita совсем не ломается и служит максимально долго. Благодаря лояльной ценовой политике компании, которая была разработана специально для России, Макита стала излюбленной фирмой как профессиональных, так и домашних мастеров.</div>
+          </div>
+          <!-- .col-lg-3.col-md-4.col-sm-6-->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-5">
+            <div class="small text-gray mb-2">21.11.2017</div>
+            <div class="small">Среди профессионалов бытует мнение, что Makita совсем не ломается и служит максимально долго. Благодаря лояльной ценовой политике компании, которая была разработана специально для России, Макита стала излюбленной фирмой как профессиональных, так и домашних мастеров.</div>
+          </div>
+          <!-- .col-lg-3.col-md-4.col-sm-6-->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-5">
+            <div class="small text-gray mb-2">21.11.2017</div>
+            <div class="small">Среди профессионалов бытует мнение, что Makita совсем не ломается и служит максимально долго. Благодаря лояльной ценовой политике компании, которая была разработана специально для России, Макита стала излюбленной фирмой как профессиональных, так и домашних мастеров.</div>
+          </div>
+          <!-- .col-lg-3.col-md-4.col-sm-6-->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-5">
+            <div class="small text-gray mb-2">21.11.2017</div>
+            <div class="small">Среди профессионалов бытует мнение, что Makita совсем не ломается и служит максимально долго. Благодаря лояльной ценовой политике компании, которая была разработана специально для России, Макита стала излюбленной фирмой как профессиональных, так и домашних мастеров.</div>
+          </div>
+          <!-- .col-lg-3.col-md-4.col-sm-6-->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-5">
+            <div class="small text-gray mb-2">21.11.2017</div>
+            <div class="small">Среди профессионалов бытует мнение, что Makita совсем не ломается и служит максимально долго. Благодаря лояльной ценовой политике компании, которая была разработана специально для России, Макита стала излюбленной фирмой как профессиональных, так и домашних мастеров.</div>
+          </div>
+          <!-- .col-lg-3.col-md-4.col-sm-6-->
         </div>
       </div>
       <footer class="footer">
