@@ -398,6 +398,11 @@ body {
   fill: #D7252C !important;
 }
 
+.custom-input__input[type="checkbox"] + .custom-input__lab {
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+}
+
 .custom-input__input[type="checkbox"]:checked + .custom-input__lab {
   background-color: #fa3f3e;
 }
@@ -417,6 +422,51 @@ body {
 
 .top-line__btn-basket:not(:disabled):not(.disabled).active .icon {
   color: #afb3bb;
+}
+
+.rating-block-card {
+  font-size: 0.875rem;
+  padding-top: 0.75rem;
+  padding-bottom: 10px;
+}
+
+.rating-block-card__title {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.rating-block-card .icon {
+  font-size: 16px;
+  color: #cbd7e5;
+  position: relative;
+  top: 0.125rem;
+}
+
+.rating-block-card .active .icon {
+  color: #fa3f3e;
+  stroke: transparent;
+}
+
+.block-add__btn::before,.block-add__btn::after {
+  background-color: #fa3f3e;
+}
+
+.fancybox-close-small {
+  color: #fa3f3e;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+
+.fancybox-close-small svg {
+  color: #fa3f3e;
+  stroke-width: 2px;
+  font-size: 1.125rem;
+}
+
+.modal-win {
+  -webkit-border-radius: 0.25rem;
+          border-radius: 0.25rem;
 }/*==========  Mobile First  ==========*//*==========  Desktop First  ==========*//* Large Devices, Wide Screens *//* Medium Devices, Desktops *//* Small Devices, Tablets *//* Extra Small Devices, Phones *//* Custom, iPhone Retina */@font-face {
   font-family:Tahoma;font-style:normal;font-weight:normal;src:url("../fonts/Tahoma/Tahoma.woff2") format("woff2"), url("../fonts/Tahoma/Tahoma.woff") format("woff"), url("../fonts/Tahoma/Tahoma.ttf") format("truetype");
 }

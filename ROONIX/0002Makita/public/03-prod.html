@@ -10,7 +10,6 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#3361d8">
-    <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
     <link rel="stylesheet" href="/libs/fancybox-master/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css">
@@ -72,10 +71,13 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-auto"><a class="top-nav__link" href="#"> 
-                <svg class="icon icon-user ">
-                  <use xlink:href="img/svg/sprite.svg#user"></use>
-                </svg> Вход / Регистрация</a>
+              <div class="col-auto">
+                <div class="top-nav__link">
+                  <svg class="icon icon-user ">
+                    <use xlink:href="img/svg/sprite.svg#user"></use>
+                  </svg><a class="top-nav__link d-inline" data-fancybox="data-fancybox" data-src="#modal-inner" href="javascript:;">Вход</a> 
+                  / <a class="top-nav__link d-inline" data-fancybox="data-fancybox" data-src="#modal-reg" href="javascript:;">Регистрация</a>
+                </div>
               </div>
             </div>
           </div>
@@ -135,7 +137,7 @@
                   <div class="col">
                     <div class="search-block">
                       <div class="form-wrap">
-                        <form><input class="form-wrap__input form-control" type="text" placeholder="Поиск товаров на названию или артикулу"/>
+                        <form class="js-form-validate"><input class="form-wrap__input form-control" type="text" placeholder="Поиск товаров на названию или артикулу"/>
                           <button class="form-wrap__btn" type="submit">
                             <svg class="icon icon-search ">
                               <use xlink:href="img/svg/sprite.svg#search"></use>
@@ -163,205 +165,1047 @@
         </nav>
         <div class="page-title">
           <h1>Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</h1>
+          <div class="rating-block-card">
+            <div class="rating-block-card__title">Рейтинг товара
+            </div><span class="active">
+              <svg class="icon icon-star-active ">
+                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+              </svg></span><span class="active">
+              <svg class="icon icon-star-active ">
+                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+              </svg></span><span class="active">
+              <svg class="icon icon-star-active ">
+                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+              </svg></span><span class="active">
+              <svg class="icon icon-star-active ">
+                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+              </svg></span><span>
+              <svg class="icon icon-star-active ">
+                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+              </svg></span>
+          </div>
         </div>
         <div class="row row--main">
-          <div class="col-lg-8">
+          <div class="card-col col-lg-8">
             <!-- start card-head-->
-            <section class="card-head"> 
-              <div class="row">
-                <div class="card-head__col col-lg-6">
+            <div class="card-head"> 
+              <div class="row row--md">
+                <div class="card-head__col col-md-6">
                   <div class="card-head__sliders">
-                    <div class="card-head__slider-big gal">
-                      <div class="card-head__slide-big"><a class="card-head__img-wrap" href="img/prod-2.jpg"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/></a>
+                    <div class="card-head__slider-big">
+                      <div class="card-head__slide-big"><a class="card-head__img-wrap" href="img/prod-2.jpg" data-fancybox="images"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
                       </div>
-                      <div class="card-head__slide-big"><a class="card-head__img-wrap" href="img/prod-2.jpg"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/></a>
+                      <div class="card-head__slide-big"><a class="card-head__img-wrap" href="img/prod-2.jpg" data-fancybox="images"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
                       </div>
-                      <div class="card-head__slide-big"><a class="card-head__img-wrap" href="img/prod-2.jpg"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/></a>
+                      <div class="card-head__slide-big"><a class="card-head__img-wrap" href="img/prod-2.jpg" data-fancybox="images"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
                       </div>
-                      <div class="card-head__slide-big"><a class="card-head__img-wrap" href="img/prod-2.jpg"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/></a>
+                      <div class="card-head__slide-big"><a class="card-head__img-wrap" href="img/prod-2.jpg" data-fancybox="images"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
                       </div>
-                      <div class="card-head__slide-big"><a class="card-head__img-wrap" href="img/prod-2.jpg"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/></a>
+                      <div class="card-head__slide-big"><a class="card-head__img-wrap" href="img/prod-2.jpg" data-fancybox="images"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
                       </div>
                     </div>
-                    <div class="card-head__slider-small">
-                      <div class="card-head__slide-small">
-                        <div class="card-head__img-wrap card-head__img-wrap--mg-wrap-small"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/>
+                    <div class="d-none d-md-block">
+                      <div class="card-head__slider-small">
+                        <div class="card-head__slide-small">
+                          <div class="card-head__img-wrap card-head__img-wrap--mg-wrap-small"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="card-head__slide-small">
+                          <div class="card-head__img-wrap card-head__img-wrap--mg-wrap-small"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="card-head__slide-small">
+                          <div class="card-head__img-wrap card-head__img-wrap--mg-wrap-small"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="card-head__slide-small">
+                          <div class="card-head__img-wrap card-head__img-wrap--mg-wrap-small"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/>
+                          </div>
+                        </div>
+                        <div class="card-head__slide-small">
+                          <div class="card-head__img-wrap card-head__img-wrap--mg-wrap-small"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/>
+                          </div>
                         </div>
                       </div>
-                      <div class="card-head__slide-small">
-                        <div class="card-head__img-wrap card-head__img-wrap--mg-wrap-small"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/>
-                        </div>
-                      </div>
-                      <div class="card-head__slide-small">
-                        <div class="card-head__img-wrap card-head__img-wrap--mg-wrap-small"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/>
-                        </div>
-                      </div>
-                      <div class="card-head__slide-small">
-                        <div class="card-head__img-wrap card-head__img-wrap--mg-wrap-small"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/>
-                        </div>
-                      </div>
-                      <div class="card-head__slide-small">
-                        <div class="card-head__img-wrap card-head__img-wrap--mg-wrap-small"><img class="res-i" data-lazy="img/prod-2.jpg" alt=""/>
-                        </div>
-                      </div>
+                    </div>
+                    <div class="d-none d-md-block">
+                      <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
                     </div>
                   </div>
                 </div>
                 <div class="col">
-                  <div class="card-head__head"> 
-                    <h1 class="title-page">ПРОЕКТ ДОМА <br/>С-155 КР "КАНСК"</h1>
-                  </div>
-                  <h4>Основные характеристики:</h4>
-                  <table class="card-head__table">
-                    <tr>
-                      <td>Площадь </td>
-                      <td><a href="#">150 м2</a></td>
-                    </tr>
-                    <tr>
-                      <td>Кол-во этажей</td>
-                      <td><a href="#">2</a></td>
-                    </tr>
-                    <tr>
-                      <td>Санузлов</td>
-                      <td><a href="#">2</a></td>
-                    </tr>
-                    <tr>
-                      <td>Спален</td>
-                      <td><a href="#">4</a></td>
-                    </tr>
-                    <tr>
-                      <td>Тип дома</td>
-                      <td><a href="#">Двухэтажный, С мансардой</a></td>
-                    </tr>
-                    <tr>
-                      <td>Материал</td>
-                      <td><a href="#">Дом из монолита</a></td>
-                    </tr>
-                    <tr>
-                      <td>Стиль</td>
-                      <td><a href="#">Классический</a></td>
-                    </tr>
-                  </table>
-                  <div class="card-head__price accent">Цена: 2 056 000 руб.
-                  </div>
-                  <div class="card-head__row row">
-                    <div class="col-auto"><a class="card-head__btn btn btn-accent" href="#"> Заказать</a>
+                  <div class="card-head__caption">
+                    <div class="row row--small align-items-center">
+                      <div class="col">
+                        <div class="h3 strong">28 419 р. </div>
+                      </div>
+                      <div class="col">
+                        <div class="card-head__status bg-success">Есть в наличии 
+                          <svg class="icon icon-check ">
+                            <use xlink:href="img/svg/sprite.svg#check"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div><a class="card-head__btn btn-sm btn-secondary" href="#">Цена после регистрации</a>
+                    <div class="row row--small align-items-center">
+                      <div class="col-6 d-none d-lg-block">
+                        <div class="block-add">
+                          <div class="block-add__btn block-add__btn--minus">
+                          </div>
+                          <input class="form-control" type="text" value="25"/>
+                          <div class="block-add__btn block-add__btn--plus btn">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6"><a class="card-head__btn btn-primary" href="#">В корзину </a>
+                      </div>
+                      <div class="col-6"><a class="card-head__btn btn-secondary" href="#">Сравнить</a>
+                      </div>
+                      <div class="col-6 d-none d-lg-block"><a class="card-head__btn btn-secondary" href="#">Быстрый заказ</a>
+                      </div>
                     </div>
-                    <div class="col-auto"><a class="card-head__btn btn btn-outline-accent" href="#"> Бесплатная консультация</a>
+                    <div class="d-md-none">
+                      <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                    </div>
+                    <div class="tabs">
+                      <div class="tabs__caption">
+                        <div class="tabs__btn active smallest">Доставка и оплата
+                        </div>
+                        <div class="tabs__btn smallest">Гарантия
+                        </div>
+                      </div>
+                      <div class="tabs__wrap pt-3">
+                        <div class="tabs__content active">
+                          <div class="smallest">Самовывоз - бесплатно<br/>По Москве - 300 руб.<br/>За МКАД 300+25 руб. за 1 км.<br/>По России - транспортными компаниями<br/>По Москве от 30 000 руб. - бесплатно</div>
+                        </div>
+                        <div class="tabs__content">
+                          <div class="smallest">Самовывоз - бесплатно<br/>По Москве - 300 руб.<br/>За МКАД 300+25 руб. за 1 км.<br/>По России - транспортными компаниями<br/>По Москве от 30 000 руб. - бесплатно</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="smallest text-gray">Мы принимаем к оплате</div>
+                    <div class="row row--small align-items-center">
+                      <div class="col-auto"><img src="img/pay-meth-1.png" alt=""/></div>
+                      <div class="col-auto"><img src="img/pay-meth-2.png" alt=""/></div>
+                      <div class="col-auto"><img src="img/pay-meth-3.png" alt=""/></div>
+                      <div class="col-auto"><img src="img/pay-meth-4.png" alt=""/></div>
+                      <div class="col-auto"><img src="img/pay-meth-5.png" alt=""/></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="card-head__text">
-                <h4>Описание проекта:</h4>
-                <p>Проект дома по каркасной технологии С-155 КР "Канск" по минимальной цене 2 832 000 рублей, общая площадь проекта С-155 КР "Канск" 164.6 м2, линейный размер 9.6 х 9.6. В нашем офисе по адресу Проспект Мира 105с1 офис 532 Вы сможете получить подробную информацию о всех вариантах комплектаций на загородные Проекты каркасных домов.</p>
-              </div>
-            </section>
+            </div>
             <!-- end card-head-->
+            <div class="d-lg-none">
+              <!-- start card-aside-->
+              <div class="card-aside">
+                <div class="strong text-gray mb-3">Основные характеристики </div>
+                <div class="row">
+                  <div class="col"><span>Артикул</span></div>
+                  <div class="col-md-auto">0601926108</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Класс инструмента</span></div>
+                  <div class="col-md-auto">Профессиональный</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Тип аккумулятора</span></div>
+                  <div class="col-md-auto">Li-ion</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Напряжение аккумулятора</span></div>
+                  <div class="col-md-auto">12 В</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Емкость аккумулятора</span></div>
+                  <div class="col-md-auto">2,0 Ач</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Частота ходов в холостом режиме</span></div>
+                  <div class="col-md-auto">3600 ход/мин</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Производительность резания стали (400 Н/мм²), макс.</span></div>
+                  <div class="col-md-auto">3600 ход/мин</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Производительность резания стали (600 Н/мм²), макс.</span></div>
+                  <div class="col-md-auto"> 1,3 мм</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Производительность резания стали (800 Н/мм²), макс.</span></div>
+                  <div class="col-md-auto"> 1,3 мм</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Производительность резания алюминия (250 Н/мм²), макс.</span></div>
+                  <div class="col-md-auto"> 1,3 мм</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Артикул</span></div>
+                  <div class="col-md-auto">0601926108</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Класс инструмента</span></div>
+                  <div class="col-md-auto">Профессиональный</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Тип аккумулятора</span></div>
+                  <div class="col-md-auto">Li-ion</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Напряжение аккумулятора</span></div>
+                  <div class="col-md-auto">12 В</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Емкость аккумулятора</span></div>
+                  <div class="col-md-auto">2,0 Ач</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Частота ходов в холостом режиме</span></div>
+                  <div class="col-md-auto">3600 ход/мин</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Производительность резания стали (400 Н/мм²), макс.</span></div>
+                  <div class="col-md-auto">3600 ход/мин</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Производительность резания стали (600 Н/мм²), макс.</span></div>
+                  <div class="col-md-auto"> 1,3 мм</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Производительность резания стали (800 Н/мм²), макс.</span></div>
+                  <div class="col-md-auto"> 1,3 мм</div>
+                </div>
+                <div class="row">
+                  <div class="col"><span>Производительность резания алюминия (250 Н/мм²), макс.</span></div>
+                  <div class="col-md-auto"> 1,3 мм</div>
+                </div>
+              </div>
+              <!-- end card-aside-->
+            </div>
             <!-- start card-body-->
-            <div class="card-body">
-              <div class="container">
-                <div class="tabs">
-                  <div class="tabs__caption">
-                    <div class="tabs__btn active"><span>Обзор</span>
-                    </div>
-                    <div class="tabs__btn"><span>Характеристики</span>
-                    </div>
-                    <div class="tabs__btn"><span>Состав комплекта</span>
-                    </div>
-                    <div class="tabs__btn"><span>Размеры шлемов </span>
-                    </div>
-                    <div class="tabs__btn"><span>Совместимость с ЭГ усилителями </span>
+            <div class="card-body"> 
+              <div class="tabs">
+                <div class="tabs__caption">
+                  <div class="tabs__btn active">Описание
+                  </div>
+                  <div class="tabs__btn">Рекомендуем купить
+                    <div class="tabs__btn-count">3
                     </div>
                   </div>
-                  <div class="tabs__wrap"> 
-                    <div class="tabs__content active">
-                      <div class="row">
-                        <div class="col-lg-7">
-                          <div class="tabs__text">
-                            <div class="strong">Шлем SLEEP – это текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М. </div>
-                            <div class="p">Тонкие электроды и выход электродного шлейфа на макушке головы обеспечивают комфорт пациента при длительном ЭЭГ мониторинге в положении лежа и во время сна, а также подходят для регистрации ЭЭГ у маленьких деток и новорожденных. </div>
-                            <div class="p">Электроды имеют дополнительную маркировку, что позволяет легко сменить текстильную основу при ее износе. </div>
-                            <div class="p">Область применения: рутинная ЭЭГ, ЭЭГ сна, ТМС-ЭЭГ</div>
+                  <div class="tabs__btn">ВидеоОбзор
+                  </div>
+                  <div class="tabs__btn">Отзывы
+                  </div>
+                </div>
+                <div class="tabs__wrap"> 
+                  <div class="tabs__content">
+                    <div class="small mb-2">Аккумуляторная болгарка RYOBI R18AG-0 служит для выполнения работ по резке различных материалов и по шлифованию поверхностей. Она с большой эффективностью может использоваться в самых разнообразных условиях, так как функционирует независимо от электросети. Диаметр диска у этой угловой шлифмашины 115 мм, диаметр посадки диска 22 мм. Что касается максимальной глубины резания, то она составляет 28 мм.</div>
+                    <div class="h3 strong">Преимущества Риоби R18AG-0</div>
+                    <div class="small mb-2">Предлагаемая УШМ обладает достаточно большим количеством значимых сильных сторон. Перечислим самые основные из них: </div>
+                    <ul class="small">
+                      <li>Имеющая резиновое покрытие главная рукоятка. </li>
+                      <li>Блокирование шпинделя.</li>
+                      <li>Обеспечивающий пользователю защиту от искр и мусора кожух. </li>
+                      <li>Небольшой вес и компактность. </li>
+                      <li>Трёхпозиционная боковая рукоятка.</li>
+                    </ul>
+                    <div class="small mb-2">Чтобы приобрести данную шлифовальную машину Риоби нужно позвонить нам или оформить заказ через корзину. В магазине предлагается немало и других болгарок, среди которых RYOBI RAG800-125G.</div>
+                  </div>
+                  <!-- +e.content-->
+                  <div class="tabs__content">
+                    <!-- start s-catalog-->
+                    <div class="s-catalog"> 
+                      <div class="s-catalog__slider s-catalog__slider--js-2-prod">
+                        <div class="s-catalog__slide">
+                          <div class="item-prod"> 
+                            <div class="item-prod__img-wrap">
+                              <div class="item-prod__labels">
+                                <div class="item-prod__label bg-success">New
+                                </div>
+                              </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                            </div>
+                            <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span>
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span>
+                            </div>
+                            <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                            </div>
+                            <div class="item-prod__price-wrap">
+                              <div class="row">
+                                <div class="col">
+                                  <div class="strong">33 593 р. </div>
+                                </div>
+                                <div class="col-auto">
+                                  <div class="strong small text-success">Есть в наличии</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                              <div class="item-prod__row row">
+                                <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                                </div>
+                                <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item-prod__caption">
+                              <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                              <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                              <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                              <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                            </div>
+                            <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
                           </div>
+                          <!-- +b.item-prod -->
                         </div>
-                        <div class="col-lg-5"><a class="video-play popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto" style="background-image: url(img/prod-1.png);">
-                          <svg class="icon icon-play ">
-                            <use xlink:href="img/svg/sprite.svg#play"></use>
-                          </svg><span class="video-play__title">Шлем SLEEP </span></a>
+                        <!-- +e.slide-->
+                        <div class="s-catalog__slide">
+                          <div class="item-prod"> 
+                            <div class="item-prod__img-wrap">
+                              <div class="item-prod__labels">
+                                <div class="item-prod__label bg-success">New
+                                </div>
+                              </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                            </div>
+                            <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span>
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span>
+                            </div>
+                            <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                            </div>
+                            <div class="item-prod__price-wrap">
+                              <div class="row">
+                                <div class="col">
+                                  <div class="strong">33 593 р. </div>
+                                </div>
+                                <div class="col-auto">
+                                  <div class="strong small text-success">Есть в наличии</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                              <div class="item-prod__row row">
+                                <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                                </div>
+                                <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item-prod__caption">
+                              <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                              <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                              <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                              <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                            </div>
+                            <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                          </div>
+                          <!-- +b.item-prod -->
                         </div>
+                        <!-- +e.slide-->
+                        <div class="s-catalog__slide">
+                          <div class="item-prod"> 
+                            <div class="item-prod__img-wrap">
+                              <div class="item-prod__labels">
+                                <div class="item-prod__label bg-success">New
+                                </div>
+                              </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                            </div>
+                            <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span>
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span>
+                            </div>
+                            <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                            </div>
+                            <div class="item-prod__price-wrap">
+                              <div class="row">
+                                <div class="col">
+                                  <div class="strong">33 593 р. </div>
+                                </div>
+                                <div class="col-auto">
+                                  <div class="strong small text-success">Есть в наличии</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                              <div class="item-prod__row row">
+                                <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                                </div>
+                                <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item-prod__caption">
+                              <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                              <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                              <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                              <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                            </div>
+                            <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                          </div>
+                          <!-- +b.item-prod -->
+                        </div>
+                        <!-- +e.slide-->
+                        <div class="s-catalog__slide">
+                          <div class="item-prod"> 
+                            <div class="item-prod__img-wrap">
+                              <div class="item-prod__labels">
+                                <div class="item-prod__label bg-success">New
+                                </div>
+                              </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                            </div>
+                            <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span>
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span>
+                            </div>
+                            <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                            </div>
+                            <div class="item-prod__price-wrap">
+                              <div class="row">
+                                <div class="col">
+                                  <div class="strong">33 593 р. </div>
+                                </div>
+                                <div class="col-auto">
+                                  <div class="strong small text-success">Есть в наличии</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                              <div class="item-prod__row row">
+                                <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                                </div>
+                                <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item-prod__caption">
+                              <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                              <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                              <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                              <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                            </div>
+                            <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                          </div>
+                          <!-- +b.item-prod -->
+                        </div>
+                        <!-- +e.slide-->
+                        <div class="s-catalog__slide">
+                          <div class="item-prod"> 
+                            <div class="item-prod__img-wrap">
+                              <div class="item-prod__labels">
+                                <div class="item-prod__label bg-success">New
+                                </div>
+                              </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                            </div>
+                            <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span class="active">
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span><span>
+                                <svg class="icon icon-star-active ">
+                                  <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                                </svg></span>
+                            </div>
+                            <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                            </div>
+                            <div class="item-prod__price-wrap">
+                              <div class="row">
+                                <div class="col">
+                                  <div class="strong">33 593 р. </div>
+                                </div>
+                                <div class="col-auto">
+                                  <div class="strong small text-success">Есть в наличии</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                              <div class="item-prod__row row">
+                                <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                                </div>
+                                <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="item-prod__caption">
+                              <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                              <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                              <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                              <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                            </div>
+                            <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                          </div>
+                          <!-- +b.item-prod -->
+                        </div>
+                        <!-- +e.slide-->
+                      </div>
+                      <div class="d-sm-none">
+                        <button class="s-catalog__btn s-catalog__btn--more-js btn-secondary" type="button">Показать еще
+                        </button>
                       </div>
                     </div>
-                    <div class="tabs__content">
-                      <div class="row">
-                        <div class="col-lg-7">
-                          <div class="tabs__text">
-                            <div class="strong">Шлем SLEEP – это текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М. </div>
-                            <div class="p">Тонкие электроды и выход электродного шлейфа на макушке головы обеспечивают комфорт пациента при длительном ЭЭГ мониторинге в положении лежа и во время сна, а также подходят для регистрации ЭЭГ у маленьких деток и новорожденных. </div>
-                            <div class="p">Электроды имеют дополнительную маркировку, что позволяет легко сменить текстильную основу при ее износе. </div>
-                            <div class="p">Область применения: рутинная ЭЭГ, ЭЭГ сна, ТМС-ЭЭГ</div>
-                          </div>
-                        </div>
-                        <div class="col-lg-5"><a class="video-play popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto" style="background-image: url(img/prod-1.png);">
-                          <svg class="icon icon-play ">
-                            <use xlink:href="img/svg/sprite.svg#play"></use>
-                          </svg><span class="video-play__title">Шлем SLEEP </span></a>
-                        </div>
-                      </div>
+                    <!-- end s-catalog-->
+                  </div>
+                  <!-- +e.content-->
+                  <div class="tabs__content">
+                    <div class="video-block mb-3"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/frhAL3G1U38" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
-                    <div class="tabs__content">
-                      <div class="row">
-                        <div class="col-lg-7">
-                          <div class="tabs__text">
-                            <div class="strong">Шлем SLEEP – это текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М. </div>
-                            <div class="p">Тонкие электроды и выход электродного шлейфа на макушке головы обеспечивают комфорт пациента при длительном ЭЭГ мониторинге в положении лежа и во время сна, а также подходят для регистрации ЭЭГ у маленьких деток и новорожденных. </div>
-                            <div class="p">Электроды имеют дополнительную маркировку, что позволяет легко сменить текстильную основу при ее износе. </div>
-                            <div class="p">Область применения: рутинная ЭЭГ, ЭЭГ сна, ТМС-ЭЭГ</div>
-                          </div>
-                        </div>
-                        <div class="col-lg-5"><a class="video-play popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto" style="background-image: url(img/prod-1.png);">
-                          <svg class="icon icon-play ">
-                            <use xlink:href="img/svg/sprite.svg#play"></use>
-                          </svg><span class="video-play__title">Шлем SLEEP </span></a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="tabs__content">
-                      <div class="row">
-                        <div class="col-lg-7">
-                          <div class="tabs__text">
-                            <div class="strong">Шлем SLEEP – это текстильный шлем с предустановленными Ag/AgCl sintered электродами MCScap-T и общим разъемом DB25М. </div>
-                            <div class="p">Тонкие электроды и выход электродного шлейфа на макушке головы обеспечивают комфорт пациента при длительном ЭЭГ мониторинге в положении лежа и во время сна, а также подходят для регистрации ЭЭГ у маленьких деток и новорожденных. </div>
-                            <div class="p">Электроды имеют дополнительную маркировку, что позволяет легко сменить текстильную основу при ее износе. </div>
-                            <div class="p">Область применения: рутинная ЭЭГ, ЭЭГ сна, ТМС-ЭЭГ</div>
-                          </div>
-                        </div>
-                        <div class="col-lg-5"><a class="video-play popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto" style="background-image: url(img/prod-1.png);">
-                          <svg class="icon icon-play ">
-                            <use xlink:href="img/svg/sprite.svg#play"></use>
-                          </svg><span class="video-play__title">Шлем SLEEP </span></a>
-                        </div>
-                      </div>
+                    <div class="video-block mb-3"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/frhAL3G1U38" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                   </div>
+                  <!-- +e.content-->
+                  <div class="tabs__content active">
+                    <div class="rew-block">
+                      <div class="rew-block__item">
+                        <div class="rew-block__item-head mb-2">
+                          <div class="row">
+                            <div class="col">
+                              <div class="strong">Иван Иванов</div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="small text-gray">04 января 2018 г.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="rating-block-card mb-2">
+                          <div class="rating-block-card__title text-gray">Оценил
+                          </div><span class="active">
+                            <svg class="icon icon-star-active ">
+                              <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                            </svg></span><span class="active">
+                            <svg class="icon icon-star-active ">
+                              <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                            </svg></span><span class="active">
+                            <svg class="icon icon-star-active ">
+                              <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                            </svg></span><span class="active">
+                            <svg class="icon icon-star-active ">
+                              <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                            </svg></span><span>
+                            <svg class="icon icon-star-active ">
+                              <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                            </svg></span>
+                        </div>
+                        <div class="small mb-3">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </div>
+                        <div class="rew-block__like-block">
+                          <div class="rew-block__btn rew-block__btn--minus">
+                            <svg class="icon icon-angle-down ">
+                              <use xlink:href="img/svg/sprite.svg#angle-down"></use>
+                            </svg>
+                          </div>
+                          <div class="rew-block__like-count rew-block__like-count--green">4
+                          </div>
+                          <div class="rew-block__btn rew-block__btn--plus">
+                            <svg class="icon icon-angle-up ">
+                              <use xlink:href="img/svg/sprite.svg#angle-up"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- +e.item-->
+                      <div class="rew-block__item">
+                        <div class="rew-block__item-head mb-2">
+                          <div class="row">
+                            <div class="col">
+                              <div class="strong">Иван Иванов</div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="small text-gray">04 января 2018 г.</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="rating-block-card mb-2">
+                          <div class="rating-block-card__title text-gray">Оценил
+                          </div><span class="active">
+                            <svg class="icon icon-star-active ">
+                              <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                            </svg></span><span class="active">
+                            <svg class="icon icon-star-active ">
+                              <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                            </svg></span><span class="active">
+                            <svg class="icon icon-star-active ">
+                              <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                            </svg></span><span class="active">
+                            <svg class="icon icon-star-active ">
+                              <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                            </svg></span><span>
+                            <svg class="icon icon-star-active ">
+                              <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                            </svg></span>
+                        </div>
+                        <div class="small mb-3">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </div>
+                        <div class="rew-block__like-block">
+                          <div class="rew-block__btn rew-block__btn--minus">
+                            <svg class="icon icon-angle-down ">
+                              <use xlink:href="img/svg/sprite.svg#angle-down"></use>
+                            </svg>
+                          </div>
+                          <div class="rew-block__like-count rew-block__like-count--red">4
+                          </div>
+                          <div class="rew-block__btn rew-block__btn--plus">
+                            <svg class="icon icon-angle-up ">
+                              <use xlink:href="img/svg/sprite.svg#angle-up"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- +e.item-->
+                    </div>
+                    <!-- +b.rew-block-->
+                  </div>
+                  <!-- +e.content-->
                 </div>
               </div>
             </div>
             <!-- end card-body-->
           </div>
-          <div class="col-lg-4">
+          <div class="col d-none d-lg-block">
             <!-- start card-aside-->
-            <div class="card-aside section" id="card-aside">
-              <div class="container">
-                <div class="section-title text-center">
-                  <h2>card-aside</h2>
-                </div>
-                <div class="row"></div>
+            <div class="card-aside">
+              <div class="strong text-gray mb-3">Основные характеристики </div>
+              <div class="row">
+                <div class="col"><span>Артикул</span></div>
+                <div class="col-md-auto">0601926108</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Класс инструмента</span></div>
+                <div class="col-md-auto">Профессиональный</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Тип аккумулятора</span></div>
+                <div class="col-md-auto">Li-ion</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Напряжение аккумулятора</span></div>
+                <div class="col-md-auto">12 В</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Емкость аккумулятора</span></div>
+                <div class="col-md-auto">2,0 Ач</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Частота ходов в холостом режиме</span></div>
+                <div class="col-md-auto">3600 ход/мин</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Производительность резания стали (400 Н/мм²), макс.</span></div>
+                <div class="col-md-auto">3600 ход/мин</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Производительность резания стали (600 Н/мм²), макс.</span></div>
+                <div class="col-md-auto"> 1,3 мм</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Производительность резания стали (800 Н/мм²), макс.</span></div>
+                <div class="col-md-auto"> 1,3 мм</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Производительность резания алюминия (250 Н/мм²), макс.</span></div>
+                <div class="col-md-auto"> 1,3 мм</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Артикул</span></div>
+                <div class="col-md-auto">0601926108</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Класс инструмента</span></div>
+                <div class="col-md-auto">Профессиональный</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Тип аккумулятора</span></div>
+                <div class="col-md-auto">Li-ion</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Напряжение аккумулятора</span></div>
+                <div class="col-md-auto">12 В</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Емкость аккумулятора</span></div>
+                <div class="col-md-auto">2,0 Ач</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Частота ходов в холостом режиме</span></div>
+                <div class="col-md-auto">3600 ход/мин</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Производительность резания стали (400 Н/мм²), макс.</span></div>
+                <div class="col-md-auto">3600 ход/мин</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Производительность резания стали (600 Н/мм²), макс.</span></div>
+                <div class="col-md-auto"> 1,3 мм</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Производительность резания стали (800 Н/мм²), макс.</span></div>
+                <div class="col-md-auto"> 1,3 мм</div>
+              </div>
+              <div class="row">
+                <div class="col"><span>Производительность резания алюминия (250 Н/мм²), макс.</span></div>
+                <div class="col-md-auto"> 1,3 мм</div>
               </div>
             </div>
             <!-- end card-aside-->
           </div>
         </div>
+        <!-- start s-catalog-->
+        <div class="s-catalog section">
+          <div class="section-title">
+            <div class="row">
+              <div class="col">
+                <h2>Похожие инструменты </h2>
+              </div>
+              <div class="col-auto d-none d-sm-block">
+                <div class="arrow-wrap"></div>
+              </div>
+            </div>
+          </div>
+          <div class="s-catalog__slider s-catalog__slider--js-4-prod">
+            <div class="s-catalog__slide">
+              <div class="item-prod"> 
+                <div class="item-prod__img-wrap">
+                  <div class="item-prod__labels">
+                    <div class="item-prod__label bg-success">New
+                    </div>
+                  </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                </div>
+                <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span>
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span>
+                </div>
+                <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                </div>
+                <div class="item-prod__price-wrap">
+                  <div class="row">
+                    <div class="col">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="strong small text-success">Есть в наличии</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                  <div class="item-prod__row row">
+                    <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                    </div>
+                    <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-prod__caption">
+                  <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                  <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                  <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                  <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                </div>
+                <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+              </div>
+              <!-- +b.item-prod -->
+            </div>
+            <!-- +e.slide-->
+            <div class="s-catalog__slide">
+              <div class="item-prod"> 
+                <div class="item-prod__img-wrap">
+                  <div class="item-prod__labels">
+                    <div class="item-prod__label bg-success">New
+                    </div>
+                  </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                </div>
+                <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span>
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span>
+                </div>
+                <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                </div>
+                <div class="item-prod__price-wrap">
+                  <div class="row">
+                    <div class="col">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="strong small text-success">Есть в наличии</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                  <div class="item-prod__row row">
+                    <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                    </div>
+                    <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-prod__caption">
+                  <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                  <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                  <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                  <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                </div>
+                <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+              </div>
+              <!-- +b.item-prod -->
+            </div>
+            <!-- +e.slide-->
+            <div class="s-catalog__slide">
+              <div class="item-prod"> 
+                <div class="item-prod__img-wrap">
+                  <div class="item-prod__labels">
+                    <div class="item-prod__label bg-success">New
+                    </div>
+                  </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                </div>
+                <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span>
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span>
+                </div>
+                <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                </div>
+                <div class="item-prod__price-wrap">
+                  <div class="row">
+                    <div class="col">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="strong small text-success">Есть в наличии</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                  <div class="item-prod__row row">
+                    <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                    </div>
+                    <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-prod__caption">
+                  <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                  <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                  <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                  <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                </div>
+                <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+              </div>
+              <!-- +b.item-prod -->
+            </div>
+            <!-- +e.slide-->
+            <div class="s-catalog__slide">
+              <div class="item-prod"> 
+                <div class="item-prod__img-wrap">
+                  <div class="item-prod__labels">
+                    <div class="item-prod__label bg-success">New
+                    </div>
+                  </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                </div>
+                <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span>
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span>
+                </div>
+                <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                </div>
+                <div class="item-prod__price-wrap">
+                  <div class="row">
+                    <div class="col">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="strong small text-success">Есть в наличии</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                  <div class="item-prod__row row">
+                    <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                    </div>
+                    <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-prod__caption">
+                  <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                  <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                  <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                  <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                </div>
+                <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+              </div>
+              <!-- +b.item-prod -->
+            </div>
+            <!-- +e.slide-->
+            <div class="s-catalog__slide">
+              <div class="item-prod"> 
+                <div class="item-prod__img-wrap">
+                  <div class="item-prod__labels">
+                    <div class="item-prod__label bg-success">New
+                    </div>
+                  </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                </div>
+                <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span class="active">
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span><span>
+                    <svg class="icon icon-star-active ">
+                      <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                    </svg></span>
+                </div>
+                <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                </div>
+                <div class="item-prod__price-wrap">
+                  <div class="row">
+                    <div class="col">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="strong small text-success">Есть в наличии</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-prod__btn-wrap"><a class="item-prod__btn btn-secondary" href="#">Цена после регистрации</a>
+                  <div class="item-prod__row row">
+                    <div class="col"><a class="item-prod__btn btn-primary" href="#">В корзину</a>
+                    </div>
+                    <div class="col"><a class="item-prod__btn btn-secondary" href="#">Сравнить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-prod__caption">
+                  <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                  <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                  <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                  <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                </div>
+                <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+              </div>
+              <!-- +b.item-prod -->
+            </div>
+            <!-- +e.slide-->
+          </div>
+          <div class="d-sm-none">
+            <button class="s-catalog__btn s-catalog__btn--more-js btn-secondary" type="button">Показать еще
+            </button>
+          </div>
+        </div>
+        <!-- end s-catalog-->
       </div>
       <footer class="footer">
         <div class="container">
@@ -464,39 +1308,104 @@
         </div>
       </footer>
     </div>
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
-      <form>
-        <div class="text-center">
-          <div class="form-wrap__title h3 ttu">Обратный звонок
-          </div>
-          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+    <div class="form-wrap modal-win modal-form" id="modal-inner" style="display: none;">
+      <form class="js-form-validate">
+        <div class="form-wrap__head">
+          <div class="h2 strong">Вход</div>
+          <div class="small text-gray">Перейти в личный кабинет</div>
         </div>
         <div class="form-wrap__input-wrap form-group">
-          <label> <input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" required="required"/>
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Логин</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Пароль</span>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="row">
+          <div class="col">
+            <label class="custom-input"><input class="custom-input__input" type="checkbox" name="inner"/><span class="custom-input__lab"></span><span class="custom-input__text small">Запомнить меня</span>
+            </label>
+          </div>
+          <div class="col-auto"><a class="text-gray small" href="#">Забыли пароль?    </a></div>
+        </div>
+        <div class="row row--sm">
+          <div class="col">
+            <button class="form-wrap__btn btn-secondary" type="button">Создать аккаунт
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="form-wrap__btn btn-primary" type="submit">Войти
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-inner-->
+    <div class="form-wrap modal-win modal-form" id="modal-reg">
+      <form class="js-form-validate">
+        <div class="form-wrap__head">
+          <div class="h2 strong">Регистрация</div>
+          <div class="small text-gray">Создать личный кабинет</div>
+        </div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Имя</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Телефон</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">E-mail</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Пароль</span>
           </label>
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
-          <label> <input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Повторите пароль</span>
           </label>
         </div>
-        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
-        <div class="politic">
-          Отправляя заявку Вы даете
-          <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
-          
-          на&#160;обработку персональных данных
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__captcha"><img class="res-i" src="img/captcha.png" alt=""/>
         </div>
+        <button class="form-wrap__btn btn-primary mb-4" type="submit">Зарегистрироваться
+        </button>
+        <div class="smallest text-gray">Нажимая на кнопку "Зарегистрироваться", я даю согласие на обработку персональных данных</div>
       </form>
     </div>
-    <!-- #modal-call-->
+    <!-- #modal-reg-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/fancybox-master/jquery.fancybox.min.js"></script>
-    <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
     <script src="libs/ion.rangeSlider-2.2.0/js/ion.rangeSlider.min.js"></script>
+    <script src="libs/parsleyjs/dist/parsley.min.js"></script>
+    <script src="libs/parsleyjs/dist/i18n/ru.js"></script>
+    <script src="libs/parsleyjs/dist/i18n/ru.extra.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
     <script src="libs/jquery.touchSwipe.min.js"></script>
     <script src="js/common.js"></script>

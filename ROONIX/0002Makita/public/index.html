@@ -10,7 +10,6 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#3361d8">
-    <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
     <link rel="stylesheet" href="/libs/fancybox-master/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css">
@@ -72,10 +71,13 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-auto"><a class="top-nav__link" href="#"> 
-                <svg class="icon icon-user ">
-                  <use xlink:href="img/svg/sprite.svg#user"></use>
-                </svg> Вход / Регистрация</a>
+              <div class="col-auto">
+                <div class="top-nav__link">
+                  <svg class="icon icon-user ">
+                    <use xlink:href="img/svg/sprite.svg#user"></use>
+                  </svg><a class="top-nav__link d-inline" data-fancybox="data-fancybox" data-src="#modal-inner" href="javascript:;">Вход</a> 
+                  / <a class="top-nav__link d-inline" data-fancybox="data-fancybox" data-src="#modal-reg" href="javascript:;">Регистрация</a>
+                </div>
               </div>
             </div>
           </div>
@@ -138,7 +140,7 @@
                   <div class="col">
                     <div class="search-block">
                       <div class="form-wrap">
-                        <form><input class="form-wrap__input form-control" type="text" placeholder="Поиск товаров на названию или артикулу"/>
+                        <form class="js-form-validate"><input class="form-wrap__input form-control" type="text" placeholder="Поиск товаров на названию или артикулу"/>
                           <button class="form-wrap__btn" type="submit">
                             <svg class="icon icon-search ">
                               <use xlink:href="img/svg/sprite.svg#search"></use>
@@ -211,7 +213,7 @@
                   </div>
                 </div>
               </div>
-              <div class="s-catalog__slider">
+              <div class="s-catalog__slider s-catalog__slider--js">
                 <div class="s-catalog__slide">
                   <div class="item-prod"> 
                     <div class="item-prod__img-wrap">
@@ -746,39 +748,104 @@
         </div>
       </footer>
     </div>
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
-      <form>
-        <div class="text-center">
-          <div class="form-wrap__title h3 ttu">Обратный звонок
-          </div>
-          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+    <div class="form-wrap modal-win modal-form" id="modal-inner" style="display: none;">
+      <form class="js-form-validate">
+        <div class="form-wrap__head">
+          <div class="h2 strong">Вход</div>
+          <div class="small text-gray">Перейти в личный кабинет</div>
         </div>
         <div class="form-wrap__input-wrap form-group">
-          <label> <input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" required="required"/>
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Логин</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Пароль</span>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="row">
+          <div class="col">
+            <label class="custom-input"><input class="custom-input__input" type="checkbox" name="inner"/><span class="custom-input__lab"></span><span class="custom-input__text small">Запомнить меня</span>
+            </label>
+          </div>
+          <div class="col-auto"><a class="text-gray small" href="#">Забыли пароль?    </a></div>
+        </div>
+        <div class="row row--sm">
+          <div class="col">
+            <button class="form-wrap__btn btn-secondary" type="button">Создать аккаунт
+            </button>
+          </div>
+          <div class="col-auto">
+            <button class="form-wrap__btn btn-primary" type="submit">Войти
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-inner-->
+    <div class="form-wrap modal-win modal-form" id="modal-reg">
+      <form class="js-form-validate">
+        <div class="form-wrap__head">
+          <div class="h2 strong">Регистрация</div>
+          <div class="small text-gray">Создать личный кабинет</div>
+        </div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Имя</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Телефон</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">E-mail</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Пароль</span>
           </label>
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
-          <label> <input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/>
+            <div class="before"></div>
+            <div class="after"></div><span class="form-wrap__title-label">Повторите пароль</span>
           </label>
         </div>
-        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
-        <div class="politic">
-          Отправляя заявку Вы даете
-          <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
-          
-          на&#160;обработку персональных данных
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__captcha"><img class="res-i" src="img/captcha.png" alt=""/>
         </div>
+        <button class="form-wrap__btn btn-primary mb-4" type="submit">Зарегистрироваться
+        </button>
+        <div class="smallest text-gray">Нажимая на кнопку "Зарегистрироваться", я даю согласие на обработку персональных данных</div>
       </form>
     </div>
-    <!-- #modal-call-->
+    <!-- #modal-reg-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/fancybox-master/jquery.fancybox.min.js"></script>
-    <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
     <script src="libs/ion.rangeSlider-2.2.0/js/ion.rangeSlider.min.js"></script>
+    <script src="libs/parsleyjs/dist/parsley.min.js"></script>
+    <script src="libs/parsleyjs/dist/i18n/ru.js"></script>
+    <script src="libs/parsleyjs/dist/i18n/ru.extra.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
     <script src="libs/jquery.touchSwipe.min.js"></script>
     <script src="js/common.js"></script>
