@@ -9,6 +9,7 @@
   --success: #5eb984;
   --danger: #e40000;
   --light: #cbd7e5;
+  --light-2: #f4f7fb;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -851,6 +852,18 @@ mark,.mark {
   background-color: #dfe7f0;
 }
 
+.table-light-2,.table-light-2 > th,.table-light-2 > td {
+  background-color: #fcfdfe;
+}
+
+.table-hover .table-light-2:hover {
+  background-color: #e9f0f8;
+}
+
+.table-hover .table-light-2:hover > td,.table-hover .table-light-2:hover > th {
+  background-color: #e9f0f8;
+}
+
 .table-active,.table-active > th,.table-active > td {
   background-color: rgba(0, 0, 0, 0.075);
 }
@@ -1503,6 +1516,30 @@ a.btn.disabled,a.disabled.header-block__btn,a.disabled.s-content__btn,a.disabled
   border-color: #a1b6d0;
 }
 
+.btn-light-2 {
+  color: #212529;
+  background-color: #f4f7fb;
+  border-color: #f4f7fb;
+}
+
+.btn-light-2:hover {
+  color: #212529;
+  background-color: #d8e3f1;
+  border-color: #cfdced;
+}
+
+.btn-light-2.disabled,.btn-light-2:disabled {
+  color: #212529;
+  background-color: #f4f7fb;
+  border-color: #f4f7fb;
+}
+
+.btn-light-2:not(:disabled):not(.disabled):active,.btn-light-2:not(:disabled):not(.disabled).active,.show > .btn-light-2.dropdown-toggle {
+  color: #212529;
+  background-color: #cfdced;
+  border-color: #c5d5ea;
+}
+
 .btn-outline-primary {
   color: #007bff;
   background-color: transparent;
@@ -1621,6 +1658,30 @@ a.btn.disabled,a.disabled.header-block__btn,a.disabled.s-content__btn,a.disabled
   color: #212529;
   background-color: #cbd7e5;
   border-color: #cbd7e5;
+}
+
+.btn-outline-light-2 {
+  color: #f4f7fb;
+  background-color: transparent;
+  background-image: none;
+  border-color: #f4f7fb;
+}
+
+.btn-outline-light-2:hover {
+  color: #212529;
+  background-color: #f4f7fb;
+  border-color: #f4f7fb;
+}
+
+.btn-outline-light-2.disabled,.btn-outline-light-2:disabled {
+  color: #f4f7fb;
+  background-color: transparent;
+}
+
+.btn-outline-light-2:not(:disabled):not(.disabled):active,.btn-outline-light-2:not(:disabled):not(.disabled).active,.show > .btn-outline-light-2.dropdown-toggle {
+  color: #212529;
+  background-color: #f4f7fb;
+  border-color: #f4f7fb;
 }
 
 .btn-link {
@@ -2096,6 +2157,14 @@ a.bg-light:hover,a.bg-light:focus,button.bg-light:hover,button.bg-light:focus {
   background-color: #a9bdd4 !important;
 }
 
+.bg-light-2 {
+  background-color: #f4f7fb !important;
+}
+
+a.bg-light-2:hover,a.bg-light-2:focus,button.bg-light-2:hover,button.bg-light-2:focus {
+  background-color: #cfdced !important;
+}
+
 .bg-white {
   background-color: #fff !important;
 }
@@ -2162,6 +2231,10 @@ a.bg-light:hover,a.bg-light:focus,button.bg-light:hover,button.bg-light:focus {
 
 .border-light {
   border-color: #cbd7e5 !important;
+}
+
+.border-light-2 {
+  border-color: #f4f7fb !important;
 }
 
 .border-white {
@@ -2912,6 +2985,14 @@ a.text-danger:hover,a.text-danger:focus {
 
 a.text-light:hover,a.text-light:focus {
   color: #a9bdd4 !important;
+}
+
+.text-light-2 {
+  color: #f4f7fb !important;
+}
+
+a.text-light-2:hover,a.text-light-2:focus {
+  color: #cfdced !important;
 }
 
 .text-body,.trop__link,.item-prod__title a,.footer__tel {
