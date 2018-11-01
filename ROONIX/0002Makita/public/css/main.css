@@ -8447,9 +8447,11 @@ html {
   background-repeat: no-repeat;
   -webkit-background-size: 1400px 1400px;
           background-size: 1400px;
+  background-image: url(../screen/12-1.png);
 }
 
 body {
+  opacity: .7;
   background-color: transparent;
 }
 
@@ -10708,6 +10710,34 @@ strong,.strong {
 
 .s-basket .block-add {
   width: 100%;
+}
+
+.s-order__btn-head {
+  font-size: 1.125rem;
+  margin-top: 10px;
+  margin-bottom: 1rem;
+}
+
+.s-order__btn-head.active {
+  background-color: #ffdc7d !important;
+  border-color: #ffdc7d !important;
+  font-weight: bold;
+}
+
+.s-order__btn-wrap {
+  margin-bottom: 3.25rem;
+}
+
+.s-order .form-wrap {
+  max-width: 498px;
+}
+
+.s-order .form-wrap__group {
+  padding-bottom: 1.5625rem;
+}
+
+.s-order .form-wrap__btn {
+  width: 159px;
 }
 
 .s-form {

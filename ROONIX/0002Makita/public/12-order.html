@@ -243,10 +243,6 @@
           </table>
           <div class="row align-items-center justify-content-end">
             <div class="col-md-auto mb-2"><small>В корзину добавлены детали на сумму </small> <strong>164 288.53 ₽</strong></div>
-            <div class="col-md-auto mb-2">
-              <button class="s-basket__btn-total btn btn-block btn btn-primary" type="button">Оформить заказ
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -254,10 +250,55 @@
       <!-- start s-order-->
       <div class="s-order section" id="s-order">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-order</h2>
+          <div class="s-order__btn-wrap">
+            <div class="row row--small">
+              <div class="col-3"><a class="s-order__btn-head btn btn-block btn-light-2 active" href="#">Шаг 1: Адрес доставки</a>
+              </div>
+              <div class="col-3"><a class="s-order__btn-head btn btn-block btn-light-2" href="#">Шаг 2: Способы оплаты</a>
+              </div>
+              <div class="col-3"><a class="s-order__btn-head btn btn-block btn-light-2" href="#">Шаг 3: Завершить заказ</a>
+              </div>
+            </div>
           </div>
-          <div class="row"></div>
+          <div class="s-order__body">
+            <div class="form-wrap">
+              <form class="js-form-validate">
+                <div class="form-wrap__group">
+                  <div class="mb-5">
+                    <div class="h4 strong">Контактные данные</div>
+                  </div>
+                  <div class="form-wrap__input-wrap form-group">
+                    <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон</span>
+                    </label> 
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap form-group">
+                    <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо</span>
+                    </label> 
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="form-wrap__group">
+                  <div class="mb-4">
+                    <div class="h4 strong">Адрес доставки</div>
+                    <div class="smallest text-gray">Выберите тип доставки или добавьте адрес</div>
+                  </div>
+                  <div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="addr"/><span class="custom-input__lab"></span><span class="custom-input__text">Забрать самостоятельно</span>
+                    </label>
+                  </div>
+                  <div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="addr"/><span class="custom-input__lab"></span><span class="custom-input__text">Заказать доставку</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-wrap__group">
+                </div>
+                <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-order-->
