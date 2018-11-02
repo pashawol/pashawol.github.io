@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Корзина</title>
+    <title>Корзина шаг 2</title>
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
@@ -243,14 +243,131 @@
           </table>
           <div class="row align-items-center justify-content-end">
             <div class="col-md-auto mb-2"><small>В корзину добавлены детали на сумму </small> <strong>164 288.53 ₽</strong></div>
-            <div class="col-md-auto mb-2">
-              <button class="s-basket__btn-total btn btn-block btn btn-primary" type="button">Оформить заказ
-              </button>
-            </div>
           </div>
         </div>
       </div>
       <!-- end s-basket-->
+      <!-- start s-order-->
+      <div class="s-order section" id="s-order">
+        <div class="container">
+          <div class="s-order__btn-wrap">
+            <div class="s-order__slider">
+              <div class="s-order__slide"><a class="s-order__btn-head btn btn-block btn-light-2" href="#">Шаг 1: Адрес доставки</a>
+              </div>
+              <div class="s-order__slide"><a class="s-order__btn-head btn btn-block btn-light-2 active" href="#">Шаг 2: Способы оплаты</a>
+              </div>
+              <div class="s-order__slide"><a class="s-order__btn-head btn btn-block btn-light-2" href="#">Шаг 3: Завершить заказ</a>
+              </div>
+            </div>
+          </div>
+          <div class="s-order__body">
+            <div class="form-wrap">
+              <form class="js-form-validate">
+                <div class="form-wrap__group">
+                  <div class="form-wrap__title-head">
+                    <div class="h4 strong">Контактные данные</div>
+                  </div>
+                  <div class="form-wrap__input-wrap form-group">
+                    <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}" value="+ 7(985) 988 98 99"/><span class="form-wrap__title-label">Телефон</span>
+                    </label> 
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap form-group">
+                    <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}" value="Константин Христорождественнский"/><span class="form-wrap__title-label">Контактное лицо</span>
+                    </label> 
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="form-wrap__group">
+                  <div class="form-wrap__title-head">
+                    <div class="h4 strong">Тип оплаты</div>
+                    <div class="smallest text-gray">Выберите тип оплаты</div>
+                  </div>
+                  <div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="pay" data-tab-radio="pay-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Наличный</span>
+                    </label>
+                  </div>
+                  <div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="pay" data-tab-radio="pay-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Безналичный</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="tab-radio-content-wrap">
+                  <div class="tab-radio-content" id="pay-1">
+                    <div class="form-wrap__group">
+                      <div class="row row--small">
+                        <div class="col-sm-auto">
+                          <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                          </button>
+                        </div>
+                        <div class="col-sm-auto">
+                          <button class="form-wrap__btn btn btn-block btn btn-secondary" type="submit">Назад
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .tab-radio-content-->
+                  <div class="tab-radio-content active" id="pay-2">
+                    <div class="form-wrap__group"> 
+                      <div class="mt-2">
+                        <div class="form-wrap__input-wrap form-group">
+                          <label>
+                            <select class="form-wrap__input form-control" required="required" pattern=".{3,}"> 
+                              <option class="d-none" selectedvalue="">Компания</option> 
+                              <option class="d-none" value=""> </option>
+                              <option value="">Компания 1</option>
+                              <option value="">Компания 2</option>
+                              <option value="">Компания 3</option>
+                            </select>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="form-wrap__input-group">
+                        <div class="row">
+                          <div class="col-sm">
+                            <button class="form-wrap__btn btn btn-block btn btn-primary w-100" type="submit">Заполнить вручную
+                            </button>
+                          </div>
+                          <div class="col-sm">
+                            <button class="form-wrap__btn btn btn-block btn btn-secondary w-100" type="submit">Добавить реквизиты файлом
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-wrap__group"> 
+                      <div class="form-wrap__table-block">
+                        <div class="row">
+                          <div class="col"><span>Телефон</span></div>
+                          <div class="col-sm-auto">495 530-70-07</div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><span>Контактное лицо</span></div>
+                          <div class="col-sm-auto">Константин</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row row--small">
+                      <div class="col-sm-auto">
+                        <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                        </button>
+                      </div>
+                      <div class="col-sm-auto">
+                        <button class="form-wrap__btn btn btn-block btn btn-secondary" type="submit">Назад
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- .tab-radio-content-->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-order-->
       <footer class="footer">
         <div class="container">
           <div class="row">

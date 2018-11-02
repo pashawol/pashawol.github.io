@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Корзина</title>
+    <title>Корзина шаг 1 Добавить адрес</title>
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
@@ -243,14 +243,183 @@
           </table>
           <div class="row align-items-center justify-content-end">
             <div class="col-md-auto mb-2"><small>В корзину добавлены детали на сумму </small> <strong>164 288.53 ₽</strong></div>
-            <div class="col-md-auto mb-2">
-              <button class="s-basket__btn-total btn btn-block btn btn-primary" type="button">Оформить заказ
-              </button>
-            </div>
           </div>
         </div>
       </div>
       <!-- end s-basket-->
+      <!-- start s-order-->
+      <div class="s-order section" id="s-order">
+        <div class="container">
+          <div class="s-order__btn-wrap">
+            <div class="s-order__slider">
+              <div class="s-order__slide"><a class="s-order__btn-head btn btn-block btn-light-2 active" href="#">Шаг 1: Адрес доставки</a>
+              </div>
+              <div class="s-order__slide"><a class="s-order__btn-head btn btn-block btn-light-2" href="#">Шаг 2: Способы оплаты</a>
+              </div>
+              <div class="s-order__slide"><a class="s-order__btn-head btn btn-block btn-light-2" href="#">Шаг 3: Завершить заказ</a>
+              </div>
+            </div>
+          </div>
+          <div class="s-order__body">
+            <div class="form-wrap">
+              <form class="js-form-validate">
+                <div class="form-wrap__group">
+                  <div class="form-wrap__title-head">
+                    <div class="h4 strong">Контактные данные</div>
+                  </div>
+                  <div class="form-wrap__input-wrap form-group">
+                    <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон</span>
+                    </label> 
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap form-group">
+                    <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо</span>
+                    </label> 
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="form-wrap__group">
+                  <div class="form-wrap__title-head">
+                    <div class="h4 strong">Адрес доставки</div>
+                    <div class="smallest text-gray">Выберите тип доставки или добавьте адрес</div>
+                  </div>
+                  <div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="addr" data-tab-radio="var-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Забрать самостоятельно</span>
+                    </label>
+                  </div>
+                  <div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="addr" data-tab-radio="var-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Заказать доставку</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="tab-radio-content-wrap">
+                  <div class="tab-radio-content active" id="var-1">
+                    <div class="form-wrap__group"> 
+                      <div class="form-wrap__table-block">
+                        <div class="row">
+                          <div class="col"><span>Тип доставки</span></div>
+                          <div class="col-sm-auto">Самовывоз</div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><span>Резерв</span></div>
+                          <div class="col-sm-auto">3 дня</div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><span>Стоимость</span></div>
+                          <div class="col-sm-auto">Бесплатно</div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><span>Адрес пункта самовывоза</span></div>
+                          <div class="col-sm-auto">г.Москва,2-й Иртышский пр.,д.4Б/1 стр.5</div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><span>Телефон</span></div>
+                          <div class="col-sm-auto">495 530-70-07</div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                    </button>
+                  </div>
+                  <!-- .tab-radio-content-->
+                  <div class="tab-radio-content" id="var-2">
+                    <div class="form-wrap__group">
+                      <div class="form-wrap__title-head">
+                        <div class="h4 strong">Добавление адреса доставки</div>
+                        <div class="smallest text-gray">Выберите ваш регион для добавления нового адреса</div>
+                      </div>
+                      <div>
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="addr-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по Москве</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="addr-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по Московской области</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="addr-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по России</span>
+                        </label>
+                      </div>
+                      <div class="small">Доставка: 300р.  Если сумма заказа свыше 30 000 рублей - доставка по Москве бесплатно</div>
+                    </div>
+                    <div class="form-wrap__group"> 
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
+                        </label> 
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (мобильный)*</span>
+                        </label> 
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
+                        </label> 
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Улица </span>
+                        </label> 
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Дом №</span>
+                        </label>
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-group">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="form-wrap__input-wrap form-group">
+                              <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Квартира/Офис №</span>
+                              </label> 
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-wrap__input-wrap form-group">
+                              <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">№ домофона</span>
+                              </label> 
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
+                        </label> 
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="row align-items-center">
+                        <div class="col-sm-auto"> 
+                          <button class="form-wrap__btn btn btn-block btn btn-secondary" type="submit">Сохранить
+                          </button>
+                        </div>
+                        <div class="col-sm">
+                          <div class="strong mb-3">Цена за доставку: 300р.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-wrap__input-group">
+                      <div class="small text-gray mb-3 pb-3 border-bottom">* — поля обязательные для заполнения</div>
+                    </div>
+                    <div class="row row--small">
+                      <div class="col-sm-auto">
+                        <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                        </button>
+                      </div>
+                    </div>
+                    <div class="small text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
+                  </div>
+                  <!-- .tab-radio-content-->
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-order-->
       <footer class="footer">
         <div class="container">
           <div class="row">

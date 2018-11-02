@@ -10,7 +10,7 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#3361d8">
-    <link rel="stylesheet" href="/libs/fancybox-master/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css">
@@ -251,12 +251,12 @@
       <div class="s-order section" id="s-order">
         <div class="container">
           <div class="s-order__btn-wrap">
-            <div class="row row--small">
-              <div class="col-3"><a class="s-order__btn-head btn btn-block btn-light-2 active" href="#">Шаг 1: Адрес доставки</a>
+            <div class="s-order__slider">
+              <div class="s-order__slide"><a class="s-order__btn-head btn btn-block btn-light-2 active" href="#">Шаг 1: Адрес доставки</a>
               </div>
-              <div class="col-3"><a class="s-order__btn-head btn btn-block btn-light-2" href="#">Шаг 2: Способы оплаты</a>
+              <div class="s-order__slide"><a class="s-order__btn-head btn btn-block btn-light-2" href="#">Шаг 2: Способы оплаты</a>
               </div>
-              <div class="col-3"><a class="s-order__btn-head btn btn-block btn-light-2" href="#">Шаг 3: Завершить заказ</a>
+              <div class="s-order__slide"><a class="s-order__btn-head btn btn-block btn-light-2" href="#">Шаг 3: Завершить заказ</a>
               </div>
             </div>
           </div>
@@ -264,7 +264,7 @@
             <div class="form-wrap">
               <form class="js-form-validate">
                 <div class="form-wrap__group">
-                  <div class="mb-5">
+                  <div class="form-wrap__title-head">
                     <div class="h4 strong">Контактные данные</div>
                   </div>
                   <div class="form-wrap__input-wrap form-group">
@@ -279,23 +279,75 @@
                   <!-- +e.input-wrap-->
                 </div>
                 <div class="form-wrap__group">
-                  <div class="mb-4">
+                  <div class="form-wrap__title-head">
                     <div class="h4 strong">Адрес доставки</div>
                     <div class="smallest text-gray">Выберите тип доставки или добавьте адрес</div>
                   </div>
                   <div>
-                    <label class="custom-input"><input class="custom-input__input" type="radio" name="addr"/><span class="custom-input__lab"></span><span class="custom-input__text">Забрать самостоятельно</span>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="addr" data-tab-radio="var-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Забрать самостоятельно</span>
                     </label>
                   </div>
                   <div>
-                    <label class="custom-input"><input class="custom-input__input" type="radio" name="addr"/><span class="custom-input__lab"></span><span class="custom-input__text">Заказать доставку</span>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="addr" data-tab-radio="var-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Заказать доставку</span>
                     </label>
                   </div>
                 </div>
-                <div class="form-wrap__group">
+                <div class="tab-radio-content-wrap">
+                  <div class="tab-radio-content" id="var-1">
+                    <div class="form-wrap__group"> 
+                      <div class="form-wrap__table-block">
+                        <div class="row">
+                          <div class="col"><span>Тип доставки</span></div>
+                          <div class="col-sm-auto">Самовывоз</div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><span>Резерв</span></div>
+                          <div class="col-sm-auto">3 дня</div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><span>Стоимость</span></div>
+                          <div class="col-sm-auto">Бесплатно</div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><span>Адрес пункта самовывоза</span></div>
+                          <div class="col-sm-auto">г.Москва,2-й Иртышский пр.,д.4Б/1 стр.5</div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><span>Телефон</span></div>
+                          <div class="col-sm-auto">495 530-70-07</div>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                    </button>
+                  </div>
+                  <div class="tab-radio-content" id="var-2">
+                    <div class="form-wrap__group"> 
+                      <div class="form-wrap__table-block">
+                        <div class="row">
+                          <div class="col"><span>Тип доставки</span></div>
+                          <div class="col-sm-auto">Курьерская доставка</div>
+                        </div>
+                        <div class="row">
+                          <div class="col"><span>Резерв</span></div>
+                          <div class="col-sm-auto">300 р.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row row--small">
+                      <div class="col-sm-auto">
+                        <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                        </button>
+                      </div>
+                      <div class="col-sm-auto">
+                        <button class="form-wrap__btn form-wrap__btn--edit btn btn-block btn btn-secondary" type="submit">Добавить адрес доставки
+                        </button>
+                      </div>
+                    </div>
+                    <div class="small text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
+                  </div>
+                  <!-- .tab-radio-content-->
                 </div>
-                <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
-                </button>
               </form>
             </div>
           </div>
@@ -480,7 +532,7 @@
     <!-- #modal-reg-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
-    <script src="libs/fancybox-master/jquery.fancybox.min.js"></script>
+    <script src="libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
     <script src="libs/ion.rangeSlider-2.2.0/js/ion.rangeSlider.min.js"></script>

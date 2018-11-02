@@ -310,7 +310,7 @@ $('  .carusel')
 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 });
 
-	$(' .tabs__caption').slick({
+	$(' .tabs__caption, .s-order__slider').slick({
 		dots: false,
 		arrows: false,
 		infinite: false,
@@ -525,16 +525,33 @@ $(".link-modal").fancybox({
 		})
 
 			// для плаваюещего label
-	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('label').addClass('empty');
+ 
 
-	$('input, textarea').keyup(function () {
+	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').each(function(){
+
 		if ($(this).val().trim() !== '') {
 			$(this).closest('label').removeClass('empty');
 		} else {
 			$(this).closest('label').addClass('empty');
-		}
-	});
-
+		} 
+		$(this).on('.keyup', function () {
+			if ($(this).val().trim() !== '') {
+				$(this).closest('label').removeClass('empty');
+			} else {
+				$(this).closest('label').addClass('empty');
+			}
+		});
+	})
+		
 	// form Validate
-	$('.js-form-validate').parsley()
+	$('.js-form-validate').parsley();
+
+
+	// табы на радиокнопках
+	$('[data-tab-radio]').change(function(){
+		var th = $(this),
+				tabRadio = th.data('tab-radio');
+		$('#'+tabRadio ).fadeIn().addClass("active")
+		.siblings().removeClass('active').hide();
+	 })
 });
