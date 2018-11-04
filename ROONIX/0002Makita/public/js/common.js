@@ -472,8 +472,18 @@ $(".link-modal").fancybox({
 	// });
 
 	$(".catalog-nav__btn-toggle").click(function () {
-		$(this).toggleClass("active").next().toggleClass("active");
+		$(this).toggleClass("active").next().toggleClass("active").parent().toggleClass("active");
 	})
+
+	$(document).mouseup(function (e) {
+		var container = $(".top-line .catalog-nav.active");
+		if (container.has(e.target).length === 0 &&  !container.hasClass('not-click') ) {
+			$(".toggle-mnu-1").removeClass("on");
+			// $("body").toggleClass("fixed");
+			container.removeClass("active");
+			$(".top-line .catalog-nav__btn-toggle").removeClass("active").next().removeClass("active");
+		}
+	});
 
 	$(".footer__title").click(function () {
 		$(this).toggleClass("active").next().slideToggle().toggleClass("active");
@@ -576,7 +586,7 @@ $(".link-modal").fancybox({
 
 	//  аккордион 
 	$(".accordion__toggle-btn").click(function(){
-		$(this).toggleClass('active').next().slideToggle();
+		$(this).toggleClass('active').next().slideToggle().toggleClass('active');
 	})
 	//  /аккордион 
 
