@@ -551,7 +551,33 @@ $(".link-modal").fancybox({
 	$('[data-tab-radio]').change(function(){
 		var th = $(this),
 				tabRadio = th.data('tab-radio');
-		$('#'+tabRadio ).fadeIn().addClass("active")
-		.siblings().removeClass('active').hide();
+				$('#'+tabRadio ).fadeIn(100).addClass("active")
+		.siblings('.tab-radio-content').removeClass('active').hide();
 	 })
+
+	//  если радио таб выбран показать блок
+	 $('[data-tab-radio]').each(function(){
+		 var th = $(this),
+		 tabRadio = th.data('tab-radio');
+		 if(th.is(":checked")){
+
+			 $('#'+tabRadio ).fadeIn(100).addClass("active")
+			 .siblings('.tab-radio-content').removeClass('active').hide();
+			}
+	 })
+	 $(".tab-radio-content-close").click(function(){
+		 var thpar = $(this).parents('.tab-radio-content'),
+				thtab = thpar.attr('id');
+
+				thpar.fadeOut(100).removeClass("active");
+				$('[data-tab-rad='+thtab+']').prop('checked', false);
+	 })
+	 // /табы на радиокнопках
+
+	//  аккордион 
+	$(".accordion__toggle-btn").click(function(){
+		$(this).toggleClass('active').next().slideToggle();
+	})
+	//  /аккордион 
+
 });
