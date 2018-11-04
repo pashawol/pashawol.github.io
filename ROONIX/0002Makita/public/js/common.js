@@ -130,7 +130,7 @@ jQuery(document).ready(function ($) {
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 				.eq($(this).index()).fadeIn().addClass('active');
-
+			$(".s-catalog__slider--js-2-prod").slick('reInit');
 		});
 	});
 
