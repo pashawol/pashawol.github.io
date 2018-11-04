@@ -424,23 +424,7 @@ $(".link-modal").fancybox({
 	});
 
 
-	// кастомный инпут файл
-
-	var file = $(".add-file input[type=file]");
-	file.change(function () {
-		var filename = $(this).val().replace(/.*\\/, "");
-		var name = $(".add-file__filename  ");
-		name.text(filename);
-
-	});
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
+	
 
 	$(".pretty-embed__bg").each(function () {
 		// загрузка фона видео
@@ -451,25 +435,7 @@ $(".link-modal").fancybox({
 				.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
 		})
 	})
-
-	// убираем пробелы в телефоне
-	$(".top-line__tel, .s-contact__tel").each(function () {
-		var str = $(this).attr('href');
-		$(this).attr('href', str.replace(/\s/g, ''));
-	})
-	// $(".wow-wrap").each(function () {
-	// var wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
-
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	// });
-	// });
+ 
 
 	$(".catalog-nav__btn-toggle").click(function () {
 		$(this).toggleClass("active").next().toggleClass("active").parent().toggleClass("active");
@@ -575,13 +541,13 @@ $(".link-modal").fancybox({
 			 .siblings('.tab-radio-content').removeClass('active').hide();
 			}
 	 })
-	 $(".tab-radio-content-close").click(function(){
-		 var thpar = $(this).parents('.tab-radio-content'),
-				thtab = thpar.attr('id');
+	//  $(".tab-radio-content-close").click(function(){
+	// 	 var thpar = $(this).parents('.tab-radio-content'),
+	// 			thtab = thpar.attr('id');
 
-				thpar.fadeOut(100).removeClass("active");
-				$('[data-tab-rad='+thtab+']').prop('checked', false);
-	 })
+	// 			thpar.fadeOut(100).removeClass("active");
+	// 			$('[data-tab-rad='+thtab+']').prop('checked', false);
+	//  })
 	 // /табы на радиокнопках
 
 	//  аккордион 
@@ -590,4 +556,31 @@ $(".link-modal").fancybox({
 	})
 	//  /аккордион 
 
+
+	$('.btn-tab-js').click(function(){
+		var th = $(this),
+		tabRadio = th.data('tab-block');
+		 
+			$('#'+tabRadio ).fadeIn(100).addClass("active")
+			.siblings('.tab-radio-content').removeClass('active').hide();
+		 
+	})
+	$(".tab-radio-content-close--js").click(function(){
+			 var thpar = $(this).parents('.tab-radio-content'),
+					thtab = thpar.attr('id');
+	
+					thpar.fadeOut(100).removeClass("active");
+		 })
+
+
+		 // кастомный инпут файл
+
+	var file = $(".add-file input.add-file__input[type=file]");
+	file.change(function () {
+		var filename = $(this).val().replace(/.*\\/, "");
+		var name = $(".add-file__filename  ");
+		name.text(filename);
+
+	});
+ 
 });

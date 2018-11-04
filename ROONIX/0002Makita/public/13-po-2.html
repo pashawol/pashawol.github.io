@@ -194,14 +194,151 @@
               <div class="s-po__head">
                 <div class="row row--small">
                   <div class="col-sm-6">
-                    <button class="s-po__btn s-po__btn--sm btn btn-block btn btn-primary mb-2" type="submit">Заполнить вручную
+                    <button class="s-po__btn s-po__btn--sm btn btn-block btn btn-primary btn-tab-js mb-2" type="submit" data-tab-block="reqv-vruch">Заполнить вручную
                     </button>
                   </div>
                   <div class="col-sm-6">
-                    <button class="s-po__btn s-po__btn--sm btn btn-block btn btn-secondary mb-2" type="submit">Добавить реквизиты файлом
+                    <button class="s-po__btn s-po__btn--sm btn btn-block btn btn-secondary btn-tab-js mb-2" type="submit" data-tab-block="reqv-file">Добавить реквизиты файлом
                     </button>
                   </div>
                 </div>
+              </div>
+              <div class="tab-radio-content-wrap">
+                <div class="tab-radio-content" id="reqv-vruch">
+                  <div class="form-wrap">
+                    <form class="js-form-validate">
+                      <div class="s-po-block">
+                        <div class="tab-radio-content-close tab-radio-content-close--js">
+                        </div>
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон контактного лица*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">ИНН*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">КПП*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Юридический адрес*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Фактический адрес*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название банка*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">КОР банка*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">БИК*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Расчетный счет*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Генеральный директор*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон компании*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Расчетный счет*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Электроная почта компании*</span>
+                          </label>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__maxw">
+                          <div class="row row--small">
+                            <div class="col-md">
+                              <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Сохранить
+                              </button>
+                            </div>
+                            <div class="col">
+                              <button class="form-wrap__btn btn btn-block btn btn-secondary" type="submit">Не сохранять
+                              </button>
+                            </div>
+                            <div class="col">
+                              <button class="form-wrap__btn btn btn-block btn btn-secondary" type="submit">Удалить
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="small text-gray pb-3">* — поля обязательные для заполнения</div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!--.tab-radio-content-->
+                <div class="tab-radio-content" id="reqv-file">
+                  <div class="form-wrap">
+                    <form class="js-form-validate">
+                      <div class="s-po-block">
+                        <div class="form-wrap__group">
+                          <div class="tab-radio-content-close tab-radio-content-close--js">
+                          </div>
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Наименование организации (Полное)</span>
+                            </label>
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__maxw">
+                            <div class="smallest text-gray pb-3">Пожалуйста выберите файл (не болee 1 мегабайта), и нажмите кнопку загрузить.</div>
+                            <div class="add-file">
+                              <div class="row row--small">
+                                <div class="col-12 mb-3">
+                                  <div class="add-file__filename">
+                                  </div>
+                                </div>
+                                <div class="col">
+                                  <label><input class="add-file__input d-none" type="file"/><span class="add-file__btn btn btn-block btn btn-primary" role="button">Добавить файл</span>
+                                  </label>
+                                </div>
+                                <div class="col">
+                                  <button class="add-file__btn btn btn-block btn btn-secondary" type="submit">Сохранить
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!--.tab-radio-content-->
               </div>
               <div class="s-po__head">
                 <div class="h4 strong">Реквизиты ваших организации:</div>
