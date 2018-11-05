@@ -475,32 +475,14 @@ body {
           border-radius: 0.25rem;
 }
 
-.accordion__toggle-btn::after {
+.table-history__tr td:last-child::after,.accordion__toggle-btn::after {
   color: #fa3f3e;
-}/*==========  Mobile First  ==========*//*==========  Desktop First  ==========*//* Large Devices, Wide Screens *//* Medium Devices, Desktops *//* Small Devices, Tablets *//* Extra Small Devices, Phones *//* Custom, iPhone Retina */@font-face {
+}
+
+@font-face {
   font-family:Tahoma;font-style:normal;font-weight:normal;src:url("../fonts/Tahoma/Tahoma.woff2") format("woff2"), url("../fonts/Tahoma/Tahoma.woff") format("woff"), url("../fonts/Tahoma/Tahoma.ttf") format("truetype");
 }
 
 @font-face {
   font-family:Tahoma;font-style:normal;font-weight:bold;src:url("../fonts/Tahoma-Bold/Tahoma-Bold.woff2") format("woff2"), url("../fonts/Tahoma-Bold/Tahoma-Bold.woff") format("woff"), url("../fonts/Tahoma-Bold/Tahoma-Bold.ttf") format("truetype");
-}
-
-@media (max-width: 991.98px) {
-  .animated {
- /*CSS transitions*/
-    -o-transition-property: none !important;
-    -webkit-transition-property: none !important;
-    transition-property: none !important;
- /*CSS transforms*/
-    -ms-transform: none !important;
-    -webkit-transform: none !important;
-    transform: none !important;
- /*CSS animations*/
-    -webkit-animation: none !important;
-    animation: none !important;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-/**/;
 }
