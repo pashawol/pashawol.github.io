@@ -583,4 +583,22 @@ $(".link-modal").fancybox({
 	$(".table-history__tr--js").click(function(){
 		$(this).toggleClass("active").next().find('.table-history__inner-block--js').slideToggle(150);
 	})
+
+	// показать/скрыть блок в поиске
+	var hblock = $('.search-block, .search-block__btn-close, .search-block__toggle-block');
+	$('body').on('keyup', '.search-block__input', function(){
+		// console.log("1");
+		$(this).val().length >2 ? hblock.addClass('active') : hblock.removeClass('active');
+	})
+	$('.search-block__btn-close').click(function(){
+		hblock.removeClass('active');
+	})
+
+	$(document).mouseup(function (e) {
+		var container = $(".search-block.active");
+		if (container.has(e.target).length === 0) {
+			hblock.removeClass('active');
+		}
+	});
+	// показать/скрыть блок в поиске
 });
