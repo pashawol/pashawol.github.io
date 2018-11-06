@@ -4169,16 +4169,26 @@ strong,.strong {
   width: 100%;
   top: 0;
   min-height: 1px;
-}
-
-.top-line.fixed-ready {
-  top: -100px;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
   -webkit-transition: all 0.36s;
   -o-transition: all 0.36s;
   transition: all 0.36s;
 }
 
+.top-line.fixed-ready {
+  -webkit-transform: translateY(-100px);
+  -ms-transform: translateY(-100px);
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
 .top-line.fixed {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
   top: 0;
   position: fixed;
 }

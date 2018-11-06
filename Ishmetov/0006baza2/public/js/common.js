@@ -117,14 +117,6 @@ jQuery(document).ready(function ($) {
 	       return false;
 		 });
 		 
-	$(" .scroll-link-down").click(function () {
-	       var elementClick = $(this).attr("href");
-	       var destination = $(elementClick).offset().top;
-
-	           $('html, body').animate({ scrollTop: destination }, 1100);
-
-	       return false;
-	   });
 
 
 	// табы  . 
@@ -372,23 +364,44 @@ jQuery(document).ready(function ($) {
 				responsiveHeight: 800,
 				parallax: true,
 				normalScrollElements: ".footer",
-		 
-					afterLoad: function(origin, destination, direction){
-						var loadedSection = this;
+				onLeave: function(origin, destination, direction){
+					var leavingSection = this;
+			
+					//after leaving section 2
+					if(origin.index == 0 && direction =='down'){
+						$(".top-line ").addClass("fixed-ready");
+					}
+			
+					else if(origin.index == 1 && direction == 'up'){
+						$(".top-line ").removeClass("fixed");
+					}
+				},
+			
+				afterLoad: function(origin, destination, direction ){
+					var loadedSection = this;
 						
 						//using index
 						if(destination.index == 1  ){
-							$(".top-line ").addClass("fixed").addClass("fixed-ready");
-							// alert("Section 3 ended loading");
+							$(".top-line ").addClass("fixed");
+							// alert
 						}
 						
 						//using anchorLink
 						if(destination.index == 0  ){
-							$(".top-line ").removeClass("fixed").removeClass("fixed-ready");
+							$(".top-line ").removeClass("fixed-ready");
 								// alert("Section 2 ended loading");
 					}
-				}
+			 
+					console.log(destination.index);
+					// deleteLog = true;
+				},
 			});
+
+			$(" .scroll-link-down").click(function (e) {
+				e.preventDefault();
+				fullpage_api.moveSectionDown();
+				 });
+		
 			// new fullpage('.one-page-js', {
 			// 	onLeave: function(origin, destination, direction){
 			// 		//it won't scroll if the destination is the 3rd section
