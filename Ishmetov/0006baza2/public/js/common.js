@@ -356,13 +356,15 @@ jQuery(document).ready(function ($) {
 		
 			new fullpage('.one-page-js', {
 				//options here
-				navigation:true,
+				navigation:false,
 				slidesNavigation:true,
 				sectionSelector: '.section--js',
 				navigationPosition:'right', 
 				responsiveWidth:1200,
 				responsiveHeight: 800,
 				parallax: true,
+				showActiveTooltip: true,
+				lockAnchors: true,
 				normalScrollElements: ".footer",
 				onLeave: function(origin, destination, direction){
 					var leavingSection = this;
@@ -370,29 +372,36 @@ jQuery(document).ready(function ($) {
 					//after leaving section 2
 					if(origin.index == 0 && direction =='down'){
 						$(".top-line ").addClass("fixed-ready");
+						$(".count-block ").removeClass("text-white");
 					}
 			
 					else if(origin.index == 1 && direction == 'up'){
 						$(".top-line ").removeClass("fixed");
+						$(".count-block ").addClass("text-white");
+						
 					}
 				},
-			
+				
 				afterLoad: function(origin, destination, direction ){
 					var loadedSection = this;
+					
+					//using index
+					if(destination.index == 1  ){
+						$(".top-line ").addClass("fixed");
+						$(".count-block ").removeClass("text-white");
 						
-						//using index
-						if(destination.index == 1  ){
-							$(".top-line ").addClass("fixed");
-							// alert
-						}
-						
-						//using anchorLink
-						if(destination.index == 0  ){
-							$(".top-line ").removeClass("fixed-ready");
-								// alert("Section 2 ended loading");
+						// alert
 					}
-			 
-					console.log(destination.index);
+					
+					//using anchorLink
+					if(destination.index == 0  ){
+						$(".top-line ").removeClass("fixed-ready");
+						$(".count-block ").addClass("text-white");
+						// alert("Section 2 ended loading");
+					}
+					$(".count-block__current--js").text("0" + (destination.index + 1));
+					$(".count-block__all--js").text("0" + $(".section--js").length);
+					// console.log(destination.index);
 					// deleteLog = true;
 				},
 			});

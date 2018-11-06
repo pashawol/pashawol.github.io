@@ -3852,7 +3852,7 @@ strong,.strong {
   display: block;
 }
 
-.col-main,.top-line {
+.col-main,.top-line,.count-block-wrap {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3875,7 +3875,7 @@ strong,.strong {
   padding-right: 0.625rem;
 }
 
-.col-main,.top-line {
+.col-main,.top-line,.count-block-wrap {
   width: -webkit-calc(100% - 40px);
   width: calc(100% - 40px);
 }
@@ -4533,6 +4533,45 @@ strong,.strong {
   -webkit-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   transform: translateY(-5px);
+}
+
+.count-block-wrap {
+  position: fixed;
+  right: 0;
+  z-index: 20;
+  min-height: 1px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.count-block {
+  font-size: 1.25rem;
+  width: 30px;
+  margin-left: auto;
+  text-align: center;
+  position: relative;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+}
+
+.count-block::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 2px;
+  height: 80px;
+  background-color: #fbc400;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.count-block__current {
+  margin-bottom: 140px;
 }
 
 .s-contact {
@@ -5778,7 +5817,7 @@ a {
     padding-bottom: 40px;
   }
 
-  .col-main,.top-line {
+  .col-main,.top-line,.count-block-wrap {
     width: -webkit-calc(100% - 60px);
     width: calc(100% - 60px);
   }
@@ -6353,7 +6392,7 @@ a {
     text-align: center !important;
   }
 
-  .col-main,.top-line {
+  .col-main,.top-line,.count-block-wrap {
     width: -webkit-calc(100% - 269px);
     width: calc(100% - 269px);
   }
@@ -6915,7 +6954,7 @@ a {
     text-align: center !important;
   }
 
-  .col-main,.top-line {
+  .col-main,.top-line,.count-block-wrap {
     width: -webkit-calc(100% - 323px);
     width: calc(100% - 323px);
   }
@@ -7485,7 +7524,7 @@ a {
     text-align: center !important;
   }
 
-  .col-main,.top-line {
+  .col-main,.top-line,.count-block-wrap {
     width: -webkit-calc(100% - 390px);
     width: calc(100% - 390px);
   }
