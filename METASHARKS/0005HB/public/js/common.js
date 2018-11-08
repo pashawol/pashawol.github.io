@@ -305,6 +305,38 @@ jQuery(document).ready(function ($) {
 		});
 	})
 
+	
+	$(".s-catalog__carusel--top-js").each(function () {
+
+		// слайдер цвета в карточке
+		var swiper4 = new Swiper($(this), {
+			// slidesPerView: 5,
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					slidesPerGroup: 2,
+				} 
+			},
+			speed: 750,
+			spaceBetween: 0,
+			loop: true,
+			watchOverflow: true,
+			preloadImages: false,
+			lazy: true,
+			lazy: {
+				loadPrevNext: true,
+			},
+			navigation: {
+				nextEl: $(this).parent().find('.swiper-button-next'),
+				prevEl: $(this).parent().find('.swiper-button-prev'),
+			},
+
+		});
+	})
+
+
 	//  слайдр  бренды
 	$(".s-brands__carusel--js").each(function () {
 
