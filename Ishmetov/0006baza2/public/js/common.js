@@ -488,11 +488,17 @@ $(".toggle-menu--js").click(function () {
 	$(".aside-nav").toggleClass('fixed')
 	.hasClass('fixed') ? fullpage_api.setAllowScrolling(false) : fullpage_api.setAllowScrolling(true);
 });
+$(".aside-nav__toggle-menu--js").click(function () {
+	$("body, html").removClass("fixed");
+	$(".aside-nav").removClass('fixed').removeClass('active');
+	 fullpage_api.setAllowScrolling(true);
+});
+
 
 $(document).mouseup(function (e) {
 	var container = $(".aside-nav.fixed");
 	if (container.has(e.target).length === 0) {
-		$(".aside-nav ").removeClass('fixed');
+		$(".aside-nav ").removeClass('fixed').removeClass('active');
 		// $("body, html").removeClass("fixed");
 		fullpage_api.setAllowScrolling(true);
 	}
