@@ -457,4 +457,24 @@ jQuery(document).ready(function ($) {
 		$(".face-input").change(function(){
 		 $(this).hasClass("fiz-input") ? $(".toggle-block").fadeOut() : $(".toggle-block").fadeIn()
 		})
+
+
+				// для плаваюещего label
+ 
+
+	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').each(function(){
+
+		if ($(this).val().trim() !== '') {
+			$(this).closest('label').removeClass('empty');
+		} else {
+			$(this).closest('label').addClass('empty');
+		} 
+		$(this).on('.keyup', function () {
+			if ($(this).val().trim() !== '') {
+				$(this).closest('label').removeClass('empty');
+			} else {
+				$(this).closest('label').addClass('empty');
+			}
+		});
+	})
 });
