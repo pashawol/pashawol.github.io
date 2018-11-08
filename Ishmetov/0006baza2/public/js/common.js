@@ -73,13 +73,13 @@ jQuery(document).ready(function ($) {
 
 		// скрывает моб меню
 
-		var topH = $(".header ").height();
+		// var topH = $(".header ").height();
 
-		$(window).scroll(function () {
-			$(this).scrollTop() > topH / 2 ?( $('.top-line  ').addClass('fixed-ready')) :  	$('.top-line  ').removeClass('fixed-ready');
-			$(this).scrollTop() > topH ?( $('.top-line  ').addClass('fixed')) :  	$('.top-line  ').removeClass('fixed');
+		// $(window).scroll(function () {
+		// 	$(this).scrollTop() > topH / 2 ?( $('.top-line  ').addClass('fixed-ready')) :  	$('.top-line  ').removeClass('fixed-ready');
+		// 	$(this).scrollTop() > topH ?( $('.top-line  ').addClass('fixed')) :  	$('.top-line  ').removeClass('fixed');
 		 
-		});
+		// });
 		
  
 		// конец добавил
@@ -336,35 +336,24 @@ jQuery(document).ready(function ($) {
 	// });
 	// });
 
-	// $('.one-page-js').fullpage({
-   
-	// 	navigation:true,
-	// 	slidesNavigation:true,
-	// 	sectionSelector: '.section--js',
-	// 	navigationPosition:'right', 
-	// 	responsiveWidth:1200,
-	// 	responsiveHeight: 800,
-	// 	parallax: true,
-	// 	normalScrollElements: ".footer",
-	// 	// onSlideLeave: function(section, origin, destination, direction){
-	// 	// 	if(section.index == 1 && origin.index == 0 && direction == 'right'){
-	// 	// 		alert("Leaving the fist slide!!");
-	// 	// 		$(".top-line top-line").addClass("fixed").addClass("fixed-ready");
-	// 	// 	}
-	// 	}
-	// 		});
+	 
 		
 			new fullpage('.one-page-js', {
+				anchors: ['#footer'],
 				//options here
 				navigation:false,
 				slidesNavigation:true,
-				sectionSelector: '.section--js',
+				sectionSelector: '.section-js',
 				navigationPosition:'right', 
-				responsiveWidth:1200,
-				responsiveHeight: 800,
+				responsiveWidth:340,
+				responsiveHeight: 500,
 				parallax: true,
 				showActiveTooltip: true,
 				lockAnchors: true,
+				scrollOverflow: true,
+				scrollOverflowReset: true,
+				scrollOverflowReset: true,
+
 				normalScrollElements: ".footer",
 				onLeave: function(origin, destination, direction){
 					var leavingSection = this;
@@ -372,16 +361,25 @@ jQuery(document).ready(function ($) {
 					//after leaving section 2
 					if(origin.index == 0 && direction =='down'){
 						$(".top-line ").addClass("fixed-ready");
-						$(".count-block ").removeClass("text-white");
+						// $(".count-block ").removeClass("text-white");
 					}
 			
 					else if(origin.index == 1 && direction == 'up'){
 						$(".top-line ").removeClass("fixed");
-						$(".count-block ").addClass("text-white");
 						
 					}
+					if(destination.index == 1  ){
+						// $(".count-block ").addClass("text-white");
+						$(".s-stores__col").addClass('fadeInRightBig');
+					}
+					
+					if(destination.index == 2  ){
+						$(".delievary-img").addClass('fadeIn');
+						$(".delievary-img-2").addClass('fadeInRightBig');
+					}
+
 				},
-				
+			 
 				afterLoad: function(origin, destination, direction ){
 					var loadedSection = this;
 					
@@ -399,8 +397,20 @@ jQuery(document).ready(function ($) {
 						$(".count-block ").addClass("text-white");
 						// alert("Section 2 ended loading");
 					}
-					$(".count-block__current--js").text("0" + (destination.index + 1));
-					$(".count-block__all--js").text("0" + $(".section--js").length);
+					
+					if(destination.isLast ){
+						
+						// alert("Section 2 ended loading");
+						$(".count-block__current--js").text("0" + (destination.index ));
+					}
+					else{
+						$(".count-block__current--js").text("0" + (destination.index + 1));
+						
+					}
+					// $(".count-block__current--js, .count-block__all--js").removeClass('blick').addClass("blick");
+									
+					$(".count-block__all--js").text("0" + ($(".section-js").length - 1));
+				 
 					// console.log(destination.index);
 					// deleteLog = true;
 				},
@@ -411,13 +421,28 @@ jQuery(document).ready(function ($) {
 				fullpage_api.moveSectionDown();
 				 });
 		
-			// new fullpage('.one-page-js', {
-			// 	onLeave: function(origin, destination, direction){
-			// 		//it won't scroll if the destination is the 3rd section
-			// 		if(destination.index == 1){
-			// 			// return f;
-			// 			$(".top-line top-line").addClass("fixed").addClass("fixed-ready");
-			// 		}
-			// 	}
-			// });
+  
+var wow = new WOW({ mobile: false });
+wow.init();
+
+
+		// для плаваюещего label
+ 
+
+		// $('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').each(function(){
+
+		// 	if ($(this).val().trim() !== '') {
+		// 		$(this).closest('label').removeClass('empty');
+		// 	} else {
+		// 		$(this).closest('label').addClass('empty');
+		// 	} 
+		// 	$(this).on('.keyup', function () {
+		// 		if ($(this).val().trim() !== '') {
+		// 			$(this).closest('label').removeClass('empty');
+		// 		} else {
+		// 			$(this).closest('label').addClass('empty');
+		// 		}
+		// 	});
+		// })
+			
 });
