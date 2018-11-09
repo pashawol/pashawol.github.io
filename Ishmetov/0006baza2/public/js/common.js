@@ -339,8 +339,8 @@ jQuery(document).ready(function ($) {
 		slidesNavigation: true,
 		sectionSelector: '.section-js',
 		navigationPosition: 'right',
-		responsiveWidth: 340,
-		responsiveHeight: 500,
+		responsiveWidth: 1200,
+		responsiveHeight: 600,
 		parallax: true,
 		showActiveTooltip: true,
 		lockAnchors: true,
@@ -401,14 +401,17 @@ jQuery(document).ready(function ($) {
 				$(".top-line ").removeClass("fixed-ready");
 				$(".count-block ").addClass("text-white");
 				// alert("Section 2 ended loading");
+
 			}
 			
 			if (destination.isLast) {
 
 				// alert("Section 2 ended loading");
 				$(".count-block__current--js").text("0" + (destination.index));
+				$(".top-line").addClass("bg-white");
 			} else {
 				$(".count-block__current--js").text("0" + (destination.index + 1));
+				$(".top-line").removeClass("bg-white");
 
 			}
 			// $(".count-block__current--js, .count-block__all--js").removeClass('blick').addClass("blick");
@@ -460,25 +463,7 @@ jQuery(document).ready(function ($) {
 	$(".toggle-sub-menu--js").click(function(){
 		$(this).parents('.menu-item-has-children').find("  a.active").click();
 	})
-	$(document).mouseup(function (e) {
-		var container = $(".menu-item-has-children.active");
-		if (container.has(e.target).length === 0) {
-			$(".menu-item-has-children, .aside-nav, .sub-menu,  a ").removeClass('active');
-			$("body, html").removeClass("fixed");
-			if (!$(".aside-nav").hasClass('fixed')) {
-			fullpage_api.setAllowScrolling(true);
-			}
-		}
-	});
 
-	$(document).mouseup(function (e) {
-		var container = $(".menu-item-has-children.active");
-		if (container.has(e.target).length === 0) {
-			$(".menu-item-has-children, .aside-nav, .sub-menu,  a ").removeClass('active');
-			$("body, html").removeClass("fixed");
-			fullpage_api.setAllowScrolling(true);
-		}
-	});
 // / показать/ скрыть дочернее меню
 
 //  показать/ скрыть   меню в моб версии
@@ -489,15 +474,26 @@ $(".toggle-menu--js").click(function () {
 	.hasClass('fixed') ? fullpage_api.setAllowScrolling(false) : fullpage_api.setAllowScrolling(true);
 });
 $(".aside-nav__toggle-menu--js").click(function () {
-	$("body, html").removClass("fixed");
-	$(".aside-nav").removClass('fixed').removeClass('active');
+	$("body, html").removeClass("fixed");
+	$(".aside-nav").removeClass('fixed').removeClass('active');
 	 fullpage_api.setAllowScrolling(true);
 });
 
 
 $(document).mouseup(function (e) {
-	var container = $(".aside-nav.fixed");
+	var container = $(".menu-item-has-children.active");
 	if (container.has(e.target).length === 0) {
+		$(".menu-item-has-children, .aside-nav, .sub-menu,  a ").removeClass('active');
+		$("body, html").removeClass("fixed");
+		if (!$(".aside-nav").hasClass('fixed')) {
+		fullpage_api.setAllowScrolling(true);
+		}
+	}
+});
+ 
+$(document).mouseup(function (e) {
+	var container = $(".aside-nav.fixed");
+	if (container.has(e.target).length === 0 && !$(".aside-nav").hasClass("active")) {
 		$(".aside-nav ").removeClass('fixed').removeClass('active');
 		// $("body, html").removeClass("fixed");
 		fullpage_api.setAllowScrolling(true);
