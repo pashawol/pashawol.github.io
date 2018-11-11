@@ -306,9 +306,11 @@ if($("div").is('.one-page-js')) {
 		// $("body, html").removeClass("fixed");
 		$("body, html").toggleClass("fixed");
 		$(".aside-nav").toggleClass("active")
-		 
-			$(".aside-nav").hasClass('active') || !$(".aside-nav").hasClass('fixed') && $("div").is('.one-page-js') ? fullpage_api.setAllowScrolling(false) : fullpage_api.setAllowScrolling(true);
-	 
+		if($("div").is('.one-page-js')) {
+
+			$(".aside-nav").hasClass('active') || !$(".aside-nav").hasClass('fixed')   ? fullpage_api.setAllowScrolling(false) : fullpage_api.setAllowScrolling(true);
+			
+		}
 	})
 	$(".toggle-sub-menu--js").click(function(){
 		$(this).parents('.menu-item-has-children').find("  a.active").click();
