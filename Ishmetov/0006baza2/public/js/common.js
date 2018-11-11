@@ -63,7 +63,13 @@ jQuery(document).ready(function ($) {
 	var icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.01 11.98"><path id="dpc6a" class="cls-1" d="M0,6.19.2,6,0,5.79,5.65,0,7,1.36,3.45,5H43V7H3.44L7,10.61,5.65,12ZM2.47,6,3,6.52V5.45Z"/></svg>';
 
 	var arrl2 = (' <div class="r">' + icon),
-		arrr2 = (' <div class="l">' + icon);
+			arrr2 = (' <div class="l">' + icon);
+	
+	var icon2 = '<svg id="SVGDoc" width="7" height="12" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"  wBox="0 0 7 12"><defs><path d="M521.65844,879.01103l1.33118,1.36435l-4.51119,4.62431l4.51119,4.62431l-1.33118,1.36435l-5.64697,-5.78892l0.19483,-0.19974l-0.19483,-0.19974z" id="Path-0"/></defs><g transform="matrix(1,0,0,1,-516,-879)"><g><use xlink:href="#Path-0" fill="#2c2f34" fill-opacity="1"/><use xlink:href="#Path-0" fill="#1c1d1e" fill-opacity="1"/></g></g></svg>';
+
+	var arrl = (' <div class="r">' + icon2),
+			arrr = (' <div class="l">' + icon2);
+	
 	// карусель
 	$('.s-store-slider__slider--js').slick({
 		slidesToShow: 1,
@@ -80,7 +86,49 @@ jQuery(document).ready(function ($) {
 		nextArrow: arrl2,
 	});
 
-	$('.s-store-slider__slider--js')
+
+	//  слайдер в  карточке товара
+	$(' .s-gal__slider--big').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		asNavFor: '.s-gal__slider--small',
+		appendArrows: '.s-gal__inner',
+		infinite: true,
+		loop: true,
+		arrows: true,
+		prevArrow: arrr,
+		nextArrow: arrl,
+	});
+	$(' .s-gal__slider--small').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: false,
+		focusOnSelect: true, 
+		asNavFor: '.s-gal__slider--big',
+		responsive: [ 
+			 
+		 
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 4,
+					vertical: false,
+					verticalSwiping: false,
+				}
+			},
+			
+		]
+		// swipeToSlide: false
+	});
+	
+
+	$('.s-store-slider__slider--js, .s-gal__slider--big, .s-gal__slider--small ')
 	.on('lazyLoaded', function(event, slick, image, imageSource){
 			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 	});
