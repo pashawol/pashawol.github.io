@@ -407,7 +407,7 @@ $(document).mouseup(function (e) {
 //  /показать/ скрыть   меню в моб версии
 
 // аккордион в  карточке товара
-$(".s-prod-body__item-title").click(function(){
+$(".accordion__item-title").click(function(){
 	$(this).toggleClass("active").next().slideToggle().toggleClass("active");
 })
 // /аккордион в  карточке товара

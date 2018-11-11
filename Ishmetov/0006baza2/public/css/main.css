@@ -318,7 +318,7 @@ template {
   display: none !important;
 }
 
-h1,h2,h3,h4,h5,h6,.h1,.h2,.section-title,.s-prod-head__title,.h3,.h4,.s-delievery-head__item-title,.s-delievery-var__item,.s-block__title,.s-prod-body__item-title,.h5,.form-wrap__input,.form-wrap__btn-send,.empty .form-wrap__title-label,.text-block__text,.text-block__link,.scroll-link-down,.aside-nav .menu-item > a,.aside-nav__btn,.s-catalog__title,.s-prod-head__text,.s-prod-head__btn,.s-articals__item,.h6,.page-link,.s-delievery-head__item {
+h1,h2,h3,h4,h5,h6,.h1,.h2,.section-title,.s-prod-head__title,.h3,.h4,.s-delievery-head__item-title,.s-delievery-var__item,.s-block__title,.accordion__item-title,.h5,.form-wrap__input,.form-wrap__btn-send,.empty .form-wrap__title-label,.text-block__text,.text-block__link,.scroll-link-down,.aside-nav .menu-item > a,.aside-nav__btn,.s-catalog__title,.s-prod-head__text,.s-prod-head__btn,.s-articals__item,.h6,.page-link,.s-delievery-head__item {
   margin-bottom: 0.5rem;
   font-weight: 400;
   line-height: 1.2;
@@ -337,7 +337,7 @@ h3,.h3 {
   font-size: 1.25rem;
 }
 
-h4,.h4,.s-delievery-head__item-title,.s-delievery-var__item,.s-block__title,.s-prod-body__item-title {
+h4,.h4,.s-delievery-head__item-title,.s-delievery-var__item,.s-block__title,.accordion__item-title {
   font-size: 1.125rem;
 }
 
@@ -5299,18 +5299,18 @@ a {
   padding-bottom: 1.5625rem;
 }
 
-.s-prod-body__item {
+.accordion {
   border-top: 1px solid #eaebec;
   -webkit-transition: all 0.36s;
   -o-transition: all 0.36s;
   transition: all 0.36s;
 }
 
-.s-prod-body__item:last-child {
+.accordion:last-child {
   border-bottom: 1px solid #eaebec;
 }
 
-.s-prod-body__item-title {
+.accordion__item-title {
   margin-bottom: 0;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -5321,21 +5321,21 @@ a {
   transition: all 0.36s;
 }
 
-.s-prod-body__item-title:hover {
+.accordion__item-title:hover {
   color: #fbc400;
 }
 
-.s-prod-body__item-title:hover .s-prod-body__plus::before,.s-prod-body__item-title:hover .s-prod-body__plus::after {
+.accordion__item-title:hover .accordion__plus::before,.accordion__item-title:hover .accordion__plus::after {
   background-color: #fbc400;
 }
 
-.s-prod-body__item-title.active .s-prod-body__plus {
+.accordion__item-title.active .accordion__plus {
   -webkit-transform: rotate(225deg);
       -ms-transform: rotate(225deg);
           transform: rotate(225deg);
 }
 
-.s-prod-body__plus {
+.accordion__plus {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -5348,7 +5348,7 @@ a {
   cursor: pointer;
 }
 
-.s-prod-body__plus::before,.s-prod-body__plus::after {
+.accordion__plus::before,.accordion__plus::after {
   content: '';
   position: absolute;
   position: absolute;
@@ -5364,37 +5364,37 @@ a {
   transition: all 0.36s;
 }
 
-.s-prod-body__plus::before {
+.accordion__plus::before {
   width: 1.25rem;
   height: 0.125rem;
 }
 
-.s-prod-body__plus::after {
+.accordion__plus::after {
   width: 0.125rem;
   height: 1.25rem;
 }
 
-.s-prod-body__item-body {
+.accordion__item-body {
   display: none;
   padding-bottom: 3.125rem;
 }
 
-.s-prod-body__item-body p {
+.accordion__item-body p {
   color: #606366;
 }
 
-.s-prod-body__item-body.active {
+.accordion__item-body.active {
   display: block;
 }
 
-.s-prod-body__img-wrap {
+.accordion__img-wrap {
   margin-bottom: 1.875rem;
   height: 250px;
   background-color: #f7f8f9;
   position: relative;
 }
 
-.s-prod-body__img-wrap img {
+.accordion__img-wrap img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -5403,6 +5403,23 @@ a {
           transform: translate(-50%, -50%);
   max-width: 70%;
   max-height: 70%;
+}
+
+.accordion__group {
+  margin-bottom: 1.5625rem;
+  max-width: 780px;
+}
+
+.accordion__group .h5,.accordion__group .form-wrap__input,.accordion__group .form-wrap__btn-send,.accordion__group .empty .form-wrap__title-label,.empty .accordion__group .form-wrap__title-label,.accordion__group .text-block__text,.accordion__group .text-block__link,.accordion__group .scroll-link-down,.accordion__group .aside-nav .menu-item > a,.aside-nav .accordion__group .menu-item > a,.accordion__group .aside-nav__btn,.accordion__group .s-catalog__title,.accordion__group .s-prod-head__text,.accordion__group .s-prod-head__btn,.accordion__group .s-articals__item {
+  padding-bottom: 0.9375rem;
+}
+
+.accordion__group li {
+  margin-bottom: 0.3125em;
+}
+
+.accordion__btn {
+  width: 220px;
 }
 
 .s-articals {
@@ -6713,12 +6730,12 @@ a {
     top: 50%;
   }
 
-  .s-prod-body__plus::before {
+  .accordion__plus::before {
     width: 1.875rem;
     height: 0.125rem;
   }
 
-  .s-prod-body__plus::after {
+  .accordion__plus::after {
     width: 0.125rem;
     height: 1.875rem;
   }
@@ -7656,7 +7673,7 @@ a {
     padding: 3.125rem 45px 3.125rem 45px;
   }
 
-  .s-prod-body__img-wrap {
+  .accordion__img-wrap {
     width: 191px;
     height: 191px;
     margin-right: 15px;
@@ -8535,7 +8552,7 @@ a {
     margin-bottom: 3.125rem;
   }
 
-  .s-content h3,.s-content h4,.s-content .h3,.s-content .h4,.s-content .s-delievery-head__item-title,.s-content .s-delievery-var__item,.s-content .s-block__title,.s-content .s-prod-body__item-title {
+  .s-content h3,.s-content h4,.s-content .h3,.s-content .h4,.s-content .s-delievery-head__item-title,.s-content .s-delievery-var__item,.s-content .s-block__title,.s-content .accordion__item-title {
     margin-bottom: 2.1875rem;
   }
 
@@ -8588,12 +8605,12 @@ a {
     margin-bottom: 0;
   }
 
-  .s-prod-body__item-title {
+  .accordion__item-title {
     padding-top: 3.125rem;
     padding-bottom: 3.125rem;
   }
 
-  .s-prod-body__img-wrap {
+  .accordion__img-wrap {
     width: 225px;
     height: 225px;
   }
@@ -8657,7 +8674,7 @@ a {
     font-size: 1.5rem;
   }
 
-  h4,.h4,.s-delievery-head__item-title,.s-delievery-var__item,.s-block__title,.s-prod-body__item-title {
+  h4,.h4,.s-delievery-head__item-title,.s-delievery-var__item,.s-block__title,.accordion__item-title {
     font-size: 1.25rem;
   }
 
@@ -9596,7 +9613,7 @@ a {
     font-size: 2.125rem;
   }
 
-  h4,.h4,.s-delievery-head__item-title,.s-delievery-var__item,.s-block__title,.s-prod-body__item-title {
+  h4,.h4,.s-delievery-head__item-title,.s-delievery-var__item,.s-block__title,.accordion__item-title {
     font-size: 1.5rem;
   }
 
@@ -10623,11 +10640,11 @@ a {
     padding: 4.375rem 120px 4.375rem 50px;
   }
 
-  .s-prod-body__plus {
+  .accordion__plus {
     right: 4rem;
   }
 
-  .s-prod-body__img-wrap {
+  .accordion__img-wrap {
     width: 300px;
     height: 300px;
   }
