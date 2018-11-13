@@ -312,440 +312,7 @@ var $li = $('.nav__item--has-children').hover(
 
 
 // анимация на главной вверху
-// MIT license
-// By @nodws with github.com/greensock/GreenSock-JS, see more examples at greensock.com/examples-showcases
-(function() {
-	var lastTime = 0;
-	var vendors = ['ms', 'moz', 'webkit', 'o'];
-	for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-		window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-		window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
-			|| window[vendors[x]+'CancelRequestAnimationFrame'];
-	}
-
-	if (!window.requestAnimationFrame)
-		window.requestAnimationFrame = function(callback, element) {
-			var currTime = new Date().getTime();
-			var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-			var id = window.setTimeout(function() { callback(currTime + timeToCall); },
-				timeToCall);
-			lastTime = currTime + timeToCall;
-			return id;
-		};
-
-	if (!window.cancelAnimationFrame)
-		window.cancelAnimationFrame = function(id) {
-			clearTimeout(id);
-		};
-}());
-
-function anim1(){
-
-
-
-
-	(function() {
-
-    var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
-
-    // Main
-    initHeader();
-    initAnimation();
-    addListeners();
-
-    function initHeader() {
-			
-			largeHeader = $('.large-header');
-			width = $(".animate-block").width();
-			height = $(".animate-block").height();
-			target = {x: width/2, y: height/2};
-//  
-      // largeHeader.style.height = height+'px';
-
-        canvas = largeHeader.find('.x-canvas')[0];
-        canvas.width = width;
-        canvas.height = height;
-        ctx = canvas.getContext('2d');
-
-        // create points
-        points = [];
-        var puntitos=6;
-        for(var x = 0; x < width; x = x + width/puntitos) {
-            for(var y = 0; y < height; y = y + height/puntitos) {
-                var px = x + Math.random()*width/puntitos;
-                var py = y + Math.random()*height/puntitos;
-                var p = {x: px, originX: px, y: py, originY: py };
-                points.push(p);
-            }
-        }
-
-        // for each point find the 5 closest points
-        for(var i = 0; i < points.length; i++) {
-            var closest = [];
-            var p1 = points[i];
-            for(var j = 0; j < points.length; j++) {
-                var p2 = points[j]
-                if(!(p1 == p2)) {
-                    var placed = false;
-                    for(var k = 0; k < 5; k++) {
-                        if(!placed) {
-                            if(closest[k] == undefined) {
-                                closest[k] = p2;
-                                placed = true;
-                            }
-                        }
-                    }
-
-                    for(var k = 0; k < 5; k++) {
-                        if(!placed) {
-                            if(getDistance(p1, p2) < getDistance(p1, closest[k])) {
-                                closest[k] = p2;
-                                placed = true;
-                            }
-                        }
-                    }
-                }
-            }
-            p1.closest = closest;
-        }
-
-        // assign a circle to each point
-        for(var i in points) {
-            var c = new Circle(points[i], 2+Math.random()*2, 'rgba(200,200,255,255)');
-            points[i].circle = c;
-        }
-    }
-
-    // Event handling
-    function addListeners() {
-        if(!('ontouchstart' in window)) {
-            window.addEventListener('mousemove', mouseMove);
-        }
-        window.addEventListener('scroll', scrollCheck);
-        window.addEventListener('resize', resize);
-    }
-
-    function mouseMove(e) {
-        var posx = posy = 0;
-        if (e.pageX || e.pageY) {
-            posx = e.pageX;
-            posy = e.pageY;
-        }
-        else if (e.clientX || e.clientY)    {
-            posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-            posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-        }
-        target.x = posx;
-        target.y = posy;
-    }
-
-    function scrollCheck() {
-        if(document.body.scrollTop > height) animateHeader = false;
-        else animateHeader = true;
-    }
-
-    function resize() {
-				width = $(".animate-block").width();
-				height = $(".animate-block").height();
-        // largeHeader.style.height = height+'px';
-        canvas.width = width;
-        canvas.height = height;
-    }
-
-    // animation
-    function initAnimation() {
-        animate();
-        for(var i in points) {
-            shiftPoint(points[i]);
-        }
-    }
-
-    function animate() {
-        if(animateHeader) {
-            ctx.clearRect(0,0,width,height);
-            for(var i in points) {
-                // detect points in range
-                if(Math.abs(getDistance(target, points[i])) < 4000) {
-                    points[i].active = 0.5;
-                    points[i].circle.active = 0.5;
-                } else if(Math.abs(getDistance(target, points[i])) < 10000) {
-                    points[i].active = 0.3;
-                    points[i].circle.active = 0.3;
-                } else if(Math.abs(getDistance(target, points[i])) < 100000) {
-                    points[i].active = 0.2;
-                    points[i].circle.active = 0.2;
-                } else {
-                    points[i].active = 0.1;
-                    points[i].circle.active = 0.1;
-                }
-
-                drawLines(points[i]);
-                points[i].circle.draw();
-            }
-        }
-        requestAnimationFrame(animate);
-    }
-
-    function shiftPoint(p) {
-        TweenLite.to(p, 1+1*Math.random(), {x:p.originX-50+Math.random()*50,
-            y: p.originY-50+Math.random()*50, ease:Circ.easeInOut,
-            onComplete: function() {
-                shiftPoint(p);
-            }});
-    }
-
-    // Canvas manipulation
-    function drawLines(p) {
-        if(!p.active) return;
-        for(var i in p.closest) {
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(p.closest[i].x, p.closest[i].y);
-            ctx.strokeStyle = 'rgba(12,149,237,'+ p.active+')';
-            ctx.stroke();
-        }
-    }
-
-    function Circle(pos,rad,color) {
-        var _this = this;
-
-        // constructor
-        (function() {
-            _this.pos = pos || null;
-            _this.radius = rad || null;
-            _this.color = color || null;
-        })();
-
-        this.draw = function() {
-            if(!_this.active) return;
-            ctx.beginPath();
-            ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(95,155,155,'+ _this.active+')';
-            ctx.fill();
-        };
-    }
-
-    // Util
-    function getDistance(p1, p2) {
-        return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
-    }
-
-})();
-}
-// anim1();
-////////////////////////////////////////////////////////////////////
-
-
-// MIT license
-// By @nodws with github.com/greensock/GreenSock-JS, see more examples at greensock.com/examples-showcases
- 
-
-function anim2(){
-	(function() {
-
-		var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
-
-		// Main
-		initHeader();
-		initAnimation();
-		addListeners();
-
-		function initHeader() {
-				largeHeader = $('.large-header--blur');
-				width = $('.large-header--blur').width();
-				height = $('.large-header--blur').height(); 
-				target = {x: width/2, y: height/2};
-
-				largeHeader = $('.large-header--blur');
-
-			// largeHeader.style.height = height+'px';
-
-				canvas = largeHeader.find('.x-canvas--blur')[0];
-				canvas.width = width;
-				canvas.height = height;
-				ctx = canvas.getContext('2d');
-
-				// create points
-				points = [];
-				var puntitos=20;
-				for(var x = 0; x < width; x = x + width/puntitos) {
-						for(var y = 0; y < height; y = y + height/puntitos) {
-								var px = x + Math.random()*width/puntitos;
-								var py = y + Math.random()*height/puntitos;
-								var p = {x: px, originX: px, y: py, originY: py };
-								points.push(p);
-						}
-				}
-
-				// for each point find the 5 closest points
-				for(var i = 0; i < points.length; i++) {
-						var closest = [];
-						var p1 = points[i];
-						for(var j = 0; j < points.length; j++) {
-								var p2 = points[j]
-								if(!(p1 == p2)) {
-										var placed = false;
-										for(var k = 0; k < 5; k++) {
-												if(!placed) {
-														if(closest[k] == undefined) {
-																closest[k] = p2;
-																placed = true;
-														}
-												}
-										}
-
-										for(var k = 0; k < 5; k++) {
-												if(!placed) {
-														if(getDistance(p1, p2) < getDistance(p1, closest[k])) {
-																closest[k] = p2;
-																placed = true;
-														}
-												}
-										}
-								}
-						}
-						p1.closest = closest;
-				}
-
-				// assign a circle to each point
-				for(var i in points) {
-						var c = new Circle(points[i], 2+Math.random()*2, 'rgba(200,200,255,255)');
-						points[i].circle = c;
-				}
-		}
-
-		// Event handling
-		function addListeners() {
-				if(!('ontouchstart' in largeHeader[0])) {
-						largeHeader[0].addEventListener('mousemove', mouseMove);
-				}
-				largeHeader[0].addEventListener('scroll', scrollCheck);
-				largeHeader[0].addEventListener('resize', resize);
-		}
-
-		function mouseMove(e) {
-				var posx = posy = 0;
-				if (e.pageX || e.pageY) {
-						posx = e.pageX;
-						posy = e.pageY;
-				}
-				else if (e.clientX || e.clientY)    {
-						posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-						posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
-				}
-				target.x = posx;
-				target.y = posy;
-		}
-
-		function scrollCheck() {
-				if(document.body.scrollTop > height) animateHeader = false;
-				else animateHeader = true;
-		}
-
-		function resize() {
-				// largeHeader = $('.large-header--blur');
-				width = $('.large-header--blur').width();
-				height = $('.large-header--blur').height(); 
-				canvas.width = width;
-				canvas.height = height;
-		}
-
-		// animation
-		function initAnimation() {
-				animate();
-				for(var i in points) {
-						shiftPoint(points[i]);
-				}
-		}
-
-		function animate() {
-				if(animateHeader) {
-						ctx.clearRect(0,0,width,height);
-						for(var i in points) {
-								// detect points in range
-								if(Math.abs(getDistance(target, points[i])) < 4000) {
-										points[i].active = 0.4;
-										points[i].circle.active = 0.9;
-								} else if(Math.abs(getDistance(target, points[i])) < 60000) {
-										points[i].active = 0.3;
-										points[i].circle.active = 0.3;
-								} else if(Math.abs(getDistance(target, points[i])) < 100000) {
-										points[i].active = 0.1;
-										points[i].circle.active = 0.1;
-								} else {
-										points[i].active = 0.06;
-										points[i].circle.active = 0.05;
-								}
-
-								drawLines(points[i]);
-								points[i].circle.draw();
-						}
-				}
-				requestAnimationFrame(animate);
-		}
-
-		function shiftPoint(p) {
-				TweenLite.to(p, 1+1*Math.random(), {x:p.originX-50+Math.random()*50,
-						y: p.originY-50+Math.random()*50, ease:Circ.easeInOut,
-						onComplete: function() {
-								shiftPoint(p);
-						}});
-		}
-
-		// Canvas manipulation
-		function drawLines(p) {
-				if(!p.active) return;
-				for(var i in p.closest) {
-						ctx.beginPath();
-						ctx.moveTo(p.x, p.y);
-						ctx.lineTo(p.closest[i].x, p.closest[i].y);
-						ctx.strokeStyle = 'rgba(12,149,277,'+ p.active+')';
-						ctx.stroke();
-				}
-		}
-
-		function Circle(pos,rad,color) {
-				var _this = this;
-
-				// constructor
-				(function() {
-						_this.pos = pos || null;
-						_this.radius = rad || null;
-						_this.color = color || null;
-				})();
-
-				this.draw = function() {
-						if(!_this.active) return;
-						ctx.beginPath();
-						ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-						ctx.fillStyle = 'rgba(255,255,255,'+ _this.active+')';
-						ctx.fill();
-				};
-		}
-
-		// Util
-		function getDistance(p1, p2) {
-				return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
-		}
-
-	})();
-
-}
-// anim2();
-
-// var canvasDiv = $('#particle-canvas')[0];
-// var options = {
-//   particleColor: '#0c95ed',
-// 	background: '#fff',
-//   interactive: true,
-//   speed: 'fast',
-//   density: 'high'
-// };
-// var particleCanvas = new ParticleNetwork(canvasDiv, options);
-
-
-
-/* ---- particles.js config ---- */
+  
 
 /* ---- particles.js config ---- */
 
@@ -800,7 +367,7 @@ particlesJS("particles-js", {
     "line_linked": {
       "enable": true,
       "distance": 150,
-      "color": "#0c95ed",
+      "color": "#56b7f6",
       "opacity": 0.4,
       "width": 1
     },
@@ -824,7 +391,7 @@ particlesJS("particles-js", {
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "grab"
+        "mode": "repulse"
       },
       "onclick": {
         "enable": true,
@@ -847,7 +414,7 @@ particlesJS("particles-js", {
         "speed": 3
       },
       "repulse": {
-        "distance": 600,
+        "distance": 100,
         "duration": 0.4
       },
       "push": {
@@ -863,3 +430,290 @@ particlesJS("particles-js", {
 
 
  
+// particlesJS("blur-particles-js", {
+//   "particles": {
+//     "number": {
+//       "value": 120,
+//       "density": {
+//         "enable": true,
+//         "value_area": 900
+//       }
+//     },
+//     "color": {
+//       "value": "#fff"
+//     },
+  
+//     "opacity": {
+//       "value": 0,
+//       "random": false,
+//       "anim": {
+//         "enable": false,
+//         "speed": 1,
+//         "opacity_min": 0,
+//         "sync": false
+//       }
+//     },
+//     "size": {
+//       "value": 3,
+//       "random": true,
+//       "anim": {
+//         "enable": false,
+//         "speed": 40,
+//         "size_min": 0.1,
+//         "sync": false
+//       }
+//     },
+//     "line_linked": {
+//       "enable": true,
+//       "distance": 150,
+//       "color": "#56b7f6",
+//       "opacity": 0,
+//       "width": 1
+//     },
+//     "move": {
+//       "enable": true,
+//       "speed": 6,
+//       "direction": "none",
+//       "random": false,
+//       "straight": false,
+//       "out_mode": "in",
+//       "bounce": true,
+//       "attract": {
+//         "enable": true,
+//         "rotateX": 1200,
+//         "rotateY": 1200
+//       }
+//     }
+//   },
+//   "interactivity": {
+//     "detect_on": "canvas",
+//     "events": {
+//       "onhover": {
+//         "enable": true,
+//         "mode": "bubble"
+//       },
+//       "onclick": {
+//         "enable": true,
+//         "mode": "push"
+//       },
+//       "resize": true
+//     },
+//     "modes": {
+//       "grab": {
+//         "distance": 240,
+//         "line_linked": {
+//           "opacity": 1
+//         }
+//       },
+//       "bubble": {
+//         "distance": 400,
+//         "size": 3,
+//         "duration": 5,
+//         "opacity": .8,
+//         "speed": 5
+//       },
+//       "repulse": {
+//         "distance": 600,
+//         "duration": 0.4
+//       },
+//       "push": {
+//         "particles_nb": 4
+//       },
+//       "remove": {
+//         "particles_nb": 2
+//       }
+//     }
+//   },
+//   "retina_detect": true
+// });
+
+
+////////////////////////////////////
+
+
+(function() {
+
+  var canvas, ctx, circ, nodes, mouse, SENSITIVITY, SIBLINGS_LIMIT, DENSITY, NODES_QTY, ANCHOR_LENGTH, MOUSE_RADIUS;
+
+  // how close next node must be to activate connection (in px)
+  // shorter distance == better connection (line width)
+  SENSITIVITY = 300;
+  // note that siblings limit is not 'accurate' as the node can actually have more connections than this value that's because the node accepts sibling nodes with no regard to their current connections this is acceptable because potential fix would not result in significant visual difference 
+  // more siblings == bigger node
+  SIBLINGS_LIMIT = 10;
+  // default node margin
+  DENSITY = 50;
+  // total number of nodes used (incremented after creation)
+  NODES_QTY = 0;
+  // avoid nodes spreading
+  ANCHOR_LENGTH = 20;
+  // highlight radius
+  MOUSE_RADIUS = 200;
+
+  circ = 2 * Math.PI;
+  nodes = [];
+
+  canvas = document.querySelector('.x-canvas');
+  resizeWindow();
+  mouse = {
+    x: canvas.width / 2,
+    y: canvas.height / 2
+  };
+  ctx = canvas.getContext('2d');
+  if (!ctx) {
+    alert("Ooops! Your browser does not support canvas :'(");
+  }
+
+  function Node(x, y) {
+    this.anchorX = x;
+    this.anchorY = y;
+    this.x = Math.random() * (x - (x - ANCHOR_LENGTH)) + (x - ANCHOR_LENGTH);
+    this.y = Math.random() * (y - (y - ANCHOR_LENGTH)) + (y - ANCHOR_LENGTH);
+    this.vx = Math.random() * 2 - 1;
+    this.vy = Math.random() * 2 - 1;
+    this.energy = Math.random() * 100;
+    this.radius = Math.random();
+    this.siblings = [];
+    this.brightness = 0;
+  }
+
+  Node.prototype.drawNode = function() {
+    var color = "rgba(255, 0, 0, " + this.brightness + ")";
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, 2 * this.radius + 2 * this.siblings.length / SIBLINGS_LIMIT, 0, circ);
+    ctx.fillStyle = color;
+    ctx.fill();
+  };
+
+  Node.prototype.drawConnections = function() {
+    for (var i = 0; i < this.siblings.length; i++) {
+      var color = "rgba(255, 0, 0, " + this.brightness + ")";
+      ctx.beginPath();
+      ctx.moveTo(this.x, this.y);
+      ctx.lineTo(this.siblings[i].x, this.siblings[i].y);
+      ctx.lineWidth = 1 - calcDistance(this, this.siblings[i]) / SENSITIVITY;
+      ctx.strokeStyle = color;
+      ctx.stroke();
+    }
+  };
+
+  Node.prototype.moveNode = function() {
+    this.energy -= 2;
+    if (this.energy < 1) {
+      this.energy = Math.random() * 100;
+      if (this.x - this.anchorX < -ANCHOR_LENGTH) {
+        this.vx = Math.random() * 2;
+      } else if (this.x - this.anchorX > ANCHOR_LENGTH) {
+        this.vx = Math.random() * -2;
+      } else {
+        this.vx = Math.random() * 4 - 2;
+      }
+      if (this.y - this.anchorY < -ANCHOR_LENGTH) {
+        this.vy = Math.random() * 2;
+      } else if (this.y - this.anchorY > ANCHOR_LENGTH) {
+        this.vy = Math.random() * -2;
+      } else {
+        this.vy = Math.random() * 4 - 2;
+      }
+    }
+    this.x += this.vx * this.energy / 100;
+    this.y += this.vy * this.energy / 100;
+  };
+
+  function initNodes() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    nodes = [];
+    for (var i = DENSITY; i < canvas.width; i += DENSITY) {
+      for (var j = DENSITY; j < canvas.height; j += DENSITY) {
+        nodes.push(new Node(i, j));
+        NODES_QTY++;
+      }
+    }
+  }
+
+  function calcDistance(node1, node2) {
+    return Math.sqrt(Math.pow(node1.x - node2.x, 2) + (Math.pow(node1.y - node2.y, 2)));
+  }
+
+  function findSiblings() {
+    var node1, node2, distance;
+    for (var i = 0; i < NODES_QTY; i++) {
+      node1 = nodes[i];
+      node1.siblings = [];
+      for (var j = 0; j < NODES_QTY; j++) {
+        node2 = nodes[j];
+        if (node1 !== node2) {
+          distance = calcDistance(node1, node2);
+          if (distance < SENSITIVITY) {
+            if (node1.siblings.length < SIBLINGS_LIMIT) {
+              node1.siblings.push(node2);
+            } else {
+              var node_sibling_distance = 0;
+              var max_distance = 0;
+              var s;
+              for (var k = 0; k < SIBLINGS_LIMIT; k++) {
+                node_sibling_distance = calcDistance(node1, node1.siblings[k]);
+                if (node_sibling_distance > max_distance) {
+                  max_distance = node_sibling_distance;
+                  s = k;
+                }
+              }
+              if (distance < max_distance) {
+                node1.siblings.splice(s, 1);
+                node1.siblings.push(node2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  function redrawScene() {
+    resizeWindow();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    findSiblings();
+    var i, node, distance;
+    for (i = 0; i < NODES_QTY; i++) {
+      node = nodes[i];
+      distance = calcDistance({
+        x: mouse.x,
+        y: mouse.y
+      }, node);
+      if (distance < MOUSE_RADIUS) {
+        node.brightness = 1 - distance / MOUSE_RADIUS;
+      } else {
+        node.brightness = 0;
+      }
+    }
+    for (i = 0; i < NODES_QTY; i++) {
+      node = nodes[i];
+      if (node.brightness) {
+        node.drawNode();
+        node.drawConnections();
+      }
+      node.moveNode();
+    }
+    requestAnimationFrame(redrawScene);
+  }
+
+  function initHandlers() {
+    document.addEventListener('resize', resizeWindow, false);
+    canvas.addEventListener('mousemove', mousemoveHandler, false);
+  }
+
+  function resizeWindow() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function mousemoveHandler(e) {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  }
+
+  initHandlers();
+  initNodes();
+  redrawScene();
+
+})();
