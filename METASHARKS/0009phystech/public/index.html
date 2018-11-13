@@ -12,34 +12,28 @@
     <meta name="theme-color" content="#0c95ed">
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="toggle-mnu toggle-mnu-1"><span></span></div>
         <div class="wrapp-hidden"> 
-          <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">Продукция </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Услуги  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Акции </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
-            </li>
-          </ul>
+          <div class="trop__logo"><a href="#"><img src="img/logo.svg" alt=""/></a>
+          </div>
+          <div class="nav">
+            <div class="nav__item"><a class="nav__link" href="#">ТЕХНОПАРК</a>
+            </div>
+            <div class="nav__item nav__item--has-children"><a class="nav__link" href="#">Услуги и сервисы</a>
+              <div class="sub-menu"><a class="sub-menu__link" href="#">Офисы</a><a class="sub-menu__link" href="#">Коворкинг</a><a class="sub-menu__link" href="#">Конгресс-центр</a><a class="sub-menu__link" href="#">Переговорные</a><a class="sub-menu__link" href="#">Спортзал</a><a class="sub-menu__link" href="#">Общепит</a><a class="sub-menu__link" href="#">Парковка</a>
+              </div>
+            </div>
+            <div class="nav__item"><a class="nav__link" href="#">МЕРОПРИЯТИЯ</a>
+            </div>
+            <div class="nav__item"><a class="nav__link" href="#">Контакты </a>
+            </div>
+          </div>
           <div class="text-right"></div>
         </div>
       </div>
@@ -49,66 +43,153 @@
         <!-- start top-nav-->
         <div class="top-nav">
           <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-              </li>
-            </ul>
+            <div class="row">
+              <div class="col-lg-auto col">
+                <div class="row">
+                  <div class="col-sm-auto">
+                    <div class="top-nav__logo"><a href="#"><img class="res-i" src="img/logo.svg" alt=""/></a>
+                    </div>
+                  </div>
+                  <div class="col-auto d-none d-md-block d-lg-none d-xxl-block">
+                    <div class="top-nav__title">
+                      МЕЖДУНАРОДНЫЙ   
+                      <nobr>НАУЧНО-ОБРАЗОВАТЕЛЬНЫЙ </nobr> КЛАСТЕР
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-none d-lg-block">
+                <div class="nav">
+                  <div class="nav__item"><a class="nav__link" href="#">ТЕХНОПАРК</a>
+                  </div>
+                  <div class="nav__item nav__item--has-children"><a class="nav__link" href="#">Услуги и сервисы</a>
+                    <div class="sub-menu"><a class="sub-menu__link" href="#">Офисы</a><a class="sub-menu__link" href="#">Коворкинг</a><a class="sub-menu__link" href="#">Конгресс-центр</a><a class="sub-menu__link" href="#">Переговорные</a><a class="sub-menu__link" href="#">Спортзал</a><a class="sub-menu__link" href="#">Общепит</a><a class="sub-menu__link" href="#">Парковка</a>
+                    </div>
+                  </div>
+                  <div class="nav__item"><a class="nav__link" href="#">МЕРОПРИЯТИЯ</a>
+                  </div>
+                  <div class="nav__item"><a class="nav__link" href="#">Контакты </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto"><a class="top-nav__btn" href="#">Обратная связь</a>
+              </div>
+              <div class="col-auto"><a class="top-nav__btn-po" href="#">
+                <svg class="icon icon-user ">
+                  <use xlink:href="img/svg/sprite.svg#user"></use>
+                </svg></a>
+              </div>
+              <div class="col-auto d-lg-none">
+                <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end top-nav-->
+        <!-- start header-block-->
+        <div class="header-block" id="header-block">
+          <div class="container">
+            <h1><span>ЗАГОЛОВОК ГЛАВНОГО СЛАЙДЕРА В&nbsp;ПАРУ СТРОК</span></h1>
+            <div class="header-block__text"><span>ПОДЗАГОЛОВОК ТАКЖЕ В ПАРУ СТРОК ДЛЯ НАГЛЯДНОСТИ ОТОБРАДЕНИЯ КОНЕТЕНТА</span>
+            </div>
+          </div>
+        </div>
+        <!-- end header-block-->
       </header>
       <!-- end HEADER.header-->
-      <!-- start header-block-->
-      <div class="header-block" id="header-block">
-        <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+      <div class="animate-block">
+        <div class="large-header" id="large-header">
+          <canvas class="x-canvas" id="x-canvas"></canvas>
         </div>
-      </div>
-      <!-- end header-block-->
-      <!-- start s-about-->
-      <div class="s-about section" id="s-about">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-about</h2>
+        <!-- start s-about-->
+        <div class="s-about section" id="s-about">
+          <div class="container">
+            <div class="row">
+              <div class="s-about__col col-xl-auto">
+                <div class="section-title">
+                  <h2>ФИЗТЕХПАРК</h2>
+                </div>
+                <div class="s-about__text">Физтехпарк&nbsp;&mdash; московский технопарк в&nbsp;сфере высоких технологий, который объединяет на&nbsp;своей площадке как крупные&nbsp;IT корпорации, так и&nbsp;молодые перспективные компании, и&nbsp;предоставляет все условия для их&nbsp;быстрого развития.
+                </div>
+              </div>
+              <div class="col">
+                <div class="s-about__img-wrap img-bg" style="background-image: url(img/about-img.jpg);"><img src="img/about-img.jpg" alt=""/>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row"></div>
         </div>
-      </div>
-      <!-- end s-about-->
-      <!-- start s-block-->
-      <div class="s-block section" id="s-block">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-block</h2>
+        <!-- end s-about-->
+        <!-- start s-block-->
+        <div class="s-block section" id="s-block">
+          <div class="container">
+            <div class="row no-gutters">
+                  <div class="s-block__col col-lg">
+                    <div class="s-block__item">
+                      <div class="s-block__img-bg" style="background-image: url(img/about-img-1.jpg)">
+                      </div>
+                      <div class="s-block__item-head">
+                        <div class="s-block__item-title"><span>Компаниям  и&nbsp;стартапам</span>
+                        </div>
+                        <div class="s-block__item-caption">
+                        </div>
+                        <div class="s-block__item-text">Физтехпарк&nbsp;&mdash; московский технопарк в&nbsp;сфере высоких технологий, который объединяет на&nbsp;своей площадке как
+                        </div>
+                      </div><a class="s-block__btn" href="#">ПОДРОБНЕЕ</a>
+                    </div>
+                  </div>
+                  <!-- +e.col.col-lg-->
+                  <div class="s-block__col col-lg">
+                    <div class="s-block__item">
+                      <div class="s-block__img-bg" style="background-image: url(img/about-img-2.jpg)">
+                      </div>
+                      <div class="s-block__item-head">
+                        <div class="s-block__item-title"><span>Партнерам  и&nbsp;инвесторам</span>
+                        </div>
+                        <div class="s-block__item-caption">
+                        </div>
+                        <div class="s-block__item-text">Физтехпарк&nbsp;&mdash; московский технопарк в&nbsp;сфере высоких технологий, который объединяет на&nbsp;своей площадке как
+                        </div>
+                      </div><a class="s-block__btn" href="#">ПОДРОБНЕЕ</a>
+                    </div>
+                  </div>
+                  <!-- +e.col.col-lg-->
+                  <div class="s-block__col col-lg">
+                    <div class="s-block__item">
+                      <div class="s-block__img-bg" style="background-image: url(img/about-img-3.jpg)">
+                      </div>
+                      <div class="s-block__item-head">
+                        <div class="s-block__item-title"><span>Посетителям</span>
+                        </div>
+                        <div class="s-block__item-caption">
+                        </div>
+                        <div class="s-block__item-text">Физтехпарк&nbsp;&mdash; московский технопарк в&nbsp;сфере высоких технологий, который объединяет на&nbsp;своей площадке как
+                        </div>
+                      </div><a class="s-block__btn" href="#">ПОДРОБНЕЕ</a>
+                    </div>
+                  </div>
+                  <!-- +e.col.col-lg-->
+            </div>
           </div>
-          <div class="row"></div>
         </div>
+        <!-- end s-block-->
       </div>
-      <!-- end s-block-->
       <!-- start s-infrastructure-->
       <div class="s-infrastructure section" id="s-infrastructure">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-infrastructure</h2>
+            <div class="row">
+              <div class="col-auto">
+                <h2 class="text-white">Услуги и сервисы</h2>
+              </div>
+              <div class="col-auto"><a class="section-title__btn" href="#">Подробнее</a>
+              </div>
+            </div>
           </div>
-          <div class="row"></div>
+          <div class="row">
+            <div class="col-7"></div>
+            <div class="col"></div>
+          </div>
         </div>
       </div>
       <!-- end s-infrastructure-->
@@ -196,6 +277,11 @@
     <script src="libs/slick/slick.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
     <script src="libs/jquery.touchSwipe.min.js"></script>
+    <script src="libs/TweenMax.js"></script>
+    <script src="libs/jquery.mask.min.js"></script>
+    <script src="libs/TweenLite.min.js"></script>
+    <script src="libs/jquery.requestAnimationFrame.min.js"></script>
+    <script src="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
     <script src="js/common.js"></script>
   </body>
