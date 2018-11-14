@@ -3,8 +3,8 @@ jQuery(document).ready(function ($) {
 	// для свг
 	svg4everybody({});
 	// Custom JS
- 
-	$(".wrapp-hidden .nav__item--has-children > a").click(function(e){
+
+	$(".wrapp-hidden .nav__item--has-children > a").click(function (e) {
 		e.preventDefault();
 		$(this).next().slideToggle();
 	})
@@ -116,11 +116,10 @@ jQuery(document).ready(function ($) {
 	};
 	tabscostume('tab');
 
-		// адаптивные табы
-		$('.resp-tabs-js').easyResponsiveTabs({
-			activate: function() {
-			}
-		});
+	// адаптивные табы
+	$('.resp-tabs-js').easyResponsiveTabs({
+		activate: function () {}
+	});
 
 
 	var icon = '<svg viewBox="0 0 28 54"  fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M27 1L1 27L27 53"  /> ';
@@ -128,7 +127,7 @@ jQuery(document).ready(function ($) {
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// карусель
-	function tabslider(){
+	function tabslider() {
 
 		$('.s-infrastructure__slider--js').slick({
 			slidesToShow: 1,
@@ -138,30 +137,78 @@ jQuery(document).ready(function ($) {
 			infinite: true,
 			loop: true,
 			arrows: false,
-			
+
 		});
-		$('.s-infrastructure__slider--js')
-		.on('lazyLoaded', function(event, slick, image, imageSource){
+		$('.s-infrastructure__slider--js ')
+			.on('lazyLoaded', function (event, slick, image, imageSource) {
 				image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-		});
+			});
 	}
 	tabslider();
 
 	$('.s-main-calendar__slider--js').slick({
 		slidesToShow: 1,
-		slidesToScroll: 1, 
+		slidesToScroll: 1,
 		speed: 450,
 		infinite: true,
 		loop: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
-		
+
 	});
-	
+
 	$('.s-logos__slider--js').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		
+
+		speed: 450,
+		infinite: true,
+		loop: true,
+		mobileFirst: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		responsive: [{
+				breakpoint: 1440,
+				settings: {
+					slidesToShow: 6
+				}
+			},
+
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 5
+				}
+			},
+
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4
+				}
+			},
+
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+
+			{
+				breakpoint: 375,
+				settings: {
+					slidesToShow: 2
+				}
+			}
+
+		]
+	});
+
+
+	$('.s-news__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
 		speed: 450,
 		infinite: true,
 		loop: true,
@@ -169,52 +216,35 @@ jQuery(document).ready(function ($) {
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 		responsive: [
-			{
-				breakpoint: 1440,
-				settings: { 
-					slidesToShow: 6
-				}
-			},
-			
+
 			{
 				breakpoint: 1200,
-				settings: { 
-					slidesToShow: 5
-				}
-			},
-			
-			{
-				breakpoint: 992,
-				settings: { 
-					slidesToShow: 4
-				}
-			},
-			
-			{
-				breakpoint: 768,
-				settings: { 
+				settings: {
 					slidesToShow: 3
 				}
 			},
 
 			{
-				breakpoint: 375,
-				settings: { 
+				breakpoint: 768,
+				settings: {
 					slidesToShow: 2
 				}
-			} 
+			}
 
 		]
 	});
 
 
+	$(' .s-news__slider--js')
+		.on('lazyLoaded', function (event, slick, image, imageSource) {
+			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+		});
 
-
-	$(".resp-accordion, .s-infrastructure__tab-btn").click(function(){
+	$(".resp-accordion, .s-infrastructure__tab-btn").click(function () {
 		$('.s-infrastructure__slider--js').slick('unslick')
 		tabslider();
 	})
- 
+
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -255,7 +285,7 @@ jQuery(document).ready(function ($) {
 	})
 	// /modal галерея
 
- 
+
 
 	// mask for input
 	var customOptions = {
@@ -333,7 +363,7 @@ jQuery(document).ready(function ($) {
 		})
 	})
 
- 
+
 	// $(".wow-wrap").each(function () {
 	// var wowAnim = $(this).find(".s-dop__col," +
 	//                 ".s-pick__col," +
@@ -348,332 +378,346 @@ jQuery(document).ready(function ($) {
 	// });
 	// });
 
+
+	var $li = $('.nav__item--has-children').hover(
+		function () {
+			var self = this;
+			hovertimer = setTimeout(function () {
+				$(self).addClass('hover-block');
+				// $("html, .top-nav.fixed").addClass("fixed-brand");
+			}, 500);
+		},
+		function () {
+			clearTimeout(hovertimer);
+			$li.removeClass('hover-block');
+			// $("html, .top-nav.fixed").removeClass("fixed-brand");
+		}
+	);
+
+	
+				// для плаваюещего label
+					// для плаваюещего label
  
-var $li = $('.nav__item--has-children').hover(
-	function () {
-		var self = this;
-		hovertimer = setTimeout(function () {
-			$(self).addClass('hover-block');
-			// $("html, .top-nav.fixed").addClass("fixed-brand");
-		}, 500);
-	},
-	function () {
-		clearTimeout(hovertimer);
-		$li.removeClass('hover-block');
-		// $("html, .top-nav.fixed").removeClass("fixed-brand");
-	}
-);
+	// для плаваюещего label
+ 
+	
+	$('input, textarea').not('[type="radio"]').not('[type="checkbox"]').each(function(){
+
+		if ($(this).val().trim() == '') { 
+			$(this).closest('label').addClass('empty');
+		}   
+	})
+	$('input, textarea').not('[type="radio"]').not('[type="checkbox"]').keyup(function () {
+		if ($(this).val().trim() !== '') {
+			$(this).closest('label').removeClass('empty');
+		} else {
+			$(this).closest('label').addClass('empty');
+		}
+	});
+	// анимация на главной вверху
 
 
+	/* ---- particles.js config ---- */
 
-// анимация на главной вверху
-  
-
-/* ---- particles.js config ---- */
-
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 100,
-      "density": {
-        "enable": true,
-        "value_area": 900
-      }
-    },
-    "color": {
-      "value": "#a3cde8"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 2
+	particlesJS("particles-js", {
+		"particles": {
+			"number": {
+				"value": 100,
+				"density": {
+					"enable": true,
+					"value_area": 900
+				}
+			},
+			"color": {
+				"value": "#a3cde8"
+			},
+			"shape": {
+				"type": "circle",
+				"stroke": {
+					"width": 0,
+					"color": "#000000"
+				},
+				"polygon": {
+					"nb_sides": 2
+				}
+				// ,
+				// "image": {
+				//   "src": "img/github.svg",
+				//   "width": 1000,
+				//   "height": 1000
+				// }
+			},
+			"opacity": {
+				"value": 0.5,
+				"random": false,
+				"anim": {
+					"enable": false,
+					"speed": 1,
+					"opacity_min": 0.1,
+					"sync": false
+				}
+			},
+			"size": {
+				"value": 3,
+				"random": true,
+				"anim": {
+					"enable": false,
+					"speed": 40,
+					"size_min": 0.1,
+					"sync": false
+				}
+			},
+			"line_linked": {
+				"enable": true,
+				"distance": 150,
+				"color": "#56b7f6",
+				"opacity": 0.4,
+				"width": 1
+			},
+			"move": {
+				"enable": true,
+				"speed": 6,
+				"direction": "none",
+				"random": false,
+				"straight": false,
+				"out_mode": "out",
+				"bounce": false,
+				"attract": {
+					"enable": false,
+					"rotateX": 600,
+					"rotateY": 1200
+				}
 			}
-			// ,
-      // "image": {
-      //   "src": "img/github.svg",
-      //   "width": 1000,
-      //   "height": 1000
-      // }
-    },
-    "opacity": {
-      "value": 0.5,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 1,
-        "opacity_min": 0.1,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 3,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#56b7f6",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 6,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 240,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 400,
-        "size": 100,
-        "duration": 2,
-        "opacity": 8,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 100,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-});
+		},
+		"interactivity": {
+			"detect_on": "canvas",
+			"events": {
+				"onhover": {
+					"enable": true,
+					"mode": "repulse"
+				},
+				"onclick": {
+					"enable": true,
+					"mode": "push"
+				},
+				"resize": true
+			},
+			"modes": {
+				"grab": {
+					"distance": 240,
+					"line_linked": {
+						"opacity": 1
+					}
+				},
+				"bubble": {
+					"distance": 400,
+					"size": 100,
+					"duration": 2,
+					"opacity": 8,
+					"speed": 3
+				},
+				"repulse": {
+					"distance": 100,
+					"duration": 0.4
+				},
+				"push": {
+					"particles_nb": 4
+				},
+				"remove": {
+					"particles_nb": 2
+				}
+			}
+		},
+		"retina_detect": true
+	});
+
+
+
+
+	////////////////////////////////////
+
+	// ании мация  для синего блока
+	function canvasanimate(xcanvas) {
+
+		var canvas, ctx, circ, nodes, mouse, SENSITIVITY, SIBLINGS_LIMIT, DENSITY, NODES_QTY, ANCHOR_LENGTH, MOUSE_RADIUS;
+
+		// how close next node must be to activate connection (in px)
+		// shorter distance == better connection (line width)
+		SENSITIVITY = 100;
+		// note that siblings limit is not 'accurate' as the node can actually have more connections than this value that's because the node accepts sibling nodes with no regard to their current connections this is acceptable because potential fix would not result in significant visual difference 
+		// more siblings == bigger node
+		SIBLINGS_LIMIT = 10;
+		// default node margin
+		DENSITY = 70;
+		// total number of nodes used (incremented after creation)
+		NODES_QTY = 0;
+		// avoid nodes spreading
+		ANCHOR_LENGTH = 20;
+		// highlight radius
+		MOUSE_RADIUS = 200;
+
+		circ = 2 * Math.PI;
+		nodes = [];
+
+		canvas = $(xcanvas)[0];
+		console.log(canvas);
+		resizeWindow();
+		mouse = {
+			x: canvas.width / 2,
+			y: canvas.height / 2
+		};
+		ctx = canvas.getContext('2d');
+		if (!ctx) {
+			alert("Ooops! Your browser does not support canvas :'(");
+		}
+
+		function Node(x, y) {
+			this.anchorX = x;
+			this.anchorY = y;
+			this.x = Math.random() * (x - (x - ANCHOR_LENGTH)) + (x - ANCHOR_LENGTH);
+			this.y = Math.random() * (y - (y - ANCHOR_LENGTH)) + (y - ANCHOR_LENGTH);
+			this.vx = Math.random() * 2 - 1;
+			this.vy = Math.random() * 2 - 1;
+			this.energy = Math.random() * 100;
+			this.radius = Math.random();
+			this.siblings = [];
+			this.brightness = 0;
+		}
+
+		Node.prototype.drawNode = function () {
+			var color = "rgba(255, 255, 255, " + this.brightness + ")";
+			ctx.beginPath();
+			ctx.arc(this.x, this.y, 2 * this.radius + 2 * this.siblings.length / SIBLINGS_LIMIT, 0, circ);
+			ctx.fillStyle = color;
+			ctx.fill();
+		};
 
  
 
+		Node.prototype.moveNode = function () {
+			this.energy -= 2;
+			if (this.energy < 1) {
+				this.energy = Math.random() * 100;
+				if (this.x - this.anchorX < -ANCHOR_LENGTH) {
+					this.vx = Math.random() * 2;
+				} else if (this.x - this.anchorX > ANCHOR_LENGTH) {
+					this.vx = Math.random() * -2;
+				} else {
+					this.vx = Math.random() * 4 - 2;
+				}
+				if (this.y - this.anchorY < -ANCHOR_LENGTH) {
+					this.vy = Math.random() * 2;
+				} else if (this.y - this.anchorY > ANCHOR_LENGTH) {
+					this.vy = Math.random() * -2;
+				} else {
+					this.vy = Math.random() * 4 - 2;
+				}
+			}
+			this.x += this.vx * this.energy / 100;
+			this.y += this.vy * this.energy / 100;
+		};
 
-////////////////////////////////////
+		function initNodes() {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			nodes = [];
+			for (var i = DENSITY; i < canvas.width; i += DENSITY) {
+				for (var j = DENSITY; j < canvas.height; j += DENSITY) {
+					nodes.push(new Node(i, j));
+					NODES_QTY++;
+				}
+			}
+		}
 
-// ании мация  для синего блока
-(function() {
+		function calcDistance(node1, node2) {
+			return Math.sqrt(Math.pow(node1.x - node2.x, 2) + (Math.pow(node1.y - node2.y, 2)));
+		}
 
-  var canvas, ctx, circ, nodes, mouse, SENSITIVITY, SIBLINGS_LIMIT, DENSITY, NODES_QTY, ANCHOR_LENGTH, MOUSE_RADIUS;
+		function findSiblings() {
+			var node1, node2, distance;
+			for (var i = 0; i < NODES_QTY; i++) {
+				node1 = nodes[i];
+				node1.siblings = [];
+				for (var j = 0; j < NODES_QTY; j++) {
+					node2 = nodes[j];
+					if (node1 !== node2) {
+						distance = calcDistance(node1, node2);
+						if (distance < SENSITIVITY) {
+							if (node1.siblings.length < SIBLINGS_LIMIT) {
+								node1.siblings.push(node2);
+							} else {
+								var node_sibling_distance = 0;
+								var max_distance = 0;
+								var s;
+								for (var k = 0; k < SIBLINGS_LIMIT; k++) {
+									node_sibling_distance = calcDistance(node1, node1.siblings[k]);
+									if (node_sibling_distance > max_distance) {
+										max_distance = node_sibling_distance;
+										s = k;
+									}
+								}
+								if (distance < max_distance) {
+									node1.siblings.splice(s, 1);
+									node1.siblings.push(node2);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 
-  // how close next node must be to activate connection (in px)
-  // shorter distance == better connection (line width)
-  SENSITIVITY = 300;
-  // note that siblings limit is not 'accurate' as the node can actually have more connections than this value that's because the node accepts sibling nodes with no regard to their current connections this is acceptable because potential fix would not result in significant visual difference 
-  // more siblings == bigger node
-  SIBLINGS_LIMIT = 10;
-  // default node margin
-  DENSITY = 50;
-  // total number of nodes used (incremented after creation)
-  NODES_QTY = 0;
-  // avoid nodes spreading
-  ANCHOR_LENGTH = 20;
-  // highlight radius
-  MOUSE_RADIUS = 200;
+		function redrawScene() {
+			resizeWindow();
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			findSiblings();
+			var i, node, distance;
+			for (i = 0; i < NODES_QTY; i++) {
+				node = nodes[i];
+				distance = calcDistance({
+					x: mouse.x,
+					y: mouse.y
+				}, node);
+				if (distance < MOUSE_RADIUS) {
+					node.brightness = 1 - distance / MOUSE_RADIUS;
+				} else {
+					node.brightness = 0;
+				}
+			}
+			for (i = 0; i < NODES_QTY; i++) {
+				node = nodes[i];
+				if (node.brightness) {
+					node.drawNode();
+					// node.drawConnections();
+				}
+				node.moveNode();
+			}
+			requestAnimationFrame(redrawScene);
+		}
 
-  circ = 2 * Math.PI;
-  nodes = [];
+		function initHandlers() {
+			document.addEventListener('resize', resizeWindow, false);
+			canvas.addEventListener('mousemove', mousemoveHandler, false);
+		}
 
-  canvas = $('.x-canvas')[0];
-  resizeWindow();
-  mouse = {
-    x: canvas.width / 2,
-    y: canvas.height / 2
-  };
-  ctx = canvas.getContext('2d');
-  if (!ctx) {
-    alert("Ooops! Your browser does not support canvas :'(");
-  }
+		function resizeWindow() {
+			canvas.width = window.innerWidth;
+			canvas.height = $(xcanvas).parent().innerHeight();
+			// console.log( canvas.parentNode.innerHeight);
+		}
 
-  function Node(x, y) {
-    this.anchorX = x;
-    this.anchorY = y;
-    this.x = Math.random() * (x - (x - ANCHOR_LENGTH)) + (x - ANCHOR_LENGTH);
-    this.y = Math.random() * (y - (y - ANCHOR_LENGTH)) + (y - ANCHOR_LENGTH);
-    this.vx = Math.random() * 2 - 1;
-    this.vy = Math.random() * 2 - 1;
-    this.energy = Math.random() * 100;
-    this.radius = Math.random();
-    this.siblings = [];
-    this.brightness = 0;
-  }
+		function mousemoveHandler(e) {
+			mouse.x = e.clientX;
+			mouse.y = e.clientY;
+		}
 
-  Node.prototype.drawNode = function() {
-    var color = "rgba(255, 255, 255, " + this.brightness + ")";
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, 2 * this.radius + 2 * this.siblings.length / SIBLINGS_LIMIT, 0, circ);
-    ctx.fillStyle = color;
-    ctx.fill();
-  };
+		initHandlers();
+		initNodes();
+		redrawScene();
 
-  Node.prototype.drawConnections = function() {
-    for (var i = 0; i < this.siblings.length; i++) {
-      // var color = "rgba(255, 255, 255, " + 0 + ")";
-      // ctx.beginPath();
-      // ctx.moveTo(this.x, this.y);
-      // ctx.lineTo(this.siblings[i].x, this.siblings[i].y);
-      // ctx.lineWidth = 1 - calcDistance(this, this.siblings[i]) / SENSITIVITY;
-      // ctx.strokeStyle = color;
-      // ctx.stroke();
-    }
-  };
+	};
+	// ании мация  для синего блока
 
-  Node.prototype.moveNode = function() {
-    this.energy -= 2;
-    if (this.energy < 1) {
-      this.energy = Math.random() * 100;
-      if (this.x - this.anchorX < -ANCHOR_LENGTH) {
-        this.vx = Math.random() * 2;
-      } else if (this.x - this.anchorX > ANCHOR_LENGTH) {
-        this.vx = Math.random() * -2;
-      } else {
-        this.vx = Math.random() * 4 - 2;
-      }
-      if (this.y - this.anchorY < -ANCHOR_LENGTH) {
-        this.vy = Math.random() * 2;
-      } else if (this.y - this.anchorY > ANCHOR_LENGTH) {
-        this.vy = Math.random() * -2;
-      } else {
-        this.vy = Math.random() * 4 - 2;
-      }
-    }
-    this.x += this.vx * this.energy / 100;
-    this.y += this.vy * this.energy / 100;
-  };
-
-  function initNodes() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    nodes = [];
-    for (var i = DENSITY; i < canvas.width; i += DENSITY) {
-      for (var j = DENSITY; j < canvas.height; j += DENSITY) {
-        nodes.push(new Node(i, j));
-        NODES_QTY++;
-      }
-    }
-  }
-
-  function calcDistance(node1, node2) {
-    return Math.sqrt(Math.pow(node1.x - node2.x, 2) + (Math.pow(node1.y - node2.y, 2)));
-  }
-
-  function findSiblings() {
-    var node1, node2, distance;
-    for (var i = 0; i < NODES_QTY; i++) {
-      node1 = nodes[i];
-      node1.siblings = [];
-      for (var j = 0; j < NODES_QTY; j++) {
-        node2 = nodes[j];
-        if (node1 !== node2) {
-          distance = calcDistance(node1, node2);
-          if (distance < SENSITIVITY) {
-            if (node1.siblings.length < SIBLINGS_LIMIT) {
-              node1.siblings.push(node2);
-            } else {
-              var node_sibling_distance = 0;
-              var max_distance = 0;
-              var s;
-              for (var k = 0; k < SIBLINGS_LIMIT; k++) {
-                node_sibling_distance = calcDistance(node1, node1.siblings[k]);
-                if (node_sibling_distance > max_distance) {
-                  max_distance = node_sibling_distance;
-                  s = k;
-                }
-              }
-              if (distance < max_distance) {
-                node1.siblings.splice(s, 1);
-                node1.siblings.push(node2);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  function redrawScene() {
-    resizeWindow();
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    findSiblings();
-    var i, node, distance;
-    for (i = 0; i < NODES_QTY; i++) {
-      node = nodes[i];
-      distance = calcDistance({
-        x: mouse.x,
-        y: mouse.y
-      }, node);
-      if (distance < MOUSE_RADIUS) {
-        node.brightness = 1 - distance / MOUSE_RADIUS;
-      } else {
-        node.brightness = 0;
-      }
-    }
-    for (i = 0; i < NODES_QTY; i++) {
-      node = nodes[i];
-      if (node.brightness) {
-        node.drawNode();
-        // node.drawConnections();
-      }
-      node.moveNode();
-    }
-    requestAnimationFrame(redrawScene);
-  }
-
-  function initHandlers() {
-    document.addEventListener('resize', resizeWindow, false);
-    canvas.addEventListener('mousemove', mousemoveHandler, false);
-  }
-
-  function resizeWindow() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
-  function mousemoveHandler(e) {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-  }
-
-  initHandlers();
-  initNodes();
-  redrawScene();
-
-})();
+	canvasanimate('.x-canvas');
+	canvasanimate('.x-canvas-2');
 
 });
