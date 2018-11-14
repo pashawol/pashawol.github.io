@@ -490,13 +490,13 @@ particlesJS("particles-js", {
 
   Node.prototype.drawConnections = function() {
     for (var i = 0; i < this.siblings.length; i++) {
-      var color = "rgba(255, 255, 255, " + 0 + ")";
-      ctx.beginPath();
-      ctx.moveTo(this.x, this.y);
-      ctx.lineTo(this.siblings[i].x, this.siblings[i].y);
-      ctx.lineWidth = 1 - calcDistance(this, this.siblings[i]) / SENSITIVITY;
-      ctx.strokeStyle = color;
-      ctx.stroke();
+      // var color = "rgba(255, 255, 255, " + 0 + ")";
+      // ctx.beginPath();
+      // ctx.moveTo(this.x, this.y);
+      // ctx.lineTo(this.siblings[i].x, this.siblings[i].y);
+      // ctx.lineWidth = 1 - calcDistance(this, this.siblings[i]) / SENSITIVITY;
+      // ctx.strokeStyle = color;
+      // ctx.stroke();
     }
   };
 
@@ -593,7 +593,7 @@ particlesJS("particles-js", {
       node = nodes[i];
       if (node.brightness) {
         node.drawNode();
-        node.drawConnections();
+        // node.drawConnections();
       }
       node.moveNode();
     }
