@@ -428,104 +428,7 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 
-
  
-// particlesJS("blur-particles-js", {
-//   "particles": {
-//     "number": {
-//       "value": 120,
-//       "density": {
-//         "enable": true,
-//         "value_area": 900
-//       }
-//     },
-//     "color": {
-//       "value": "#fff"
-//     },
-  
-//     "opacity": {
-//       "value": 0,
-//       "random": false,
-//       "anim": {
-//         "enable": false,
-//         "speed": 1,
-//         "opacity_min": 0,
-//         "sync": false
-//       }
-//     },
-//     "size": {
-//       "value": 3,
-//       "random": true,
-//       "anim": {
-//         "enable": false,
-//         "speed": 40,
-//         "size_min": 0.1,
-//         "sync": false
-//       }
-//     },
-//     "line_linked": {
-//       "enable": true,
-//       "distance": 150,
-//       "color": "#56b7f6",
-//       "opacity": 0,
-//       "width": 1
-//     },
-//     "move": {
-//       "enable": true,
-//       "speed": 6,
-//       "direction": "none",
-//       "random": false,
-//       "straight": false,
-//       "out_mode": "in",
-//       "bounce": true,
-//       "attract": {
-//         "enable": true,
-//         "rotateX": 1200,
-//         "rotateY": 1200
-//       }
-//     }
-//   },
-//   "interactivity": {
-//     "detect_on": "canvas",
-//     "events": {
-//       "onhover": {
-//         "enable": true,
-//         "mode": "bubble"
-//       },
-//       "onclick": {
-//         "enable": true,
-//         "mode": "push"
-//       },
-//       "resize": true
-//     },
-//     "modes": {
-//       "grab": {
-//         "distance": 240,
-//         "line_linked": {
-//           "opacity": 1
-//         }
-//       },
-//       "bubble": {
-//         "distance": 400,
-//         "size": 3,
-//         "duration": 5,
-//         "opacity": .8,
-//         "speed": 5
-//       },
-//       "repulse": {
-//         "distance": 600,
-//         "duration": 0.4
-//       },
-//       "push": {
-//         "particles_nb": 4
-//       },
-//       "remove": {
-//         "particles_nb": 2
-//       }
-//     }
-//   },
-//   "retina_detect": true
-// });
 
 
 ////////////////////////////////////
@@ -553,7 +456,7 @@ particlesJS("particles-js", {
   circ = 2 * Math.PI;
   nodes = [];
 
-  canvas = document.querySelector('.x-canvas');
+  canvas = $('.x-canvas')[0];
   resizeWindow();
   mouse = {
     x: canvas.width / 2,
@@ -578,7 +481,7 @@ particlesJS("particles-js", {
   }
 
   Node.prototype.drawNode = function() {
-    var color = "rgba(255, 0, 0, " + this.brightness + ")";
+    var color = "rgba(255, 255, 255, " + this.brightness + ")";
     ctx.beginPath();
     ctx.arc(this.x, this.y, 2 * this.radius + 2 * this.siblings.length / SIBLINGS_LIMIT, 0, circ);
     ctx.fillStyle = color;
@@ -587,7 +490,7 @@ particlesJS("particles-js", {
 
   Node.prototype.drawConnections = function() {
     for (var i = 0; i < this.siblings.length; i++) {
-      var color = "rgba(255, 0, 0, " + this.brightness + ")";
+      var color = "rgba(255, 255, 255, " + 0 + ")";
       ctx.beginPath();
       ctx.moveTo(this.x, this.y);
       ctx.lineTo(this.siblings[i].x, this.siblings[i].y);
