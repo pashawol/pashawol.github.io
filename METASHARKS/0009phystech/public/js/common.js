@@ -127,6 +127,17 @@ jQuery(document).ready(function ($) {
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// карусель
+
+	$('.header-block__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: false,
+
+	});
 	function tabslider() {
 
 		$('.s-infrastructure__slider--js').slick({
@@ -425,36 +436,21 @@ jQuery(document).ready(function ($) {
 				"value": 100,
 				"density": {
 					"enable": true,
-					"value_area": 900
+					"value_area": 1000
 				}
 			},
 			"color": {
 				"value": "#a3cde8"
 			},
-			"shape": {
-				"type": "circle",
-				"stroke": {
-					"width": 0,
-					"color": "#000000"
-				},
-				"polygon": {
-					"nb_sides": 2
-				}
-				// ,
-				// "image": {
-				//   "src": "img/github.svg",
-				//   "width": 1000,
-				//   "height": 1000
-				// }
-			},
+ 
 			"opacity": {
 				"value": 0.5,
 				"random": false,
 				"anim": {
-					"enable": false,
-					"speed": 1,
+					"enable": true,
+					"speed": .5,
 					"opacity_min": 0.1,
-					"sync": false
+					"sync": true
 				}
 			},
 			"size": {
@@ -462,14 +458,14 @@ jQuery(document).ready(function ($) {
 				"random": true,
 				"anim": {
 					"enable": false,
-					"speed": 40,
+					"speed": 10,
 					"size_min": 0.1,
 					"sync": false
 				}
 			},
 			"line_linked": {
 				"enable": true,
-				"distance": 150,
+				"distance": 200,
 				"color": "#56b7f6",
 				"opacity": 0.4,
 				"width": 1

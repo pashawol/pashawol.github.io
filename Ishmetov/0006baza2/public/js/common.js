@@ -302,20 +302,13 @@ if($("div").is('.one-page-js')) {
 				// alert("Section 2 ended loading");
 
 			}
-		
-			if (destination.isLast) {
-
-				// alert("Section 2 ended loading");
-				// $(".count-block__current--js").text("0" + (destination.index));
-				// $(".top-line").addClass("bg-white");
-			} else {
+ 
 				$(".count-block__current--js").text("0" + (destination.index + 1));
-				$(".top-line").removeClass("bg-white");
-
-			}
+				// $(".top-line").removeClass("bg-white");
+ 
 			// $(".count-block__current--js, .count-block__all--js").removeClass('blick').addClass("blick");
 
-			$(".count-block__all--js").text("0" + ($(".section-js").length - 1));
+			$(".count-block__all--js").text("0" + ($(".section-js").length));
 
 			// console.log(destination.index);
 			// deleteLog = true;
@@ -422,4 +415,15 @@ window.onscroll = function () {
 	// scroll event
 	$('.aside-nav').height(window.innerHeight); //показывает действительную высоту экрана
 };
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// We listen to the resize event
+window.addEventListener('resize', () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 });

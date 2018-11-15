@@ -8377,16 +8377,6 @@ select.form-control:focus::-ms-value {
   background-color: #fff;
 }
 
-.animate-block img {
-  width: 100%;
-  max-width: 250px;
-  position: absolute;
-  top: 45%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
-
 .large-header {
   text-align: center;
 }
@@ -8407,9 +8397,9 @@ select.form-control:focus::-ms-value {
 
 .animate-block canvas {
   position: absolute;
-  left: 0;
+  right: 0;
   top: -50vh;
-  width: 100% !important;
+  width: 50% !important;
   height: -webkit-calc(100% + 50vh) !important;
   height: calc(100% + 50vh) !important;
 }
@@ -9086,18 +9076,17 @@ a {
   margin: auto;
 }
 
-.header-block {
+.header-block__slide {
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url(../img/head-bg.jpg);
   min-height: 100vh;
   height: 900px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -9114,7 +9103,7 @@ a {
   z-index: 2;
 }
 
-.header-block::before {
+.header-block__slide::before {
   content: '';
   position: absolute;
   left: 0;
