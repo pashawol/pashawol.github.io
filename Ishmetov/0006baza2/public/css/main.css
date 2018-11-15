@@ -7952,6 +7952,11 @@ a {
   width: 3.59015em;
 }
 
+.icon-arr-r {
+  font-size: 1.2rem;
+  width: 0.58333em;
+}
+
 .icon-check {
   font-size: 2.7rem;
   width: 1em;
@@ -8412,7 +8417,7 @@ a {
 
 .top-line .dropdown-item {
   width: 210px;
-  background-color: #f7f8f9;
+  background-color: #fff;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: block;
@@ -8937,6 +8942,10 @@ a {
   opacity: 1;
 }
 
+.s-content__foot {
+  padding-top: 20px;
+}
+
 .s-content__foot .row {
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -9430,6 +9439,10 @@ a {
   border-top: 1px solid  #e5e5e5;
 }
 
+.s-delievery-var + .footer {
+  background-color: #f7f8f9;
+}
+
 .s-delievery-var__item .row {
   margin-left: -0.3125rem;
   margin-right: -0.3125rem;
@@ -9672,6 +9685,7 @@ a {
 
 .s-prod-head__img-wrap {
   text-align: center;
+  margin-bottom: 1.25rem;
 }
 
 .s-prod-head__img-wrap img {
@@ -9732,6 +9746,7 @@ a {
   margin-bottom: 0;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  padding-right: 1.875rem;
   position: relative;
   cursor: pointer;
   -webkit-transition: all 0.36s;
@@ -9866,6 +9881,13 @@ a {
   height: 100%;
   background-color: #1c1d1e;
   opacity: 0.5;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+}
+
+.s-articals__item:hover::after {
+  opacity: 0.8;
 }
 
 .s-articals__text {
@@ -9965,6 +9987,11 @@ a {
   height: 12px;
 }
 
+.s-gal .slick-arrow.r svg {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
 .s-form {
   display: block;
   padding-bottom: 40px;
@@ -9977,6 +10004,15 @@ a {
 
 .s-form .form-wrap {
   max-width: 540px;
+}
+
+.one-page-js .footer {
+  position: absolute !important;
+  right: 0;
+  left: 0;
+  width: 100%;
+  display: block !important;
+  bottom: 0;
 }
 
 .footer {
@@ -11060,6 +11096,10 @@ a {
 
   .text-block__foot {
     bottom: 2.1875rem;
+  }
+
+  .s-content__foot {
+    padding-top: 60px;
   }
 
   .s-contact .text-block__btn {
@@ -14057,6 +14097,10 @@ a {
     min-height: 230px;
   }
 
+  .s-catalog .text-block {
+    padding-bottom: 3.875rem;
+  }
+
   .s-catalog {
     padding-top: 138px;
   }
@@ -15133,13 +15177,6 @@ a {
 
   .s-articals__date {
     margin-bottom: 0.9375rem;
-  }
-
-  .one-page-js .footer {
-    left: 0;
-    width: 100%;
-    display: block !important;
-    bottom: 30px;
   }
 
   .footer {

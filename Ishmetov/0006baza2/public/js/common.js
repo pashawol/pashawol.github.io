@@ -61,13 +61,15 @@ jQuery(document).ready(function ($) {
 
 
 	var icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.01 11.98"><path id="dpc6a" class="cls-1" d="M0,6.19.2,6,0,5.79,5.65,0,7,1.36,3.45,5H43V7H3.44L7,10.61,5.65,12ZM2.47,6,3,6.52V5.45Z"/></svg>';
+	
 
 	var arrl2 = (' <div class="r">' + icon),
 			arrr2 = (' <div class="l">' + icon);
 	
 	var icon2 = '<svg id="SVGDoc" width="7" height="12" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"  wBox="0 0 7 12"><defs><path d="M521.65844,879.01103l1.33118,1.36435l-4.51119,4.62431l4.51119,4.62431l-1.33118,1.36435l-5.64697,-5.78892l0.19483,-0.19974l-0.19483,-0.19974z" id="Path-0"/></defs><g transform="matrix(1,0,0,1,-516,-879)"><g><use xlink:href="#Path-0" fill="#2c2f34" fill-opacity="1"/><use xlink:href="#Path-0" fill="#1c1d1e" fill-opacity="1"/></g></g></svg>';
+	var iconr = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="12" viewBox="0 0 7 12"><defs><path id="6pi9a" d="M1792.988 884.8l-.194.2.194.2-5.647 5.788-1.33-1.364 4.51-4.624-4.51-4.625 1.33-1.364z"/></defs><g><g transform="translate(-1786 -879)"><use  xlink:href="#6pi9a"/><use  xlink:href="#6pi9a"/></g></g></svg>';
 
-	var arrl = (' <div class="r">' + icon2),
+	var arrl = (' <div class="r">' + iconr),
 			arrr = (' <div class="l">' + icon2);
 	
 	// карусель
@@ -222,7 +224,7 @@ jQuery(document).ready(function ($) {
 if($("div").is('.one-page-js')) {
 
 	new fullpage('.one-page-js', {
-		anchors: ['#footer'],
+		// anchors: ['#footer'],
 		//options here
 		navigation: false,
 		slidesNavigation: true,
@@ -237,7 +239,7 @@ if($("div").is('.one-page-js')) {
 		scrollOverflowReset: true,
 		scrollOverflowReset: true,
 
-		normalScrollElements: ".footer",
+		// normalScrollElements: ".footer",
 		onLeave: function (origin, destination, direction) {
 			var leavingSection = this;
 
@@ -304,8 +306,8 @@ if($("div").is('.one-page-js')) {
 			if (destination.isLast) {
 
 				// alert("Section 2 ended loading");
-				$(".count-block__current--js").text("0" + (destination.index));
-				$(".top-line").addClass("bg-white");
+				// $(".count-block__current--js").text("0" + (destination.index));
+				// $(".top-line").addClass("bg-white");
 			} else {
 				$(".count-block__current--js").text("0" + (destination.index + 1));
 				$(".top-line").removeClass("bg-white");
@@ -371,7 +373,10 @@ if($("div").is('.one-page-js')) {
 $(".toggle-menu--js").click(function () {
 	$("body, html").toggleClass("fixed");
 	$(".aside-nav").toggleClass('fixed')
-	.hasClass('fixed') && $("div").is('.one-page-js') ? fullpage_api.setAllowScrolling(false) : fullpage_api.setAllowScrolling(true);
+	if($("div").is('.one-page-js')) {
+
+		$(".aside-nav")	.hasClass('fixed')   ? fullpage_api.setAllowScrolling(false) : fullpage_api.setAllowScrolling(true);
+	}
 });
 $(".aside-nav__toggle-menu--js").click(function () {
 	$("body, html").removeClass("fixed");
@@ -408,7 +413,7 @@ $(document).mouseup(function (e) {
 
 // аккордион в  карточке товара
 $(".accordion__item-title").click(function(){
-	$(this).toggleClass("active").next().slideToggle().toggleClass("active");
+	$(this).toggleClass("active").next().slideToggle();
 })
 // /аккордион в  карточке товара
 
