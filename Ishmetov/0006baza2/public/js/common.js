@@ -72,68 +72,7 @@ jQuery(document).ready(function ($) {
 	var arrl = (' <div class="r">' + iconr),
 			arrr = (' <div class="l">' + icon2);
 	
-	// карусель
-	$('.s-store-slider__slider--js').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: true,
-		speed: 450,
-		infinite: true,
-		loop: true,
-		arrows: true,
-		// centerMode: true,
-		// focusOnSelect: true ,
-		// variableWidth: true,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
-	});
-
-
-	//  слайдер в  карточке товара
-	$(' .s-gal__slider--big').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: false,
-		speed: 450,
-		asNavFor: '.s-gal__slider--small',
-		appendArrows: '.s-gal__inner',
-		infinite: true,
-		loop: true,
-		arrows: true,
-		prevArrow: arrr,
-		nextArrow: arrl,
-	});
-	$(' .s-gal__slider--small').slick({
-		slidesToShow: 5,
-		slidesToScroll: 1,
-		dots: false,
-		speed: 450,
-		infinite: true,
-		loop: true,
-		arrows: false,
-		focusOnSelect: true, 
-		asNavFor: '.s-gal__slider--big',
-		responsive: [ 
-			 
-		 
-			{
-				breakpoint: 767,
-				settings: {
-					slidesToShow: 4,
-					vertical: false,
-					verticalSwiping: false,
-				}
-			},
-			
-		]
-		// swipeToSlide: false
-	});
 	
-
-	$('.s-store-slider__slider--js, .s-gal__slider--big, .s-gal__slider--small ')
-	.on('lazyLoaded', function(event, slick, image, imageSource){
-			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-	});
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -349,14 +288,11 @@ if($("div").is('.one-page-js')) {
 		// $("body, html").removeClass("fixed");
 		$("body, html").toggleClass("fixed");
 		$(".aside-nav").toggleClass("active")
-		if($("div").is('.one-page-js')) {
-
-			$(".aside-nav").hasClass('active') || !$(".aside-nav").hasClass('fixed')   ? fullpage_api.setAllowScrolling(false) : fullpage_api.setAllowScrolling(true);
-			
-		}
+	 
 	})
 	$(".toggle-sub-menu--js").click(function(){
-		$(this).parents('.menu-item-has-children').find("  a.active").click();
+		$(this).parents('.sub-menu').removeClass('active');
+		$(".menu-item-has-children, .menu-item-has-children > a ").removeClass('active');
 	})
 
 // / показать/ скрыть дочернее меню
@@ -366,17 +302,12 @@ if($("div").is('.one-page-js')) {
 $(".toggle-menu--js").click(function () {
 	$("body, html").toggleClass("fixed");
 	$(".aside-nav").toggleClass('fixed')
-	if($("div").is('.one-page-js')) {
-
-		$(".aside-nav")	.hasClass('fixed')   ? fullpage_api.setAllowScrolling(false) : fullpage_api.setAllowScrolling(true);
-	}
+ 
 });
 $(".aside-nav__toggle-menu--js").click(function () {
 	$("body, html").removeClass("fixed");
 	$(".aside-nav").removeClass('fixed').removeClass('active');
-	if($("div").is('.one-page-js')) {
-	 fullpage_api.setAllowScrolling(true);
-	}
+ 
 });
 
 
@@ -385,9 +316,7 @@ $(document).mouseup(function (e) {
 	if (container.has(e.target).length === 0) {
 		$(".menu-item-has-children, .aside-nav, .sub-menu,  a ").removeClass('active');
 		$("body, html").removeClass("fixed");
-		if (!$(".aside-nav").hasClass('fixed') && $("div").is('.one-page-js')) {
-		fullpage_api.setAllowScrolling(true);
-		}
+		 
 	}
 });
  
@@ -396,9 +325,7 @@ $(document).mouseup(function (e) {
 	if (container.has(e.target).length === 0 && !$(".aside-nav").hasClass("active")) {
 		$(".aside-nav ").removeClass('fixed').removeClass('active');
 		// $("body, html").removeClass("fixed");
-		if($("div").is('.one-page-js')) {
-		fullpage_api.setAllowScrolling(true);
-	}
+		 
 	}
 });
 
@@ -410,11 +337,11 @@ $(".accordion__item-title").click(function(){
 })
 // /аккордион в  карточке товара
 
-$('.aside-nav').height(window.innerHeight); //показывает действительную высоту экрана
-window.onscroll = function () {
-	// scroll event
-	$('.aside-nav').height(window.innerHeight); //показывает действительную высоту экрана
-};
+// $('.aside-nav').height(window.innerHeight); //показывает действительную высоту экрана
+// window.onscroll = function () {
+// 	// scroll event
+// 	$('.aside-nav').height(window.innerHeight); //показывает действительную высоту экрана
+// };
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
@@ -425,5 +352,74 @@ window.addEventListener('resize', () => {
   // We execute the same script as before
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
+
+
+
+
+// карусель
+$('.s-store-slider__slider--js').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dots: true,
+	speed: 450,
+	infinite: true,
+	loop: true,
+	arrows: true,
+	appendArrows: '.s-store-slider__slider-wrap-2',
+	appendDots: '.s-store-slider__slider-wrap-2',
+	// centerMode: true,
+	// focusOnSelect: true ,
+	// variableWidth: true,
+	prevArrow: arrr2,
+	nextArrow: arrl2,
+});
+
+
+//  слайдер в  карточке товара
+$(' .s-gal__slider--big').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dots: false,
+	speed: 450,
+	asNavFor: '.s-gal__slider--small',
+	appendArrows: '.s-gal__inner',
+	infinite: true,
+	loop: true,
+	arrows: true,
+	prevArrow: arrr,
+	nextArrow: arrl,
+});
+$(' .s-gal__slider--small').slick({
+	slidesToShow: 5,
+	slidesToScroll: 1,
+	dots: false,
+	speed: 450,
+	infinite: true,
+	loop: true,
+	arrows: false,
+	focusOnSelect: true, 
+	asNavFor: '.s-gal__slider--big',
+	responsive: [ 
+		 
+	 
+		{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 4,
+				vertical: false,
+				verticalSwiping: false,
+			}
+		},
+		
+	]
+	// swipeToSlide: false
+});
+
+
+$('.s-store-slider__slider--js, .s-gal__slider--big, .s-gal__slider--small ')
+.on('lazyLoaded', function(event, slick, image, imageSource){
+		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 });
 });
