@@ -411,4 +411,10 @@ $(".accordion__item-title").click(function(){
 	$(this).toggleClass("active").next().slideToggle().toggleClass("active");
 })
 // /аккордион в  карточке товара
+
+$('.aside-nav').height(window.innerHeight); //показывает действительную высоту экрана
+window.onscroll = function () {
+	// scroll event
+	$('.aside-nav').height(window.innerHeight); //показывает действительную высоту экрана
+};
 });
