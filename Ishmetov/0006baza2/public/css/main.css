@@ -9211,7 +9211,7 @@ a {
   position: fixed;
   left: 0;
   top: 0;
-  min-height: 100vh;
+  height: 100vh;
   height: -webkit-calc(var(--vh, 1vh) * 100);
   height: calc(var(--vh, 1vh) * 100);
   background-color: #343639;
@@ -9327,7 +9327,7 @@ a {
   border-left: 1px solid #3f4144;
   z-index: 202;
   left: 0;
-  top: 0;
+  bottom: 0;
   width: 100%;
   background-color: #343639;
   display: -webkit-box;
@@ -9340,6 +9340,8 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
+  height: -webkit-calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 1vh) * 100);
   overflow-y: auto;
   -webkit-transform: translateX(-100%);
       -ms-transform: translateX(-100%);
@@ -15391,6 +15393,10 @@ a {
 
   .s-stores .text-block {
     padding-bottom: 20px;
+  }
+
+  .aside-nav .menu {
+    z-index: 202;
   }
 
   .aside-nav {

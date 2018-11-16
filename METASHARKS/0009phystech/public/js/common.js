@@ -556,7 +556,7 @@ jQuery(document).ready(function ($) {
 		nodes = [];
 
 		canvas = $(xcanvas)[0];
-		console.log(canvas);
+		// console.log(canvas);
 		resizeWindow();
 		mouse = {
 			x: canvas.width / 2,
