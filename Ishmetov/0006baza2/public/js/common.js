@@ -3,20 +3,7 @@ jQuery(document).ready(function ($) {
 	// для свг
 	svg4everybody({});
 	// Custom JS
-  
-
-	function heightses() {
-
-		var w = $(window).width();
-
-		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		//
-
-
-		
-		// конец добавил
-	}
+ 
 	// скрывает моб меню
 	if( !$("div").is('.one-page-js')) {
 	var topH = $(".top-line ").height();

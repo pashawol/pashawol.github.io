@@ -225,24 +225,30 @@
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
       <form class="js-form-validate">
         <div class="text-center">
-          <div class="form-wrap__title h3 ttu">Обратный звонок
-          </div>
-          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+          <div class="h3"> Откликнуться на вакансию:</div>
+          <div class="h4">Специалист по&nbsp;закупкам в&nbsp;г. Тольятти &mdash;&nbsp;договорная</div>
+          <div class="h5">Заполните форму, и&nbsp;мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время</div>
         </div>
-        <div class="form-wrap__input-wrap form-group">
-          <label> <input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" required="required"/>
-          </label>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" required="required" placeholder="Введите имя"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label> <input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
-          </label>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" required="required" placeholder="Введите телефон"/>
         </div>
-        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" required="required" placeholder="Введите email"/>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="add-file">
+          <label>
+            <input class="add-file__input" name="file" type="file"/><span class="add-file__btn"> </span><span class="text">  Прикрепить резюме</span>
+          </label><span class="add-file__filename"> </span>
+        </div>
         <div class="polite">
           <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Согласен(а) на обработку и хранение моих персональных данных в соотвествии с Условиями</span>
           </label>
         </div>
+        <button class="form-wrap__btn-send" type="submit">Отправить
+        </button>
       </form>
     </div>
     <!-- #modal-call-->
