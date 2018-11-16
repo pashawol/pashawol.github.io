@@ -9264,6 +9264,7 @@ a {
           flex-grow: 1;
   max-height: 100%;
   overflow-y: auto;
+  z-index: 200;
   padding-bottom: 20px;
   margin-bottom: 0;
   background-color: #343639;
@@ -9394,7 +9395,7 @@ a {
   background-image: url(../img/dots-close.svg);
   position: absolute;
   right: 1.25em;
-  z-index: 201;
+  z-index: 2;
   background-position: center center;
   height: 25px;
   width: 25px;
@@ -9427,7 +9428,7 @@ a {
   -webkit-transform: translate(-50%, -50%) rotate(-90deg);
   -ms-transform: translate(-50%, -50%) rotate(-90deg);
   transform: translate(-50%, -50%) rotate(-90deg);
-  width: 150px;
+  width: 10em;
   color: #ffffff;
   padding-left: 40px;
 }
@@ -15248,8 +15249,9 @@ a {
   }
 
   .footer .container {
-    max-width: 1400px;
-    padding-left: 40px;
+    max-width: 1420px;
+    padding-left: 50px;
+    padding-right: 20px;
   }
 }
 
@@ -15396,12 +15398,27 @@ a {
     width: 100vw;
   }
 
+  .aside-nav.active .aside-nav__logo,.aside-nav.active .aside-nav__btn,.aside-nav.active + .toggle-menu {
+    z-index: -2;
+    position: relative;
+  }
+
   .s-delievery-head img {
     display: none;
   }
 
   .s-delievery-head .text-block {
     padding-bottom: 10px;
+  }
+
+  .s-delievery-var {
+    padding-bottom: 0 !important;
+  }
+
+  .s-delievery-var .footer {
+    padding-top: 40px;
+    position: static !important;
+    padding-bottom: 0;
   }
 
   .s-store-slider .h1 {

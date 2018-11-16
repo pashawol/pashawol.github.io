@@ -279,7 +279,7 @@ if($("div").is('.one-page-js')) {
 	})
 	$(".toggle-sub-menu--js").click(function(){
 		$(this).parents('.sub-menu').removeClass('active');
-		$(".menu-item-has-children, .menu-item-has-children > a ").removeClass('active');
+		$(".aside-nav, .menu-item-has-children, .menu-item-has-children > a ").removeClass('active');
 	})
 
 // / показать/ скрыть дочернее меню
