@@ -444,7 +444,7 @@ jQuery(document).ready(function ($) {
 			},
  
 			"opacity": {
-				"value": 0.9,
+				"value": 1,
 				"random": false,
 				"anim": {
 					"enable": true,
@@ -467,7 +467,7 @@ jQuery(document).ready(function ($) {
 				"enable": true,
 				"distance": 200,
 				"color": "#56b7f6",
-				"opacity": 0.4,
+				"opacity": 0.8,
 				"width": 1
 			},
 			"move": {
