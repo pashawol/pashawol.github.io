@@ -140,7 +140,7 @@ jQuery(document).ready(function ($) {
 	});
 	function tabslider() {
 
-		$('.s-infrastructure__slider--js').slick({
+		$(' .s-infrastructure__slider--js').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			dots: true,
@@ -156,6 +156,16 @@ jQuery(document).ready(function ($) {
 			});
 	}
 	tabslider();
+	$('.s-content__slider--js ').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: false,
+
+	});
 
 	$('.s-main-calendar__slider--js').slick({
 		slidesToShow: 1,
@@ -246,7 +256,7 @@ jQuery(document).ready(function ($) {
 	});
 
 
-	$(' .s-news__slider--js')
+	$(' .s-content__slider--js, .s-news__slider--js')
 		.on('lazyLoaded', function (event, slick, image, imageSource) {
 			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 		});
@@ -556,7 +566,7 @@ jQuery(document).ready(function ($) {
 		nodes = [];
 
 		canvas = $(xcanvas)[0];
-		// console.log(canvas);
+		console.log(canvas);
 		resizeWindow();
 		mouse = {
 			x: canvas.width / 2,
@@ -711,9 +721,25 @@ jQuery(document).ready(function ($) {
 		redrawScene();
 
 	};
+
 	// ании мация  для синего блока
 
-	canvasanimate('.x-canvas');
-	canvasanimate('.x-canvas-2');
+	if ($("div").is(".animate-section")) {
+		canvasanimate('.x-canvas');
+		
+	}
+	
+	if ($("div").is(".animate-footer")) {
+		canvasanimate('.x-canvas-2');
+	}
+	function canvasres(){
+
+		$(".animate-block canvas").height($(".animate-block").innerHeight() + ($(".header-block").innerHeight()/2))
+	}
+	$(window).resize(function () {
+		canvasres();
+		
+	});
+	canvasres();
 
 });

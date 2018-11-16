@@ -14166,16 +14166,6 @@ a {
   }
 
   .s-form .footer {
-    position: static !important;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .s-form .h1 {
-    margin-bottom: 1rem;
-  }
-
-  .s-form .footer {
     bottom: 40px;
   }
 }
@@ -15478,6 +15468,17 @@ a {
 
 @media only screen and (max-width: 320px) {
 /**/;
+}
+
+@media (max-height: 660px) {
+  .s-form .footer {
+    position: static !important;
+    padding-top: 30px;
+  }
+
+  .s-form .h1 {
+    margin-bottom: 1rem;
+  }
 }
 
 @media print {
