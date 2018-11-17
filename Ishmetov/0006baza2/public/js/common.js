@@ -267,14 +267,15 @@ if($("div").is('.one-page-js')) {
 	$("  .menu-item-has-children>a").click(function (e) {
 		e.preventDefault();
 		// $(".aside-nav").removeClass("active");
+		var link = $(this).attr("href");
+		$(link).toggleClass("active").siblings().removeClass('active');
 		$(this).toggleClass("active")
-			.next().toggleClass("active")
 			.parent().toggleClass("active")
 			.siblings().removeClass('active')
 			.find('sub-menu, a').removeClass('active');
+
 		// $("body, html").removeClass("fixed");
-		$("body, html").toggleClass("fixed");
-		$(".aside-nav").toggleClass("active")
+		 !$(this).hasClass("active")	&& !$(".aside-nav").hasClass("fixed") ? ($("body, html").removeClass("fixed"),  $(".aside-nav").removeClass("active")) : ($("body, html").addClass("fixed"),  $(".aside-nav").addClass("active"))
 	 
 	})
 	$(".toggle-sub-menu--js").click(function(){
@@ -292,29 +293,24 @@ $(".toggle-menu--js").click(function () {
  
 });
 $(".aside-nav__toggle-menu--js").click(function () {
+
 	$("body, html").removeClass("fixed");
-	$(".aside-nav").removeClass('fixed').removeClass('active');
+	$(".aside-nav, .sub-menu, .menu-item-has-children,  .menu-item-has-children > a").removeClass('fixed').removeClass('active');
  
 });
 
 
-$(document).mouseup(function (e) {
-	var container = $(".menu-item-has-children.active");
-	if (container.has(e.target).length === 0) {
-		$(".menu-item-has-children, .aside-nav, .sub-menu,  a ").removeClass('active');
-		$("body, html").removeClass("fixed");
-		 
-	}
+$('body').prepend('<div class="catalog-bg">');
+
+$(".catalog-bg").click(function () {
+	
+	$(".menu-item-has-children, .aside-nav, .sub-menu,  a ").removeClass('active');
+		if (!$(".aside-nav").hasClass("fixed")){
+		 $("body, html").removeClass("fixed"); 
+		}
 });
  
-$(document).mouseup(function (e) {
-	var container = $(".aside-nav.fixed");
-	if (container.has(e.target).length === 0 && !$(".aside-nav").hasClass("active")) {
-		$(".aside-nav ").removeClass('fixed').removeClass('active');
-		// $("body, html").removeClass("fixed");
-		 
-	}
-});
+ 
 
 //  /показать/ скрыть   меню в моб версии
 
