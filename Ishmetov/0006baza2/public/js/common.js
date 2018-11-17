@@ -305,8 +305,13 @@ $('body').prepend('<div class="catalog-bg">');
 $(".catalog-bg").click(function () {
 	
 	$(".menu-item-has-children, .aside-nav, .sub-menu,  a ").removeClass('active');
-		if (!$(".aside-nav").hasClass("fixed")){
+		if (!$(".aside-nav").hasClass("fixed")) {
 		 $("body, html").removeClass("fixed"); 
+		}
+		if($(".aside-nav").hasClass("fixed") && !$(".menu-item-has-children").hasClass("active")){
+			$("body, html").removeClass("fixed"); 
+			$(".aside-nav").removeClass("fixed")
+
 		}
 });
  
