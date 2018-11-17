@@ -272,14 +272,14 @@ if($("div").is('.one-page-js')) {
 		$(this).toggleClass("active")
 			.parent().toggleClass("active")
 			.siblings().removeClass('active')
-			.find('sub-menu, a').removeClass('active');
+			.find('.sub-menu--js, a').removeClass('active');
 
 		// $("body, html").removeClass("fixed");
 		 !$(this).hasClass("active")	&& !$(".aside-nav").hasClass("fixed") ? ($("body, html").removeClass("fixed"),  $(".aside-nav").removeClass("active")) : ($("body, html").addClass("fixed"),  $(".aside-nav").addClass("active"))
 	 
 	})
 	$(".toggle-sub-menu--js").click(function(){
-		$(this).parents('.sub-menu').removeClass('active');
+		$(this).parents('.sub-menu--js').removeClass('active');
 		$(".aside-nav, .menu-item-has-children, .menu-item-has-children > a ").removeClass('active');
 	})
 
@@ -295,7 +295,7 @@ $(".toggle-menu--js").click(function () {
 $(".aside-nav__toggle-menu--js").click(function () {
 
 	$("body, html").removeClass("fixed");
-	$(".aside-nav, .sub-menu, .menu-item-has-children,  .menu-item-has-children > a").removeClass('fixed').removeClass('active');
+	$(".aside-nav, .sub-menu--js, .menu-item-has-children,  .menu-item-has-children > a").removeClass('fixed').removeClass('active');
  
 });
 
@@ -304,7 +304,7 @@ $('body').prepend('<div class="catalog-bg">');
 
 $(".catalog-bg").click(function () {
 	
-	$(".menu-item-has-children, .aside-nav, .sub-menu,  a ").removeClass('active');
+	$(".menu-item-has-children, .aside-nav, .sub-menu--js,  a ").removeClass('active');
 		if (!$(".aside-nav").hasClass("fixed")) {
 		 $("body, html").removeClass("fixed"); 
 		}

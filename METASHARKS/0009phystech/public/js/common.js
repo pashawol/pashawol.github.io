@@ -138,6 +138,7 @@ jQuery(document).ready(function ($) {
 		arrows: false,
 
 	});
+
 	function tabslider() {
 
 		$(' .s-infrastructure__slider--js').slick({
@@ -415,18 +416,18 @@ jQuery(document).ready(function ($) {
 		}
 	);
 
-	
-				// для плаваюещего label
-					// для плаваюещего label
- 
-	// для плаваюещего label
- 
-	
-	$('input, textarea').not('[type="radio"]').not('[type="checkbox"]').each(function(){
 
-		if ($(this).val().trim() == '') { 
+	// для плаваюещего label
+	// для плаваюещего label
+
+	// для плаваюещего label
+
+
+	$('input, textarea').not('[type="radio"]').not('[type="checkbox"]').each(function () {
+
+		if ($(this).val().trim() == '') {
 			$(this).closest('label').addClass('empty');
-		}   
+		}
 	})
 	$('input, textarea').not('[type="radio"]').not('[type="checkbox"]').keyup(function () {
 		if ($(this).val().trim() !== '') {
@@ -452,7 +453,7 @@ jQuery(document).ready(function ($) {
 			"color": {
 				"value": "#a3cde8"
 			},
- 
+
 			"opacity": {
 				"value": 1,
 				"random": false,
@@ -598,7 +599,7 @@ jQuery(document).ready(function ($) {
 			ctx.fill();
 		};
 
- 
+
 
 		Node.prototype.moveNode = function () {
 			this.energy -= 2;
@@ -726,20 +727,23 @@ jQuery(document).ready(function ($) {
 
 	if ($("div").is(".animate-section")) {
 		canvasanimate('.x-canvas');
-		
+
 	}
-	
+
 	if ($("div").is(".animate-footer")) {
 		canvasanimate('.x-canvas-2');
 	}
-	function canvasres(){
 
-		$(".animate-block canvas").height($(".animate-block").innerHeight() + ($(".header-block").innerHeight()/2))
+	function canvasres() {
+
+		$(".animate-block canvas").height($(".animate-block").innerHeight() + ($(".header-block").innerHeight() / 2))
 	}
 	$(window).resize(function () {
 		canvasres();
-		
+
 	});
 	canvasres();
 
+	// прилипает карта
+	$(".s-contact__map-wrap").stick_in_parent();
 });
