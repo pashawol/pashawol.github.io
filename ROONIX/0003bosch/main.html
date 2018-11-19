@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Bosh</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+	
+	<div class="main-wrap main-page-wrap">
+
+		<div class="top-line"></div>
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-3">
+						<div class="header_top">
+							<a href="javascript:void(0);" class="header-burger visible-xs">
+								
+							</a>
+							<a href="javascript:void(0);" class="header-logo">
+								
+								<img src="images/logo-new.png" alt="">
+							</a>
+							<a href="javascript:void(0);" class="visible-xs header_busket">
+								<img src="images/busket.svg" alt="">
+							</a>
+						</div>
+						
+					</div>
+					<div class="col-sm-9 hidden-xs">
+						<div class="header_links">
+							<a href="javascript:void(0);" class="link-alter header_links__item">
+								Связаться с нами
+							</a>
+							<a href="javascript:void(0);" class="link-alter header_links__item js-header-phones header-phones">
+								<div class="header-phones_block">
+									<div class="header-phones_block__phone">
+										8 (800) 50-5000
+									</div>
+									<div class="header-phones_block__link">
+										<!-- <img src="images/contact.png" alt=""> -->
+										<img src="images/group.svg" alt="">
+										Связаться с нами
+									</div>
+								</div>
+								Служба клиентской поддержки
+								<span>8 (800) 50-5000</span>
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+								    <defs>
+								        <path id="a" d="M8.833 0L5 3.73 1.167 0 0 1.135 5 6l5-4.865z"/>
+								    </defs>
+								    <g fill="none" fill-rule="evenodd" transform="translate(3 5)">
+								        <mask id="b" fill="#fff">
+								            <use xlink:href="#a"/>
+								        </mask>
+								        <use fill="#000" fill-rule="nonzero" xlink:href="#a"/>
+								        <g fill="#025F98" mask="url(#b)" class="svg-color">
+								            <path d="M-2-6h15V9H-2z"/>
+								        </g>
+								    </g>
+								</svg>
+							</a>
+							<a href="javascript:void(0);" class="link-alter header_links__item" data-toggle="modal" data-target="#login">
+								<img src="images/user.png" alt="">
+								Войти в личный кабинет
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-nav-wrap hidden-sm hidden-xs">
+				<div class="container">
+					<div class="main-search">
+						<form action="POST">
+							<div class="main-search_wrap">
+								<div class="input-box">
+									<input type="text" placeholder="Поиск комплектующих для инструментов Bosch">
+									<div class="main-search_close js-search-close">
+										<img src="images/lose.svg" alt="">
+									</div>
+								</div>
+								<div class="select-box">
+									<select name="search-select" id="search-select" class="nice-select">
+										<option value="По моделямя и деталям">По моделямя и деталям</option>
+										<option value="По моделямя и деталям">По моделямя и деталям</option>
+										<option value="По моделямя и деталям">По моделямя и деталям</option>
+										<option value="По моделямя и деталям">По моделямя и деталям</option>
+									</select>
+								</div>
+								<button type="submit" class="main-search_submit">
+									<img src="images/search.png" alt="">
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="row">
+						<div class="col-md-10">
+							<div class="menu">
+								<ul>
+									<li class="active-menu-item">
+										<a href="javascript:void(0);">
+											Комплектующие
+										</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											Информация
+										</a>
+										<ul>
+											<li>
+												<a href="javascript:void(0);">Как купить</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">Доставка</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">Скидки</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">Контакты</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">Сервисный центр</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">Статьи</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">Ремонт инструмента</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0);">
+											Новые инструменты
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<a href="javascript:void(0);" class="header-busket link-secondary">
+								<img src="images/busket.svg" alt="">
+								Корзина
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mobile-nav">
+				<ul>
+					<li>
+						<a href="#">
+							Комплектующие
+						</a>
+					</li>
+					<li class="level">
+						<a href="#">
+							Информация
+						</a>
+						<ul>
+							<li>
+								<a href="#">
+									Информация
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Информация
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Информация
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">
+							Новые инструменты
+						</a>
+					</li>
+				</ul>
+				<div class="mobile-nav_cabinet">
+					<a href="#" data-toggle="modal" data-target="#login">
+						<img src="images/user.png" alt="">
+						Войти в личный кабинет
+					</a>
+				</div>
+				<div class="mobile-nav_footer">
+					<a href="#" class="link-alter">
+						Связаться с нами
+					</a>
+					<a href="#" class="link-alter">
+						Служба клиентской поддержки
+					</a>
+					<a href="#" class="link-secondary">
+						8 (800) 50-5000
+					</a>
+				</div>
+			
+			</div>
+			
+		</header>
+		
+		<div class="main-search-block">
+			<div class="container">
+				<div class="main-search-block--wrapper">
+						<div class="main-search_wrap">
+							<div class="input-box hidden-sm hidden-xs">
+								<input type="text" placeholder="Поиск комплектующих для инструментов Bosch" class="js-search">
+								<div class="main-search_close js-results-close">
+									<img src="images/lose.svg" alt="">
+								</div>
+							</div>
+							<div class="input-box visible-sm visible-xs">
+								<input type="text" placeholder="Поиск" class="js-search">
+								<div class="main-search_close js-results-close">
+									<img src="images/lose.svg" alt="">
+								</div>
+							</div>
+							<div class="select-box hidden-sm hidden-xs">
+								<select name="search-select" id="search-select" class="nice-select">
+									<option value="По моделямя и деталям">По моделям и деталям</option>
+									<option value="По моделямя и деталям">По моделям и деталям</option>
+									<option value="По моделямя и деталям">По моделям и деталям</option>
+									<option value="По моделямя и деталям">По моделям и деталям</option>
+								</select>
+							</div>
+							<div class="select-box visible-sm visible-xs">
+								<select name="search-select" id="search-select" class="nice-select">
+									<option value="По моделямя и деталям">По моделям</option>
+									<option value="По моделямя и деталям">По моделям1</option>
+									<option value="По моделямя и деталям">По моделям2</option>
+									<option value="По моделямя и деталям">По моделям3</option>
+								</select>
+							</div>
+							<button type="submit" class="main-search_submit">
+								<img src="images/blue-search.svg" alt="">
+							</button>
+
+							<div class="search-results js-search-results">
+								<a href="javascript:void(0);" class="search-results_item">
+									<div class="search-results_item__text">
+										Аккумуляторная ударная дрель-шуруповёрт Bosch 9413D
+									</div>
+									<div class="search-results_item__price">
+										10 р
+									</div>
+								</a>
+								<a href="javascript:void(0);" class="search-results_item">
+									<div class="search-results_item__text">
+										Аккумуляторная ударная дрель-шуруповёрт Bosch 9413D
+									</div>
+									<div class="search-results_item__price">
+										10 р
+									</div>
+								</a>
+								<a href="javascript:void(0);" class="search-results_item">
+									<div class="search-results_item__text">
+										Аккумуляторная ударная дрель-шуруповёрт Bosch 9413D
+									</div>
+									<div class="search-results_item__price">
+										10 р
+									</div>
+								</a>
+								<div class="search-results_all">
+									<a href="javascript:void(0);" class="btn-secondary btn-large">
+										Все результаты
+										<img src="images/blue-arrow.svg" alt="">
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="white-link-wrap">
+							<a href="javascript:void(0);" class="link-white">
+								Не можете найти номер модели?
+							</a>
+						</div>
+						
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="main-grid">
+			<div class="container">
+				<h1 class="text-center">
+					Комплектующие Bosch
+				</h1>
+				<div class="row">
+					<div class="col-md-4 col-sm-6">
+						<a href="javascript:void(0);" class="main-grid_item">
+							<div class="main-grid_item__bg"></div>
+							<div class="main-grid_item__img">
+								<img src="images/grid-item.png" alt="">
+							</div>
+							<div class="main-grid_item__text">
+								Беспроводной инструмент
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-6">
+						<a href="javascript:void(0);" class="main-grid_item">
+							<div class="main-grid_item__bg"></div>
+							<div class="main-grid_item__img">
+								<img src="images/grid-item.png" alt="">
+							</div>
+							<div class="main-grid_item__text">
+								Инструменты различного назначения и воздуходувки
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-6">
+						<a href="javascript:void(0);" class="main-grid_item">
+							<div class="main-grid_item__bg"></div>
+							<div class="main-grid_item__img">
+								<img src="images/grid-item.png" alt="">
+							</div>
+							<div class="main-grid_item__text">
+								Беспроводной инструмент
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-6">
+						<a href="javascript:void(0);" class="main-grid_item">
+							<div class="main-grid_item__bg"></div>
+							<div class="main-grid_item__img">
+								<img src="images/grid-item.png" alt="">
+							</div>
+							<div class="main-grid_item__text">
+								Беспроводной инструмент
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-6">
+						<a href="javascript:void(0);" class="main-grid_item">
+							<div class="main-grid_item__bg"></div>
+							<div class="main-grid_item__img">
+								<img src="images/grid-item.png" alt="">
+							</div>
+							<div class="main-grid_item__text">
+								Беспроводной инструмент
+							</div>
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-6">
+						<a href="javascript:void(0);" class="main-grid_item">
+							<div class="main-grid_item__bg"></div>
+							<div class="main-grid_item__img">
+								<img src="images/grid-item.png" alt="">
+							</div>
+							<div class="main-grid_item__text">
+								Беспроводной инструмент
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="main-grid_more">
+				<a href="javascript:void(0);" class="btn-secondary btn-large">
+					Показать еще
+				</a>
+			</div>
+		</div>
+
+		<div class="blue-block">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<h2 class="blue-block_title">
+							Запчасти для инструментов Bosch
+						</h2>
+						
+					</div>
+					<div class="col-sm-8">
+						<div class="base-text blue-block_text">
+							<p>
+								ООО «ЛайнТулс» — официальный дилер компании Makita. У нас вы сможете приобрести детали к инструменту по доступным ценам и в короткие сроки. Использование передовых технологий и современных материалов — залог успеха японской фирмы. За почти 100-летний срок существования корпорация Makita прошла длинный и сложный путь и сегодня является лидером мировой индустрии по производству инструментов. 
+							</p>
+							<p>
+								Но какими бы передовыми и совершенными ни были технологии, инструмент всё же ломается, и ломается, обычно, в самый неподходящий момент. Именно поэтому наша компания открыла для Вас сервисный центр по ремонту техники Makita.
+							</p>
+							<p>
+								Наши специалисты готовы качественно и в кратчайшие сроки провести диагностику, исправить все неполадки и предоставить Вам полностью готовый к дальнейшему использованию инструмент. Мы знаем, что есть люди, умеющие и любящие чинить свой инструмент самостоятельно.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="footer_top">
+						<div class="col-md-4 col-sm-6 hidden-xs">
+							<div class="footer_col">
+								<div class="footer_col__header">
+									Комплектующие BOSCH
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Беспроводной инструмент
+									</a>
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Работа по дереву
+									</a>
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Дрели и шуруповерты
+									</a>
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Работа по камню и бетону
+									</a>
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Работа по металлу
+									</a>
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Смотреть все
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-4 col-sm-6 hidden-xs">
+							<div class="footer_col">
+								<div class="footer_col__header">
+									Информация
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Сервисный центр
+									</a>
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Контакты и Реквизиты
+									</a>
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Доставка
+									</a>
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Как купить
+									</a>
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Скидки
+									</a>
+								</div>
+								<div class="footer_col__item">
+									<a href="javascript:void(0);" class="link-secondary">
+										Статьи
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-sm-12">
+							<div class="footer_col">
+								<div class="footer_col__header">
+									Связаться с нами
+								</div>
+								<div class="footer_col__text base-text">
+									<p>Мы с нетерпением ждем вашего запроса!</p>
+									<a href="tel:8800505000" class="link-secondary footer_col__phone">
+										8 (800) 50-5000
+									</a>
+									<p>
+										Официальные сообщества
+									</p>
+								</div>
+								<div class="footer_social">
+									<div class="footer_social__item">
+										<a href="javascript:void(0);">
+											<img src="images/vk.png" alt="">
+										</a>
+									</div>
+									<div class="footer_social__item">
+										<a href="javascript:void(0);">
+											<img src="images/fb.png" alt="">
+										</a>
+									</div>
+									<div class="footer_social__item">
+										<a href="javascript:void(0);">
+											<img src="images/twitter.png" alt="">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer_bottom">
+						<div class="base-text">
+							<span>© 2015-2017. "Интернет-магазин комплектующих для электроинструментов BOSCH, продажа запчастей BOSCH" Все права защищены.</span> <a href="javascript:void(0);" class="link-primary">Политика конфиденциальности</a>
+							<a href="javascript:void(0);" class="btn-secondary btn-small js-to-top">
+								Наверх
+								<img src="images/to-top.png" alt="">
+							</a>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="top-line"></div>
+		<div id="login" class="modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<img class="modal-close" src="images/close-blue.svg" data-dismiss="modal">
+					<div class="modal-name">
+						Вход
+					</div>
+					<a class="link-secondary modal-go-to" href="javascript:void(0);">
+						Перейти в личный кабинет
+					</a>
+					<form id="login-modal-form" class="validated-form">
+						<div class="input-box">
+							<label>
+								Логин
+							</label>
+							<input type="text" name="login" placeholder="Логин" class="customValidate" required="required">
+						</div>
+						<div class="input-box">
+							<label>
+								Пароль
+							</label>
+							<input type="text" name="modalPhone" placeholder="Пароль" class="customValidate">
+						</div>
+						<div class="modal-checkbox">
+							<div class="checkbox green-checkbox">
+								<input type="checkbox" name="saveLogin" id="saveLogin" required="required">
+								<label for="saveLogin">Запомнить</label>
+							</div>
+							<a class="link-alter" href="javascript:void(0);">Забыли пароль?</a>
+						</div>
+						<div class="modal-footer">
+							<a class="link-primary close-login-modal" href="javascript:void(0);" data-toggle="modal" data-target="#register">Создать аккаунт</a>
+							<input class="btn btn-large btn-primary" type="submit" value="Войти">
+							</input>
+						</div>
+					</form>
+					
+				</div>
+			</div>
+		</div>
+
+		<div id="register" class="modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<img class="modal-close" src="images/close-blue.svg" data-dismiss="modal">
+					<div class="modal-name">
+						Регистрация
+					</div>
+					<a class="link-secondary modal-go-to" href="javascript:void(0);">
+					Создать личный кабинет
+					</a>
+					<form>
+						<div class="input-box">
+							<label>
+								Имя
+							</label>
+							<input type="text" name="regname" placeholder="Имя">
+						</div>
+						<div class="input-box">
+							<label>
+								Телефон
+							</label>
+							<input type="text" name="regphone" placeholder="Телефон">
+						</div>
+						<div class="input-box">
+							<label>
+								Электронная почта
+							</label>
+							<input type="text" name="regmail" placeholder="Электронная почта">
+						</div>
+						<div class="input-box">
+							<label>
+								Пароль
+							</label>
+							<input type="text" name="regpass" placeholder="Пароль">
+						</div>
+						<div class="input-box">
+							<label>
+								Повторите пароль
+							</label>
+							<input type="text" name="regpass2" placeholder="Повторите пароль">
+						</div>
+						<div class="modal-captcha">
+							<div class="input-box">
+								<img src="images/recaptcha.gif" alt="kaptcha">
+							</div>
+						</div>
+						<input class="btn btn-large btn-primary" type="submit" value="Зарегистрироваться">
+						<div class="modal-grey-text">
+							Нажимая на кнопку "Зарегистрироваться", я даю согласие на обработку персональных данных
+						</div>
+					</form>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>

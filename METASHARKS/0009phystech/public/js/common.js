@@ -469,7 +469,7 @@ jQuery(document).ready(function ($) {
 				"random": true,
 				"anim": {
 					"enable": false,
-					"speed": 10,
+					"speed": 5,
 					"size_min": 0.1,
 					"sync": false
 				}
@@ -483,7 +483,7 @@ jQuery(document).ready(function ($) {
 			},
 			"move": {
 				"enable": true,
-				"speed": 6,
+				"speed": 3,
 				"direction": "none",
 				"random": false,
 				"straight": false,
@@ -736,7 +736,7 @@ jQuery(document).ready(function ($) {
 
 	function canvasres() {
 
-		$(".animate-block canvas").height($(".animate-block").innerHeight() + ($(".header-block").innerHeight() / 2))
+		$(".animate-block canvas").height($(".animate-block").innerHeight() + ($(".header-block").innerHeight() - $(".top-nav").innerHeight()))
 	}
 	$(window).resize(function () {
 		canvasres();
