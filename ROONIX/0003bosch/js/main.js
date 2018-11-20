@@ -1204,6 +1204,7 @@ $(document).ready(function(){
 		$('.js-rekv-edit').hide();
 
 		$('.js-rekv-info').show();
+		
 
 	});
 
@@ -1214,6 +1215,7 @@ $(document).ready(function(){
 		$('.js-rekv-edit').hide();
 
 		$('.js-rekv-info').show();
+		$('.js-toggler.js-rekv-open').show();
 
 	})
 

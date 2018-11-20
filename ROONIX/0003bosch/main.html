@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/dop-style-11-18.css">
 </head>
 <body>
 	
@@ -32,7 +33,7 @@
 					</div>
 					<div class="col-sm-9 hidden-xs">
 						<div class="header_links">
-							<a href="javascript:void(0);" class="link-alter header_links__item">
+							<a href="javascript:void(0);" class="link-alter header_links__item" data-toggle="modal" data-target="#modal-call">
 								Связаться с нами
 							</a>
 							<a href="javascript:void(0);" class="link-alter header_links__item js-header-phones header-phones">
@@ -277,7 +278,7 @@
 							</div>
 						</div>
 						<div class="white-link-wrap">
-							<a href="javascript:void(0);" class="link-white">
+							<a href="javascript:void(0);" class="link-white"  data-toggle="modal" data-target="#modal-info">
 								Не можете найти номер модели?
 							</a>
 						</div>
@@ -525,7 +526,7 @@
 			</div>
 		</footer>
 		<div class="top-line"></div>
-		<div id="login" class="modal">
+		<div id="login" class="modal ">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<img class="modal-close" src="images/close-blue.svg" data-dismiss="modal">
@@ -566,7 +567,7 @@
 			</div>
 		</div>
 
-		<div id="register" class="modal">
+		<div id="register" class="modal ">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<img class="modal-close" src="images/close-blue.svg" data-dismiss="modal">
@@ -622,6 +623,78 @@
 			</div>
 		</div>
 	</div>
+	<!-- добави модалку  Обратный звонок -->
+
+	<div id="modal-call" class="modal ">
+			<div class="modal-dialog">
+					<div class="modal-content">
+							<img class="modal-close" src="images/close-blue.svg" data-dismiss="modal">
+							<div class="modal-name">Обратный звонок  </div>
+		<!--            <a class="link-secondary modal-go-to" href="javascript:void(0);">-->
+		<!--                Создать личный кабинет-->
+		<!--            </a>-->
+							<form id="reg-formalin" class="validated-form">
+									<p id="error1" style="color: red;"></p>
+									<p id="error2" style="color: red;"></p>
+									<div class="input-box">
+											<label>
+												Ваше  имя
+											</label>
+											<input type="text" name="regname" placeholder="Имя">
+									</div>
+									<div class="input-box">
+											<label>
+													Номер телефона
+											</label>
+											<input type="tel" name="regphone" placeholder="Телефон">
+									</div>
+								
+									<div class="modal-captcha">
+									<img  src="images/recaptcha.gif" >
+									</div>
+									<input type="hidden" value="Registration" name="action">
+									<input class="btn-form btn btn-large btn-primary btn-block" type="submit" value="Заказать обратный звонок  ">
+									<!-- <div class="modal-grey-text">
+											Нажимая на кнопку "Зарегистрироваться", я даю согласие на обработку персональных данных
+									</div> -->
+							</form>
+
+					</div>
+			</div>
+		</div>
+		
+	<div id="modal-info" class="modal ">
+			<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+							<img class="modal-close" src="images/close-blue.svg" data-dismiss="modal">
+							<div class="row mb-15">
+								<div class="col-sm-5 mb-15">
+									<img src="images/modal-img-1.jpg" alt="" class="responsive-img">
+								</div>
+								<div class="col-sm-7 mb-15">
+									<div class="h3 mt-0">Как найти каталожный номер?</div>
+									<p>Шильдик на котором есть эта информация находиться на самом инструменте, а не на коробке или чемодане! Каталожный номер детали состоит из 10 символов</p>
+								</div>
+							</div>
+							
+							<div class="row ">
+								<div class="col-sm-5 mb-15">
+									<img src="images/modal-img-2.jpg" alt="" class="responsive-img">
+								</div>
+								<div class="col-sm-7 mb-15">
+									<div class="h3 mt-0">Как найти фирменное название?</div>
+									<p>Для электроинструментов Bosch идет буквенно — числовое обозначение например, DDS181, найти точный номер модели вы можете на шильдике инструмента, а также он может быть штампованный или литой в корпусе самого инструмента.</p>
+								</div>
+							</div>
+							
+						 
+					</div>
+			</div>
+		</div>
+
+		<!-- / добави модалку   Обратный звонок-->
 	<script src="js/main.js"></script>
+	<script src="js/jquery.mask.min.js"></script>
+	<script src="js/costume.js"></script>
 </body>
 </html>

@@ -589,4 +589,11 @@ jQuery(document).ready(function ($) {
     })
     })
 
+        $(".redact-link.js-toggler.js-rekv-open, .btn-secondary.js-rekv-open").click(function(){
+            $(".btns-block-foot, .redact-link.js-toggler").hide();
+        })
+
+        $(" .btn-secondary.js-rekv-close").click(function(){
+            $(".btns-block-foot, .redact-link.js-toggler.js-rekv-open, .redact-link.js-toggler").show();
+        })
 })

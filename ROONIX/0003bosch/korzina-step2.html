@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/dop-style-11-18.css">
 </head>
 <body>
 	<div class="main-wrap">
@@ -702,6 +703,14 @@
 						<div class="bold-text">
 							Частное лицо
 						</div>
+						<a href="javascript:void(0);" class=" btn-secondary btn-large back-btn">
+					<img src="images/arrow-left.png">
+					Назад
+				</a>
+
+				<a href="javascript:void(0);" class="btn btn-primary btn-large width180 next-btn">
+					Далее
+				</a>
 					</div>
 
 					<div class="js-content" id="oplata2">
@@ -724,14 +733,15 @@
 									Название компаний
 								</option>
 							</select>
+							<a href="#redact" class="redact-link js-toggler  js-rekv-open"></a>
 						</div>
 
 						<div class="lk-rekv-ruk width667">
-							<div class="rekv_block__item js-rekv-info">
+							<div class="rekv_block__item border-0 js-rekv-info">
 								<div class="with-dotted-lines">
-									<a href="javascript:void(0);" class="lk-rekv-ruk_edit js-rekv-open">
+									<!-- <a href="javascript:void(0);" class="lk-rekv-ruk_edit js-rekv-open">
 										<img src="images/pencil.svg" alt="">
-									</a>
+									</a> -->
 									<div class="with-dotted-lines_item">
 										<div class="with-dotted-lines_item__left">
 											<span>
@@ -826,10 +836,10 @@
 							</div>
 
 							<div class="lk-rekv js-rekv-edit">
-								<a href="javascript:void(0);" class="lk-rekv-ruk_edit lk-rekv-ruk_edit__close js-rekv-close">
+								<!-- <a href="javascript:void(0);" class="lk-rekv-ruk_edit lk-rekv-ruk_edit__close js-rekv-close">
 										<img src="images/close-blue.svg" alt="">
-									</a>
-								<div class="rekv_block__item">
+									</a> -->
+								<div class="rekv_block__item border-0">
 									<form action="POST">
 										<div class="width350">
 											<div class="input-box">
@@ -913,28 +923,22 @@
 
 											
 										</div>
-										<div class="btns-block btns-block_justify">
-											<div class="btns-block_left">
-												<a href="javascript:void(0);" class="btn-large btn-secondary">
-													Не сохранять
-												</a>
-												<buton type="submit" class="btn btn-large btn-primary btn-with-image">
-													Сохранить
-												</buton>
-											</div>
-											<div class="btns-block_right">
-												<a href="javascript:void(0);" class="btn-large btn-secondary">
-													Удалить
-													<img src="images/close-black.svg" alt="">
-												</a>
-											</div>
-										</div>
 									</form>
 								</div>
+								<div class="btn-wrap">
+									<a class="btn-secondary btn-large js-rekv-close" href="javascript:void(0);"  >
+											Вернуться к реквизитам организаций
+										<img class="fl-l img-back" src="images/arrow-left.png">
+									</a>
+								</div> 
+								<div class="btn-wrap">
+										<a href="javascript:void(0);" class="btn btn-primary btn-large  width180 next-btn visible"  > 	Далее 	</a>
+								</div>
+								<div class="text-gray mt-30">Поля, отмеченные звездочкой, обязательны для заполнения.</div>
 							</div>
 
 							<div class="lk-rekv">
-								<div class="rekv_block__item js-rekv-file-block">
+								<div class="rekv_block__item border-0 js-rekv-file-block">
 									<form action="POST">
 										<input type="file" hidden="hidden" id="rekv-file-input">
 										<a href="javascript:void(0);" class="lk-rekv-ruk_edit lk-rekv-ruk_edit__close js-rekv-file-close">
@@ -971,30 +975,31 @@
 							</div>
 						</div>
 
-						<div class="btns-block">
-							<a class="btn btn-large btn-primary btn-left-img js-rekv-open" href="javascript:void(0);">
-								<img src="images/shape.svg" alt="">
+						<div class="btns-block btns-block-foot">
+							<a class="  btn-large btn-secondary  js-rekv-open" href="javascript:void(0);"> 
 								Заполнить вручную
 							</a>
 							<a class="btn-large btn-secondary btn-left-img js-rekv-file" href="javascript:void(0);">
 								<img src="images/downlod.svg" alt="">
 								Добавить реквизиты файлом
 							</a>
-							
+							<a href="javascript:void(0);" class="btn btn-primary btn-large mt-0 width180 next-btn visible">
+									Далее
+								</a>
 						</div>
 					</div>
 
 					
 				</div>
 
-				<a href="javascript:void(0);" class=" btn-secondary btn-large back-btn">
+				<!-- <a href="javascript:void(0);" class=" btn-secondary btn-large back-btn">
 					<img src="images/arrow-left.png">
 					Назад
 				</a>
 
 				<a href="javascript:void(0);" class="btn btn-primary btn-large width180 next-btn">
 					Далее
-				</a>
+				</a> -->
 			</div>
 
 			
@@ -1129,5 +1134,7 @@
 		<div class="top-line"></div>
 	</div>
 	<script src="js/main.js"></script>
+	<script src="js/jquery.mask.min.js"></script>
+	<script src="js/costume.js"></script>
 </body>
 </html>
