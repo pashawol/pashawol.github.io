@@ -134,6 +134,11 @@
                         <tr class="link_table">
                             <td><a href="korzina-step1.html">01. Оформление заказа - шаг 1</a></td><td class="value desktop"><i class="fa fa-check"></i></td>
                         </tr>
+                        
+                        <tr class="link_table">
+                            <td><a href="korzina-step1n.html">01.1 Оформление заказа -   Неавторизованный шаг 1 </a></td><td class="value desktop"><i class="fa fa-check"></i></td>
+                        </tr>
+
                         <tr class="link_table">
                             <td><a href="korzina-step2.html">02. Оформление заказа - шаг 2</a></td><td class="value desktop"><i class="fa fa-check"></i></td>
                         </tr>
