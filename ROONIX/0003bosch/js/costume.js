@@ -403,11 +403,16 @@ jQuery(document).ready(function ($) {
         $('.itemssvg[data-id-elem=' + elem_id + ']').toggleClass('hover');
     })
 
-    $(" .itemssvg").hover(function () {
+    $(" .itemssvg").hover( function () {
         var elem_id = $(this).data('id-elem');
-        console.log(elem_id);
-        $('.js-cards-item[data-elem_id=' + elem_id + ']').toggleClass('js-cards-item--hover');
+        // console.log(elem_id);
+        if (!$(this).hasClass("active")){
+
+            $('.js-cards-item[data-elem_id=' + elem_id + ']').toggleClass('js-cards-item--hover');
+        }
+        // $(this).find('.svg-tooltip').is(":hidden") || $(this).hasClass('active') ? $('.js-cards-item[data-elem_id=' + elem_id + ']').removeClass('js-cards-item--hover') : ('.js-cards-item[data-elem_id=' + elem_id + ']').addClass('js-cards-item--hover');
     })
+    
 
     $(".cards-items_item__btn").click(function () {
         var elem_id = $(this).data('id');

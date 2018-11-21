@@ -835,13 +835,13 @@ $(document).ready(function(){
 
 			$('.js-cards-item').on('click', function(e){
 
-				$(this).toggleClass('js-cards-item--active');
+				$(this).addClass('js-cards-item--active');
 
 				var id = $(this).data('id');
 
 				if (id) {
 
-					$('#' + id).toggleClass('svg-item--active');
+					$('#' + id).addClass('svg-item--active');
 
 					showTooltip(this, $('#' + id));
 
@@ -893,13 +893,13 @@ $(document).ready(function(){
 
 					// тут логика добавления элемента в корзину и тд.
 
-					$(this).toggleClass('js-cards-item--active');
+					$(this).addClass('js-cards-item--active');
 
 					var id = $(this).data('id');
 
 					if (id) {
 
-						$('#' + id).toggleClass('svg-item--active');
+						$('#' + id).addClass('svg-item--active');
 
 					}
 
