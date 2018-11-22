@@ -318,7 +318,7 @@ template {
   display: none !important;
 }
 
-h1,.big-title,h2,h3,h4,h5,h6,.h1,.h2,.s-block__item-title,.h3,.s-infrastructure__title,.h4,.header-block__text,.list-block__item,.s-about__text,.s-block__item,.s-infrastructure .resp-accordion,.s-infrastructure__tab-btn,.s-infrastructure__caption,.s-infrastructure__text,.s-main-calendar__title,.s-news__title,.s-number-2__caption,.s-form__text,.h5,.h6 {
+h1,.big-title,h2,h3,h4,h5,h6,.h1,.h2,.s-block__item-title,.h3,.s-infrastructure__title,.h4,.page-link,.header-block__text,.list-block__item,.s-about__text,.s-block__item,.s-infrastructure .resp-accordion,.s-infrastructure__tab-btn,.s-infrastructure__caption,.s-infrastructure__text,.s-main-calendar__title,.s-news__title,.s-number-2__caption,.s-form__text,.h5,.h6 {
   margin-bottom: 0.5rem;
   line-height: 1.2;
   color: inherit;
@@ -336,7 +336,7 @@ h3,.h3,.s-infrastructure__title {
   font-size: 1.5rem;
 }
 
-h4,.h4,.header-block__text,.list-block__item,.s-about__text,.s-block__item,.s-infrastructure .resp-accordion,.s-infrastructure__tab-btn,.s-infrastructure__caption,.s-infrastructure__text,.s-main-calendar__title,.s-news__title,.s-number-2__caption,.s-form__text {
+h4,.h4,.page-link,.header-block__text,.list-block__item,.s-about__text,.s-block__item,.s-infrastructure .resp-accordion,.s-infrastructure__tab-btn,.s-infrastructure__caption,.s-infrastructure__text,.s-main-calendar__title,.s-news__title,.s-number-2__caption,.s-form__text {
   font-size: 1rem;
 }
 
@@ -1921,19 +1921,26 @@ input[type="submit"].btn-block,input.form-wrap__btn[type="submit"],.s-content.bg
   display: flex;
   padding-left: 0;
   list-style: none;
-  -webkit-border-radius: 0.25rem;
-          border-radius: 0.25rem;
+  position: relative;
+  z-index: 2;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 
 .page-link {
   position: relative;
   display: block;
-  padding: 0.5rem 0.75rem;
+  padding: 0.7rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
   color: #0c95ed;
   background-color: #fff;
-  border: 1px solid #dee2e6;
+  border: 1px solid #494949;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  min-width: 49px;
+  color: #000000;
 }
 
 .page-link:hover {
@@ -1957,24 +1964,18 @@ input[type="submit"].btn-block,input.form-wrap__btn[type="submit"],.s-content.bg
 
 .page-item:first-child .page-link {
   margin-left: 0;
-  -webkit-border-top-left-radius: 0.25rem;
-          border-top-left-radius: 0.25rem;
-  -webkit-border-bottom-left-radius: 0.25rem;
-          border-bottom-left-radius: 0.25rem;
+  border-color: #0c95ed;
 }
 
 .page-item:last-child .page-link {
-  -webkit-border-top-right-radius: 0.25rem;
-          border-top-right-radius: 0.25rem;
-  -webkit-border-bottom-right-radius: 0.25rem;
-          border-bottom-right-radius: 0.25rem;
+  border-color: #0c95ed;
 }
 
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #0c95ed;
-  border-color: #0c95ed;
+  background-color: #ef202f;
+  border-color: #ef202f;
 }
 
 .page-item.disabled .page-link {
@@ -9745,7 +9746,7 @@ a {
   padding-bottom: 30px;
 }
 
-.s-contact__item .h4.strong,.s-contact__item .strong.header-block__text,.s-contact__item .strong.list-block__item,.s-contact__item .strong.s-about__text,.s-contact__item .strong.s-block__item,.s-contact__item .s-infrastructure .strong.resp-accordion,.s-infrastructure .s-contact__item .strong.resp-accordion,.s-contact__item .strong.s-infrastructure__tab-btn,.s-contact__item .strong.s-infrastructure__caption,.s-contact__item .strong.s-infrastructure__text,.s-contact__item .strong.s-main-calendar__title,.s-contact__item .strong.s-news__title,.s-contact__item .strong.s-number-2__caption,.s-contact__item .strong.s-form__text {
+.s-contact__item .h4.strong,.s-contact__item .strong.page-link,.s-contact__item .strong.header-block__text,.s-contact__item .strong.list-block__item,.s-contact__item .strong.s-about__text,.s-contact__item .strong.s-block__item,.s-contact__item .s-infrastructure .strong.resp-accordion,.s-infrastructure .s-contact__item .strong.resp-accordion,.s-contact__item .strong.s-infrastructure__tab-btn,.s-contact__item .strong.s-infrastructure__caption,.s-contact__item .strong.s-infrastructure__text,.s-contact__item .strong.s-main-calendar__title,.s-contact__item .strong.s-news__title,.s-contact__item .strong.s-number-2__caption,.s-contact__item .strong.s-form__text {
   max-width: 130px;
 }
 
@@ -10161,7 +10162,7 @@ a {
   background-color: #f9f9f9;
 }
 
-.s-main-calendar .section-title .h4,.s-main-calendar .section-title .header-block__text,.s-main-calendar .section-title .list-block__item,.s-main-calendar .section-title .s-about__text,.s-main-calendar .section-title .s-block__item,.s-main-calendar .section-title .s-infrastructure .resp-accordion,.s-infrastructure .s-main-calendar .section-title .resp-accordion,.s-main-calendar .section-title .s-infrastructure__tab-btn,.s-main-calendar .section-title .s-infrastructure__caption,.s-main-calendar .section-title .s-infrastructure__text,.s-main-calendar .section-title .s-main-calendar__title,.s-main-calendar .section-title .s-news__title,.s-main-calendar .section-title .s-number-2__caption,.s-main-calendar .section-title .s-form__text {
+.s-main-calendar .section-title .h4,.s-main-calendar .section-title .page-link,.s-main-calendar .section-title .header-block__text,.s-main-calendar .section-title .list-block__item,.s-main-calendar .section-title .s-about__text,.s-main-calendar .section-title .s-block__item,.s-main-calendar .section-title .s-infrastructure .resp-accordion,.s-infrastructure .s-main-calendar .section-title .resp-accordion,.s-main-calendar .section-title .s-infrastructure__tab-btn,.s-main-calendar .section-title .s-infrastructure__caption,.s-main-calendar .section-title .s-infrastructure__text,.s-main-calendar .section-title .s-main-calendar__title,.s-main-calendar .section-title .s-news__title,.s-main-calendar .section-title .s-number-2__caption,.s-main-calendar .section-title .s-form__text {
   padding-top: 1em;
 }
 
@@ -10420,7 +10421,7 @@ a {
   padding-right: 0.3125rem;
 }
 
-.s-main-calendar__aside .row .h4,.s-main-calendar__aside .row .header-block__text,.s-main-calendar__aside .row .list-block__item,.s-main-calendar__aside .row .s-about__text,.s-main-calendar__aside .row .s-block__item,.s-main-calendar__aside .row .s-infrastructure .resp-accordion,.s-infrastructure .s-main-calendar__aside .row .resp-accordion,.s-main-calendar__aside .row .s-infrastructure__tab-btn,.s-main-calendar__aside .row .s-infrastructure__caption,.s-main-calendar__aside .row .s-infrastructure__text,.s-main-calendar__aside .row .s-main-calendar__title,.s-main-calendar__aside .row .s-news__title,.s-main-calendar__aside .row .s-number-2__caption,.s-main-calendar__aside .row .s-form__text {
+.s-main-calendar__aside .row .h4,.s-main-calendar__aside .row .page-link,.s-main-calendar__aside .row .header-block__text,.s-main-calendar__aside .row .list-block__item,.s-main-calendar__aside .row .s-about__text,.s-main-calendar__aside .row .s-block__item,.s-main-calendar__aside .row .s-infrastructure .resp-accordion,.s-infrastructure .s-main-calendar__aside .row .resp-accordion,.s-main-calendar__aside .row .s-infrastructure__tab-btn,.s-main-calendar__aside .row .s-infrastructure__caption,.s-main-calendar__aside .row .s-infrastructure__text,.s-main-calendar__aside .row .s-main-calendar__title,.s-main-calendar__aside .row .s-news__title,.s-main-calendar__aside .row .s-number-2__caption,.s-main-calendar__aside .row .s-form__text {
   margin-bottom: 0;
   margin-top: 12px;
 }
@@ -10586,6 +10587,10 @@ a {
   -webkit-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
+}
+
+.s-news__col {
+  margin-bottom: 3.75rem;
 }
 
 .s-sq {
@@ -10818,7 +10823,7 @@ a {
     font-size: 1.6875rem;
   }
 
-  h4,.h4,.header-block__text,.list-block__item,.s-about__text,.s-block__item,.s-infrastructure .resp-accordion,.s-infrastructure__tab-btn,.s-infrastructure__caption,.s-infrastructure__text,.s-main-calendar__title,.s-news__title,.s-number-2__caption,.s-form__text {
+  h4,.h4,.page-link,.header-block__text,.list-block__item,.s-about__text,.s-block__item,.s-infrastructure .resp-accordion,.s-infrastructure__tab-btn,.s-infrastructure__caption,.s-infrastructure__text,.s-main-calendar__title,.s-news__title,.s-number-2__caption,.s-form__text {
     font-size: 1.125rem;
   }
 
@@ -14717,7 +14722,7 @@ a {
     font-size: 1.875rem;
   }
 
-  h4,.h4,.header-block__text,.list-block__item,.s-about__text,.s-block__item,.s-infrastructure .resp-accordion,.s-infrastructure__tab-btn,.s-infrastructure__caption,.s-infrastructure__text,.s-main-calendar__title,.s-news__title,.s-number-2__caption,.s-form__text {
+  h4,.h4,.page-link,.header-block__text,.list-block__item,.s-about__text,.s-block__item,.s-infrastructure .resp-accordion,.s-infrastructure__tab-btn,.s-infrastructure__caption,.s-infrastructure__text,.s-main-calendar__title,.s-news__title,.s-number-2__caption,.s-form__text {
     font-size: 1.25rem;
   }
 
