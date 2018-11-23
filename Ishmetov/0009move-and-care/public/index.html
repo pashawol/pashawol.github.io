@@ -10,129 +10,176 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#3361d8">
+    <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
-      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
-        <div class="toggle-mnu toggle-mnu-1"><span></span></div>
-        <div class="wrapp-hidden"> 
-          <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">Продукция </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Услуги  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Акции </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
-            </li>
-          </ul>
-          <div class="text-right"></div>
-        </div>
-      </div>
-      <!--  мобильное меню-->
-      <!-- start HEADER.header-->
-      <header class="header">
-        <!-- start .top-line-->
-        <div class="top-line">
-        </div>
-        <!-- end .top-line-->
-        <!-- start top-nav-->
-        <div class="top-nav">
-          <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- end top-nav-->
-      </header>
-      <!-- end HEADER.header-->
-      <!-- start header-block-->
-      <div class="header-block" id="header-block">
-        <div class="container">
-          <h1></h1>
-          <div class="row"></div>
-        </div>
-      </div>
-      <!-- end header-block-->
       <!-- start s-form-->
       <section class="s-form section" id="s-form">
         <div class="container">
-          <h2 class="text-center">s-form</h2>
-          <div class="row"></div>
+          <div class="text-center"><a class="logo" href="#"><img src="img/logo.png" alt=""/></a>
+            <div class="s-form__title">Please fill out this form to&nbsp;schedule your move
+            </div>
+          </div>
+          <div class="s-form__inner">
+            <form id="amForm" action="">
+              <div class="form-group-flex">
+                <div class="form-group form-group--col-6 datepicker_wrap">
+                  <label>1. Date:<span>*</span></label>
+                  <input class="form-control datepicker required" type="text" placeholder="Select a date" name="Date"/>
+                </div>
+                <div class="form-group form-group--col-6">
+                  <label>2. Size of move: <span>*</span></label>
+                  <select class="form-control" id="Type_room" name="Type_room">
+                    <option disabled="" selected=""> ...</option>
+                    <option value="Room or less">Room or less</option>
+                    <option value="Studio apartment">Studio apartment</option>
+                    <option value="Small 1 Bedroom apartment">Small 1 Bedroom apartment</option>
+                    <option value="Large 1 Bedroom apartment">Large 1 Bedroom apartment</option>
+                    <option value="Small 2 Bedroom apartment">Small 2 Bedroom apartment</option>
+                    <option value="Large 2 Bedroom apartment">Large 2 Bedroom apartment</option>
+                    <option value="3+ Bedroom apartment">3+ Bedroom apartment</option>
+                    <option value="2 Bedroom house">2 Bedroom house</option>
+                    <option value="3 Bedroom house">3 Bedroom house</option>
+                    <option value="4 Bedroom house">4 Bedroom house</option>
+                  </select>
+                </div>
+                <div class="form-group form-group--col-6">
+                  <label>3. Moving to:  <span>*</span></label>
+                  <select class="form-control" id="Etaj_to" name="Etaj_to">
+                    <option disabled="" selected="">...</option>
+                    <option value="Elevator">Elevator</option>
+                    <option value="No stairs Ground floor (type of entrance)">No Stairs - Ground Floor</option>
+                    <option value="Stairs 2 floor">Stairs - 2nd Floor</option>
+                    <option value="Stairs 3 floor">Stairs - 3nd Floor</option>
+                    <option value="Stairs 4 floor">Stairs - 4nd Floor</option>
+                    <option value="Stairs 5 floor">Stairs - 5nd Floor</option>
+                    <option value="Private house">Private House</option>
+                  </select>
+                </div>
+                <div class="form-group form-group--col-6">
+                  <label>4. Moving from: <span>*</span></label>
+                  <select class="form-control" id="Etaj_from" name="Etaj_from">
+                    <option disabled="" selected="">Type From...</option>
+                    <option value="Elevator">Elevator</option>
+                    <option value="No stairs Ground floor (type of entrance)">No Stairs - Ground Floor</option>
+                    <option value="Stairs 2 floor">Stairs - 2nd Floor</option>
+                    <option value="Stairs 3 floor">Stairs - 3nd Floor</option>
+                    <option value="Stairs 4 floor">Stairs - 4nd Floor</option>
+                    <option value="Stairs 5 floor">Stairs - 5nd Floor</option>
+                    <option value="Private house">Private House</option>
+                  </select>
+                </div>
+                <div class="form-group-checkboxes">
+                  <label>5. Extra Rooms: <span>*</span></label>
+                  <div class="form-checkboxes">
+                    <div class="form-checkbox-item">
+                      <input class="form-checkbox login-processed" id="edit-extra-house-furnished-rooms-1" type="checkbox" name="Extra_House_Furnished_Rooms[1]" value="1"/>
+                      <label class="option" for="edit-extra-house-furnished-rooms-1">living room </label>
+                    </div>
+                    <div class="form-checkbox-item">
+                      <input class="form-checkbox login-processed" id="edit-extra-house-furnished-rooms-2" type="checkbox" name="Extra_House_Furnished_Rooms[2]" value="2"/>
+                      <label class="option" for="edit-extra-house-furnished-rooms-2">dinning room </label>
+                    </div>
+                    <div class="form-checkbox-item">
+                      <input class="form-checkbox login-processed" id="edit-extra-house-furnished-rooms-3" type="checkbox" name="Extra_House_Furnished_Rooms[3]" value="3"/>
+                      <label class="option" for="edit-extra-house-furnished-rooms-3">office </label>
+                    </div>
+                    <div class="form-checkbox-item">
+                      <input class="form-checkbox login-processed" id="edit-extra-house-furnished-rooms-8" type="checkbox" name="Extra_House_Furnished_Rooms[8]" value="4"/>
+                      <label class="option" for="edit-extra-house-furnished-rooms-8">extra room </label>
+                    </div>
+                    <div class="form-checkbox-item">
+                      <input class="form-checkbox login-processed" id="edit-extra-house-furnished-rooms-4" type="checkbox" name="Extra_House_Furnished_Rooms[4]" value="5"/>
+                      <label class="option" for="edit-extra-house-furnished-rooms-4">basement </label>
+                    </div>
+                    <div class="form-checkbox-item">
+                      <input class="form-checkbox login-processed" id="edit-extra-house-furnished-rooms-5" type="checkbox" name="Extra_House_Furnished_Rooms[5]" value="6"/>
+                      <label class="option" for="edit-extra-house-furnished-rooms-5">garage </label>
+                    </div>
+                    <div class="form-checkbox-item">
+                      <input class="form-checkbox login-processed" id="edit-extra-house-furnished-rooms-6" type="checkbox" name="Extra_House_Furnished_Rooms[6]" value="7"/>
+                      <label class="option" for="edit-extra-house-furnished-rooms-6">patio </label>
+                    </div>
+                    <div class="form-checkbox-item">
+                      <input class="form-checkbox login-processed" id="edit-extra-house-furnished-rooms-7" type="checkbox" name="Extra_House_Furnished_Rooms[7]" value="8"/>
+                      <label class="option" for="edit-extra-house-furnished-rooms-7">play room </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>6. First name: <span>*</span></label>
+                  <input class="form-control required" id="fromZip" type="text" name="name"/>
+                </div>
+                <div class="form-group">
+                  <label>7. Last name: <span>*</span></label>
+                  <input class="form-control required" id="fromZip" type="text" name="name"/>
+                </div>
+                <div class="form-group">
+                  <label>8. Phone: <span>*</span></label>
+                  <input class="form-control required" id="fromZip" type="tel" name="tel"/>
+                </div>
+                <div class="form-group">
+                  <label>9. Email: <span>*</span></label>
+                  <input class="form-control required" id="fromZip" type="email" name="from_zip"/>
+                </div>
+                <div class="form-group">
+                  <label>10. From address: <span>*</span></label>
+                  <input class="form-control required" id="fromZip" type="text" name="from_zip"/>
+                </div>
+                <div class="form-group">
+                  <label>11. Apt From:  </label>
+                  <input class="form-control" id="fromZip" type="text" name="from_zip"/>
+                </div>
+                <div class="form-group">
+                  <label>12. City From: <span>*</span></label>
+                  <input class="form-control required" id="fromZip" type="text" name="from_zip"/>
+                </div>
+                <div class="form-group">
+                  <label>13. From ZIP: <span>*</span></label>
+                  <input class="form-control required" id="fromZip" type="text" name="from_zip"/>
+                </div>
+                <div class="form-group">
+                  <label>14. To address: <span>*</span></label>
+                  <input class="form-control required" id="fromZip" type="text" name="from_zip"/>
+                </div>
+                <div class="form-group">
+                  <label>15. Apt To:  </label>
+                  <input class="form-control" id="fromZip" type="text" name="from_zip"/>
+                </div>
+                <div class="form-group">
+                  <label>16. City To: <span>*</span></label>
+                  <input class="form-control required" id="fromZip" type="text" name="from_zip"/>
+                </div>
+                <div class="form-group">
+                  <label>17. To ZIP: <span>*</span></label>
+                  <input class="form-control required" id="fromZip" type="text" name="from_zip"/>
+                </div>
+                <div class="form-group form-group--col-6">
+                  <label>18. Inventory: </label>
+                  <input class="form-control" id="fromZip" type="text" name="from_zip"/>
+                </div>
+                <div class="form-group form-group--col-6">
+                  <label>19. Note: </label>
+                  <input class="form-control" id="fromZip" type="text" name="from_zip"/>
+                </div>
+              </div>
+              <div class="s-form__text">Please note, this quote is&nbsp;just an&nbsp;estimate and provided for your convenience only. We&nbsp;give you a&nbsp;database average for generally similar moves. It&nbsp;is&nbsp;best to&nbsp;consider this a&nbsp;thinking tool. However: your final cost is&nbsp;based on&nbsp;hourly rate and actual time your move will take. Additional time may be&nbsp;required if&nbsp;your move involves long walks.
+              </div><a class="btn-green blue" id="CalculatorSubmit" href="#" type="text">Submit</a>
+            </form>
+          </div>
         </div>
       </section>
       <!-- end s-form-->
-      <!-- start s-contact-->
-      <div class="s-contact section" id="s-contact">
-        <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"><a href="#"></a></div>
-        </div>
-      </div>
-      <!-- end s-contact-->
       <footer class="footer">
-        <div class="container">footer</div>
+        <div class="container">©2018 Move-and-care.com.<br/>All Rights Reserved.</div>
       </footer>
     </div>
-    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
-      <form>
-        <div class="text-center">
-          <div class="form-wrap__title h3 ttu">Обратный звонок
-          </div>
-          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
-        </div>
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">text</span><input class="form-wrap__input form-control" type="Ваше Имя" required="required"/>
-          </label>
-        </div>
-        <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Ваш телефон" required="required"/>
-          </label>
-        </div>
-        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
-        <div class="politic">
-          Отправляя заявку Вы даете
-          <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
-          
-          на&#160;обработку персональных данных
-        </div>
-      </form>
-    </div>
-    <!-- #modal-call-->
-    <!-- modal-->
     <script src="js/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
-    <script src="js/common.js"></script>
+    <script src="libs/jquery-ui.min.js"></script>
+    <script src="libs/jquery.mask.min.js"></script>
+    <script src="libs/calc.js"></script>
+    <script src="libs/custom_script.js"></script>
   </body>
 </html>
