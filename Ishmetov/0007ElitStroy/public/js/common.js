@@ -58,7 +58,7 @@ jQuery(document).ready(function ($) {
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// карусель
-	$('.s-project__slider-main--js').slick({
+	$('.s-project__slider-main--js, .s-gal__slider-main--js').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
@@ -126,7 +126,7 @@ jQuery(document).ready(function ($) {
 		})
 
 
-	$('.s-project__slider-main--js ')
+	$('.s-project__slider-main--js, .s-gal__slider-main--js')
 	.on('lazyLoaded', function(event, slick, image, imageSource){
 			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 	});
@@ -150,7 +150,12 @@ jQuery(document).ready(function ($) {
 		removalDelay: 300,
 		mainClass: 'my-mfp-zoom-in'
 	});
-
+	$('.popup-with-move-anim').click(function(){
+		var th =$(this);
+		$('#' + th.attr('href')).find(".form-wrap__title--js").text(th.data('title'));
+		$('#' + th.attr('href')).find(".form-wrap__title-sub--js").text(th.data('sub-title'));
+		$('#' + th.attr('href')).find(".form-wrap__btn").val(th.data('btn'));
+	})
 	// / modal window
 
 	// modal галерея
@@ -211,4 +216,40 @@ jQuery(document).ready(function ($) {
 	// });
 
 
+	if ($("div").is("#map")){
+		ymaps.ready(function () {
+			 var myMap = new ymaps.Map('map', {
+							 center: [57.73679763800034,40.911],
+							 zoom: 17,
+							 behaviors: ['drag'],
+								 
+									 // controls: ["zoomControl", "fullscreenControl"]
+					 }, {
+							 searchControlProvider: 'yandex#search'
+					 }),
+	 
+			
+					 myPlacemark = new ymaps.Placemark([57.73683206689552,40.910077500000014], {
+							 hintContent: 'г. Кострома, м-н Паново, 11',
+							 balloonContent: 'г. Кострома, м-н Паново, 11 '
+					 }, {
+							 // Опции.
+							 // Необходимо указать данный тип макета.
+							 iconLayout: 'default#image',
+							 // Своё изображение иконки метки.
+							 iconImageHref: 'img/mark.png',
+							 // Размеры метки.
+							 iconImageSize: [88, 90],
+							 // Смещение левого верхнего угла иконки относительно
+							 // её "ножки" (точки привязки).
+							 iconImageOffset: [-22, -70]
+					 }) 
+	 
+			 myMap.geoObjects
+					 .add(myPlacemark)
+					
+		
+			 
+	 });
+	 }
 });
