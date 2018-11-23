@@ -542,10 +542,10 @@ jQuery(document).ready(function ($) {
 	particlesJS("particles-js", {
 		"particles": {
 			"number": {
-				"value": 120,
+				"value": 100,
 				"density": {
 					"enable": true,
-					"value_area": 800
+					"value_area": 1000
 				}
 			},
 			"color": {
