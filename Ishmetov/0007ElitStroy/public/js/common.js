@@ -152,9 +152,10 @@ jQuery(document).ready(function ($) {
 	});
 	$('.popup-with-move-anim').click(function(){
 		var th =$(this);
-		$('#' + th.attr('href')).find(".form-wrap__title--js").text(th.data('title'));
-		$('#' + th.attr('href')).find(".form-wrap__title-sub--js").text(th.data('sub-title'));
-		$('#' + th.attr('href')).find(".form-wrap__btn").val(th.data('btn'));
+		$(th.attr('href')).find(".form-wrap__title--js").text(th.data('title'));
+		$(th.attr('href')).find(".form-wrap__title-sub--js").text(th.data('sub-title'));
+		$(th.attr('href')).find(".form-wrap__btn").val(th.data('btn'));
+		$(th.attr('href')).find(".order").val(th.data('title'));
 	})
 	// / modal window
 
