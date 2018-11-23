@@ -322,7 +322,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.section-title,.s-contact__tel,.h3,.h4,.s-material__ti
 }
 
 h1,.h1 {
-  font-size: 1.75rem;
+  font-size: 1.35rem;
 }
 
 h2,.h2,.section-title,.s-contact__tel {
@@ -1353,7 +1353,7 @@ a.btn.disabled,a.disabled.form-wrap__btn,a.disabled.s-project__btn,a.disabled.s-
 }
 
 .btn-lg,.form-wrap__btn,.s-project__btn,.s-about__btn,.s-work__btn {
-  padding: 1.43rem 1rem 1.17rem;
+  padding: 1.43rem 0 1.17rem;
   font-size: 0.7rem;
   line-height: 1.5;
   -webkit-border-radius: 2rem;
@@ -3154,6 +3154,8 @@ select.form-control:focus::-ms-value {
 .form-wrap__title {
   font-size: 1.9rem;
   font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
 }
 
 .form-wrap__title-sub {
@@ -3277,7 +3279,6 @@ select.form-control:focus::-ms-value {
 }
 
 .header {
-  height: 1000px;
   padding-top: 91px;
   min-height: 100vh;
   display: -webkit-box;
@@ -4086,6 +4087,10 @@ select.form-control:focus::-ms-value {
   color: #565656;
 }
 
+.footer a.ttu {
+  color: #212529;
+}
+
 .footer__polite,.footer a.ttu {
   text-decoration: none !important;
 }
@@ -4877,7 +4882,7 @@ a {
   }
 
   .footer {
-    \text-align: left;
+    text-align: left;
   }
 
   .modal-win {
@@ -6827,6 +6832,10 @@ a {
   }
 
   .header-block {
+    text-align: center;
+  }
+
+  .s-contact {
     text-align: center;
   }
 }

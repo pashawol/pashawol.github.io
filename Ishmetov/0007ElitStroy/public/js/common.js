@@ -99,6 +99,7 @@ jQuery(document).ready(function ($) {
 			 arrows: false, 
 			 arrows: false,
 			 draggable: false, 
+			 asNavFor: smsl
 			});
 			
 			smsl.slick({
@@ -253,4 +254,14 @@ jQuery(document).ready(function ($) {
 			 
 	 });
 	 }
+
+	 	// кастомный инпут файл
+
+	var file = $(".add-file input[type=file]");
+	file.change(function () {
+		var filename = $(this).val().replace(/.*\\/, "");
+		var name = $(".add-file__filename  ");
+		name.text(filename);
+
+	});
 });
