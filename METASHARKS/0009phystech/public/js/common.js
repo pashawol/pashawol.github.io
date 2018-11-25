@@ -839,10 +839,10 @@ jQuery(document).ready(function ($) {
 
 	});
 	canvasres();
-
+// =============================================== добавил
 	// прилипает карта
 	$(".s-contact__map-wrap").stick_in_parent();
-
+	//gijgo.com/datepicker
 	var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
 
 	$('.datepicker-date').each(function(){
