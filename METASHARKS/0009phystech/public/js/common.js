@@ -436,6 +436,7 @@ jQuery(document).ready(function ($) {
 			$(this).closest('label').addClass('empty');
 		}
 	});
+	
 	// анимация на главной вверху
 
 
@@ -662,7 +663,7 @@ jQuery(document).ready(function ($) {
 		nodes = [];
 
 		canvas = $(xcanvas)[0];
-		console.log(canvas);
+		// console.log(canvas);
 		resizeWindow();
 		mouse = {
 			x: canvas.width / 2,
@@ -841,4 +842,24 @@ jQuery(document).ready(function ($) {
 
 	// прилипает карта
 	$(".s-contact__map-wrap").stick_in_parent();
+
+	var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+
+	$('.datepicker-date').each(function(){
+		var th =$(this);
+		th.datepicker({
+			locale: 'ru-ru',
+			uiLibrary: 'bootstrap4',
+			format: 'dd.mm.yyyy',
+			minDate: today,
+			select: function (e) {
+				th.parents('label').removeClass("empty");
+			}
+		  // modal: true 
+		});
+		
+		th.click(function(){
+			th.next().click();
+		})
+	})
 });

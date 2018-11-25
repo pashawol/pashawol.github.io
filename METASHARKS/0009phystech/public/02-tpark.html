@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css">
+    <link rel="stylesheet" href="libs/gijgo-master/dist/combined/css/gijgo.min.css">
+    <link rel="stylesheet" href="libs/gijgo-master/dist/combined/css/demo.min.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -72,9 +74,19 @@
                   </div>
                 </div>
               </div>
+              <!-- добавил-->
+              <div class="col-auto">
+                <div class="row row--small">
+                  <div class="col-auto"><a class="top-nav__btn-lang active" href="#">Ru</a>
+                  </div>
+                  <div class="col-auto"><a class="top-nav__btn-lang" href="#">En</a>
+                  </div>
+                </div>
+              </div>
+              <!-- добавил-->
               <div class="col-auto"><a class="top-nav__btn popup-with-move-anim" href="#modal-call">Обратная связь</a>
               </div>
-              <div class="col-auto"><a class="top-nav__btn-po" href="#">
+              <div class="col-auto"><a class="top-nav__btn-po popup-with-move-anim" href="#modal-po">
                 <svg class="icon icon-user ">
                   <use xlink:href="img/svg/sprite.svg#user"></use>
                 </svg></a>
@@ -611,6 +623,29 @@
       </form>
     </div>
     <!-- #modal-call-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-po">
+      <form class="js-form-validate"> 
+        <div class="h4 text-primary ttu strong pb-5"> Вход в личный кабинет</div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title-label">Ваше логин</span>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title-label">Пароль</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="row row--sm align-items-center">
+          <div class="col-sm text-center my-2"><a class="tdu" href="#">Забыли пароль?</a></div>
+          <div class="col">
+            <button class="form-wrap__btn" type="submit">Войти
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-call-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
@@ -626,6 +661,9 @@
     <script src="libs/jquery.requestAnimationFrame.min.js"></script>
     <script src="libs/particles.min.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
+    <!-- +-->
+    <script src="libs/gijgo-master/dist/combined/js/gijgo.js"></script>
+    <script src="libs/gijgo-master/dist/combined/js/messages/messages.ru-ru.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
