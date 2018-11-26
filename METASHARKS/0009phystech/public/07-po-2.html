@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css">
-    <link rel="stylesheet" href="libs/gijgo-master/dist/combined/css/gijgo.min.css">
-    <link rel="stylesheet" href="libs/gijgo-master/dist/combined/css/demo.min.css">
+    <link rel="stylesheet" href="libs/gijgo-master/css/gijgo.min.css">
+    <link rel="stylesheet" href="libs/gijgo-master/css/demo.min.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -86,10 +86,12 @@
               <!-- добавил-->
               <div class="col-auto"><a class="top-nav__btn popup-with-move-anim" href="#modal-call">Обратная связь</a>
               </div>
-              <div class="col-auto"><a class="top-nav__btn-po popup-with-move-anim" href="#modal-po">
+              <div class="col-auto">
+                <!-- изменил--><a class="top-nav__btn-po popup-with-move-anim" href="#modal-po">
                 <svg class="icon icon-user ">
                   <use xlink:href="img/svg/sprite.svg#user"></use>
                 </svg></a>
+                <!-- изменил-->
               </div>
               <div class="col-auto d-lg-none">
                 <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
@@ -136,17 +138,17 @@
                       <div class="row justify-content-between">
                         <div class="col">
                           <div class="form-wrap__input-wrap form-group">
-                            <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title-label">Название компании</span>
+                            <label><input class="form-wrap__input form-control under-canvas" type="text"/><span class="form-wrap__title-label">Название компании</span>
                             </label>
                           </div>
                           <!-- +e.input-wrap-->
                           <div class="form-wrap__input-wrap form-group">
-                            <label><input class="form-wrap__input form-control" type="url"/><span class="form-wrap__title-label">Адрес офицального сайта</span>
+                            <label><input class="form-wrap__input form-control under-canvas" type="url"/><span class="form-wrap__title-label">Адрес офицального сайта</span>
                             </label>
                           </div>
                           <!-- +e.input-wrap-->
                           <div class="form-wrap__input-wrap form-group">
-                            <label><textarea class="form-wrap__input form-control"> </textarea><span class="form-wrap__title-label">Краткое описание компании</span>
+                            <label><textarea class="form-wrap__input form-control under-canvas"> </textarea><span class="form-wrap__title-label">Краткое описание компании</span>
                             </label>
                           </div>
                           <!-- +e.input-wrap-->
@@ -155,14 +157,14 @@
                           <div class="logo-block">
                             <div class="add-file">
                               <label>
-                                <div class="add-file__img-wrap add-file__img-wrap--active"><img class="res-i" src="img/patner-4.png" alt="">
-                                </div><input class="add-file__input" name="file" type="file"/><span class="add-file__btn">Загрузить логотип</span>
+                                <div class="add-file__img-wrap add-file__img-wrap--active under-canvas"><img class="res-i" src="img/patner-4.png" alt="">
+                                </div><input class="add-file__input" name="file" type="file"/><span class="add-file__btn under-canvas">Загрузить логотип</span>
                               </label>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <button class="form-wrap__btn form-wrap__btn--edit" type="submit">Сохранить изменения
+                      <button class="form-wrap__btn form-wrap__btn--edit under-canvas" type="submit">Сохранить изменения
                       </button>
                     </form>
                   </div>
