@@ -87,10 +87,15 @@
               <div class="col-auto"><a class="top-nav__btn popup-with-move-anim" href="#modal-call">Обратная связь</a>
               </div>
               <div class="col-auto">
-                <!-- изменил--><a class="top-nav__btn-po popup-with-move-anim" href="#modal-po">
-                <svg class="icon icon-user ">
-                  <use xlink:href="img/svg/sprite.svg#user"></use>
-                </svg></a>
+                <!-- изменил-->
+                <div class="dropdown"><a class="top-nav__btn-po active dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <svg class="icon icon-user ">
+                    <use xlink:href="img/svg/sprite.svg#user"></use>
+                  </svg></a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                    <div class="arrow"></div><a class="dropdown-item" href="#">Резидент</a><a class="dropdown-item" href="#">Редактировать профиль</a><a class="dropdown-item" href="#">Эксплуатация</a><a class="dropdown-item" href="#">Оформить пропуск</a>
+                  </div>
+                </div>
                 <!-- изменил-->
               </div>
               <div class="col-auto d-lg-none">
@@ -339,6 +344,11 @@
     <!-- #modal-call-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
+    <script src="libs/popper.min.js"></script>
+    <script src="libs/bootstrap/util.js"></script>
+    <script src="libs/bootstrap/dropdown.js"></script>
+    <script src="libs/bootstrap/tooltip.js"></script>
+    <script src="libs/bootstrap/popover.js"></script>
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <script src="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.js"></script>
     <script src="libs/slick/slick.min.js"></script>
