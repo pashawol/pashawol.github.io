@@ -80,7 +80,7 @@
                   <div class="col-xl">Тел.:  <a class="text-body" href="tel:+7(495)774-69-47" title="title">+7 (495) 774-69-47</a></div>
                 </div>
               </div>
-              <div class="col-auto d-none d-lg-block"><a class="top-line__btn btn btn-primary" href="#">Обратный звонок</a>
+              <div class="col-auto d-none d-lg-block"><a class="top-line__btn btn btn-primary" href="#" data-toggle="modal" data-target="#modal-win">Обратный звонок</a>
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@
           <div class="container">
             <div class="row justify-content-between">
               <div class="col-auto d-lg-none"><a class="toggle-mnu toggle-mnu-1 d-lg-none" href="#"><span></span></a></div>
-              <div class="col-auto d-lg-none"><a class="top-nav__btn btn btn-primary" href="#">Обратный звонок</a>
+              <div class="col-auto d-lg-none"><a class="top-nav__btn btn btn-primary" href="#" data-toggle="modal" data-target="#modal-win">Обратный звонок</a>
               </div>
             </div>
             <div class="d-lg-block d-none">
@@ -317,6 +317,37 @@
         <!-- end .top-line-->
       </footer>
     </div>
+    <div class="modal fade" id="modal-win" tabindex="-1" role="dialog" aria-labelledby="modal-win" aria-hidden="true">
+      <div class="   modal-dialog  modal-dialog-centered  " role="document"> 
+        <div class="form-wrap modal-content modal-win">
+          <form>
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
+            <div class="h2 text-center">ЗАКАЗАТЬ ЗВОНОК</div>
+            <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/>
+            </div>
+            <!-- +e.input-wrap-->
+            <button class="form-wrap__btn btn btn-primary btn-block">Отправить
+            </button>
+            <div class="wrap-polite"> 
+              <label class="custom-input polite"><input class="custom-input__input custom-input__input-radio" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab"></span>Даю  согласие   на хранение и обработку   персональных данных
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
+      <div class=" ttext-center  modal-dialog  modal-dialog-centered  " role="document"> 
+        <div class="form-wrap modal-content modal-win">
+          <form>
+            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button><br/>
+            <div class="h2">Заявка принята</div><br/>
+            <div class="h3">Скоро с Вами свяжутся</div><br/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/common.js"></script>

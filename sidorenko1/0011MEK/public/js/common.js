@@ -5,22 +5,7 @@ jQuery(document).ready(function ($) {
 	// Custom JS
 
 
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			}
-
-		};
-
-	});
+ 
 
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
@@ -31,9 +16,7 @@ jQuery(document).ready(function ($) {
 		$("body, html").toggleClass("fixed");
 		return false;
 	});
-	$('.hidden-mnu ul li a').on('click', function () {
-		$(".hidden-mnu .toggle-mnu").click();
-	});
+ 
 	$(document).mouseup(function (e) {
 		var container = $(".hidden-mnu.active");
 		if (container.has(e.target).length === 0) {
@@ -72,6 +55,14 @@ jQuery(document).ready(function ($) {
 
 
 		// скрывает моб меню
+		$(" .btn-top").click(function () {
+			var elementClick = $('header');
+			var destination = $(elementClick).offset().top;
+			
+					$('html, body').animate({ scrollTop: destination }, 1100);
+			
+			return false; 
+	});
 
 		var topH = $("header ").innerHeight();
 
@@ -82,6 +73,29 @@ jQuery(document).ready(function ($) {
 				$('.top-nav  ').removeClass('fixed');
 			}
 		});
+
+
+		var topH=$(".header-block").innerHeight();  
+    if($(this).scrollTop()>topH){
+                   
+                    $('.btn-top  ').addClass('active');
+                    
+                }
+                else if ($(this).scrollTop()<topH){
+                   
+                    $('.btn-top  ').removeClass('active');
+                   
+                }
+    $(window).scroll(function(){
+                if($(this).scrollTop()>topH){
+                
+                    $('.btn-top  ').addClass('active'); 
+                }
+                else if ($(this).scrollTop()<topH){
+                  
+                    $('.btn-top ').removeClass('active'); 
+                }
+            });
 		// конец добавил
 	}
 

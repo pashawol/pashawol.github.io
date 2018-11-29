@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>title</title>
+    <title>Main</title>
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
@@ -16,31 +16,37 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="toggle-mnu toggle-mnu-1"><span></span></div>
         <div class="wrapp-hidden"> 
+          <div class="top-line"> 
+            <div class="mb-2"><a class="top-line__link" href="tel:+7 (499) 638-22-28">
+              <svg class="icon icon-phone-call ">
+                <use xlink:href="img/svg/sprite.svg#phone-call"></use>
+              </svg>+7 (499) 638-22-28</a>
+            </div>
+            <div class="mb-2"><a class="top-line__link" href="mailto:info@mec-eng.rut">
+              <svg class="icon icon-envelope ">
+                <use xlink:href="img/svg/sprite.svg#envelope"></use>
+              </svg>info@mec-eng.rut</a>
+            </div>
+            <div class="mb-2">
+              <div class="soc"><a class="soc__item" href="#" target="_blank"><i class="fab fa-instagram"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab  fa-facebook-f"></i></a>
+              </div>
+            </div>
+          </div>
           <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">Продукция </a>
+            <li class="trop__item"><a class="trop__link" href="#">Главная</a>
             </li>
-            <li class="trop__item"><a class="trop__link" href="#">Услуги  </a>
+            <li class="trop__item"><a class="trop__link" href="#">О компании</a>
             </li>
-            <li class="trop__item"><a class="trop__link" href="#">Подбор септика   </a>
+            <li class="trop__item"><a class="trop__link" href="#">Проекты </a>
             </li>
-            <li class="trop__item"><a class="trop__link" href="#">Акции </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Наши работы   </a>
+            <li class="trop__item"><a class="trop__link" href="#">Новости</a>
             </li>
             <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
             </li>
           </ul>
-          <div class="text-right"></div>
         </div>
       </div>
       <!--  мобильное меню-->
@@ -48,41 +54,65 @@
       <header class="header">
         <!-- start .top-line-->
         <div class="top-line">
+          <div class="container">
+            <div class="row align-items-center justify-content-end">
+              <div class="col-sm-auto col"><a class="top-line__link" href="tel:+7 (499) 638-22-28">
+                <svg class="icon icon-phone-call ">
+                  <use xlink:href="img/svg/sprite.svg#phone-call"></use>
+                </svg>+7 (499) 638-22-28</a>
+              </div>
+              <div class="col-auto d-none d-sm-block"><a class="top-line__link" href="mailto:info@mec-eng.rut">
+                <svg class="icon icon-envelope ">
+                  <use xlink:href="img/svg/sprite.svg#envelope"></use>
+                </svg>info@mec-eng.rut</a>
+              </div>
+              <div class="col-auto d-none d-sm-block">
+                <div class="soc"><a class="soc__item" href="#" target="_blank"><i class="fab fa-instagram"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab  fa-facebook-f"></i></a>
+                </div>
+              </div>
+              <div class="col-auto d-lg-none">
+                <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
+              </div>
+            </div>
+          </div>
+          <!-- start top-nav-->
+          <div class="top-nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-auto col"><a class="top-nav__logo" href="#"><img class="res-i" src="img/logo.png" alt=""/></a>
+                </div>
+                <div class="col d-none d-lg-block">
+                  <ul class="top-nav__nav">
+                    <li class="top-nav__item"><a class="top-nav__link" href="#">Главная</a>
+                    </li>
+                    <li class="top-nav__item"><a class="top-nav__link" href="#">О компании</a>
+                    </li>
+                    <li class="top-nav__item"><a class="top-nav__link" href="#">Проекты </a>
+                    </li>
+                    <li class="top-nav__item"><a class="top-nav__link" href="#">Новости</a>
+                    </li>
+                    <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-auto"><a class="top-nav__btn" href="#">Оставить заявку</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end top-nav-->
         </div>
         <!-- end .top-line-->
-        <!-- start top-nav-->
-        <div class="top-nav">
-          <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- end top-nav-->
       </header>
       <!-- end HEADER.header-->
       <!-- start header-block-->
-      <div class="header-block" id="header-block">
+      <div class="header-block" id="header-block" style="background-image: url(img/head-bg.jpg);">
         <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+          <h1>Комплексное проектирование и  строительство электрических и тепловых странций</h1>
+          <div class="header-block__text"> Более 5 лет успешной работы
+          </div>
+          <div class="header-block__btn-wrap"><a class="header-block__btn btn-primary" href="#">Подробнее о нас</a><a class="header-block__btn header-block__btn--outline btn-outline-primary" href="#">Связаться с нами</a>
+          </div>
         </div>
       </div>
       <!-- end header-block-->
@@ -90,19 +120,72 @@
       <div class="s-our-priorities section" id="s-our-priorities">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-our-priorities</h2>
+            <h2>Наши приоритеты</h2>
           </div>
-          <div class="row"></div>
+          <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                  <div class="s-our-priorities__item">
+                    <div class="s-our-priorities__img-wrap"><img class="res-i" src="img/our-priorities__img-1.svg" alt=""/>
+                    </div>
+                    <div class="s-our-priorities__title">Внимательное отношение  к пожеланиям клиентов
+                    </div>
+                    <div class="s-our-priorities__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod time incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercise
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-lg.3.col-sm-6-->
+                <div class="col-lg-3 col-sm-6">
+                  <div class="s-our-priorities__item">
+                    <div class="s-our-priorities__img-wrap"><img class="res-i" src="img/our-priorities__img-2.svg" alt=""/>
+                    </div>
+                    <div class="s-our-priorities__title">Реализация объектов  качественно и в срок
+                    </div>
+                    <div class="s-our-priorities__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod time incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercise
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-lg.3.col-sm-6-->
+                <div class="col-lg-3 col-sm-6">
+                  <div class="s-our-priorities__item">
+                    <div class="s-our-priorities__img-wrap"><img class="res-i" src="img/our-priorities__img-3.svg" alt=""/>
+                    </div>
+                    <div class="s-our-priorities__title">Выполнение объектов  любой сложности
+                    </div>
+                    <div class="s-our-priorities__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod time incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercise
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-lg.3.col-sm-6-->
+                <div class="col-lg-3 col-sm-6">
+                  <div class="s-our-priorities__item">
+                    <div class="s-our-priorities__img-wrap"><img class="res-i" src="img/our-priorities__img-4.svg" alt=""/>
+                    </div>
+                    <div class="s-our-priorities__title">Выполнение полного  спектра услуг
+                    </div>
+                    <div class="s-our-priorities__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod time incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercise
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-lg.3.col-sm-6-->
+          </div>
         </div>
       </div>
       <!-- end s-our-priorities-->
       <!-- start s-who-->
       <div class="s-who section" id="s-who">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-who</h2>
+        <div class="container"> 
+          <div class="s-who__img-wrap img-bg" style="background-image: url(img/who__img.jpg);"><img src="img/who__img.jpg" alt=""/>
           </div>
-          <div class="row"></div>
+          <div class="s-who__text-block">
+            <div class="section-title">
+              <h2>
+                Кто   
+                 <span class="text-primary">мы</span>
+              </h2>
+            </div>
+            <div class="s-who__text">Московская Жнергетическая Комапния осуществляет комплексное проектирование и строительство сетей любой сложности, что включает в себя подготовку проектной документации с последующим согласованием и получение положительного заключения экспертной организации (как частной, так и государственной), а также рабочей документации по реконструируемым, модернизируемым и вновь строящимся объектам.
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-who-->
@@ -110,29 +193,101 @@
       <div class="s-servises section" id="s-servises">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-servises</h2>
+            <h2>
+              Наши   
+               <span class="text-primary">услуги</span>
+            </h2>
           </div>
-          <div class="row"></div>
+          <div class="row">
+                <div class="s-servises__col col-lg-4 col-sm-6"><a class="s-servises__item img-bg" href="#" style="background-image: url(img/servises-img__1.jpg);"><img src="img/servises-img__1.jpg" alt=""/><span class="s-servises__title">Электронабжение</span></a>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-servises__col col-lg-4 col-sm-6"><a class="s-servises__item img-bg" href="#" style="background-image: url(img/servises-img__2.jpg);"><img src="img/servises-img__2.jpg" alt=""/><span class="s-servises__title">линейные сооружения</span></a>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-servises__col col-lg-4 col-sm-6"><a class="s-servises__item img-bg" href="#" style="background-image: url(img/servises-img__3.jpg);"><img src="img/servises-img__3.jpg" alt=""/><span class="s-servises__title">насосные станции</span></a>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-servises__col col-lg-4 col-sm-6"><a class="s-servises__item img-bg" href="#" style="background-image: url(img/servises-img__4.jpg);"><img src="img/servises-img__4.jpg" alt=""/><span class="s-servises__title">центральные тепловые пункты</span></a>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-servises__col col-lg-4 col-sm-6"><a class="s-servises__item img-bg" href="#" style="background-image: url(img/servises-img__5.jpg);"><img src="img/servises-img__5.jpg" alt=""/><span class="s-servises__title">объекты водопровода</span></a>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-servises__col col-lg-4 col-sm-6"><a class="s-servises__item img-bg" href="#" style="background-image: url(img/servises-img__6.jpg);"><img src="img/servises-img__6.jpg" alt=""/><span class="s-servises__title">теплоснабжение</span></a>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+          </div>
         </div>
       </div>
       <!-- end s-servises-->
       <!-- start s-numbers-->
       <div class="s-numbers section" id="s-numbers">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-numbers</h2>
+        <div class="container"> 
+          <div class="row">
+                <div class="col-md-3 col-6">
+                  <div class="s-numbers__item">
+                    <div class="s-numbers__img-wrap"><img class="res-i" src="img/electrify.svg" alt=""/>
+                    </div>
+                    <div class="s-numbers__title">370
+                    </div>
+                    <div class="s-numbers__text">Выполненных проектов
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-lg.3.col-sm-6-->
+                <div class="col-md-3 col-6">
+                  <div class="s-numbers__item">
+                    <div class="s-numbers__img-wrap"><img class="res-i" src="img/heatsupply.svg" alt=""/>
+                    </div>
+                    <div class="s-numbers__title">389
+                    </div>
+                    <div class="s-numbers__text">Выполненных проектов
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-lg.3.col-sm-6-->
+                <div class="col-md-3 col-6">
+                  <div class="s-numbers__item">
+                    <div class="s-numbers__img-wrap"><img class="res-i" src="img/centralwarmpoint.svg" alt=""/>
+                    </div>
+                    <div class="s-numbers__title">102
+                    </div>
+                    <div class="s-numbers__text">Выполненных проектов
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-lg.3.col-sm-6-->
+                <div class="col-md-3 col-6">
+                  <div class="s-numbers__item">
+                    <div class="s-numbers__img-wrap"><img class="res-i" src="img/linearconstruction.svg" alt=""/>
+                    </div>
+                    <div class="s-numbers__title">567
+                    </div>
+                    <div class="s-numbers__text">Выполненных проектов
+                    </div>
+                  </div>
+                </div>
+                <!-- .col-lg.3.col-sm-6-->
           </div>
-          <div class="row"></div>
         </div>
       </div>
       <!-- end s-numbers-->
       <!-- start s-best-->
       <div class="s-best section" id="s-best">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-best</h2>
+        <div class="container"> 
+          <div class="row">
+            <div class="col-lg">
+              <div class="s-best__text-block">
+                <div class="s-best__title h2">Мы лучшая энергетическая компания!
+                </div>
+                <div class="s-best__text h3">Доверьтесь профессионалам и убедитесь в этом
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-auto"><a class="s-best__btn" href="#">Связаться с нами</a>
+            </div>
           </div>
-          <div class="row"></div>
         </div>
       </div>
       <!-- end s-best-->
@@ -140,9 +295,52 @@
       <div class="s-project section" id="s-project">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-project</h2>
+            <h2>
+              Наши   <span class="text-primary">проекты</span></h2>
           </div>
-          <div class="row"></div>
+          <div class="row no-gutters">
+                <div class="s-project__col col-lg-4"><a class="s-project__item img-bg" href="#" style="background-image: url(img/project__img-1.jpg);"><img src="img/project__img-1.jpg" alt=""/><img class="logo-img" src="img/projec__logo-1.png" alt=""/>
+                  <div class="s-project__caption">
+                    <div class="s-project__small">Заказчик
+                    </div>
+                    <div class="s-project__title">METRO
+                    </div>
+                    <div class="s-project__title-sub">Cash &amp; Cary
+                    </div>
+                    <div class="s-project__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod time incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercise
+                    </div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-project__col col-lg-4"><a class="s-project__item img-bg" href="#" style="background-image: url(img/project__img-2.jpg);"><img src="img/project__img-2.jpg" alt=""/><img class="logo-img" src="img/projec__logo-2.png" alt=""/>
+                  <div class="s-project__caption">
+                    <div class="s-project__small">Заказчик
+                    </div>
+                    <div class="s-project__title">capital
+                    </div>
+                    <div class="s-project__title-sub">group
+                    </div>
+                    <div class="s-project__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod time incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercise
+                    </div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+                <div class="s-project__col col-lg-4"><a class="s-project__item img-bg" href="#" style="background-image: url(img/project__img-3.jpg);"><img src="img/project__img-3.jpg" alt=""/><img class="logo-img" src="img/projec__logo-3.png" alt=""/>
+                  <div class="s-project__caption">
+                    <div class="s-project__small">Заказчик
+                    </div>
+                    <div class="s-project__title">Лидер
+                    </div>
+                    <div class="s-project__title-sub">инвест
+                    </div>
+                    <div class="s-project__text">Lorem ipsum dolor sit amet, consectetur adipisicing elitsed do eiusmod time incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercise
+                    </div>
+                  </div></a>
+                </div>
+                <!-- +e.col.col-lg-4.col-sm-6-->
+            <div class="col-12"><a class="s-project__btn" href="#">Еще проекты</a>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-project-->
@@ -150,9 +348,50 @@
       <div class="s-news section" id="s-news">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-news</h2>
+            <h2>
+              Последние <span class="text-primary"> новости</span></h2>
           </div>
-          <div class="row"></div>
+          <div class="row">
+                <div class="s-news__col col-lg-4 col-sm-6">
+                  <div class="s-news__item">
+                    <div class="s-news__date">13 ноября 2018г.
+                    </div><a class="s-news__img-wrap img-bg" href="#" style="background-image: url(img/news__img.jpg);"><img src="img/news__img.jpg" alt=""/></a>
+                    <div class="s-news__caption">
+                      <div class="s-news__title">Мы заставляем вас развивать свой бизнес
+                      </div>
+                      <div class="s-news__text">Consectetur adipiscing elit. Curabitur libero enim, lacinia finibus ante et, incdiet finibus risus.
+                      </div><a class="s-news__btn" href="#">Читать полностью</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg.3.col-sm-6-->
+                <div class="s-news__col col-lg-4 col-sm-6">
+                  <div class="s-news__item">
+                    <div class="s-news__date">13 ноября 2018г.
+                    </div><a class="s-news__img-wrap img-bg" href="#" style="background-image: url(img/news__img.jpg);"><img src="img/news__img.jpg" alt=""/></a>
+                    <div class="s-news__caption">
+                      <div class="s-news__title">Мы заставляем вас развивать свой бизнес
+                      </div>
+                      <div class="s-news__text">Consectetur adipiscing elit. Curabitur libero enim, lacinia finibus ante et, incdiet finibus risus.
+                      </div><a class="s-news__btn" href="#">Читать полностью</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg.3.col-sm-6-->
+                <div class="s-news__col col-lg-4 col-sm-6">
+                  <div class="s-news__item">
+                    <div class="s-news__date">13 ноября 2018г.
+                    </div><a class="s-news__img-wrap img-bg" href="#" style="background-image: url(img/news__img.jpg);"><img src="img/news__img.jpg" alt=""/></a>
+                    <div class="s-news__caption">
+                      <div class="s-news__title">Мы заставляем вас развивать свой бизнес
+                      </div>
+                      <div class="s-news__text">Consectetur adipiscing elit. Curabitur libero enim, lacinia finibus ante et, incdiet finibus risus.
+                      </div><a class="s-news__btn" href="#">Читать полностью</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.col.col-lg.3.col-sm-6-->
+          </div>
         </div>
       </div>
       <!-- end s-news-->
@@ -160,15 +399,63 @@
       <div class="s-logo section" id="s-logo">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-logo</h2>
+            <h2>
+              Наши  
+               <span class="text-primary">клиенты</span>
+            </h2>
           </div>
-          <div class="row"></div>
+          <div class="row">
+            <div class="s-logo__col col-lg-3 col-sm-6">
+              <div class="s-logo__item"><img src="img/logo__1.png" alt=""/>
+              </div>
+            </div>
+            <!-- +e.col.col-lg-4.col-sm-6-->
+            <div class="s-logo__col col-lg-3 col-sm-6">
+              <div class="s-logo__item"><img src="img/logo__2.png" alt=""/>
+              </div>
+            </div>
+            <!-- +e.col.col-lg-4.col-sm-6-->
+            <div class="s-logo__col col-lg-3 col-sm-6">
+              <div class="s-logo__item"><img src="img/logo__3.png" alt=""/>
+              </div>
+            </div>
+            <!-- +e.col.col-lg-4.col-sm-6-->
+            <div class="s-logo__col col-lg-3 col-sm-6">
+              <div class="s-logo__item"><img src="img/logo__4.png" alt=""/>
+              </div>
+            </div>
+            <!-- +e.col.col-lg-4.col-sm-6-->
+          </div>
         </div>
       </div>
       <!-- end s-logo-->
       <footer class="footer">
-        <div class="container">footer</div>
+        <div class="container">
+          <div class="row">
+            <div class="col"><a class="footer__logo" href="#"><img class="res-i" src="img/logo.png" alt=""/></a>
+            </div>
+            <div class="col-lg-5 order-lg-0 order-first">
+              <div class="text-lg-center">
+                <div class="footer__nav"><a class="footer__nav-link" href="#">О компании</a><a class="footer__nav-link" href="#">Проекты</a><a class="footer__nav-link" href="#">Новости</a>
+                </div>
+                <div class="footer__addr">117312, г.Москва, ул.Вавилова, д.9А, стр.5
+                </div><a class="footer__link footer__link--tel" href="tel:+7(499)638-22-28">+7 (499) 638-22-28</a>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="text-sm-right">
+                <div class="soc"><a class="soc__item" href="#" target="_blank"><i class="fab fa-instagram"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab  fa-facebook-f"></i></a>
+                </div>
+                <div class="footer__link-wrap"><a class="footer__link" href="mailto:info@mec-eng.ru"> info@mec-eng.ru</a>
+                </div>
+                <div class="footer__link-wrap"><a class="footer__link" href="#">www.mec.ru</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
+      <div class="btn-top"></div>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
       <form>
