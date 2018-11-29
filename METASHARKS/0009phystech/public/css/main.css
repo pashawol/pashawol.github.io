@@ -10393,6 +10393,19 @@ a {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   margin-bottom: 0.625rem;
+  cursor: pointer;
+}
+
+.s-patner__input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.s-patner__input:checked + .s-patner__btn-head {
+  color: #fff;
+  background-color: #0c95ed;
+  border-color: #0c95ed;
 }
 
 .s-patner__head {
