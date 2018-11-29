@@ -178,6 +178,27 @@ jQuery(document).ready(function ($) {
 	.on('lazyLoaded', function(event, slick, image, imageSource){
 			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 	});
+
+
+	$(".s-about__slider").slick({ 
+    dots: true,
+    customPaging : function(slider, i) {
+        var thumb = $(slider.$slides[i]).data('thumb');
+        return '<span>'+thumb+'</span>';
+    },
+ 
+		arrows: true,
+		infinite: true,
+		adaptiveHeight: true,
+		slidesToShow: 1, 
+		appendDots: '.s-about__dots-wrap',
+		dotsClass: 'slick-dots-custom',
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		
+        
+});
+
  
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
@@ -218,32 +239,7 @@ jQuery(document).ready(function ($) {
 		});
 	})
 	// /modal галерея
-
-	// form
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			$.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-			}, 4000);
-		});
-		return false;
-	});
-	// /form
+ 
 
 	// mask for input
 	var customOptions = {
@@ -259,86 +255,41 @@ jQuery(document).ready(function ($) {
 	$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").mask("+7(000)000-00-00", customOptions);
 
 	// / mask for input
-
-
-	//Replace all SVG images with inline SVG
-	$('img.img-svg').each(function () {
-		var $img = $(this);
-		var imgClass = $img.attr('class');
-		var imgURL = $img.attr('src');
-
-		$.get(imgURL, function (data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = $(data).find('svg');
-
-			// Add replaced image's classes to the new SVG
-			if (typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass + ' replaced-svg');
-			}
-
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a');
-
-			// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-			}
-
-
-			// Replace image with new SVG
-			$img.replaceWith($svg);
-
-		}, 'xml');
-
-	});
-
-
-	// кастомный инпут файл
-
-	var file = $(".add-file input[type=file]");
-	file.change(function () {
-		var filename = $(this).val().replace(/.*\\/, "");
-		var name = $(".add-file__filename  ");
-		name.text(filename);
-
-	});
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
-
-	$(".pretty-embed__bg").each(function () {
-		// загрузка фона видео
-		$(this).css("background-image", 'url(http://img.youtube.com/vi/' + $(this).data("src") + '/0.jpg)')
-		// включение видео при клике по блоку
-		$(this).click(function () {
-			$(this).removeClass("on").next()
-				.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
-		})
-	})
-
-	// убираем пробелы в телефоне
-	$(".top-line__tel, .s-contact__tel").each(function () {
-		var str = $(this).attr('href');
-		$(this).attr('href', str.replace(/\s/g, ''));
-	})
-	// $(".wow-wrap").each(function () {
-	// var wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
-
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	// });
-	// });
-
+	if ($("div").is("#map")){
+		ymaps.ready(function () {
+			 var myMap = new ymaps.Map('map', {
+							 center: [55.70103956904464,37.5890599999999],
+							 zoom: 17,
+							 behaviors: ['drag'],
+								 
+									 // controls: ["zoomControl", "fullscreenControl"]
+					 }, {
+							 searchControlProvider: 'yandex#search'
+					 }),
+	 
+			
+					 myPlacemark = new ymaps.Placemark([55.70103956904464,37.5890599999999], {
+							 hintContent: '117312, г.Москва,   ул.Вавилова, д.9А, стр. 5',
+							 balloonContent: '117312, г.Москва,  ул.Вавилова, д.9А, стр. 5 '
+					 }, {
+							 // Опции.
+							 // Необходимо указать данный тип макета.
+							 iconLayout: 'default#image',
+							 // Своё изображение иконки метки.
+							 iconImageHref: 'img/mark.png',
+							 // Размеры метки.
+							 iconImageSize: [41, 59],
+							 // Смещение левого верхнего угла иконки относительно
+							 // её "ножки" (точки привязки).
+							 iconImageOffset: [-22, -70]
+					 }) 
+	 
+			 myMap.geoObjects
+					 .add(myPlacemark)
+					
+		
+			 
+	 });
+	 }
 
 });
