@@ -146,48 +146,39 @@ jQuery(document).ready(function ($) {
 
 
 
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.2 477.2" style="enable-background:new 0 0 477.2 477.2;" xml:space="preserve"> <g> 	<path class="st0" d="M145.2,238.6L360.7,23.1c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0L116.5,229.1c-5.3,5.3-5.3,13.8,0,19.1 	l225.1,225c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.2,238.6z"/>';
 
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// карусель
-	$('.s-team__slider').slick({
-		slidesToShow: 3,
+	$('.s-news-fead__slider--js').slick({
+		slidesToShow: 2,
 		slidesToScroll: 1,
-		dots: false,
+		// dots: false,
 		speed: 450,
 		infinite: true,
 		loop: true,
 		arrows: true,
 		// centerMode: true,
+		dots: true,
 		// focusOnSelect: true ,
 		// variableWidth: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
+		responsive: [  {
+
+      breakpoint: 768,
+      settings: {
+        slidesToShow:1,
+      }
+
+    } ]
 	});
-
-	// slider
-	// var swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
-
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-
-	// });
+	$('.s-news-fead__slider--js')
+	.on('lazyLoaded', function(event, slick, image, imageSource){
+			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+	});
+ 
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
