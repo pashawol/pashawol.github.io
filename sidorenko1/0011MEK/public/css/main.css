@@ -316,7 +316,7 @@ template {
   display: none !important;
 }
 
-h1,h2,h3,h4,h5,h6,.h1,.h2,.section-title,.s-project__title,.h3,.header-block__text,.h4,.h5,.h6,.s-numbers,.s-news__title,.s-news-fead__caption {
+h1,h2,h3,h4,h5,h6,.h1,.h2,.section-title,.header-block--project h1,.s-project__title,.h3,.header-block__text,.h4,.h5,.h6,.s-numbers,.s-news__title,.s-news-fead__caption,.s-project-head__sub-title {
   margin-bottom: 0.5rem;
   line-height: 1.2;
   color: inherit;
@@ -326,7 +326,7 @@ h1,.h1 {
   font-size: 2.025rem;
 }
 
-h2,.h2,.section-title,.s-project__title {
+h2,.h2,.section-title,.header-block--project h1,.s-project__title {
   font-size: 1.6875rem;
 }
 
@@ -342,7 +342,7 @@ h5,.h5 {
   font-size: 1.125rem;
 }
 
-h6,.h6,.s-numbers,.s-news__title,.s-news-fead__caption {
+h6,.h6,.s-numbers,.s-news__title,.s-news-fead__caption,.s-project-head__sub-title {
   font-size: 1.0125rem;
 }
 
@@ -7681,8 +7681,27 @@ a {
   max-width: 490px;
 }
 
+.header-block--project {
+  padding-bottom: 160px;
+}
+
 .header-block--project h1 {
   border-bottom: 1px solid #fff;
+  max-width: 360px;
+  margin-bottom: 1.25em;
+  padding-bottom: 0.625em;
+}
+
+.header-block__label {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 80px;
+          border-radius: 80px;
+  padding: 0.9375em 1.875em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 6.25em;
 }
 
 .s-content ul li {
@@ -7927,16 +7946,25 @@ a {
   line-height: 1.2;
 }
 
-.s-project__item:hover {
+.s-project__item--light {
   color: #000000;
 }
 
-.s-project__item:hover::before {
+.s-project__item--light::before {
   opacity: 0;
 }
 
-.s-project__item:hover::after {
+.s-project__item--light::after {
   opacity: 1;
+}
+
+.s-project__item:hover {
+  color: #ffffff !important;
+}
+
+.s-project__item:hover::before {
+  background-color: #1c80c9;
+  opacity: 0.85;
 }
 
 .s-project__item::after {
@@ -8341,6 +8369,37 @@ a {
   border-color: transparent;
 }
 
+.s-project-head__img-wrap {
+  display: block;
+  position: relative;
+  height: 0;
+  padding-bottom: 123.55658%;
+  border: 1px solid #e6e6e6;
+}
+
+.s-project-head__img-wrap-border {
+  padding: 12px;
+  border: 1px solid #e6e6e6;
+}
+
+.s-project-head__sub-title {
+  color: #1c80c9;
+  font-weight: 600;
+}
+
+.s-project-head__text {
+  font-size: 0.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.s-project-head__row {
+  margin-bottom: 1.25rem;
+}
+
+.s-project-head h2 {
+  margin-bottom: 60px;
+}
+
 .s-form {
   display: block;
 }
@@ -8499,6 +8558,10 @@ a {
 
 @font-face {
   font-family:Montserrat;font-style:normal;font-weight:300;src:url("../fonts/Montserrat-Light/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:Montserrat;font-style:normal;font-weight:900;src:url("../fonts/Montserrat-Black/Montserrat-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Black/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat-Black/Montserrat-Black.ttf") format("truetype");
 }
 
 @font-face {
@@ -9367,7 +9430,7 @@ a {
     font-size: 2.25rem;
   }
 
-  h2,.h2,.section-title,.s-project__title {
+  h2,.h2,.section-title,.header-block--project h1,.s-project__title {
     font-size: 1.875rem;
   }
 
@@ -9383,7 +9446,7 @@ a {
     font-size: 1.25rem;
   }
 
-  h6,.h6,.s-numbers,.s-news__title,.s-news-fead__caption {
+  h6,.h6,.s-numbers,.s-news__title,.s-news-fead__caption,.s-project-head__sub-title {
     font-size: 1.125rem;
   }
 
@@ -10209,12 +10272,6 @@ a {
 
   .s-who__text-block {
     padding: 4.375rem 4.0625rem;
-  }
-
-  .s-who__img-wrap {
-    height: 482px;
-    width: -webkit-calc(50%  - 15px);
-    width: calc(50%  - 15px);
   }
 
   .s-who__img-wrap {
@@ -11083,6 +11140,12 @@ a {
     max-width: 240px;
   }
 
+  .s-who__img-wrap {
+    height: 482px;
+    width: -webkit-calc(50%  - 15px);
+    width: calc(50%  - 15px);
+  }
+
   .s-project__item {
     min-height: 375px;
   }
@@ -11120,6 +11183,10 @@ a {
 
   .s-about__block {
     padding: 40px 20px;
+  }
+
+  .s-project-head h2 {
+    margin-bottom: 2.5em;
   }
 
   .footer {

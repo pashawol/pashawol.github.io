@@ -5,7 +5,7 @@ jQuery(document).ready(function ($) {
 	// Custom JS
 
 
- 
+
 
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
@@ -16,7 +16,7 @@ jQuery(document).ready(function ($) {
 		$("body, html").toggleClass("fixed");
 		return false;
 	});
- 
+
 	$(document).mouseup(function (e) {
 		var container = $(".hidden-mnu.active");
 		if (container.has(e.target).length === 0) {
@@ -58,11 +58,13 @@ jQuery(document).ready(function ($) {
 		$(" .btn-top").click(function () {
 			var elementClick = $('header');
 			var destination = $(elementClick).offset().top;
-			
-					$('html, body').animate({ scrollTop: destination }, 1100);
-			
-			return false; 
-	});
+
+			$('html, body').animate({
+				scrollTop: destination
+			}, 1100);
+
+			return false;
+		});
 
 		var topH = $("header ").innerHeight();
 
@@ -75,27 +77,26 @@ jQuery(document).ready(function ($) {
 		});
 
 
-		var topH=$(".header-block").innerHeight();  
-    if($(this).scrollTop()>topH){
-                   
-                    $('.btn-top  ').addClass('active');
-                    
-                }
-                else if ($(this).scrollTop()<topH){
-                   
-                    $('.btn-top  ').removeClass('active');
-                   
-                }
-    $(window).scroll(function(){
-                if($(this).scrollTop()>topH){
-                
-                    $('.btn-top  ').addClass('active'); 
-                }
-                else if ($(this).scrollTop()<topH){
-                  
-                    $('.btn-top ').removeClass('active'); 
-                }
-            });
+		var topH = $(window).height() / 2;
+		// console.log(topH);
+		if ($(this).scrollTop() > topH) {
+
+			$('.btn-top  ').addClass('active');
+
+		} else if ($(this).scrollTop() < topH) {
+
+			$('.btn-top  ').removeClass('active');
+
+		}
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > topH) {
+
+				$('.btn-top  ').addClass('active');
+			} else if ($(this).scrollTop() < topH) {
+
+				$('.btn-top ').removeClass('active');
+			}
+		});
 		// конец добавил
 	}
 
@@ -121,29 +122,7 @@ jQuery(document).ready(function ($) {
 
 
 
-	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
-
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
-
-	//        return false;
-	//    });
-
-
-	// табы  . 
-	function tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
-		});
-	};
-	tabscostume('tab');
-
+ 
 
 
 	var icon = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.2 477.2" style="enable-background:new 0 0 477.2 477.2;" xml:space="preserve"> <g> 	<path class="st0" d="M145.2,238.6L360.7,23.1c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0L116.5,229.1c-5.3,5.3-5.3,13.8,0,19.1 	l225.1,225c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.2,238.6z"/>';
@@ -165,41 +144,97 @@ jQuery(document).ready(function ($) {
 		// variableWidth: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
-		responsive: [  {
+		responsive: [{
 
-      breakpoint: 768,
-      settings: {
-        slidesToShow:1,
-      }
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1,
+			}
 
-    } ]
+		}]
 	});
-	$('.s-news-fead__slider--js')
-	.on('lazyLoaded', function(event, slick, image, imageSource){
+	
+	$('.s-project-slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		// dots: false,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: true,
+		mobileFirst: true,
+		// centerMode: true,
+		dots: false,
+		// focusOnSelect: true ,
+		// variableWidth: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		responsive: [
+			{
+
+			breakpoint: 1199,
+			settings: {
+				slidesToShow: 5,
+			}
+
+		},
+		
+			{
+
+			breakpoint: 991,
+			settings: {
+				slidesToShow: 4,
+			}
+
+		},
+		
+			{
+
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 3,
+			}
+
+		},
+		
+			{
+
+			breakpoint: 440,
+			settings: {
+				slidesToShow: 2,
+			}
+
+		},
+
+	]
+	});
+
+	$('.s-news-fead__slider--js, .s-project-slider--js')
+		.on('lazyLoaded', function (event, slick, image, imageSource) {
 			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-	});
+		});
 
 
-	$(".s-about__slider").slick({ 
-    dots: true,
-    customPaging : function(slider, i) {
-        var thumb = $(slider.$slides[i]).data('thumb');
-        return '<span>'+thumb+'</span>';
-    },
- 
+	$(".s-about__slider").slick({
+		dots: true,
+		customPaging: function (slider, i) {
+			var thumb = $(slider.$slides[i]).data('thumb');
+			return '<span>' + thumb + '</span>';
+		},
+
 		arrows: true,
 		infinite: true,
 		adaptiveHeight: true,
-		slidesToShow: 1, 
+		slidesToShow: 1,
 		appendDots: '.s-about__dots-wrap',
 		dotsClass: 'slick-dots-custom',
 		prevArrow: arrr2,
 		nextArrow: arrl2,
-		
-        
-});
 
- 
+
+	});
+
+
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -239,7 +274,7 @@ jQuery(document).ready(function ($) {
 		});
 	})
 	// /modal галерея
- 
+
 
 	// mask for input
 	var customOptions = {
@@ -255,41 +290,41 @@ jQuery(document).ready(function ($) {
 	$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").mask("+7(000)000-00-00", customOptions);
 
 	// / mask for input
-	if ($("div").is("#map")){
+	if ($("div").is("#map")) {
 		ymaps.ready(function () {
-			 var myMap = new ymaps.Map('map', {
-							 center: [55.70103956904464,37.5890599999999],
-							 zoom: 17,
-							 behaviors: ['drag'],
-								 
-									 // controls: ["zoomControl", "fullscreenControl"]
-					 }, {
-							 searchControlProvider: 'yandex#search'
-					 }),
-	 
-			
-					 myPlacemark = new ymaps.Placemark([55.70103956904464,37.5890599999999], {
-							 hintContent: '117312, г.Москва,   ул.Вавилова, д.9А, стр. 5',
-							 balloonContent: '117312, г.Москва,  ул.Вавилова, д.9А, стр. 5 '
-					 }, {
-							 // Опции.
-							 // Необходимо указать данный тип макета.
-							 iconLayout: 'default#image',
-							 // Своё изображение иконки метки.
-							 iconImageHref: 'img/mark.png',
-							 // Размеры метки.
-							 iconImageSize: [41, 59],
-							 // Смещение левого верхнего угла иконки относительно
-							 // её "ножки" (точки привязки).
-							 iconImageOffset: [-22, -70]
-					 }) 
-	 
-			 myMap.geoObjects
-					 .add(myPlacemark)
-					
-		
-			 
-	 });
-	 }
+			var myMap = new ymaps.Map('map', {
+					center: [55.70103956904464, 37.5890599999999],
+					zoom: 17,
+					behaviors: ['drag'],
+
+					// controls: ["zoomControl", "fullscreenControl"]
+				}, {
+					searchControlProvider: 'yandex#search'
+				}),
+
+
+				myPlacemark = new ymaps.Placemark([55.70103956904464, 37.5890599999999], {
+					hintContent: '117312, г.Москва,   ул.Вавилова, д.9А, стр. 5',
+					balloonContent: '117312, г.Москва,  ул.Вавилова, д.9А, стр. 5 '
+				}, {
+					// Опции.
+					// Необходимо указать данный тип макета.
+					iconLayout: 'default#image',
+					// Своё изображение иконки метки.
+					iconImageHref: 'img/mark.png',
+					// Размеры метки.
+					iconImageSize: [41, 59],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-22, -70]
+				})
+
+			myMap.geoObjects
+				.add(myPlacemark)
+
+
+
+		});
+	}
 
 });
