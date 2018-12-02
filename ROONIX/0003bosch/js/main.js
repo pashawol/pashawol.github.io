@@ -1043,21 +1043,21 @@ $(document).ready(function(){
 
 	// redact adress link
 
-	$('.redact-link').click(function(e){
+	// $('.redact-link , .redact-btn').click(function(e){
 
-		e.preventDefault();
+	// 	e.preventDefault();
 
-		$(this).hide();
+	// 	$(this).hide();
 
-		$('.redact-adress').show();
+	// 	$('.redact-adress').show();
 
-		$('.js-redact-hidden').hide();
+	// 	$('.js-redact-hidden').hide();
 
-		$('.adress-input').hide();
+	// 	$('.adress-input').hide();
 
-		$('.next-btn').hide();
+	// 	$('.next-btn').hide();
 
-	})
+	// })
 
 
 
@@ -1210,7 +1210,7 @@ $(document).ready(function(){
 
 
 
-	$(document).on('change', '.js-rekv-select', function(e){
+	$(document).on('change ', '.js-rekv-select', function(e){
 
 		$('.js-rekv-edit').hide();
 

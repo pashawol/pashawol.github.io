@@ -9908,6 +9908,10 @@ button {
   margin-bottom: 0.625em;
 }
 
+.s-basket__wrap {
+  min-width: 176px;
+}
+
 .s-basket__table {
   width: 100%;
   margin-bottom: 1.875rem;
@@ -10049,6 +10053,10 @@ button {
   font-weight: 700;
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
+}
+
+.mw-216 {
+  max-width: 216px;
 }
 
 .tab-radio-content {
@@ -11395,6 +11403,18 @@ a {
 
   .form-wrap__btn {
     min-width: 140px;
+  }
+
+  .form-wrap__table-block .col-sm-auto {
+    width: 270px;
+    padding-right: 50px;
+  }
+
+  .form-wrap__table-block .row,.form-wrap__table-block .top-line__nav,.form-wrap__table-block .top-nav__nav {
+    -webkit-box-align: start !important;
+    -webkit-align-items: flex-start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
   }
 
   .header-block__item {
@@ -14560,6 +14580,7 @@ a {
 
   .s-basket__wrap {
     width: 100%;
+    min-width: 176px;
   }
 
   .s-basket td:last-child,.s-basket td:nth-child(3) {

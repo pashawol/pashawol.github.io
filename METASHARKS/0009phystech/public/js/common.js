@@ -862,4 +862,22 @@ jQuery(document).ready(function ($) {
 			th.next().click();
 		})
 	})
+
+		// скрывает лишний текст 
+
+		// $('.s-patner__text').moreLines({
+		// 	linecount: 9,
+		// 	// custom text
+		// 	buttontxtmore: '<span class="  btn btn-sm btn-outline-primary" href="#">Показать</span>',
+		// 	buttontxtless: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>',
+		// 	animationspeed: 450
+		// });
+		
+		$('.s-patner__text').readmore({
+			speed: 75,
+			moreLink: '<span class="  btn btn-sm btn-outline-primary" href="#">Показать</span>',
+			lessLink: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>',
+			speed: 475,
+			collapsedHeight: 200,
+		});
 });

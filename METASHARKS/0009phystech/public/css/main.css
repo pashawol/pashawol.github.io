@@ -318,7 +318,7 @@ template {
   display: none !important;
 }
 
-h1,.big-title,h2,h3,h4,h5,h6,.h1,.h2,.s-block__item-title,.h3,.s-infrastructure__title,.h4,.page-link,.header-block__text,.list-block__item,.s-about__text,.s-block__item,.s-infrastructure .resp-accordion,.s-infrastructure__tab-btn,.s-infrastructure__caption,.s-infrastructure__text,.s-main-calendar__title,.s-news__title,.s-number-2__caption,.s-form__text,.aside__link,.h5,.h6 {
+h1,.big-title,h2,h3,h4,h5,h6,.h1,.h2,.s-block__item-title,.h3,.s-infrastructure__title,.h4,.page-link,.header-block__text,.list-block__item,.s-about__text,.s-block__item,.s-infrastructure .resp-accordion,.s-infrastructure__tab-btn,.s-infrastructure__caption,.s-infrastructure__text,.s-main-calendar__title,.s-news__title,.s-number-2__caption,.s-form__text,.aside__link,.h5,.h6,.s-content--privacy ol {
   margin-bottom: 0.5rem;
   line-height: 1.2;
   color: inherit;
@@ -344,7 +344,7 @@ h5,.h5 {
   font-size: 1.25rem;
 }
 
-h6,.h6 {
+h6,.h6,.s-content--privacy ol {
   font-size: 1rem;
 }
 
@@ -9175,8 +9175,11 @@ a {
   background-color: #0c95ed;
 }
 
-.page-title,h1,.big-title {
+.page-title {
   max-width: 13.125em;
+}
+
+.page-title,h1,.big-title {
   font-weight: bold;
   margin-bottom: 2rem;
   line-height: 1.56;
@@ -9328,6 +9331,63 @@ a {
   margin-bottom: 1.25rem;
 }
 
+.s-content--privacy ol {
+  counter-reset: num;
+  list-style-type: none;
+  font-weight: bold;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.s-content--privacy ol ul > li {
+  list-style-type: none;
+}
+
+.s-content--privacy ol ul > li::before {
+  content: ' —';
+  margin-right: 5px;
+}
+
+.s-content--privacy ol ol {
+  counter-reset: num2;
+}
+
+.s-content--privacy ol ol ol {
+  counter-reset: num3;
+}
+
+.s-content--privacy ol > li {
+  position: relative;
+}
+
+.s-content--privacy ol > li::before {
+  counter-increment: num;
+  content: counter(num) ". ";
+  margin-right: 3px;
+}
+
+.s-content--privacy ol ol > li:before {
+ /* Список второго уровня */
+  counter-increment: num2;
+ /* Увеличиваем значение счетчика */
+  content: counter(num) "." counter(num2) ".";
+  margin-right: 3px;
+}
+
+.s-content--privacy ol ol ol > li:before {
+ /* Список второго уровня */
+  counter-increment: num3;
+ /* Увеличиваем значение счетчика */
+  content: counter(num) "." counter(num2) "." counter(num3) ".";
+  margin-right: 3px;
+ /* Выводим значение типа 2.1, 2.2,... */;
+}
+
+.s-content ol ol,.s-content ol ul {
+  padding-left: 0;
+  font-weight: normal;
+}
+
 .po-event-no {
   pointer-events: none;
 }
@@ -9452,6 +9512,7 @@ a {
 
 .s-contact__item .bg-title {
   margin-top: 10px;
+  color: #747474;
 }
 
 .s-contact__text {
@@ -9461,7 +9522,6 @@ a {
 .s-contact__link {
   position: relative;
   display: inline-block;
-  margin-bottom: 10px;
 }
 
 .s-contact__link::before {
@@ -9492,6 +9552,11 @@ a {
 
 .s-contact__col {
   margin-bottom: 20px;
+  max-width: 200px;
+}
+
+.s-contact .h3,.s-contact .s-infrastructure__title {
+  color: #747474;
 }
 
 .s-about {
@@ -10137,10 +10202,16 @@ a {
   display: block;
   padding: 6px 10px 5px;
   background-color: #ffffff;
-  width: 35px;
+  width: 30px;
   -webkit-transition: all 0.36s;
   -o-transition: all 0.36s;
   transition: all 0.36s;
+}
+
+.choice-block__arrow.disabled {
+  pointer-events: none;
+  opacity: 0.2;
+  background-color: #e5e5e5;
 }
 
 .choice-block__arrow .icon {
@@ -10201,6 +10272,10 @@ a {
   position: relative;
   z-index: 2;
   background-color: #f9f9f9;
+}
+
+.choice-block:not(.choice-block--year) .choice-block__text {
+  min-width: 90px;
 }
 
 .s-news__img-wrap {
@@ -10451,14 +10526,15 @@ a {
 
 .s-patner__title {
   text-align: center;
-  margin-bottom: 1.25em;
+  padding-bottom: 1.875em;
+  margin-bottom: 0 !important;
+  -webkit-box-flex: 0 !important;
+  -webkit-flex-grow: 0 !important;
+      -ms-flex-positive: 0 !important;
+          flex-grow: 0 !important;
 }
 
 .s-patner__img-wrap {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   margin-bottom: 0.9375rem;
   position: relative;
   display: -webkit-box;
@@ -10473,6 +10549,7 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 120px;
 }
 
 .s-patner__img-wrap img {
@@ -10483,6 +10560,32 @@ a {
 .s-patner__caption {
   font-size: 13px;
   min-height: 4em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.s-patner__text {
+  line-height: 1.4;
+}
+
+.s-patner__text + .h4,.s-patner__text + .page-link,.s-patner__text + .header-block__text,.s-patner__text + .list-block__item,.s-patner__text + .s-about__text,.s-patner__text + .s-block__item,.s-infrastructure .s-patner__text + .resp-accordion,.s-patner__text + .s-infrastructure__tab-btn,.s-patner__text + .s-infrastructure__caption,.s-patner__text + .s-infrastructure__text,.s-patner__text + .s-main-calendar__title,.s-patner__text + .s-news__title,.s-patner__text + .s-number-2__caption,.s-patner__text + .s-form__text,.s-patner__text + .aside__link {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  padding-top: 20px;
+  margin-top: auto;
 }
 
 .s-patner__label {
@@ -10490,6 +10593,15 @@ a {
   padding: 0.3125rem 0.625rem;
   display: inline-block;
   margin-top: 0.625rem;
+}
+
+.s-patner .btn-sm,.s-patner .s-patner__btn-head {
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+  font-size: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  max-width: 120px;
 }
 
 .s-form {
@@ -10627,6 +10739,7 @@ a {
 
 .po-block__logos-img-wrap {
   border: 1px solid #c4c4c4;
+  position: relative;
   width: 242px;
   height: 242px;
   margin-left: auto;
@@ -11742,7 +11855,7 @@ a {
   }
 
   .choice-block__arrow {
-    width: 40px;
+    width: 35px;
   }
 
   .s-number-2__number {
@@ -13508,7 +13621,10 @@ a {
   }
 
   .sub-menu {
-    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     top: 100%;
     position: absolute;
     text-align: left;
@@ -14553,11 +14669,6 @@ a {
     right: -15px;
   }
 
-  .top-nav__btn {
-    font-size: 13px;
-    width: 171px;
-  }
-
   .nav__link {
     font-size: inherit;
   }
@@ -15503,6 +15614,11 @@ a {
 
   .top-nav__title {
     margin-right: 24px;
+  }
+
+  .top-nav__btn {
+    font-size: 13px;
+    width: 171px;
   }
 
   .big-title {

@@ -341,7 +341,7 @@ $(document).on('click', '.dds_req_red', function (e) {
     var id = $(this).attr('data-id');
     e.preventDefault();
     $('.js-rekv-file-block').hide();
-    $('.js-rekv-info').hide();
+    $('.js-rekv-info').hide().removeClass("d-block");
     $('.dds_rek-' + id).show();
 });
 
@@ -594,11 +594,89 @@ jQuery(document).ready(function ($) {
     })
     })
 
+        	// rekv redact windows
+
+	$(document).on('click', '.js-rekv-open', function(e){ 
+		$('.js-rekv-info').removeClass('d-block'); 
+
+	});
+
         $(".redact-link.js-toggler.js-rekv-open, .btn-secondary.js-rekv-open").click(function(){
             $(".btns-block-foot, .redact-link.js-toggler").hide();
         })
 
         $(" .btn-secondary.js-rekv-close").click(function(){
-            $(".btns-block-foot, .redact-link.js-toggler.js-rekv-open, .redact-link.js-toggler").show();
+            $('.btns-block-foot, .redact-link.js-toggler.js-rekv-open, .redact-link.js-toggler, .hidden-when-edit, [href="#redact-rekv"]').show();
         })
+
+
+
+        // $('  .redact-btn').click(function(e){
+
+        //     e.preventDefault();
+    
+        //     $(this).hide();
+    
+        //     $('.redact-adress').hide();
+    
+        //     $('.js-redact-hidden, .redact-link').show();
+    
+        //     $('.adress-input').show();
+    
+        //     $('.next-btn').show();
+
+        //     $('redact-link').show();
+    
+        // })
+        $('[toggletarget="new-comp"]').click(function(){
+            $(".hidden-block-wned-add-new-comp").hide();
+        })
+        
+        $('[toggleTarget="all-comp"]').click(function(){
+            $(".hidden-block-wned-add-new-comp").show();
+        })
+        $('[href="#js-rekv-edit"]').click(function(){
+            $('#js-rekv-edit').show();
+            $('.redact-link-reqv, .js-form-row, .js-hidden-when-adit-reqv').hide();
+            $('.lk-rekv-ruk .rekv_block__item.d-block').removeClass('d-block');
+        })
+
+        $('[href="#redact"]').click(function(){
+            $('  .js-form-row , .hidden-when-edit, .js-rekv-info ').toggle();
+            $(this).show();
+        })
+        $(' [href="#redact-rekv"]').click(function(){
+            $('  .js-form-row , .hidden-when-edit, .js-rekv-info , .btns-block.btns-block-foot').toggle();
+            $('.js-rekv-edit').show();
+            $(".js-rekv-info").removeClass("d-block");
+
+
+        })
+
+
+        	// redact adress link
+
+ 
+            $('.redact-link , .redact-btn').click(function(e){
+
+                e.preventDefault(); 
+        
+                $('.redact-adress, .js-redact-hidden, .adress-input, .next-btn')
+                .toggle();
+         
+            })
+            $('[toggletarget="tk2"]').on('change', function(){
+                $('#tk2 .form-row').show();
+            })
+
+
+            $(".js-rekv-open , .js-rekv-file, .js-rekv-file-close").click(function(){
+
+                $(".hidden-when-edit").toggle();
+                $(".js-rekv-info").toggleClass("d-block");
+                // $(".redact-link").addClass('js-rekv-open');
+            }  )
+            $(".js-rekv-file").click(function(){
+                    $(".d-block.js-rekv-info").removeClass("d-block");
+            })
 })
