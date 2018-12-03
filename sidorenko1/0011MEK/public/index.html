@@ -106,7 +106,15 @@
       </header>
       <!-- end HEADER.header-->
       <!-- start header-block-->
-      <div class="header-block" id="header-block" style="background-image: url(img/head-bg.jpg);">
+      <div class="header-block video-background" id="header-block">
+        <div class="video-fallback"></div>
+        <div class="video-container">
+          <video class="fillItUp video" id="bgvid" poster="img/head-bg.jpg" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="video/video.mp4" type="video/mp4"/>
+            <source src="video/video.ogv" type="video/ogv"/>
+            <source src="video/video.webm" type="video/webm"/>
+          </video>
+        </div>
         <div class="container">
           <h1>Комплексное проектирование и  строительство электрических и тепловых странций</h1>
           <div class="header-block__text"> Более 5 лет успешной работы

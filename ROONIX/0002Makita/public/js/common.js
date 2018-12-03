@@ -540,7 +540,7 @@ $(".link-modal").fancybox({
 
 
 	// табы на радиокнопках
-	$('[data-tab-radio]').change(function(){
+	$('input[data-tab-radio]').change(function(){
 		var th = $(this),
 				tabRadio = th.data('tab-radio');
 				$('#'+tabRadio ).fadeIn(100).addClass("active")
@@ -548,7 +548,7 @@ $(".link-modal").fancybox({
 	 })
 
 	//  если радио таб выбран показать блок
-	 $('[data-tab-radio]').each(function(){
+	 $('input[data-tab-radio]').each(function(){
 		 var th = $(this),
 		 tabRadio = th.data('tab-radio');
 		 if(th.is(":checked")){
@@ -573,10 +573,12 @@ $(".link-modal").fancybox({
 	//  /аккордион 
 
 
-	$('.btn-tab-js').click(function(){
+	$('.btn-tab-js').click(function(e){
+		e.preventDefault();
 		var th = $(this),
 		tabRadio = th.data('tab-block');
-		 
+		console.log(tabRadio);
+		//  th.hide();
 			$('#'+tabRadio ).fadeIn(100).addClass("active")
 			.siblings('.tab-radio-content').removeClass('active').hide();
 		 
@@ -622,5 +624,41 @@ $(".link-modal").fancybox({
 	// показать/скрыть блок в поиске
 
 	
+
+	$(".date-picker-block-js").each(function(){
+
+    var th = $(this);
+
+        th.find('.startDate').datepicker({
+               locale: 'ru-ru',
+            uiLibrary: 'bootstrap4',
+            // iconsLibrary: 'fontawesome',
+            format: 'dd.mm.yyyy',
+						// minDate: today,
+						select: function (e) {
+				th.parents('label').removeClass("empty");
+			},
+            maxDate: function () {
+                return th.find('.endDate').val();
+            }
+        });
+        th.find('.endDate').datepicker({
+               locale: 'ru-ru',
+            uiLibrary: 'bootstrap4',
+            // iconsLibrary: 'fontawesome',
+						format: 'dd.mm.yyyy',
+						
+						select: function (e) {
+				th.parents('label').removeClass("empty");
+			},
+            minDate: function () {
+                return th.find('.startDate').val();
+            }
+				});
+				th.find('input').next().hide();
+				th.find('input').click(function(){
+					$(this).next().click();
+				})
+ })
 
 });

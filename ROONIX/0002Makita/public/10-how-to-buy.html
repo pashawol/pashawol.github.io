@@ -50,6 +50,11 @@
           <div class="trop__link"><a class="text-body d-inline link-modal" data-src="#modal-inner" href="javascript:;">Вход</a> 
             / <a class="text-body d-inline link-modal" data-src="#modal-reg" href="javascript:;">Регистрация</a>
           </div>
+          <div class="trop__contact-group">
+            <svg class="icon icon-phone ">
+              <use xlink:href="img/svg/sprite.svg#phone"></use>
+            </svg><a class="trop__link trop__link--phone" href="tel:+7(495)530-70-07">  +7 (495) 530-70-07</a><a class="trop__link smallest link-modal" data-src="#modal-call" href="javascript:;">Заказать обратный звонок</a>
+          </div>
         </div>
       </div>
       <!--  мобильное меню-->
@@ -102,7 +107,7 @@
                     <div class="top-line__contact-group">
                       <svg class="icon icon-phone ">
                         <use xlink:href="img/svg/sprite.svg#phone"></use>
-                      </svg><a class="top-line__link top-line__link--phone" href="tel:+7(495)530-70-07">  +7 (495) 530-70-07</a><a class="top-line__link smallest" href="#">Заказать обратный звонок</a>
+                      </svg><a class="top-line__link top-line__link--phone" href="tel:+7(495)530-70-07">  +7 (495) 530-70-07</a><a class="top-line__link smallest link-modal" data-src="#modal-call" href="javascript:;">Заказать обратный звонок</a>
                     </div>
                   </div>
                   <div class="col-auto d-none d-lg-block">
@@ -424,6 +429,29 @@
       </form>
     </div>
     <!-- #modal-reg-->
+    <div class="form-wrap modal-win modal-form" id="modal-call">
+      <form class="js-form-validate">
+        <div class="form-wrap__head">
+          <div class="h2 strong">Обратный звонок </div>
+        </div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Имя</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__captcha"><img class="res-i" src="img/captcha.png" alt=""/>
+        </div>
+        <button class="form-wrap__btn btn btn-primary mb-4" type="submit">Обратный звонок
+        </button>
+        <div class="smallest text-gray">Нажимая на кнопку, я даю согласие на обработку персональных данных</div>
+      </form>
+    </div>
+    <!-- #modal-call-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/fancybox/jquery.fancybox.min.js"></script>

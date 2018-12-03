@@ -6,6 +6,26 @@ jQuery(document).ready(function ($) {
 
 
 
+	var vid = document.getElementById("bgvid");
+
+
+	if (window.matchMedia('(prefers-reduced-motion)').matches) {
+		vid.removeAttribute("autoplay");
+		vid.pause();
+		pauseButton.innerHTML = "Paused";
+	}
+
+	function vidFade() {
+		vid.classList.add("stopfade");
+	}
+
+	vid.addEventListener('ended', function () {
+		// only functional if "loop" is removed 
+		vid.pause();
+		// to capture IE10
+		vidFade();
+	});
+
 
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
@@ -122,7 +142,7 @@ jQuery(document).ready(function ($) {
 
 
 
- 
+
 
 
 	var icon = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.2 477.2" style="enable-background:new 0 0 477.2 477.2;" xml:space="preserve"> <g> 	<path class="st0" d="M145.2,238.6L360.7,23.1c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0L116.5,229.1c-5.3,5.3-5.3,13.8,0,19.1 	l225.1,225c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.2,238.6z"/>';
@@ -153,7 +173,7 @@ jQuery(document).ready(function ($) {
 
 		}]
 	});
-	
+
 	$('.s-project-slider--js').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -169,44 +189,43 @@ jQuery(document).ready(function ($) {
 		// variableWidth: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
-		responsive: [
+		responsive: [{
+
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 5,
+				}
+
+			},
+
 			{
 
-			breakpoint: 1199,
-			settings: {
-				slidesToShow: 5,
-			}
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 4,
+				}
 
-		},
-		
+			},
+
 			{
 
-			breakpoint: 991,
-			settings: {
-				slidesToShow: 4,
-			}
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+				}
 
-		},
-		
+			},
+
 			{
 
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 3,
-			}
+				breakpoint: 440,
+				settings: {
+					slidesToShow: 2,
+				}
 
-		},
-		
-			{
+			},
 
-			breakpoint: 440,
-			settings: {
-				slidesToShow: 2,
-			}
-
-		},
-
-	]
+		]
 	});
 
 	$('.s-news-fead__slider--js, .s-project-slider--js')

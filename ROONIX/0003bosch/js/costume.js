@@ -606,7 +606,7 @@ jQuery(document).ready(function ($) {
         })
 
         $(" .btn-secondary.js-rekv-close").click(function(){
-            $('.btns-block-foot, .redact-link.js-toggler.js-rekv-open, .redact-link.js-toggler, .hidden-when-edit, [href="#redact-rekv"]').show();
+            $('.btns-block-foot, .redact-link.js-toggler.js-rekv-open, .redact-link.js-toggler, .hidden-when-edit, [href="#redact-rekv"], .js-form-row-rekv').show();
         })
 
 
@@ -636,9 +636,9 @@ jQuery(document).ready(function ($) {
             $(".hidden-block-wned-add-new-comp").show();
         })
         $('[href="#js-rekv-edit"]').click(function(){
-            $('#js-rekv-edit').show();
             $('.redact-link-reqv, .js-form-row, .js-hidden-when-adit-reqv').hide();
             $('.lk-rekv-ruk .rekv_block__item.d-block').removeClass('d-block');
+            $('#js-rekv-edit').show();
         })
 
         $('[href="#redact"]').click(function(){
@@ -648,7 +648,7 @@ jQuery(document).ready(function ($) {
         $(' [href="#redact-rekv"]').click(function(){
             $('  .js-form-row , .hidden-when-edit, .js-rekv-info , .btns-block.btns-block-foot').toggle();
             $('.js-rekv-edit').show();
-            $(".js-rekv-info").removeClass("d-block");
+            $(".js-rekv-info").toggleClass("d-block");
 
 
         })
