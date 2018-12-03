@@ -302,6 +302,7 @@ jQuery(document).ready(function ($) {
 			infinite: false,
 			loop: false,
 			 arrows: false,
+
 			// prevArrow: arrr2,
 			// nextArrow: arrl2,
 			// centerMode: true,
@@ -316,17 +317,38 @@ $('  .carusel')
 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 });
 
-	$(' .tabs__caption, .s-order__slider, .tabs-po__caption').slick({
+	$(' .tabs__caption, .s-order__slider ').slick({
 		dots: false,
 		arrows: false,
 		infinite: false,
 		loop: false,
 		speed: 450,
 		slidesToShow: 1,
+		
 		// centerMode: true,
 
 		variableWidth: true
 	});
+	
+	$('  .tabs-po__caption').slick({
+		dots: false,
+		arrows: true,
+		infinite: false,
+		loop: false,
+		speed: 450,
+		slidesToShow: 1,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		focusOnSelect: true,
+		// centerMode: true,
+
+		variableWidth: true
+	});
+	$('.tabs-po__caption').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		// console.log(currentSlide);
+		$(this).find(".slick-slide").eq(nextSlide).click();
+	});
+
 
 	$('.s-catalog__btn--more-js').click(function () {
 		$('.s-catalog').find(".s-catalog__slide:hidden").slideDown();
