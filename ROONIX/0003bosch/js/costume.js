@@ -606,7 +606,7 @@ jQuery(document).ready(function ($) {
         })
 
         $(" .btn-secondary.js-rekv-close").click(function(){
-            $('.btns-block-foot, .redact-link.js-toggler.js-rekv-open, .redact-link.js-toggler, .hidden-when-edit, [href="#redact-rekv"], .js-form-row-rekv').show();
+            $('.btns-block-foot, .redact-link.js-toggler.js-rekv-open, .redact-link.js-toggler, .hidden-when-edit, [href="#redact-rekv"], .js-form-row-rekv, .hidden-block-wned-add-new-comp, .redact-link-reqv').show();
         })
 
 
