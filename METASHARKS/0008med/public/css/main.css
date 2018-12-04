@@ -5021,16 +5021,29 @@ strong,.strong {
   background-position: center center;
 }
 
-.tabs__btn:hover {
+.tabs-contact__btn:hover,.tabs__btn:hover {
   cursor: pointer;
 }
 
-.tabs__content {
+.tabs-contact__content,.tabs__content {
   display: none;
 }
 
-.tabs__content.active {
+.tabs-contact__content.active,.tabs__content.active {
   display: block;
+}
+
+.tabs-contact__map,.tabs__map {
+  height: 286px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 75px 104px #e2e2e2;
+          box-shadow: inset 0 75px 104px #e2e2e2;
+}
+
+.tabs-contact__map > ymaps,.tabs__map > ymaps {
+  height: 100% !important;
 }
 
 select.form-control {
@@ -11969,6 +11982,10 @@ a {
     padding-bottom: 326px;
   }
 
+  .tabs-contact__map--2,.tabs__map--2 {
+    height: 450px;
+  }
+
   .header {
     min-height: 108px;
   }
@@ -12109,6 +12126,10 @@ a {
 
   .s-content ul li {
     padding-left: 40px;
+  }
+
+  .s-contact__map--2 {
+    height: 450px;
   }
 
   .s-catalog__foot {

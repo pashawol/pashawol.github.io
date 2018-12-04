@@ -86,10 +86,8 @@ jQuery(document).ready(function ($) {
 	//    });
 
 
-	// табы  . Теперь данные активного таба остается в storage
-	$(function () {
-		var tab = ('tabs');
-
+	// табы  . 
+	function tabscostume(tab) {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
@@ -97,7 +95,10 @@ jQuery(document).ready(function ($) {
 				.eq($(this).index()).fadeIn().addClass('active');
 
 		});
-	});
+	};
+	tabscostume('tabs');
+	tabscostume('tabs-contact');
+
 
 	// выравнивает высоту в миниатюрах
 	function heightses() {
