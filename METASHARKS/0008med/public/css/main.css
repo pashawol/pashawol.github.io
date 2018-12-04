@@ -1367,7 +1367,7 @@ select.form-control-lg:not([size]):not([multiple]) {
           user-select: none;
   border: 1px solid transparent;
   padding: 0.25rem 0.75rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   -webkit-border-radius: 0.3125rem;
           border-radius: 0.3125rem;
@@ -5813,7 +5813,7 @@ body {
 .basket-dropdown {
   margin-top: 20px;
   width: 262px;
-  font-size: 15px;
+  font-size: 14px;
   -webkit-box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
   padding-bottom: 0;
@@ -6523,6 +6523,10 @@ body {
   z-index: 2;
 }
 
+.s-content {
+  padding-bottom: 60px;
+}
+
 .s-content__img-head {
   margin-bottom: 40px;
 }
@@ -6637,6 +6641,29 @@ body {
 
 .s-contact {
   display: block;
+}
+
+.s-contact__map {
+  height: 286px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 75px 104px #e2e2e2;
+          box-shadow: inset 0 75px 104px #e2e2e2;
+}
+
+.s-contact__map > ymaps {
+  height: 100% !important;
+}
+
+.s-contact__group {
+  border-bottom: 1px solid #E2E2E2;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.s-contact__group .row > *,.s-contact__group .top-nav__nav > * {
+  padding-bottom: 5px;
 }
 
 .s-slider-wrap {
@@ -9929,7 +9956,7 @@ a {
   }
 
   .basket-dropdown {
-    margin-right: -90px;
+    margin-right: -70px;
   }
 
   .header-block__img-wrap {
@@ -11939,7 +11966,7 @@ a {
 
   .main-wrapper {
     min-height: 100vh;
-    padding-bottom: 388px;
+    padding-bottom: 326px;
   }
 
   .header {
