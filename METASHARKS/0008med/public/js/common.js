@@ -232,8 +232,8 @@ jQuery(document).ready(function ($) {
 	});
 	
 	$('.s-catalog__slider').slick({
-		slidesToShow: 3,
-		slidesToScroll: 3,
+		slidesToShow: 4,
+		slidesToScroll: 4,
 		dots: false,
 		speed: 450,
 		infinite: true,
@@ -243,14 +243,26 @@ jQuery(document).ready(function ($) {
 		// autoplaySpeed: 3000, 
 		prevArrow: arrl2,
 		nextArrow: arrr2,
-		responsive: [{
+		responsive: [
+			{
+			breakpoint: 1199,
+			settings: {
+
+				slidesToShow: 3,
+				slidesToScroll: 3,
+			}
+		},
+		
+			{
 			breakpoint: 991,
 			settings: {
 
 				slidesToShow: 2,
 				slidesToScroll: 2,
 			}
-		}]
+		},
+
+	]
 	});
 
 	$(".prod-head__sliders").each(function () {
