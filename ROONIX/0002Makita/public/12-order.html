@@ -10,7 +10,6 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
-    <meta name="theme-color" content="#fa3f3e">
     <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css">
@@ -18,6 +17,7 @@
     <link rel="stylesheet" href="libs/gijgo-master/css/gijgo.min.css">
     <link rel="stylesheet" href="libs/gijgo-master/css/demo.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <meta name="theme-color" content="#fa3f3e">
     <link rel="stylesheet" href="css/style-makita.min.css">
   </head>
   <body>
@@ -616,20 +616,43 @@
                             </div>
                             <!-- +e.input-wrap-->
                             <div class="form-wrap__input-wrap form-group">
+                              <label><input class="form-wrap__input form-control" type="tel" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (домашний)</span>
+                              </label> 
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="form-wrap__input-wrap form-group">
                               <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
                               </label> 
                             </div>
                             <!-- +e.input-wrap-->
                             <div class="form-wrap__input-wrap form-group">
-                              <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Улица </span>
+                              <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Адрес</span>
                               </label> 
                             </div>
                             <!-- +e.input-wrap-->
                             <div class="form-wrap__input-wrap form-group">
-                              <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Дом №</span>
-                              </label>
+                              <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Км. от МКАД*</span>
+                              </label> 
                             </div>
                             <!-- +e.input-wrap-->
+                            <div class="form-wrap__input-group">
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <div class="form-wrap__input-wrap form-group">
+                                    <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Подъезд №</span>
+                                    </label> 
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                                <div class="col-sm-6">
+                                  <div class="form-wrap__input-wrap form-group">
+                                    <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Этаж</span>
+                                    </label>
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                </div>
+                              </div>
+                            </div>
                             <div class="form-wrap__input-group">
                               <div class="row">
                                 <div class="col-sm-6">
@@ -642,7 +665,7 @@
                                 <div class="col-sm-6">
                                   <div class="form-wrap__input-wrap form-group">
                                     <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">№ домофона</span>
-                                    </label> 
+                                    </label>
                                   </div>
                                   <!-- +e.input-wrap-->
                                 </div>
