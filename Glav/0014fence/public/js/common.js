@@ -128,7 +128,7 @@ jQuery(document).ready(function ($) {
 
 		});
 	};
-	tabscostume('tab');
+	tabscostume('tabs');
 
 
 
