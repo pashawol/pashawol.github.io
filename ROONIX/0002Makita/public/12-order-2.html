@@ -320,21 +320,6 @@
               <form class="js-form-validate">
                 <div class="form-wrap__group">
                   <div class="form-wrap__title-head">
-                    <div class="h4 strong">Контактные данные</div>
-                  </div>
-                  <div class="form-wrap__input-wrap form-group">
-                    <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}" value="+ 7(985) 988 98 99"/><span class="form-wrap__title-label">Телефон</span>
-                    </label> 
-                  </div>
-                  <!-- +e.input-wrap-->
-                  <div class="form-wrap__input-wrap form-group">
-                    <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}" value="Константин Христорождественнский"/><span class="form-wrap__title-label">Контактное лицо</span>
-                    </label> 
-                  </div>
-                  <!-- +e.input-wrap-->
-                </div>
-                <div class="form-wrap__group">
-                  <div class="form-wrap__title-head">
                     <div class="h4 strong">Тип оплаты</div>
                     <div class="smallest text-gray">Выберите тип оплаты</div>
                   </div>
@@ -439,7 +424,9 @@
                             <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="delivery-reqv-edit">Заполнить вручную 
                             </button>
                           </div>
-                          <div class="col-sm-auto"><a class="form-wrap__btn-secondary btn btn-block btn btn-secondary" href="#">Добавить реквизиты файлом</a>
+                          <div class="col-sm-auto">
+                            <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="reqv-file">Добавить реквизиты файлом
+                            </button>
                           </div>
                         </div>
                         <div class="small text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
@@ -447,6 +434,41 @@
                       </div>
                     </div>
                     <!-- /.tab-radio-content-->
+                    <div class="tab-radio-content" id="reqv-file">
+                      <div class="form-wrap">
+                        <div class="s-po-block">
+                          <div class="form-wrap__group">
+                            <div class="tab-radio-content-close btn-tab-js" data-tab-block="delivery-reqv">
+                            </div>
+                            <div class="form-wrap__input-wrap form-group">
+                              <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Наименование организации (Полное)</span>
+                              </label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="form-wrap__maxw">
+                              <div class="smallest text-gray pb-3">Пожалуйста выберите файл (не болee 1 мегабайта), и нажмите кнопку загрузить.</div>
+                              <div class="add-file">
+                                <div class="row row--small">
+                                  <div class="col-12 mb-3">
+                                    <div class="add-file__filename">
+                                    </div>
+                                  </div>
+                                  <div class="col">
+                                    <label><input class="add-file__input d-none" type="file"/><span class="add-file__btn btn btn-block btn btn-primary" role="button">Добавить файл</span>
+                                    </label>
+                                  </div>
+                                  <div class="col">
+                                    <button class="add-file__btn btn btn-block btn btn-secondary" type="submit">Сохранить
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--.tab-radio-content-->
                     <div class="tab-radio-content" id="delivery-reqv-edit">
                       <div class="form-wrap__group">
                         <div class="form-wrap__input-wrap form-group">
