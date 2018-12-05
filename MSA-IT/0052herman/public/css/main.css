@@ -7354,7 +7354,7 @@ readers do not read off random characters that represent icons */.fa-500px:befor
 html {
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
-  background-position: center top;
+  background-position: center 18px;
   background-repeat: no-repeat;
 }
 
@@ -9634,7 +9634,14 @@ select.form-control:focus::-ms-value {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding-top: 1.38889rem;
+  padding-top: 25px;
+}
+
+.footer .row {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer__nav-list {
@@ -9649,6 +9656,7 @@ select.form-control:focus::-ms-value {
   display: block;
   width: 100%;
   vertical-align: top;
+  line-height: 1.2;
 }
 
 .footer__link {
@@ -9667,7 +9675,7 @@ select.form-control:focus::-ms-value {
 }
 
 .footer__col-logo {
-  padding-top: 10px;
+  margin-bottom: 30px;
 }
 
 .footer__col {
@@ -9770,6 +9778,24 @@ a {
 
 .polite .link :hover {
   display: none;
+}
+
+button.mfp-arrow {
+  background-position: center center;
+  background-repeat: no-repeat;
+  outline: none !important;
+}
+
+button.mfp-arrow::before,button.mfp-arrow::after {
+  display: none;
+}
+
+button.mfp-arrow.mfp-arrow-left {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAZCAYAAABOxhwiAAAA70lEQVRYR93XwQ2DMAwF0G/oQN6gbNBeyhk2KBOVa+HCBu0I7FNKKiKQigokHBB2c3bQw3Ich7BiNQUnBBzDuE5XbNsklHy/2qNvBkgPcZ377tsqzgsuDd0lwwmXiHbCpaIX4ZLRs3Dp6Em4BvQPXAt6BH+VHAUGDyl92tX/bTs0BXMLi84kXC4utM14U/KJDLqbsApAu9+IPmgLfxdsfIMlxVFz5zMRchCqFjbzKtZ3jT8NcFVT40N6+wOqBj8aslT28SHzWvCTY60G/Ow8Lh2/+JCQjP/PF5DkA+vMuFS8N7z7AVvzhCi81Mnec8EHaveRH6q8D8kAAAAASUVORK5CYII=);
+}
+
+button.mfp-arrow.mfp-arrow-right {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAZCAYAAABOxhwiAAAA8ElEQVRYR9XYQQ6CMBAF0D8E71NPINwAF+IWT6Q3kHXZeAS8Qe+jMKaJJGqMTCOQaZdNM30h7fQHgoLRWXNm4JqWrpZySLpwznV3ayoCPP4gxauA+48SilcDD8Wrgofg1cGleJVwCV4tfAyvGv6GZ2zTvbsMbVk9/AV/TICcSuf8XBTwb3hiu97M+SpOWbsHVwAKJlTUWcNTFl+qFt0aky212b/7JEAFRsEMn23iGM8sc0qAzF/QKOCf6Ci6ypAae0K+2rk2ij7+K+qqPSpj+VwlfAyt8oxL0OrgUrQqeAhaDTwUrQbeNaZmRiv9NeHhDwZ5kTsimPOlAAAAAElFTkSuQmCC);
 }/*==========  Mobile First  ==========*//*==========  Desktop First  ==========*//* Large Devices, Wide Screens *//* Medium Devices, Desktops *//* Small Devices, Tablets *//* Extra Small Devices, Phones *//* Custom, iPhone Retina */@font-face {
   font-family:"roboto";font-style:normal;font-weight:normal;src:url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
 }
@@ -13503,7 +13529,7 @@ a {
   }
 
   .footer__col-logo {
-    width: 305px;
+    width: 282px;
   }
 }
 
