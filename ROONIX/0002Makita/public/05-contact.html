@@ -10,20 +10,22 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
-    <meta name="theme-color" content="#3361d8">
     <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css">
+    <link rel="stylesheet" href="libs/gijgo-master/css/gijgo.min.css">
+    <link rel="stylesheet" href="libs/gijgo-master/css/demo.min.css">
     <link rel="stylesheet" href="css/main.min.css">
-    <link rel="stylesheet" href="css/style-makita.min.css">
+    <meta name="theme-color" content="#fa3f3e">
+    <link rel="stylesheet" href="css/style-bosch.min.css">
   </head>
   <body>
     <div class="main-wrapper">
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="wrapp-hidden">
           <div class="trop__head"> 
-            <div class="toggle-mnu toggle-mnu-1"><span> </span></div><a class="trop__logo" href="#"><img class="res-i img-svg" src="img/makita-01.svg" alt=""/></a>
+            <div class="toggle-mnu toggle-mnu-2 on"><span> </span></div><a class="trop__logo" href="#"><img class="res-i" src="img/bosch.png" alt=""/></a>
           </div>
           <div class="catalog-nav">
             <div class="catalog-nav__btn-toggle"><span></span>Каталог товаров
@@ -53,7 +55,7 @@
           <div class="trop__contact-group">
             <svg class="icon icon-phone ">
               <use xlink:href="img/svg/sprite.svg#phone"></use>
-            </svg><a class="trop__link trop__link--phone" href="tel:+7(495)530-70-07">  +7 (495) 530-70-07</a><a class="trop__link smallest" href="#">Заказать обратный звонок</a>
+            </svg><a class="trop__link trop__link--phone" href="tel:+7(495)530-70-07">  +7 (495) 530-70-07</a><a class="trop__link smallest link-modal" data-src="#modal-call" href="javascript:;">Заказать обратный звонок</a>
           </div>
         </div>
       </div>
@@ -99,7 +101,10 @@
               <div class="col-auto d-lg-none">
                 <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
               </div>
-              <div class="aside-col col text-md-left text-center"><a class="top-line__logo" href="#"><img class="res-i" src="img/makita-01.svg" alt=""/></a>
+              <div class="aside-col col text-md-left text-center"><a class="top-line__logo" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="img-svg res-i" src="img/bosch.png" alt=""/></div>
+                </div></a>
               </div>
               <div class="main-col col-lg-9 col-auto d-none d-md-block">
                 <div class="row align-items-center">
@@ -107,7 +112,7 @@
                     <div class="top-line__contact-group">
                       <svg class="icon icon-phone ">
                         <use xlink:href="img/svg/sprite.svg#phone"></use>
-                      </svg><a class="top-line__link top-line__link--phone" href="tel:+7(495)530-70-07">  +7 (495) 530-70-07</a><a class="top-line__link smallest" href="#">Заказать обратный звонок</a>
+                      </svg><a class="top-line__link top-line__link--phone" href="tel:+7(495)530-70-07">  +7 (495) 530-70-07</a><a class="top-line__link smallest link-modal" data-src="#modal-call" href="javascript:;">Заказать обратный звонок</a>
                     </div>
                   </div>
                   <div class="col-auto d-none d-lg-block">
@@ -343,7 +348,7 @@
                 <div class="footer__toggle-block">
                   <div><a class="footer__tel" href="tel:+7(495)530-70-07">+7 (495) 530-70-07</a>
                   </div>
-                  <div><a class="footer__link tdu" href="#">Обратный звонок</a>
+                  <div><a class="footer__link tdu link-modal" data-src="#modal-call" href="javascript:;">Обратный звонок</a>
                   </div>
                   <div class="small text-gray">Пн-Пт 8:15 до 18:30, Сб 10:00 до 15:00</div>
                   <div><a class="footer__link" href="mailto:zakaz@pt-line.ru">zakaz@pt-line.ru</a>
@@ -453,6 +458,29 @@
       </form>
     </div>
     <!-- #modal-reg-->
+    <div class="form-wrap modal-win modal-form" id="modal-call">
+      <form class="js-form-validate">
+        <div class="form-wrap__head">
+          <div class="h2 strong">Обратный звонок </div>
+        </div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Имя</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__captcha"><img class="res-i" src="img/captcha.png" alt=""/>
+        </div>
+        <button class="form-wrap__btn btn btn-primary mb-4" type="submit">Обратный звонок
+        </button>
+        <div class="smallest text-gray">Нажимая на кнопку, я даю согласие на обработку персональных данных</div>
+      </form>
+    </div>
+    <!-- #modal-call-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/fancybox/jquery.fancybox.min.js"></script>
@@ -462,6 +490,8 @@
     <script src="libs/parsleyjs/parsley.min.js"></script>
     <script src="libs/parsleyjs/i18n/ru.js"></script>
     <script src="libs/parsleyjs/i18n/ru.extra.js"></script>
+    <script src="libs/gijgo-master/js/gijgo.js"></script>
+    <script src="libs/gijgo-master/js/messages/messages.ru-ru.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
     <script src="libs/jquery.touchSwipe.min.js"></script>
     <script src="js/common.js"></script>

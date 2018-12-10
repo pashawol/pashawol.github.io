@@ -490,4 +490,32 @@ jQuery(document).ready(function ($) {
 			}
 		});
 	})
+
+
+	function footerH() {
+
+		var w = $(window).width();
+		$(".main-wrapper").css("padding-bottom", $('footer').innerHeight());
+
+		$(".s-catalog").each(function(){
+	
+			var imW = $(this).find(".item-prod__img-wrap").innerHeight();
+			  
+			$(this).find(" .slick-arrow").css('top', imW);
+		})
+	}
+ 
+
+	$(window).resize(function () {
+		footerH();
+			
+	}); 
+	footerH();
+
+
+	$(window).on("load",function(){
+		$(".basket-dropdown__items--js").mCustomScrollbar({
+			autoHideScrollbar: true,
+		});
+});
 });

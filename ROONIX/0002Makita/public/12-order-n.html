@@ -17,15 +17,15 @@
     <link rel="stylesheet" href="libs/gijgo-master/css/gijgo.min.css">
     <link rel="stylesheet" href="libs/gijgo-master/css/demo.min.css">
     <link rel="stylesheet" href="css/main.min.css">
-    <link rel="stylesheet" href="css/style-makita.min.css">
     <meta name="theme-color" content="#fa3f3e">
+    <link rel="stylesheet" href="css/style-bosch.min.css">
   </head>
   <body>
     <div class="main-wrapper">
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="wrapp-hidden">
           <div class="trop__head"> 
-            <div class="toggle-mnu toggle-mnu-2 on"><span> </span></div><a class="trop__logo" href="#"><img class="res-i" src="img/makita-01.svg" alt=""/></a>
+            <div class="toggle-mnu toggle-mnu-2 on"><span> </span></div><a class="trop__logo" href="#"><img class="res-i" src="img/bosch.png" alt=""/></a>
           </div>
           <div class="catalog-nav">
             <div class="catalog-nav__btn-toggle"><span></span>Каталог товаров
@@ -101,7 +101,10 @@
               <div class="col-auto d-lg-none">
                 <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
               </div>
-              <div class="aside-col col text-md-left text-center"><a class="top-line__logo" href="#"><span class="catalog-nav"><span class="catalog-nav__btn-toggle"><span></span>Каталог товаров</span><span class="catalog-nav__dropdown"><span class="catalog-nav__inner"><a class="catalog-nav__link" href="#">Аккумуляторные инструменты</a><a class="catalog-nav__link" href="#">Пневматические инструменты</a><a class="catalog-nav__link" href="#">Болгарки (УШМ)</a><a class="catalog-nav__link" href="#">Бороздоделы (штроборезы)</a><a class="catalog-nav__link" href="#">Воздуходувки</a><a class="catalog-nav__link" href="#">Гайковёрты</a><a class="catalog-nav__link" href="#">Гвоздезабиватели</a><a class="catalog-nav__link" href="#">Граверы</a><a class="catalog-nav__link" href="#">Дрели</a><a class="catalog-nav__link" href="#">Дрели-шуруповёрты</a><a class="catalog-nav__link" href="#">Измерительная техника</a><a class="catalog-nav__link" href="#">Клеевые пистолеты</a><a class="catalog-nav__link" href="#">Лобзики</a><a class="catalog-nav__link" href="#">Мойки высокого давления</a><a class="catalog-nav__link" href="#">Наборы инструментов</a><a class="catalog-nav__link" href="#">Ножницы</a><a class="catalog-nav__link" href="#">Отбойные молотки</a><a class="catalog-nav__link" href="#">Отвёртки</a><a class="catalog-nav__link" href="#">Перфораторы</a><a class="catalog-nav__link" href="#">Пилы</a><a class="catalog-nav__link" href="#">Пылесосы</a><a class="catalog-nav__link" href="#">Реноваторы (резаки)</a><a class="catalog-nav__link" href="#">Рубанки</a><a class="catalog-nav__link" href="#">Радиоприёмники</a><a class="catalog-nav__link" href="#">Технические фены</a><a class="catalog-nav__link" href="#"> Точило</a><a class="catalog-nav__link" href="#"> Фонари</a><a class="catalog-nav__link" href="#"> Фрезеры</a><a class="catalog-nav__link" href="#"> Шлифовальные машины</a><a class="catalog-nav__link" href="#"> Шуруповёрты</a><a class="catalog-nav__link" href="#"> Аксессуары, расходные материалы </a></span></span></span></a>
+              <div class="aside-col col text-md-left text-center"><a class="top-line__logo" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="img-svg res-i" src="img/bosch.png" alt=""/></div>
+                </div></a>
               </div>
               <div class="main-col col-lg-9 col-auto d-none d-md-block">
                 <div class="row align-items-center">
@@ -801,7 +804,7 @@
                                 <div class="form-wrap">
                                   <div class="s-po-block">
                                     <div class="form-wrap__group">
-                                      <div class="tab-radio-content-close btn-tab-js" data-tab-block="delivery-reqv">
+                                      <div class="tab-radio-content-close btn-tab-js" data-tab-block="delivery-reqv-edit">
                                       </div>
                                       <div class="form-wrap__input-wrap form-group">
                                         <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Наименование организации (Полное)</span>
@@ -910,6 +913,10 @@
                                   <div class="row row--small">
                                     <div class="col-sm-auto">
                                       <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                                      </button>
+                                    </div>
+                                    <div class="col-sm-auto">
+                                      <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="reqv-file">Добавить реквизиты файлом
                                       </button>
                                     </div>
                                   </div>

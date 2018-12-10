@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/fancybox-master/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="libs/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -86,6 +87,28 @@
               </form>
               <div class="basket-dropdown dropdown-menu">
                 <div class="arrow"></div>
+                <div class="basket-dropdown__item">
+                  <div class="row">
+                    <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
+                    </div>
+                    <div class="col">
+                      <div class="basket-dropdown__small text-gray mb-1">Текстильный  <span class="text-primary">шлем  </span>с предустановленными Ag/AgCl ...
+                      </div>
+                      <div class="text-primary">15 000 Р  </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basket-dropdown__item">
+                  <div class="row">
+                    <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
+                    </div>
+                    <div class="col">
+                      <div class="basket-dropdown__small text-gray mb-1">Текстильный  <span class="text-primary">шлем  </span>с предустановленными Ag/AgCl ...
+                      </div>
+                      <div class="text-primary">15 000 Р  </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="basket-dropdown__item">
                   <div class="row">
                     <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
@@ -308,61 +331,210 @@
                     <use xlink:href="img/svg/sprite.svg#basket"></use>
                   </svg><span class="top-nav__count">5</span></a>
                   <div class="basket-dropdown dropdown-menu">
-                    <div class="basket-dropdown__item">
-                      <div class="row">
-                        <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
+                    <!-- добавил обертку-->
+                    <div class="basket-dropdown__items basket-dropdown__items--js">
+                      <div class="basket-dropdown__item">
+                        <div class="basket-dropdown__delete">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
                         </div>
-                        <div class="col"><a class="basket-dropdown__title" href="#">SLEEP</a>
-                          <div class="basket-dropdown__small text-gray">Текстильный шлем с предустановленными Ag/AgCl ...
+                        <div class="row">
+                          <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
+                          </div>
+                          <div class="col"><a class="basket-dropdown__title" href="#">SLEEP</a>
+                            <div class="basket-dropdown__small text-gray">Текстильный шлем с предустановленными Ag/AgCl ...
+                            </div>
+                          </div>
+                        </div>
+                        <div class="basket-dropdown__small-row row align-items-center">
+                          <div class="col-auto">
+                            <div class="basket-dropdown__price"> <span class="text-primary">15 000 Р  </span>
+                               х 
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="block-add">
+                              <div class="block-add__btn block-add__btn--minus">-
+                              </div>
+                              <input type="text" value="1"/>
+                              <div class="block-add__btn block-add__btn--plus"> +
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col text-primary">
+                            =  <span class="basket-dropdown__result">25 000 Р</span>
                           </div>
                         </div>
                       </div>
-                      <div class="basket-dropdown__small-row row align-items-center">
-                        <div class="col-auto">
-                          <div class="basket-dropdown__price"> <span class="text-primary">15 000 Р  </span>
-                             х 
+                      <div class="basket-dropdown__item">
+                        <div class="basket-dropdown__delete">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                        <div class="row">
+                          <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
+                          </div>
+                          <div class="col"><a class="basket-dropdown__title" href="#">SLEEP</a>
+                            <div class="basket-dropdown__small text-gray">Текстильный шлем с предустановленными Ag/AgCl ...
+                            </div>
                           </div>
                         </div>
-                        <div class="col-auto">
-                          <div class="block-add">
-                            <div class="block-add__btn block-add__btn--minus">-
-                            </div>
-                            <input type="text" value="1"/>
-                            <div class="block-add__btn block-add__btn--plus"> +
+                        <div class="basket-dropdown__small-row row align-items-center">
+                          <div class="col-auto">
+                            <div class="basket-dropdown__price"> <span class="text-primary">15 000 Р  </span>
+                               х 
                             </div>
                           </div>
-                        </div>
-                        <div class="col text-primary">
-                          =  <span class="basket-dropdown__result">25 000 Р</span>
+                          <div class="col-auto">
+                            <div class="block-add">
+                              <div class="block-add__btn block-add__btn--minus">-
+                              </div>
+                              <input type="text" value="1"/>
+                              <div class="block-add__btn block-add__btn--plus"> +
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col text-primary">
+                            =  <span class="basket-dropdown__result">25 000 Р</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="basket-dropdown__item">
-                      <div class="row">
-                        <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
+                      <div class="basket-dropdown__item">
+                        <div class="basket-dropdown__delete">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
                         </div>
-                        <div class="col"><a class="basket-dropdown__title" href="#">SLEEP</a>
-                          <div class="basket-dropdown__small text-gray">Текстильный шлем с предустановленными Ag/AgCl ...
+                        <div class="row">
+                          <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
+                          </div>
+                          <div class="col"><a class="basket-dropdown__title" href="#">SLEEP</a>
+                            <div class="basket-dropdown__small text-gray">Текстильный шлем с предустановленными Ag/AgCl ...
+                            </div>
+                          </div>
+                        </div>
+                        <div class="basket-dropdown__small-row row align-items-center">
+                          <div class="col-auto">
+                            <div class="basket-dropdown__price"> <span class="text-primary">15 000 Р  </span>
+                               х 
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="block-add">
+                              <div class="block-add__btn block-add__btn--minus">-
+                              </div>
+                              <input type="text" value="1"/>
+                              <div class="block-add__btn block-add__btn--plus"> +
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col text-primary">
+                            =  <span class="basket-dropdown__result">25 000 Р</span>
                           </div>
                         </div>
                       </div>
-                      <div class="basket-dropdown__small-row row align-items-center">
-                        <div class="col-auto">
-                          <div class="basket-dropdown__price"> <span class="text-primary">15 000 Р  </span>
-                             х 
+                      <div class="basket-dropdown__item">
+                        <div class="basket-dropdown__delete">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                        <div class="row">
+                          <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
+                          </div>
+                          <div class="col"><a class="basket-dropdown__title" href="#">SLEEP</a>
+                            <div class="basket-dropdown__small text-gray">Текстильный шлем с предустановленными Ag/AgCl ...
+                            </div>
                           </div>
                         </div>
-                        <div class="col-auto">
-                          <div class="block-add">
-                            <div class="block-add__btn block-add__btn--minus">-
+                        <div class="basket-dropdown__small-row row align-items-center">
+                          <div class="col-auto">
+                            <div class="basket-dropdown__price"> <span class="text-primary">15 000 Р  </span>
+                               х 
                             </div>
-                            <input type="text" value="1"/>
-                            <div class="block-add__btn block-add__btn--plus"> +
+                          </div>
+                          <div class="col-auto">
+                            <div class="block-add">
+                              <div class="block-add__btn block-add__btn--minus">-
+                              </div>
+                              <input type="text" value="1"/>
+                              <div class="block-add__btn block-add__btn--plus"> +
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col text-primary">
+                            =  <span class="basket-dropdown__result">25 000 Р</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="basket-dropdown__item">
+                        <div class="basket-dropdown__delete">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                        <div class="row">
+                          <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
+                          </div>
+                          <div class="col"><a class="basket-dropdown__title" href="#">SLEEP</a>
+                            <div class="basket-dropdown__small text-gray">Текстильный шлем с предустановленными Ag/AgCl ...
                             </div>
                           </div>
                         </div>
-                        <div class="col text-primary">
-                          =  <span class="basket-dropdown__result">25 000 Р</span>
+                        <div class="basket-dropdown__small-row row align-items-center">
+                          <div class="col-auto">
+                            <div class="basket-dropdown__price"> <span class="text-primary">15 000 Р  </span>
+                               х 
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="block-add">
+                              <div class="block-add__btn block-add__btn--minus">-
+                              </div>
+                              <input type="text" value="1"/>
+                              <div class="block-add__btn block-add__btn--plus"> +
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col text-primary">
+                            =  <span class="basket-dropdown__result">25 000 Р</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="basket-dropdown__item">
+                        <div class="basket-dropdown__delete">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
+                        </div>
+                        <div class="row">
+                          <div class="col-auto"><a class="basket-dropdown__img-wrap" href="#"><img class="res-i" src="img/prod-1.png" alt=""/></a>
+                          </div>
+                          <div class="col"><a class="basket-dropdown__title" href="#">SLEEP</a>
+                            <div class="basket-dropdown__small text-gray">Текстильный шлем с предустановленными Ag/AgCl ...
+                            </div>
+                          </div>
+                        </div>
+                        <div class="basket-dropdown__small-row row align-items-center">
+                          <div class="col-auto">
+                            <div class="basket-dropdown__price"> <span class="text-primary">15 000 Р  </span>
+                               х 
+                            </div>
+                          </div>
+                          <div class="col-auto">
+                            <div class="block-add">
+                              <div class="block-add__btn block-add__btn--minus">-
+                              </div>
+                              <input type="text" value="1"/>
+                              <div class="block-add__btn block-add__btn--plus"> +
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col text-primary">
+                            =  <span class="basket-dropdown__result">25 000 Р</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -593,7 +765,7 @@
             <div class="col-auto"><a class="footer__youtube-link" href="#"><img src="img/youtube.svg" alt=""/></a>
             </div>
           </div>
-        </div><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-reg">регистрация</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-password-recovery">Забыли пароль?  </a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-password-recovery-2">Забыли пароль?   2</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-thanks">modal-thanks</a>
+        </div>
       </footer>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-inner">
@@ -899,6 +1071,7 @@
     <script src="libs/jquery.touchSwipe.min.js"></script>
     <script src="libs/equalHeights/equalHeights.min.js"></script>
     <script src="libs/fancybox-master/jquery.fancybox.min.js"></script>
+    <script src="libs/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

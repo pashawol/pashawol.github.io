@@ -748,21 +748,21 @@
 				</div>
 
 				<div class="radio-box auto-width">
-					<input type="radio" name="delivery" id="samovivoz" checked="checked" class="js-radio-toggler" toggleTarget="delivery1" >
+					<input type="radio" name="delivery" id="samovivoz"  class="js-radio-toggler" toggleTarget="delivery1" >
 					<label for="samovivoz">
 						Забрать самостоятельно
 					</label>
 				</div>
 
 				<div class="radio-box auto-width">
-					<input type="radio" name="delivery" id="dostavka" class="js-radio-toggler" toggleTarget="delivery2">
+					<input type="radio" name="delivery" id="dostavka" checked="checked"  class="js-radio-toggler" toggleTarget="delivery2">
 					<label for="dostavka">
 						Заказать доставку
 					</label>
 				</div>
 
 				<div class="js-content-wrapper">
-					<div class="js-content js-content--active" id="delivery1">
+					<div class="js-content " id="delivery1">
 						<div class="busket-steps-content_wrap">
 							<div class="with-dotted-lines">
 								<div class="with-dotted-lines_item">
@@ -837,7 +837,7 @@
 						</a>
 					</div>
 
-					<div class="js-content" id="delivery2">
+					<div class="js-content js-content--active" id="delivery2">
 						<div class="busket-steps-content_wrap">
 							<div class="with-dotted-lines">
 								<div class="with-dotted-lines_item">
@@ -1466,20 +1466,20 @@
 														Получатель ТК
 													</h3>
 													<div class="radio-box">
-														<input type="radio" name="tk" id="fiz" class="js-radio-toggler" toggleTarget="tk1" checked="checked">
+														<input type="radio" name="tk" id="fiz" class="js-radio-toggler" toggleTarget="tk1" >
 														<label for="fiz">
 															Физическое лицо
 														</label>
 													</div>
 	
 													<div class="radio-box">
-														<input type="radio" name="tk" id="ur" class="js-radio-toggler" toggleTarget="tk2">
+														<input type="radio" name="tk" checked="checked" id="ur" class="js-radio-toggler" toggleTarget="tk2">
 														<label for="ur">
 															Юридическое лицо
 														</label>
 													</div>
 												</div>
-												<div class="js-content js-content--active" id="tk1">
+												<div class="js-content " id="tk1">
 													<div class="hidden-block-wned-add-new-comp">
 														<div class="input-box large-margin width350">
 															<input type="text" placeholder="Фамилия Имя Отчество (Полностью)">
@@ -1500,6 +1500,7 @@
 																		Далее
 																		<!-- <img src="images/plus-white.png"> -->
 																</a></div>
+															
 																		<div class="form-col-auto">
 																		<div class="text-danger text-danger-mw ">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
 																		</div>
@@ -1509,7 +1510,7 @@
 															<!-- / добавил -->
 													</div>
 	
-													<div class="js-content" id="tk2">
+													<div class="js-content js-content--active" id="tk2">
 														<!-- <div class="input-box width350">
 															<select>
 																<option>
@@ -1544,7 +1545,7 @@
 																<!-- <a href="javascript:void(0);" class="lk-rekv-ruk_edit lk-rekv-ruk_edit__close js-rekv-close">
 																		<img src="images/close-blue.svg" alt="">
 																	</a> -->
-																	<div class="rekv_block__item border-0 hidden-block-wned-add-new-comp">
+																	<div class="rekv_block__item border-0 hidden-block-wned-add-new-comp ">
 																			<form action="POST">
 																				<div class="width350">
 																					<div class="input-box">
@@ -1630,7 +1631,47 @@
 																				</div>
 																			</form>
 																		</div>
+																		<div class="lk-rekv">
+																			<div class="rekv_block__item border-0 js-rekv-file-block">
+																				<form action="POST">
+																					<input type="file" hidden="hidden" id="rekv-file-input">
+																					<a href="javascript:void(0);" class="lk-rekv-ruk_edit lk-rekv-ruk_edit__close js-rekv-file-close">
+																						<img src="images/close-blue.svg" alt="">
+																					</a>
+																					<div class="width350">
+																						<div class="input-box">
+																							<label for="rekvName">Наименование организации (Полное)</label>
+																							<input type="text" id="rekvName" placeholder="Наименование организации (Полное)">
+																						</div>
+																						<div class="base-text">
+																							Пожалуйста выберите файл (не болee 1 мегабайта), и нажмите кнопку загрузить.
+																						</div>
+				
+																						<div class="rekv-file-name">
+				
+																						</div>
+																					</div>
+																					<div class="btns-block">
+																						<a class="btn-large btn-secondary btn-left-img js-rekv-file-add mt-0" href="javascript:void(0);">
+																							<img src="images/downlod.svg" alt="">
+																							Добавить файл
+																						</a>
+				
+																						<buton type="submit" class="btn btn-large btn-primary btn-with-image">
+																							Сохранить
+																						</buton>
+																					</div>
+																				</form>
+				
+				
+																			</div>
+				
+																		</div>
 																	<div class="form-row align-items-center">
+																		<div class="form-col-auto">
+																			<a class="btn-large btn-secondary btn-left-img js-rekv-file" href="#">
+																				<img class="fl-l" src="images/edit-icon.svg">Добавить реквизиты файлом</a>
+																		</div>
 															
 																			<div class="form-col-auto">
 																					<a class="btn btn-large btn-primary  width180  mt-0 next-btn2" data-step="1"  href="javascript:void(0);">
