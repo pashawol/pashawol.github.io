@@ -1,0 +1,62 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-infrastructure/_s-infrastructure.pug
+include ../blocks/s-logos/_s-logos.pug
+include ../blocks/s-main-calendar/_s-main-calendar.pug
+include ../blocks/s-news/_s-news.pug
+include ../blocks/s-block/_s-block.pug
+include ../blocks/s-sq/_s-sq.pug
+include ../blocks/s-number-2/_s-number-2.pug
+include ../blocks/aside/_aside.pug
+
+block title
+	title ЛИЧНЫЙ КАБИНЕТ
+
+block pagecontent
+	+mob-mnu()
+	+header()
+		//- +top-line()
+		+top-nav-po() 
+	
+		+b.header-block
+			.container
+				+breadcrumb("Фитнес-зал","Технопарк")
+
+	.animate-block#particles-js.particle-canvas.particles-js
+		.container
+			h1.under-canvas.page-title.page-title.pb-0
+				span ЛИЧНЫЙ КАБИНЕТ
+		
+		//- .large-header#large-header
+			//- canvas.x-canvas#x-canvas
+			//- canvas.x-canvas#x-canvas2
+			//- canvas.x-canvas#x-canvas3
+		.section
+			.container
+				.row
+					.col-xxl-4.col-lg-3
+						+aside
+					.col
+						+b.po-block
+							.row
+								.col-sm-auto
+									+e.logos-img-wrap
+										img.res-i(src='img/patner-4.png', alt='')
+								.col
+									.h2.strong.under-canvas ООО “ТехноСервис”
+									.h4.under-canvas 
+										span.text-primary ООО “Техносервис”  
+										| 
+										|– фитнес-зона, силовые и кардио-тренажеры, боксерский ринг, душевые кабинки. Опция будет доступна не только резидентам “Физтехпарка”, но и всем желающим вести здоровый образ жизни.
+									.h4.under-canvas: a(href="#") www.techservice.ru
+	.bg-primary.animate-footer
+		canvas.x-canvas-2
+		+s-form()
+		//- +s-contact()
+		+footer()
+	
+	
