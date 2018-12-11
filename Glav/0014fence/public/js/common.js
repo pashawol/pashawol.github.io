@@ -152,29 +152,70 @@ jQuery(document).ready(function ($) {
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 	});
+	// карусель
+	$('.s-gal__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 450,
+		// infinite: false,
+		// loop: false,  
+		arrows: false,
+		draggable: false,
 
-	// slider
-	// var swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
+	});
 
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
 
-	// });
+
+	$('.slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+
+		// infinite: false,
+		//  loop: false,   
+		asNavFor: '.slider-nav',
+		arrows: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+	});
+	$('.slider-nav').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		dots: false,
+		arrows: false, 
+		focusOnSelect: true,
+		vertical: true,
+		verticalSwiping: true, 
+		responsive: [
+
+			{
+				breakpoint: 991.98,
+				settings: { 
+					vertical: false,
+					verticalSwiping: false,
+
+				}
+			} ,
+			
+			{
+				breakpoint: 767.98,
+				settings: {
+					slidesToShow: 2 
+
+				}
+			} ,
+
+		]
+
+	});
+
+	$('.s-gal__slider,'+
+	' .slider-for ,'+
+	' .slider-for2 ')
+.on('lazyLoaded', function(event, slick, image, imageSource){
+	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+});
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -214,33 +255,7 @@ jQuery(document).ready(function ($) {
 		});
 	})
 	// /modal галерея
-
-	// form
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			$.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-			}, 4000);
-		});
-		return false;
-	});
-	// /form
-
+ 
 	// mask for input
 	var customOptions = {
 		onKeyPress: function (val, e, field, options) {
@@ -305,6 +320,18 @@ jQuery(document).ready(function ($) {
 	//      acceptedFiles: 'image/*',
 	//      uploadMultiple: true,
 	//   });
+	// accordion
+	$(".showhide").click(function () {
+
+
+		$(".showhide-all").slideUp().parent().removeClass("active"), $(".showhide").removeClass("active"),
+			$(this).next("div").filter(function () {
+				return "block" == $(this).css("display")
+			}).slideUp().parent().removeClass("active"),
+			$(this).next("div").filter(function () {
+				return "none" == $(this).css("display")
+			}).slideDown().prev("div").addClass("active").parent().addClass("active")
+		})
 
 
 	$(".pretty-embed__bg").each(function () {
