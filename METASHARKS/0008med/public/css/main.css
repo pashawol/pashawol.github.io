@@ -66,7 +66,7 @@ hr {
   overflow: visible;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,.top-nav__tel,h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -318,7 +318,7 @@ template {
   display: none !important;
 }
 
-h1,h2,h3,h4,h5,h6,.h1,.h2,.section-title,.s-download__title,.h3,.h4,.s-pick-up__title,.s-po .item-prod__title,.h5,.s-slider__title,.s-about__title,.h6,.dropdown-cat-sub-wrap__title {
+h1,h2,h3,h4,h5,.top-nav__tel,h6,.h1,.h2,.section-title,.s-download__title,.h3,.h4,.item-prod__title,.s-pick-up__title,.s-po .item-prod__title,.h5,.s-slider__title,.s-about__title,.h6,.dropdown-cat-sub-wrap__title {
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
@@ -335,11 +335,11 @@ h3,.h3 {
   font-size: 1.66667rem;
 }
 
-h4,.h4,.s-pick-up__title,.s-po .item-prod__title {
+h4,.h4,.item-prod__title,.s-pick-up__title,.s-po .item-prod__title {
   font-size: 1.33333rem;
 }
 
-h5,.h5,.s-slider__title,.s-about__title {
+h5,.top-nav__tel,.h5,.s-slider__title,.s-about__title {
   font-size: 1.2rem;
 }
 
@@ -5624,13 +5624,11 @@ body {
 
 .top-nav__tel {
   color: #000;
-  font-size: 15px;
   line-height: .9;
 }
 
 .top-nav__mail {
   line-height: .9;
-  font-size: 80%;
 }
 
 .top-nav__btn {
@@ -6078,7 +6076,7 @@ body {
   border: 1px solid #fff;
   border-top: none;
   top: 100%;
-  left: 25px;
+  left: 7px;
   z-index: 100;
 }
 
@@ -6713,6 +6711,13 @@ body {
  /* Увеличиваем значение счетчика */
   content: counter(num) "." counter(num2) "." counter(num3) ".";
  /* Выводим значение типа 2.1, 2.2,... */;
+}
+
+.aside-slider__item {
+  display: block;
+  position: relative;
+  height: 0;
+  padding-bottom: 56.26327%;
 }
 
 .s-contact {
@@ -7951,7 +7956,7 @@ body {
   padding-bottom: 15px;
 }
 
-.h4.section-title,.section-title.s-pick-up__title,.s-po .section-title.item-prod__title {
+.h4.section-title,.section-title.item-prod__title,.section-title.s-pick-up__title {
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 15px;
 }
@@ -10224,11 +10229,11 @@ a {
     font-size: 1.75rem;
   }
 
-  h4,.h4,.s-pick-up__title,.s-po .item-prod__title {
+  h4,.h4,.item-prod__title,.s-pick-up__title,.s-po .item-prod__title {
     font-size: 1.66667rem;
   }
 
-  h5,.h5,.s-slider__title,.s-about__title {
+  h5,.top-nav__tel,.h5,.s-slider__title,.s-about__title {
     font-size: 1.33333rem;
   }
 
@@ -12079,10 +12084,6 @@ a {
     padding-bottom: 36px;
   }
 
-  .top-nav__cont-col {
-    max-width: 162px;
-  }
-
   .top-nav__btn--search {
     width: 57px;
     height: 52px;
@@ -12099,7 +12100,7 @@ a {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 20px;
     margin-top: -7px;
     height: 0;
     width: 0;
