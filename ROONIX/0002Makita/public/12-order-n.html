@@ -18,14 +18,14 @@
     <link rel="stylesheet" href="libs/gijgo-master/css/demo.min.css">
     <link rel="stylesheet" href="css/main.min.css">
     <meta name="theme-color" content="#fa3f3e">
-    <link rel="stylesheet" href="css/style-bosch.min.css">
+    <link rel="stylesheet" href="css/style-makita.min.css">
   </head>
   <body>
     <div class="main-wrapper">
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="wrapp-hidden">
           <div class="trop__head"> 
-            <div class="toggle-mnu toggle-mnu-2 on"><span> </span></div><a class="trop__logo" href="#"><img class="res-i" src="img/bosch.png" alt=""/></a>
+            <div class="toggle-mnu toggle-mnu-2 on"><span> </span></div><a class="trop__logo" href="#"><img class="res-i" src="img/makita-01.svg" alt=""/></a>
           </div>
           <div class="catalog-nav">
             <div class="catalog-nav__btn-toggle"><span></span>Каталог товаров
@@ -103,7 +103,7 @@
               </div>
               <div class="aside-col col text-md-left text-center"><a class="top-line__logo" href="#">
                 <div class="row">
-                  <div class="col-auto"><img class="img-svg res-i" src="img/bosch.png" alt=""/></div>
+                  <div class="col-auto"><img class="img-svg res-i" src="img/makita-01.svg" alt=""/></div>
                 </div></a>
               </div>
               <div class="main-col col-lg-9 col-auto d-none d-md-block">
@@ -483,12 +483,7 @@
                             </div>
                             <!-- +e.input-wrap-->
                             <div class="form-wrap__input-wrap form-group">
-                              <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (мобильный)*</span>
-                              </label> 
-                            </div>
-                            <!-- +e.input-wrap-->
-                            <div class="form-wrap__input-wrap form-group">
-                              <label><input class="form-wrap__input form-control" type="tel" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (домашний)</span>
+                              <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон*</span>
                               </label> 
                             </div>
                             <!-- +e.input-wrap-->
@@ -561,6 +556,35 @@
                         </div>
                         <!-- .tab-radio-content#addr-var-2-->
                         <div class="tab-radio-content" id="addr-var-3">
+                          <div class="form-wrap__group">
+                            <div class="form-wrap__input-wrap form-group">
+                              <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
+                              </label> 
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="form-wrap__input-wrap form-group">
+                              <label>
+                                <select class="form-wrap__input form-control" required="required" pattern=".{3,}"> 
+                                  <option class="d-none" selectedvalue="">Город</option>
+                                  <option selectedvalue="">Город</option>
+                                  <option selectedvalue="">Город</option>
+                                  <option selectedvalue="">Город</option>
+                                  <option selectedvalue="">Город</option>
+                                </select>
+                              </label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="form-wrap__input-wrap form-group">
+                              <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон*</span>
+                              </label> 
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="form-wrap__input-wrap form-group">
+                              <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
+                              </label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                          </div>
                           <div class="form-wrap__group tab-radio-content-wrap">
                             <div class="form-wrap__title-head">
                               <div class="h4 strong">Выберите транспортную компанию</div>
@@ -788,12 +812,20 @@
                                     </button>
                                   </div>
                                   <div class="col-sm-auto">
-                                    <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="delivery-reqv-edit">Заполнить вручную 
-                                    </button>
-                                  </div>
-                                  <div class="col-sm-auto">
-                                    <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="reqv-file">Добавить реквизиты файлом
-                                    </button>
+                                    <div class="tab-radio-content active" id="tab-btn-show"><a class="form-wrap__btn btn btn btn-secondary btn-tab-js" href="#" data-tab-block="tab-btn-plus">Добавить реквизиты +</a>
+                                    </div>
+                                    <div class="tab-radio-content" id="tab-btn-plus">
+                                      <div class="row">
+                                        <div class="col-sm-auto">
+                                          <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="delivery-reqv-edit">Заполнить вручную 
+                                          </button>
+                                        </div>
+                                        <div class="col-sm-auto">
+                                          <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="reqv-file">Добавить реквизиты файлом
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="small text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
@@ -915,10 +947,6 @@
                                       <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
                                       </button>
                                     </div>
-                                    <div class="col-sm-auto">
-                                      <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="reqv-file">Добавить реквизиты файлом
-                                      </button>
-                                    </div>
                                   </div>
                                   <div class="small text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
                                 </div>
@@ -956,10 +984,10 @@
                           <div class="form-wrap__group">
                             <div class="row row--small">
                               <div class="col-sm-auto">
-                                <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                                <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Сохранить
                                 </button>
                               </div>
-                              <div class="col-sm-auto"><a class="form-wrap__btn-back btn btn-block btn btn-secondary w-100 btn-tab-js" href="#" data-tab-block="delivery-comp-all">Вернуться к выбору транспортный компаний</a>
+                              <div class="col-sm-auto"><a class="form-wrap__btn-back btn btn-block btn btn-secondary w-100 btn-tab-js" href="#" data-tab-block="delivery-comp-all"> Вернуться без сохранения</a>
                               </div>
                             </div>
                             <div class="small text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>

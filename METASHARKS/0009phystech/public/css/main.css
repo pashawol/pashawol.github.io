@@ -835,7 +835,7 @@ select.form-control [disabled] {
   display: none;
 }
 
-.datepicker-date {
+.datepicker-date,.datepicker-date-input {
   background-image: url(../img/svg/bot.svg);
   background-repeat: no-repeat;
   background-position: 100% 50%;
@@ -1224,41 +1224,41 @@ a.btn.disabled,a.disabled.section-title__btn,a.disabled.form-wrap__btn,a.disable
   pointer-events: none;
 }
 
-.btn-primary,.s-main-calendar td a {
+.btn-primary,body .timepicker .btn-default:last-child,.s-main-calendar td a {
   color: #fff;
   background-color: #0c95ed;
   border-color: #0c95ed;
 }
 
-.btn-primary:hover,.s-main-calendar td a:hover {
+.btn-primary:hover,body .timepicker .btn-default:hover:last-child,.s-main-calendar td a:hover {
   color: #fff;
   background-color: #0a7ec9;
   border-color: #0a76bc;
 }
 
-.btn-primary:focus,.s-main-calendar td a:focus,.btn-primary.focus,.s-main-calendar td a.focus {
+.btn-primary:focus,body .timepicker .btn-default:focus:last-child,.s-main-calendar td a:focus,.btn-primary.focus,body .timepicker .focus.btn-default:last-child,.s-main-calendar td a.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(12, 149, 237, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(12, 149, 237, 0.5);
 }
 
-.btn-primary.disabled,.s-main-calendar td a.disabled,.btn-primary:disabled,.s-main-calendar td a:disabled {
+.btn-primary.disabled,body .timepicker .disabled.btn-default:last-child,.s-main-calendar td a.disabled,.btn-primary:disabled,body .timepicker .btn-default:disabled:last-child,.s-main-calendar td a:disabled {
   color: #fff;
   background-color: #0c95ed;
   border-color: #0c95ed;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active,.s-main-calendar td a:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,.s-main-calendar td a:not(:disabled):not(.disabled).active,.show > .btn-primary.dropdown-toggle,.s-main-calendar td .show > a.dropdown-toggle {
+.btn-primary:not(:disabled):not(.disabled):active,body .timepicker .btn-default:not(:disabled):not(.disabled):active:last-child,.s-main-calendar td a:not(:disabled):not(.disabled):active,.btn-primary:not(:disabled):not(.disabled).active,body .timepicker .btn-default:not(:disabled):not(.disabled).active:last-child,.s-main-calendar td a:not(:disabled):not(.disabled).active,.show > .btn-primary.dropdown-toggle,body .timepicker .show > .dropdown-toggle.btn-default:last-child,.s-main-calendar td .show > a.dropdown-toggle {
   color: #fff;
   background-color: #0a76bc;
   border-color: #096fb0;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active:focus,.s-main-calendar td a:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,.s-main-calendar td a:not(:disabled):not(.disabled).active:focus,.show > .btn-primary.dropdown-toggle:focus,.s-main-calendar td .show > a.dropdown-toggle:focus {
+.btn-primary:not(:disabled):not(.disabled):active:focus,body .timepicker .btn-default:not(:disabled):not(.disabled):active:focus:last-child,.s-main-calendar td a:not(:disabled):not(.disabled):active:focus,.btn-primary:not(:disabled):not(.disabled).active:focus,body .timepicker .btn-default:not(:disabled):not(.disabled).active:focus:last-child,.s-main-calendar td a:not(:disabled):not(.disabled).active:focus,.show > .btn-primary.dropdown-toggle:focus,body .timepicker .show > .dropdown-toggle.btn-default:focus:last-child,.s-main-calendar td .show > a.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(12, 149, 237, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(12, 149, 237, 0.5);
 }
 
-.btn-primary:hover,.s-main-calendar td a:hover {
+.btn-primary:hover,body .timepicker .btn-default:hover:last-child,.s-main-calendar td a:hover {
   background: #EF202F;
   border-color: #EF202F;
   -webkit-box-shadow: 0px 4px 50px rgba(239, 32, 47, 0.72);
@@ -1266,7 +1266,7 @@ a.btn.disabled,a.disabled.section-title__btn,a.disabled.form-wrap__btn,a.disable
   color: #ffffff;
 }
 
-.btn-primary:focus,.s-main-calendar td a:focus,.btn-primary:active,.s-main-calendar td a:active {
+.btn-primary:focus,body .timepicker .btn-default:focus:last-child,.s-main-calendar td a:focus,.btn-primary:active,body .timepicker .btn-default:active:last-child,.s-main-calendar td a:active {
   border-color: #56B7F6;
   background: #56B7F6;
   color: #ffffff;
@@ -1374,41 +1374,41 @@ a.btn.disabled,a.disabled.section-title__btn,a.disabled.form-wrap__btn,a.disable
           box-shadow: 0px 4px 50px #1C7FBE;
 }
 
-.btn-danger {
+.btn-danger,body .timepicker .btn-default:first-child {
   color: #fff;
   background-color: #ef202f;
   border-color: #ef202f;
 }
 
-.btn-danger:hover {
+.btn-danger:hover,body .timepicker .btn-default:hover:first-child {
   color: #fff;
   background-color: #d9101e;
   border-color: #cd0f1d;
 }
 
-.btn-danger:focus,.btn-danger.focus {
+.btn-danger:focus,body .timepicker .btn-default:focus:first-child,.btn-danger.focus,body .timepicker .focus.btn-default:first-child {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(239, 32, 47, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(239, 32, 47, 0.5);
 }
 
-.btn-danger.disabled,.btn-danger:disabled {
+.btn-danger.disabled,body .timepicker .disabled.btn-default:first-child,.btn-danger:disabled,body .timepicker .btn-default:disabled:first-child {
   color: #fff;
   background-color: #ef202f;
   border-color: #ef202f;
 }
 
-.btn-danger:not(:disabled):not(.disabled):active,.btn-danger:not(:disabled):not(.disabled).active,.show > .btn-danger.dropdown-toggle {
+.btn-danger:not(:disabled):not(.disabled):active,body .timepicker .btn-default:not(:disabled):not(.disabled):active:first-child,.btn-danger:not(:disabled):not(.disabled).active,body .timepicker .btn-default:not(:disabled):not(.disabled).active:first-child,.show > .btn-danger.dropdown-toggle,body .timepicker .show > .dropdown-toggle.btn-default:first-child {
   color: #fff;
   background-color: #cd0f1d;
   border-color: #c10e1b;
 }
 
-.btn-danger:not(:disabled):not(.disabled):active:focus,.btn-danger:not(:disabled):not(.disabled).active:focus,.show > .btn-danger.dropdown-toggle:focus {
+.btn-danger:not(:disabled):not(.disabled):active:focus,body .timepicker .btn-default:not(:disabled):not(.disabled):active:focus:first-child,.btn-danger:not(:disabled):not(.disabled).active:focus,body .timepicker .btn-default:not(:disabled):not(.disabled).active:focus:first-child,.show > .btn-danger.dropdown-toggle:focus,body .timepicker .show > .dropdown-toggle.btn-default:focus:first-child {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(239, 32, 47, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(239, 32, 47, 0.5);
 }
 
-.btn-danger:hover {
+.btn-danger:hover,body .timepicker .btn-default:hover:first-child {
   background: #EF202F;
   border-color: #EF202F;
   -webkit-box-shadow: 0px 4px 50px rgba(239, 32, 47, 0.72);
@@ -1416,7 +1416,7 @@ a.btn.disabled,a.disabled.section-title__btn,a.disabled.form-wrap__btn,a.disable
   color: #ffffff;
 }
 
-.btn-danger:focus,.btn-danger:active {
+.btn-danger:focus,body .timepicker .btn-default:focus:first-child,.btn-danger:active,body .timepicker .btn-default:active:first-child {
   border-color: #56B7F6;
   background: #56B7F6;
   color: #ffffff;
@@ -2083,8 +2083,8 @@ input[type="submit"].btn-block,input.form-wrap__btn[type="submit"],input.header-
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   list-style: none;
-  padding-top: 90px;
-  padding-bottom: 27px;
+  padding-top: 110px;
+  padding-bottom: 17px;
 }
 
 .breadcrumb-item {
@@ -8183,6 +8183,31 @@ strong,.strong {
   padding-right: 0.125rem;
 }
 
+body .gj-picker {
+  z-index: 1400;
+}
+
+.datepicker-date-input {
+  -webkit-background-size: 16px 16px;
+          background-size: 16px;
+}
+
+body .timepicker {
+  width: 320px;
+}
+
+body .timepicker .btn-default {
+  width: 50%;
+}
+
+body .timepicker .modal-footer {
+  background-color: transparent;
+}
+
+.gj-picker.timepicker [role=header] div {
+  width: 75px;
+}
+
 .icon {
   display: inline-block;
   width: 1em;
@@ -8494,6 +8519,15 @@ strong,.strong {
   padding-bottom: 13px;
 }
 
+.form-wrap input:-webkit-autofill[disabled],.form-wrap textarea:-webkit-autofill[disabled],.form-wrap select:-webkit-autofill[disabled],.form-wrap__input[disabled] {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.form-wrap input:-webkit-autofill[disabled] ~ .form-wrap__title-label,.form-wrap textarea:-webkit-autofill[disabled] ~ .form-wrap__title-label,.form-wrap select:-webkit-autofill[disabled] ~ .form-wrap__title-label,.form-wrap__input[disabled] ~ .form-wrap__title-label {
+  opacity: 0.5;
+}
+
 .form-wrap__captcha {
   margin-bottom: 20px;
 }
@@ -8544,6 +8578,10 @@ strong,.strong {
   font-size: 12px;
 }
 
+.empty .gj-timepicker-bootstrap + .form-wrap__title-label {
+  padding-right: 20px;
+}
+
 .empty .form-wrap__title-label {
   top: 0.75em;
   font-size: 16px;
@@ -8567,6 +8605,30 @@ strong,.strong {
   height: 133px;
 }
 
+.form-wrap .custom-input__input[type=checkbox] + .custom-input__lab {
+  left: 0;
+  display: block;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #a3cde8;
+  background-color: #fff;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+  position: absolute;
+  margin-right: 10px;
+}
+
+.form-wrap .custom-input__input[type=checkbox] + .custom-input__lab::after {
+  content: url(../img/svg/check.svg);
+  left: 12px;
+}
+
+.form-wrap .custom-input__input:checked + .form-wrap .custom-input__lab::after {
+  opacity: 1;
+}
+
 .politic {
   font-size: 11px;
   position: relative;
@@ -8583,30 +8645,6 @@ strong,.strong {
   position: absolute;
   width: 20px;
   left: 0;
-}
-
-.politic .custom-input__input[type=checkbox] + .custom-input__lab {
-  left: 0;
-  display: block;
-  top: -1px;
-  width: 20px;
-  height: 20px;
-  border: 1px solid #a3cde8;
-  background-color: #fff;
-  -webkit-transition: all 0.36s;
-  -o-transition: all 0.36s;
-  transition: all 0.36s;
-  position: absolute;
-  margin-right: 10px;
-}
-
-.politic .custom-input__input[type=checkbox] + .custom-input__lab::after {
-  content: url(../img/svg/check.svg);
-  left: 12px;
-}
-
-.politic .custom-input__input:checked + .politic .custom-input__lab::after {
-  opacity: 1;
 }
 
 .gj-picker {
@@ -9123,14 +9161,15 @@ a {
 .header-block__text {
   font-weight: bold;
   max-width: 34.375em;
-  line-height: 1.6;
+  line-height: 2;
 }
 
 .header-block__text span {
-  line-height: .8;
-  -webkit-box-shadow: 0 0 0 0.125em #ef202f;
-          box-shadow: 0 0 0 0.125em #ef202f;
+  outline: 0.1875em solid #ef202f;
+  -webkit-box-shadow: 0 0 0 0.1875em #ef202f;
+          box-shadow: 0 0 0 0.1875em #ef202f;
   background-color: #ef202f;
+  padding: 0.125em;
 }
 
 .header-block .slick-dots {
@@ -9171,7 +9210,7 @@ a {
 }
 
 .page-title {
-  max-width: 13.125em;
+  max-width: 25.625em;
 }
 
 .page-title,h1,.big-title {
@@ -9183,6 +9222,7 @@ a {
 .page-title span,h1 span,.big-title span {
   line-height: .8;
   color: #ffffff;
+  outline: 0.125em solid #0c95ed;
   -webkit-box-shadow: 0 0 0 0.125em #0c95ed;
           box-shadow: 0 0 0 0.125em #0c95ed;
   background-color: #0c95ed;
@@ -9195,13 +9235,14 @@ a {
 .bg-title span {
   line-height: .8;
   color: #ffffff;
+  outline: 0.125em solid #0c95ed;
   -webkit-box-shadow: 0 0 0 0.125em #0c95ed;
           box-shadow: 0 0 0 0.125em #0c95ed;
   background-color: #0c95ed;
 }
 
 .page-title {
-  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
 .s-content {
@@ -12268,8 +12309,8 @@ a {
   }
 
   .breadcrumb {
-    padding-top: 160px;
-    padding-bottom: 37px;
+    padding-top: 90px;
+    padding-bottom: 17px;
   }
 
   .d-md-none {
@@ -12812,11 +12853,6 @@ a {
 
   .section,.list-block {
     padding-top: 60px;
-    padding-bottom: 60px;
-  }
-
-  .page-title {
-    padding-top: 80px;
     padding-bottom: 60px;
   }
 
@@ -13728,10 +13764,6 @@ a {
     text-align: center !important;
   }
 
-  .top-nav {
-    padding-top: 40px;
-  }
-
   .nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -13765,6 +13797,10 @@ a {
 
   .s-content.bg-primary {
     margin-bottom: 0;
+  }
+
+  .s-content__slider-col {
+    min-height: 900px;
   }
 
   .s-content__slide .s-content__img-wrap {
@@ -15194,6 +15230,11 @@ a {
     margin-left: 91.66667%;
   }
 
+  .breadcrumb {
+    padding-top: 160px;
+    padding-bottom: 37px;
+  }
+
   .d-xxl-none {
     display: none !important;
   }
@@ -15732,6 +15773,10 @@ a {
     text-align: center !important;
   }
 
+  .top-nav {
+    padding-top: 40px;
+  }
+
   .top-nav__title {
     margin-right: 24px;
   }
@@ -15739,6 +15784,11 @@ a {
   .top-nav__btn {
     font-size: 13px;
     width: 171px;
+  }
+
+  .page-title {
+    padding-top: 80px;
+    padding-bottom: 60px;
   }
 
   .big-title {
@@ -16701,8 +16751,8 @@ a {
   }
 
   .footer {
-    padding-top: 160px;
-    padding-bottom: 138px;
+    padding-top: 80px;
+    padding-bottom: 68px;
   }
 }
 

@@ -436,7 +436,7 @@ jQuery(document).ready(function ($) {
 			$(this).closest('label').addClass('empty');
 		}
 	});
-	
+
 	// анимация на главной вверху
 
 
@@ -839,14 +839,14 @@ jQuery(document).ready(function ($) {
 
 	});
 	canvasres();
-// =============================================== добавил
+	// =============================================== добавил
 	// прилипает карта
 	$(".s-contact__map-wrap").stick_in_parent();
 	//gijgo.com/datepicker
 	var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
 
-	$('.datepicker-date').each(function(){
-		var th =$(this);
+	$('.datepicker-date').each(function () {
+		var th = $(this);
 		th.datepicker({
 			locale: 'ru-ru',
 			uiLibrary: 'bootstrap4',
@@ -854,77 +854,138 @@ jQuery(document).ready(function ($) {
 			minDate: today,
 			select: function (e) {
 				th.parents('label').removeClass("empty");
-			}
-		  // modal: true 
+			},
+			// modal: true
 		});
-		
-		th.click(function(){
+
+		th.click(function () {
 			th.next().click();
 		})
 	})
 
-		// скрывает лишний текст 
+	$(".date-picker-block-js").each(function () {
 
-		// $('.s-patner__text').moreLines({
-		// 	linecount: 9,
-		// 	// custom text
-		// 	buttontxtmore: '<span class="  btn btn-sm btn-outline-primary" href="#">Показать</span>',
-		// 	buttontxtless: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>',
-		// 	animationspeed: 450
-		// });
-		
-		$('.s-patner__text').readmore({
-			speed: 75,
-			moreLink: '<span class="  btn btn-sm btn-outline-primary" href="#">Показать</span>',
-			lessLink: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>',
-			speed: 475,
-			collapsedHeight: 200,
+		var th = $(this);
+
+		th.find('.startDate').datepicker({
+			locale: 'ru-ru',
+			uiLibrary: 'bootstrap4',
+			// iconsLibrary: 'fontawesome',
+			format: 'dd.mm.yyyy',
+			minDate: today,
+			select: function (e) {
+				th.find('.startDate').parents('label').removeClass("empty");
+			},
+			maxDate: function () {
+				return th.find('.endDate').val();
+			}
+		});
+		th.find('.endDate').datepicker({
+			locale: 'ru-ru',
+			uiLibrary: 'bootstrap4',
+			// iconsLibrary: 'fontawesome',
+			format: 'dd.mm.yyyy',
+
+			select: function (e) {
+				th.find('.endDate').parents('label').removeClass("empty");
+			},
+			minDate: function () {
+				return th.find('.startDate').val();
+			}
+		});
+		th.find('input').next().hide();
+		th.find('input').click(function () {
+			$(this).next().click();
+		})
+	})
+	
+	$(".time-picker").each(function () {
+
+		var th = $(this);
+		th.timepicker({
+			mode: '24hr',
+			locale: 'ru-ru',
+			uiLibrary: 'bootstrap4',
+			format: 'H.M', 
+			select: function (e) {
+				th.parents('label').removeClass("empty");
+			},
+			// modal: true
 		});
 
+		th.click(function () {
+			th.next().click();
+		})
+	})
 
-		$('.news-block__slider--js').slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			speed: 450,
-			infinite: true,
-			loop: true, 
-			arrows: false,
-			dots: false,
-			responsive: [
-	
-				{
-					breakpoint: 1200,
-					settings: {
-						slidesToShow: 3
-					}
-				},
-	
-				{
-					breakpoint: 768,
-					settings: {
-						slidesToShow: 2
-					}
-				},
-				
-				{
-					breakpoint: 440,
-					settings: {
-						slidesToShow: 1
-					}
-				},
 
-	
-			]
+	// скрывает лишний текст 
+
+	// $('.s-patner__text').moreLines({
+	// 	linecount: 9,
+	// 	// custom text
+	// 	buttontxtmore: '<span class="  btn btn-sm btn-outline-primary" href="#">Показать</span>',
+	// 	buttontxtless: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>',
+	// 	animationspeed: 450
+	// });
+
+	$('.s-patner__text').readmore({
+		speed: 75,
+		moreLink: '<span class="  btn btn-sm btn-outline-primary" href="#">Показать</span>',
+		lessLink: '<span class="  btn btn-sm btn-outline-primary" href="#">Скрыть</span>',
+		speed: 475,
+		collapsedHeight: 200,
+	});
+
+
+	$('.news-block__slider--js').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: false,
+		dots: false,
+		responsive: [
+
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+
+			{
+				breakpoint: 440,
+				settings: {
+					slidesToShow: 1
+				}
+			},
+
+
+		]
+	});
+
+	function hNewtop() {
+		var th = $(".news-block");
+		var hNew = th.height();
+		// th.css('margin-top', hNew);
+		$(".header-block__slide").css({
+			'paddingBottom': hNew + 130
 		});
-		function hNewtop(){
-			var th = $(".news-block");
-			var hNew = th.height() ;
-			// th.css('margin-top', hNew);
-			$(".header-block__slide").css({'paddingBottom': hNew+ 130});
-			$(".header-block__slider .slick-dots").css({'top': -hNew - 100});
-		}
-		$(window).resize(function () {
-			hNewtop();
+		$(".header-block__slider .slick-dots").css({
+			'top': -hNew - 100
 		});
+	}
+	$(window).resize(function () {
 		hNewtop();
+	});
+	hNewtop();
 });

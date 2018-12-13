@@ -433,8 +433,8 @@ jQuery(document).ready(function ($) {
         onKeyPress: function (val, e, field, options) {
 
             if (val.replace(/\D/g, '').length === 2) {
-                val = val.replace('8', '');
-                field.val(val);
+                // val = val.replace('8', '');
+                // field.val(val);
             }
             field.mask("+7(000)000-00-00", options);
         }
@@ -678,5 +678,23 @@ jQuery(document).ready(function ($) {
             }  )
             $(".js-rekv-file").click(function(){
                     $(".d-block.js-rekv-info").removeClass("d-block");
+            })
+
+
+
+            $('.btn-tab-js').click(function(e){
+                e.preventDefault();
+                var th = $(this),
+                tabRadio = th.data('tab-block');
+                console.log(tabRadio);
+                //  th.hide();
+                    $('#'+tabRadio ).fadeIn(100).addClass("active")
+                    .siblings('.tab-radio-content').removeClass('active').hide();
+                 
+            })
+
+
+            $('.hidden-block-wned-add-new-comp .js-rekv-info, .hidden-block-wned-add-new-comp [href="#js-rekv-edit"]').click(function(){
+                $('.hidden-block-wned-add-new-comp .rekv_block__item.border-0.js-rekv-info ').hide();
             })
 })

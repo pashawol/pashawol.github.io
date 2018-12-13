@@ -690,7 +690,7 @@
 					</div>
 
 					<div class="radio-box auto-width">
-						<input type="radio" name="oplata" id="beznal" class="js-radio-toggler" toggleTarget="oplata2">
+						<input type="radio" name="oplata" id="beznal" checked="checked" class="js-radio-toggler" toggleTarget="oplata2">
 						<label for="beznal">
 							Безналичный
 						</label>
@@ -700,7 +700,7 @@
 
 
 				<div class="js-content-wrapper">
-					<div class="js-content js-content--active" id="oplata1">
+					<div class="js-content " id="oplata1">
 						<div class="bold-text">
 							Частное лицо
 						</div>
@@ -714,7 +714,7 @@
 				</a>
 					</div>
 
-					<div class="js-content" id="oplata2">
+					<div class="js-content js-content--active" id="oplata2">
 						<div class="hidden-when-edit">
 
 							<div class="bold-text large-margin">
@@ -848,10 +848,18 @@
 										<div class="width350">
 											<div class="input-box">
 												<label for="q">
+													Название компании
+												</label>
+												<input type="text" placeholder="Название компании" required="required" name="kont_lico">
+											</div>
+											
+											<div class="input-box">
+												<label for="q">
 													Контактное лицо*
 												</label>
 												<input type="text" placeholder="Контактное лицо*" required="required" name="kont_lico">
 											</div>
+
 											<div class="input-box">
 												<label for="w">
 													Телефон контактного лица*

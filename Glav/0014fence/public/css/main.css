@@ -8013,6 +8013,11 @@ strong,.strong {
   width: 1em;
 }
 
+.icon-clock-2 {
+  font-size: 3.6rem;
+  width: 1em;
+}
+
 .icon-dots {
   font-size: 1.3rem;
   width: 1.38462em;
@@ -8020,6 +8025,16 @@ strong,.strong {
 
 .icon-envelope {
   font-size: 2rem;
+  width: 1em;
+}
+
+.icon-mail {
+  font-size: 2.8rem;
+  width: 1.28571em;
+}
+
+.icon-phone {
+  font-size: 3.6rem;
   width: 1em;
 }
 
@@ -8330,6 +8345,20 @@ strong,.strong {
   font-size: 18px;
   height: 18px;
   width: 18px;
+}
+
+.form-wrap__group {
+  margin-bottom: 40px;
+}
+
+.form-wrap__icon-wrap {
+  width: 75px;
+  text-align: center;
+}
+
+.form-wrap__icon-wrap .icon {
+  color: #ce1111;
+  font-size: 2.85714rem;
 }
 
 .header {
@@ -8994,14 +9023,12 @@ strong,.strong {
   padding-right: 10px;
 }
 
-.s-why-prod__mark ul {
-  -webkit-columns: 4;
-          columns: 4;
+.mark-block ul {
   list-style-type: none;
   vertical-align: top;
 }
 
-.s-why-prod__mark li {
+.mark-block li {
   vertical-align: top;
   position: relative;
   padding-left: 1.42857rem;
@@ -9009,7 +9036,7 @@ strong,.strong {
   text-decoration: underline;
 }
 
-.s-why-prod__mark li::before {
+.mark-block li::before {
   content: url(../img/mark.svg);
   position: absolute;
   left: 0;
@@ -9597,8 +9624,48 @@ strong,.strong {
   margin-top: 20px;
 }
 
+.s-team__item {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.s-team__img-wrap {
+  max-width: 252px;
+  display: block;
+  position: relative;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.s-team__img-wrap::before {
+  content: '';
+  width: 100%;
+  display: block;
+  padding-bottom: 100%;
+  height: 0;
+}
+
+.s-team__img-wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 120%;
+}
+
 .s-form {
   display: block;
+}
+
+.s-form h2,.s-form .s-project__item-price {
+  max-width: 500px;
 }
 
 .s-form__inner {
@@ -10747,6 +10814,11 @@ a {
     max-width: calc(50% - 1px);
   }
 
+  .mark-block ul {
+    -webkit-columns: 2;
+            columns: 2;
+  }
+
   .s-colors__foot {
     padding-left: 20px;
     padding-right: 20px;
@@ -11676,6 +11748,11 @@ a {
 
   .s-why-prod .tabs__btn {
     max-width: calc(25% - 1px);
+  }
+
+  .mark-block ul {
+    -webkit-columns: 3;
+            columns: 3;
   }
 
   .s-project__btn-wrap {
@@ -12608,6 +12685,11 @@ a {
 
   .s-why-prod tbody {
     font-size: 1.42857rem;
+  }
+
+  .mark-block ul {
+    -webkit-columns: 4;
+            columns: 4;
   }
 
   .s-project__head .row {

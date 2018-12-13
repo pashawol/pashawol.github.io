@@ -376,8 +376,8 @@ $(".link-modal").fancybox({
 	var customOptions = {
 		onKeyPress: function (val, e, field, options) {
 
-			if (val.replace(/\D/g, '').length === 2) {
-				val = val.replace('8', '');
+			if (val.replace(/\D/g, '').length === 2 && !field.val() ==='+7(') {
+				val = val.replace('8', '1');
 				field.val(val);
 			}
 			field.mask("+7(000)000-00-00", options);
