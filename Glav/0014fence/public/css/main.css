@@ -963,6 +963,10 @@ mark,.mark {
   border: 0;
 }
 
+.table thead td {
+  border-top: none;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -1369,7 +1373,7 @@ select.form-control-lg:not([size]):not([multiple]) {
   width: 100%;
 }
 
-.btn,.top-line__btn,.header-block__btn,.s-why-prod__btn-primary,.s-why-prod__btn,.s-project__btn,.s-project__btn-more,.s-price__btn,.s-articals__btn,.s-form__btn {
+.btn,.top-line__btn,.header-block__btn,.s-why-prod__btn-primary,.s-why-prod__btn,.s-project__btn,.s-project__btn-more,.s-price__btn,.s-articals__btn,.s-calc__btn-item,.s-form__btn {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -1393,25 +1397,25 @@ select.form-control-lg:not([size]):not([multiple]) {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
-.btn:hover,.top-line__btn:hover,.header-block__btn:hover,.s-why-prod__btn-primary:hover,.s-why-prod__btn:hover,.s-project__btn:hover,.s-project__btn-more:hover,.s-price__btn:hover,.s-articals__btn:hover,.s-form__btn:hover,.btn:focus,.top-line__btn:focus,.header-block__btn:focus,.s-why-prod__btn-primary:focus,.s-why-prod__btn:focus,.s-project__btn:focus,.s-project__btn-more:focus,.s-price__btn:focus,.s-articals__btn:focus,.s-form__btn:focus {
+.btn:hover,.top-line__btn:hover,.header-block__btn:hover,.s-why-prod__btn-primary:hover,.s-why-prod__btn:hover,.s-project__btn:hover,.s-project__btn-more:hover,.s-price__btn:hover,.s-articals__btn:hover,.s-calc__btn-item:hover,.s-form__btn:hover,.btn:focus,.top-line__btn:focus,.header-block__btn:focus,.s-why-prod__btn-primary:focus,.s-why-prod__btn:focus,.s-project__btn:focus,.s-project__btn-more:focus,.s-price__btn:focus,.s-articals__btn:focus,.s-calc__btn-item:focus,.s-form__btn:focus {
   text-decoration: none;
 }
 
-.btn:focus,.top-line__btn:focus,.header-block__btn:focus,.s-why-prod__btn-primary:focus,.s-why-prod__btn:focus,.s-project__btn:focus,.s-project__btn-more:focus,.s-price__btn:focus,.s-articals__btn:focus,.s-form__btn:focus,.btn.focus,.focus.top-line__btn,.focus.header-block__btn,.focus.s-why-prod__btn-primary,.focus.s-why-prod__btn,.focus.s-project__btn,.focus.s-project__btn-more,.focus.s-price__btn,.focus.s-articals__btn,.focus.s-form__btn {
+.btn:focus,.top-line__btn:focus,.header-block__btn:focus,.s-why-prod__btn-primary:focus,.s-why-prod__btn:focus,.s-project__btn:focus,.s-project__btn-more:focus,.s-price__btn:focus,.s-articals__btn:focus,.s-calc__btn-item:focus,.s-form__btn:focus,.btn.focus,.focus.top-line__btn,.focus.header-block__btn,.focus.s-why-prod__btn-primary,.focus.s-why-prod__btn,.focus.s-project__btn,.focus.s-project__btn-more,.focus.s-price__btn,.focus.s-articals__btn,.focus.s-calc__btn-item,.focus.s-form__btn {
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 17, 17, 0.25);
           box-shadow: 0 0 0 0.2rem rgba(206, 17, 17, 0.25);
 }
 
-.btn.disabled,.disabled.top-line__btn,.disabled.header-block__btn,.disabled.s-why-prod__btn-primary,.disabled.s-why-prod__btn,.disabled.s-project__btn,.disabled.s-project__btn-more,.disabled.s-price__btn,.disabled.s-articals__btn,.disabled.s-form__btn,.btn:disabled,.top-line__btn:disabled,.header-block__btn:disabled,.s-why-prod__btn-primary:disabled,.s-why-prod__btn:disabled,.s-project__btn:disabled,.s-project__btn-more:disabled,.s-price__btn:disabled,.s-articals__btn:disabled,.s-form__btn:disabled {
+.btn.disabled,.disabled.top-line__btn,.disabled.header-block__btn,.disabled.s-why-prod__btn-primary,.disabled.s-why-prod__btn,.disabled.s-project__btn,.disabled.s-project__btn-more,.disabled.s-price__btn,.disabled.s-articals__btn,.disabled.s-calc__btn-item,.disabled.s-form__btn,.btn:disabled,.top-line__btn:disabled,.header-block__btn:disabled,.s-why-prod__btn-primary:disabled,.s-why-prod__btn:disabled,.s-project__btn:disabled,.s-project__btn-more:disabled,.s-price__btn:disabled,.s-articals__btn:disabled,.s-calc__btn-item:disabled,.s-form__btn:disabled {
   opacity: .65;
 }
 
-.btn:active,.top-line__btn:active,.header-block__btn:active,.s-why-prod__btn-primary:active,.s-why-prod__btn:active,.s-project__btn:active,.s-project__btn-more:active,.s-price__btn:active,.s-articals__btn:active,.s-form__btn:active,.btn.active,.active.top-line__btn,.active.header-block__btn,.active.s-why-prod__btn-primary,.active.s-why-prod__btn,.active.s-project__btn,.active.s-project__btn-more,.active.s-price__btn,.active.s-articals__btn,.active.s-form__btn {
+.btn:active,.top-line__btn:active,.header-block__btn:active,.s-why-prod__btn-primary:active,.s-why-prod__btn:active,.s-project__btn:active,.s-project__btn-more:active,.s-price__btn:active,.s-articals__btn:active,.s-calc__btn-item:active,.s-form__btn:active,.btn.active,.active.top-line__btn,.active.header-block__btn,.active.s-why-prod__btn-primary,.active.s-why-prod__btn,.active.s-project__btn,.active.s-project__btn-more,.active.s-price__btn,.active.s-articals__btn,.active.s-calc__btn-item,.active.s-form__btn {
   background-image: none;
 }
 
-a.btn.disabled,a.disabled.top-line__btn,a.disabled.header-block__btn,a.disabled.s-why-prod__btn-primary,a.disabled.s-why-prod__btn,a.disabled.s-project__btn,a.disabled.s-project__btn-more,a.disabled.s-price__btn,a.disabled.s-articals__btn,a.disabled.s-form__btn,fieldset[disabled] a.btn,fieldset[disabled] a.top-line__btn,fieldset[disabled] a.header-block__btn,fieldset[disabled] a.s-why-prod__btn-primary,fieldset[disabled] a.s-why-prod__btn,fieldset[disabled] a.s-project__btn,fieldset[disabled] a.s-project__btn-more,fieldset[disabled] a.s-price__btn,fieldset[disabled] a.s-articals__btn,fieldset[disabled] a.s-form__btn {
+a.btn.disabled,a.disabled.top-line__btn,a.disabled.header-block__btn,a.disabled.s-why-prod__btn-primary,a.disabled.s-why-prod__btn,a.disabled.s-project__btn,a.disabled.s-project__btn-more,a.disabled.s-price__btn,a.disabled.s-articals__btn,a.disabled.s-calc__btn-item,a.disabled.s-form__btn,fieldset[disabled] a.btn,fieldset[disabled] a.top-line__btn,fieldset[disabled] a.header-block__btn,fieldset[disabled] a.s-why-prod__btn-primary,fieldset[disabled] a.s-why-prod__btn,fieldset[disabled] a.s-project__btn,fieldset[disabled] a.s-project__btn-more,fieldset[disabled] a.s-price__btn,fieldset[disabled] a.s-articals__btn,fieldset[disabled] a.s-calc__btn-item,fieldset[disabled] a.s-form__btn {
   pointer-events: none;
 }
 
@@ -1721,7 +1725,7 @@ a.btn.disabled,a.disabled.top-line__btn,a.disabled.header-block__btn,a.disabled.
           box-shadow: 0 0 0 0.2rem rgba(244, 244, 244, 0.5);
 }
 
-.btn-outline-primary,.header-block__btn,.s-why-prod__btn,.s-project__btn,.s-price__btn--outline {
+.btn-outline-primary,.header-block__btn,.s-why-prod__btn,.s-project__btn,.s-price__btn--outline,.s-calc__btn-item {
   color: #ce1111;
   background-color: transparent;
   background-image: none;
@@ -1729,29 +1733,29 @@ a.btn.disabled,a.disabled.top-line__btn,a.disabled.header-block__btn,a.disabled.
   color: #000000;
 }
 
-.btn-outline-primary:hover,.header-block__btn:hover,.s-why-prod__btn:hover,.s-project__btn:hover,.s-price__btn--outline:hover {
+.btn-outline-primary:hover,.header-block__btn:hover,.s-why-prod__btn:hover,.s-project__btn:hover,.s-price__btn--outline:hover,.s-calc__btn-item:hover {
   color: #fff;
   background-color: #ce1111;
   border-color: #ce1111;
 }
 
-.btn-outline-primary:focus,.header-block__btn:focus,.s-why-prod__btn:focus,.s-project__btn:focus,.s-price__btn--outline:focus,.btn-outline-primary.focus,.focus.header-block__btn,.focus.s-why-prod__btn,.focus.s-project__btn,.focus.s-price__btn--outline {
+.btn-outline-primary:focus,.header-block__btn:focus,.s-why-prod__btn:focus,.s-project__btn:focus,.s-price__btn--outline:focus,.s-calc__btn-item:focus,.btn-outline-primary.focus,.focus.header-block__btn,.focus.s-why-prod__btn,.focus.s-project__btn,.focus.s-price__btn--outline,.focus.s-calc__btn-item {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 17, 17, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(206, 17, 17, 0.5);
 }
 
-.btn-outline-primary.disabled,.disabled.header-block__btn,.disabled.s-why-prod__btn,.disabled.s-project__btn,.disabled.s-price__btn--outline,.btn-outline-primary:disabled,.header-block__btn:disabled,.s-why-prod__btn:disabled,.s-project__btn:disabled,.s-price__btn--outline:disabled {
+.btn-outline-primary.disabled,.disabled.header-block__btn,.disabled.s-why-prod__btn,.disabled.s-project__btn,.disabled.s-price__btn--outline,.disabled.s-calc__btn-item,.btn-outline-primary:disabled,.header-block__btn:disabled,.s-why-prod__btn:disabled,.s-project__btn:disabled,.s-price__btn--outline:disabled,.s-calc__btn-item:disabled {
   color: #ce1111;
   background-color: transparent;
 }
 
-.btn-outline-primary:not(:disabled):not(.disabled):active,.header-block__btn:not(:disabled):not(.disabled):active,.s-why-prod__btn:not(:disabled):not(.disabled):active,.s-project__btn:not(:disabled):not(.disabled):active,.s-price__btn--outline:not(:disabled):not(.disabled):active,.btn-outline-primary:not(:disabled):not(.disabled).active,.header-block__btn:not(:disabled):not(.disabled).active,.s-why-prod__btn:not(:disabled):not(.disabled).active,.s-project__btn:not(:disabled):not(.disabled).active,.s-price__btn--outline:not(:disabled):not(.disabled).active,.show > .btn-outline-primary.dropdown-toggle,.show > .dropdown-toggle.header-block__btn,.show > .dropdown-toggle.s-why-prod__btn,.show > .dropdown-toggle.s-project__btn,.show > .dropdown-toggle.s-price__btn--outline {
+.btn-outline-primary:not(:disabled):not(.disabled):active,.header-block__btn:not(:disabled):not(.disabled):active,.s-why-prod__btn:not(:disabled):not(.disabled):active,.s-project__btn:not(:disabled):not(.disabled):active,.s-price__btn--outline:not(:disabled):not(.disabled):active,.s-calc__btn-item:not(:disabled):not(.disabled):active,.btn-outline-primary:not(:disabled):not(.disabled).active,.header-block__btn:not(:disabled):not(.disabled).active,.s-why-prod__btn:not(:disabled):not(.disabled).active,.s-project__btn:not(:disabled):not(.disabled).active,.s-price__btn--outline:not(:disabled):not(.disabled).active,.s-calc__btn-item:not(:disabled):not(.disabled).active,.show > .btn-outline-primary.dropdown-toggle,.show > .dropdown-toggle.header-block__btn,.show > .dropdown-toggle.s-why-prod__btn,.show > .dropdown-toggle.s-project__btn,.show > .dropdown-toggle.s-price__btn--outline,.show > .dropdown-toggle.s-calc__btn-item {
   color: #fff;
   background-color: #ce1111;
   border-color: #ce1111;
 }
 
-.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.header-block__btn:not(:disabled):not(.disabled):active:focus,.s-why-prod__btn:not(:disabled):not(.disabled):active:focus,.s-project__btn:not(:disabled):not(.disabled):active:focus,.s-price__btn--outline:not(:disabled):not(.disabled):active:focus,.btn-outline-primary:not(:disabled):not(.disabled).active:focus,.header-block__btn:not(:disabled):not(.disabled).active:focus,.s-why-prod__btn:not(:disabled):not(.disabled).active:focus,.s-project__btn:not(:disabled):not(.disabled).active:focus,.s-price__btn--outline:not(:disabled):not(.disabled).active:focus,.show > .btn-outline-primary.dropdown-toggle:focus,.show > .dropdown-toggle.header-block__btn:focus,.show > .dropdown-toggle.s-why-prod__btn:focus,.show > .dropdown-toggle.s-project__btn:focus,.show > .dropdown-toggle.s-price__btn--outline:focus {
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.header-block__btn:not(:disabled):not(.disabled):active:focus,.s-why-prod__btn:not(:disabled):not(.disabled):active:focus,.s-project__btn:not(:disabled):not(.disabled):active:focus,.s-price__btn--outline:not(:disabled):not(.disabled):active:focus,.s-calc__btn-item:not(:disabled):not(.disabled):active:focus,.btn-outline-primary:not(:disabled):not(.disabled).active:focus,.header-block__btn:not(:disabled):not(.disabled).active:focus,.s-why-prod__btn:not(:disabled):not(.disabled).active:focus,.s-project__btn:not(:disabled):not(.disabled).active:focus,.s-price__btn--outline:not(:disabled):not(.disabled).active:focus,.s-calc__btn-item:not(:disabled):not(.disabled).active:focus,.show > .btn-outline-primary.dropdown-toggle:focus,.show > .dropdown-toggle.header-block__btn:focus,.show > .dropdown-toggle.s-why-prod__btn:focus,.show > .dropdown-toggle.s-project__btn:focus,.show > .dropdown-toggle.s-price__btn--outline:focus,.show > .dropdown-toggle.s-calc__btn-item:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 17, 17, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(206, 17, 17, 0.5);
 }
@@ -2075,7 +2079,7 @@ a.btn.disabled,a.disabled.top-line__btn,a.disabled.header-block__btn,a.disabled.
   background: linear-gradient(180deg, #D41C1C 100%, #E94545 0);
 }
 
-.btn-outline-primary:hover,.header-block__btn:hover,.s-why-prod__btn:hover,.s-project__btn:hover,.s-price__btn--outline:hover {
+.btn-outline-primary:hover,.header-block__btn:hover,.s-why-prod__btn:hover,.s-project__btn:hover,.s-price__btn--outline:hover,.s-calc__btn-item:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(100%, #D41C1C), color-stop(0, #E94545));
   background: -webkit-linear-gradient(top, #D41C1C 100%, #E94545 0);
   background: -o-linear-gradient(top, #D41C1C 100%, #E94545 0);
@@ -2095,7 +2099,7 @@ a.btn.disabled,a.disabled.top-line__btn,a.disabled.header-block__btn,a.disabled.
           box-shadow: inset 0 -2px 0 #7c1616;
 }
 
-.btn-sm,.s-why-prod__btn {
+.btn-sm,.s-why-prod__btn,.s-calc__btn-item {
   padding: 0.25rem 0.5rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -8306,16 +8310,12 @@ strong,.strong {
   -webkit-transition: all 0.36s;
   -o-transition: all 0.36s;
   transition: all 0.36s;
-  border: 3px solid transparent;
+  border: 1px solid #dde2dd;
   -webkit-border-radius: 10px;
           border-radius: 10px;
   background-color: #fff;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.form-wrap__input:hover {
-  border-color: rgba(69, 93, 157, 0.7);
 }
 
 .form-wrap__btn {
@@ -9660,6 +9660,130 @@ strong,.strong {
   max-width: 120%;
 }
 
+.s-calc__col {
+  margin-bottom: 30px;
+}
+
+.s-calc__item {
+  background-color: #dde2dd;
+  height: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.s-calc__img-wrap {
+  display: block;
+  position: relative;
+  margin-bottom: 2.14286rem;
+  max-height: 260px;
+}
+
+.s-calc__img-wrap::before {
+  content: '';
+  width: 100%;
+  display: block;
+  padding-bottom: 76.08696%;
+  height: 0;
+}
+
+.s-calc__img-wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-height: 100%;
+}
+
+.s-calc__btn-item {
+  margin-top: 10px;
+  width: 116px;
+  text-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.s-calc__item-title {
+  margin-bottom: auto;
+}
+
+.calc-table {
+  margin-top: 50px;
+  color: #4d453c;
+}
+
+.calc-table thead td {
+  border: none;
+}
+
+.calc-table td[colspan='5'] {
+  text-align: right;
+}
+
+.calc-table tbody td:not(:first-child) {
+  font-size: 1.42857rem;
+}
+
+.calc-table li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 10px;
+}
+
+.calc-table li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+}
+
+.btn-qu {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+      -ms-flex-order: -1;
+          order: -1;
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #CE1111;
+  color: #ce1111;
+  text-decoration: none !important;
+}
+
+a.btn-qu {
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+}
+
+a.btn-qu:hover {
+  color: #ffffff;
+  background-color: #CE1111;
+}
+
 .s-form {
   display: block;
 }
@@ -9758,12 +9882,66 @@ strong,.strong {
 .modal-win {
   display: block;
   position: relative;
+  background-color: #ffffff;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 20px;
 }
 
-.modal-win .mfp-close {
-  color: #ce1111;
-  font-size: 40px;
+.modal-win--lg {
+  max-width: 880px;
+  padding: 60px 40px 40px;
+}
+
+.modal-win--lg .mfp-close {
+  color: #fff;
+  font-size: 30px;
   font-weight: 100;
+  width: 28px;
+  height: 28px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#D41C1C), to(#E94545));
+  background: -webkit-linear-gradient(top, #D41C1C 0%, #E94545 100%);
+  background: -o-linear-gradient(top, #D41C1C 0%, #E94545 100%);
+  background: linear-gradient(180deg, #D41C1C 0%, #E94545 100%);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 28px;
+  outline: none;
+  text-align: center;
+  top: 20px;
+  right: 40px;
+}
+
+.modal-win--lg tbody td {
+  vertical-align: middle;
+}
+
+.modal-win--lg tbody td:nth-child(n + 2) {
+  padding: 10px;
+  border-left: 1px solid #dee2e6;
+}
+
+.modal-win--lg tbody td:last-child {
+  padding-right: 0;
+}
+
+.modal-win .btn-qu {
+  margin-top: -40px;
+  margin-bottom: 40px;
 }
 
 a {
@@ -9776,47 +9954,6 @@ a {
 
 #foot-dialog h3 {
   font-size: 2.57143em;
-}
-
-.mfp-close {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  text-decoration: none;
-  text-align: center;
-  opacity: .65;
-  font-style: normal;
-  font-size: 28px;
-  font-family: Arial, Baskerville, monospace;
-  overflow: visible;
-  cursor: pointer;
-  background: 0 0;
-  border: 0;
-  display: block;
-  outline: 0;
-  padding: 0;
-  z-index: 1046;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: #000000;
-  opacity: 1;
-  font-size: 50px;
-  font-weight: 100;
-  width: 56px;
-  height: 56px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  line-height: 56px;
-  text-align: center;
-  margin-top: -5px;
-  margin-right: -5px;
-  -webkit-transition: all 0.36s;
-  -o-transition: all 0.36s;
-  transition: all 0.36s;
 }
 
 .polite .link {
@@ -9866,7 +10003,7 @@ a {
     transition: none;
   }
 
-  .btn,.top-line__btn,.header-block__btn,.s-why-prod__btn-primary,.s-why-prod__btn,.s-project__btn,.s-project__btn-more,.s-price__btn,.s-articals__btn,.s-form__btn {
+  .btn,.top-line__btn,.header-block__btn,.s-why-prod__btn-primary,.s-why-prod__btn,.s-project__btn,.s-project__btn-more,.s-price__btn,.s-articals__btn,.s-calc__btn-item,.s-form__btn {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
@@ -10853,10 +10990,6 @@ a {
   .s-form__left-block {
     width: 180px;
     background: #D5CABE;
-  }
-
-  .modal-text {
-    max-width: 1000px;
   }
 }
 
@@ -12711,6 +12844,19 @@ a {
     padding-bottom: 2.85714rem;
   }
 
+  .calc-table thead td {
+    padding-top: 1.42857em;
+    padding-bottom: 1.42857em;
+  }
+
+  .calc-table thead td:first-child {
+    width: 59.82906%;
+  }
+
+  .calc-table thead td:not(:first-child) {
+    text-align: right;
+  }
+
   .s-form__left-block {
     width: 321px;
   }
@@ -13735,6 +13881,42 @@ a {
     max-width: 100%;
   }
 
+  .calc-table thead {
+    display: none;
+  }
+
+  .calc-table td {
+    display: block;
+    border: none;
+    width: 100%;
+  }
+
+  .calc-table td:first-child {
+    padding-bottom: 0;
+  }
+
+  .calc-table td:not(:first-child) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 1rem !important;
+  }
+
+  .calc-table td:not(:first-child)::before {
+    content: attr(data-title);
+    padding-right: 15px;
+  }
+
+  .calc-table tr {
+    display: block;
+    border-top: 1px solid #dee2e6;
+  }
+
   .animated {
  /*CSS transitions*/
     -o-transition-property: none !important;
@@ -13801,6 +13983,43 @@ a {
   .s-why-prod thead {
     font-size: 0.85714rem;
   }
+
+  .modal-win--lg {
+    padding: 60px 20px 20px;
+  }
+
+  .modal-win--lg .mfp-close {
+    right: 20px;
+  }
+
+  .modal-win--lg thead {
+    display: none;
+  }
+
+  .modal-win--lg tr {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  .modal-win--lg td {
+    display: block;
+    width: 100%;
+    border: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .modal-win--lg td:nth-child(n + 2)::before {
+    content: attr(data-title);
+    padding-right: 15px;
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -13856,7 +14075,7 @@ a {
             box-shadow: none !important;
   }
 
-  a:not(.btn):not(.top-line__btn):not(.header-block__btn):not(.s-why-prod__btn-primary):not(.s-why-prod__btn):not(.s-project__btn):not(.s-project__btn-more):not(.s-price__btn):not(.s-articals__btn):not(.s-form__btn) {
+  a:not(.btn):not(.top-line__btn):not(.header-block__btn):not(.s-why-prod__btn-primary):not(.s-why-prod__btn):not(.s-project__btn):not(.s-project__btn-more):not(.s-price__btn):not(.s-articals__btn):not(.s-calc__btn-item):not(.s-form__btn) {
     text-decoration: underline;
   }
 

@@ -287,8 +287,7 @@ jQuery(document).ready(function ($) {
 		onKeyPress: function (val, e, field, options) {
 
 			if (val.replace(/\D/g, '').length === 2) {
-				val = val.replace('8', '');
-				field.val(val);
+			 
 			}
 			field.mask("+7(000)000-00-00", options);
 		}
@@ -297,48 +296,7 @@ jQuery(document).ready(function ($) {
 
 	// / mask for input
 
-
-	//Replace all SVG images with inline SVG
-	$('img.img-svg').each(function () {
-		var $img = $(this);
-		var imgClass = $img.attr('class');
-		var imgURL = $img.attr('src');
-
-		$.get(imgURL, function (data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = $(data).find('svg');
-
-			// Add replaced image's classes to the new SVG
-			if (typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass + ' replaced-svg');
-			}
-
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a');
-
-			// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-			}
-
-
-			// Replace image with new SVG
-			$img.replaceWith($svg);
-
-		}, 'xml');
-
-	});
-
-
-	// кастомный инпут файл
-
-	var file = $(".add-file input[type=file]");
-	file.change(function () {
-		var filename = $(this).val().replace(/.*\\/, "");
-		var name = $(".add-file__filename  ");
-		name.text(filename);
-
-	});
+ 
 	// или
 	// $(".dropzone").dropzone({
 	//  url: "/file/post",
@@ -359,35 +317,12 @@ jQuery(document).ready(function ($) {
 			}).slideDown().prev("div").addClass("active").parent().addClass("active")
 		})
 
-
-	$(".pretty-embed__bg").each(function () {
-		// загрузка фона видео
-		$(this).css("background-image", 'url(http://img.youtube.com/vi/' + $(this).data("src") + '/0.jpg)')
-		// включение видео при клике по блоку
-		$(this).click(function () {
-			$(this).removeClass("on").next()
-				.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
-		})
-	})
+ 
 
 	// убираем пробелы в телефоне
 	$(".top-line__tel, .s-contact__tel").each(function () {
 		var str = $(this).attr('href');
 		$(this).attr('href', str.replace(/\s/g, ''));
 	})
-	// $(".wow-wrap").each(function () {
-	// var wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
-
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	// });
-	// });
-
-
+	 
 });

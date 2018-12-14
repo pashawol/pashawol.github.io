@@ -81,7 +81,7 @@
                   </div>
                   <div class="top-line__col col-md-auto col-sm text-right"><a class="top-line__tel text-body" href="tel:8(499)955-55-03">8(499)955-55-03</a>
                   </div>
-                  <div class="top-line__col col-md-auto text-right"><a class="top-line__link-modal" href="#">Заказать звонок</a>
+                  <div class="top-line__col col-md-auto text-right"><a class="top-line__link-modal popup-with-move-anim" href="#modal-call">Заказать звонок</a>
                   </div>
                 </div>
                 <div class="row d-none d-lg-flex">
@@ -348,6 +348,29 @@
         </div>
       </footer>
     </div>
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal modal-win" id="modal">
+      <form>
+        <p class="text-center"><strong>Нужен забор из профнастила   высотой  1,5   м?<br/>Оставьте Ваш телефон и специалист расскажет Вам все нюансы данного забора.</strong></p>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="Введите свой телефон:" placeholder="tel"/>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__btn-wrap">
+          <button class="form-wrap__btn btn btn-lg btn-accent">Узнать подробнее
+          </button>
+        </div>
+        <div class="form-wrap__polite text-center">
+          <label>
+            <input type="checkbox" checked="checked"/>
+            
+            я даю согласие на обработку персональных данных
+          </label>
+        </div>
+      </form>
+    </div>
+    <div class="zoom-anim-dialog mfp-hide modal modal-win form-wrap text-center" id="thanks"><br/>
+      <h3>Заявка принята</h3><br/>
+      <p>Скоро с Вами свяжутся</p><br/>
+    </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
       <form>
         <div class="text-center">
@@ -360,14 +383,53 @@
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
         </div>
-        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
-        <div class="politic">
-          Отправляя заявку Вы даете
-          <a class="form-wrap__link" href="Soglasie.pdf" target="_blank"> согласие</a>
-          
-          на&#160;обработку персональных данных
+        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit" value="Перезвоните мне"/>
+        <div class="form-wrap__polite">
+          <label>
+            <input type="checkbox" checked="checked"/>
+            
+            я даю согласие на обработку персональных данных
+          </label>
         </div>
       </form>
+    </div>
+    <!-- #modal-call-->
+    <div class="zoom-anim-dialog mfp-hide modal-win modal-form modal-win--lg" id="modal-info">
+      <div class="row">
+        <div class="col-xl-3 col-lg-4">
+          <div class="btn-qu">?	
+          </div>
+          <div class="h4 strong">Типы покрытия</div>
+        </div>
+        <div class="col">
+          <table class="table">
+            <thead>
+              <tr>
+                <td> </td>
+                <td>Лицевая сторона</td>
+                <td>Внутренняя сторона</td>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>Одностороннее покрытие</td>
+                  <td data-title="Лицевая сторона"><img src="img/modal-1.jpg" alt=""/></td>
+                  <td data-title="Внутренняя сторона"><img src="img/modal-2.jpg" alt=""/></td>
+                </tr>
+                <tr>
+                  <td>Двухстороннее покрытие</td>
+                  <td data-title="Лицевая сторона"><img src="img/modal-1.jpg" alt=""/></td>
+                  <td data-title="Внутренняя сторона"><img src="img/modal-2.jpg" alt=""/></td>
+                </tr>
+                <tr>
+                  <td>Оцинкованное покрытие</td>
+                  <td data-title="Лицевая сторона"><img src="img/modal-1.jpg" alt=""/></td>
+                  <td data-title="Внутренняя сторона"><img src="img/modal-2.jpg" alt=""/></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
     <!-- #modal-call-->
     <!-- modal-->
