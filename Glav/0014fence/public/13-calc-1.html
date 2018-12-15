@@ -26,6 +26,15 @@
             <li class="menu-item"><a href="#">Акции</a></li>
             <li class="menu-item"><a href="#">Заказать</a></li>
           </ul>
+          <ul class="menu">
+            <li class="menu-item"><a href="#">Отзывы</a></li>
+            <li class="menu-item"><a href="#">Фотогалерея</a></li>
+            <li class="menu-item"><a href="#">Наша команда</a></li>
+            <li class="menu-item"><a href="#">Новости</a></li>
+            <li class="menu-item"><a href="#">Вакансии</a></li>
+            <li class="menu-item"><a href="#">Статьи</a></li>
+            <li class="menu-item"><a href="#">Контакты</a></li>
+          </ul>
           <div class="top-line">
             <div class="mb-3"> <a class="top-line__tel text-white" href="tel:8(499)955-55-03">8(499)955-55-03</a>
             </div>
@@ -59,9 +68,9 @@
         <div class="top-line">
           <div class="container">
             <div class="row">
-              <div class="col-sm-auto col"><a class="logo" href="/"><img src="img/logo.png" alt=""/><span class="logo__text">Доступные<span class="accent">  заборы </span></span></a>
+              <div class="top-line__logo-block col-sm-auto col"><a class="logo" href="/"><img src="img/logo.png" alt=""/><span class="logo__text">Доступные<span class="accent">  заборы </span></span></a>
               </div>
-              <div class="col-sm col-auto d-none d-sm-block">
+              <div class="top-line__tel-block col d-none d-sm-block">
                 <div class="row">
                   <div class="col-lg d-none d-md-block">
                     <div class="row">
@@ -90,7 +99,7 @@
                       <use xlink:href="img/svg/sprite.svg#calculator"></use>
                     </svg>Забор из профнастила</a>
                   </div>
-                  <div class="col-4"><a class="top-line__btn active" href="#">
+                  <div class="col-4"><a class="top-line__btn" href="#">
                     <svg class="icon icon-calculator ">
                       <use xlink:href="img/svg/sprite.svg#calculator"></use>
                     </svg>Забор из евроштакетника</a>
@@ -143,7 +152,7 @@
               <div class="form-wrap p-0">
                 <div class="form-wrap__input-wrap form-group">
                   <div class="row align-items-center">
-                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex mb-1">Введите длину забора</span>
+                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex flex-wrap mb-1">Введите длину забора</span>
                     </div>
                     <div class="col"><input class="form-wrap__input form-control" type="text" placeholder="1 м"/>
                     </div>
@@ -152,7 +161,7 @@
                 <!-- +e.input-wrap-->
                 <div class="form-wrap__input-wrap form-group">
                   <div class="row align-items-center">
-                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex mb-1">Выберите высоту забора</span>
+                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex flex-wrap mb-1">Выберите высоту забора</span>
                     </div>
                     <div class="col">
                       <select class="form-wrap__input form-control">
@@ -165,7 +174,7 @@
                 <!-- +e.input-wrap-->
                 <div class="form-wrap__input-wrap form-group">
                   <div class="row align-items-center">
-                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex mb-1">Выберите тип покрытия<a class="btn-qu popup-with-move-anim" href="#modal-info">?</a></span>
+                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex flex-wrap mb-1">Выберите тип покрытия<a class="btn-qu popup-with-move-anim" href="#modal-info">?</a></span>
                     </div>
                     <div class="col">
                       <select class="form-wrap__input form-control">
@@ -178,7 +187,7 @@
                 <!-- +e.input-wrap-->
                 <div class="form-wrap__input-wrap form-group">
                   <div class="row align-items-center">
-                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex mb-1">Выберите количество ворот</span>
+                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex flex-wrap mb-1">Выберите количество ворот</span>
                     </div>
                     <div class="col">
                       <select class="form-wrap__input form-control">
@@ -191,7 +200,7 @@
                 <!-- +e.input-wrap-->
                 <div class="form-wrap__input-wrap form-group">
                   <div class="row align-items-center">
-                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex mb-1">Выберите ширину ворот, м </span>
+                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex flex-wrap mb-1">Выберите ширину ворот, м </span>
                     </div>
                     <div class="col">
                       <select class="form-wrap__input form-control">
@@ -204,7 +213,7 @@
                 <!-- +e.input-wrap-->
                 <div class="form-wrap__input-wrap form-group">
                   <div class="row align-items-center">
-                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex mb-1">Выберите ширину ворот, м </span>
+                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex flex-wrap mb-1">Выберите количество калиток</span>
                     </div>
                     <div class="col">
                       <select class="form-wrap__input form-control">
@@ -217,31 +226,9 @@
                 <!-- +e.input-wrap-->
                 <div class="form-wrap__input-wrap form-group">
                   <div class="row align-items-center">
-                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex mb-1">Выберите количество калиток</span>
-                    </div>
-                    <div class="col">
-                      <select class="form-wrap__input form-control">
-                        <option value="" disabled="disabled" selected="selected"> 2м</option>
-                        <option value=""> 2мx</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <!-- +e.input-wrap-->
-                <div class="form-wrap__input-wrap form-group">
-                  <div class="row align-items-center">
-                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex mb-1">Шоссе, км</span>
+                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex flex-wrap mb-1">Расстояние от МКАД, км</span>
                     </div>
                     <div class="col"><input class="form-wrap__input form-control" type="text" placeholder="100"/>
-                    </div>
-                  </div>
-                </div>
-                <!-- +e.input-wrap-->
-                <div class="form-wrap__input-wrap form-group">
-                  <div class="row align-items-center">
-                    <div class="col-lg-4"><span class="form-wrap__title justify-content-lg-end align-items-center small d-flex mb-1">Шоссе, км</span>
-                    </div>
-                    <div class="col"><input class="form-wrap__input form-control" type="Расстояние от МКАД, км" placeholder="100"/>
                     </div>
                   </div>
                 </div>
@@ -254,15 +241,15 @@
                 </div>
                 <div class="s-calc__text-block">
                   <div class="s-calc__group">
-                    <div class="small text-gray">Стоимость забора</div>
+                    <div class="small text-gr">Стоимость забора</div>
                     <div class="h4">0 руб.</div>
                   </div>
                   <div class="s-calc__group">
-                    <div class="small text-gray">Стоимость забора</div>
+                    <div class="small text-gr">Стоимость забора</div>
                     <div class="h4">0 руб.</div>
                   </div>
                   <div class="s-calc__group">
-                    <div class="small text-gray">Стоимость забора</div>
+                    <div class="small text-gr">Стоимость забора</div>
                     <div class="h4 text-primary strong">0 руб.</div>
                   </div>
                 </div>
@@ -454,12 +441,13 @@
         <div class="container">
           <div class="d-none d-lg-block">
             <ul class="menu">
-              <li class="menu-item"><a href="#">О нас</a></li>
-              <li class="menu-item"><a href="#">Наши работы</a></li>
-              <li class="menu-item"><a href="#">Цены</a></li>
-              <li class="menu-item"><a href="#">Калькулятор</a></li>
-              <li class="menu-item"><a href="#">Акции</a></li>
-              <li class="menu-item"><a href="#">Заказать</a></li>
+              <li class="menu-item"><a href="#">Отзывы</a></li>
+              <li class="menu-item"><a href="#">Фотогалерея</a></li>
+              <li class="menu-item"><a href="#">Наша команда</a></li>
+              <li class="menu-item"><a href="#">Новости</a></li>
+              <li class="menu-item"><a href="#">Вакансии</a></li>
+              <li class="menu-item"><a href="#">Статьи</a></li>
+              <li class="menu-item"><a href="#">Контакты</a></li>
             </ul>
           </div>
           <div class="row">
@@ -574,6 +562,7 @@
     <script src="libs/slick/slick.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
     <script src="libs/jquery.touchSwipe.min.js"></script>
+    <script src="libs/sticky-kit.js"></script>
     <script src="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
     <script src="js/common.js"></script>

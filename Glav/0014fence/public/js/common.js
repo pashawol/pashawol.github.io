@@ -3,24 +3,7 @@ jQuery(document).ready(function ($) {
 	// для свг
 	svg4everybody({});
 	// Custom JS
-
-
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			}
-
-		};
-
-	});
+ 
 
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
@@ -77,9 +60,9 @@ jQuery(document).ready(function ($) {
 
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > topH) {
-				$('.top-nav  ').addClass('fixed');
+				$('.top-line  ').addClass('fixed');
 			} else {
-				$('.top-nav  ').removeClass('fixed');
+				$('.top-line  ').removeClass('fixed');
 			}
 		});
 		// конец добавил
@@ -324,5 +307,9 @@ jQuery(document).ready(function ($) {
 		var str = $(this).attr('href');
 		$(this).attr('href', str.replace(/\s/g, ''));
 	})
-	 
+	 		// прилипает меню
+			 $(".top-nav").stick_in_parent({
+				parent: 'body'
+			 });
+										
 });
