@@ -64,7 +64,9 @@ jQuery(document).ready(function ($) {
 			} else {
 				$('.top-line  ').removeClass('fixed');
 			}
+			
 		});
+
 		// конец добавил
 	}
 
