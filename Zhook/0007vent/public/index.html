@@ -9,99 +9,295 @@
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
-    <meta name="theme-color" content="#3361d8">
+    <meta name="theme-color" content="#003b5b">
+    <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="toggle-mnu toggle-mnu-1"><span></span></div>
         <div class="wrapp-hidden"> 
-          <ul class="trop__nav">
-            <li class="trop__item"><a class="trop__link" href="#">Продукция </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Услуги  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Акции </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
-            </li>
+          <ul class="menu">
+            <li class="menu-item"><a href="#">О нас</a></li>
+            <li class="menu-item"><a href="#">Продукция</a></li>
+            <li class="menu-item"><a href="#">Кейсы и отзывы</a></li>
+            <li class="menu-item"><a href="#">Блог</a></li>
+            <li class="menu-item"><a href="#">Партнерам </a></li>
+            <li class="menu-item"><a href="#">Контакты </a></li>
           </ul>
-          <div class="text-right"></div>
+          <div> <a class="top-nav__tel" href="tel:8 800 508 510"> 
+              <svg class="icon icon-tel ">
+                <use xlink:href="img/svg/sprite.svg#tel"></use>
+              </svg><strong>8 800 508 510</strong></a></div>
+          <div> <span class="trop__smaller">Пн-пт с 9.00 до 18.00</span>
+          </div>
+          <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-youtube"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="lang mb-3"><a class="lang__item active" href="#">Рус</a><a class="lang__item" href="#">Eng</a>
+          </div><a class="top-nav__btn" href="#">Оставить заявку</a>
         </div>
       </div>
       <!--  мобильное меню-->
       <!-- start HEADER.header-->
       <header class="header">
-        <!-- start .top-line-->
-        <div class="top-line">
-        </div>
-        <!-- end .top-line-->
         <!-- start top-nav-->
         <div class="top-nav">
           <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-              </li>
-            </ul>
+            <div class="row">
+              <div class="col-lg-auto col"><a class="logo" href="#"><img src="img/logo.jpg" alt=""/></a></div>
+              <div class="col d-none d-lg-block">
+                <ul class="menu">
+                  <li class="menu-item"><a href="#">О нас</a></li>
+                  <li class="menu-item"><a href="#">Продукция</a></li>
+                  <li class="menu-item"><a href="#">Кейсы и отзывы</a></li>
+                  <li class="menu-item"><a href="#">Блог</a></li>
+                  <li class="menu-item"><a href="#">Партнерам </a></li>
+                  <li class="menu-item"><a href="#">Контакты </a></li>
+                </ul>
+              </div>
+              <div class="col-auto">
+                <div><a class="top-nav__tel" href="tel:8 800 508 510"> 
+                  <svg class="icon icon-tel ">
+                    <use xlink:href="img/svg/sprite.svg#tel"></use>
+                  </svg><strong>8 800 508 510</strong></a><span class="top-nav__smaller d-none d-sm-inline">Пн-пт с 9.00 до 18.00</span>
+                </div>
+                <div class="row justify-content-end">
+                  <div class="col-auto d-none d-sm-block">
+                    <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-youtube"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="lang"><a class="lang__item active" href="#">Рус</a><a class="lang__item" href="#">Eng</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto d-none d-xl-block"><a class="top-nav__btn" href="#">Оставить заявку</a>
+              </div>
+              <div class="col-auto d-lg-none">
+                <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- end top-nav-->
+        <!-- start header-block-->
+        <div class="header-block" id="header-block">
+          <div class="container">
+            <h1></h1>
+            <div class="row"></div>
+          </div>
+        </div>
+        <!-- end header-block-->
       </header>
       <!-- end HEADER.header-->
-      <!-- start header-block-->
-      <div class="header-block" id="header-block">
-        <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+      <!-- start s-catalog-->
+      <div class="s-catalog pt-0" id="s-catalog">
+        <div class="container"> 
+          <div class="row">
+                <div class="s-catalog__col col-xxl-3 col-lg-4 col-md-6">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__title"><a href="#">Мультизональные системы</a>
+                    </div>
+                    <div class="s-catalog__img-wrap"><img src="img/prod-1.png" alt=""/>
+                    </div>
+                    <ol>
+                      <li>Мультизональная система позволяет подключить к одному наружному блоку несколько десятков внутренних.</li>
+                      <li>Низкое потребление электроэнергии систем VRF и VRV</li>
+                      <li>Все блоки в мультизональных системах подключаются к единой системе трубопроводов.</li>
+                      <li>Внутренние блоки VRF и VRV могут быть разных типов (настенный, канальный, кассетный и т. п.) и иметь разную мощность</li>
+                    </ol><a class="s-catalog__btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- /+e.col.col-xxl-3.col-lg-4.col-md-6-->
+                <div class="s-catalog__col col-xxl-3 col-lg-4 col-md-6">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__title"><a href="#">ТЕПЛОВЫЕ НАСОСЫ</a>
+                    </div>
+                    <div class="s-catalog__img-wrap"><img src="img/prod-2.png" alt=""/>
+                    </div>
+                    <ol>
+                      <li>Широкий диапазон мощности, экономный расход энергии</li>
+                      <li>Автоматический ввод в эксплуатацию и управление</li>
+                      <li>Широкий диапазон рабочих температур</li>
+                      <li>Эффективная рекуперация тепла: одновременное охлаждение и обогрев</li>
+                      <li>Малая занимаемая площадь и легкий вес</li>
+                      <li>Сокращение времени на диагностику и запуск системы</li>
+                    </ol><a class="s-catalog__btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- /+e.col.col-xxl-3.col-lg-4.col-md-6-->
+                <div class="s-catalog__col col-xxl-3 col-lg-4 col-md-6">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__title"><a href="#">СИСТЕМЫ ЧИЛЛЕР ФАНКОЙЛ</a>
+                    </div>
+                    <div class="s-catalog__img-wrap"><img src="img/prod-3.png" alt=""/>
+                    </div>
+                    <ol>
+                      <li>Система обладает большой гибкостью при кондиционировании большого количества помещений.</li>
+                      <li>Каждый потребитель может работать практически независимо друг от друга - изменять режим работы, включаться или отключаться.</li>
+                      <li>Можно постепенно наращивать мощность потребителя, что позволяет вводить объект в эксплуатацию постепенно, отдельными этапами.</li>
+                    </ol><a class="s-catalog__btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- /+e.col.col-xxl-3.col-lg-4.col-md-6-->
+                <div class="s-catalog__col col-xxl-3 col-lg-4 col-md-6">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__title"><a href="#">ПРИТОЧНО-ВЫТЯЖНЫЕ УСТАНОВКИ</a>
+                    </div>
+                    <div class="s-catalog__img-wrap"><img src="img/prod-4.png" alt=""/>
+                    </div>
+                    <ol>
+                      <li>Это готовое эффективное вентиляционное оборудование, предназначенное как для подачи свежего, так и отвода отработанного загрязненного воздуха из помещения, обеспечивая оптимально благоприятный микроклимат.</li>
+                      <li>Такие установки в основном оснащены следующими функциями – регулирование подачи воздушного потока, возможность его подогрева или охлаждения, фильтрации, и соответственно вытяжки отработанной воздушной массы.</li>
+                    </ol><a class="s-catalog__btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- /+e.col.col-xxl-3.col-lg-4.col-md-6-->
+                <div class="s-catalog__col col-xxl-3 col-lg-4 col-md-6">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__title"><a href="#">РУФТОПЫ</a>
+                    </div>
+                    <div class="s-catalog__img-wrap"><img src="img/prod-5.png" alt=""/>
+                    </div>
+                    <ol>
+                      <li>Моноблочные агрегаты, выполняющие функцию комплексной обработки воздуха в помещениях складских терминалов, гипермаркетов, производственных предприятий и других зданий.</li>
+                      <li>Один укомплектованный блок устанавливается на крыше или на земле рядом со зданием.</li>
+                      <li>Безопасная и эффективная система газового нагрева.</li>
+                      <li>Несложный монтаж и удобство в обслуживании.</li>
+                    </ol><a class="s-catalog__btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- /+e.col.col-xxl-3.col-lg-4.col-md-6-->
+                <div class="s-catalog__col col-xxl-3 col-lg-4 col-md-6">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__title"><a href="#">АВТОМАТИЗАЦИЯ ЭЛЕКТРОСТАНЦИИ</a>
+                    </div>
+                    <div class="s-catalog__img-wrap"><img src="img/prod-6.png" alt=""/>
+                    </div>
+                    <ol>
+                      <li>Автоматическое обеспечение необходимого микроклимата</li>
+                      <li>Надежная и безотказная работа установленных систем</li>
+                      <li>Возможность снижения общих капитальных затрат и расходов на эксплуатацию</li>
+                      <li>Снижение затрат на использование высококлассных (и дорогих) специалистов</li>
+                      <li>Безопасность как установленных систем, так и их пользователей</li>
+                    </ol><a class="s-catalog__btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- /+e.col.col-xxl-3.col-lg-4.col-md-6-->
+                <div class="s-catalog__col col-xxl-3 col-lg-4 col-md-6">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__title"><a href="#">СПЛИТ-СИСТЕМЫ</a>
+                    </div>
+                    <div class="s-catalog__img-wrap"><img src="img/prod-7.png" alt=""/>
+                    </div>
+                    <ol>
+                      <li>Сплит-система состоит из двух блоков</li>
+                      <li>Есть возможность не только охлаждения, но и нагрева воздуха</li>
+                      <li>Широкая типология внутренних блоков</li>
+                      <li>Диапазон холодопроизводительности от   2 кВт- 36 кВт</li>
+                      <li>Способность регулировать микроклимат помещения, учитывая пожелания даже самых требовательных пользователей</li>
+                    </ol><a class="s-catalog__btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- /+e.col.col-xxl-3.col-lg-4.col-md-6-->
+                <div class="s-catalog__col col-xxl-3 col-lg-4 col-md-6">
+                  <div class="s-catalog__item">
+                    <div class="s-catalog__title"><a href="#">ВЕНТИЛЯЦИЯ И КОНДИЦИОНИРОВАНИЕ</a>
+                    </div>
+                    <div class="s-catalog__img-wrap"><img src="img/prod-8.png" alt=""/>
+                    </div>
+                    <ol> 
+                      <li>Проектирование систем вентиляции</li>
+                      <li>Реализация и доставка оборудования</li>
+                      <li>Монтаж и пуска-наладка</li>
+                      <li>Обучение Ваших сотрудников правилам эксплуатации реализованных систем</li>
+                      <li>Ремонт и сервисное обслуживание систем вентиляции</li>
+                      <li>Гибкая система ценообразования</li>
+                      <li>Гарантия на монтаж 3 года</li>
+                    </ol><a class="s-catalog__btn" href="#">Подробнее</a>
+                  </div>
+                </div>
+                <!-- /+e.col.col-xxl-3.col-lg-4.col-md-6-->
+          </div>
+          <div class="section text-center">
+            <div class="h3 strong"> Специализированная климатическая компания "Евроклимат-Сервис"</div>
+            <p>Компания «Euroclimat-Service» - это активно развивающаяся, современная компания, уверенно занимающая одно из ведущих мест на рынке Украины и Харькова в частности в секторе проектирования, монтажа и ввода в эксплуатацию систем отопления, кондиционирования и вентиляции. Профессионализм и надежность компании «Euroclimat-Service» подтверждены официально зарегистрированной в 2007 году торговой маркой "Евроклимат-Сервис", а так же, десятками успешных проектов в секторе проектирования, монтажа, наладки, запуска и сервисного обслуживания климатических систем различного уровня сложности.</p>
+            <p><strong>Предлагая свои услуги, компания «Euroclimat-Service» гарантирует своевременное и высококачественное выполнение таких работ, как:</strong></p>
+            <ul>
+              <li>- проектирование и монтаж систем отопления;</li>
+              <li>- проектирование и монтаж систем вентиляции;</li>
+              <li>- проектирование и монтаж систем кондиционирования.</li>
+            </ul>
+            <p>Вне зависимости от сложности здания и поставленной задачи, имея опыт работы с такими организациями, как: ООО «Мерефианская стекольная компания» и Национальная Академия Государственного Управления при Президенте Украини, "ММТП" Мариупольский торговый порт и Павлоградский машиностроительный завод "ИНТЕРА", специалисты компании «Euroclimat-Service» выполняют все, взятые на себя обязательства качественно и своевременно.</p>
+          </div>
         </div>
       </div>
-      <!-- end header-block-->
-      <!-- start s-form-->
-      <section class="s-form section" id="s-form">
-        <div class="container">
-          <h2 class="text-center">s-form</h2>
-          <div class="row"></div>
-        </div>
-      </section>
-      <!-- end s-form-->
-      <!-- start s-contact-->
-      <div class="s-contact section" id="s-contact">
-        <div class="container">
-          <h2 class="text-center">s-contact</h2>
-          <div class="row"><a href="#"></a></div>
-        </div>
-      </div>
-      <!-- end s-contact-->
+      <!-- end s-catalog-->
       <footer class="footer">
-        <div class="container">footer</div>
+        <div class="container">
+          <div class="footer__top"><span class="footer__icon-wrap">
+            <svg class="icon icon-top ">
+              <use xlink:href="img/svg/sprite.svg#top"></use>
+            </svg></span>наверх
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="footer__title">Посмотрите наши товары
+              </div>
+              <div class="footer__column">
+                <ul>
+                  <li><a href="#">Приточно-вытяжные установки</a></li>
+                  <li><a href="#">Системы чиллер фанкойл</a></li>
+                  <li><a href="#">Тепловые насосы</a></li>
+                  <li><a href="#">Мультизональные системы </a></li>
+                  <li><a href="#">Руфтопы </a></li>
+                  <li><a href="#">Автоматизация электростанции</a></li>
+                  <li><a href="#">Сплит-системы</a></li>
+                  <li><a href="#">Вентиляция и кондиционирование</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-auto">
+              <div class="footer__title">Узнать о нас больше
+              </div>
+              <ul>
+                <li><a href="#">О нас </a></li>
+                <li><a href="#">Партнёрам </a></li>
+                <li><a href="#">Кейсы и отзывы </a></li>
+                <li><a href="#">Блог</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-auto">
+              <div class="footer__right-col">
+                <div class="row">
+                  <div class="col">
+                    <div class="footer__title">Узнать о нас больше
+                    </div>
+                    <div class="h3 strong mb-1"><a href="tel:0-800-508-510">0-800-508-510</a></div>
+                    <div class="text-gray">Пн-пт с 9.00 до 18.00</div>
+                    <div class="soc"><a class="soc__item" href="" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-youtube"></i></a><a class="soc__item" href="" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                  <div class="col-auto"><a class="logo" href="#"><img src="img/logo.jpg" alt=""/></a></div>
+                </div><a class="footer__btn" href="#">Оставить заявку</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bot">
+            <div class="row">
+              <div class="col-md-auto">
+                <div class="small text-gray">© 2018. Euroclimat-Service. Все права защищены.</div>
+              </div>
+              <div class="col-md-auto"><a class="small" href="#">Пользовательское соглашение</a></div>
+              <div class="col-lg">
+                <div class="small text-gray">Полное или частичное копирование материалов запрещено, при согласованном использовании материалов  необходима активная ссылка на ресурс</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
@@ -132,6 +328,12 @@
     <!-- #modal-call-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
+    <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/equalHeights/equalHeights.min.js"></script>
+    <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
+    <script src="libs/jquery.touchSwipe.min.js"></script>
+    <script src="libs/jquery.mask.min.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/common.js"></script>
   </body>

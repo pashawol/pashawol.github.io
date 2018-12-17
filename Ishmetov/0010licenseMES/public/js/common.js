@@ -56,7 +56,7 @@ jQuery(document).ready(function ($) {
 	// листалка по стр
 	$(" .top-nav__link").click(function () {
 	       var elementClick = $(this).attr("href");
-	       var destination = $(elementClick).offset().top;
+	       var destination = $(elementClick).offset().top - 90;
 
 	           $('html, body').animate({ scrollTop: destination }, 1100);
 
@@ -177,31 +177,6 @@ jQuery(document).ready(function ($) {
 	})
 	// /modal галерея
 
-	// form
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			$.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-			}, 4000);
-		});
-		return false;
-	});
-	// /form
 
 	// mask for input
 	var customOptions = {
@@ -248,12 +223,47 @@ jQuery(document).ready(function ($) {
 		} 
 		else{
 			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
-			$(th.attr('href')).find(".order").val(th.data('order'));
+			$(th.attr('href')).find(".order").val(th.data('btn'));
 
 		}
 		$(th.attr('href')).find(".form-wrap__title-sub--js").text('Заполните форму, и мы свяжемся с Вами в течение дня для уточнения деталей');
 		$(th.attr('href')).find(".form-wrap__btn").val(th.data('btn'));
 		$(th.attr('href')).find(".btn-name").text(th.data('btn'));
 	})
+
+		// form
+		$("form").submit(function () { //Change
+			var th = $(this);
+			$.ajax({
+				type: "POST",
+				url: 'action.php', //Change
+				data: th.serialize()
+			}).success(function () {
+				// $.magnificPopup.close();
+				$.magnificPopup.open({
+					items: {
+						src: '#thanks', 
+						type: 'inline', 
+						fixedContentPos: true,
+						fixedBgPos: true, 
+						overflowY: 'auto', 
+						closeBtnInside: true,
+						preloader: false, 
+						midClick: true,
+						removalDelay: 300,
+						mainClass: 'my-mfp-zoom-in'
+					}
+				})
+				// window.location.replace("/thanks.html");
+				setTimeout(function () {
+					// Done Functions
+					th.trigger("reset");
+					// $.magnificPopup.close();
+				}, 4000);
+			});
+			return false;
+		});
+		// /form
+	
 
 });
