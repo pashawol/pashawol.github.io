@@ -8507,6 +8507,11 @@ a.text-body:hover,a.top-line__link:hover {
   transition: all 0.36s;
 }
 
+.top-nav.is_stuck {
+  border-bottom: 1px solid #000;
+  background-color: #ffffff;
+}
+
 .top-nav.is_stuck .menu a {
   padding-top: .6rem;
   padding-bottom: .6rem;
@@ -9872,10 +9877,6 @@ a.btn-qu:hover {
 
 .s-form h2,.s-form .s-project__item-price {
   max-width: 500px;
-}
-
-.s-form__inner {
-  border: 5px solid #4d453c;
 }
 
 .s-form__btn {
@@ -12998,8 +12999,12 @@ a {
   }
 
   .s-form__left-block {
-    border-right: 5px solid #4d453c;
+    border: 5px solid #4d453c;
     width: 321px;
+  }
+
+  .s-form .form-wrap {
+    border: 5px solid #4d453c;
   }
 
   .footer {

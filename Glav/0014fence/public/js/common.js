@@ -56,7 +56,7 @@ jQuery(document).ready(function ($) {
 
 		// скрывает моб меню
 
-		var topH = $("header ").innerHeight();
+		var topH = $(".top-line").innerHeight();
 
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > topH) {

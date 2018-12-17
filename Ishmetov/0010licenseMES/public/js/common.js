@@ -54,27 +54,16 @@ jQuery(document).ready(function ($) {
 
 
 	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
+	$(" .top-nav__link").click(function () {
+	       var elementClick = $(this).attr("href");
+	       var destination = $(elementClick).offset().top;
 
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
+	           $('html, body').animate({ scrollTop: destination }, 1100);
 
-	//        return false;
-	//    });
+	       return false;
+	   });
 
-
-	// табы  . 
-	function tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
-		});
-	};
-	tabscostume('tabs');
+ 
 
 
 
@@ -219,8 +208,8 @@ jQuery(document).ready(function ($) {
 		onKeyPress: function (val, e, field, options) {
 
 			if (val.replace(/\D/g, '').length === 2) {
-				val = val.replace('8', '');
-				field.val(val);
+				// val = val.replace('8', '');
+				// field.val(val);
 			}
 			field.mask("+7(000)000-00-00", options);
 		}
@@ -249,6 +238,22 @@ jQuery(document).ready(function ($) {
 
 	// });
 	// });
+	
+	$('.popup-with-move-anim').click(function(){
+		var th =$(this);
+		if($(this).is(".s-rates__btn")){
 
+			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title') +'  <div class="text-primary2">'+th.data('type'));
+			$(th.attr('href')).find(".order").val(th.data('title') +' '+th.data('type'));
+		} 
+		else{
+			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
+			$(th.attr('href')).find(".order").val(th.data('order'));
+
+		}
+		$(th.attr('href')).find(".form-wrap__title-sub--js").text('Заполните форму, и мы свяжемся с Вами в течение дня для уточнения деталей');
+		$(th.attr('href')).find(".form-wrap__btn").val(th.data('btn'));
+		$(th.attr('href')).find(".btn-name").text(th.data('btn'));
+	})
 
 });

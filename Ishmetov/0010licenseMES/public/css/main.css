@@ -2767,9 +2767,10 @@ a {
   -webkit-transition: all 0.36s;
   -o-transition: all 0.36s;
   transition: all 0.36s;
+  text-decoration: none !important;
 }
 
-.mono,.section-title > h2,.form-wrap__inner-title,.header-block h1,.s-rates__price {
+.mono,.section-title > h2,.form-wrap__inner-title,.form-wrap__title,.header-block h1,.s-rates__price {
   font-family: "Bebas Neue Bold", monospace;
 }
 
@@ -3322,6 +3323,7 @@ select.form-control:focus::-ms-value {
 .custom-input__input {
   position: absolute;
   opacity: 0;
+  bottom: 0;
 }
 
 .custom-input__input[type="checkbox"] + .custom-input__lab {
@@ -3452,6 +3454,13 @@ select.form-control:focus::-ms-value {
 
 .form-wrap__input {
   resize: none;
+  -webkit-transition: all 0.36s;
+  -o-transition: all 0.36s;
+  transition: all 0.36s;
+}
+
+.form-wrap__input:focus {
+  border-color: #47c8fe;
 }
 
 .form-wrap__btn {
@@ -3480,6 +3489,18 @@ select.form-control:focus::-ms-value {
   font-size: 12px;
   text-align: center;
   margin-top: 1.25em;
+}
+
+.form-wrap__title {
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 0.3125em;
+}
+
+.form-wrap__title-sub {
+  color: #7a7a7a;
+  font-size: 1.125rem;
+  margin-bottom: 1.875em;
 }
 
 .parsley-error {
@@ -4303,65 +4324,69 @@ select.form-control:focus::-ms-value {
 .modal-win {
   display: block;
   position: relative;
+  background-color: #ffffff;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 1.25rem 1.25rem;
+}
+
+.modal-win ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.modal-win li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 0.625em;
+  max-width: 410px;
+  line-height: 1.4;
+}
+
+.modal-win li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 5px;
+  height: 5px;
+  background-color: #dc3e46;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.modal-win input {
+  text-align: center;
 }
 
 .modal-win .mfp-close {
-  color: #47c8fe;
+  width: 70px;
+  height: 70px;
+  background-color: #47c8fe;
+  right: 0;
+  top: 0;
+  text-align: center;
+  color: transparent;
   font-size: 40px;
-  font-weight: 100;
+  opacity: 1;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAuklEQVRIS72VwRGDMAwETx2lFEoglQQqCSWklHR0jJkkA45lCSzwi4e9K98YSUi+AAwi8kbQInlbmJ+PJOgiBBteKjZKkHPkm0SroHT+B2+5gVbYBn5EULvxH3yPwIqyCPcILHBiqPCawAM24SWBF+yCZ4IHgNH7w1VjWXcDkj2AJ4C7iEyeTuGCr6IYUs8IqzzPOCxzDeQVXP/OvZVZ+67rLVYl2vMzu+JRcG0eLLG0gjXBuTP0zOk/A57J1MwZZ2VNAAAAAElFTkSuQmCC);
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 a {
   outline: 0 !important;
 }
 
-.modal-form {
-  position: relative;
+.politic {
+  text-align: center;
 }
 
-#foot-dialog h3 {
-  font-size: 2.25em;
-}
-
-.mfp-close {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  text-decoration: none;
+.polite {
   text-align: center;
-  opacity: .65;
-  font-style: normal;
-  font-size: 28px;
-  font-family: Arial, Baskerville, monospace;
-  overflow: visible;
-  cursor: pointer;
-  background: 0 0;
-  border: 0;
-  display: block;
-  outline: 0;
-  padding: 0;
-  z-index: 1046;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  color: #2a2a2a;
-  opacity: 1;
-  font-size: 50px;
-  font-weight: 100;
-  width: 56px;
-  height: 56px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  line-height: 56px;
-  text-align: center;
-  margin-top: -5px;
-  margin-right: -5px;
-  -webkit-transition: all 0.36s;
-  -o-transition: all 0.36s;
-  transition: all 0.36s;
 }
 
 .polite .link {
@@ -4372,6 +4397,17 @@ a {
 
 .polite .link :hover {
   display: none;
+}
+
+#thanks {
+  padding-bottom: 2.5rem;
+}
+
+.politic {
+  font-size: 1em;
+  font-size: 12px;
+  color: #7a7a7a;
+  margin-top: 1.25em;
 }/*==========  Mobile First  ==========*//*==========  Desktop First  ==========*//* Large Devices, Wide Screens *//* Medium Devices, Desktops *//* Small Devices, Tablets *//* Extra Small Devices, Phones *//* Custom, iPhone Retina */@font-face {
   font-family:"Bebas Neue Bold";font-style:normal;font-weight:normal;src:url("../fonts/BebasNeueBold/BebasNeueBold.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeueBold/BebasNeueBold.woff") format("woff"), url("../fonts/BebasNeueBold/BebasNeueBold.ttf") format("truetype");
 }
@@ -5087,8 +5123,8 @@ a {
     margin-bottom: 60px;
   }
 
-  .modal-text {
-    max-width: 1000px;
+  .modal-win {
+    padding: 5rem 3.75rem 1.875rem;
   }
 }
 
