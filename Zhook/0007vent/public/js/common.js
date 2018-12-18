@@ -4,23 +4,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
-
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			}
-
-		};
-
-	});
+ 
 
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
@@ -31,9 +15,7 @@ jQuery(document).ready(function ($) {
 		$("body, html").toggleClass("fixed");
 		return false;
 	});
-	$('.hidden-mnu ul li a').on('click', function () {
-		$(".hidden-mnu .toggle-mnu").click();
-	});
+ 
 	$(document).mouseup(function (e) {
 		var container = $(".hidden-mnu.active");
 		if (container.has(e.target).length === 0) {
@@ -117,6 +99,9 @@ jQuery(document).ready(function ($) {
 
 	//        return false;
 	//    });
+	$(" .footer__top").click(function () {
+	    $('html, body').animate({ scrollTop: 0 }, 1100); 
+	   });
 
 
 	// табы  . 
