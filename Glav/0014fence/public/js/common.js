@@ -314,4 +314,31 @@ jQuery(document).ready(function ($) {
 				parent: 'body'
 			 });
 										
+
+
+			 $(".wrapp-hidden .menu-item-has-children ").each(function(){
+				$(this).append('<div class="toggle-l"></div>');
+			})
+		
+			$( '.wrapp-hidden .menu-item-has-children  ').on('click', '.toggle-l', function(){
+					$(this).prev().slideToggle().parent().toggleClass("active");
+					return false;
+				}) 
+
+
+					// замедление ховера в меню
+	var $li = $('.menu-item-has-children').hover(
+		function () {
+			var self = this;
+			hovertimer = setTimeout(function () {
+				$(self).addClass('hover-block');
+				// $("html, .top-nav.fixed").addClass("fixed-brand");
+			}, 200);
+		},
+		function () {
+			clearTimeout(hovertimer);
+			$li.removeClass('hover-block');
+			$("html, .top-nav.fixed").removeClass("fixed-brand");
+		}
+	);
 });
