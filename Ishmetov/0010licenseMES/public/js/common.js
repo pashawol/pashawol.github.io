@@ -56,7 +56,7 @@ jQuery(document).ready(function ($) {
 	// листалка по стр
 	$(" .top-nav__link").click(function () {
 	       var elementClick = $(this).attr("href");
-	       var destination = $(elementClick).offset().top - 90;
+	       var destination = $(elementClick).offset().top - $('.top-nav').height();
 
 	           $('html, body').animate({ scrollTop: destination }, 1100);
 
@@ -93,7 +93,7 @@ jQuery(document).ready(function ($) {
 		slidesToScroll: 1,
 		dots: true,
 		speed: 450,
-		infinite: true,
+		infinite: false,
 		loop: true,
 		arrows: false,
 		mobileFirst: true,

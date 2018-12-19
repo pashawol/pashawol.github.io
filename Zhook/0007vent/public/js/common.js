@@ -139,6 +139,21 @@ jQuery(document).ready(function ($) {
 		nextArrow: arrl2,
 	});
 
+	
+	$('.s-manager__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 650,
+		loop: false, 
+		arrows: false, 
+		 
+	});
+
+$(".s-manager__btn-next--js").click(function(){
+	$('.s-manager__slider').slick('slickNext');
+})
+
 	$('.s-gal__slider,'+
 	' .s-project__slider--js ,'+
 	' .slider-for ,'+

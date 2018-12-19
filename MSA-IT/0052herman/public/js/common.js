@@ -61,7 +61,7 @@ jQuery(document).ready(function ($) {
 	function heightses() {
 
 		var w = $(window).width();
-		$(".main-wrapper").css("padding-bottom", $('footer').innerHeight() + 30)
+		$(".main-wrapper").css("padding-bottom", $('footer').height() + 30)
 	}
 
 	if (window.matchMedia("(min-width: 992px)").matches) {
