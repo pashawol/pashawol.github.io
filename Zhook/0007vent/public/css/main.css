@@ -7605,9 +7605,29 @@ select.form-control:focus::-ms-value {
   fill: currentColor;
 }
 
+.icon-bot {
+  font-size: 2.1rem;
+  width: 0.90476em;
+}
+
 .icon-check {
   font-size: 2.7rem;
   width: 1em;
+}
+
+.icon-icon {
+  font-size: 1.9rem;
+  width: 1.05263em;
+}
+
+.icon-image {
+  font-size: 3.2rem;
+  width: 1em;
+}
+
+.icon-play {
+  font-size: 2.9rem;
+  width: 0.93103em;
 }
 
 .icon-tel {
@@ -7894,7 +7914,6 @@ select.form-control:focus::-ms-value {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ffffff;
   z-index: 200;
 }
 
@@ -8134,6 +8153,14 @@ select.form-control:focus::-ms-value {
 
 .header-block {
   display: block;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.header-block__title {
+  padding-bottom: 0.625em;
 }
 
 .s-content--brand {
