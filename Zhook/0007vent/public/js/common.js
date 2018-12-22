@@ -81,14 +81,15 @@ jQuery(document).ready(function ($) {
 
 
 	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
+	$(" .scroll-link").click(function () {
+	       var elementClick = $(this).attr("href");
+	       var destination = $(elementClick).offset().top;
 
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
+	           $('html, body').animate({ scrollTop: destination }, 1100);
 
-	//        return false;
-	//    });
+	       return false;
+	   });
+
 	$(" .footer__top").click(function () {
 	    $('html, body').animate({ scrollTop: 0 }, 1100); 
 	   });
@@ -105,30 +106,15 @@ jQuery(document).ready(function ($) {
 		});
 	};
 	tabscostume('tabs');
+	tabscostume('s-tabs');
 
 
 
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<svg  width="8" height="14" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 8 14"><defs><path d="M261.14971,3252.44852l6.85581,6.37974c0.22488,0.22831 0.58971,0.22831 0.8147,0c0.22499,-0.22896 0.22499,-0.59956 0,-0.82787l-6.44257,-5.99556l6.44257,-5.99556c0.22499,-0.22896 0.22499,-0.59956 0,-0.82787c-0.22499,-0.22896 -0.58983,-0.22896 -0.8147,0l-6.85581,6.38039c-0.11993,0.12095 -0.1712,0.28393 -0.16308,0.44304c-0.00813,0.15975 0.04314,0.32144 0.16308,0.44368z" id="Path-0"/></defs><desc>Generated with Avocode.</desc><g transform="matrix(1,0,0,1,-261,-3245)"><g><title>8 copy 4</title><use xlink:href="#Path-0" fill="#6a6c6f" fill-opacity="1"/></g></g></svg>';
 
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
-	// карусель
-	$('.s-team__slider').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		dots: false,
-		speed: 450,
-		infinite: true,
-		loop: true,
-		arrows: true,
-		mobileFirst: true,
-		// centerMode: true,
-		// focusOnSelect: true ,
-		// variableWidth: true,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
-	});
-
+ 
 	
 	$('.s-manager__slider').slick({
 		slidesToShow: 1,
@@ -160,6 +146,87 @@ jQuery(document).ready(function ($) {
 		]
 		 
 	});
+
+	
+	$('.s-cards__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 650,
+		infinite: true,
+		arrows: true, 
+		mobileFirst: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		responsive: [
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+				 
+				}
+			},
+			
+			{
+				breakpoint: 375,
+				settings: {
+					slidesToShow: 2,
+				 
+				}
+			},
+
+		
+		]
+		 
+	});
+
+
+
+	$('.s-banner__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 650,
+		loop: false, 
+		arrows: true, 
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		adaptiveHeight: true
+	});
+
+
+		
+	$('.s-team__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 650,
+		infinite: true,
+		arrows: true, 
+		mobileFirst: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		responsive: [
+			{
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 4,
+				 
+				}
+			},
+			
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 3,
+				 
+				}
+			}
+		] 
+	});
+
+
+
 	$(".s-project-slider__btn-next--js").click(function(){
 		slickSlide.slick('slickNext');
 	})
@@ -171,7 +238,8 @@ $(".s-manager__btn-next--js").click(function(){
 
 	$('.s-project-slider--js,'+
 	' .s-project__slider--js ,'+
-	' .slider-for ,'+
+	' .s-cards__slider--js ,'+
+ 
 	' .slider-for2 ')
 .on('lazyLoaded', function(event, slick, image, imageSource){
 	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
@@ -221,5 +289,27 @@ $(".s-manager__btn-next--js").click(function(){
 		var str = $(this).attr('href');
 		$(this).attr('href', str.replace(/\s/g, ''));
 	})
+ 
+
+	$('.player_audio').click(function () {
+		if (this.paused == false) {
+			this.pause();
+			$(this).parent().removeClass("play");
+ 
+		} else {
+			// $('.player_audio').pause();
+			$("audio").trigger("pause").parent().removeClass("play");
+			this.play();
+			$(this).parent().addClass("play");
+ 
+		}
+	});
+	$('.player_audio').each(function () {
+ 
+		if ($('.player_audio').stopped == true){
+			
+			$(this).parent().removeClass("play");
+		 }
+	 })
  
 });
