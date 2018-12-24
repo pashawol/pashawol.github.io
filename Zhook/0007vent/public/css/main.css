@@ -1667,12 +1667,12 @@ a.btn.disabled,a.disabled.form-wrap__btn,a.disabled.top-nav__btn,a.disabled.s-co
           border-radius: 0.1875rem;
 }
 
-.btn-block,.form-wrap__btn,.s-contact__btn,.footer__btn {
+.btn-block,.form-wrap__btn,.s-contact__btn,.s-pdf .form-wrap__btn,.footer__btn {
   display: block;
   width: 100%;
 }
 
-.btn-block + .btn-block,.form-wrap__btn + .btn-block,.s-contact__btn + .btn-block,.footer__btn + .btn-block,.btn-block + .form-wrap__btn,.form-wrap__btn + .form-wrap__btn,.s-contact__btn + .form-wrap__btn,.footer__btn + .form-wrap__btn,.btn-block + .s-contact__btn,.form-wrap__btn + .s-contact__btn,.s-contact__btn + .s-contact__btn,.footer__btn + .s-contact__btn,.btn-block + .footer__btn,.form-wrap__btn + .footer__btn,.s-contact__btn + .footer__btn,.footer__btn + .footer__btn {
+.btn-block + .btn-block,.form-wrap__btn + .btn-block,.s-contact__btn + .btn-block,.s-pdf .form-wrap__btn + .btn-block,.footer__btn + .btn-block,.btn-block + .form-wrap__btn,.form-wrap__btn + .form-wrap__btn,.s-contact__btn + .form-wrap__btn,.footer__btn + .form-wrap__btn,.btn-block + .s-contact__btn,.form-wrap__btn + .s-contact__btn,.s-contact__btn + .s-contact__btn,.s-pdf .form-wrap__btn + .s-contact__btn,.footer__btn + .s-contact__btn,.s-pdf .btn-block + .form-wrap__btn,.s-pdf .s-contact__btn + .form-wrap__btn,.s-pdf .form-wrap__btn + .form-wrap__btn,.s-pdf .footer__btn + .form-wrap__btn,.btn-block + .footer__btn,.form-wrap__btn + .footer__btn,.s-contact__btn + .footer__btn,.s-pdf .form-wrap__btn + .footer__btn,.footer__btn + .footer__btn {
   margin-top: 0.5rem;
 }
 
@@ -7709,6 +7709,7 @@ select.form-control:focus::-ms-value {
   -webkit-transition: all 0.36s;
   -o-transition: all 0.36s;
   transition: all 0.36s;
+  cursor: pointer;
   margin: 10px;
 }
 
@@ -9234,6 +9235,51 @@ select.form-control:focus::-ms-value {
   bottom: -0.9375em;
 }
 
+.s-tabs__block {
+  padding: 30px 20px;
+  margin-top: 20px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: 1px solid #003b5b;
+  background-color: #ffffff;
+}
+
+.s-tabs__block .slick-dots {
+  position: absolute;
+  top: 0;
+}
+
+.s-tabs__slider {
+  padding-top: 40px;
+}
+
+.s-tabs__text-group {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 59, 91, 0.1);
+  color: #003b5b;
+}
+
+.s-tabs__text-group .row {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.s-tabs__count {
+  font-size: 50px;
+  font-weight: 100;
+}
+
+.s-tabs__text-col {
+  color: #003b5b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .s-banner h2:not(.strong) {
   font-weight: normal;
 }
@@ -9550,15 +9596,30 @@ select.form-control:focus::-ms-value {
 
 .s-team {
   position: absolute;
-  padding-top: 40px;
+  margin-top: 40px;
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 200;
+}
+
+.s-team__slide {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .s-team__slide .text-gray {
   font-size: 12px;
+}
+
+.s-team__slide .row {
+  margin-left: -0.4375rem;
+  margin-right: -0.4375rem;
+}
+
+.s-team__slide .row > * {
+  padding-left: 0.4375rem;
+  padding-right: 0.4375rem;
 }
 
 .s-team__link-bot {
@@ -9569,7 +9630,7 @@ select.form-control:focus::-ms-value {
   display: inline-block;
   font-size: 12px;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 2px;
   cursor: pointer;
 }
 
@@ -9585,9 +9646,73 @@ select.form-control:focus::-ms-value {
   border-color: transparent;
 }
 
+.s-team__modal {
+  top: 0;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 1000;
+  width: 342px;
+  display: none;
+  max-width: 100%;
+}
+
+.s-team__caption {
+  padding: 30px 30px;
+}
+
+.s-team__caption p {
+  font-size: 0.8125rem;
+}
+
 .s-team__slider {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.s-pdf .row {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.s-pdf__book {
+  background-image: url(../img/book.png);
+  -webkit-background-size: 100% 100%;
+          background-size: 100% 100%;
+  padding: 80px 40px 120px 80px;
+}
+
+.s-pdf__inner {
+  max-width: 354px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.s-pdf .form-wrap__btn {
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: #b0b0b0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  max-width: 100%;
+  color: #003b5b;
+  padding: 20px 30px;
+  line-height: 1;
+}
+
+.s-pdf .form-wrap__input-wrap {
+  padding-bottom: 0;
+}
+
+.s-pdf .form-wrap__input {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .footer {
@@ -11163,6 +11288,11 @@ a {
     padding-top: 200px !important;
   }
 
+  .s-team__slider {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .footer__right-col {
     margin-left: auto;
     max-width: 387px;
@@ -12112,9 +12242,21 @@ a {
     position: absolute;
   }
 
-  .s-team__slider {
-    padding-left: 50px;
-    padding-right: 50px;
+  .s-pdf__book {
+    padding-left: 120px;
+    padding-top: 42px;
+    padding-bottom: 170px;
+    padding-right: 85px;
+    min-height: 236px;
+    margin-left: -40px;
+    background-position: top left;
+  }
+
+  .s-pdf__book::before {
+    content: url(../img/label.png);
+    display: block;
+    text-align: right;
+    margin-left: auto;
   }
 
   .footer {
@@ -13049,6 +13191,10 @@ a {
     width: 205.2px;
     height: 64.2px;
     border-width: 10px;
+  }
+
+  .s-pdf__book {
+    padding-right: 60px;
   }
 
   .footer__title {
@@ -14822,6 +14968,12 @@ a {
   .s-tabs__content-head::before,.s-tabs__content-head::after,.s-tabs__content-foot::before,.s-tabs__content-foot::after {
     width: 342px;
     height: 107px;
+  }
+
+  .s-tabs__block {
+    max-width: 486px;
+    margin-top: 0;
+    padding: 40px 30px;
   }
 }
 

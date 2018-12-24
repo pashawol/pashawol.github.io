@@ -151,7 +151,8 @@ jQuery(document).ready(function ($) {
 
 		midClick: true,
 		removalDelay: 300,
-		mainClass: 'my-mfp-zoom-in'
+		mainClass: 'my-mfp-zoom-in',
+		tClose: 'Закрыть (Esc)',
 	});
 
 	// / modal window
@@ -265,5 +266,7 @@ jQuery(document).ready(function ($) {
 		});
 		// /form
 	
-
+		$(".header-block__bot").click(function(){
+			$('html, body').animate({ scrollTop: ($('.header-block').height() - $('.top-nav').height()) }, 1100);
+		})
 });

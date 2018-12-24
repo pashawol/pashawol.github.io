@@ -103,10 +103,20 @@ jQuery(document).ready(function ($) {
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 				.eq($(this).index()).fadeIn().addClass('active');
 
+				$('.s-tabs__slider--js').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: true,
+					speed: 650,
+					loop: false, 
+					arrows: false,   
+				});
 		});
 	};
 	tabscostume('tabs');
 	tabscostume('s-tabs');
+
+
 
 
 
@@ -194,6 +204,10 @@ jQuery(document).ready(function ($) {
 		adaptiveHeight: true
 	});
 
+	
+
+
+
 
 		
 	$('.s-team__slider--js').slick({
@@ -202,6 +216,7 @@ jQuery(document).ready(function ($) {
 		dots: false,
 		speed: 650,
 		infinite: true,
+		loop: true,
 		arrows: true, 
 		mobileFirst: true,
 		prevArrow: arrr2,
@@ -221,7 +236,16 @@ jQuery(document).ready(function ($) {
 					slidesToShow: 3,
 				 
 				}
-			}
+			},
+			
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				 
+				}
+			},
+
 		] 
 	});
 
@@ -312,4 +336,41 @@ $(".s-manager__btn-next--js").click(function(){
 		 }
 	 })
  
+	 	// позиция модалки в s-team
+	 $(document).on('click', '.s-team__link-bot--js', function(){
+				var th = $(this),
+						thPar = th.parents('.s-team__item'),
+						thParTop = thPar.position().top,
+						thParLeft = thPar.offset().left,
+						modal = $(".s-team__modal--js");
+			modal.find('img').attr('src', thPar.data('img'));
+			modal.find('.text-primary.h6').text(thPar.find('.text-primary.h6').text());
+			modal.find('.text-gray').text(thPar.find('.text-gray').text());
+			if ((thParLeft + modal.width()) > $(window).width()){ 
+				modal.css({ 
+					"left": 0, 
+				})
+			}
+			else{
+				modal.css({ 
+					"left": thParLeft, 
+				})
+			}
+					modal.css({
+						"top": thParTop, 
+					})
+			
+
+			modal.fadeIn();	
+	 })
+	 $(document).on('click', '.s-team__link-bot--hide-js', function(){
+		$(".s-team__modal--js").fadeOut();
+	 });
+	 
+	$(document).mouseup(function (e) {
+		var container = $(".s-team__modal--js");
+		if (container.has(e.target).length === 0 && $(".s-team__modal--js").is(':visible')) {
+			container.hide();
+		}
+	});
 });

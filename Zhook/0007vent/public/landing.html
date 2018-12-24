@@ -74,7 +74,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-auto d-none d-xl-block"><a class="top-nav__btn" href="#">Оставить заявку</a>
+              <div class="col-auto d-none d-xl-block"><a class="top-nav__btn" href="#" data-toggle="modal" data-target="#modal-win">Оставить заявку</a>
               </div>
               <div class="col-auto d-lg-none">
                 <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
@@ -186,7 +186,7 @@
             </div>
           </div>
           <div class="s-tabs__wrap">
-            <div class="s-tabs__content">
+            <div class="s-tabs__content active">
               <div class="row">
                 <div class="d-flex justify-content-between flex-column col-lg-6">
                   <div class="s-tabs__title h4 fw-500 text-primary">
@@ -198,7 +198,7 @@
                     <p class="h6">Даём гарантию на оборудование от 2 до 5 лет. Гарантия на монтаж —  3 года.</p>
                     <p class="h6">Ко всему оборудованию и комплектующим есть необходимые сертификаты для реализации на территории Украин</p>
                   </div>
-                  <div class="s-tabs__btn-wrap"><a class="btn btn-primary" href="#">Узнать стоимость оборудования</a><a class="btn btn-outline-primary" href="#">Приласить на тендер</a>
+                  <div class="s-tabs__btn-wrap"><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal-win">Узнать стоимость оборудования</a><a class="btn btn-outline-primary" href="#" data-toggle="modal" data-target="#modal-win">Приласить на тендер</a>
                   </div>
                 </div>
                 <div class="col-lg-6">
@@ -285,15 +285,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="s-tabs__content-foot"><a class="s-tabs__btn-foot btn btn-primary" href="#">Узнать стоимость ремонта</a>
+                <div class="s-tabs__content-foot"><a class="s-tabs__btn-foot btn btn-primary" href="#" data-toggle="modal" data-target="#modal-win">Узнать стоимость ремонта</a>
                 </div>
               </div>
               <div class="row"></div>
             </div>
             <!-- /+e.content-->
-            <div class="s-tabs__content active">
+            <div class="s-tabs__content">
               <div class="row">
-                <div class="d-flex justify-content-between flex-column col-xl-5 col-lg-6">
+                <div class="d-flex justify-content-between flex-column col-xl-5">
                   <div class="s-tabs__title h4 fw-500">Сервисное обслуживание увеличит ресурс работы оборудования и&nbsp;<strong class="text-primary">уменьшит расход электроэнергии </strong>
                     при эксплуатации
                   </div>
@@ -304,10 +304,174 @@
                     <p class="small text-gray">Мы приезжаем, читаем коды ошибок, которые зафиксировал за этот период контроллер  — по токам, давлению, температурам, запуску...</p>
                     <p class="small text-gray">Строго выполняем весь регламент работ, который прописывает производитель.</p>
                   </div>
-                  <div class="s-tabs__btn-wrap mb-0"><a class="btn btn-primary" href="#">Узнать стоимость оборудования</a><a class="btn btn-outline-primary" href="#">Приласить на тендер</a>
+                  <div class="s-tabs__btn-wrap mb-0"><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal-win">Узнать стоимость оборудования</a><a class="btn btn-outline-primary" href="#" data-toggle="modal" data-target="#modal-win">Приласить на тендер</a>
                   </div>
                 </div>
-                <div class="col"><img class="res-i" src="img/tab-img.jpg" alt=""/></div>
+                <div class="col-xl-7">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col d-none d-xxl-block"><img class="res-i" src="img/tab-img.jpg" alt=""/></div>
+                    <div class="col-xxl-7">
+                      <div class="s-tabs__block">
+                        <div class="h4 strong text-primary">Виды работ при выполнении сервисного обслуживания</div>
+                        <div class="s-tabs__slider s-tabs__slider--js">
+                          <div class="s-tabs__slide">
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">01
+                                </div>
+                                <div class="s-tabs__text-col col">Контроль состояния фильтров очистки воздуха, их чистка, при необходимости замена;
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">02
+                                </div>
+                                <div class="s-tabs__text-col col">Осмотр и очистка теплообменников и узлов регулирования
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">03
+                                </div>
+                                <div class="s-tabs__text-col col">Контрольные замеры напряжения и потребляемого тока
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">04
+                                </div>
+                                <div class="s-tabs__text-col col">Проверка работоспособности воздушных клапанов, их приводов
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">05
+                                </div>
+                                <div class="s-tabs__text-col col">Осмотр приводных ремней вентиляторов и их замена при необходимости
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">06
+                                </div>
+                                <div class="s-tabs__text-col col">Проверка работоспособности воздушных клапанов, их приводов
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- +e.slide-->
+                          <div class="s-tabs__slide">
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">01
+                                </div>
+                                <div class="s-tabs__text-col col">Контроль состояния фильтров очистки воздуха, их чистка, при необходимости замена;
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">02
+                                </div>
+                                <div class="s-tabs__text-col col">Осмотр и очистка теплообменников и узлов регулирования
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">03
+                                </div>
+                                <div class="s-tabs__text-col col">Контрольные замеры напряжения и потребляемого тока
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">04
+                                </div>
+                                <div class="s-tabs__text-col col">Проверка работоспособности воздушных клапанов, их приводов
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">05
+                                </div>
+                                <div class="s-tabs__text-col col">Осмотр приводных ремней вентиляторов и их замена при необходимости
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">06
+                                </div>
+                                <div class="s-tabs__text-col col">Проверка работоспособности воздушных клапанов, их приводов
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- +e.slide-->
+                          <div class="s-tabs__slide">
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">01
+                                </div>
+                                <div class="s-tabs__text-col col">Контроль состояния фильтров очистки воздуха, их чистка, при необходимости замена;
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">02
+                                </div>
+                                <div class="s-tabs__text-col col">Осмотр и очистка теплообменников и узлов регулирования
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">03
+                                </div>
+                                <div class="s-tabs__text-col col">Контрольные замеры напряжения и потребляемого тока
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">04
+                                </div>
+                                <div class="s-tabs__text-col col">Проверка работоспособности воздушных клапанов, их приводов
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">05
+                                </div>
+                                <div class="s-tabs__text-col col">Осмотр приводных ремней вентиляторов и их замена при необходимости
+                                </div>
+                              </div>
+                            </div>
+                            <div class="s-tabs__text-group">
+                              <div class="row">
+                                <div class="s-tabs__count col-auto">06
+                                </div>
+                                <div class="s-tabs__text-col col">Проверка работоспособности воздушных клапанов, их приводов
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- +e.slide-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- /+e.content.active-->
@@ -507,7 +671,7 @@
                 <p>Производительность установки — от 300 до 200 000м3/час.</p>
                 <p>Материалы корпуса — два металлических листа сэндвич панелей, а посередине минеральная вата толщиной от 30мм до бесконечности (больше 10см пока не ставили).</p>
                 <p><strong>А ещё ими удобно пользоваться — в некоторые секции встроены смотровые окошки.</strong></p>
-              </div><a class="btn btn-white" href="#">Узнать стоимость оборудования</a>
+              </div><a class="btn btn-white" href="#" data-toggle="modal" data-target="#modal-win">Узнать стоимость оборудования</a>
             </div>
             <div class="col align-self-center">
               <div class="s-banner__img-wrap"><img class="res-i" src="img/banner-img-1.png" alt=""/>
@@ -538,7 +702,7 @@
               <div class="s-banner__text text-primary">
                 <p>Можем обеспечить энергоэффективность системы класса А и удовлетворить последним требованиям Европейском директивы ЕrR 2016</p>
                 <p>Подбираем рекуператоры из качественных материалов — они не подвержены коррозии и рассчитаны на долгие годы эксплуатации.</p>
-              </div><a class="btn btn-primary" href="#">Сэкономить на электроэнергии</a>
+              </div><a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal-win">Сэкономить на электроэнергии</a>
             </div>
             <div class="col">
               <div class="s-banner__img-wrap"><img class="res-i" src="img/banner-img-2.png" alt=""/>
@@ -657,9 +821,9 @@
                     </div>
                     <div class="fw-600">Это часть документов, которые мы даём нашим клиентам</div>
                     <div class="row">
-                      <div class="col-auto"><a class="link-doc" href="#"><img src="img/doc-1.png" alt=""/>Договор-шаблон</a></div>
-                      <div class="col-auto"><a class="link-doc" href="#"><img src="img/doc-2.png" alt=""/>Коммерческое предложение</a></div>
-                      <div class="col-auto"><a class="link-doc" href="#"><img src="img/doc-3.png" alt=""/>Рентабельность</a></div>
+                      <div class="col-sm-auto"><a class="link-doc" href="#"><img src="img/doc-1.png" alt=""/>Договор-шаблон</a></div>
+                      <div class="col-sm-auto"><a class="link-doc" href="#"><img src="img/doc-2.png" alt=""/>Коммерческое предложение</a></div>
+                      <div class="col-sm-auto"><a class="link-doc" href="#"><img src="img/doc-3.png" alt=""/>Рентабельность</a></div>
                     </div>
                   </div>
                 </div>
@@ -721,98 +885,120 @@
       <div class="s-banner s-banner--team" id="s-banner">
         <!-- start s-team-->
         <div class="s-team">
-          <div class="container">
-            <div class="s-team__slider s-team__slider--js">
-              <div class="s-team__slide">
-                <div class="s-team__item">
-                  <div class="row"> 
-                    <div class="col-auto">
-                      <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-1.jpg" alt=""/>
+          <div class="s-team__modal-wrap">
+            <div class="s-team__modal s-team__modal--js">
+              <div class="s-team__modal-img-wrap"><img class="res-i" src="#" alt=""/>
+                <div class="s-team__caption">
+                  <div class="text-primary h6 strong mb-0">Лысик Богдан</div>
+                  <div class="text-gray">Инженер Проектировщик</div>
+                  <div class="s-team__link-bot s-team__link-bot--hide-js fw-500">Скрыть
+                    <svg class="icon icon-top ">
+                      <use xlink:href="img/svg/sprite.svg#top"></use>
+                    </svg>
+                  </div>
+                  <div class="s-team__text-block">
+                    <p>Увлеченный специалист в области проектирования инженерных систем.</p>
+                    <p>Умеет находить оптимальные решения для самых неординарных инженерно-технических задач.</p>
+                    <p>Свободно владеет современными технологиями трехмерного проектирования, с легкостью визуализирует проектное решение любой сложности — от небольшого загородного коттеджа до крупного производственного предприятия. </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-team__slider-wrap">
+            <div class="container">
+              <div class="s-team__slider s-team__slider--js">
+                <div class="s-team__slide">
+                  <div class="s-team__item" data-img="img/team-img.jpg">
+                    <div class="row"> 
+                      <div class="col-auto">
+                        <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-1.jpg" alt=""/>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col">
-                      <div class="text-primary h6 strong mb-0">Лысик Богдан</div>
-                      <div class="text-gray">Инженер Проектировщик</div>
-                      <div class="s-team__link-bot">Показать подробнее
-                        <svg class="icon icon-bot ">
-                          <use xlink:href="img/svg/sprite.svg#bot"></use>
-                        </svg>
+                      <div class="col">
+                        <div class="text-primary h6 strong mb-0">Лысик Богдан</div>
+                        <div class="text-gray">Инженер Проектировщик</div>
+                        <div class="s-team__link-bot s-team__link-bot--js fw-500">Показать подробнее
+                          <svg class="icon icon-bot ">
+                            <use xlink:href="img/svg/sprite.svg#bot"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="s-team__slide">
-                <div class="s-team__item">
-                  <div class="row"> 
-                    <div class="col-auto">
-                      <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-2.jpg" alt=""/>
+                <div class="s-team__slide">
+                  <div class="s-team__item" data-img="img/team-img.jpg">
+                    <div class="row"> 
+                      <div class="col-auto">
+                        <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-2.jpg" alt=""/>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col">
-                      <div class="text-primary h6 strong mb-0">Марчук Роман</div>
-                      <div class="text-gray">Инженер ОВиК</div>
-                      <div class="s-team__link-bot">Показать подробнее
-                        <svg class="icon icon-bot ">
-                          <use xlink:href="img/svg/sprite.svg#bot"></use>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="s-team__slide">
-                <div class="s-team__item">
-                  <div class="row"> 
-                    <div class="col-auto">
-                      <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-3.jpg" alt=""/>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="text-primary h6 strong mb-0">Николаенко Андрей</div>
-                      <div class="text-gray">Инженер ОВиК</div>
-                      <div class="s-team__link-bot">Показать подробнее
-                        <svg class="icon icon-bot ">
-                          <use xlink:href="img/svg/sprite.svg#bot"></use>
-                        </svg>
+                      <div class="col">
+                        <div class="text-primary h6 strong mb-0">Марчук Роман</div>
+                        <div class="text-gray">Инженер ОВиК</div>
+                        <div class="s-team__link-bot s-team__link-bot--js fw-500">Показать подробнее
+                          <svg class="icon icon-bot ">
+                            <use xlink:href="img/svg/sprite.svg#bot"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="s-team__slide">
-                <div class="s-team__item">
-                  <div class="row"> 
-                    <div class="col-auto">
-                      <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-4.jpg" alt=""/>
+                <div class="s-team__slide">
+                  <div class="s-team__item" data-img="img/team-img.jpg">
+                    <div class="row"> 
+                      <div class="col-auto">
+                        <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-3.jpg" alt=""/>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col">
-                      <div class="text-primary h6 strong mb-0">Донецкий Илья</div>
-                      <div class="text-gray">Инженер ОВиК</div>
-                      <div class="s-team__link-bot">Показать подробнее
-                        <svg class="icon icon-bot ">
-                          <use xlink:href="img/svg/sprite.svg#bot"></use>
-                        </svg>
+                      <div class="col">
+                        <div class="text-primary h6 strong mb-0">Николаенко Андрей</div>
+                        <div class="text-gray">Инженер ОВиК</div>
+                        <div class="s-team__link-bot s-team__link-bot--js fw-500">Показать подробнее
+                          <svg class="icon icon-bot ">
+                            <use xlink:href="img/svg/sprite.svg#bot"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="s-team__slide">
-                <div class="s-team__item">
-                  <div class="row"> 
-                    <div class="col-auto">
-                      <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-4.jpg" alt=""/>
+                <div class="s-team__slide">
+                  <div class="s-team__item" data-img="img/team-img.jpg">
+                    <div class="row"> 
+                      <div class="col-auto">
+                        <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-4.jpg" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="text-primary h6 strong mb-0">Донецкий Илья</div>
+                        <div class="text-gray">Инженер ОВиК</div>
+                        <div class="s-team__link-bot s-team__link-bot--js fw-500">Показать подробнее
+                          <svg class="icon icon-bot ">
+                            <use xlink:href="img/svg/sprite.svg#bot"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                    <div class="col">
-                      <div class="text-primary h6 strong mb-0">Донецкий Илья</div>
-                      <div class="text-gray">Инженер ОВиК</div>
-                      <div class="s-team__link-bot">Показать подробнее
-                        <svg class="icon icon-bot ">
-                          <use xlink:href="img/svg/sprite.svg#bot"></use>
-                        </svg>
+                  </div>
+                </div>
+                <div class="s-team__slide">
+                  <div class="s-team__item" data-img="img/team-img.jpg">
+                    <div class="row"> 
+                      <div class="col-auto">
+                        <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-4.jpg" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="text-primary h6 strong mb-0">Донецкий Илья</div>
+                        <div class="text-gray">Инженер ОВиК</div>
+                        <div class="s-team__link-bot s-team__link-bot--js fw-500">Показать подробнее
+                          <svg class="icon icon-bot ">
+                            <use xlink:href="img/svg/sprite.svg#bot"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -928,12 +1114,48 @@
       </div>
       <!-- end s-manager -->
       <!-- start s-pdf-->
-      <div class="s-pdf section" id="s-pdf">
+      <div class="s-pdf section bg-primary text-white" id="s-pdf">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-pdf</h2>
+          <div class="row">
+            <div class="col-xxl-4">
+              <h2 class="h3 strong">Вам нужно это прочесть  при подборе и&nbsp;монтаже вентиляционного оборудования</h2>
+              <p class="small">Мы работаем 10 лет и всё это время слышим от клиентов одни и те же грустные истории. Истории о том, как они раньше мучались , подбирая нужное оборудование и добросовестных монтажников. Через какие мытарства они прошли и сколько денег на этом потеряли.  </p>
+              <p class="small">Чтобы предотворатить всё это безобразие, мы создали спец-отчет, снабдили его реальными рекомендациями и пошаговыми инструкциями. А потом сократили отчёт в 4 раза, убрав всё пустословие и воду. </p>
+            </div>
+            <div class="col">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="s-pdf__book">
+                    <div class="s-pdf__inner">
+                      <div class="h6 strong">Отправим на почту файл с выжимкой</div>
+                      <div class="small">концентратом всех наших знаний о легком подборе и монтаже вентиляционного оборудования.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg">
+                  <div class="form-wrap">
+                    <form>
+                      <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="email" placeholder="Ваш e-mail"/>
+                                <div class="form-wrap__col col-sm-6">
+                                  <div class="form-wrap__big">
+                                  </div>
+                                  <div class="h6 strong text-primary"></div>
+                                  <div class="form-wrap__text">
+                                  </div>
+                                </div>
+                                <!-- .col-sm-6-->
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <button class="form-wrap__btn" type="submit">Забыть о проблемах с подбором оборудования
+                      </button>
+                      <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span> <span class="custom-input__text">Даю согласие на хранение и обработку персональных данных</span>
+                      </label>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row"></div>
         </div>
       </div>
       <!-- end s-pdf-->
@@ -1096,390 +1318,6 @@
       </div>
     </div>
     <!-- modal-->
-    <div class="modal fade bg-primary2" id="modal-vid" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-vid" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content text-white modal-win">
-          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-          <div class="modal-body"></div>
-        </div>
-      </div>
-    </div>
-    <!-- modal-->
-    <div class="modal fade bg-primary2" id="modal-skin" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-vid" aria-hidden="true">
-      <div class="skin modal-dialog modal-dialog-centered">
-        <div class="modal-content text-white modal-win container">
-          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-          <div class="modal-body text-white">
-            <div class="skin__title h2 text-center">Правда о том,что будет после удаления новообразования
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="skin__bigger">На месте новообразования формируется сухая корочка, которая отпадает сама в течение 10-14 дней. Она не вызывает дискомфорта.
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="skin__bigger">Покраснение кожи будет первые две — четыре недели в области обработки лазером.
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="skin__bigger">Но уже через несколько дней формируется здоровый участок кожи, по цвету ничем не отличающийся от окружающей ткани.
-                </div>
-              </div>
-            </div>
-            <div class="skin__row-wrap">
-              <div class="row justify-content-center">
-                <div class="col-lg-auto col-md-4 col-sm-6 text-center mb-4">
-                  <div class="skin__img-wrap mb-3"><img class="res-i" src="img/modal-1.jpg" alt=""/>
-                  </div>
-                  <p>До</p>
-                </div>
-                <div class="col-lg-auto col-md-4 col-sm-6 text-center mb-4">
-                  <div class="skin__img-wrap mb-3"><img class="res-i" src="img/modal-2.jpg" alt=""/>
-                  </div>
-                  <p>Сразу после удаления</p>
-                </div>
-                <div class="col-lg-auto col-md-4 col-sm-6 text-center mb-4">
-                  <div class="skin__img-wrap mb-3"><img class="res-i" src="img/modal-3.jpg" alt=""/>
-                  </div>
-                  <p>После</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- modal-->
-    <div class="modal fade bg-danger" id="modal-refuse" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-refuse" aria-hidden="true">
-      <div class="skin modal-dialog modal-dialog-centered">
-        <div class="modal-content text-white modal-win container">
-          <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-          <div class="modal-body text-white">
-            <div class="skin__title h2 text-center">От чего придётся на время отказаться
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="skin__bigger h6">НЕ нужно прерывать отдых или работу.
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="skin__bigger h6">Уже на следующий день вы можете войти в свой повседевный ритм жизни
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="skin__bigger h6">Есть только несколько ограничений, которым придётся придерживаться первое время.
-                </div>
-              </div>
-            </div>
-            <div class="skin__row-wrap">
-              <div class="row justify-content-center">
-                <div class="col-md-4 col-sm-6 text-center mb-4">
-                  <div class="skin__img-wrap mb-3"><img class="res-i" src="img/modal-2-1.jpg" alt=""/>
-                  </div>
-                  <p>Сократить до минимума пребывание на солнце и на 2-3 месяца отказаться от солярия и сауны</p>
-                </div>
-                <div class="col-md-4 col-sm-6 text-center mb-4">
-                  <div class="skin__img-wrap mb-3"><img class="res-i" src="img/modal-2-0.jpg" alt=""/>
-                  </div>
-                  <p>Не чесать и не тереть ранку</p>
-                </div>
-                <div class="col-md-4 col-sm-6 text-center mb-4">
-                  <div class="skin__img-wrap mb-3"><img class="res-i" src="img/modal-2-3.jpg" alt=""/>
-                  </div>
-                  <p>Если вы удалили родинку на лице, то до исчезновения корочки лучше отказаться от декоративной косметики, кремов и лосьонов.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- modal-->
-    <div class="modal fade" id="modal-calc" tabindex="-1" role="dialog" aria-labelledby="&quot;modal-calc" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-body">
-          <div class="form-wrap modal-content text-white modal-win container">
-            <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> ×</button>
-            <div class="form-wrap__head">
-              <div class="h4 strong">Проверьте родинку прямо сейчас</div>
-            </div>
-            <div class="calc text-center">
-              <div class="calc__section active">
-                <div class="calc__head">
-                  <div class="text-danger h6">Шаг 1 из 8</div>
-                  <div class="text-primary2 h6">Загрузите качественное фото родинки с расстояния 10 см</div>
-                </div>
-                <div class="calc__body">
-                  <div class="dropzone">
-                    <div class="fallback">
-                      <input type="file" name="file"/>
-                    </div>
-                  </div>
-                </div>
-                <div class="calc__foot">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-primarydisabled" type="button" disabled="disabled">Далее
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- +e.section-->
-              <div class="calc__section active">
-                <div class="calc__head">
-                  <div class="text-danger h6">Шаг 2 из 8</div>
-                  <div class="text-primary2 h6">Когда появилась родинка</div>
-                </div>
-                <div class="calc__body">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" checked="checked" name="polite2" required="required" value=""/><span class="custom-input__lab"></span>Совсем недавно
-                      </label>
-                    </div>
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" name="polite2" required="required" value=""/><span class="custom-input__lab"></span>Несколько месяцев назад
-                      </label>
-                    </div>
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" name="polite2" required="required" value=""/><span class="custom-input__lab"></span>С рождения
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calc__foot">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-outline-primary" type="button">Назад
-                      </button>
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-primary" type="button">Далее
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- +e.section-->
-              <div class="calc__section active">
-                <div class="calc__head">
-                  <div class="text-danger h6">Шаг 3 из 8</div>
-                  <div class="text-primary2 h6">Была ли в семье меланома или рак кожи?</div>
-                </div>
-                <div class="calc__body">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" checked="checked" name="polite32" required="required" value=""/><span class="custom-input__lab"></span>Да
-                      </label>
-                    </div>
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" name="polite32" required="required" value=""/><span class="custom-input__lab"></span>Нет
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calc__foot">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-outline-primary" type="button">Назад
-                      </button>
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-primary" type="button">Далее
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- +e.section-->
-              <div class="calc__section active">
-                <div class="calc__head">
-                  <div class="text-danger h6">Шаг 4 из 8</div>
-                  <div class="text-primary2 h6">Растёт ли родинка последние 6 месяцев?</div>
-                </div>
-                <div class="calc__body">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" checked="checked" name="polite3" required="required" value=""/><span class="custom-input__lab"></span>Да
-                      </label>
-                    </div>
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" name="polite3" required="required" value=""/><span class="custom-input__lab"></span>Нет
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calc__foot">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-outline-primary" type="button">Назад
-                      </button>
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-primary" type="button">Далее
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- +e.section-->
-              <div class="calc__section active">
-                <div class="calc__head">
-                  <div class="text-danger h6">Шаг 5 из 8</div>
-                  <div class="text-primary2 h6">Изменила ли родинка цвет?</div>
-                </div>
-                <div class="calc__body">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" checked="checked" name="polite31" required="required" value=""/><span class="custom-input__lab"></span>Да
-                      </label>
-                    </div>
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" name="polite31" required="required" value=""/><span class="custom-input__lab"></span>Нет
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calc__foot">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-outline-primary" type="button">Назад
-                      </button>
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-primary" type="button">Далее
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- +e.section-->
-              <div class="calc__section active">
-                <div class="calc__head">
-                  <div class="text-danger h6">Шаг 6 из 8</div>
-                  <div class="text-primary2 h6">Травмируется ли родинка?</div>
-                </div>
-                <div class="calc__body">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" checked="checked" name="polite311" required="required" value=""/><span class="custom-input__lab"></span>Да
-                      </label>
-                    </div>
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" name="polite311" required="required" value=""/><span class="custom-input__lab"></span>Нет
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calc__foot">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-outline-primary" type="button">Назад
-                      </button>
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-primary" type="button">Далее
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- +e.section-->
-              <div class="calc__section active">
-                <div class="calc__head">
-                  <div class="text-danger h6">Шаг 7 из 8</div>
-                  <div class="text-primary2 h6">Кровоточит или выделяет любую жидкость?</div>
-                </div>
-                <div class="calc__body">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" checked="checked" name="polite311" required="required" value=""/><span class="custom-input__lab"></span>Да
-                      </label>
-                    </div>
-                    <div class="col-sm-auto col-6">
-                      <label class="custom-input polite h6"><input class="custom-input__input custom-input__input-radio" type="radio" name="polite311" required="required" value=""/><span class="custom-input__lab"></span>Нет
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="calc__foot">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-outline-primary" type="button">Назад
-                      </button>
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-primary" type="button">Далее
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- +e.section-->
-              <div class="calc__section active">
-                <div class="calc__head">
-                  <div class="text-danger h2">Шаг 8 из 8</div>
-                  <div class="text-primary2 h6">Оставьте свой номер телефона &mdash; врач изучит Вашу фотографию, ответы на&nbsp;вопросы  и&nbsp;перезвонит Вам</div>
-                </div>
-                <div class="calc__body">
-                  <div class="form-wrap">
-                    <div class="form-wrap__input-wrap"> <input class="form-wrap__input" type="tel" placeholder="Введите ваш телефон" name="tel" required="required"/> 
-                    </div>
-                    <!-- +e.input-wrap-->
-                  </div>
-                </div>
-                <div class="calc__foot">
-                  <div class="row justify-content-center">
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-outline-primary" type="button">Назад
-                      </button>
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                      <button class="calc__btn btn btn-primary" type="button">Завершить
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- +e.section-->
-              <div class="calc__section active text-body">
-                <div class="calc__head pb-2">
-                  <div class="text-danger h2 text-center">Вам скоро перезвонят!</div>
-                  <div class="text-primary2 h6">А пока прочтите, почему регулярно проверять родинки так важно</div>
-                </div>
-                <div class="calc__body d-block text-left pl-4 pr-4 pb-0">
-                  <p>Меланома, рак кожи —  опасное онкологическое заболевание, занимает первое место среди самых агрессивных видов рака.</p>
-                  <p>Агрессивный, т.к. между первой стадией заболевания (вылечиваются 90% пациентов) и третьей (можно помочь только 30% пациентам), может пройти всего год или два.</p>
-                  <p>Меланома может развиваться из уже существующих родинок или появляется в виде новообразования, похожего на родинку.</p>
-                  <p>Причины развития — ультрафиолетовое излучение, причём не важно солнечное или искуственное от солярия и наследственная предрасположенность.</p>
-                  <div class="strong">Чтобы избежать меланомы, соблюдайте два простых правила:</div>
-                  <ul class="pl-4">
-                    <li>Не загарайте в период с 10:00 до 16:00</li>
-                    <li>Всегда перед выходом на улицу в солнечный день, одевайте головной убор, солнцезащитные очки и наносите солнцезащитное средство широкого спектра действия.	</li>
-                  </ul>
-                </div>
-              </div>
-              <!-- +e.section-->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- modal	-->
-    <div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanks" aria-hidden="true">
-      <div class="form-wrap modal-win modal-form text-center modal-win modal-form modal-dialog modal-content" role="document">
-        <button class="close mfp-close" type="button" data-dismiss="modal" aria-label="Close"> × </button>
-        <div class="form-wrap__head"> 
-          <div class="h5 strong"> Спасибо, мы получили Ваш телефон.</div>
-        </div><br/>
-        <div class="h4 strong">Будем рады помочь!</div>
-        <p>Перезвоним <span class="time-call">через 30 минут</span>,
-          как Вы просили.
-        </p><br/>
-        <div class="form-wrap__foot"><img class="res-i" src="img/thanks-img.jpg" alt=""/>
-        </div>
-      </div>
-    </div>
     <script src="js/jquery.min.js"></script>
     <script src="libs/bootstrap/util.js"></script>
     <script src="libs/bootstrap/modal.js"></script>
