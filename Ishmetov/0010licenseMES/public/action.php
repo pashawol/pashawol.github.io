@@ -12,14 +12,17 @@ $mail->CharSet = 'utf-8';
 ///от кого письмо  
 $mail->setFrom('info@info.com');
 
- $mail->addAddress('wol1414@gmail.com');
+//  $mail->addAddress('wol1414@gmail.com');
+ $mail->addAddress('pashtynov@gmail.com');
+ $mail->addAddress('krepost-s@mail.ru');
+//  $mail->addAddress('wol1414@gmail.com');
  // $mail->addAddress('horenkova369@gmail.com');
 // $mail->addAddress('stab@inbox.support');
 
 
 
 //Субъект
-$mail->Subject = 'Заявка с сайта';
+$mail->Subject = 'Заявка с сайта лицензирование24.рф';
 
 $time = date('d.m.Y в H:i');
 $html = '
@@ -35,6 +38,11 @@ $html = '
     if (!empty($_POST['tel'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
     }
+    
+    if (!empty($_POST['email'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td></tr>';
+    }
+
     if (!empty($_POST['vid'])) {
         $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вид деятельности</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['vid']) . '</b></td></tr>';
     }

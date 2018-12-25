@@ -222,11 +222,18 @@ jQuery(document).ready(function ($) {
 			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title') +'  <div class="text-primary2">'+th.data('type'));
 			$(th.attr('href')).find(".order").val(th.data('title') +' '+th.data('type'));
 		} 
+		else if($(this).is(".s-why__btn")){
+			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
+			$(th.attr('href')).find(".order").val(th.data('btn') +' '+ th.parent().find('.s-why__title').text());
+
+		}
+		
 		else{
 			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
 			$(th.attr('href')).find(".order").val(th.data('btn'));
 
 		}
+
 		$(th.attr('href')).find(".form-wrap__title-sub--js").text('Заполните форму, и мы свяжемся с Вами в течение дня для уточнения деталей');
 		$(th.attr('href')).find(".form-wrap__btn").val(th.data('btn'));
 		$(th.attr('href')).find(".btn-name").text(th.data('btn'));
@@ -261,12 +268,13 @@ jQuery(document).ready(function ($) {
 					th.trigger("reset");
 					// $.magnificPopup.close();
 				}, 4000);
+				ym(51692438, 'reachGoal', 'zakaz');
 			});
 			return false;
 		});
 		// /form
 	
 		$(".header-block__bot").click(function(){
-			$('html, body').animate({ scrollTop: ($('.header-block').height() - $('.top-nav').height()) }, 1100);
+			$('html, body').animate({ scrollTop: ($('.header-block').height() - $('.top-nav').height() +30) }, 1100);
 		})
 });
