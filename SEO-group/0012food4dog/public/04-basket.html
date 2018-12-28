@@ -287,7 +287,7 @@
         <!-- end s-basket-->
       </div>
       <!-- start s-order-->
-      <div class="s-order section" id="s-order">
+      <div class="s-order" id="s-order">
         <div class="s-order__body">
           <div class="s-order__group">
             <div class="container">
@@ -333,41 +333,75 @@
               </div>
             </div>
           </div>
-          <div class="s-order__group">
-            <div class="s-delivery" id="s-delivery"> 
-              <div class="container"> 
-                <div class="s-delivery__row row">
-                  <div class="col-lg-7">
-                    <div class="section-title"> 
-                      <h2><span class="d-none d-lg-block">Способы доставки </span><span class="d-lg-none">Доставка</span></h2>
-                    </div>
-                      <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="del"/><span class="s-delivery__item text"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-2.svg" alt=""/></span></span><span class="s-delivery__text col">Самовызов Москва, ул. Ленина 67, оф. 240 </span><span class="s-delivery__price col-auto">0 руб.</span></span></span>
-                      </label>
-                      <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="del"/><span class="s-delivery__item text"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-1.svg" alt=""/></span></span><span class="s-delivery__text col">Доставка курьером за МКАД. До двери Стриж (курьером) (3-4 дня)</span><span class="s-delivery__price col-auto">500 руб.</span></span></span>
-                      </label>
-                      <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="del"/><span class="s-delivery__item text"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-3.svg" alt=""/></span></span><span class="s-delivery__text col">Доставка курьером в пределах МКАД Стриж (курьером) (2 дня)</span><span class="s-delivery__price col-auto">300 руб.</span></span></span>
-                      </label>
-                      <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="del"/><span class="s-delivery__item text"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-4.svg" alt=""/></span></span><span class="s-delivery__text col">Доставка транспортной компанией в другой регион (5-7 дней)</span><span class="s-delivery__price col-auto">550 руб.</span></span></span>
-                      </label>
+          <div class="s-delivery" id="s-delivery"> 
+            <div class="container"> 
+              <div class="s-delivery__row row">
+                <div class="col-lg-7">
+                  <div class="section-title"> 
+                    <h2><span class="d-none d-lg-block">Способы доставки </span><span class="d-lg-none">Доставка</span></h2>
                   </div>
-                  <div class="col-xl-4 col">
-                    <div class="section-title"> 
-                      <h2><span class="d-none d-lg-block">Способы оплаты</span><span class="d-lg-none">Оплата</span></h2>
+                    <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="del"/><span class="s-delivery__item text"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-2.svg" alt=""/></span></span><span class="s-delivery__text col">Самовызов Москва, ул. Ленина 67, оф. 240 </span><span class="s-delivery__price col-auto">0 руб.</span></span></span>
+                    </label>
+                    <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="del"/><span class="s-delivery__item text"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-1.svg" alt=""/></span></span><span class="s-delivery__text col">Доставка курьером за МКАД. До двери Стриж (курьером) (3-4 дня)</span><span class="s-delivery__price col-auto">500 руб.</span></span></span>
+                    </label>
+                    <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="del"/><span class="s-delivery__item text"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-3.svg" alt=""/></span></span><span class="s-delivery__text col">Доставка курьером в пределах МКАД Стриж (курьером) (2 дня)</span><span class="s-delivery__price col-auto">300 руб.</span></span></span>
+                    </label>
+                    <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="del"/><span class="s-delivery__item text"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-4.svg" alt=""/></span></span><span class="s-delivery__text col">Доставка транспортной компанией в другой регион (5-7 дней)</span><span class="s-delivery__price col-auto">550 руб.</span></span></span>
+                    </label>
+                </div>
+                <div class="col-xl-4 col">
+                  <div class="section-title"> 
+                    <h2><span class="d-none d-lg-block">Способы оплаты</span><span class="d-lg-none">Оплата</span></h2>
+                  </div>
+                    <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="order"/><span class="s-delivery__item s-delivery__item--buy"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-5.svg" alt=""/></span></span><span class="s-delivery__text col">Наличные курьеру</span></span></span>
+                    </label>
+                    <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="order"/><span class="s-delivery__item s-delivery__item--buy"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-6.svg" alt=""/></span></span><span class="s-delivery__text col">Банковской картой курьеру</span></span></span>
+                    </label>
+                    <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="order"/><span class="s-delivery__item s-delivery__item--buy"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-7.svg" alt=""/></span></span><span class="s-delivery__text col">Способ оплыта уточнить при подтверждениии заказа</span></span></span>
+                    </label>
+                    <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="order"/><span class="s-delivery__item s-delivery__item--buy"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-8.svg" alt=""/></span></span><span class="s-delivery__text col">Банковской картой на сайте (Яндекс.Касса)</span></span></span>
+                    </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="s-order__foot">
+          <div class="s-order__group">
+            <div class="container">
+              <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">Я согласен на обработку персональных данных</span>
+              </label>
+              <div class="row">
+                <div class="mb-3 col-sm">
+                  <div class="row">
+                    <div class="col-xxl">
+                      <div class="s-order__foot-text row no-gutters"> 
+                        <div class="col"><span class="with-dots">Доставка </span></div>
+                        <div class="col-auto">650 руб. </div>
+                      </div>
                     </div>
-                      <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="order"/><span class="s-delivery__item s-delivery__item--buy"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-5.svg" alt=""/></span></span><span class="s-delivery__text col">Наличные курьеру</span></span></span>
-                      </label>
-                      <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="order"/><span class="s-delivery__item s-delivery__item--buy"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-6.svg" alt=""/></span></span><span class="s-delivery__text col">Банковской картой курьеру</span></span></span>
-                      </label>
-                      <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="order"/><span class="s-delivery__item s-delivery__item--buy"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-7.svg" alt=""/></span></span><span class="s-delivery__text col">Способ оплыта уточнить при подтверждениии заказа</span></span></span>
-                      </label>
-                      <label class="s-delivery__col"> <input class="s-delivery__input" type="radio" name="order"/><span class="s-delivery__item s-delivery__item--buy"><span class="row align-items-center"><span class="col-auto"><span class="s-delivery__img-wrap"><img src="img/s-delivery-8.svg" alt=""/></span></span><span class="s-delivery__text col">Банковской картой на сайте (Яндекс.Касса)</span></span></span>
-                      </label>
+                    <div class="col-xxl">
+                      <div class="s-order__foot-text row no-gutters"> 
+                        <div class="col"><span class="with-dots">Стоимость товаров</span></div>
+                        <div class="col-auto">1 049 руб.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3 col-sm-auto text-sm-left text-center">
+                  <div class="h1 fw-300">Итого: 8 456 руб.</div>
+                </div>
+                <div class="col-xl-auto">
+                  <div class="row">
+                    <div class="col-sm-auto mb-3"><a class="s-order__btn" href="#">Оформить заказ</a>
+                    </div>
+                    <div class="col-sm-auto mb-3"><a class="s-order__btn" href="#">Оплатить через Яндекс</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row"></div>
         </div>
       </div>
       <!-- end s-order-->
