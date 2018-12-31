@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
- 
+
 
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
 		$("body, html").toggleClass("fixed");
 		return false;
 	});
- 
+
 	$(document).mouseup(function (e) {
 		var container = $(".hidden-mnu.active");
 		if (container.has(e.target).length === 0) {
@@ -55,7 +55,7 @@ jQuery(document).ready(function ($) {
 
 		var topNav = $(".top-nav").innerHeight();
 		var topH = $("header ").innerHeight();
-		$(".header-block").css("paddingTop", topNav); 
+		$(".header-block").css("paddingTop", topNav);
 	}
 
 	if (window.matchMedia("(min-width: 992px)").matches) {
@@ -82,17 +82,21 @@ jQuery(document).ready(function ($) {
 
 	// листалка по стр
 	$(" .scroll-link").click(function () {
-	       var elementClick = $(this).attr("href");
-	       var destination = $(elementClick).offset().top;
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
 
-	           $('html, body').animate({ scrollTop: destination }, 1100);
+		$('html, body').animate({
+			scrollTop: destination
+		}, 1100);
 
-	       return false;
-	   });
+		return false;
+	});
 
 	$(" .footer__top").click(function () {
-	    $('html, body').animate({ scrollTop: 0 }, 1100); 
-	   });
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1100);
+	});
 
 
 	// табы  . 
@@ -103,14 +107,14 @@ jQuery(document).ready(function ($) {
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
 				.eq($(this).index()).fadeIn().addClass('active');
 
-				$('.s-tabs__slider--js').slick({
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					dots: true,
-					speed: 650,
-					loop: false, 
-					arrows: false,   
-				});
+			$('.s-tabs__slider--js').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				dots: true,
+				speed: 650,
+				loop: false,
+				arrows: false,
+			});
 		});
 	};
 	tabscostume('tabs');
@@ -124,70 +128,67 @@ jQuery(document).ready(function ($) {
 
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
- 
-	
+
+
 	$('.s-manager__slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
 		speed: 650,
-		loop: false, 
-		arrows: false, 
-		 
+		loop: false,
+		arrows: false,
+
 	});
- 
-  var slickSlide = $('.s-project-slider--js'); 
+
+	var slickSlide = $('.s-project-slider--js');
 	slickSlide.slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
 		speed: 650,
 		infinite: true,
-		arrows: false, 
+		arrows: false,
 		mobileFirst: true,
-		responsive: [
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 2,
-				 
-				}
-			} 
-		]
-		 
+		responsive: [{
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 2,
+
+			}
+		}]
+
 	});
 
-	
+
 	$('.s-cards__slider--js').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
 		speed: 650,
 		infinite: true,
-		arrows: true, 
+		arrows: true,
 		mobileFirst: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
-		responsive: [
-			{
+		responsive: [{
 				breakpoint: 992,
 				settings: {
 					slidesToShow: 3,
-				 
+
 				}
 			},
-			
+
 			{
 				breakpoint: 375,
 				settings: {
 					slidesToShow: 2,
-				 
+
 				}
 			},
 
-		
+
 		]
-		 
+
 	});
 
 
@@ -197,19 +198,19 @@ jQuery(document).ready(function ($) {
 		slidesToScroll: 1,
 		dots: true,
 		speed: 650,
-		loop: false, 
-		arrows: true, 
+		loop: false,
+		arrows: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 		adaptiveHeight: true
 	});
 
-	
 
 
 
 
-		
+
+
 	$('.s-team__slider--js').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -217,59 +218,70 @@ jQuery(document).ready(function ($) {
 		speed: 650,
 		infinite: true,
 		loop: true,
-		arrows: true, 
+		arrows: true,
 		mobileFirst: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
-		responsive: [
-			{
+		responsive: [{
 				breakpoint: 1200,
 				settings: {
 					slidesToShow: 4,
-				 
+
 				}
 			},
-			
+
 			{
 				breakpoint: 992,
 				settings: {
 					slidesToShow: 3,
-				 
+
 				}
 			},
-			
+
 			{
 				breakpoint: 768,
 				settings: {
 					slidesToShow: 2,
-				 
+
 				}
 			},
 
-		] 
+		]
+	});
+	
+	$('.background').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 650,
+		infinite: true,
+		loop: true,
+		arrows: false,
+ 
 	});
 
 
 
-	$(".s-project-slider__btn-next--js").click(function(){
+
+	$(".s-project-slider__btn-next--js").click(function () {
 		slickSlide.slick('slickNext');
 	})
-	
-$(".s-manager__btn-next--js").click(function(){
-	$('.s-manager__slider').slick('slickNext');
-})
+
+	$(".s-manager__btn-next--js").click(function () {
+		$('.s-manager__slider').slick('slickNext');
+	})
 
 
-	$('.s-project-slider--js,'+
-	' .s-project__slider--js ,'+
-	' .s-cards__slider--js ,'+
- 
-	' .slider-for2 ')
-.on('lazyLoaded', function(event, slick, image, imageSource){
-	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-});
+	$('.s-project-slider--js,' +
+			' .s-project__slider--js ,' +
+			' .s-cards__slider--js ,' +
+
+			' .slider-for2 ')
+		.on('lazyLoaded', function (event, slick, image, imageSource) {
+			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+		});
 	// slider
-	 
+
 
 	// modal галерея
 	$(".gal").each(function () {
@@ -291,7 +303,7 @@ $(".s-manager__btn-next--js").click(function(){
 		});
 	})
 	// /modal галерея
- 
+
 	// mask for input
 	var customOptions = {
 		onKeyPress: function (val, e, field, options) {
@@ -307,70 +319,134 @@ $(".s-manager__btn-next--js").click(function(){
 
 	// / mask for input
 
-  
+
 	// убираем пробелы в телефоне
 	$('[href^="tel:"]').each(function () {
 		var str = $(this).attr('href');
 		$(this).attr('href', str.replace(/\s/g, ''));
 	})
- 
+
 
 	$('.player_audio').click(function () {
 		if (this.paused == false) {
 			this.pause();
 			$(this).parent().removeClass("play");
- 
+
 		} else {
 			// $('.player_audio').pause();
 			$("audio").trigger("pause").parent().removeClass("play");
 			this.play();
 			$(this).parent().addClass("play");
- 
+
 		}
 	});
 	$('.player_audio').each(function () {
- 
-		if ($('.player_audio').stopped == true){
-			
-			$(this).parent().removeClass("play");
-		 }
-	 })
- 
-	 	// позиция модалки в s-team
-	 $(document).on('click', '.s-team__link-bot--js', function(){
-				var th = $(this),
-						thPar = th.parents('.s-team__item'),
-						thParTop = thPar.position().top,
-						thParLeft = thPar.offset().left,
-						modal = $(".s-team__modal--js");
-			modal.find('img').attr('src', thPar.data('img'));
-			modal.find('.text-primary.h6').text(thPar.find('.text-primary.h6').text());
-			modal.find('.text-gray').text(thPar.find('.text-gray').text());
-			if ((thParLeft + modal.width()) > $(window).width()){ 
-				modal.css({ 
-					"left": 0, 
-				})
-			}
-			else{
-				modal.css({ 
-					"left": thParLeft, 
-				})
-			}
-					modal.css({
-						"top": thParTop, 
-					})
-			
 
-			modal.fadeIn();	
-	 })
-	 $(document).on('click', '.s-team__link-bot--hide-js', function(){
+		if ($('.player_audio').stopped == true) {
+
+			$(this).parent().removeClass("play");
+		}
+	})
+
+	// позиция модалки в s-team
+	$(document).on('click', '.s-team__link-bot--js', function () {
+		var th = $(this),
+			thPar = th.parents('.s-team__item'),
+			thParTop = thPar.position().top,
+			thParLeft = thPar.offset().left,
+			modal = $(".s-team__modal--js");
+		modal.find('img').attr('src', thPar.data('img'));
+		modal.find('.text-primary.h6').text(thPar.find('.text-primary.h6').text());
+		modal.find('.text-gray').text(thPar.find('.text-gray').text());
+		if ((thParLeft + modal.width()) > $(window).width()) {
+			modal.css({
+				"left": 0,
+			})
+		} else {
+			modal.css({
+				"left": thParLeft,
+			})
+		}
+		modal.css({
+			"top": thParTop,
+		})
+
+
+		modal.fadeIn();
+	})
+	$(document).on('click', '.s-team__link-bot--hide-js', function () {
 		$(".s-team__modal--js").fadeOut();
-	 });
-	 
+	});
+
 	$(document).mouseup(function (e) {
 		var container = $(".s-team__modal--js");
 		if (container.has(e.target).length === 0 && $(".s-team__modal--js").is(':visible')) {
 			container.hide();
 		}
 	});
+
+
+	// адаптивные табы
+	$('.tabs--js').easyResponsiveTabs();
+
+
+	$('.s-banner__link').click(function(){
+			var th= $(this),
+					par = th.parent(),
+					thLink = $(th.data('target'));
+			thLink.find('.resp-tab-btn').eq(par.index()).click();
+	})	
+
+
+// 	// паралакс на стр кейсов
+// 	var elem = $.jInvertScroll(['.scroll'],        // an array containing the selector(s) for the elements you want to animate
+// 	{
+// 	height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+// 	onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+// 			console.log(percent);
+// 	}
+// });
+
+// $(window).resize(function() {
+// if ($(window).width() <= 768) {
+// 	elem.destroy();
+// }
+// else {
+// 	elem.reinitialize();
+// }
+// });
 });
+
+
+// -------------------------------------------------------------
+	//   Crazy
+	// -------------------------------------------------------------
+	(function () {
+		var $frame  = $('#crazy');
+		var $slidee = $frame.children('ul').eq(0);
+		var $wrap   = $frame.parent();
+
+		// Call Sly on frame
+		$frame.sly({
+			horizontal: 1,
+			itemNav: 'basic',
+			smart: 1,
+			activateOn: 'click',
+			mouseDragging: 1,
+			touchDragging: 1,
+			releaseSwing: 1,
+			startAt: 1,
+			scrollBar: '.scrollbar',
+			scrollBy: 1, 
+			activatePageOn: 'click',
+			speed: 300,
+			// elasticBounds: 1,
+			// easing: 'easeOutExpo',
+			dragHandle: 1,
+			dynamicHandle: 1, 
+
+ 
+		});
+  
+	}());
+ 
