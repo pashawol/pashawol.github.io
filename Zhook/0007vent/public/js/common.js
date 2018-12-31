@@ -427,9 +427,7 @@ var galleryThumb = new Swiper('.swiper-container-text', {
 		snapOnRelease: true,
 		dragSize: '1',
 	},
-	freeMode: true,
-	watchSlidesVisibility: true,
-	watchSlidesProgress: true,
+	freeMode: true, 
 	// pagination: {
 		// 	el: '.swiper-pagination',
 		// 	type: 'fraction',
@@ -441,8 +439,7 @@ var galleryThumb = new Swiper('.swiper-container-text', {
 		slidesPerView: 1,
 	 
 		autoplay: {
-			delay: 5000,
-			waitForTransition: false
+			delay: 5000, 
 		},
 		loop: true,
 });
