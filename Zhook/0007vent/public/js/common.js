@@ -249,16 +249,16 @@ jQuery(document).ready(function ($) {
 		]
 	});
 	
-	$('.background').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		dots: false,
-		speed: 650,
-		infinite: true,
-		loop: true,
-		arrows: false,
+	// $('.background').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	dots: false,
+	// 	speed: 650,
+	// 	infinite: true,
+	// 	loop: true,
+	// 	arrows: false,
  
-	});
+	// });
 
 
 
@@ -417,36 +417,66 @@ jQuery(document).ready(function ($) {
 // });
 });
 
+var galleryThumb = new Swiper('.swiper-container-text', {
+	slidesPerView: 'auto',
+	mousewheel: true,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		// hide: true,
+		draggable: true,
+		snapOnRelease: true,
+		dragSize: '1',
+	},
+	freeMode: true,
+	watchSlidesVisibility: true,
+	watchSlidesProgress: true,
+	// pagination: {
+		// 	el: '.swiper-pagination',
+		// 	type: 'fraction',
+		// 	clickable: true,
+		// },
+	});
+	
+	var galleryTop = new Swiper('.swiper-container-img', {
+		slidesPerView: 1,
+	 
+		autoplay: {
+			delay: 5000,
+			waitForTransition: false
+		},
+		loop: true,
+});
 
 // -------------------------------------------------------------
 	//   Crazy
 	// -------------------------------------------------------------
-	(function () {
-		var $frame  = $('#crazy');
-		var $slidee = $frame.children('ul').eq(0);
-		var $wrap   = $frame.parent();
+	// (function () {
+	// 	var $frame  = $('#crazy');
+	// 	var $slidee = $frame.children('ul').eq(0);
+	// 	var $wrap   = $frame.parent();
 
-		// Call Sly on frame
-		$frame.sly({
-			horizontal: 1,
-			itemNav: 'basic',
-			smart: 1,
-			activateOn: 'click',
-			mouseDragging: 1,
-			touchDragging: 1,
-			releaseSwing: 1,
-			startAt: 1,
-			scrollBar: '.scrollbar',
-			scrollBy: 1, 
-			activatePageOn: 'click',
-			speed: 300,
-			// elasticBounds: 1,
-			// easing: 'easeOutExpo',
-			dragHandle: 1,
-			dynamicHandle: 1, 
+	// 	// Call Sly on frame
+	// 	$frame.sly({
+	// 		horizontal: 1,
+	// 		itemNav: 'basic',
+	// 		smart: 1,
+	// 		activateOn: 'click',
+	// 		mouseDragging: 1,
+	// 		touchDragging: 1,
+	// 		releaseSwing: 1,
+	// 		startAt: 1,
+	// 		scrollBar: '.scrollbar',
+	// 		scrollBy: 1, 
+	// 		activatePageOn: 'click',
+	// 		speed: 300,
+	// 		// elasticBounds: 1,
+	// 		// easing: 'easeOutExpo',
+	// 		dragHandle: 1,
+	// 		dynamicHandle: 1, 
 
  
-		});
+	// 	});
   
-	}());
+	// }());
+ 
  
