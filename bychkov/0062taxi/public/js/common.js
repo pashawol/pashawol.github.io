@@ -4,7 +4,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
- 
+
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-mnu-1").click(function () {
 
@@ -56,7 +56,7 @@ jQuery(document).ready(function ($) {
 
 		// скрывает моб меню
 
-		var topH = $("header ").innerHeight();
+		var topH = $(".header-block ").innerHeight();
 
 		$(window).scroll(function () {
 			if ($(this).scrollTop() > topH) {
@@ -91,7 +91,7 @@ jQuery(document).ready(function ($) {
 
 
 	// листалка по стр
-	// $(" .top-nav a").click(function () {
+	// $(" .menu a").click(function () {
 	//        var elementClick = $(this).attr("href");
 	//        var destination = $(elementClick).offset().top;
 
@@ -100,7 +100,7 @@ jQuery(document).ready(function ($) {
 	//        return false;
 	//    });
 
- 
+
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -120,14 +120,13 @@ jQuery(document).ready(function ($) {
 	});
 
 	// / modal window
- 
+
 	// mask for input
 	var customOptions = {
 		onKeyPress: function (val, e, field, options) {
 
 			if (val.replace(/\D/g, '').length === 2) {
-				val = val.replace('8', '');
-				field.val(val);
+
 			}
 			field.mask("+7(000)000-00-00", options);
 		}
@@ -135,7 +134,7 @@ jQuery(document).ready(function ($) {
 	$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").mask("+7(000)000-00-00", customOptions);
 
 	// / mask for input
- 
+
 	// убираем пробелы в телефоне
 	$('[href^="tel:"]').each(function () {
 		var str = $(this).attr('href');
@@ -155,5 +154,11 @@ jQuery(document).ready(function ($) {
 	// });
 	// });
 
-
+	$('.popup-with-move-anim').click(function () {
+		var th = $(this); 
+			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
+			$(th.attr('href')).find(".order").val(th.data('order'));
+			$(th.attr('href')).find(".h6").text(th.data('h6'));
+		 
+	})
 });
