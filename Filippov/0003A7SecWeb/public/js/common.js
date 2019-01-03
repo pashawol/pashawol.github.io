@@ -14,30 +14,19 @@ jQuery(document).ready(function ($) {
 		$("body, html").toggleClass("fixed");
 		return false;
 	});
-	$('.hidden-mnu ul li a').on('click', function () {
-		$(".hidden-mnu .toggle-mnu").click();
-	});
-	$(document).mouseup(function (e) {
-		var container = $(".hidden-mnu.active");
-		if (container.has(e.target).length === 0) {
-			$(".toggle-mnu-1").removeClass("on");
-			// $("body").toggleClass("fixed");
-			$(".hidden-mnu").removeClass("active");
-			$("body, html").removeClass("fixed");
-		}
-	});
+ 
  
 	function heightses() {
 
 		var w = $(window).width();
-
 		// $(".main-wrapper").css("margin-bottom", $('footer').height())
 		// $(".otz__item .text-wrap ").height('auto').equalHeights();
 		//
-
-
+		
+		
 		// скрывает моб меню
-
+		
+		// $("header ").css('padding-bottom', $('.top-nav  ').height())
 		var topH = $("header ").innerHeight();
 
 		$(window).scroll(function () {
@@ -190,20 +179,8 @@ jQuery(document).ready(function ($) {
 	// /modal галерея
  
 
-	// mask for input
-	var customOptions = {
-		onKeyPress: function (val, e, field, options) {
-
-			if (val.replace(/\D/g, '').length === 2) {
-			 
-			}
-			field.mask("+7(000)000-00-00", options);
-		}
-	};
-	$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").mask("+7(000)000-00-00", customOptions);
-
-	// / mask for input
-
+	 // маска на инпут
+	 $("input[type='tel']").attr("pattern","[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+7(999)999-99-99"});
  
 
 	// кастомный инпут файл
@@ -243,5 +220,17 @@ jQuery(document).ready(function ($) {
 	// });
 	// });
 
-
+	//  для инпута пароля 
+	$(".validate-block--js").click(function(){
+		// ShowPassword('password-field-1')
+		var th = $(this),
+				thInput = th.parent().find('input');
+		if (thInput[0].type === "password") {
+			thInput[0].type = "text";
+			// passStatus.className='pass-status-pass';
+		} else {
+			thInput[0].type = "password";
+			// passStatus.className='pass-status-text';
+		}
+	})
 });
