@@ -233,4 +233,8 @@ jQuery(document).ready(function ($) {
 			// passStatus.className='pass-status-text';
 		}
 	})
+
+	$(".s-verification__head--js").click(function(){
+		$(this).next().slideToggle();
+	})
 });
