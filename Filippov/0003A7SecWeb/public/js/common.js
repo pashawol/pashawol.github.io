@@ -237,4 +237,44 @@ jQuery(document).ready(function ($) {
 	$(".s-verification__head--js").click(function(){
 		$(this).next().slideToggle();
 	})
+
+
+	$(".date-picker-block-js").each(function () {
+
+		var th = $(this);
+
+		th.find('.startDate').datepicker({
+			locale: 'ru-ru',
+			uiLibrary: 'bootstrap4',
+			// iconsLibrary: 'fontawesome',
+			format: 'dd.mm.yyyy',
+			// minDate: today,
+			select: function (e) {
+				th.find('.startDate').parents('label').removeClass("empty");
+			},
+			maxDate: function () {
+				return th.find('.endDate').val();
+			}
+		});
+		th.find('.endDate').datepicker({
+			locale: 'ru-ru',
+			uiLibrary: 'bootstrap4',
+			// iconsLibrary: 'fontawesome',
+			format: 'dd.mm.yyyy',
+
+			// select: function (e) {
+			// 	th.find('.endDate').parents('label').removeClass("empty");
+			// },
+			minDate: function () {
+				return th.find('.startDate').val();
+			}
+		});
+		th.find('input').next().hide();
+		// th.find('input').click(function () {
+		// 	$(this).next().click();
+		// })
+	})
+	$(".toggle-tr--js").click(function(){
+		$(this).next().find('.collapse-js').slideToggle();
+	})
 });

@@ -11,6 +11,7 @@
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#19bb70">
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/gijgo-master/css/gijgo.min.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -256,10 +257,123 @@
       </form>
     </div>
     <!-- #modal-faq-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-win modal-win--lg modal-form" id="modal-new-check">
+      <form>
+        <div class="text-center">
+          <div class="form-wrap__title h2">Новая проверка
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">Статус: <span class="text-danger">*</span></span>
+                <select class="form-wrap__input form-control" required="required">
+                  <option value="" selected="selected">Физическое лицо</option>
+                  <option value="">Физическое лицо</option>
+                  <option value="">Физическое лицо</option>
+                </select>
+              </label> 
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-md-6"></div>
+          <div class="col-md-6">
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">ФИО: <span class="text-danger">*</span></span><input class="form-wrap__input form-control" type="text" placeholder="Введите ФИО" required="required"/>
+              </label> 
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-md-6">
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">Дата рождения: <span class="text-danger">*</span></span><input class="form-wrap__input form-control" type="text" placeholder="ДД.ММ.ГГГГ " required="required"/>
+              </label> 
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-md-6">
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">Место рождения: <span class="text-danger">*</span></span><input class="form-wrap__input form-control" type="text" placeholder=" Введите место рождения" required="required"/>
+              </label> 
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-md-6">
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title"> Серия и № паспорта:<span class="text-danger">*</span></span><input class="form-wrap__input form-control" type="text" placeholder="Введите серию и номер " required="required"/>
+              </label> 
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-md-6">
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">Дата выдачи паспорта:<span class="text-danger">*</span></span><input class="form-wrap__input form-control" type="text" placeholder=" ДД.ММ.ГГГГГ" required="required"/>
+              </label> 
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-md-6"> 
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">Место прописки: </span><input class="form-wrap__input form-control" type="text" placeholder="Введите место прописки "/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-md-6"> 
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">Номер В/У: </span><input class="form-wrap__input form-control" type="text" placeholder="Введите номер В/У "/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-md-6"> 
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">Дата выдачи В/У:</span><input class="form-wrap__input form-control" type="text" placeholder="Введите дату выдачи В/У"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-md-6"> 
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">Введите телефон (Логин):</span><input class="form-wrap__input form-control" type="tel" placeholder="+7(___)___-__-__"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-md-6"> 
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">Место работы и должность:</span><input class="form-wrap__input form-control" type="text" placeholder="Место работы и должность"/>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-12">
+            <div class="form-wrap__input-wrap form-group">
+              <label><span class="form-wrap__title">Комментарий по желанию:</span><textarea class="form-wrap__input form-control" placeholder="Введите комментарий"></textarea>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+        </div>
+        <button class="form-wrap__btn" type="submit">Отправить
+        </button>
+      </form>
+    </div>
+    <!-- #modal-new-check-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-no-checks">
+      <div class="text-center">
+        <div class="form-wrap__title h2">У вас закончились<br/>проверки!
+        </div>
+        <p>Перейдите на страницу выбора пакета</p>
+      </div><a class="form-wrap__btn" href="#">Выбрать пакет</a>
+    </div>
+    <!-- #modal-no-checks-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
+    <script src="libs/gijgo-master/js/gijgo.js"></script>
+    <script src="libs/gijgo-master/js/messages/messages.ru-ru.js"></script>
     <script src="libs/jquery.inputmask.bundle.min.js"></script>
     <script src="js/common.js"></script>
   </body>
