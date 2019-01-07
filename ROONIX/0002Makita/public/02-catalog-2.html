@@ -18,14 +18,14 @@
     <link rel="stylesheet" href="libs/gijgo-master/css/demo.min.css">
     <link rel="stylesheet" href="css/main.min.css">
     <meta name="theme-color" content="#fa3f3e">
-    <link rel="stylesheet" href="css/style-metabo.min.css">
+    <link rel="stylesheet" href="css/style-makita.min.css">
   </head>
   <body>
     <div class="main-wrapper">
       <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
         <div class="wrapp-hidden">
           <div class="trop__head"> 
-            <div class="toggle-mnu toggle-mnu-2 on"><span> </span></div><a class="trop__logo" href="#"><img class="res-i" src="img/metabo.svg" alt=""/></a>
+            <div class="toggle-mnu toggle-mnu-2 on"><span> </span></div><a class="trop__logo" href="#"><img class="res-i" src="img/makita.svg" alt=""/></a>
           </div>
           <div class="catalog-nav">
             <div class="catalog-nav__btn-toggle"><span></span>Каталог товаров
@@ -82,6 +82,12 @@
                   </li>
                 </ul>
               </div>
+              <div class="col-auto"><a class="top-nav__link d-inline" href="#"> 
+                <svg class="icon icon-compare ">
+                  <use xlink:href="img/svg/sprite.svg#compare"></use>
+                </svg> Сравнить
+                <!-- скрывает счетчик если нет товаров в сравнении--><span class="top-nav__compare-count">6</span></a>
+              </div>
               <div class="col-auto">
                 <div class="top-nav__link">
                   <svg class="icon icon-user ">
@@ -103,7 +109,7 @@
               </div>
               <div class="aside-col col text-md-left text-center"><a class="top-line__logo" href="#">
                 <div class="row">
-                  <div class="col-auto"><img class="img-svg res-i" src="img/metabo.svg" alt=""/></div>
+                  <div class="col-auto"><img class="img-svg res-i" src="img/makita.svg" alt=""/></div>
                 </div></a>
               </div>
               <div class="main-col col-lg-9 col-auto d-none d-md-block">
@@ -314,6 +320,29 @@
               </div>
             </div>
             <!-- end aside-->
+            <div class="aside-catalogs d-none d-lg-block">
+              <div class="h6 strong pb-4">Электронный каталог Makita</div><a class="aside-catalogs__item" href="#">
+              <div class="row">
+                <div class="col-auto"><img class="res-i" src="img/pdf.jpg" alt=""/></div>
+                <div class="col"><span class="aside-catalogs__title">Электронный каталог Makita 2018</span><span class="aside-catalogs__text">Посмотреть или скачать в формате PDF</span>
+                </div>
+              </div></a><a class="aside-catalogs__item" href="#">
+              <div class="row">
+                <div class="col-auto"><img class="res-i" src="img/pdf.jpg" alt=""/></div>
+                <div class="col"><span class="aside-catalogs__title">Электронный каталог Makita 2018</span><span class="aside-catalogs__text">Посмотреть или скачать в формате PDF</span>
+                </div>
+              </div></a><a class="aside-catalogs__item" href="#">
+              <div class="row">
+                <div class="col-auto"><img class="res-i" src="img/pdf.jpg" alt=""/></div>
+                <div class="col"><span class="aside-catalogs__title">Электронный каталог Makita 2018</span><span class="aside-catalogs__text">Посмотреть или скачать в формате PDF</span>
+                </div>
+              </div></a><a class="aside-catalogs__item" href="#">
+              <div class="row">
+                <div class="col-auto"><img class="res-i" src="img/pdf.jpg" alt=""/></div>
+                <div class="col"><span class="aside-catalogs__title">Электронный каталог Makita 2018</span><span class="aside-catalogs__text">Посмотреть или скачать в формате PDF</span>
+                </div>
+              </div></a>
+            </div>
           </div>
           <div class="main-col col-lg-9">
             <div class="s-catalog-head">
@@ -382,23 +411,25 @@
                           <div class="strong">33 593 р. </div>
                         </div>
                         <div class="col-auto">
-                          <div class="strong small text-success">Есть в наличии</div>
+                          <div class="item-prod__presence strong small text-danger"> 
+                            <div class="item-prod__presence-badge">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/svg/sprite.svg#close"></use>
+                              </svg>
+                            </div>Нет в наличии
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
-                      <div class="item-prod__row row">
-                        <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
-                        </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
-                        </div>
-                      </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                      <button class="item-prod__btn btn btn-primary link-modal" type="button" data-src="#modal-notification">Уведомить о поступлении
+                      </button>
                     </div>
                     <div class="item-prod__caption">
                       <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
                       <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
-                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
-                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                      <!-- .text-gray.smallest Напряжение аккумулятора: 12 В-->
+                      <!-- .text-gray.smallest Емкость аккумулятора: 1,3 Ач-->
                     </div>
                     <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
                   </div>
@@ -446,7 +477,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -502,7 +533,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -550,23 +581,25 @@
                           <div class="strong">33 593 р. </div>
                         </div>
                         <div class="col-auto">
-                          <div class="strong small text-success">Есть в наличии</div>
+                          <div class="item-prod__presence strong small text-danger"> 
+                            <div class="item-prod__presence-badge">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/svg/sprite.svg#close"></use>
+                              </svg>
+                            </div>Нет в наличии
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
-                      <div class="item-prod__row row">
-                        <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
-                        </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
-                        </div>
-                      </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                      <button class="item-prod__btn btn btn-primary link-modal" type="button" data-src="#modal-notification">Уведомить о поступлении
+                      </button>
                     </div>
                     <div class="item-prod__caption">
                       <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
                       <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
-                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
-                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                      <!-- .text-gray.smallest Напряжение аккумулятора: 12 В-->
+                      <!-- .text-gray.smallest Емкость аккумулятора: 1,3 Ач-->
                     </div>
                     <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
                   </div>
@@ -614,7 +647,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -670,7 +703,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -718,23 +751,25 @@
                           <div class="strong">33 593 р. </div>
                         </div>
                         <div class="col-auto">
-                          <div class="strong small text-success">Есть в наличии</div>
+                          <div class="item-prod__presence strong small text-danger"> 
+                            <div class="item-prod__presence-badge">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/svg/sprite.svg#close"></use>
+                              </svg>
+                            </div>Нет в наличии
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
-                      <div class="item-prod__row row">
-                        <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
-                        </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
-                        </div>
-                      </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                      <button class="item-prod__btn btn btn-primary link-modal" type="button" data-src="#modal-notification">Уведомить о поступлении
+                      </button>
                     </div>
                     <div class="item-prod__caption">
                       <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
                       <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
-                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
-                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                      <!-- .text-gray.smallest Напряжение аккумулятора: 12 В-->
+                      <!-- .text-gray.smallest Емкость аккумулятора: 1,3 Ач-->
                     </div>
                     <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
                   </div>
@@ -782,7 +817,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -838,7 +873,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -886,23 +921,25 @@
                           <div class="strong">33 593 р. </div>
                         </div>
                         <div class="col-auto">
-                          <div class="strong small text-success">Есть в наличии</div>
+                          <div class="item-prod__presence strong small text-danger"> 
+                            <div class="item-prod__presence-badge">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/svg/sprite.svg#close"></use>
+                              </svg>
+                            </div>Нет в наличии
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
-                      <div class="item-prod__row row">
-                        <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
-                        </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
-                        </div>
-                      </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                      <button class="item-prod__btn btn btn-primary link-modal" type="button" data-src="#modal-notification">Уведомить о поступлении
+                      </button>
                     </div>
                     <div class="item-prod__caption">
                       <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
                       <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
-                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
-                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                      <!-- .text-gray.smallest Напряжение аккумулятора: 12 В-->
+                      <!-- .text-gray.smallest Емкость аккумулятора: 1,3 Ач-->
                     </div>
                     <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
                   </div>
@@ -950,7 +987,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -1006,7 +1043,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -1054,23 +1091,25 @@
                           <div class="strong">33 593 р. </div>
                         </div>
                         <div class="col-auto">
-                          <div class="strong small text-success">Есть в наличии</div>
+                          <div class="item-prod__presence strong small text-danger"> 
+                            <div class="item-prod__presence-badge">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/svg/sprite.svg#close"></use>
+                              </svg>
+                            </div>Нет в наличии
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
-                      <div class="item-prod__row row">
-                        <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
-                        </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
-                        </div>
-                      </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                      <button class="item-prod__btn btn btn-primary link-modal" type="button" data-src="#modal-notification">Уведомить о поступлении
+                      </button>
                     </div>
                     <div class="item-prod__caption">
                       <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
                       <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
-                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
-                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                      <!-- .text-gray.smallest Напряжение аккумулятора: 12 В-->
+                      <!-- .text-gray.smallest Емкость аккумулятора: 1,3 Ач-->
                     </div>
                     <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
                   </div>
@@ -1118,7 +1157,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -1174,7 +1213,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -1222,23 +1261,25 @@
                           <div class="strong">33 593 р. </div>
                         </div>
                         <div class="col-auto">
-                          <div class="strong small text-success">Есть в наличии</div>
+                          <div class="item-prod__presence strong small text-danger"> 
+                            <div class="item-prod__presence-badge">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/svg/sprite.svg#close"></use>
+                              </svg>
+                            </div>Нет в наличии
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
-                      <div class="item-prod__row row">
-                        <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
-                        </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
-                        </div>
-                      </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                      <button class="item-prod__btn btn btn-primary link-modal" type="button" data-src="#modal-notification">Уведомить о поступлении
+                      </button>
                     </div>
                     <div class="item-prod__caption">
                       <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
                       <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
-                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
-                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                      <!-- .text-gray.smallest Напряжение аккумулятора: 12 В-->
+                      <!-- .text-gray.smallest Емкость аккумулятора: 1,3 Ач-->
                     </div>
                     <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
                   </div>
@@ -1286,7 +1327,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -1342,7 +1383,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -1390,23 +1431,25 @@
                           <div class="strong">33 593 р. </div>
                         </div>
                         <div class="col-auto">
-                          <div class="strong small text-success">Есть в наличии</div>
+                          <div class="item-prod__presence strong small text-danger"> 
+                            <div class="item-prod__presence-badge">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/svg/sprite.svg#close"></use>
+                              </svg>
+                            </div>Нет в наличии
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
-                      <div class="item-prod__row row">
-                        <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
-                        </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
-                        </div>
-                      </div>
+                    <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                      <button class="item-prod__btn btn btn-primary link-modal" type="button" data-src="#modal-notification">Уведомить о поступлении
+                      </button>
                     </div>
                     <div class="item-prod__caption">
                       <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
                       <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
-                      <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
-                      <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                      <!-- .text-gray.smallest Напряжение аккумулятора: 12 В-->
+                      <!-- .text-gray.smallest Емкость аккумулятора: 1,3 Ач-->
                     </div>
                     <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
                   </div>
@@ -1454,7 +1497,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -1510,7 +1553,7 @@
                       <div class="item-prod__row row">
                         <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
                         </div>
-                        <div class="col"><a class="item-prod__btn btn btn-secondary" href="#">Сравнить</a>
+                        <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
                         </div>
                       </div>
                     </div>
@@ -1644,6 +1687,7 @@
           </div>
         </div>
       </footer>
+      <div class="btn-top"><img src="img/btn-top.svg" alt=""/></div>
     </div>
     <div class="form-wrap modal-win modal-form" id="modal-inner">
       <form class="js-form-validate">
@@ -1737,12 +1781,71 @@
         <!-- +e.input-wrap-->
         <div class="form-wrap__captcha"><img class="res-i" src="img/captcha.png" alt=""/>
         </div>
+        <div>
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text smallest text-gray">Нажимая на кнопку, я даю согласие на обработку персональных данных</span>
+          </label>
+        </div>
         <button class="form-wrap__btn btn btn-primary mb-4" type="submit">Обратный звонок
         </button>
-        <div class="smallest text-gray">Нажимая на кнопку, я даю согласие на обработку персональных данных</div>
       </form>
     </div>
     <!-- #modal-call-->
+    <div class="form-wrap modal-win modal-form" id="modal-compare">
+      <div class="form-wrap__head pb-4">
+        <div class="h6 strong">Товар %название товара% добавлен к сравнению </div>
+      </div>
+      <div class="row row--small">
+        <div class="col">
+          <button class="form-wrap__btn btn btn-secondary modal-close-js" type="button">Продолжить просмотр
+          </button>
+        </div>
+        <div class="col-auto"><a class="form-wrap__btn btn btn-primary" href="#">Сравнить</a>
+        </div>
+      </div>
+    </div>
+    <!-- #modal-compare-->
+    <div class="form-wrap modal-win modal-form" id="modal-notification">
+      <form class="js-form-validate">
+        <div class="form-wrap__head">
+          <div class="h2 strong">Уведомить о поступлении</div>
+        </div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Имя</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон</span>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div>
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text smallest text-gray">Нажимая на кнопку, я даю согласие на обработку персональных данных</span>
+          </label>
+        </div>
+        <button class="form-wrap__btn btn btn-primary mb-4" type="submit">Уведомить
+        </button>
+      </form>
+    </div>
+    <!-- #modal-notification-->
+    <button class="btn btn btn-primary link-modal" type="button" data-src="#modal-notification">Уведомить о поступлении
+    </button>
+    <div class="form-wrap modal-win modal-form" id="modal-delete">
+      <div class="form-wrap__head pb-4">
+        <div class="h6 strong">Вы действительно хотите удалить этот товар?</div>
+      </div>
+      <div class="row row--small">
+        <div class="col-auto">
+          <button class="form-wrap__btn btn btn-secondary" type="button">Отменить
+          </button>
+        </div>
+        <div class="col-auto"><a class="form-wrap__btn btn btn-primary" href="#">Удалить</a>
+        </div>
+      </div>
+    </div>
+    <!-- #modal-delete-->
+    <button class="btn btn btn-primary link-modal" type="button" data-src="#modal-delete">удалить этот товар
+    </button>
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/fancybox/jquery.fancybox.min.js"></script>
@@ -1756,6 +1859,8 @@
     <script src="libs/gijgo-master/js/messages/messages.ru-ru.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
     <script src="libs/jquery.touchSwipe.min.js"></script>
+    <script src="libs/sticky-kit.js"></script>
+    <script src="libs/equalHeights/equalHeights.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>ЛК Добавить реквизиты организации</title>
+    <title>Catalog_2 level</title>
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
@@ -226,341 +226,502 @@
       </header>
       <!-- end HEADER.header-->
       <div class="container">
-        <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Личный кабинет</a><span class="breadcrumb-item active">Добавить реквизиты организации</span>
+        <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Каталог</a><span class="breadcrumb-item active">Аккумуляторные дрели</span>
         </nav>
         <div class="page-title">
-          <h1>Личный кабинет</h1>
+          <h1>Аккумуляторные дрели</h1>
         </div>
         <div class="row row--main">
           <div class="aside-col col-lg-3">
             <!-- start aside-->
             <div class="aside">
-              <button class="aside__btn aside__btn--js btn btn btn-block btn-secondary d-lg-none" type="button">Меню кабинета
+              <button class="aside__btn aside__btn--js btn btn btn-block btn-secondary d-lg-none" type="button">Фильтровать
               </button>
-              <div class="aside__nav aside__nav--js d-lg-block">
-                <div class="aside__item"><a class="aside__link" href="#">История заказов</a>
+              <div class="aside-filter aside-filter--js d-lg-block">
+                <div class="aside-filter__group">
+                  <div class="aside-filter__title text-gray strong">Категория товара
+                  </div>
+                  <select class="aside-filter__select form-control">
+                    <option selected="selected">Аккумуляторные ножницы</option>
+                    <option>Аккумуляторные ножницы</option>
+                    <option>Аккумуляторные ножницы</option>
+                    <option>Аккумуляторные ножницы</option>
+                  </select>
                 </div>
-                <div class="aside__item"><a class="aside__link" href="#">Реквизиты организации</a>
+                <!-- +e.group-->
+                <div class="aside-filter__group">
+                  <div class="aside-filter__title text-gray strong">Наличие товара
+                  </div>
+                  <div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="nal"/><span class="custom-input__lab"></span><span class="custom-input__text">Только в наличии</span>
+                    </label>
+                  </div>
+                  <div>
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="nal"/><span class="custom-input__lab"></span><span class="custom-input__text">Все</span>
+                    </label>
+                  </div>
                 </div>
-                <div class="aside__item"><a class="aside__link aside__link--active" href="#">Адреса доставки</a>
+                <!-- +e.group-->
+                <div class="aside-filter__group">
+                  <div class="aside-filter__title text-gray strong">Мощность, Вт
+                  </div>
+                  <select class="aside-filter__select form-control">
+                    <option selected="selected">Все</option>
+                    <option>Аккумуляторные ножницы</option>
+                    <option>Аккумуляторные ножницы</option>
+                  </select>
                 </div>
-                <div class="aside__item"><a class="aside__link" href="#">Контактная информация</a>
+                <!-- +e.group-->
+                <div class="aside-filter__group">
+                  <div class="aside-filter__title text-gray strong">Число ударов на холостом ходу
+                  </div>
+                  <select class="aside-filter__select form-control">
+                    <option selected="selected">Все</option>
+                    <option>Аккумуляторные ножницы</option>
+                    <option>Аккумуляторные ножницы</option>
+                  </select>
+                </div>
+                <!-- +e.group-->
+                <div class="aside-filter__group">
+                  <div class="aside-filter__title text-gray strong">Цена, руб
+                  </div>
+                  <!--  в корне  в slier-range.php пример подключения слайдера с обраткой- делал другой проггер на битрикс-->
+                  <div class="aside-filter__rang-wrap slider-rang-wrap">
+                    <div class="row">
+                      <div class="col-6">
+                        <label class="aside-filter__input-wrap"> <span class="aside-filter__input aside-filter__input-minus input-slider-range">
+                          <input class="form-control minus" type="text" value="1"/></span>
+                        </label>
+                      </div>
+                      <div class="col-6">
+                        <label class="aside-filter__input-wrap"> <span class="aside-filter__input aside-filter__input-plus input-slider-range">
+                          <input class="form-control plus" type="text" value="1000"/></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="aside-filter__range aside-filter__range--1 slider-range filter">
+                      <input class="range-slider" type="text"/>
+                    </div>
+                  </div>
+                </div>
+                <!-- +e.group-->
+                <div class="aside-filter__group">
+                  <div class="row">
+                    <div class="col-6">
+                      <button class="aside-filter__btn btn btn-primary" ype="button">Применить
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button class="aside-filter__btn btn btn-secondary" ype="button">Сбросить
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <!-- end aside-->
+            <div class="aside-catalogs d-none d-lg-block">
+              <div class="h6 strong pb-4">Электронный каталог Makita</div><a class="aside-catalogs__item" href="#">
+              <div class="row">
+                <div class="col-auto"><img class="res-i" src="img/pdf.jpg" alt=""/></div>
+                <div class="col"><span class="aside-catalogs__title">Электронный каталог Makita 2018</span><span class="aside-catalogs__text">Посмотреть или скачать в формате PDF</span>
+                </div>
+              </div></a><a class="aside-catalogs__item" href="#">
+              <div class="row">
+                <div class="col-auto"><img class="res-i" src="img/pdf.jpg" alt=""/></div>
+                <div class="col"><span class="aside-catalogs__title">Электронный каталог Makita 2018</span><span class="aside-catalogs__text">Посмотреть или скачать в формате PDF</span>
+                </div>
+              </div></a><a class="aside-catalogs__item" href="#">
+              <div class="row">
+                <div class="col-auto"><img class="res-i" src="img/pdf.jpg" alt=""/></div>
+                <div class="col"><span class="aside-catalogs__title">Электронный каталог Makita 2018</span><span class="aside-catalogs__text">Посмотреть или скачать в формате PDF</span>
+                </div>
+              </div></a><a class="aside-catalogs__item" href="#">
+              <div class="row">
+                <div class="col-auto"><img class="res-i" src="img/pdf.jpg" alt=""/></div>
+                <div class="col"><span class="aside-catalogs__title">Электронный каталог Makita 2018</span><span class="aside-catalogs__text">Посмотреть или скачать в формате PDF</span>
+                </div>
+              </div></a>
+            </div>
           </div>
           <div class="main-col col-lg-9">
-            <div class="s-po section pt-0">
-              <div class="s-po__head">
-                <div class="h4 strong">Добавить реквизиты организации</div>
-              </div>
-              <div class="s-po__head">
-                <div class="row row--small">
-                  <div class="col-sm-6">
-                    <button class="s-po__btn s-po__btn--sm btn btn-block btn btn-primary btn-tab-js mb-2" type="submit" data-tab-block="reqv-vruch">Заполнить вручную
+            <div class="s-catalog-head">
+              <div class="row">
+                <div class="col">
+                  <label class="s-catalog-head__select-wrap"><span class="row row--small align-items-center"><span class="col-auto"><span class="text-gray">Сортировать: </span></span><span class="col">
+                        <select class="s-catalog-head__select form-control">
+                          <option selected>↑ по цене </option>
+                          <option>↓ по цене </option>
+                          <option>↑ по рейтингу</option>
+                          <option>↓ по рейтингу</option>
+                        </select></span></span>
+                  </label>
+                </div>
+                <div class="col-auto d-none d-md-block">
+                  <div class="s-catalog-head__btn-group">
+                    <button class="s-catalog-head__btn" type="button">
+                      <svg class="icon icon-view-1 ">
+                        <use xlink:href="img/svg/sprite.svg#view-1"></use>
+                      </svg>
+                    </button>
+                    <button class="s-catalog-head__btn active" type="button">
+                      <svg class="icon icon-view-2 ">
+                        <use xlink:href="img/svg/sprite.svg#view-2"></use>
+                      </svg>
                     </button>
                   </div>
-                  <div class="col-sm-6">
-                    <button class="s-po__btn s-po__btn--sm btn btn-block btn btn-secondary btn-tab-js mb-2" type="submit" data-tab-block="reqv-file">Добавить реквизиты файлом
-                    </button>
-                  </div>
                 </div>
               </div>
-              <div class="tab-radio-content-wrap">
-                <div class="tab-radio-content" id="reqv-vruch">
-                  <div class="form-wrap">
-                    <form class="js-form-validate">
-                      <div class="s-po-block">
-                        <div class="tab-radio-content-close tab-radio-content-close--js">
-                        </div>
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название компании*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон контактного лица*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">ИНН*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">КПП*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Юридический адрес*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Фактический адрес*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название банка*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">КОР банка*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">БИК*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Расчетный счет*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Генеральный директор*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон компании*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Электроная почта компании*</span>
-                          </label>
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__maxw">
-                          <div class="row row--small">
-                            <div class="col-md">
-                              <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Сохранить
-                              </button>
-                            </div>
-                            <div class="col">
-                              <button class="form-wrap__btn btn btn-block btn btn-secondary" type="submit">Не сохранять
-                              </button>
-                            </div>
-                            <div class="col">
-                              <button class="form-wrap__btn btn btn-block btn btn-secondary" type="submit">Удалить
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="small text-gray pb-3">* — поля обязательные для заполнения</div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <!--.tab-radio-content-->
-                <div class="tab-radio-content" id="reqv-file">
-                  <div class="form-wrap">
-                    <form class="js-form-validate">
-                      <div class="s-po-block">
-                        <div class="form-wrap__group">
-                          <div class="tab-radio-content-close tab-radio-content-close--js">
-                          </div>
-                          <div class="form-wrap__input-wrap form-group">
-                            <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Наименование организации (Полное)</span>
-                            </label>
-                          </div>
-                          <!-- +e.input-wrap-->
-                          <div class="form-wrap__maxw">
-                            <div class="smallest text-gray pb-3">Пожалуйста выберите файл (не болee 1 мегабайта), и нажмите кнопку загрузить.</div>
-                            <div class="add-file">
-                              <div class="row row--small">
-                                <div class="col-12 mb-3">
-                                  <div class="add-file__filename">
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <label><input class="add-file__input d-none" type="file"/><span class="add-file__btn btn btn-block btn btn-primary" role="button">Добавить файл</span>
-                                  </label>
-                                </div>
-                                <div class="col">
-                                  <button class="add-file__btn btn btn-block btn btn-secondary" type="submit">Сохранить
-                                  </button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <!--.tab-radio-content-->
-              </div>
-              <div class="s-po__head">
-                <div class="h4 strong">Реквизиты ваших организации:</div>
-              </div>
-              <div class="accordion">
-                <div class="accordion__toggle-btn">
-                  <div class="accordion__text accordion__text--name">Добавленные реквизиты
-                  </div>
-                </div>
-                <!-- +e.toggle-btn-->
-                <div class="accordion__toggle-block">
-                  <div class="form-wrap"> 
-                    <div class="form-wrap__maxw">
-                      <div class="form-wrap__group">
-                        <div class="form-wrap__table-block">
-                          <div class="row">
-                            <div class="col"><span>Название реквизитов</span></div>
-                            <div class="col-sm-auto">Значение  </div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Длинное название реквизитов</span></div>
-                            <div class="col-sm-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Электронная почта</span></div>
-                            <div class="col-sm-auto">jfhf@mail.ru</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Название реквизитов</span></div>
-                            <div class="col-sm-auto">Значение  </div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Длинное название реквизитов</span></div>
-                            <div class="col-sm-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Электронная почта</span></div>
-                            <div class="col-sm-auto">jfhf@mail.ru</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Электронная почта</span></div>
-                            <div class="col-sm-auto">jfhf@mail.ru</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-wrap__group">
-                        <button class="form-wrap__btn form-wrap__btn--md btn btn-block btn btn-primary" type="submit">Редактировать
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- +e.toggle-block-->
-              </div>
-              <!-- +b.accordion-->
-              <div class="accordion">
-                <div class="accordion__toggle-btn">
-                  <div class="accordion__text accordion__text--name">Добавленные реквизиты
-                  </div>
-                </div>
-                <!-- +e.toggle-btn-->
-                <div class="accordion__toggle-block">
-                  <div class="form-wrap"> 
-                    <div class="form-wrap__maxw">
-                      <div class="form-wrap__group">
-                        <div class="form-wrap__table-block">
-                          <div class="row">
-                            <div class="col"><span>Название реквизитов</span></div>
-                            <div class="col-sm-auto">Значение  </div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Длинное название реквизитов</span></div>
-                            <div class="col-sm-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Электронная почта</span></div>
-                            <div class="col-sm-auto">jfhf@mail.ru</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Название реквизитов</span></div>
-                            <div class="col-sm-auto">Значение  </div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Длинное название реквизитов</span></div>
-                            <div class="col-sm-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Электронная почта</span></div>
-                            <div class="col-sm-auto">jfhf@mail.ru</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Электронная почта</span></div>
-                            <div class="col-sm-auto">jfhf@mail.ru</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-wrap__group">
-                        <button class="form-wrap__btn form-wrap__btn--md btn btn-block btn btn-primary" type="submit">Редактировать
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- +e.toggle-block-->
-              </div>
-              <!-- +b.accordion-->
-              <div class="accordion">
-                <div class="accordion__toggle-btn">
-                  <div class="accordion__text accordion__text--name">Добавленные реквизиты
-                  </div>
-                </div>
-                <!-- +e.toggle-btn-->
-                <div class="accordion__toggle-block">
-                  <div class="form-wrap"> 
-                    <div class="form-wrap__maxw">
-                      <div class="form-wrap__group">
-                        <div class="form-wrap__table-block">
-                          <div class="row">
-                            <div class="col"><span>Название реквизитов</span></div>
-                            <div class="col-sm-auto">Значение  </div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Длинное название реквизитов</span></div>
-                            <div class="col-sm-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Электронная почта</span></div>
-                            <div class="col-sm-auto">jfhf@mail.ru</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Название реквизитов</span></div>
-                            <div class="col-sm-auto">Значение  </div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Длинное название реквизитов</span></div>
-                            <div class="col-sm-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Электронная почта</span></div>
-                            <div class="col-sm-auto">jfhf@mail.ru</div>
-                          </div>
-                          <div class="row">
-                            <div class="col"><span>Электронная почта</span></div>
-                            <div class="col-sm-auto">jfhf@mail.ru</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-wrap__group">
-                        <button class="form-wrap__btn form-wrap__btn--md btn btn-block btn btn-primary" type="submit">Редактировать
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- +e.toggle-block-->
-              </div>
-              <!-- +b.accordion-->
             </div>
+            <div class="head-text">При необходимости шлифовки различных материалов, удаления с поверхности мелких неровностей, дефектов, окалины либо ржавчины, чистки лакокрасочных покрытий, избавления от застарелых пятен грязи не обойтись без угловой шлифовальной машины, или болгарки. Этот инструмент незаменим также при резке арматуры, труб, прутов, плоских и профилированных металлических листов. Однако чтобы выполнять определенные работы в конкретных условиях, нужна УШМ определенного типа с соответствующей оснасткой.
+            </div>
+            <!-- start s-catalog-->
+            <div class="s-catalog"> 
+              <div class="s-catalog__row">
+                <div class="s-catalog__col col-12">
+                  <div class="item-prod item-prod--gor">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="item-prod__img-wrap item-prod__img-wrap--gor">
+                          <div class="item-prod__labels">
+                            <div class="item-prod__label bg-success">New
+                            </div>
+                          </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="item-prod__text item-prod__text--gor">
+                          <div class="item-prod__title item-prod__title--gor"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                          </div>
+                          <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span>
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span>
+                          </div>
+                          <div class="item-prod__caption item-prod__caption--hor">
+                            <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                            <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                            <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                            <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-prod__col item-prod__col--gor col-md-auto">
+                        <div class="item-prod__price-wrap mb-3">
+                          <div class="row">
+                            <div class="col">
+                              <div class="strong">33 593 р. </div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="strong small text-success">Есть в наличии</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
+                          <div class="item-prod__row row">
+                            <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
+                            </div>
+                            <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                  </div>
+                  <!-- +b.item-prod -->
+                </div>
+                <!-- +e.col.col-12-->
+                <div class="s-catalog__col col-12">
+                  <div class="item-prod item-prod--gor">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="item-prod__img-wrap item-prod__img-wrap--gor">
+                          <div class="item-prod__labels">
+                            <div class="item-prod__label bg-success">New
+                            </div>
+                          </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="item-prod__text item-prod__text--gor">
+                          <div class="item-prod__title item-prod__title--gor"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                          </div>
+                          <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span>
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span>
+                          </div>
+                          <div class="item-prod__caption item-prod__caption--hor">
+                            <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                            <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                            <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                            <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-prod__col item-prod__col--gor col-md-auto">
+                        <div class="item-prod__price-wrap mb-3">
+                          <div class="row">
+                            <div class="col">
+                              <div class="strong">33 593 р. </div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="strong small text-success">Есть в наличии</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
+                          <div class="item-prod__row row">
+                            <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
+                            </div>
+                            <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                  </div>
+                  <!-- +b.item-prod -->
+                </div>
+                <!-- +e.col.col-12-->
+                <div class="s-catalog__col col-12">
+                  <div class="item-prod item-prod--gor">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="item-prod__img-wrap item-prod__img-wrap--gor">
+                          <div class="item-prod__labels">
+                            <div class="item-prod__label bg-success">New
+                            </div>
+                          </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="item-prod__text item-prod__text--gor">
+                          <div class="item-prod__title item-prod__title--gor"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                          </div>
+                          <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span>
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span>
+                          </div>
+                          <div class="item-prod__caption item-prod__caption--hor">
+                            <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                            <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                            <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                            <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-prod__col item-prod__col--gor col-md-auto">
+                        <div class="item-prod__price-wrap mb-3">
+                          <div class="row">
+                            <div class="col">
+                              <div class="strong">33 593 р. </div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="strong small text-success">Есть в наличии</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
+                          <div class="item-prod__row row">
+                            <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
+                            </div>
+                            <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                  </div>
+                  <!-- +b.item-prod -->
+                </div>
+                <!-- +e.col.col-12-->
+                <div class="s-catalog__col col-12">
+                  <div class="item-prod item-prod--gor">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="item-prod__img-wrap item-prod__img-wrap--gor">
+                          <div class="item-prod__labels">
+                            <div class="item-prod__label bg-success">New
+                            </div>
+                          </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="item-prod__text item-prod__text--gor">
+                          <div class="item-prod__title item-prod__title--gor"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                          </div>
+                          <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span>
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span>
+                          </div>
+                          <div class="item-prod__caption item-prod__caption--hor">
+                            <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                            <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                            <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                            <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-prod__col item-prod__col--gor col-md-auto">
+                        <div class="item-prod__price-wrap mb-3">
+                          <div class="row">
+                            <div class="col">
+                              <div class="strong">33 593 р. </div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="strong small text-success">Есть в наличии</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
+                          <div class="item-prod__row row">
+                            <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
+                            </div>
+                            <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                  </div>
+                  <!-- +b.item-prod -->
+                </div>
+                <!-- +e.col.col-12-->
+                <div class="s-catalog__col col-12">
+                  <div class="item-prod item-prod--gor">
+                    <div class="row">
+                      <div class="col-sm-auto">
+                        <div class="item-prod__img-wrap item-prod__img-wrap--gor">
+                          <div class="item-prod__labels">
+                            <div class="item-prod__label bg-success">New
+                            </div>
+                          </div><a href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="item-prod__text item-prod__text--gor">
+                          <div class="item-prod__title item-prod__title--gor"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                          </div>
+                          <div class="rating-block"><span class="smallest text-gray">Рейтинг товара</span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span class="active">
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span><span>
+                              <svg class="icon icon-star-active ">
+                                <use xlink:href="img/svg/sprite.svg#star-active"></use>
+                              </svg></span>
+                          </div>
+                          <div class="item-prod__caption item-prod__caption--hor">
+                            <div class="text-gray smallest">Артикул: 06019B2901 / 0.601.9B2.901</div>
+                            <div class="text-gray smallest">Тип аккумулятора: Li-ion</div>
+                            <div class="text-gray smallest">Напряжение аккумулятора: 12 В</div>
+                            <div class="text-gray smallest">Емкость аккумулятора: 1,3 Ач</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-prod__col item-prod__col--gor col-md-auto">
+                        <div class="item-prod__price-wrap mb-3">
+                          <div class="row">
+                            <div class="col">
+                              <div class="strong">33 593 р. </div>
+                            </div>
+                            <div class="col-auto">
+                              <div class="strong small text-success">Есть в наличии</div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item-prod__btn-wrap"><a class="item-prod__btn btn btn-secondary" href="#">Цена после регистрации</a>
+                          <div class="item-prod__row row">
+                            <div class="col"><a class="item-prod__btn btn btn-primary" href="#">В корзину</a>
+                            </div>
+                            <div class="col"><a class="item-prod__btn btn btn-secondary link-modal" href="#" data-src="#modal-compare">Сравнить</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="warning-text">Инструмент поставляется без аккумулятора и зарядного устройства! </div>
+                  </div>
+                  <!-- +b.item-prod -->
+                </div>
+                <!-- +e.col.col-12 -->
+              </div>
+            </div>
+            <!-- end s-catalog-->
+            <div class="s-content section"> 
+              <div class="section-title">
+                <h2>Pt-Line.ru</h2>
+              </div>
+              <div class="smallest text-gray">
+                <p>Японский концерн Makita является одним из безоговорочных лидеров рынка различного оборудования и техники. Корпорация никогда не останавливается на достигнутых целях, постоянно принимая технологические решения, которые ложатся в основу производства нового бытового и профессионального инструмента. К продажам техники Макита компания «ЛайнТулс» приступила в 2009 году, став официальным дилером этого производителя. В настоящее время мы предлагаем множество моделей разнообразной техники Makita, которую вы можете приобрести в интернет-магазине makita-line.ru</p>
+                <p>Даже у самого надежного инструмента порой случаются поломки. Именно поэтому нами был открыт сервисный центр Makita, где профессионалы с богатым опытом оперативно проведут диагностику, выяснят характер неисправности, после чего проведут ремонт. Техника, отремонтированная нами, прослужит вам еще долгое время. Те, кто ремонтирует инструмент своими руками, могут зайти на наш сайт и купить оригинальные запасные части. Если вас интересуют цены на запчасти и стоимость услуг, которые предоставляет сервис-центр Makita, то они вполне демократичны. </p>
+                <p>К продажам инструмента корпорации DeWALT компания «ЛайнТулс» приступила с 2016 года, выступив в роли ее официального дилера. Приобрести фирменную технику и аксессуары этого производителя можно в интернет-магазине dewalt-line. ru. Нами был учтен удачный опыт сотрудничества с концерном Makita, поэтому мы создали сервисный центр, где каждый может отремонтировать технику DeWalt, а уж оперативность и качество мы гарантируем! В интернет-магазине elitech-line. ru вы можете приобрести оборудование и инструменты компании «Элитек», а купить одноразовые и многоразовые пылесборники для пылесосов различных марок можно в интернет-магазине prom-mechok. ru.</p>
+              </div>
+            </div>
+            <!--+b.s-content.section-->
           </div>
         </div>
       </div>

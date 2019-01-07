@@ -35,7 +35,7 @@ jQuery(document).ready(function ($) {
 		var w = $(window).width();
 
 		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
+		$(".item-prod--compare-js").height('auto').equalHeights();
 		//
 
 
@@ -51,6 +51,17 @@ jQuery(document).ready(function ($) {
 			}
 		});
 		// конец добавил
+
+		var topH=$(window).innerHeight() * .2;  
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > topH) {
+				$('.btn-top  ').addClass('active');
+			} else {
+				$('.btn-top  ').removeClass('active');
+			}
+		});
+ 
+       // конец добавил 
 	}
 
 
@@ -67,10 +78,17 @@ jQuery(document).ready(function ($) {
 		heightses();
 
 	});
+	
+	$(window).scroll(function () {
+		heightses();
+
+	});
+
 	$(window).on("load", function () {
 		heightses();
 
 	})
+
 
 	heightses();
 
@@ -90,9 +108,14 @@ jQuery(document).ready(function ($) {
 
 
 	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon2 = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M218.101 38.101L198.302 57.9c-4.686 4.686-4.686 12.284 0 16.971L353.432 230H12c-6.627 0-12 5.373-12 12v28c0 6.627 5.373 12 12 12h341.432l-155.13 155.13c-4.686 4.686-4.686 12.284 0 16.971l19.799 19.799c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L235.071 38.101c-4.686-4.687-12.284-4.687-16.97 0z"/>';
 
 	var arrl2 = (' <div class="l">' + icon),
 		arrr2 = (' <div class="r">' + icon);
+	
+	var arrl3 = (' <div class="l">' + icon2),
+		arrr3 = (' <div class="r">' + icon2);
+	
 	// карусель
 	$('.header-block__slider').slick({
 		slidesToShow: 1,
@@ -186,6 +209,8 @@ jQuery(document).ready(function ($) {
 			]
 		});
 	} 
+
+
 	hiddenSlider();
 		// табы  . 
 		function tabscostume(tab) { 
@@ -209,8 +234,8 @@ jQuery(document).ready(function ($) {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		speed: 450,
-		infinite: false,
-		loop: false,
+		infinite: true,
+		loop: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 		appendArrows: '.s-logo .arrow-wrap',
@@ -300,11 +325,11 @@ image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 	
 	$('  .tabs-po__caption').slick({
 		dots: false,
-		arrows: true,
 		infinite: false,
 		loop: false,
 		speed: 450,
 		slidesToShow: 1,
+		arrows: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 		focusOnSelect: true,
@@ -371,6 +396,9 @@ $(".link-modal").fancybox({
 	arrows: false,
 	infobar: false,
 });
+$(".modal-close-js").click(function(){
+	$.fancybox.close();
+})
 
 	// mask for input
 	var customOptions = {
@@ -651,4 +679,67 @@ $(".link-modal").fancybox({
 				})
  })
 
+
+
+//  слайдер сравнения
+ $('.s-compare__slider--js').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	variableWidth: true,
+	speed: 450,
+	infinite: false, 
+	dots: false, 
+	useTransform: false, 
+	arrows: true,
+	touchMove: true,
+	swipe: true,
+		prevArrow: arrr3,
+		nextArrow: arrl3,
+	// centerMode: true,
+	// focusOnSelect: true ,
+	// variableWidth: true,
+	// prevArrow: arrr2,
+	// nextArrow: arrl2,
+});
+// var swiper = new Swiper('.swiper-container', {
+// 	slidesPerView: 'auto',
+// 	spaceBetween: 30,
+// 	pagination: {
+// 		el: '.swiper-pagination',
+// 		clickable: true,
+// 	},
+// });
+
+$('.s-compare__slider--js').on('init', function(event, slick, direction){
+  // console.log(direction);
+  // left
+});
+			$(".item-prod--compare-js ").stick_in_parent({
+				parent: '.s-compare__body',
+				recalc_every: 1,
+			 });
+			 
+			$("  .s-compare .slick-arrow").stick_in_parent({
+				// parent: '.s-compare__item'
+			 });
+
+
+// подсветка при наведении пуктов в сравнении
+$('.s-compare__group--js').hover(function(){
+	var theq = $(this).index();
+	console.log(theq);
+	// $(this).toggleClass('hover');
+	$(".s-compare__slide").each(function(){
+		$(this).find('.s-compare__group--js').eq(theq).toggleClass('hover');
+	})
+	
+})
+
+// кнопка наверх
+$(" .btn-top").click(function () {
+	 
+			$('html, body').animate({ scrollTop: 0 }, 1100);
+	
+	return false; 
+});
 });
