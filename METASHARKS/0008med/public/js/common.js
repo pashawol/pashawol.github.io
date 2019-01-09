@@ -498,7 +498,7 @@ jQuery(document).ready(function ($) {
 
 		$(".s-catalog").each(function () {
 
-			var imW = $(this).find(".item-prod__img-wrap").innerHeight();
+			var imW = $(this).find(".item-prod__img-wrap").innerHeight() - 2;
 
 			$(this).find(" .slick-arrow").css('top', imW);
 		})

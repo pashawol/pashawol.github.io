@@ -252,14 +252,22 @@
       <!-- start header-block-->
       <div class="header-block" id="header-block">
         <div class="header-block__slider header-block__slider--js">
-          <div class="header-block__slide"><img class="res-i" src="img/slider-1.jpg" alt=""/>
+          <div class="header-block__slide">
+            <div class="header-block__img-wrap img-bg" style="background-image: url(img/slider-1.jpg);"><img class="res-i" src="img/slider-1.jpg" alt=""/>
+            </div>
           </div>
-          <div class="header-block__slide"><img class="res-i" src="img/slider-2.jpg" alt=""/>
+          <div class="header-block__slide">
+            <div class="header-block__img-wrap img-bg" style="background-image: url(img/slider-2.jpg);"><img class="res-i" src="img/slider-2.jpg" alt=""/>
+            </div>
           </div>
-          <div class="header-block__slide"><img class="res-i" src="img/slider-3.jpg" alt=""/>
+          <div class="header-block__slide">
+            <div class="header-block__img-wrap img-bg" style="background-image: url(img/slider-3.jpg);"><img class="res-i" src="img/slider-3.jpg" alt=""/>
+            </div>
           </div>
         </div>
-        <div class="header-block__foot d-none d-sm-block">
+        <div class="header-block__foot d-">
+          <div class="header-block__img-wrapnone d-sm-block">
+          </div>
           <div class="container">
             <div class="row">
               <div class="col-xxl-5 col-xl-4 col-auto">
@@ -270,42 +278,30 @@
                   </div>
                 </div>
               </div>
-              <div class="col d-none d-lg-block">
-                <div class="advantages">
-                  <div class="row">
-                      <div class="col-auto">
-                        <div class="advantages__item">
-                          <div class="row">
-                            <div class="advantages__img-wrap col-auto"><img class="res-i" src="img/header-i-1.svg" alt=""/>
-                            </div>
-                            <div class="advantages__text col">Вся продукция <br/> сертифицирована
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <div class="advantages__item">
-                          <div class="row">
-                            <div class="advantages__img-wrap col-auto"><img class="res-i" src="img/header-i-2.svg" alt=""/>
-                            </div>
-                            <div class="advantages__text col">Закупаются <br/> заводчики
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-auto">
-                        <div class="advantages__item">
-                          <div class="row">
-                            <div class="advantages__img-wrap col-auto"><img class="res-i" src="img/header-i-3.svg" alt=""/>
-                            </div>
-                            <div class="advantages__text col">Высокий  <br/>сервис
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-                </div>
-              </div>
+              <!-- .col.d-none.d-lg-block
+              +b.advantages
+              	.row
+              		mixin item(i,t)
+              			.col-auto
+              				+e.item
+              					.row
+              						+e.img-wrap.col-auto
+              							img.res-i(src=`img/header-i-${i}.svg`, alt="")
+              						block
+              						
+              		+item('1',' ')
+              			+e.text.col Вся продукция 
+              				br
+              				|  сертифицирована
+              		+item('2',' ')
+              			+e.text.col Закупаются 
+              				br
+              				|  заводчики
+              		+item('3','')
+              			+e.text.col Высокий  
+              				br
+              				| сервис
+              -->
             </div>
           </div>
         </div>
@@ -1573,19 +1569,28 @@
               </div>
               <div class="col-md main-mnu">
                 <ul class="menu">
-                  <li class="menu-item"><a href="#">Полезная информация</a></li>
                   <li class="menu-item"><a href="#">О нас</a></li>
+                  <li class="menu-item"><a href="#">Полезная информация</a></li>
                   <li class="menu-item"><a href="#">Оплата </a></li>
                   <li class="menu-item"><a href="#">Доставка</a></li>
                   <li class="menu-item"><a href="#">Контакты </a></li>
+                  <li class="menu-item"><a href="#">Корзина</a></li>
                 </ul>
               </div>
-              <div class="col-md second-mnu">
+              <div class="col-md second-mnu d-none d-md-block">
                 <ul class="menu"> 
                   <li class="menu-item"><a href="#">Личный кабинет</a></li>
                   <li class="menu-item"><a href="#">Корма для собак</a></li>
                   <li class="menu-item"><a href="#">Аммуниция для собак</a></li>
                   <li class="menu-item"><a href="#">Средства по уходу </a></li>
+                </ul>
+              </div>
+              <div class="col-md second-mnu d-md-none">
+                <ul class="menu"> 
+                  <li class="menu-item"><a href="#">Сухие корма для собак</a></li>
+                  <li class="menu-item"><a href="#">Средства для ухода</a></li>
+                  <li class="menu-item"><a href="#">Влажные корма для собак</a></li>
+                  <li class="menu-item"><a href="#">Амуниция</a></li>
                 </ul>
               </div>
             </div>

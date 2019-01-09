@@ -88,12 +88,15 @@
                 </svg> Сравнить
                 <!-- скрывает счетчик если нет товаров в сравнении--><span class="top-nav__compare-count">6</span></a>
               </div>
-              <div class="col-auto">
-                <div class="top-nav__link">
+              <div class="col-auto"> 
+                <div class="dropdown"><a class="top-nav__link d-inline dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
                   <svg class="icon icon-user ">
                     <use xlink:href="img/svg/sprite.svg#user"></use>
-                  </svg><a class="top-nav__link d-inline link-modal" data-src="#modal-inner" href="javascript:;">Вход</a> 
-                  / <a class="top-nav__link d-inline link-modal" data-src="#modal-reg" href="javascript:;">Регистрация</a>
+                  </svg>Константин</a>
+                  <div class="dropdown-menu">
+                    <div class="arrow"></div><a class="dropdown-item" href="#">История заказов</a><a class="dropdown-item" href="#">Реквизиты организации</a><a class="dropdown-item" href="#">Адреса доставки</a><a class="dropdown-item" href="#">Контактная информация</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Выйти из профиля</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -252,389 +255,592 @@
           </div>
           <div class="main-col col-lg-9">
             <div class="s-po section pt-0">
-              <div class="s-po__head">
-                <div class="h4 strong">Добавление адреса доставки</div>
-                <div class="small text-gray">Выберите ваш регион для добавления нового адреса</div>
-              </div>
               <div class="form-wrap"> 
-                <div class="form-wrap__group">
-                  <div>
-                    <label class="custom-input"><input class="custom-input__input" type="radio" name="type-order" data-tab-radio="type-order-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по Москве</span>
-                    </label>
-                  </div>
-                  <div>
-                    <label class="custom-input"><input class="custom-input__input" type="radio" name="type-order" data-tab-radio="type-order-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по Московской области</span>
-                    </label>
-                  </div>
-                  <div>
-                    <label class="custom-input"><input class="custom-input__input" type="radio" name="type-order" data-tab-radio="type-order-3" checked="checked" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по России</span>
-                    </label>
-                  </div>
-                </div>
-                <div class="form-wrap__group">
-                  <div class="small mb-3">Доставка: 300р.  Если сумма заказа свыше 30 000 рублей - доставка по Москве бесплатно</div>
-                  <div class="small mb-3">По МО, если сумма заказа меньше 5000 руб - 300+25 км, если больше, только 25 р. за км</div>
-                </div>
-                <div class="tab-radio-content-wrap">
-                  <div class="tab-radio-content" id="type-order-1">
-                    <div class="s-po-block">
-                      <div class="tab-radio-content-close"></div>
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (мобильный)*</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Улица </span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Дом №</span>
+                <div class="tab-radio-content active" id="delivery-comp-all">
+                  <div class="form-wrap__head">
+                    <div class="form-wrap__group">
+                      <div>
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="type-order" data-tab-radio="type-order-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по Москве</span>
                         </label>
                       </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-group">
-                        <div class="row">
-                          <div class="col-sm-6">
+                      <div>
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="type-order" data-tab-radio="type-order-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по Московской области</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="type-order" data-tab-radio="type-order-3" checked="checked" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по России</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-wrap__group">
+                      <div class="small mb-3">Доставка: 300р.  Если сумма заказа свыше 30 000 рублей - доставка по Москве бесплатно</div>
+                      <div class="small mb-3">По МО, если сумма заказа меньше 5000 руб - 300+25 км, если больше, только 25 р. за км</div>
+                    </div>
+                    <div class="tab-radio-content-wrap">
+                      <div class="tab-radio-content" id="type-order-1">
+                        <div class="s-po-block">
+                          <div class="tab-radio-content-close"></div>
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (мобильный)*</span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Улица </span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Дом №</span>
+                            </label>
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__input-group">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <div class="form-wrap__input-wrap form-group">
+                                  <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Квартира/Офис №</span>
+                                  </label> 
+                                </div>
+                                <!-- +e.input-wrap-->
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="form-wrap__input-wrap form-group">
+                                  <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">№ домофона</span>
+                                  </label> 
+                                </div>
+                                <!-- +e.input-wrap-->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="strong">Цена за доставку: 300р. </div>
+                          <button class="form-wrap__btn form-wrap__btn--sm btn btn-block btn btn-primary my-3" type="submit">Сохранить
+                          </button>
+                          <div class="small text-gray pb-3">* — поля обязательные для заполнения</div>
+                        </div>
+                      </div>
+                      <!--  .tab-radio-content#type-order-1-->
+                      <div class="tab-radio-content" id="type-order-2">
+                        <div class="s-po-block">
+                          <div class="tab-radio-content-close"> </div>
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон*</span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Адрес</span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Км. от МКАД*</span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="form-wrap__input-group">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <div class="form-wrap__input-wrap form-group">
+                                  <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Подъезд №</span>
+                                  </label> 
+                                </div>
+                                <!-- +e.input-wrap-->
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="form-wrap__input-wrap form-group">
+                                  <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Этаж</span>
+                                  </label>
+                                </div>
+                                <!-- +e.input-wrap-->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-wrap__input-group">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <div class="form-wrap__input-wrap form-group">
+                                  <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Квартира/Офис №</span>
+                                  </label> 
+                                </div>
+                                <!-- +e.input-wrap-->
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="form-wrap__input-wrap form-group">
+                                  <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">№ домофона</span>
+                                  </label>
+                                </div>
+                                <!-- +e.input-wrap-->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-wrap__input-wrap form-group">
+                            <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
+                            </label> 
+                          </div>
+                          <!-- +e.input-wrap-->
+                          <div class="strong">Цена за доставку: 300р. </div>
+                          <button class="form-wrap__btn form-wrap__btn--sm btn btn-block btn btn-primary my-3" type="submit">Сохранить
+                          </button>
+                          <div class="small text-gray pb-3">* — поля обязательные для заполнения</div>
+                        </div>
+                      </div>
+                      <!--  .tab-radio-content#type-order-2-->
+                      <div class="tab-radio-content" id="type-order-3">
+                        <div class="s-po-block">
+                          <div class="tab-radio-content-close"></div>
+                          <div class="form-wrap__group">
                             <div class="form-wrap__input-wrap form-group">
-                              <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Квартира/Офис №</span>
+                              <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
+                              </label> 
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="form-wrap__input-wrap form-group">
+                              <label>
+                                <select class="form-wrap__input form-control" required="required" pattern=".{3,}"> 
+                                  <option class="d-none" selectedvalue="">Город</option>
+                                  <option selectedvalue="">Город</option>
+                                  <option selectedvalue="">Город</option>
+                                  <option selectedvalue="">Город</option>
+                                  <option selectedvalue="">Город</option>
+                                </select>
+                              </label>
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="form-wrap__input-wrap form-group">
+                              <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон*</span>
+                              </label> 
+                            </div>
+                            <!-- +e.input-wrap-->
+                            <div class="form-wrap__input-wrap form-group">
+                              <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
                               </label> 
                             </div>
                             <!-- +e.input-wrap-->
                           </div>
-                          <div class="col-sm-6">
-                            <div class="form-wrap__input-wrap form-group">
-                              <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">№ домофона</span>
-                              </label> 
+                          <div class="form-wrap__group">
+                            <div class="h4 strong">Добавление адреса доставки</div>
+                            <div class="tab-radio-content-wrap">
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="type-comp" data-tab-radio="type-comp-1" checked="checked" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортная компания "Байкал-Сервис"</span>
+                                </label>
+                              </div>
+                              <div class="tab-radio-content" id="type-comp-1">
+                                <div class="form-wrap__table-block">
+                                  <div class="row">
+                                    <div class="col"><span>Телефон</span></div>
+                                    <div class="col-sm-auto">+7 (812) 494-88-88</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Электронная почта</span></div>
+                                    <div class="col-sm-auto">prspb@pecom.ru</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Сайт</span></div>
+                                    <div class="col-sm-auto">https://pecom.ru</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="type-comp" data-tab-radio="type-comp-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортная компания "ПЭК"</span>
+                                </label>
+                              </div>
+                              <div class="tab-radio-content" id="type-comp-2">
+                                <div class="form-wrap__table-block">
+                                  <div class="form-wrap__table-block">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Телефон</span></div>
+                                    <div class="col-sm-auto">+7 (812) 494-88-88</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Электронная почта</span></div>
+                                    <div class="col-sm-auto">prspb@pecom.ru</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Сайт</span></div>
+                                    <div class="col-sm-auto">https://pecom.ru</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="type-comp" data-tab-radio="type-comp-3" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортно-экспедиторская компания «Деловые Линии»</span>
+                                </label>
+                              </div>
+                              <div class="tab-radio-content" id="type-comp-3">
+                                <div class="form-wrap__table-block">
+                                  <div class="form-wrap__table-block">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Телефон</span></div>
+                                    <div class="col-sm-auto">+7 (812) 494-88-88</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Электронная почта</span></div>
+                                    <div class="col-sm-auto">prspb@pecom.ru</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Сайт</span></div>
+                                    <div class="col-sm-auto">https://pecom.ru</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="type-comp" data-tab-radio="type-comp-4" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортно-экспедиционная компания «Автотрейдинг»</span>
+                                </label>
+                              </div>
+                              <div class="tab-radio-content" id="type-comp-4">
+                                <div class="form-wrap__table-block">
+                                  <div class="form-wrap__table-block">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Телефон</span></div>
+                                    <div class="col-sm-auto">+7 (812) 494-88-88</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Электронная почта</span></div>
+                                    <div class="col-sm-auto">prspb@pecom.ru</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Сайт</span></div>
+                                    <div class="col-sm-auto">https://pecom.ru</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="type-comp" data-tab-radio="type-comp-5" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортно-экспедиционная компания «ЖелДорЭкспедиция»</span>
+                                </label>
+                              </div>
+                              <div class="tab-radio-content" id="type-comp-5">
+                                <div class="form-wrap__table-block">
+                                  <div class="form-wrap__table-block">
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Телефон</span></div>
+                                    <div class="col-sm-auto">+7 (812) 494-88-88</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Электронная почта</span></div>
+                                    <div class="col-sm-auto">prspb@pecom.ru</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Сайт</span></div>
+                                    <div class="col-sm-auto">https://pecom.ru</div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <!-- +e.input-wrap-->
+                            <!-- +e.group-->
+                            <div class="form-wrap__group">
+                              <button class="form-wrap__btn-add btn btn btn-primary btn-tab-js" type="button " data-tab-block="delivery-comp-new">Добавить транспортную компанию
+                              </button>
+                            </div>
+                            <!-- +e.group-->
+                            <div class="form-wrap__group">
+                              <div class="h4 strong">Получатель ТК</div>
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="add-addr" data-tab-radio="add-addr-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Физическое лицо</span>
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="add-addr" data-tab-radio="add-addr-2" checked="checked" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Юридическое лицо</span>
+                                </label>
+                              </div>
+                              <div class="form-wrap__group"> 
+                                <div class="tab-radio-content-wrap">
+                                  <div class="tab-radio-content" id="add-addr-1">
+                                    <div class="form-wrap__group"> 
+                                      <div class="form-wrap__input-wrap form-group">
+                                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Фамилия Имя Отчество (Полностью)</span>
+                                        </label> 
+                                      </div>
+                                      <!-- +e.input-wrap-->
+                                      <div class="form-wrap__input-wrap form-group">
+                                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Серия номер паспорта </span>
+                                        </label> 
+                                      </div>
+                                      <!-- +e.input-wrap-->
+                                      <div class="form-wrap__input-wrap form-group">
+                                        <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (мобильный)</span>
+                                        </label> 
+                                      </div>
+                                      <!-- +e.input-wrap-->
+                                      <!-- +e.group -->
+                                    </div>
+                                    <div class="form-wrap__group"> 
+                                      <button class="form-wrap__btn form-wrap__btn--md btn btn-block btn btn-primary" type="submit">Добавить Адрес
+                                      </button>
+                                    </div>
+                                    <!-- +e.group -->
+                                  </div>
+                                  <!-- tab-radio-content-->
+                                  <div class="tab-radio-content" id="add-addr-2">
+                                    <div class="tab-radio-content active" id="delivery-reqv">
+                                      <div class="form-wrap__group"> 
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label>
+                                            <select class="form-wrap__input form-control" required="required" pattern=".{3,}"> 
+                                              <option class="d-none" selectedvalue="">Компания</option> 
+                                              <option class="d-none" value=""> </option>
+                                              <option value="">Компания 1</option>
+                                              <option value="">Компания 2</option>
+                                              <option value="">Компания 3</option>
+                                            </select>
+                                          </label>
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="tab-radio-content active" id="tab-btn-show"><a class="btn btn btn-secondary btn-tab-js" href="#" data-tab-block="tab-btn-plus">Добавить реквизиты +</a></div>
+                                        <div class="tab-radio-content" id="tab-btn-plus">
+                                          <div class="row row--small">
+                                            <div class="col-sm-auto">
+                                              <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="delivery-reqv-edit">Заполнить вручную 
+                                              </button>
+                                            </div>
+                                            <div class="col-sm-auto">
+                                              <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="reqv-file">Добавить реквизиты файлом
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="form-wrap__group"> 
+                                        <div class="form-wrap__table-block">
+                                          <div class="row">
+                                            <div class="col"><span>Название реквизитов</span></div>
+                                            <div class="col-sm-auto">Значение  </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Длинное название реквизитов</span></div>
+                                            <div class="col-sm-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Электронная почта</span></div>
+                                            <div class="col-sm-auto">jfhf@mail.ru</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Название реквизитов</span></div>
+                                            <div class="col-sm-auto">Значение  </div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Длинное название реквизитов</span></div>
+                                            <div class="col-sm-auto">495 530-70-07</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Электронная почта</span></div>
+                                            <div class="col-sm-auto">jfhf@mail.ru</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Электронная почта</span></div>
+                                            <div class="col-sm-auto">jfhf@mail.ru</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- +e.group -->
+                                      <div class="form-wrap__group"> 
+                                        <button class="form-wrap__btn form-wrap__btn--md btn btn-block btn btn-primary" type="submit">Добавить Адрес
+                                        </button>
+                                      </div>
+                                      <!-- +e.group -->
+                                    </div>
+                                    <!-- /.tab-radio-content-->
+                                    <div class="tab-radio-content" id="reqv-file">
+                                      <div class="form-wrap">
+                                        <div class="s-po-block">
+                                          <div class="form-wrap__group">
+                                            <div class="tab-radio-content-close btn-tab-js" data-tab-block="delivery-reqv">
+                                            </div>
+                                            <div class="form-wrap__input-wrap form-group">
+                                              <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Наименование организации (Полное)</span>
+                                              </label>
+                                            </div>
+                                            <!-- +e.input-wrap-->
+                                            <div class="form-wrap__maxw">
+                                              <div class="smallest text-gray pb-3">Пожалуйста выберите файл (не болee 1 мегабайта), и нажмите кнопку загрузить.</div>
+                                              <div class="add-file">
+                                                <div class="row row--small">
+                                                  <div class="col-12 mb-3">
+                                                    <div class="add-file__filename">
+                                                    </div>
+                                                  </div>
+                                                  <div class="col">
+                                                    <label><input class="add-file__input d-none" type="file"/><span class="add-file__btn btn btn-block btn btn-primary" role="button">Добавить файл</span>
+                                                    </label>
+                                                  </div>
+                                                  <div class="col">
+                                                    <button class="add-file__btn btn btn-block btn btn-secondary" type="submit">Сохранить
+                                                    </button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!--.tab-radio-content-->
+                                    <div class="tab-radio-content" id="delivery-reqv-edit">
+                                      <div class="form-wrap__group">
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название компании*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон контактного лица*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">ИНН*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">КПП*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Юридический адрес*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Фактический адрес*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название банка*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">КОР банка*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">БИК*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Расчетный счет*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Генеральный директор*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон компании*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Электроная почта компании*</span>
+                                          </label> 
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                      </div>
+                                      <!-- +e.group-->
+                                      <div class="form-wrap__group mw-428">
+                                        <div class="row row--small">
+                                          <div class="col-sm-auto">
+                                            <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                                            </button>
+                                          </div>
+                                          <div class="col"><a class="form-wrap__btn btn btn-block btn btn-secondary w-100 btn-tab-js" href="#" data-tab-block="delivery-reqv">Вернуться к выбору компании</a>
+                                          </div>
+                                        </div>
+                                        <div class="small text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
+                                      </div>
+                                    </div>
+                                    <!-- /.tab-radio-content-->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- +e.group-->
                           </div>
                         </div>
                       </div>
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="strong">Цена за доставку: 300р. </div>
-                      <button class="form-wrap__btn form-wrap__btn--sm btn btn-block btn btn-primary my-3" type="submit">Сохранить
-                      </button>
-                      <div class="small text-gray pb-3">* — поля обязательные для заполнения</div>
+                      <!--  .tab-radio-content#type-order-3-->
                     </div>
                   </div>
-                  <!--  .tab-radio-content#type-order-1-->
-                  <div class="tab-radio-content" id="type-order-2">
-                    <div class="s-po-block">
-                      <div class="tab-radio-content-close"> </div>
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (мобильный)*</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (домашний)</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Адрес*</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Kм. от МКАД*</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="form-wrap__input-group">
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-wrap__input-wrap form-group">
-                              <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Квартира/Офис №</span>
-                              </label> 
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="form-wrap__input-wrap form-group">
-                              <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">№ домофона</span>
-                              </label> 
-                            </div>
-                            <!-- +e.input-wrap-->
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-wrap__input-wrap form-group">
-                        <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
-                        </label> 
-                      </div>
-                      <!-- +e.input-wrap-->
-                      <div class="strong">Цена за доставку: 300р. </div>
-                      <button class="form-wrap__btn form-wrap__btn--sm btn btn-block btn btn-primary my-3" type="submit">Сохранить
-                      </button>
-                      <div class="small text-gray pb-3">* — поля обязательные для заполнения</div>
+                </div>
+                <!-- /.tab-radio-content.active#delivery-comp-all-->
+                <div class="tab-radio-content" id="delivery-comp-new">
+                  <div class="form-wrap__group tab-radio-content-wrap">
+                    <div class="form-wrap__title-head">
+                      <div class="h4 strong">Добавить транспортную компанию</div>
                     </div>
-                  </div>
-                  <!--  .tab-radio-content#type-order-2-->
-                  <div class="tab-radio-content" id="type-order-3">
-                    <div class="s-po-block">
-                      <div class="tab-radio-content-close"></div>
-                      <div class="form-wrap__group">
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
-                          </label> 
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Город*</span>
-                          </label> 
-                        </div>
-                        <!-- +e.input-wrap-->
-                        <div class="form-wrap__input-wrap form-group">
-                          <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
-                          </label> 
-                        </div>
-                        <!-- +e.input-wrap-->
+                    <div class="form-wrap__group">
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название ТК*</span>
+                        </label> 
                       </div>
-                      <div class="form-wrap__group">
-                        <div class="h4 strong">Добавление адреса доставки</div>
-                        <div class="tab-radio-content-wrap">
-                          <div>
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="type-comp" data-tab-radio="type-comp-1" checked="checked" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортная компания "Байкал-Сервис"</span>
-                            </label>
-                          </div>
-                          <div class="tab-radio-content" id="type-comp-1">
-                            <div class="form-wrap__table-block">
-                              <div class="row">
-                                <div class="col"><span>Телефон</span></div>
-                                <div class="col-sm-auto">+7 (812) 494-88-88</div>
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Электронная почта</span></div>
-                                <div class="col-sm-auto">prspb@pecom.ru</div>
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Сайт</span></div>
-                                <div class="col-sm-auto">https://pecom.ru</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="type-comp" data-tab-radio="type-comp-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортная компания "ПЭК"</span>
-                            </label>
-                          </div>
-                          <div class="tab-radio-content" id="type-comp-2">
-                            <div class="form-wrap__table-block">
-                              <div class="form-wrap__table-block">
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Телефон</span></div>
-                                <div class="col-sm-auto">+7 (812) 494-88-88</div>
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Электронная почта</span></div>
-                                <div class="col-sm-auto">prspb@pecom.ru</div>
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Сайт</span></div>
-                                <div class="col-sm-auto">https://pecom.ru</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="type-comp" data-tab-radio="type-comp-3" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортно-экспедиторская компания «Деловые Линии»</span>
-                            </label>
-                          </div>
-                          <div class="tab-radio-content" id="type-comp-3">
-                            <div class="form-wrap__table-block">
-                              <div class="form-wrap__table-block">
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Телефон</span></div>
-                                <div class="col-sm-auto">+7 (812) 494-88-88</div>
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Электронная почта</span></div>
-                                <div class="col-sm-auto">prspb@pecom.ru</div>
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Сайт</span></div>
-                                <div class="col-sm-auto">https://pecom.ru</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="type-comp" data-tab-radio="type-comp-4" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортно-экспедиционная компания «Автотрейдинг»</span>
-                            </label>
-                          </div>
-                          <div class="tab-radio-content" id="type-comp-4">
-                            <div class="form-wrap__table-block">
-                              <div class="form-wrap__table-block">
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Телефон</span></div>
-                                <div class="col-sm-auto">+7 (812) 494-88-88</div>
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Электронная почта</span></div>
-                                <div class="col-sm-auto">prspb@pecom.ru</div>
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Сайт</span></div>
-                                <div class="col-sm-auto">https://pecom.ru</div>
-                              </div>
-                            </div>
-                          </div>
-                          <div>
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="type-comp" data-tab-radio="type-comp-5" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортно-экспедиционная компания «ЖелДорЭкспедиция»</span>
-                            </label>
-                          </div>
-                          <div class="tab-radio-content" id="type-comp-5">
-                            <div class="form-wrap__table-block">
-                              <div class="form-wrap__table-block">
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Телефон</span></div>
-                                <div class="col-sm-auto">+7 (812) 494-88-88</div>
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Электронная почта</span></div>
-                                <div class="col-sm-auto">prspb@pecom.ru</div>
-                              </div>
-                              <div class="row">
-                                <div class="col"><span>Сайт</span></div>
-                                <div class="col-sm-auto">https://pecom.ru</div>
-                              </div>
-                            </div>
-                          </div>
-                          <button class="form-wrap__btn form-wrap__btn--md btn btn-block btn btn-primary my-4" type="submit">Добавить транспортную компанию
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон ТК*</span>
+                        </label> 
+                      </div>
+                      <!-- +e.input-wrap-->
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><input class="form-wrap__input form-control" type="url" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Сайт ТК*</span>
+                        </label> 
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                    <!-- +e.group-->
+                    <div class="form-wrap__group">
+                      <div class="row row--small">
+                        <div class="col-sm-auto">
+                          <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Сохранить
                           </button>
                         </div>
-                        <!-- +e.group-->
-                        <div class="form-wrap__group">
-                          <div class="h4 strong">Добавление адреса доставки</div>
-                          <div>
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="add-addr" data-tab-radio="add-addr-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Физическое лицо</span>
-                            </label>
-                          </div>
-                          <div>
-                            <label class="custom-input"><input class="custom-input__input" type="radio" name="add-addr" data-tab-radio="add-addr-2" checked="checked" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Юридическое лицо</span>
-                            </label>
-                          </div>
-                          <div class="form-wrap__group"> 
-                            <div class="tab-radio-content-wrap">
-                              <div class="tab-radio-content" id="add-addr-1">
-                                <div class="form-wrap__group"> 
-                                  <div class="form-wrap__input-wrap form-group">
-                                    <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Фамилия Имя Отчество (Полностью)</span>
-                                    </label> 
-                                  </div>
-                                  <!-- +e.input-wrap-->
-                                  <div class="form-wrap__input-wrap form-group">
-                                    <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Серия номер паспорта </span>
-                                    </label> 
-                                  </div>
-                                  <!-- +e.input-wrap-->
-                                  <div class="form-wrap__input-wrap form-group">
-                                    <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (мобильный)</span>
-                                    </label> 
-                                  </div>
-                                  <!-- +e.input-wrap-->
-                                  <!-- +e.group -->
-                                </div>
-                                <div class="form-wrap__group"> 
-                                  <button class="form-wrap__btn form-wrap__btn--md btn btn-block btn btn-primary" type="submit">Добавить Адрес
-                                  </button>
-                                </div>
-                                <!-- +e.group -->
-                              </div>
-                              <!-- tab-radio-content-->
-                              <div class="tab-radio-content" id="add-addr-2">
-                                <div class="form-wrap__group"> 
-                                  <div class="form-wrap__input-wrap form-group">
-                                    <label>
-                                      <select class="form-wrap__input form-control" required="required" pattern=".{3,}"> 
-                                        <option class="d-none" selectedvalue="">Компания</option> 
-                                        <option class="d-none" value=""> </option>
-                                        <option value="">Компания 1</option>
-                                        <option value="">Компания 2</option>
-                                        <option value="">Компания 3</option>
-                                      </select>
-                                    </label>
-                                  </div>
-                                  <!-- +e.input-wrap-->
-                                  <button class="form-wrap__btn form-wrap__btn--md btn btn-block btn btn-secondary my-4" type="submit">Добавить новые реквизиты вручную
-                                  </button>
-                                </div>
-                                <div class="form-wrap__group"> 
-                                  <div class="form-wrap__table-block">
-                                    <div class="row">
-                                      <div class="col"><span>Название реквизитов</span></div>
-                                      <div class="col-sm-auto">Значение  </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col"><span>Длинное название реквизитов</span></div>
-                                      <div class="col-sm-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col"><span>Электронная почта</span></div>
-                                      <div class="col-sm-auto">jfhf@mail.ru</div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col"><span>Название реквизитов</span></div>
-                                      <div class="col-sm-auto">Значение  </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col"><span>Длинное название реквизитов</span></div>
-                                      <div class="col-sm-auto">495 530-70-07</div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col"><span>Электронная почта</span></div>
-                                      <div class="col-sm-auto">jfhf@mail.ru</div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col"><span>Электронная почта</span></div>
-                                      <div class="col-sm-auto">jfhf@mail.ru</div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- +e.group -->
-                                <div class="form-wrap__group"> 
-                                  <button class="form-wrap__btn form-wrap__btn--md btn btn-block btn btn-primary" type="submit">Добавить Адрес
-                                  </button>
-                                </div>
-                                <!-- +e.group -->
-                              </div>
-                            </div>
-                          </div>
+                        <div class="col-sm-auto"><a class="form-wrap__btn-back btn btn-block btn btn-secondary w-100 btn-tab-js" href="#" data-tab-block="delivery-comp-all"> Вернуться без сохранения</a>
                         </div>
-                        <!-- +e.group-->
                       </div>
+                      <div class="small text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
                     </div>
                   </div>
-                  <!--  .tab-radio-content#type-order-3-->
+                  <!-- .tab-radio-content-->
                 </div>
+                <!-- /.tab-radio-content#delivery-comp-new-->
               </div>
             </div>
           </div>
@@ -881,8 +1087,7 @@
       </form>
     </div>
     <!-- #modal-notification-->
-    <button class="btn btn btn-primary link-modal" type="button" data-src="#modal-notification">Уведомить о поступлении
-    </button>
+    <!--+e.BUTTON.btn.btn.btn-primary.link-modal(type="button" data-src="#modal-notification") Уведомить о поступлении-->
     <div class="form-wrap modal-win modal-form" id="modal-delete">
       <div class="form-wrap__head pb-4">
         <div class="h6 strong">Вы действительно хотите удалить этот товар?</div>
@@ -897,10 +1102,12 @@
       </div>
     </div>
     <!-- #modal-delete-->
-    <button class="btn btn btn-primary link-modal" type="button" data-src="#modal-delete">удалить этот товар
-    </button>
+    <!--+e.BUTTON.btn.btn.btn-primary.link-modal(type="button" data-src="#modal-delete") удалить этот товар-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
+    <script src="libs/popper.min.js"></script>
+    <script src="libs/bootstrap/util.js"></script>
+    <script src="libs/bootstrap/dropdown.js"></script>
     <script src="libs/fancybox/jquery.fancybox.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>

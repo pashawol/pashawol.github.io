@@ -125,7 +125,7 @@ jQuery(document).ready(function ($) {
 		speed: 450,
 		infinite: true,
 		loop: true,
-		adaptiveHeight: true,
+		// adaptiveHeight: true,
 		arrows: true, 
 		prevArrow: arrr2,
 		nextArrow: arrl2,
