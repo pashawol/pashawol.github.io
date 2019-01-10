@@ -528,25 +528,25 @@ jQuery(document).ready(function ($) {
 	// для плаваюещего label
 	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('label').addClass('empty');
 
-	$('input, textarea').keyup(function () {
-		if ($(this).val().trim() !== '') {
-			$(this).closest('label').removeClass('empty');
-		} else {
-			$(this).closest('label').addClass('empty');
-		}
-	});
+	// $('input, textarea').keyup(function () {
+	// 	if ($(this).val().trim() !== '') {
+	// 		$(this).closest('label').removeClass('empty');
+	// 	} else {
+	// 		$(this).closest('label').addClass('empty');
+	// 	}
+	// });
 
 
 
-	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').each(function () {
+	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').on('keyup change click input cut copy paste', function () {
 
-		if ($(this).val().trim() !== '') {
+		if ($(this).val() !== '') {
 			$(this).closest('label').removeClass('empty');
 		} else {
 			$(this).closest('label').addClass('empty');
 		}
 		$(this).on('.keyup', function () {
-			if ($(this).val().trim() !== '') {
+			if ($(this).val() !== '') {
 				$(this).closest('label').removeClass('empty');
 			} else {
 				$(this).closest('label').addClass('empty');
@@ -692,43 +692,60 @@ jQuery(document).ready(function ($) {
 		dots: false,
 		useTransform: false,
 		arrows: true,
-		touchMove: true,
-		swipe: true,
+		touchMove: false,
+		// swipe: false,
 		prevArrow: arrr3,
 		nextArrow: arrl3,
+		asNavFor: '.s-compare__slider--js'
 		// centerMode: true,
 		// focusOnSelect: true ,
 		// variableWidth: true,
 		// prevArrow: arrr2,
 		// nextArrow: arrl2,
 	});
-	// var swiper = new Swiper('.swiper-container', {
+	
+	// var swiper = new Swiper('.s-compare__slider--js', {
 	// 	slidesPerView: 'auto',
-	// 	spaceBetween: 30,
-	// 	pagination: {
-	// 		el: '.swiper-pagination',
-	// 		clickable: true,
+	// 	// spaceBetween: 30,
+	// 	// pagination: {
+	// 	// 	el: '.swiper-pagination',
+	// 	// 	clickable: true,
+	// 	// },
+	// 	virtualTranslate: true,
+	// 	navigation: {
+	// 		nextEl: '.swiper-button-next',
+	// 		prevEl: '.swiper-button-prev',
 	// 	},
 	// });
 
-	$('.s-compare__slider--js').on('init', function (event, slick, direction) {
-		// console.log(direction);
-		// left
-	});
-	$(".item-prod--compare-js ").stick_in_parent({
-		parent: '.s-compare__body',
+	$(".s-compare__slider-wrap").stick_in_parent({
+		parent: '.s-compare',
 		recalc_every: 1,
 	});
+	// $('.s-compare__slider--js').on('setPosition', function(event, slick){
+	// 	console.log(slick);
+	// 	$(".item-prod--compare-js ").stick_in_parent({
+	// 		parent: '.s-compare__body',
+	// 		recalc_every: 1,
+	// 	});
+	// });
 
-	$("  .s-compare .slick-arrow").stick_in_parent({
-		// parent: '.s-compare__item'
-	});
+	// var sticky = new Sticky('.item-prod--compare-js',{
+	// 	data-sticky-class: '.is_stuck'
+	// });
+
+	// sticky.update();
+
+	// $("  .s-compare .slick-arrow").stick_in_parent({
+	// 	// parent: '.s-compare__item'
+	// 	parent: '.s-compare',
+	// });
 
 
 	// подсветка при наведении пуктов в сравнении
 	$('.s-compare__group--js').hover(function () {
 		var theq = $(this).index();
-		console.log(theq);
+	 
 		// $(this).toggleClass('hover');
 		$(".s-compare__slide").each(function () {
 			$(this).find('.s-compare__group--js').eq(theq).toggleClass('hover');

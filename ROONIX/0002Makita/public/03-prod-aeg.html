@@ -1389,7 +1389,7 @@
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
-          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Пароль</span>
+          <label><input class="form-wrap__input form-control" type="password" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Пароль</span>
           </label>
         </div>
         <!-- +e.input-wrap-->
@@ -1398,7 +1398,7 @@
             <label class="custom-input"><input class="custom-input__input" type="checkbox" name="inner"/><span class="custom-input__lab"></span><span class="custom-input__text small">Запомнить меня</span>
             </label>
           </div>
-          <div class="col-auto"><a class="text-gray small" href="#">Забыли пароль?    </a></div>
+          <div class="col-auto"><a class="text-gray small link-modal" href="#" data-src="#modal-foget-pass">Забыли пароль?    </a></div>
         </div>
         <div class="row row--small">
           <div class="col">
@@ -1413,6 +1413,22 @@
       </form>
     </div>
     <!-- #modal-inner-->
+    <div class="form-wrap modal-win modal-form" id="modal-foget-pass">
+      <form class="js-form-validate">
+        <div class="form-wrap__head">
+          <div class="h2 strong">Забыли пароль?</div>
+          <div class="small text-gray">Если вы забыли пароль, введите логин или E-Mail. Контрольная строка для смены пароля, а также ваши регистрационные данные, будут высланы вам по E-Mail.</div>
+        </div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Логин или E-mail</span>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <button class="form-wrap__btn btn btn-primary btn-block" type="submit">Выслать
+        </button>
+      </form>
+    </div>
+    <!-- #modal-foget-pass-->
     <div class="form-wrap modal-win modal-form" id="modal-reg">
       <form class="js-form-validate">
         <div class="form-wrap__head">
@@ -1435,12 +1451,12 @@
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
-          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Пароль</span>
+          <label><input class="form-wrap__input form-control" type="password" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Пароль</span>
           </label>
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
-          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Повторите пароль</span>
+          <label><input class="form-wrap__input form-control" type="password" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Повторите пароль</span>
           </label>
         </div>
         <!-- +e.input-wrap-->
