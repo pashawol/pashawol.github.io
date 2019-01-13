@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Корзина шаг 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#025f98">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/style-bosch.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dop-style-11-18.css">
+  </head>
+  <body>
+    <div class="main-wrap">
+      <div class="top-line"></div>
+      <header class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-3">
+              <div class="header_top"><a class="header-burger visible-xs" href="javascript:void(0);"></a><a class="header-logo" href="javascript:void(0);"><img src="images/logo-new.png" alt=""></a><a class="visible-xs header_busket" href="javascript:void(0);"><img src="images/busket.svg" alt=""></a></div>
+            </div>
+            <div class="col-sm-9 hidden-xs">
+              <div class="header_links"><a class="link-alter header_links__item" href="javascript:void(0);" data-toggle="modal" data-target="#modal-call">Связаться с нами</a><a class="link-alter header_links__item js-header-phones header-phones" href="javascript:void(0);">
+                  <div class="header-phones_block">
+                    <div class="header-phones_block__phone">8 (800) 50-5000</div>
+                    <div class="header-phones_block__link">
+                      <!-- <img src="images/contact.png" alt="">--><img src="images/group.svg" alt=""> Связаться с нами
+                    </div>
+                  </div> Служба клиентской поддержки<span>8 (800) 50-5000</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <defs>
+                      <path id="a" d="M8.833 0L5 3.73 1.167 0 0 1.135 5 6l5-4.865z"></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" transform="translate(3 5)">
+                      <mask id="b" fill="#fff">
+                        <use xlink:href="#a"></use>
+                      </mask>
+                      <use fill="#000" fill-rule="nonzero" xlink:href="#a"></use>
+                      <g class="svg-color" fill="#025F98" mask="url(#b)">
+                        <path d="M-2-6h15V9H-2z"></path>
+                      </g>
+                    </g>
+                  </svg></a><a class="link-alter header_links__item" href="javascript:void(0);"><img src="images/user.png" alt=""> Войти в личный кабинет</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="header-nav-wrap hidden-sm hidden-xs">
+          <div class="container">
+            <div class="main-search">
+              <form action="POST">
+                <div class="main-search_wrap">
+                  <div class="input-box">
+                    <input type="text" placeholder="Поиск комплектующих для инструментов Bosch">
+                    <div class="main-search_close js-search-close"><img src="images/lose.svg" alt=""></div>
+                  </div>
+                  <div class="select-box">
+                    <select class="nice-select" id="search-select" name="search-select">
+                      <option value="По моделям и деталям">По моделям и деталям</option>
+                      <option value="По моделям и деталям">По моделям и деталям</option>
+                      <option value="По моделям и деталям">По моделям и деталям</option>
+                      <option value="По моделям и деталям">По моделям и деталям</option>
+                    </select>
+                  </div>
+                  <button class="main-search_submit" type="submit"><img src="images/search.png" alt=""></button>
+                </div>
+              </form>
+            </div>
+            <div class="row">
+              <div class="col-md-10">
+                <div class="menu">
+                  <ul>
+                    <li class="active-menu-item"><a href="javascript:void(0);">Комплектующие</a></li>
+                    <li><a href="javascript:void(0);">Информация</a>
+                      <ul>
+                        <li><a href="javascript:void(0);">Как купить</a></li>
+                        <li><a href="javascript:void(0);">Доставка</a></li>
+                        <li><a href="javascript:void(0);">Скидки</a></li>
+                        <li><a href="javascript:void(0);">Контакты</a></li>
+                        <li><a href="javascript:void(0);">Сервисный центр</a></li>
+                        <li><a href="javascript:void(0);">Статьи</a></li>
+                        <li><a href="javascript:void(0);">Ремонт инструмента</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="javascript:void(0);">Новые инструменты</a></li>
+                  </ul>
+                </div>
+                <div class="header-search hidden-sm">
+                  <div class="header-search_btn">
+                    <div class="header-search__input hidden-md">Поиск комплектующих для инструментов Bosch</div>
+                    <div class="header-search__input visible-md">Поиск</div>
+                    <button class="header-search__submit"><img src="images/search.png" alt=""></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2"><a class="header-busket link-secondary" href="javascript:void(0);"><span>5</span><img src="images/busket.svg" alt=""> Корзина</a></div>
+            </div>
+          </div>
+          <div class="search-results js-search-results main-search-results">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7"><a class="search-results_item" href="javascript:void(0);">
+                    <div class="search-results_item__text">Аккумуляторная ударная дрель-шуруповёрт Bosch 9413D</div>
+                    <div class="search-results_item__price">10 р</div></a><a class="search-results_item" href="javascript:void(0);">
+                    <div class="search-results_item__text">Аккумуляторная ударная дрель-шуруповёрт Bosch 9413D</div>
+                    <div class="search-results_item__price">10 р</div></a><a class="search-results_item" href="javascript:void(0);">
+                    <div class="search-results_item__text">Аккумуляторная ударная дрель-шуруповёрт Bosch 9413D</div>
+                    <div class="search-results_item__price">10 р</div></a>
+                  <div class="search-results_all"><a class="btn-secondary btn-large" href="javascript:void(0);">Все результаты<img src="images/blue-arrow.svg" alt=""></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container no-padding-xs">
+          <div class="main-search visible-sm visible-xs">
+            <form action="POST">
+              <div class="main-search_wrap">
+                <div class="input-box">
+                  <input class="hidden-xs" type="text" placeholder="Поиск комплектующих для инструментов Bosch">
+                  <input class="visible-xs" type="text" placeholder="Поиск">
+                  <div class="main-search_close js-search-close hidden-xs"><img src="images/lose.svg" alt=""></div>
+                </div>
+                <div class="select-box">
+                  <select class="nice-select" id="mobile-search-select" name="mobile-search-select">
+                    <option value="По моделямя и деталям">По моделям</option>
+                    <option value="По моделямя и деталям">По моделям</option>
+                    <option value="По моделямя и деталям">По моделям</option>
+                    <option value="По моделямя и деталям">По моделям</option>
+                  </select>
+                </div>
+                <button class="main-search_submit" type="submit"><img src="images/search.png" alt=""></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="mobile-nav">
+          <ul>
+            <li><a href="#">Комплектующие</a></li>
+            <li class="level"><a href="#">Информация</a>
+              <ul>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Информация</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Новые инструменты</a></li>
+          </ul>
+          <div class="mobile-nav_cabinet"><a href="#"><img src="images/user.png" alt=""> Войти в личный кабинет</a></div>
+          <div class="mobile-nav_footer"><a class="link-alter" href="#">Связаться с нами</a><a class="link-alter" href="#">Служба клиентской поддержки</a><a class="link-secondary" href="#">8 (800) 50-5000</a></div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="breadcrumbs hidden-xs">
+          <div class="breadcrumbs_item"><a class="link-alter" href="javascript:void(0);">Главная</a></div>
+          <div class="breadcrumbs_item"><a class="link-alter" href="javascript:void(0);">Комплектующие Bosch</a></div>
+          <div class="breadcrumbs_item"><a class="link-alter" href="javascript:void(0);">Комплектующие Bosch</a></div>
+          <div class="breadcrumbs_item"><a class="link-alter" href="javascript:void(0);">Комплектующие Bosch</a></div>
+        </div>
+        <div class="breadcrumbs breadcrumbs-mobile visible-xs">
+          <div class="breadcrumbs_item"><a class="link-alter" href="javascript:void(0);">Комплектующие Bosch</a></div>
+        </div>
+      </div>
+      <div class="container">
+        <h1 class="page-headers">Корзина</h1>
+        <p class="headers-text header-text-grey">Заказ на детали Bosch</p>
+      </div>
+      <div class="table">
+        <div class="container">
+          <table class="hidden-xs hidden-sm">
+            <thead>
+              <tr>
+                <td>Наименования</td>
+                <td>Артикул</td>
+                <td>Количество</td>
+                <td>Цена за шт.</td>
+                <td>Скидка</td>
+                <td>Цена со скидкой</td>
+                <td>Итого</td>
+                <td></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Защитный кожух выкл.для 4013D</td>
+                <td>KW00000500</td>
+                <td>
+                  <div class="counter"><span class="counter-btn counter-minus"><img src="images/minus.png" alt=""/></span><span class="counter-value">1</span><span class="counter-btn counter-plus"><img src="images/plus.png" alt=""/></span></div>
+                </td>
+                <td>88.53 ₽</td>
+                <td>88.53 ₽</td>
+                <td>0.00%</td>
+                <td>88.53 ₽</td>
+                <td class="last-td"><a class="link-primary" href="javascript:void(0);">Подробнее</a><a class="link-secondary" href="javascript:void(0);">Удалить</a><span class="cards-table_delete"><img src="images/lose.svg" alt=""/></span></td>
+              </tr>
+              <tr>
+                <td>Защитный кожух выкл.для 4013D</td>
+                <td>KW00000500</td>
+                <td>
+                  <div class="counter"><span class="counter-btn counter-minus"><img src="images/minus.png" alt=""/></span><span class="counter-value">1</span><span class="counter-btn counter-plus"><img src="images/plus.png" alt=""/></span></div>
+                </td>
+                <td>88.53 ₽</td>
+                <td>88.53 ₽</td>
+                <td>0.00%</td>
+                <td>88.53 ₽</td>
+                <td class="last-td"><a class="link-primary" href="javascript:void(0);">Подробнее</a><a class="link-secondary" href="javascript:void(0);">Удалить</a><span class="cards-table_delete"><img src="images/lose.svg" alt=""/></span></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="mobile-table visible-sm visible-xs">
+            <div class="mobile-table_item">
+              <div class="mobile-table_item__header">Защитный кожус выкл.для 4013D</div>
+              <div class="mobile-table_item__content">
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Количество</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>
+                      <div class="counter"><span class="counter-btn counter-minus"><img src="images/minus.png" alt=""/></span><span class="counter-value">1</span><span class="counter-btn counter-plus"><img src="images/plus.png" alt=""/></span></div></span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line">
+                  <div class="blocks-with-dotted-line_wrapper"></div>
+                </div>
+                <div class="blocks-with-dotted-line"><a class="link-primary" href="javascript:void(0);">Подробнее</a><a class="link-secondary" href="javascript:void(0);">Удалить</a></div>
+              </div>
+            </div>
+            <div class="mobile-table_item">
+              <div class="mobile-table_item__header">Защитный кожус выкл.для 4013D</div>
+              <div class="mobile-table_item__content">
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Количество</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>
+                      <div class="counter"><span class="counter-btn counter-minus"><img src="images/minus.png" alt=""/></span><span class="counter-value">1</span><span class="counter-btn counter-plus"><img src="images/plus.png" alt=""/></span></div></span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line">
+                  <div class="blocks-with-dotted-line_wrapper"></div>
+                </div>
+                <div class="blocks-with-dotted-line"><a class="link-primary" href="javascript:void(0);">Подробнее</a><a class="link-secondary" href="javascript:void(0);">Удалить</a></div>
+              </div>
+            </div>
+            <div class="mobile-table_item">
+              <div class="mobile-table_item__header">Защитный кожус выкл.для 4013D</div>
+              <div class="mobile-table_item__content">
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Количество</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>
+                      <div class="counter"><span class="counter-btn counter-minus"><img src="images/minus.png" alt=""/></span><span class="counter-value">1</span><span class="counter-btn counter-plus"><img src="images/plus.png" alt=""/></span></div></span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line blocks-with-dotted-line--mobile-table">
+                  <div class="blocks-with-dotted-line_left"><span>Артикул</span></div>
+                  <div class="blocks-with-dotted-line_right"><span>KW00000500</span></div>
+                </div>
+                <div class="blocks-with-dotted-line">
+                  <div class="blocks-with-dotted-line_wrapper"></div>
+                </div>
+                <div class="blocks-with-dotted-line"><a class="link-primary" href="javascript:void(0);">Подробнее</a><a class="link-secondary" href="javascript:void(0);">Удалить</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="table-sum">Итого: <span>1 288.53 ₽</span></div>
+        </div>
+        <!-- start s-order-->
+        <div class="s-order section" id="s-order">
+          <div class="container">
+            <div class="busket-steps hidden-sm hidden-xs">
+              <div class="busket-steps_item busket-steps_item--active">Шаг 1: Адрес доставки</div>
+              <div class="busket-steps_item">Шаг 2: Способы оплаты</div>
+              <div class="busket-steps_item">Шаг 3: Завершить заказ</div>
+            </div>
+            <div class="s-order__body">
+              <div class="form-wrap">
+                <form class="js-form-validate">
+                  <div class="form-wrap__group">
+                    <div class="form-wrap__title-head">
+                      <div class="h3 strong">Контактные данные</div>
+                    </div>
+                    <div class="form-wrap__input-wrap form-group">
+                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Имя*</span>
+                      </label> 
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__input-wrap form-group">
+                      <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон*</span>
+                      </label> 
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__input-wrap form-group">
+                      <label><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Электронная почта**</span>
+                      </label> 
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="form-wrap__group">
+                    <div class="row">
+                      <div class="col-auto">
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="addr" data-tab-radio="var-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Забрать самостоятельно</span>
+                        </label>
+                      </div>
+                      <div class="col-auto">
+                        <label class="custom-input"><input class="custom-input__input" type="radio" name="addr" data-tab-radio="var-2" checked="checked" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Заказать доставку</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-radio-content-wrap">
+                    <div class="tab-radio-content" id="var-1">
+                      <div class="form-wrap__group"> 
+                        <div class="form-wrap__table-block">
+                          <div class="row">
+                            <div class="col"><span>Тип доставки</span></div>
+                            <div class="col-xs-auto">Самовывоз</div>
+                          </div>
+                          <div class="row">
+                            <div class="col"><span>Резерв</span></div>
+                            <div class="col-xs-auto">3 дня</div>
+                          </div>
+                          <div class="row">
+                            <div class="col"><span>Стоимость</span></div>
+                            <div class="col-xs-auto">Бесплатно</div>
+                          </div>
+                          <div class="row">
+                            <div class="col"><span>Адрес пункта самовывоза</span></div>
+                            <div class="col-xs-auto">г.Москва,2-й Иртышский пр.,д.4Б/1 стр.5</div>
+                          </div>
+                          <div class="row">
+                            <div class="col"><span>Телефон</span></div>
+                            <div class="col-xs-auto">495 530-70-07</div>
+                          </div>
+                        </div>
+                      </div>
+                      <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                      </button>
+                    </div>
+                    <div class="tab-radio-content" id="var-2">
+                      <div class="form-wrap__group"> 
+                        <div class="form-wrap__table-block">
+                          <div class="row">
+                            <div class="col"><span>Тип доставки</span></div>
+                            <div class="col-xs-auto">Курьерская доставка</div>
+                          </div>
+                          <div class="row">
+                            <div class="col"><span>Стоимость</span></div>
+                            <div class="col-xs-auto">300 р.</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-radio-content active" id="add-new-addr">
+                        <!--| new-->
+                        <div class="tab-radio-content active" id="delivery-comp-all">
+                          <div class="form-wrap__group">
+                            <div class="row">
+                              <div class="col-auto">
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="addr-2" data-tab-radio="addr-var-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по Москве</span>
+                                </label>
+                              </div>
+                              <div class="col-auto">
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="addr-2" data-tab-radio="addr-var-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по Московской области</span>
+                                </label>
+                              </div>
+                              <div class="col-auto">
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="addr-2" data-tab-radio="addr-var-3" checked="checked" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Доставка по России</span>
+                                </label>
+                              </div>
+                            </div>
+                            <p>Доставка:  300р.  Если сумма заказа свыше 30 000 рублей - доставка по Москве бесплатно</p>
+                          </div>
+                          <div class="tab-radio-content" id="addr-var-1">
+                            <div class="form-wrap__group width350">
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (мобильный)*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Улица </span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Дом №</span>
+                                </label>
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-group">
+                                <div class="row">
+                                  <div class="col-xs-6">
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Квартира/Офис №</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">№ домофона</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                            </div>
+                            <div class="form-wrap__group">
+                              <div class="row row--small">
+                                <div class="col-xs-auto">
+                                  <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
+                            </div>
+                          </div>
+                          <!-- .tab-radio-content#addr-var-1-->
+                          <div class="tab-radio-content" id="addr-var-2">
+                            <div class="form-wrap__group width350">
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Адрес</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Км. от МКАД*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-group">
+                                <div class="row">
+                                  <div class="col-xs-6">
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Подъезд №</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Этаж</span>
+                                      </label>
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-wrap__input-group">
+                                <div class="row">
+                                  <div class="col-xs-6">
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Квартира/Офис №</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                  </div>
+                                  <div class="col-xs-6">
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">№ домофона</span>
+                                      </label>
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                            </div>
+                            <div class="form-wrap__group">
+                              <div class="row row--small">
+                                <div class="col-xs-auto">
+                                  <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                                  </button>
+                                </div>
+                              </div>
+                              <div class="text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
+                            </div>
+                          </div>
+                          <!-- .tab-radio-content#addr-var-2-->
+                          <div class="tab-radio-content" id="addr-var-3">
+                            <div class="form-wrap__group">
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название доставки*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label>
+                                  <select class="form-wrap__input form-control" required="required" pattern=".{3,}"> 
+                                    <option class="d-none" selectedvalue="">Город</option>
+                                    <option selectedvalue="">Город</option>
+                                    <option selectedvalue="">Город</option>
+                                    <option selectedvalue="">Город</option>
+                                    <option selectedvalue="">Город</option>
+                                  </select>
+                                </label>
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Комментарий</span>
+                                </label>
+                              </div>
+                              <!-- +e.input-wrap-->
+                            </div>
+                            <div class="form-wrap__group tab-radio-content-wrap">
+                              <div class="form-wrap__title-head">
+                                <div class="h3 strong">Выберите транспортную компанию</div>
+                              </div>
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="delivery-comp" data-tab-radio="delivery-comp-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортная компания &quot;Байкал-Сервис&quot;</span>
+                                </label>
+                              </div>
+                              <div class="tab-radio-content tab-radio-content--delivery-comp" id="delivery-comp-1">
+                                <div class="form-wrap__table-block">
+                                  <div class="row">
+                                    <div class="col"><span>Телефон</span></div>
+                                    <div class="col-xs-auto">+7 (812) 494-88-88</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Электронная почта</span></div>
+                                    <div class="col-xs-auto">prspb@pecom.ru</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Сайт</span></div>
+                                    <div class="col-xs-auto">https://pecom.ru</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- .tab-radio-content-->
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="delivery-comp" data-tab-radio="delivery-comp-5" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортная компания &quot;ПЭК&quot;</span>
+                                </label>
+                              </div>
+                              <div class="tab-radio-content tab-radio-content--delivery-comp" id="delivery-comp-5">
+                                <div class="form-wrap__table-block">
+                                  <div class="row">
+                                    <div class="col"><span>Телефон</span></div>
+                                    <div class="col-xs-auto">+7 (812) 494-88-88</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Электронная почта</span></div>
+                                    <div class="col-xs-auto">prspb@pecom.ru</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Сайт</span></div>
+                                    <div class="col-xs-auto">https://pecom.ru</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- .tab-radio-content-->
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="delivery-comp" data-tab-radio="delivery-comp-2" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортно-экспедиторская компания «Деловые Линии»</span>
+                                </label>
+                              </div>
+                              <div class="tab-radio-content tab-radio-content--delivery-comp" id="delivery-comp-2">
+                                <div class="form-wrap__table-block">
+                                  <div class="row">
+                                    <div class="col"><span>Телефон</span></div>
+                                    <div class="col-xs-auto">+7 (812) 494-88-88</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Электронная почта</span></div>
+                                    <div class="col-xs-auto">prspb@pecom.ru</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Сайт</span></div>
+                                    <div class="col-xs-auto">https://pecom.ru</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- .tab-radio-content-->
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="delivery-comp" data-tab-radio="delivery-comp-3" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортно-экспедиционная компания «Автотрейдинг»</span>
+                                </label>
+                              </div>
+                              <div class="tab-radio-content tab-radio-content--delivery-comp" id="delivery-comp-3">
+                                <div class="form-wrap__table-block">
+                                  <div class="row">
+                                    <div class="col"><span>Телефон</span></div>
+                                    <div class="col-xs-auto">+7 (812) 494-88-88</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Электронная почта</span></div>
+                                    <div class="col-xs-auto">prspb@pecom.ru</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Сайт</span></div>
+                                    <div class="col-xs-auto">https://pecom.ru</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- .tab-radio-content-->
+                              <div>
+                                <label class="custom-input"><input class="custom-input__input" type="radio" name="delivery-comp" data-tab-radio="delivery-comp-4" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Транспортно-экспедиционная компания «ЖелДорЭкспедиция»</span>
+                                </label>
+                              </div>
+                              <div class="tab-radio-content tab-radio-content--delivery-comp" id="delivery-comp-4">
+                                <div class="form-wrap__table-block">
+                                  <div class="row">
+                                    <div class="col"><span>Телефон</span></div>
+                                    <div class="col-xs-auto">+7 (812) 494-88-88</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Электронная почта</span></div>
+                                    <div class="col-xs-auto">prspb@pecom.ru</div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col"><span>Сайт</span></div>
+                                    <div class="col-xs-auto">https://pecom.ru</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- .tab-radio-content-->
+                            </div>
+                            <div class="form-wrap__group">
+                              <button class="form-wrap__btn-add btn btn btn-secondary btn-tab-js" type="button " data-tab-block="delivery-comp-new"> Добавить транспортную компанию<img src="images/plus.png" alt=""/>
+                              </button>
+                            </div>
+                            <div class="form-wrap__group">
+                              <div class="form-wrap__title-head">
+                                <div class="h3 strong">Получатель ТК</div>
+                              </div>
+                              <div class="form-wrap__group">
+                                <div>
+                                  <label class="custom-input"><input class="custom-input__input" type="radio" name="delivery-receiver" data-tab-radio="delivery-receiver-1" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Физическое лицо</span>
+                                  </label>
+                                </div>
+                                <div>
+                                  <label class="custom-input"><input class="custom-input__input" type="radio" name="delivery-receiver" data-tab-radio="delivery-receiver-2" checked="checked" required="required"/><span class="custom-input__lab"></span><span class="custom-input__text">Юридическое лицо</span>
+                                  </label>
+                                </div>
+                              </div>
+                              <div class="tab-radio-content" id="delivery-receiver-1">
+                                <div class="form-wrap__group">
+                                  <div class="form-wrap__input-wrap form-group">
+                                    <label><input class="form-wrap__input form-control" type="text" pattern=".{3,}"/><span class="form-wrap__title-label">Фамилия Имя Отчество (Полностью)</span>
+                                    </label> 
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                  <div class="form-wrap__input-wrap form-group">
+                                    <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Серия номер паспорта</span>
+                                    </label> 
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                  <div class="form-wrap__input-wrap form-group">
+                                    <label><input class="form-wrap__input form-control" type="tel" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон (домашний)</span>
+                                    </label> 
+                                  </div>
+                                  <!-- +e.input-wrap-->
+                                  <div class="row row--small">
+                                    <div class="col-xs-auto">
+                                      <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
+                                </div>
+                              </div>
+                              <!-- .tab-radio-content-->
+                              <div class="tab-radio-content active" id="delivery-receiver-2">
+                                <div class="tab-radio-content" id="delivery-reqv">
+                                  <div class="form-wrap__group">
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label>
+                                        <select class="form-wrap__input form-control" required="required" pattern=".{3,}"> 
+                                          <option class="d-none" selectedvalue="">Выберите компанию</option> 
+                                          <option value="" selected="selected">Выберите компанию 1</option>
+                                          <option value="">Выберите компанию 2</option>
+                                          <option value="">Выберите компанию 3</option>
+                                        </select>
+                                      </label>
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <button class="form-wrap__btn btn btn btn-primary btn-tab-js" type="button" data-tab-block="delivery-reqv-edit">Редактировать
+                                    </button>
+                                  </div>
+                                  <!-- +e.group-->
+                                  <div class="form-wrap__group">
+                                    <div class="tab-radio-content-wrap">
+                                      <div class="tab-radio-content active" id="addr-rezult">
+                                        <div class="form-wrap__table-block">
+                                          <div class="row">
+                                            <div class="col"><span>Название доставки</span></div>
+                                            <div class="col-xs-auto">Москва, ул. Гамалеи, 2, кв.98</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Контактное лицо</span></div>
+                                            <div class="col-xs-auto">Константин</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Телефон контактного лица</span></div>
+                                            <div class="col-xs-auto">+7 495 5009253</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Дальность</span></div>
+                                            <div class="col-xs-auto">По Москве</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Улица</span></div>
+                                            <div class="col-xs-auto">Гамалеи</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Дом</span></div>
+                                            <div class="col-xs-auto">1</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Подъезд №</span></div>
+                                            <div class="col-xs-auto">1</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Квартирa/офис №</span></div>
+                                            <div class="col-xs-auto">1</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>№ Домофона</span></div>
+                                            <div class="col-xs-auto">1</div>
+                                          </div>
+                                          <div class="row">
+                                            <div class="col"><span>Конт. телефон (домашний)</span></div>
+                                            <div class="col-xs-auto">+7 495 5009253</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row row--small">
+                                    <div class="col-xs-auto">
+                                      <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                                      </button>
+                                    </div>
+                                    <div class="col-xs-auto">
+                                      <button class="form-wrap__btn btn btn-block btn btn-secondary w-100 btn-tab-js" type="button " data-tab-block="all-addr">Вернуться к выбору адресов
+                                      </button>
+                                    </div>
+                                    <div class="col-xs-auto">
+                                      <div class="tab-radio-content active" id="tab-btn-show"><a class="form-wrap__btn btn btn btn-secondary btn-tab-js" href="#" data-tab-block="tab-btn-plus">Добавить реквизиты +</a>
+                                      </div>
+                                      <div class="tab-radio-content" id="tab-btn-plus">
+                                        <div class="row">
+                                          <div class="col-xs-auto">
+                                            <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="delivery-reqv-edit">Заполнить вручную 
+                                            </button>
+                                          </div>
+                                          <div class="col-xs-auto">
+                                            <button class="form-wrap__btn-secondary btn btn-block btn btn-secondary btn-tab-js" type="button" data-tab-block="reqv-file">Добавить реквизиты файлом 
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
+                                    </div>
+                                  </div>
+                                  <!-- /.tab-radio-content-->
+                                </div>
+                                <!-- /.tab-radio-content-->
+                                <div class="tab-radio-content" id="reqv-file">
+                                  <div class="form-wrap">
+                                    <div class="s-po-block">
+                                      <div class="form-wrap__group">
+                                        <div class="tab-radio-content-close btn-tab-js" data-tab-block="delivery-reqv-edit">
+                                        </div>
+                                        <div class="form-wrap__input-wrap form-group">
+                                          <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Наименование организации (Полное)</span>
+                                          </label>
+                                        </div>
+                                        <!-- +e.input-wrap-->
+                                        <div class="form-wrap__maxw">
+                                          <div class="smallest text-gray pb-3">Пожалуйста выберите файл (не болee 1 мегабайта), и нажмите кнопку загрузить.</div>
+                                          <div class="add-file">
+                                            <div class="row row--small">
+                                              <div class="col-12 mb-3">
+                                                <div class="add-file__filename">
+                                                </div>
+                                              </div>
+                                              <div class="col">
+                                                <label><input class="add-file__input d-none" type="file"/><span class="add-file__btn btn btn-block btn btn-primary" role="button">Добавить файл</span>
+                                                </label>
+                                              </div>
+                                              <div class="col">
+                                                <button class="add-file__btn btn btn-block btn btn-secondary" type="submit">Сохранить
+                                                </button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--.tab-radio-content-->
+                                <div class="tab-radio-content active" id="delivery-reqv-edit">
+                                  <div class="form-wrap__group">
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название компании*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактное лицо*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон контактного лица*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">ИНН*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">КПП*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Юридический адрес*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Фактический адрес*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название банка*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">КОР банка*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">БИК*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Расчетный счет*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Генеральный директор*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон компании*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                    <div class="form-wrap__input-wrap form-group">
+                                      <label><input class="form-wrap__input form-control" type="email" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Электроная почта компании*</span>
+                                      </label> 
+                                    </div>
+                                    <!-- +e.input-wrap-->
+                                  </div>
+                                  <!-- +e.group-->
+                                  <div class="form-wrap__group"> 
+                                    <div class="row row--small">
+                                      <div class="col-xs-auto">
+                                        <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Далее
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
+                                  </div>
+                                </div>
+                                <!-- /.tab-radio-content-->
+                              </div>
+                              <!-- .tab-radio-content-->
+                            </div>
+                          </div>
+                          <!-- /.tab-radio-content.active#delivery-comp-all-->
+                        </div>
+                        <div class="tab-radio-content" id="delivery-comp-new">
+                          <div class="form-wrap__group tab-radio-content-wrap">
+                            <div class="form-wrap__title-head">
+                              <div class="h3 strong">Добавить транспортную компанию</div>
+                            </div>
+                            <div class="form-wrap__group">
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="text" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Название ТК*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Телефон ТК*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-group">
+                                <label><input class="form-wrap__input form-control" type="url" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Сайт ТК*</span>
+                                </label> 
+                              </div>
+                              <!-- +e.input-wrap-->
+                            </div>
+                            <!-- +e.group-->
+                            <div class="form-wrap__group">
+                              <div class="row row--small">
+                                <div class="col-xs-auto">
+                                  <button class="form-wrap__btn btn btn-block btn btn-primary" type="submit">Сохранить
+                                  </button>
+                                </div>
+                                <div class="col-xs-auto"><a class="form-wrap__btn-back btn btn-block btn btn-secondary w-100 btn-tab-js" href="#" data-tab-block="delivery-comp-all"> Вернуться без сохранения</a>
+                                </div>
+                              </div>
+                              <div class="small text-danger">Mинимальная сумма заказа для доставки составляет 1000 рублей</div>
+                            </div>
+                          </div>
+                          <!-- .tab-radio-content-->
+                        </div>
+                        <!-- /.tab-radio-content.active#delivery-comp-new-->
+                        <!--| new-->
+                      </div>
+                      <!-- .tab-radio-content#add-new-addr-->
+                    </div>
+                    <!-- .tab-radio-content-->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end s-order-->
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer_top">
+            <div class="row">
+              <div class="col-md-4 col-sm-6 hidden-xs">
+                <div class="footer_col">
+                  <div class="footer_col__header">Комплектующие BOSH</div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-4 col-sm-6 hidden-xs">
+                <div class="footer_col">
+                  <div class="footer_col__header">Информация</div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-12">
+                <div class="footer_col">
+                  <div class="footer_col__header">Связаться с нами</div>
+                  <div class="footer_col__text base-text">
+                    <p>Мы с нетерпением ждем вашего запроса!</p><a class="link-secondary footer_col__phone" href="tel:8800505000">8 (800) 50-5000</a>
+                    <p>Официальные сообщества</p>
+                  </div>
+                  <div class="footer_social">
+                    <div class="footer_social__item"><a href="javascript:void(0);"><img src="images/vk.png" alt=""></a></div>
+                    <div class="footer_social__item"><a href="javascript:void(0);"><img src="images/fb.png" alt=""></a></div>
+                    <div class="footer_social__item"><a href="javascript:void(0);"><img src="images/twitter.png" alt=""></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <div class="base-text"><span>
+                © 2015-2017. "Интернет-магазин комплектующих для электроинструментов BOSH, продажа запчастей BOSH" Все
+                права защищены.</span><a class="link-primary" href="javascript:void(0);">Политика конфиденциальности</a><a class="btn-secondary btn-small js-to-top" href="javascript:void(0);">Наверх<img src="images/to-top.png" alt=""></a></div>
+          </div>
+        </div>
+      </footer>
+      <!-- добави модалку  Обратный звонок-->
+      <div class="modal" id="modal-call">
+        <div class="modal-dialog">
+          <div class="modal-content"><img class="modal-close" src="images/close-blue.svg" data-dismiss="modal">
+            <div class="modal-name">Обратный звонок </div>
+            <!-- <a class="link-secondary modal-go-to" href="javascript:void(0);">-->
+            <!-- Создать личный кабинет-->
+            <!-- </a>-->
+            <form class="validated-form" id="reg-formalin">
+              <p id="error1" style="color: red;"></p>
+              <p id="error2" style="color: red;"></p>
+              <div class="input-box">
+                <label>Ваше имя</label>
+                <input type="text" name="regname" placeholder="Имя">
+              </div>
+              <div class="input-box">
+                <label>Номер телефона</label>
+                <input type="tel" name="regphone" placeholder="Телефон">
+              </div>
+              <div class="modal-captcha"><img src="images/recaptcha.gif"></div>
+              <input type="hidden" value="Registration" name="action">
+              <input class="btn-form btn btn-large btn-primary btn-block" type="submit" value="Заказать обратный звонок  ">
+              <!--
+              <div class="modal-grey-text">
+              Нажимая на кнопку "Зарегистрироваться", я даю согласие на обработку персональных данных
+              </div>
+              -->
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- / добави модалку   Обратный звонок-->
+      <div class="top-line"></div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/costume.js"></script>
+    <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
+    <script src="libs/parsleyjs/parsley.min.js"></script>
+    <script src="libs/parsleyjs/i18n/ru.js"></script>
+    <script src="libs/parsleyjs/i18n/ru.extra.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Сравнение товаров</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#025f98">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dop-style-11-18.css">
+    <link rel="stylesheet" href="css/style-bosch.min.css">
+  </head>
+  <body>
+    <div class="main-wrap">
+      <div class="trop main-mnu hidden-mnu hidden-lg landingMenu2 d-lg-none">
+        <div class="wrapp-hidden">
+          <div class="trop__head"> 
+            <div class="toggle-mnu toggle-mnu-2 on"><span> </span></div><a class="trop__logo" href="#"><img class="img-svg res-i" src="img/metabo.svg" alt=""/></a>
+          </div>
+          <div class="catalog-nav">
+            <div class="catalog-nav__btn-toggle"><span></span>Каталог товаров
+            </div>
+            <div class="catalog-nav__dropdown">
+              <div class="catalog-nav__inner"><a class="catalog-nav__link" href="#">Аккумуляторные инструменты</a><a class="catalog-nav__link" href="#">Пневматические инструменты</a><a class="catalog-nav__link" href="#">Болгарки (УШМ)</a><a class="catalog-nav__link" href="#">Бороздоделы (штроборезы)</a><a class="catalog-nav__link" href="#">Воздуходувки</a><a class="catalog-nav__link" href="#">Гайковёрты</a><a class="catalog-nav__link" href="#">Гвоздезабиватели</a><a class="catalog-nav__link" href="#">Граверы</a><a class="catalog-nav__link" href="#">Дрели</a><a class="catalog-nav__link" href="#">Дрели-шуруповёрты</a><a class="catalog-nav__link" href="#">Измерительная техника</a><a class="catalog-nav__link" href="#">Клеевые пистолеты</a><a class="catalog-nav__link" href="#">Лобзики</a><a class="catalog-nav__link" href="#">Мойки высокого давления</a><a class="catalog-nav__link" href="#">Наборы инструментов</a><a class="catalog-nav__link" href="#">Ножницы</a><a class="catalog-nav__link" href="#">Отбойные молотки</a><a class="catalog-nav__link" href="#">Отвёртки</a><a class="catalog-nav__link" href="#">Перфораторы</a><a class="catalog-nav__link" href="#">Пилы</a><a class="catalog-nav__link" href="#">Пылесосы</a><a class="catalog-nav__link" href="#">Реноваторы (резаки)</a><a class="catalog-nav__link" href="#">Рубанки</a><a class="catalog-nav__link" href="#">Радиоприёмники</a><a class="catalog-nav__link" href="#">Технические фены</a><a class="catalog-nav__link" href="#"> Точило</a><a class="catalog-nav__link" href="#"> Фонари</a><a class="catalog-nav__link" href="#"> Фрезеры</a><a class="catalog-nav__link" href="#"> Шлифовальные машины</a><a class="catalog-nav__link" href="#"> Шуруповёрты</a><a class="catalog-nav__link" href="#"> Аксессуары, расходные материалы </a>
+              </div>
+            </div>
+          </div>
+          <ul class="trop__nav">
+            <li class="trop__item"><a class="trop__link" href="#"> О компании  </a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#">Каталог продукции</a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#">Доставка и оплата</a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#">Контакты </a>
+            </li>
+            <li class="trop__item"><a class="trop__link" href="#">Гарантия</a>
+            </li>
+          </ul>
+          <div class="trop__link"><a class="text-body d-inline link-modal" data-src="#modal-inner" href="javascript:;">Вход</a> 
+            / <a class="text-body d-inline link-modal" data-src="#modal-reg" href="javascript:;">Регистрация</a>
+          </div>
+          <div class="trop__contact-group">
+            <svg class="icon icon-phone ">
+              <use xlink:href="img/svg/sprite.svg#phone"></use>
+            </svg><a class="trop__link trop__link--phone" href="tel:+7(495)530-70-07">  +7 (495) 530-70-07</a><a class="trop__link smallest link-modal" data-src="#modal-call" href="javascript:;">Заказать обратный звонок</a>
+          </div>
+        </div>
+      </div>
+      <!--  мобильное меню-->
+      <!-- start HEADER.header-->
+      <header class="header">
+        <!-- start top-nav-->
+        <div class="top-nav d-none d-lg-block">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <ul class="top-nav__nav">
+                  <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Каталог продукции</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Доставка и оплата</a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
+                  </li>
+                  <li class="top-nav__item"><a class="top-nav__link" href="#">Гарантия</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-auto"><a class="top-nav__link d-inline" href="#"> 
+                <svg class="icon icon-compare ">
+                  <use xlink:href="img/svg/sprite.svg#compare"></use>
+                </svg> Сравнить
+                <!-- скрывает счетчик если нет товаров в сравнении--><span class="top-nav__compare-count">6</span></a>
+              </div>
+              <div class="col-auto">
+                <div class="top-nav__link">
+                  <svg class="icon icon-user ">
+                    <use xlink:href="img/svg/sprite.svg#user"></use>
+                  </svg><a class="top-nav__link d-inline link-modal" data-src="#modal-inner" href="javascript:;">Вход</a> 
+                  / <a class="top-nav__link d-inline link-modal" data-src="#modal-reg" href="javascript:;">Регистрация</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end top-nav-->
+        <!-- start .top-line-->
+        <div class="top-line">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-auto d-lg-none">
+                <div class="toggle-mnu toggle-mnu-1 d-lg-none"><span></span></div>
+              </div>
+              <div class="aside-col col text-md-left text-center"><a class="top-line__logo" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="img-svg res-i" src="img/metabo.svg" alt=""/></div>
+                </div></a>
+              </div>
+              <div class="main-col col-lg-9 col-auto d-none d-md-block">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <div class="top-line__contact-group">
+                      <svg class="icon icon-phone ">
+                        <use xlink:href="img/svg/sprite.svg#phone"></use>
+                      </svg><a class="top-line__link top-line__link--phone" href="tel:+7(495)530-70-07">  +7 (495) 530-70-07</a><a class="top-line__link smallest link-modal" data-src="#modal-call" href="javascript:;">Заказать обратный звонок</a>
+                    </div>
+                  </div>
+                  <div class="col-auto d-none d-lg-block">
+                    <div class="top-line__nav">
+                      <div class="top-line__item"><a class="top-line__link" href="#">Акции</a>
+                      </div>
+                      <div class="top-line__item"><a class="top-line__link" href="#">Аксессуары и расходное</a>
+                      </div>
+                      <div class="top-line__item"><a class="top-line__link" href="#">Запчасти</a>
+                      </div>
+                      <div class="top-line__item"><a class="top-line__link" href="#">Оптовым клиентам</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-auto d-lg-none"><a class="top-line__btn-basket btn active" href="#"><span class="top-line__icon-wrap">
+                <svg class="icon icon-basket ">
+                  <use xlink:href="img/svg/sprite.svg#basket"></use>
+                </svg><span class="top-line__btn-count">6</span></span></a>
+              </div>
+            </div>
+            <div class="row align-items-center">
+              <div class="aside-col col-3 d-none d-lg-block">
+                <div class="catalog-nav">
+                  <div class="catalog-nav__btn-toggle"><span></span>Каталог товаров
+                  </div>
+                  <div class="catalog-nav__dropdown">
+                    <div class="catalog-nav__inner"><a class="catalog-nav__link" href="#">Аккумуляторные инструменты</a><a class="catalog-nav__link" href="#">Пневматические инструменты</a><a class="catalog-nav__link" href="#">Болгарки (УШМ)</a><a class="catalog-nav__link" href="#">Бороздоделы (штроборезы)</a><a class="catalog-nav__link" href="#">Воздуходувки</a><a class="catalog-nav__link" href="#">Гайковёрты</a><a class="catalog-nav__link" href="#">Гвоздезабиватели</a><a class="catalog-nav__link" href="#">Граверы</a><a class="catalog-nav__link" href="#">Дрели</a><a class="catalog-nav__link" href="#">Дрели-шуруповёрты</a><a class="catalog-nav__link" href="#">Измерительная техника</a><a class="catalog-nav__link" href="#">Клеевые пистолеты</a><a class="catalog-nav__link" href="#">Лобзики</a><a class="catalog-nav__link" href="#">Мойки высокого давления</a><a class="catalog-nav__link" href="#">Наборы инструментов</a><a class="catalog-nav__link" href="#">Ножницы</a><a class="catalog-nav__link" href="#">Отбойные молотки</a><a class="catalog-nav__link" href="#">Отвёртки</a><a class="catalog-nav__link" href="#">Перфораторы</a><a class="catalog-nav__link" href="#">Пилы</a><a class="catalog-nav__link" href="#">Пылесосы</a><a class="catalog-nav__link" href="#">Реноваторы (резаки)</a><a class="catalog-nav__link" href="#">Рубанки</a><a class="catalog-nav__link" href="#">Радиоприёмники</a><a class="catalog-nav__link" href="#">Технические фены</a><a class="catalog-nav__link" href="#"> Точило</a><a class="catalog-nav__link" href="#"> Фонари</a><a class="catalog-nav__link" href="#"> Фрезеры</a><a class="catalog-nav__link" href="#"> Шлифовальные машины</a><a class="catalog-nav__link" href="#"> Шуруповёрты</a><a class="catalog-nav__link" href="#"> Аксессуары, расходные материалы </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col main-col">
+                <div class="top-line__row row align-items-center">
+                  <div class="col">
+                    <div class="search-block">
+                      <form><input class="search-block__input form-control" type="text" placeholder="Поиск товаров на названию или артикулу"/>
+                        <button class="search-block__btn-close" type="button">
+                          <svg class="icon icon-close ">
+                            <use xlink:href="img/svg/sprite.svg#close"></use>
+                          </svg>
+                        </button>
+                        <button class="search-block__btn" type="submit">
+                          <svg class="icon icon-search ">
+                            <use xlink:href="img/svg/sprite.svg#search"></use>
+                          </svg>
+                        </button>
+                        <div class="search-block__toggle-block"><a class="search-block__item d-block text-body tdn" href="#">
+                          <div class="row">
+                            <div class="col">
+                              Аккумуляторные листовые  <span class="bg-warning">ножни</span>цы по металлу Makita gsc 12v-13</div>
+                            <div class="col-auto">
+                              <div class="strong text-gray">28 419 р. </div>
+                            </div>
+                          </div></a>
+                          <!-- +e.item--><a class="search-block__item d-block text-body tdn" href="#">
+                          <div class="row">
+                            <div class="col">
+                              Аккумуляторные листовые  <span class="bg-warning">ножни</span>цы по металлу Makita gsc 12v-13</div>
+                            <div class="col-auto">
+                              <div class="strong text-gray">28 419 р. </div>
+                            </div>
+                          </div></a>
+                          <!-- +e.item--><a class="search-block__item d-block text-body tdn" href="#">
+                          <div class="row">
+                            <div class="col">
+                              Аккумуляторные листовые  <span class="bg-warning">ножни</span>цы по металлу Makita gsc 12v-13</div>
+                            <div class="col-auto">
+                              <div class="strong text-gray">28 419 р. </div>
+                            </div>
+                          </div></a>
+                          <!-- +e.item--><a class="search-block__item d-block text-body tdn" href="#">
+                          <div class="row">
+                            <div class="col">
+                              Аккумуляторные листовые  <span class="bg-warning">ножни</span>цы по металлу Makita gsc 12v-13</div>
+                            <div class="col-auto">
+                              <div class="strong text-gray">28 419 р. </div>
+                            </div>
+                          </div></a>
+                          <!-- +e.item--><a class="search-block__item d-block text-body tdn" href="#">
+                          <div class="row">
+                            <div class="col">
+                              Аккумуляторные листовые  <span class="bg-warning">ножни</span>цы по металлу Makita gsc 12v-13</div>
+                            <div class="col-auto">
+                              <div class="strong text-gray">28 419 р. </div>
+                            </div>
+                          </div></a>
+                          <!-- +e.item--><a class="search-block__btn-toggle btn btn-primary" href="#">Все результаты поиска</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-auto d-none d-lg-block"><a class="top-line__btn-basket btn active" href="#"><span class="top-line__icon-wrap">
+                    <svg class="icon icon-basket ">
+                      <use xlink:href="img/svg/sprite.svg#basket"></use>
+                    </svg><span class="top-line__btn-count">6</span></span><span class="text">Корзина</span><span class="strong text-danger">12 430 р.</span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end .top-line-->
+      </header>
+      <!-- end HEADER.header-->
+      <div class="container">
+        <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><a class="breadcrumb-item" href="#">Каталог</a><span class="breadcrumb-item active">Сравнение товаров</span>
+        </nav>
+        <div class="page-title">
+          <h1>Сравнение товаров</h1>
+        </div>
+      </div>
+      <!-- start s-compare-->
+      <div class="s-compare section" id="s-compare">
+        <div class="s-compare__slider-wrap">
+          <div class="container">
+            <div class="s-compare__slider s-compare__slider--js s-compare__slider--head-js">
+              <div class="s-compare__slide">
+                <div class="s-compare__item">
+                  <div class="item-prod item-prod--compare item-prod--compare-js">
+                    <div class="item-prod__img-wrap">
+                      <div class="row">
+                        <div class="col"><a class="link-modal" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a></div>
+                        <div class="col-auto align-self-md-end">
+                          <button class="item-prod__btn-delete btn btn-secondary" type="button">Удалить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                    </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-compare__slide">
+                <div class="s-compare__item">
+                  <div class="item-prod item-prod--compare item-prod--compare-js">
+                    <div class="item-prod__img-wrap">
+                      <div class="row">
+                        <div class="col"><a class="link-modal" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a></div>
+                        <div class="col-auto align-self-md-end">
+                          <button class="item-prod__btn-delete btn btn-secondary" type="button">Удалить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                    </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-compare__slide">
+                <div class="s-compare__item">
+                  <div class="item-prod item-prod--compare item-prod--compare-js">
+                    <div class="item-prod__img-wrap">
+                      <div class="row">
+                        <div class="col"><a class="link-modal" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a></div>
+                        <div class="col-auto align-self-md-end">
+                          <button class="item-prod__btn-delete btn btn-secondary" type="button">Удалить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                    </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-compare__slide">
+                <div class="s-compare__item">
+                  <div class="item-prod item-prod--compare item-prod--compare-js">
+                    <div class="item-prod__img-wrap">
+                      <div class="row">
+                        <div class="col"><a class="link-modal" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a></div>
+                        <div class="col-auto align-self-md-end">
+                          <button class="item-prod__btn-delete btn btn-secondary" type="button">Удалить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                    </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-compare__slide">
+                <div class="s-compare__item">
+                  <div class="item-prod item-prod--compare item-prod--compare-js">
+                    <div class="item-prod__img-wrap">
+                      <div class="row">
+                        <div class="col"><a class="link-modal" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a></div>
+                        <div class="col-auto align-self-md-end">
+                          <button class="item-prod__btn-delete btn btn-secondary" type="button">Удалить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                    </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="s-compare__slide">
+                <div class="s-compare__item">
+                  <div class="item-prod item-prod--compare item-prod--compare-js">
+                    <div class="item-prod__img-wrap">
+                      <div class="row">
+                        <div class="col"><a class="link-modal" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a></div>
+                        <div class="col-auto align-self-md-end">
+                          <button class="item-prod__btn-delete btn btn-secondary" type="button">Удалить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item-prod__title"><a href="#">Дрель-шуруповерт аккумуляторная ударная Makita HP457DWE</a>
+                    </div>
+                    <div class="item-prod__price-wrap">
+                      <div class="strong">33 593 р. </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="s-compare__slider s-compare__slider--js s-compare__slider--foot-js">
+            <div class="s-compare__slide">
+              <div class="s-compare__item">
+                <div class="s-compare__body">
+                  <div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"><small>Заголовок параметра</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-compare__foot"><a class="s-compare__btn btn btn-primary" href="#">В корзину</a>
+                </div>
+              </div>
+            </div>
+            <div class="s-compare__slide">
+              <div class="s-compare__item">
+                <div class="s-compare__body">
+                  <div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-compare__foot"><a class="s-compare__btn btn btn-primary" href="#">В корзину</a>
+                </div>
+              </div>
+            </div>
+            <div class="s-compare__slide">
+              <div class="s-compare__item">
+                <div class="s-compare__body">
+                  <div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-compare__foot"><a class="s-compare__btn btn btn-secondary link-modal" href="#" data-src="#modal-notification">Уведомить о поступлении</a>
+                </div>
+              </div>
+            </div>
+            <div class="s-compare__slide">
+              <div class="s-compare__item">
+                <div class="s-compare__body">
+                  <div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-compare__foot"><a class="s-compare__btn btn btn-secondary link-modal" href="#" data-src="#modal-notification">Уведомить о поступлении</a>
+                </div>
+              </div>
+            </div>
+            <div class="s-compare__slide">
+              <div class="s-compare__item">
+                <div class="s-compare__body">
+                  <div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-compare__foot"><a class="s-compare__btn btn btn-secondary link-modal" href="#" data-src="#modal-notification">Уведомить о поступлении</a>
+                </div>
+              </div>
+            </div>
+            <div class="s-compare__slide">
+              <div class="s-compare__item">
+                <div class="s-compare__body">
+                  <div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                    <div class="s-compare__group s-compare__group--js"> <small>&nbsp;</small>
+                      <div>33 13 л/с/куб. фут/мин. р. </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-compare__foot"><a class="s-compare__btn btn btn-secondary link-modal" href="#" data-src="#modal-notification">Уведомить о поступлении</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-compare-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="footer__group">
+                <div class="footer__title h4"> Pt-Line.ru
+                </div>
+                <div class="footer__toggle-block">
+                  <div class="footer__item"><a class="footer__link" href="#">О компании</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Каталог продукции</a>
+                  </div>
+                  <!-- +e.item: +e.A.link(href="#") Сервисный центр-->
+                  <div class="footer__item"><a class="footer__link" href="#">Контакты и реквизиты</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Аксессуары и расходное</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Запчасти</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer__group">
+                <div class="footer__title h4"> Покупателю
+                </div>
+                <div class="footer__toggle-block">
+                  <div class="footer__item"><a class="footer__link" href="#">Как заказать</a>
+                  </div>
+                  <!-- +e.item: +e.A.link(href="#") Как оплатить-->
+                  <div class="footer__item"><a class="footer__link" href="#">Как получить</a>
+                  </div>
+                  <!-- +e.item: +e.A.link(href="#") Акции и скидки-->
+                  <div class="footer__item"><a class="footer__link" href="#">Личный кабинет</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Акции</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer__group">
+                <div class="footer__title h4"> Информация
+                </div>
+                <div class="footer__toggle-block">
+                  <div class="footer__item"><a class="footer__link" href="#">О политике обработки персональных данных.</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Статьи</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Оптовым клиентам</a>
+                  </div>
+                  <div class="footer__item"><a class="footer__link" href="#">Гарантия</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="footer__group">
+                <div class="footer__title h4"> Обратная связь
+                </div>
+                <div class="footer__toggle-block">
+                  <div><a class="footer__tel" href="tel:+7(495)530-70-07">+7 (495) 530-70-07</a>
+                  </div>
+                  <div><a class="footer__link tdu link-modal" data-src="#modal-call" href="javascript:;">Обратный звонок</a>
+                  </div>
+                  <div class="small text-gray">Пн-Пт 8:15 до 18:30, Сб 10:00 до 15:00</div>
+                  <div><a class="footer__link" href="mailto:zakaz@pt-line.ru">zakaz@pt-line.ru</a>
+                  </div>
+                  <div class="soc"><a class="soc__item" href="#" target="_blank"><i class="fab  fa-vk"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab fa-twitter"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab fa-instagram"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab fa-odnoklassniki"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__foot">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl my-2">
+                <div class="smallest">PROFESSIONAL TOOLS, PT-LINE.RU © 2017 ГОД. ВСЕ ПРАВА ЗАЩИЩЕНЫ, КОПИРОВАНИЕ МАТЕРИАЛОВ ЗАПРЕЩЕНО. САЙТ НОСИТ ИСКЛЮЧИТЕЛЬНО ФОРМАЦИОННЫЙ ХАРАКТЕР. ПоЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</div>
+              </div>
+              <div class="col-xl-auto col my-1 order-md-0 order-first">
+                <div class="row row--small">
+                  <div class="col-auto my-1"><small>Мы принимаем к оплате</small></div>
+                  <div class="col-auto my-1"><img class="res-i" src="img/pay-foot.png" alt=""/></div>
+                </div>
+              </div>
+              <div class="col-auto my-2">
+                <div class="row row--small">
+                  <div class="col-auto"><small>Сделано c любовью  </small></div>
+                  <div class="col-auto"><a class="text-white strong" href="https://www.roonix.ru/" target="_blank">Roonix</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="btn-top"><img src="img/btn-top.svg" alt=""/></div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/costume.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,317 @@
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.main-grid_item__img{
+
+    width: 153px;
+
+    height: 221px;
+
+}
+
+.svg-wrapper svg{
+
+    height: auto !important;
+
+}
+
+.card-link-with-img_hover__img img{
+
+    max-height: 200px;
+
+}
+
+.dds_rek{
+
+    display: none;
+
+    position: relative;
+
+}
+
+div[id^="wait_comp_"]{
+
+     display: none;
+
+ }
+
+.itemssvg{
+
+    /* border: 2px solid transparent; */
+    cursor: pointer;
+}
+.itemssvg.hover,
+.itemssvg.active,
+.itemssvg:hover{
+
+    /* background-color: rgba(2, 95, 152, 0.3); */
+    background-color: rgba(122, 201, 250, 0.5);
+    /* border-color: #025f98; */
+
+}
+ 
+.itemssvg.add-baskit {
+
+    /* background-color: rgba(2, 95, 152, 0.3); */
+
+    /* border-color: #025f98; */
+    border-color: rgba(119, 190, 32, 0.527);
+    background-color: rgba(119, 190, 32, 0.5);
+
+}
+ 
+.itemssvg  .svg-tooltip .row::before,
+.itemssvg  .svg-tooltip .row::after{
+    display: none;
+}
+.js-tooltip-name{
+    position: relative;
+    z-index: 5;
+}
+.itemssvg  .svg-tooltip .row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 5;
+}
+.btn-block{
+    display: block;
+    width: 100%;
+}
+.col-auto,
+.col{
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.itemssvg  .svg-tooltip .counter{
+    max-width: 150px;
+}
+.itemssvg  .svg-tooltip{
+    /* display: block;
+     */
+    /* top: 100%; */
+    cursor: default;
+    /* left: 50%; */
+    margin-left: -143px;
+    left: 50%;
+    top: 100%;
+    /* margin-top: 20px; */
+
+    /* margin-left: 10px; */
+    display: none;
+    
+}
+.svg-tooltip:before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    /* border-width: 11px 10px 11px 0; */
+    /* border-color: transparent #fff transparent transparent; */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -5px;
+    /* top: 20px; */
+    z-index: 5;
+}
+.js-cards-item--hover .cards-items_item__btn img{
+    opacity: 1;
+    /* background-color: #cfecff !important; */
+}
+  .cards-items_item.js-cards-item--active{
+    /* background-color: rgba(119, 190, 32, 0.5) !important; */
+   
+}
+
+.itemssvg.add-baskit .add2basket {
+    background-color: #78be20 !important;
+}
+.js-cards-item--active .add2basket {
+    /* background-color: #78be20; */
+}
+.table tbody tr:last-child td:first-child:before,
+.table tbody tr:last-child td:last-child:before{
+    border-bottom: 1px solid #e6e6e6;
+    height: calc(100% + 1px);
+}
+.table tbody .animate-tr:nth-child(odd) td:first-child:before,
+.table tbody .animate-tr:nth-child(odd) td:last-child:before,
+.animate-tr  td{
+    animation: blink-animation   .5s infinite;
+    -webkit-animation: blink-animation   .5s infinite;
+    animation-iteration-count: 4;
+  }
+
+  @-webkit-keyframes blink-animation {
+    0%{
+        background-color: rgba(119, 190, 32, 1) ;
+    }
+    50%{
+        background-color: rgba(119, 190, 32, 0); 
+
+    }
+    100% {
+        
+        background-color: rgba(119, 190, 32, 1) ;
+    }
+  }
+
+  @keyframes blink-animation {
+    0%{
+        background-color: rgba(119, 190, 32, 1) ;
+    }
+    50%{
+        background-color: rgba(119, 190, 32, 0); 
+
+    }
+    100% {
+        
+        background-color: rgba(119, 190, 32, 1) ;
+    }
+}
+
+.itemssvg .hidden{
+        display: none;
+}
+.itemssvg.add-baskit .hidden-add{
+        display: none;
+}
+.itemssvg.add-baskit .hidden{
+        /* display: none; */
+        display: inline !important;
+}
+
+
+.cards-items_item__btn {
+    width: 24px;
+    height: 24px;
+    background-color: #025F98;position: relative;
+    opacity: 0;
+    
+}
+.cards-items_item__btn::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    background-color: #ffffff;
+}
+
+.cards-items_item__btn::after {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+.js-cards-item--hover .cards-items_item__btn {
+    /* background-color: rgba(119, 190, 32, 1) ; */
+    opacity: 1;
+}
+ .js-cards-item--active .cards-items_item__btn {  
+    opacity: 1; 
+    background-color: transparent;
+    /* background-color: rgba(119, 190, 32, 1) ; 
+    display: none; 
+    background-image: url(../image/green-check.svg);
+    background-repeat: no-repeat;
+    background-position: center ; */
+    pointer-events: none;
+} 
+.js-cards-item--active .cards-items_item__btn::before{
+    display: none;
+}
+.js-cards-item--active .cards-items_item__btn::after{
+    content: url(../images/green-check.svg);
+    background-color: transparent;
+    width: 14px;
+    height: 12px;
+    top: 35%;
+}
+
+.cards-items_item__btn img{
+    display: none !important;
+}
+.mCSB_scrollTools{
+    left: auto;
+    right: 0;
+}
+.cards-items_item__number{
+    padding-left: 10px;
+    min-width: 35px;
+}
+.cards-items_item__btn{
+    /* margin-right: 10px; */
+}
+.mCSB_inside > .mCSB_container{
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.cards-items.cards-items--head{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 12px;
+    
+    color: #87888a;
+}
+.cards-items.cards-items--head  .cards-items_item{
+    
+    background-color: transparent !important;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .cards-items{
+        max-height: none;
+    }
+}
+
+.btn-form{
+    margin-top: 24px;
+}
+.redact-adress,
+.js-content{
+    display: block;
+}
+
+.text-gray{
+    font-size: 14px;
+    color: #87888a;
+}
+.form-row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -9px;
+    margin-right: -9px;
+}
+.form-col-auto{
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-bottom: 30px;
+}
+.align-items-center{
+    align-items: center;
+}
+.text-danger{
+    color: #a31628;
+}
+.text-danger-mw{
+    max-width: 270px;
+}
