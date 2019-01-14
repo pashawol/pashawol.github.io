@@ -62,9 +62,11 @@ $('.popover-js').popover({
  $(".label-date-picker-js  input").click(function(){
   $(this).next().click();
  })
+
+  // правил
    // accordion
   $(".showhide").click(function() {
-     $(this).toggleClass("active").next("div").slideToggle().parents().toggleClass("active");
+     $(this).toggleClass("active").next("div").slideToggle().parent().toggleClass("active");
   })
 
       // галерея
@@ -124,8 +126,7 @@ $('.popover-js').popover({
 
     });
 
-// слайдер в карточке
-
+// слайдер в карточке 
 var swiperCard = new Swiper('.carusel-slider', {
       // loop: true ,
 			speed: 450,
@@ -289,10 +290,10 @@ function heightses() {
         $(".s-po-body__section tr").removeAttr("style");
       // swiperCard.init();
       // swiperCard.destroy();
-       $(".toggle-mnu-1").removeClass("on");
-        // $("body").removeClass("fixed");
-        $(".hidden-mnu").removeClass("active");
-        $("html, body").removeClass("fixed");
+      //  $(".toggle-mnu-1").removeClass("on");
+      //   // $("body").removeClass("fixed");
+      //   $(".hidden-mnu").removeClass("active");
+      //   $("html, body").removeClass("fixed");
     }
 
 
@@ -302,7 +303,7 @@ function heightses() {
                 if($(this).scrollTop()>topH){
                     $('.top-nav  ').addClass('fixed-ready');
                 }
-                else if ($(this).scrollTop()<topH){
+                else  {
                     $('.top-nav  ').removeClass('fixed-ready');
                 }
             });
@@ -311,7 +312,7 @@ function heightses() {
                     $('.top-nav  ').addClass('fixed');
 
                 }
-                else if ($(this).scrollTop()<topH2){
+                else  {
                     $('.top-nav  ').removeClass('fixed');
 
                 }
@@ -319,7 +320,7 @@ function heightses() {
                 if($(this).scrollTop()>topH2){
                     $('.top-nav  ').addClass('fixed');
                 }
-                else if ($(this).scrollTop()<topH2){
+                else  {
                     $('.top-nav  ').removeClass('fixed');
                 }
             });
@@ -459,5 +460,39 @@ $(".data-modal").click(function(){
 					.eq($(this).index()).fadeIn().addClass('active');
  
 			});
-		});
+    });
+    
+
+    $('.btn-tab-js').click(function (e) {
+      e.preventDefault();
+      var th = $(this),
+        tabRadio = th.data('tab-block');
+      // console.log(tabRadio);
+      //  th.hide();
+      $('#' + tabRadio).fadeIn(100).addClass("active")
+        .siblings('.tab-block').removeClass('active').hide();
+  
+    })
+
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      loop: true,
+      freeMode: true,
+      loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      loop:true,
+      loopedSlides: 5, //looped slides should be the same
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
 });
