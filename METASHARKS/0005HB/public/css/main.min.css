@@ -8656,6 +8656,42 @@ strong,.strong {
   position: relative;
 }
 
+.form-wrap__input-wrap--invalid input {
+  border-color: #f50000;
+}
+
+.form-wrap__input-wrap:not(.form-wrap__input-wrap--invalid) .form-wrap__alert {
+  display: none;
+}
+
+.form-wrap__alert {
+  position: absolute;
+  padding: 5px;
+  z-index: 2;
+}
+
+.form-wrap__alert::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  bottom: 100%;
+}
+
+.form-wrap__alert--invalid {
+  background-color: #f50000;
+  color: #ffffff;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.form-wrap__alert--invalid::before {
+  height: 0;
+  width: 0;
+  border-bottom: 4px solid #f50000;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
 .form-wrap__btn {
   cursor: pointer;
 }
