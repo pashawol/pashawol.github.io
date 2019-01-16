@@ -637,7 +637,7 @@ jQuery(document).ready(function ($) {
   })
 
   $('.s-sert__slider').slick({
-    slidesToShow: 4,
+    slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
     speed: 450,
@@ -646,24 +646,25 @@ jQuery(document).ready(function ($) {
     arrows: true,
     prevArrow: arrl2,
     nextArrow: arrr2,
+    mobileFirst: true,
     responsive: [
 
       {
-        breakpoint: 991,
+        breakpoint: 992,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 4
         }
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 3
         }
       },
       {
-        breakpoint: 575,
+        breakpoint: 576,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 2
         }
       },
 
