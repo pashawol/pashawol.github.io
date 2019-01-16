@@ -195,7 +195,7 @@
                   <div class="row row--small align-items-center">
                     <div class="col">
                       <div class="form-group m-0">
-                        <select class="s-catalog-filter__select form-control" name="">
+                        <select class="s-catalog-filter__select form-control">
                           <option class="d-none" value="" selected="selected" disabled="disabled">Автомобиль</option>
                           <option value="">Марка автомобиля 2</option>
                           <option value="">Марка автомобиля 3</option>
@@ -208,18 +208,20 @@
                     </div>
                     <div class="col">
                       <div class="form-group m-0">
-                        <select class="s-catalog-filter__select form-control" name="">
-                          <option class="d-none" value="" selected="selected" disabled="disabled">Стоимость аренды</option>
-                          <option value="">Модель автомобиля 1</option>
-                          <option value="">Модель автомобиля 2</option>
-                          <option value="">Модель автомобиля 2</option>
-                          <option value="">Модель автомобиля 2</option>
+                        <select class="s-catalog-filter__select form-control">
+                          <option class="d-none" value="" selected="selected" disabled="disabled">Стоимость аренды </option>
+                          <option value="">  0—1000</option>
+                          <option value=""> 1001—2000</option>
+                          <option value=""> 2001—3000</option>
+                          <option value=""> 3001—4000</option>
+                          <option value=""> 4001—5000</option>
+                          <option value=""> 5001—6000</option>
                         </select>
                       </div>
                     </div>
                     <div class="col d-none d-lg-block">
                       <div class="form-group m-0">
-                        <select class="s-catalog-filter__select form-control" name="">
+                        <select class="s-catalog-filter__select form-control">
                           <option class="d-none" value="" selected="selected" disabled="disabled">КПП</option>
                           <option value="">Ручная</option>
                           <option value="">Автомат</option>
@@ -256,7 +258,7 @@
             </div>
           </div>
         </div>
-        <!-- /.tab-block.tab-block--js-->
+        <!-- /.tab-block.tab-block-->
         <div class="tab-block tab-block--js" id="all-filters">
           <div class="container">
             <div class="s-catalog-filter__head">
@@ -358,46 +360,6 @@
                     <div class="modal-filter__item hover-block">
                       <div class="showhide btn-click h4"> 
                         <div class="modal-filter__head-row row align-items-center small">
-                          <div class="col">Автомобиль</div>
-                          <div class="col-auto">
-                            <!-- тут убираешь класс  .gray  когда будет выбран пункт-->
-                            <div class="modal-filter__choice-text gray">Не выбрано
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="showhide-all"> 
-                        <div class="showhide-all__inner">
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 0</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 1</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 2</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 3</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 4</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 5</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 6</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 7</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 8</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 9</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 10</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Автомобиль 11</span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-filter__item hover-block">
-                      <div class="showhide btn-click h4"> 
-                        <div class="modal-filter__head-row row align-items-center small">
                           <div class="col">Цена, Р:</div>
                           <div class="col-auto">
                             <!-- тут убираешь класс  .gray  когда будет выбран пункт-->
@@ -408,18 +370,9 @@
                       </div>
                       <div class="showhide-all"> 
                         <div class="showhide-all__inner">
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span> 0—1000</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>1001—2000</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>1001—2000</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>1001—2000</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>1001—2000</span>
-                          </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>1001—2000</span>
-                          </label>
+                          <div class="modal-filter__range-wrap">
+                            <input class="input-range" type="text" data-min="0" data-max="10000"/>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -498,8 +451,6 @@
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-xl-4 col-lg-6">
                     <div class="modal-filter__item hover-block">
                       <div class="showhide btn-click h4"> 
                         <div class="modal-filter__head-row row align-items-center small">
@@ -580,6 +531,8 @@
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-6">
                     <div class="modal-filter__item hover-block">
                       <div class="showhide btn-click h4"> 
                         <div class="modal-filter__head-row row align-items-center small">
@@ -622,7 +575,7 @@
                     <div class="modal-filter__item hover-block">
                       <div class="showhide btn-click h4"> 
                         <div class="modal-filter__head-row row align-items-center small">
-                          <div class="col">Двигатель</div>
+                          <div class="col">Тип двигателя</div>
                           <div class="col-auto">
                             <!-- тут убираешь класс  .gray  когда будет выбран пункт-->
                             <div class="modal-filter__choice-text gray">Не выбрано
@@ -634,8 +587,6 @@
                         <div class="showhide-all__inner">
                           <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Бензин</span>
                           </label>
-                          <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Бензин</span>
-                          </label>
                           <label class="custom-input"><input class="custom-input__input" type="checkbox"/><span class="custom-input__lab"></span><span>Дизель</span>
                           </label>
                         </div>
@@ -644,7 +595,7 @@
                     <div class="modal-filter__item hover-block">
                       <div class="showhide btn-click h4"> 
                         <div class="modal-filter__head-row row align-items-center small">
-                          <div class="col">Объем двигателя</div>
+                          <div class="col">Объем двигателя, л</div>
                           <div class="col-auto">
                             <!-- тут убираешь класс  .gray  когда будет выбран пункт-->
                             <div class="modal-filter__choice-text gray">Не выбрано
@@ -700,6 +651,25 @@
                         </div>
                       </div>
                     </div>
+                    <div class="modal-filter__item hover-block">
+                      <div class="showhide btn-click h4"> 
+                        <div class="modal-filter__head-row row align-items-center small">
+                          <div class="col">Расход топлива, л/100км</div>
+                          <div class="col-auto">
+                            <!-- тут убираешь класс  .gray  когда будет выбран пункт-->
+                            <div class="modal-filter__choice-text gray">Не выбрано
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="showhide-all"> 
+                        <div class="showhide-all__inner">
+                          <div class="modal-filter__range-wrap">
+                            <input class="input-range" type="text" data-min="4" data-max="30"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="col-xl-4">
                     <div class="row">
@@ -707,26 +677,7 @@
                         <div class="modal-filter__item hover-block">
                           <div class="showhide btn-click h4"> 
                             <div class="modal-filter__head-row row align-items-center small">
-                              <div class="col">Расход топлива, л/100км</div>
-                              <div class="col-auto">
-                                <!-- тут убираешь класс  .gray  когда будет выбран пункт-->
-                                <div class="modal-filter__choice-text gray">Не выбрано
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="showhide-all"> 
-                            <div class="showhide-all__inner">
-                              <div class="modal-filter__range-wrap">
-                                <input class="input-range" type="text" data-min="4" data-max="30"/>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="modal-filter__item hover-block">
-                          <div class="showhide btn-click h4"> 
-                            <div class="modal-filter__head-row row align-items-center small">
-                              <div class="col">Объем багажника</div>
+                              <div class="col">Объем багажника, л</div>
                               <div class="col-auto">
                                 <!-- тут убираешь класс  .gray  когда будет выбран пункт-->
                                 <div class="modal-filter__choice-text gray">Не выбрано
@@ -742,27 +693,6 @@
                             </div>
                           </div>
                         </div>
-                        <div class="modal-filter__item hover-block">
-                          <div class="showhide btn-click h4"> 
-                            <div class="modal-filter__head-row row align-items-center small">
-                              <div class="col">Ширина проема багажника</div>
-                              <div class="col-auto">
-                                <!-- тут убираешь класс  .gray  когда будет выбран пункт-->
-                                <div class="modal-filter__choice-text gray">Не выбрано
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="showhide-all"> 
-                            <div class="showhide-all__inner">
-                              <div class="modal-filter__range-wrap">
-                                <input class="input-range" type="text" data-min="60" data-max="250"/>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-12 col-lg-6">
                         <div class="modal-filter__item hover-block">
                           <div class="showhide btn-click h4"> 
                             <div class="modal-filter__head-row row align-items-center small">
@@ -803,6 +733,8 @@
                             </div>
                           </div>
                         </div>
+                      </div>
+                      <div class="col-xl-12 col-lg-6">
                         <div class="modal-filter__item hover-block">
                           <div class="showhide btn-click h4"> 
                             <div class="modal-filter__head-row row align-items-center small">
@@ -875,7 +807,7 @@
             </div>
           </div>
         </div>
-        <!-- /.tab-block.tab-block--js-->
+        <!-- /.tab-block.tab-block-->
         <div class="tab-block tab-block--js" id="car-filters">
           <div class="container">
             <div class="s-catalog-filter__head">
@@ -982,7 +914,7 @@
             </div>
           </div>
         </div>
-        <!-- /.tab-block.tab-block--js-->
+        <!-- /.tab-block.tab-block-->
       </div>
       <!-- /+b.s-catalog-filter-->
       <div class="page-bg-gray-150">
@@ -1006,7 +938,7 @@
                       <div class="col-lg">
                         <h1 class="h36 mb-0 page-title mono ttu">
                           Volkswagen Tiguan  <span class="text-gray-700">акпп</span></h1>
-                        <div class="text-gray-700">Реальные фотографии автомобиля</div>
+                        <div class="text-gray-700 d-none d-md-block">Реальные фотографии автомобиля</div>
                       </div>
                       <div class="col-lg-auto">
                         <div class="h36 mono"><a class="text-body tdn" href="tel:+7(495)120-40-24">+7 (495) 120-40-24</a></div>
@@ -1099,7 +1031,7 @@
                             <div class="col">
                               <div class="row row--small">
                                 <div class="card-head__col-title col-auto">
-                                  <div class="card-head__td-inner">1-2 суток
+                                  <div class="card-head__td-inner">1-2  <span class="d-none d-xl-inline">суток</span><span class="d-xl-none">сут.</span>
                                   </div>
                                 </div>
                               </div>
@@ -1112,7 +1044,7 @@
                             <div class="col">
                               <div class="row row--small">
                                 <div class="card-head__col-title col-auto">
-                                  <div class="card-head__td-inner">3-5 суток
+                                  <div class="card-head__td-inner">3-5  <span class="d-none d-xl-inline">суток</span><span class="d-xl-none">сут.</span>
                                   </div>
                                 </div>
                                 <div class="col">
@@ -1134,7 +1066,7 @@
                             <div class="col">
                               <div class="row row--small">
                                 <div class="card-head__col-title col-auto">
-                                  <div class="card-head__td-inner">6-13 суток
+                                  <div class="card-head__td-inner">6-13  <span class="d-none d-xl-inline">суток</span><span class="d-xl-none">сут.</span>
                                   </div>
                                 </div>
                                 <div class="col">
@@ -1156,7 +1088,7 @@
                             <div class="col">
                               <div class="row row--small">
                                 <div class="card-head__col-title col-auto">
-                                  <div class="card-head__td-inner">14-29 суток
+                                  <div class="card-head__td-inner">14-29  <span class="d-none d-xl-inline">суток</span><span class="d-xl-none">сут.</span>
                                   </div>
                                 </div>
                                 <div class="col">
@@ -1178,7 +1110,7 @@
                             <div class="col">
                               <div class="row row--small">
                                 <div class="card-head__col-title col-auto">
-                                  <div class="card-head__td-inner">от 30 суток
+                                  <div class="card-head__td-inner">от 30  <span class="d-none d-xl-inline">суток</span><span class="d-xl-none">сут.</span>
                                   </div>
                                 </div>
                                 <div class="col">
@@ -3302,7 +3234,7 @@
             <div class="form-wrap__title mono ttu">Регистрация звонка
             </div>
             <div class="form-group m-0">
-              <select class="form-wrap__select form-wrap__select--reg-call form-control h6" name="">
+              <select class="form-wrap__select form-wrap__select--reg-call form-control h6">
                 <option class="d-none" value=" " selected="selected" disabled="disabled">Выберите тип звонка</option>
                 <option value="#val1">Арендовать или продлить авто</option>
                 <option value="#val2">От клиента: Авто сломалось</option>
@@ -3320,7 +3252,7 @@
                   <div class="tabs-blocks__form-num form-group m-0">
                     <div class="tabs-blocks__number">1
                     </div>
-                    <select class="tabs-blocks__select form-control h6" name="">
+                    <select class="tabs-blocks__select form-control h6">
                       <option class="d-none" value="" selected="selected" disabled="disabled">Выберите марку</option>
                       <option value=" ">Выберите марку</option>
                     </select>
@@ -3328,7 +3260,7 @@
                   <div class="tabs-blocks__form-num form-group m-0">
                     <div class="tabs-blocks__number">2
                     </div>
-                    <select class="tabs-blocks__select form-control h6" name="">
+                    <select class="tabs-blocks__select form-control h6">
                       <option class="d-none" value="" selected="selected" disabled="disabled">Выберите модель</option>
                       <option value=" ">Выберите модель</option>
                     </select>
@@ -3540,7 +3472,7 @@
                   <div class="tabs-blocks__form-num form-group m-0">
                     <div class="tabs-blocks__number">3
                     </div>
-                    <select class="tabs-blocks__select form-control h6" name="">
+                    <select class="tabs-blocks__select form-control h6">
                       <option class="d-none" value=" " selected="selected" disabled="disabled">Тип сотрудничества</option>
                       <option value="#val1">Тип сотрудничества</option>
                     </select>

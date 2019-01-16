@@ -469,8 +469,8 @@ $(".data-modal").click(function(){
         tabRadio = th.data('tab-block');
       // console.log(tabRadio);
       //  th.hide();
-      $('#' + tabRadio).fadeIn(100).addClass("active")
-        .siblings('.tab-block').removeClass('active').hide();
+      $('#' + tabRadio).slideDown().addClass("active")
+        .siblings('.tab-block').removeClass('active').slideUp();
   
     })
 
