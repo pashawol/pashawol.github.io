@@ -889,4 +889,19 @@ jQuery(document).ready(function ($) {
   //   $('[href="#modal-big"]').click();
   // }, 20000);
 
+
+  $(".cost-c-width").on("click", function () {
+    $(".cost-c-width").removeClass("cost-c-width-checked").find("span").removeClass("cost-checked"), $(".selects").show(), $(this).addClass("cost-c-width-checked").find("span").addClass("cost-checked");
+    var l = $(this).find("input[type=radio]").val(),
+        t = $(this).addClass("cost-c-width-checked").find("p").text();
+    $("#inp_secl_type").attr("value", t), $("#inp_secl_r").val("0"), $("#inp_secl_t").val("0"), $("#inp_secl_l").val("0"), $("#inp_secl_d").val("0"), "t-cost" == l ? ($(".h, .h-arrow").show(), $(".b, .b-arrow").hide(), $(".vl, .vl-arrow").hide(), $(".vr, .vr-arrow").hide(), $("#inp_secl_t").val($("#top").val())) : "g-cost-l" == l ? ($(".h, .h-arrow").show(), $(".vl, .vl-arrow").show(), $(".vr, .vr-arrow").hide(), $(".b, .b-arrow").hide(), $("#inp_secl_t").val($("#top").val()), $("#inp_secl_l").val($("#left").val())) : "g-cost-r" == l ? ($(".h, .h-arrow").show(), $(".vl, .vl-arrow").hide(), $(".vr, .vr-arrow").show(), $(".b, .b-arrow").hide(), $("#inp_secl_t").val($("#top").val()), $("#inp_secl_r").val($("#right").val())) : "d-cost" == l ? ($(".h, .h-arrow").show(), $(".vl, .vl-arrow").hide(), $(".vr, .vr-arrow").hide(), $(".b, .b-arrow").show(), $("#inp_secl_t").val($("#top").val()), $("#inp_secl_d").val($("#bot").val())) : ($(".h, .h-arrow").show(), $(".vl, .vl-arrow").show(), $(".vr, .vr-arrow").show(), $(".b, .b-arrow").hide(), $("#inp_secl_t").val($("#top").val()), $("#inp_secl_r").val($("#right").val()), $("#inp_secl_l").val($("#left").val())), $("#top").on("blur", function () {
+        $("#inp_secl_t").val($(this).val())
+    }), $("#bot").on("blur", function () {
+        $("#inp_secl_d").val($(this).val())
+    }), $("#left").on("blur", function () {
+        $("#inp_secl_l").val($(this).val())
+    }), $("#right").on("blur", function () {
+        $("#inp_secl_r").val($(this).val())
+    }), $("#img_ktype").attr("src", "img/configure/calc-" + l + "-img.jpg")
+})
 });
