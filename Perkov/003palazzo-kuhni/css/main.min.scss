@@ -1,5 +1,30 @@
 @charset "UTF-8";
 
+// @import "_vars";
+ 
+@mixin  a-cent($xy:xy) {
+  @if $xy == xy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    position: absolute;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
 .clear {
   display: block;
   clear: both;
@@ -318,7 +343,7 @@ input[name=cost] {
   width: 410px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 0 0 20px;
+  padding: 0 ;
   margin-top: 30px;
   height: 416px
 }
@@ -334,7 +359,7 @@ input[name=cost] {
 }
 
 .cost-content-l {
-  padding: 20px 0;
+  padding:   0;
   float: left;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -345,11 +370,11 @@ input[name=cost] {
 }
 
 .cost-content-l .img {
-  display: table-cell;
-  height: 240px;
-  vertical-align: middle;
-  text-align: center;
-  width: 600px
+  // display: table-cell;
+  // height: 240px;
+  // vertical-align: middle;
+  // text-align: center;
+  // width: 600px
 }
 
 form[name=form-file] select {
@@ -673,11 +698,10 @@ form[name=form-file]>.form-submit-btn {
 
 .selects {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 100%;
-  height: 215px;
-  z-index: 3;
-  margin: 20px 0 0 1px
+  height: 100%;
+  z-index: 3; 
 }
 
 .selects .calc_help {
@@ -692,27 +716,29 @@ form[name=form-file]>.form-submit-btn {
 
 .selects .img {
   position: absolute;
-  top: 30px;
+   
   margin: 0;
-  min-width: 236px;
-  min-height: 157px;
-  right: 91px;
+  // min-width: 236px;
+  // min-height: 157px;
+   @include a-cent;
   width: auto
 }
 
 .selects .img img {
-  width: 397px
+  // width: 397px
 }
 
 .selects .h {
-  width: 394px;
-  left: 129px;
+  // width: 394px;
+  // left: 129px;
   text-align: center;
   position: absolute;
   padding: 0 0 0;
   top: 0;
   font-family: arial;
-  font-size: 14px
+  font-size: 14px;
+  @include a-cent(x);
+  width: 100%;
 }
 
 .selects .h .text {
@@ -779,15 +805,15 @@ form[name=form-file]>.form-submit-btn {
   opacity: .8
 }
 
-.selects .b {
-  width: 396px;
+.selects .b { 
   text-align: center;
   position: absolute;
   padding: 10px 0 0;
   font-family: arial;
   font-size: 14px;
-  left: 126px;
-  bottom: -122px
+  @include a-cent(x);
+  width: 100%;
+  bottom: 0;
 }
 
 .selects .b .text {
@@ -859,7 +885,9 @@ form[name=form-file]>.form-submit-btn {
   font-family: arial;
   font-size: 14px;
   left: 58px;
-  top: 67px
+  @include a-cent(y);
+  height: 100%;
+
 }
 
 .noUiSlider.vertical {
@@ -874,9 +902,10 @@ form[name=form-file]>.form-submit-btn {
   margin: 0;
   border: 0;
   position: absolute;
-  top: 100px;
+  @include a-cent(y);
+  // height: 100%;
   left: -58px;
-  width: 65px;
+  // width: 65px;
   font: 16px/24px;
   letter-spacing: -1px;
   color: #1e1e1e
@@ -961,12 +990,13 @@ body .selects .h .text input {
   font-family: arial;
   font-size: 14px;
   right: 29px;
-  top: 68px
+  @include a-cent(y);
+  height: 100%;
 }
 
 .selects .vr .text {
   z-index: 1;
-  width: 65px;
+  // width: 65px;
   font: 16px/24px;
   letter-spacing: -1px;
   color: #1e1e1e;
@@ -975,7 +1005,8 @@ body .selects .h .text input {
   margin: 0;
   border: 0;
   position: absolute;
-  top: 100px;
+  @include a-cent(y);
+  // height: 100%;
   right: -30px
 }
 
@@ -9472,16 +9503,16 @@ a {
   }
 
   .s-calc .selects .img {
-    left: 50%;
-    right: auto;
-    margin-left: -175px
+    // left: 50%;
+    // right: auto;
+    // margin-left: -175px
   }
 
-  .s-calc .selects .b,
-  .s-calc .selects .h {
-    left: 50%;
-    margin-left: -165px
-  }
+  // .s-calc .selects .b,
+  // .s-calc .selects .h {
+  //   left: 50%;
+  //   margin-left: -165px
+  // }
 
   .s-calc .cost-content-r {
     margin-top: 30px
@@ -9693,13 +9724,16 @@ screen and (max-height:300px) {
     display: block
   }
 
-  .s-calc .selects .img img {
-    width: 300px;
-    margin-top: 20px
+  .s-calc .selects .img   {
+    width: 350px;
+    // margin-top: 20px
+    img{
+      max-width: 100%;
+    }
   }
 
   .s-calc .selects .img {
-    margin-left: -150px
+    // margin-left: -150px
   }
 
   .s-calc .selects .vl {
@@ -9707,7 +9741,7 @@ screen and (max-height:300px) {
   }
 
   .s-calc .selects .vr .text {
-    right: -45px
+    // right: -45px
   }
 
   .s-calc .cost-c-width {
@@ -9764,6 +9798,15 @@ screen and (max-height:300px) {
   .s-calc .tech-block {
     width: 100% !important
   }
+
+  .s-calc .selects .img   {
+    width: 310px;
+    // margin-top: 20px
+    img{
+      max-width: 100%;
+    }
+  }
+
 }
 
 @media only screen and (max-width:480px) {
@@ -9774,7 +9817,12 @@ screen and (max-height:300px) {
 
 @media (max-width:374.98px) {
   .s-calc .cost-content-l {
-    zoom: 54%
+    zoom: 58%
+  }
+  .s-calc .selects .img   {
+    width: 350px;
+    // margin-top: 20px
+    
   }
 }
 
@@ -9865,4 +9913,136 @@ screen and (max-height:300px) {
 
 .mt-4{
   margin-top: 1rem !important;
+}
+// обсалютное центрирование
+
+
+.arrows-block{
+  position: absolute;
+  background-color: #000000;
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+   
+      }
+  &--top{
+    margin-top: -15px;
+
+  }
+  &--bottom{
+    margin-top: 15px;
+    top: 100%;
+  }
+  &--horizontal{
+    height: 4px;
+    width: 100%;
+    @include a-cent(x);
+    width: calc(100% - 20px);
+    
+    &::before,
+    &::after{
+      @include a-cent(y);
+       
+    }
+    &::before{
+      border-width: 8px 30px 8px 0;
+      border-color: transparent #A31F1F transparent transparent;
+      left: -10px;
+
+    }
+    
+    &::after{
+      border-width: 8px 0 8px 30px; 
+      border-color: transparent transparent transparent #A31F1F;
+     right: -10px;
+
+    }
+
+  }
+  
+  &--vertical{
+    height: 100px;
+    width: 4px;
+    @include a-cent(y);
+    height:  calc(100% - 20px);
+    
+    &::before,
+    &::after{
+      @include a-cent(x);
+       
+    }
+    &::before{
+      // border-width: 8px 0 8px 30px;
+      // border-color: transparent #A31F1F transparent transparent;
+      // border-width: 0 100px 200px 100px;
+// border-color: transparent transparent #007bff transparent;
+      border-width: 0 8px 30px 8px;
+border-color: transparent transparent #A31F1F transparent;
+
+      top: -10px;
+
+    }
+    
+    &::after{ 
+      border-width: 30px 8px 0 8px;
+      border-color: #A31F1F transparent transparent transparent;
+     bottom: -10px;
+
+    }
+
+  }
+  &--left{
+    left: -15px;
+  }
+  &--right{
+    right: -15px;
+  }
+
+}
+
+.selects .h{
+  margin-top: 35px;
+  .text{ 
+  }
+}
+.selects .b {
+  margin-bottom: 50px;
+}
+.selects{
+  .h,
+  .b{
+
+    .text{
+      // position: static !important;
+      @include a-cent(x);
+      // margin: 0;
+      margin-left: 0;
+      margin-right: 0;
+       
+    }
+  }
+} 
+
+
+.s-calc{
+  img{
+    width: 400px;
+  }
+}
+
+.selects .vl{
+  left: 66px;
+}
+.selects .vr{
+  right: 35px;
+}
+.selects .b .text input, .selects .vl .text input, .selects .vr .text input, body .selects .h .text input {
+  width: 50px;
+}
+.s-calc .vl .text:after, .s-calc .vr .text:after{
+  text-align: center;
 }

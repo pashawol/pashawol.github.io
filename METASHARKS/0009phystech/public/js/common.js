@@ -53,7 +53,7 @@ jQuery(document).ready(function ($) {
 		var w = $(window).width();
 
 		// $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
+		$(".news-block__item>div:first-child ").height('auto').equalHeights();
 		//
 
 

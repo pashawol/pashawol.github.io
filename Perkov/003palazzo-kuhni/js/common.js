@@ -871,9 +871,9 @@ jQuery(document).ready(function ($) {
   $(".trop__link--js").click(function () {
     $(".mytabs-container1 .toggle-l ").not('.active').click();
   })
-  setTimeout(function () {
+  // setTimeout(function () {
 
-    $('[href="#modal-big"]').click();
-  }, 20000);
+  //   $('[href="#modal-big"]').click();
+  // }, 20000);
 
 });
