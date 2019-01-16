@@ -606,7 +606,7 @@ jQuery(document).ready(function ($) {
         });
 
         th.find('.tab__slider-small').slick({
-          slidesToShow: 7,
+          slidesToShow: 0,
           slidesToScroll: 1,
           dots: false,
           speed: 450,
@@ -617,6 +617,18 @@ jQuery(document).ready(function ($) {
           prevArrow: arrl2,
           nextArrow: arrr2,
           asNavFor: th.find('.tab__slider-big'),
+          mobileFirst: true,
+          responsive: [
+
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 7,
+
+              }
+
+            }
+          ]
 
         });
 
