@@ -259,9 +259,6 @@ window.bioEp = {
 jQuery(document).ready(function ($) {
 
 
-  if (!$('#modal-big').is(':hidden'))
-    bioEp.init({});
-
 
 
   // для свг
@@ -724,7 +721,7 @@ jQuery(document).ready(function ($) {
 
   $(".btn__quav-js").click(function () {
     $("#modal .h2").text("НЕ НАШЛИ ОТВЕТА");
-    $("#modal .order").val("Заказ консультации в подвале сайта");
+    $("#modal .order").val('Заказ консультации в "НЕ НАШЛИ ОТВЕТА"');
     $("#modal p").text("Задайте их нашему специалисту  по телефону, оставив свои данные");
     $("#modal .btn").text("Заказать консультацию");
     $("#modal .type, #modal .meb ").val("");
@@ -884,10 +881,15 @@ jQuery(document).ready(function ($) {
   $(".trop__link--js").click(function () {
     $(".mytabs-container1 .toggle-l ").not('.active').click();
   })
-  // setTimeout(function () {
+  if ($('#modal-big').is(':hidden')){
+  setTimeout(function () {
 
-  //   $('[href="#modal-big"]').click();
-  // }, 20000);
+    $('[href="#modal-big"]').click();
+  }, 3000);
+
+
+    bioEp.init({});
+  }
 
 
   $(".cost-c-width").on("click", function () {

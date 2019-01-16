@@ -5115,11 +5115,13 @@ strong {
 }
 
 .top-nav__logo {
-  height: 30px;
+  // height: 30px;
   position: relative;
   overflow: hidden;
-  width: 130px
+  width: 110px;
+  display: inline-block;
 }
+
 
 .top-nav__logo a {
   display: block
@@ -9863,7 +9865,7 @@ screen and (max-height:300px) {
 }
 
 .toggle-mnu{
-  margin-top: 17px;
+  margin-top: 10px;
 }
 
 .mt-4{
@@ -10005,6 +10007,9 @@ border-color: transparent transparent #A31F1F transparent;
 
 
 @media (max-width:575.98px) {
+  .cost-content-r{
+    height: auto;
+  }
   .top_line {
     padding-right: 25px
   }
@@ -10031,28 +10036,57 @@ border-color: transparent transparent #A31F1F transparent;
   }
 
   .s-calc .selects .img   {
-    width: 310px;
+    width: 200px;
     // margin-top: 20px
     img{
       max-width: 100%;
     }
   }
-
+  .cost-content-l {
+    height: 300px;
+  }
   .selects .b {
     margin-bottom: 70px;
   }
   .selects .h {
-    margin-top: 70px;
+    margin-top: 55px;
   }
+
+  .fixed .top-nav__logo{
+    margin-top: 10px;
+  }
+
 }
 
 @media (max-width:374.98px) {
+  .cost-content-r{
+    height: auto;
+  }
   .s-calc .cost-content-l {
     // zoom: 58%
   }
   .s-calc .selects .img   {
-    width: 350px;
+    width: 140px;
     // margin-top: 20px
     
   }
+  .cost-content-l{
+    height: 240px;
+  }
+  .selects .b {
+    margin-bottom: 55px;
+  }
+  .selects .h {
+    margin-top: 45px;
+  }
+
+}
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }

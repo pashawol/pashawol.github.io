@@ -84,10 +84,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<!-- start top-nav-->
 				<div class="top-nav ">
 					<div class="container">
-						<div class="row">
+						<div class="row ">
 							<div class="col-sm-auto col">
-								<a href="#header" class="top-nav__logo scroll-link"><img class="res-i" src="img/logo.png" alt=""/>
-								</a>
+								<div class="d-none d-md-block">
+
+									<a href="#header" class="top-nav__logo scroll-link"><img class="res-i" src="img/logo.png" alt=""/>
+									</a>
+								</div>
+								
+								<div class="d-md-none ">
+
+									<a href="#header" class="top-nav__logo scroll-link"><img class="res-i" src="img/logo-m.png" alt=""/>
+									</a>
+								</div>
+								
 							</div>
 							<div class="col d-none d-lg-block">
 								<ul class="top-nav__nav">
@@ -559,40 +569,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										<label>
 											<div class="first-b c-block cost-c-width cost-c-width-checked">
 												<input type="radio" name="cost" value="t-cost"/>
-												<div class="img-wrap"><img src="img/configure/calc-t-cost-img.jpg" alt="Прямой"/></div>
+												<div class="img-wrap"><img src="img/configure/calc-t-cost-img-s.jpg" alt="Прямой"/></div>
 												<p>Прямой</p>
 											</div>
 										</label>
 										<label>
 											<div class="c-block cost-c-width">
 												<input type="radio" name="cost" value="g-cost-l"/>
-												<div class="img-wrap"><img src="img/configure/calc-g-cost-l-img.jpg" alt="Г-образный(левый)"/></div>
+												<div class="img-wrap"><img src="img/configure/calc-g-cost-l-img-s.jpg" alt="Г-образный(левый)"/></div>
 												<p>Г-образный (левый)</p>
 											</div>
 										</label>
 										<label>
 											<div class="c-block cost-c-width">
 												<input type="radio" name="cost" value="g-cost-r"/>
-												<div class="img-wrap"><img src="img/configure/calc-g-cost-r-img.jpg" alt="Г-образный(правый)"/></div>
+												<div class="img-wrap"><img src="img/configure/calc-g-cost-r-img-s.jpg" alt="Г-образный(правый)"/></div>
 												<p>Г-образный (правый)</p>
 											</div>
 										</label>
 										<label>
 											<div class="c-block cost-c-width">
 												<input type="radio" name="cost" value="p-cost"/>
-												<div class="img-wrap"><img src="img/configure/calc-p-cost-img.jpg" alt="П-образный"/></div>
+												<div class="img-wrap"><img src="img/configure/calc-p-cost-img-s.jpg" alt="П-образный"/></div>
 												<p>П-образный</p>
 											</div>
 										</label>
 										<label>
 											<div class="c-block cost-c-width" style="margin-right:0;">
 												<input type="radio" name="cost" value="d-cost"/>
-												<div class="img-wrap"><img src="img/configure/calc-d-cost-img.jpg" alt="Параллельный"/></div>
+												<div class="img-wrap"><img src="img/configure/calc-d-cost-img-s.jpg" alt="Параллельный"/></div>
 												<p>Параллельный</p>
 											</div>
 										</label>
 										<!-- /labels-->
 									</div>
+									<form name="form-file">
 									<div class="row">
 										<div class="cost-content-l col-lg-7">
 											<!-- calculator-->
@@ -600,22 +611,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 												<div class="h on">
 													<div class="text">
 														<!-- <input type="text" maxlength="3" value="0" name="top" id="top_m">  м&nbsp;&nbsp;&nbsp;-->
-														<input id="top" type="text" value="200" name="top"/>
+														<input id="top" type="number" value="200" min="200" max="800" name="top"/>
 													</div>
 												</div>
 												<div class="b" style="display: none;">
 														<div class="text">
-															<input id="bot" type="text" value="200" name="bot"/>
+															<input id="bot" type="number" value="200" min="200" max="800" name="bot"/>
 														</div>
 													</div>
 												<div class="vl" style="display: none;">
 														<div class="text">
-															<input id="left" type="text" value="200" name="left"/>
+															<input id="left" type="number" value="200" min="200" max="800" name="left"/>
 														</div>
 													</div>
 													<div class="vr" style="display: none;">
 															<div class="text">
-																<input id="right" type="text" value="200" name="right"/>
+																<input id="right" type="number" value="200" min="200" max="800" name="right"/>
 														</div>
 													</div>
 													<div class="img">
@@ -631,7 +642,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 										<div class="cost-content-r col">
 											<p class="title strong h5"><span>2 </span> Выберите материал фасада</p>
 											<p class="mob-text-calc">Узнать стоимость кухни<br/>за 5-10 минут?</p>
-											<form name="form-file">
+										
 												<input class="order" type="hidden" name="order" value="Просчет кухни"/><span style="display:none;">
 													<input id="inp_secl_type" type="text" value="Прямой" name="type"/>
 													<input id="inp_secl_t" type="text" name="dlina" value="200"/>
@@ -685,9 +696,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 												<div class="center">
 													<input class="btn btn-accent btn-lg btn-block" id="calc-form-sub" type="submit" value="Получить бесплатный расчет"/>
 												</div>
-											</form>
+											
 										</div>
 									</div>
+								</form>
 								</div>
 							</div>
 						</div>
@@ -744,25 +756,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<div class="h5">и свидетельство</div>
 					</div>
 					<div class="s-sert__slider gal">
-							<div class="s-sert__slide"><a class="s-sert__item small" href="img/sert/1.jpg"><span class="s-sert__img-wrap"><img class="res-i" src="#" data-lazy="img/sert/1s.jpg" alt=""/></span>
-								<p>Свидетельство о регистрации торгового знака Палаццо </p></a>
-							</div>
-							<!-- .col-auto-->
-							
-							<div class="s-sert__slide"><a class="s-sert__item small" href="img/sert/2.jpg"><span class="s-sert__img-wrap"><img class="res-i" src="#" data-lazy="img/sert/2s.jpg" alt=""/></span>
-								<p>Сертификат соответствия мебельной продукции торговой марки Палаццо. </p></a>
-							</div>
-							<!-- .col-auto-->
-							
-							<div class="s-sert__slide"><a class="s-sert__item small" href="img/sert/3.jpg"><span class="s-sert__img-wrap"><img class="res-i" src="#" data-lazy="img/sert/3s.jpg" alt=""/></span>
-								<p>Протокол испытаний образцов фасадов торговой марки Палаццо </p></a>
-							</div>
-							<!-- .col-auto-->
-							
-							<div class="s-sert__slide"><a class="s-sert__item small" href="img/sert/4.jpg"><span class="s-sert__img-wrap"><img class="res-i" src="#" data-lazy="img/sert/4s.jpg" alt=""/></span>
-								<p> Результаты испытаний</p></a>
-							</div>
-							<!-- .col-auto-->
+						
+						<div class="s-sert__slide"><a class="s-sert__item small" href="img/sert/3.jpg"><span class="s-sert__img-wrap"><img class="res-i" src="#" data-lazy="img/sert/3s.jpg" alt=""/></span>
+							<p>Свидетельство о регистрации торгового знака Палаццо </p></a>
+						</div>
+						<!-- .col-auto-->
+						<div class="s-sert__slide"><a class="s-sert__item small" href="img/sert/4.jpg"><span class="s-sert__img-wrap"><img class="res-i" src="#" data-lazy="img/sert/4s.jpg" alt=""/></span>
+							<p> Сертификат соответствия мебельной продукции торговой марки Палаццо</p></a>
+						</div>
+						<!-- .col-auto-->
+						
+						<div class="s-sert__slide"><a class="s-sert__item small" href="img/sert/1.jpg"><span class="s-sert__img-wrap"><img class="res-i" src="#" data-lazy="img/sert/1s.jpg" alt=""/></span>
+							<p>Протокол испытаний образцов фасадов торговой марки Палаццо </p></a>
+						</div>
+						<!-- .col-auto-->
+						
+						<div class="s-sert__slide"><a class="s-sert__item small" href="img/sert/2.jpg"><span class="s-sert__img-wrap"><img class="res-i" src="#" data-lazy="img/sert/2s.jpg" alt=""/></span>
+							<p>Результаты испытаний </p></a>
+						</div>
+						<!-- .col-auto-->
+						
 						<div class="s-sert__slide"><a class="s-sert__item small" href="img/sert-7.jpg"><span class="s-sert__img-wrap"><img class="res-i" src="#" data-lazy="img/sert-7s.jpg" alt=""/></span>
 							<p>Свидетельство о государственной регистрации индивидуального предпринимателя</p></a>
 						</div>
