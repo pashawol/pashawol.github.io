@@ -885,7 +885,7 @@ jQuery(document).ready(function ($) {
   setTimeout(function () {
 
     $('[href="#modal-big"]').click();
-  }, 3000);
+  }, 20000);
 
 
     bioEp.init({});
