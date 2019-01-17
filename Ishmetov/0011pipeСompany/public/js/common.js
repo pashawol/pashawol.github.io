@@ -3,62 +3,7 @@ jQuery(document).ready(function ($) {
 	// для свг
 	svg4everybody({});
 	// Custom JS
-
-
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			}
-
-		};
-
-	});
-
-	// закрыть/открыть мобильное меню
-	var toggMnu = $(".toggle-menu-mobile--js").click(function () {
-
-		$(".toggle-menu-mobile--js").toggleClass("on");
-		// $("body").toggleClass("fixed");
-		$(".menu-mobile--js").toggleClass("active");
-		$("body, html").toggleClass("fixed");
-		return false;
-	});
-	$('.menu-mobile--js ul li a').on('click', function () {
-		$(".menu-mobile--js .toggle-mnu").click();
-	});
-	$(document).mouseup(function (e) {
-		var container = $(".menu-mobile--js.active");
-		if (container.has(e.target).length === 0) {
-			$(".toggle-menu-mobile--js").removeClass("on");
-			// $("body").toggleClass("fixed");
-			$(".menu-mobile--js").removeClass("active");
-			$("body, html").removeClass("fixed");
-		}
-	});
-	// закрыть меню при горизонтальном свайпе
-	$('.menu-mobile--js.active').swipe({
-		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-			if (direction == 'left') {
-				$(".toggle-menu-mobile--js").removeClass("on");
-				$(".menu-mobile--js.active").removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-			if (direction == 'right') {
-				$(".toggle-menu-mobile--js").removeClass("on");
-				$(".menu-mobile--js.active").removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-		},
-		triggerOnTouchEnd: false,
-	});
+  
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
@@ -72,16 +17,25 @@ jQuery(document).ready(function ($) {
 
 
 		// скрывает моб меню
-
-		var topH = $("header ").innerHeight();
+		var topH = $(".header-block").innerHeight();
 
 		$(window).scroll(function () {
-			if ($(this).scrollTop() > topH) {
+			if ($(this).scrollTop() > (topH /2)) {
+				$('.top-nav  ').addClass('fixed-ready');
+			} else {
+				$('.top-nav  ').removeClass('fixed-ready');
+			}
+
+			
+			if ($(this).scrollTop() > (topH * .8)) {
 				$('.top-nav  ').addClass('fixed');
 			} else {
 				$('.top-nav  ').removeClass('fixed');
 			}
+
+
 		});
+		// конец добавил
 		// конец добавил
 	}
 
@@ -346,5 +300,9 @@ jQuery(document).ready(function ($) {
 	// });
 	// });
 
+		$(".header-block__before--js").click(function(){
+			var destination = $('.header-blocks').offset().top - $('.top-nav.fixed-ready').height();
+			$('html, body').animate({ scrollTop: destination }, 1100);
+		})
 
 });

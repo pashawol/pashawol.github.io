@@ -167,5 +167,19 @@ jQuery(document).ready(function ($) {
 		})
 	})
 
- 
+ $(".dropdown-toggle-js").click(function(){
+	$(this).next().toggle().parent().toggleClass("show");
+	return false;
+ })
+
+
+ $(document).mouseup(function (e) {
+	var container = $(".dropdown--js.show");
+	if (container.has(e.target).length === 0) {
+		$(".dropdown--js").removeClass("show");
+		$(".dropdown-menu--js").hide();
+		// $("body").toggleClass("fixed");
+	 
+	}
+});
 });
