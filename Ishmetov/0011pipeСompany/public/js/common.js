@@ -91,26 +91,42 @@ jQuery(document).ready(function ($) {
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// карусель
-	$('.s-team__slider').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		dots: false,
-		speed: 450,
-		infinite: true,
-		loop: true,
-		arrows: true,
-		mobileFirst: true,
-		// centerMode: true,
-		// focusOnSelect: true ,
-		// variableWidth: true,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
-	});
 
-	$('.s-gal__slider,'+
-	' .s-project__slider--js ,'+
-	' .slider-for ,'+
-	' .slider-for2 ')
+
+
+//custom code
+var slideCount = $('.slideCount');
+var slickSlide = $('.s-gal__slider--js');
+
+slickSlide.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+	//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+	var i = (currentSlide ? currentSlide : 0) + 1;
+	$('.slideCount').html('<span class="slideCountItem">' + i + '</span> ' + '/' + ' <span class="slideCountAll">' + slick.slideCount + '</span>');
+});
+
+
+slickSlide
+.on('lazyLoaded', function(event, slick, image, imageSource){
+	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+});
+
+slickSlide.slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	dots: false,
+	speed: 450,
+	infinite: true,
+	loop: true,
+	arrows: true,
+	mobileFirst: true,
+	// centerMode: true,
+	// focusOnSelect: true ,
+	// variableWidth: true,
+	prevArrow: arrr2,
+	nextArrow: arrl2,
+});
+
+	$('.s-gal__slider--js')
 .on('lazyLoaded', function(event, slick, image, imageSource){
 	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 });
@@ -178,32 +194,64 @@ jQuery(document).ready(function ($) {
 	})
 	// /modal галерея
 
-	// form
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			$.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-			}, 4000);
-		});
-		return false;
-	});
-	// /form
+	$('.popup-with-move-anim').click(function(){
+		var th =$(this);
+		if($(this).is(".s-rates__btn")){
 
+			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title') +'  <div class="text-primary2">'+th.data('type'));
+			$(th.attr('href')).find(".order").val(th.data('title') +' '+th.data('type'));
+		} 
+		else if($(this).is(".s-why__btn")){
+			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
+			$(th.attr('href')).find(".order").val(th.data('btn') +' '+ th.parent().find('.s-why__title').text());
+
+		}
+		
+		else{
+			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
+			$(th.attr('href')).find(".order").val(th.data('btn'));
+
+		}
+
+		$(th.attr('href')).find(".form-wrap__title-sub--js").text('Заполните форму, и мы свяжемся с Вами в течение дня для уточнения деталей');
+		$(th.attr('href')).find(".form-wrap__btn").text(th.data('btn'));
+		$(th.attr('href')).find(".btn-name").text(th.data('btn'));
+	})
+
+		// form
+		$("form").submit(function () { //Change
+			var th = $(this);
+			$.ajax({
+				type: "POST",
+				url: 'action.php', //Change
+				data: th.serialize()
+			}).success(function () {
+				// $.magnificPopup.close();
+				$.magnificPopup.open({
+					items: {
+						src: '#thanks', 
+						type: 'inline', 
+						fixedContentPos: true,
+						fixedBgPos: true, 
+						overflowY: 'auto', 
+						closeBtnInside: true,
+						preloader: false, 
+						midClick: true,
+						removalDelay: 300,
+						mainClass: 'my-mfp-zoom-in'
+					}
+				})
+				// window.location.replace("/thanks.html");
+				setTimeout(function () {
+					// Done Functions
+					th.trigger("reset");
+					// $.magnificPopup.close();
+				}, 4000);
+				ym(51692438, 'reachGoal', 'zakaz');
+			});
+			return false;
+		});
+		// /form
 	// mask for input
 	var customOptions = {
 		onKeyPress: function (val, e, field, options) {
@@ -218,69 +266,7 @@ jQuery(document).ready(function ($) {
 	$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").mask("+7(000)000-00-00", customOptions);
 
 	// / mask for input
-
-
-	//Replace all SVG images with inline SVG
-	$('img.img-svg').each(function () {
-		var $img = $(this);
-		var imgClass = $img.attr('class');
-		var imgURL = $img.attr('src');
-
-		$.get(imgURL, function (data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = $(data).find('svg');
-
-			// Add replaced image's classes to the new SVG
-			if (typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass + ' replaced-svg');
-			}
-
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a');
-
-			// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-			}
-
-
-			// Replace image with new SVG
-			$img.replaceWith($svg);
-
-		}, 'xml');
-
-	});
-
-
-	// кастомный инпут файл
-
-	var file = $(".add-file input[type=file]");
-	file.change(function () {
-		var filename = $(this).val().replace(/.*\\/, "");
-		var name = $(".add-file__filename  ");
-		name.text(filename);
-
-	});
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
-
-	$(".pretty-embed__bg").each(function () {
-		// загрузка фона видео
-		$(this).css("background-image", 'url(http://img.youtube.com/vi/' + $(this).data("src") + '/0.jpg)')
-		// включение видео при клике по блоку
-		$(this).click(function () {
-			$(this).removeClass("on").next()
-				.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
-		})
-	})
-
-	// убираем пробелы в телефоне
+ 
 	// убираем пробелы в телефоне
 	$('[href^="tel:"]').each(function () {
 		var str = $(this).attr('href');
@@ -305,4 +291,8 @@ jQuery(document).ready(function ($) {
 			$('html, body').animate({ scrollTop: destination }, 1100);
 		})
 
+
+			$(".s-prod__btn--js").click(function(){
+				$(this).parents('.s-prod__item').find(".s-prod__hidden-block").slideToggle();
+			})
 });
