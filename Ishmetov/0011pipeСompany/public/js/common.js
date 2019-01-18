@@ -93,26 +93,27 @@ jQuery(document).ready(function ($) {
 	// карусель
 
 
+	window.onload = function() {
 
-//custom code
-var slideCount = $('.slideCount');
-var slickSlide = $('.s-gal__slider--js');
-
-slickSlide.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-	//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-	var i = (currentSlide ? currentSlide : 0) + 1;
-	$('.slideCount').html('<span class="slideCountItem">' + i + '</span> ' + '/' + ' <span class="slideCountAll">' + slick.slideCount + '</span>');
-});
-
-
-slickSlide
-.on('lazyLoaded', function(event, slick, image, imageSource){
-	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-});
-
-slickSlide.slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
+		//custom code
+		var slideCount = $('.slideCount');
+		var slickSlide = $('.s-gal__slider--js');
+		
+		slickSlide.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+			//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+			var i = (currentSlide ? currentSlide : 0) + 1;
+			$('.slideCount').html('<span class="slideCountItem">' + i + '</span> ' + '/' + ' <span class="slideCountAll">' + slick.slideCount + '</span>');
+		});
+		
+		
+		slickSlide
+		.on('lazyLoaded', function(event, slick, image, imageSource){
+			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+		});
+		
+		slickSlide.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
 	dots: false,
 	speed: 450,
 	infinite: true,
@@ -126,12 +127,13 @@ slickSlide.slick({
 	nextArrow: arrl2,
 });
 
-	$('.s-gal__slider--js')
+$('.s-gal__slider--js')
 .on('lazyLoaded', function(event, slick, image, imageSource){
-	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+	image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 });
-	// slider
-	// var swiper4 = new Swiper('.color-slider', {
+// slider
+}
+// var swiper4 = new Swiper('.color-slider', {
 	// 	// slidesPerView: 5,
 	// 	slidesPerView: 'auto',
 	// 	watchOverflow: true,
