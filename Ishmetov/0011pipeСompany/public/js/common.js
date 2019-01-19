@@ -93,7 +93,7 @@ jQuery(document).ready(function ($) {
 	// карусель
 
 
-	window.onload = function() {
+	// window.onload = function() {
 
 		//custom code
 		var slideCount = $('.slideCount');
@@ -132,7 +132,7 @@ $('.s-gal__slider--js')
 	image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 });
 // slider
-}
+// }
 // var swiper4 = new Swiper('.color-slider', {
 	// 	// slidesPerView: 5,
 	// 	slidesPerView: 'auto',
@@ -198,26 +198,26 @@ $('.s-gal__slider--js')
 
 	$('.popup-with-move-anim').click(function(){
 		var th =$(this);
-		if($(this).is(".s-rates__btn")){
+		// if($(this).is(".s-rates__btn")){
 
-			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title') +'  <div class="text-primary2">'+th.data('type'));
-			$(th.attr('href')).find(".order").val(th.data('title') +' '+th.data('type'));
-		} 
-		else if($(this).is(".s-why__btn")){
-			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
-			$(th.attr('href')).find(".order").val(th.data('btn') +' '+ th.parent().find('.s-why__title').text());
+		// 	$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title') +'  <div class="text-primary2">'+th.data('type'));
+		// 	$(th.attr('href')).find(".order").val(th.data('title') +' '+th.data('type'));
+		// } 
+		// else if($(this).is(".s-why__btn")){
+		// 	$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
+		// 	$(th.attr('href')).find(".order").val(th.data('btn') +' '+ th.parent().find('.s-why__title').text());
 
-		}
+		// }
 		
-		else{
+		// else{
 			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
-			$(th.attr('href')).find(".order").val(th.data('btn'));
+			$(th.attr('href')).find(".order").val(th.data('order'));
 
-		}
+		// }
 
-		$(th.attr('href')).find(".form-wrap__title-sub--js").text('Заполните форму, и мы свяжемся с Вами в течение дня для уточнения деталей');
+		// $(th.attr('href')).find(".form-wrap__title-sub--js").text('Заполните форму, и мы свяжемся с Вами в течение дня для уточнения деталей');
 		$(th.attr('href')).find(".form-wrap__btn").text(th.data('btn'));
-		$(th.attr('href')).find(".btn-name").text(th.data('btn'));
+		// $(th.attr('href')).find(".btn-name").text(th.data('btn'));
 	})
 
 		// form
@@ -296,5 +296,116 @@ $('.s-gal__slider--js')
 
 			$(".s-prod__btn--js").click(function(){
 				$(this).parents('.s-prod__item').find(".s-prod__hidden-block").slideToggle();
-			})
+			}) 
+				if (window.matchMedia("(min-width: 768px)").matches && $("div").is("#map1")) {
+					$.getScript('//api-maps.yandex.ru/2.1/?lang=ru_RU', function(){
+							// alert('script loaded');
+					
+						ymaps.ready(function () {
+						var myMap = new ymaps.Map('map1', {
+								center: [55.005015569688226,82.94555549999993],
+								zoom: 17,
+								behaviors: ['drag'],
+				
+								// controls: ["zoomControl", "fullscreenControl"]
+							}, {
+								searchControlProvider: 'yandex#search'
+							}),
+				
+				
+							myPlacemark = new ymaps.Placemark([55.005015569688226,82.94555549999993], {
+								hintContent: 'г. Новосибирск,  Большевистская 101, оф. 902',
+								balloonContent: 'г. Новосибирск,  Большевистская 101, оф. 902 '
+							}, {
+								// Опции.
+								// Необходимо указать данный тип макета.
+								iconLayout: 'default#image',
+								// Своё изображение иконки метки.
+								iconImageHref: $("#map1").data("img"),
+								// Размеры метки.
+								iconImageSize: [90, 90],
+								// Смещение левого верхнего угла иконки относительно
+								// её "ножки" (точки привязки).
+								iconImageOffset: [-42, -90]
+							})
+				
+						myMap.geoObjects
+							.add(myPlacemark)
+				
+				
+				
+					});
+				}); 
+
+			}
+
+
+			// анимация на  блоки
+ 
+	 
+			
+				var wow = new WOW({
+					mobile: false
+				});
+				wow.init();
+				
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  let active = false;
+
+  const lazyLoad = function() {
+    if (active === false) {
+      active = true;
+
+      setTimeout(function() {
+        lazyImages.forEach(function(lazyImage) {
+          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.classList.remove("lazy");
+
+            lazyImages = lazyImages.filter(function(image) {
+              return image !== lazyImage;
+            });
+
+            if (lazyImages.length === 0) {
+              document.removeEventListener("scroll", lazyLoad);
+              window.removeEventListener("resize", lazyLoad);
+              window.removeEventListener("orientationchange", lazyLoad);
+            }
+          }
+        });
+
+        active = false;
+      }, 200);
+    }
+  };
+
+  document.addEventListener("scroll", lazyLoad);
+  window.addEventListener("resize", lazyLoad);
+  window.addEventListener("orientationchange", lazyLoad);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
 });
