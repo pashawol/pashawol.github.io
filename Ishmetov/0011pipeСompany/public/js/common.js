@@ -62,28 +62,17 @@ jQuery(document).ready(function ($) {
 
 
 	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
+	$(" .top-nav a").click(function () {
+	       var elementClick = $(this).attr("href");
+	       var destination = $(elementClick).offset().top;
 
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
+	           $('html, body').animate({ scrollTop: destination }, 1100);
 
-	//        return false;
-	//    });
+	       return false;
+	   });
 
 
-	// табы  . 
-	function tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
-		});
-	};
-	tabscostume('tabs');
-
+ 
 
 
 	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
@@ -132,28 +121,7 @@ $('.s-gal__slider--js')
 	image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 });
 // slider
-// }
-// var swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
-
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-
-	// });
+ 
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -198,26 +166,10 @@ $('.s-gal__slider--js')
 
 	$('.popup-with-move-anim').click(function(){
 		var th =$(this);
-		// if($(this).is(".s-rates__btn")){
-
-		// 	$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title') +'  <div class="text-primary2">'+th.data('type'));
-		// 	$(th.attr('href')).find(".order").val(th.data('title') +' '+th.data('type'));
-		// } 
-		// else if($(this).is(".s-why__btn")){
-		// 	$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
-		// 	$(th.attr('href')).find(".order").val(th.data('btn') +' '+ th.parent().find('.s-why__title').text());
-
-		// }
-		
-		// else{
+	 
 			$(th.attr('href')).find(".form-wrap__title--js").html(th.data('title'));
-			$(th.attr('href')).find(".order").val(th.data('order'));
-
-		// }
-
-		// $(th.attr('href')).find(".form-wrap__title-sub--js").text('Заполните форму, и мы свяжемся с Вами в течение дня для уточнения деталей');
-		$(th.attr('href')).find(".form-wrap__btn").text(th.data('btn'));
-		// $(th.attr('href')).find(".btn-name").text(th.data('btn'));
+			$(th.attr('href')).find(".order").val(th.data('order')); 
+		$(th.attr('href')).find(".form-wrap__btn").text(th.data('btn')); 
 	})
 
 		// form
@@ -294,9 +246,18 @@ $('.s-gal__slider--js')
 		})
 
 
-			$(".s-prod__btn--js").click(function(){
+			$(".s-prod__btn--more").click(function(){
+				$(".s-prod__btn--more").toggleClass('active');
 				$(this).parents('.s-prod__item').find(".s-prod__hidden-block").slideToggle();
 			}) 
+			$(".s-prod__btn--back-js").click(function(){
+				$(".s-prod__btn--more").removeClass('active');
+				$(this).parents('.s-prod__item').find(".s-prod__hidden-block").slideUp(function(){
+					var destination = $(this).parents('.s-prod__item').offset().top;
+
+					$('html, body').animate({ scrollTop: destination }, 1100);
+				}); 
+			})
 				if (window.matchMedia("(min-width: 768px)").matches && $("div").is("#map1")) {
 					$.getScript('//api-maps.yandex.ru/2.1/?lang=ru_RU', function(){
 							// alert('script loaded');
@@ -363,8 +324,7 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(function() {
         lazyImages.forEach(function(lazyImage) {
           if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-            lazyImage.src = lazyImage.dataset.src;
-            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.src =   lazyImage.dataset.srcset;
             lazyImage.classList.remove("lazy");
 
             lazyImages = lazyImages.filter(function(image) {
