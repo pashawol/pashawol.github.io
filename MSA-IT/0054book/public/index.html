@@ -90,7 +90,7 @@
       </div>
       <!-- end header-block-->
       <!-- start s-catalog-->
-      <div class="s-catalog section" id="s-catalog">
+      <div class="s-catalog s-catalog--slider section" id="s-catalog">
         <div class="container">
           <div class="section-title text-center">
             <h2>Скачать бесплатно</h2>
@@ -232,11 +232,56 @@
       <div class="s-catalog section" id="s-catalog">
         <div class="container">
           <div class="section-title text-center">
-            <h2>Скачать бесплатно</h2>
+            <h2>Каталог</h2>
           </div>
-          <div class="s-catalog__slider s-catalog__slider--js">
-            <div class="s-catalog__slide">
-              <div class="item-prod"> <a class="item-prod__img-wrap img-bg" href="#"> <img class="res-i" src="#" data-lazy="img/prod-1.jpg" alt=""/></a>
+          <div class="s-catalog__head">
+            <div class="d-md-none">
+              <select class="form-control">
+                <option value="#">Все</option>
+                <option value="#">Саморазвитие</option>
+                <option value="#"> Психология</option>
+                <option value="#">Менеджмент</option>
+                <option value="#">Маркетинг и реклама</option>
+                <option value="#">Маркетинг и реклама</option>
+                <option value="#"> Питание</option>
+              </select>
+            </div>
+            <div class="row d-none d-md-flex">
+              <div class="col-auto">
+                <label class="s-catalog__input-wrap"><input class="s-catalog__input" type="checkbox" checked="checked"/><span class="s-catalog__btn-head" rol="button">Все</span>
+                </label>
+              </div>
+              <!-- /.col-auto-->
+              <div class="col-auto">
+                <label class="s-catalog__input-wrap"><input class="s-catalog__input" type="checkbox"/><span class="s-catalog__btn-head" rol="button">Саморазвитие</span>
+                </label>
+              </div>
+              <!-- /.col-auto-->
+              <div class="col-auto">
+                <label class="s-catalog__input-wrap"><input class="s-catalog__input" type="checkbox"/><span class="s-catalog__btn-head" rol="button">Психология</span>
+                </label>
+              </div>
+              <!-- /.col-auto-->
+              <div class="col-auto">
+                <label class="s-catalog__input-wrap"><input class="s-catalog__input" type="checkbox"/><span class="s-catalog__btn-head" rol="button">Менеджмент</span>
+                </label>
+              </div>
+              <!-- /.col-auto-->
+              <div class="col-auto">
+                <label class="s-catalog__input-wrap"><input class="s-catalog__input" type="checkbox"/><span class="s-catalog__btn-head" rol="button">Маркетинг и реклама</span>
+                </label>
+              </div>
+              <!-- /.col-auto-->
+              <div class="col-auto">
+                <label class="s-catalog__input-wrap"><input class="s-catalog__input" type="checkbox"/><span class="s-catalog__btn-head" rol="button">Питание</span>
+                </label>
+              </div>
+              <!-- /.col-auto-->
+            </div>
+          </div>
+          <div class="s-catalog__row row">
+            <div class="s-catalog__col col-lg-4 col-sm-6">
+              <div class="item-prod"> <a class="item-prod__img-wrap img-bg lazy-bg" href="#" data-src="img/prod-1.jpg"> <img class="lazy res-i" src="#" data-srcset="img/prod-1.jpg" alt=""/></a>
                 <div class="item-prod__caption">
                   <div class="item-prod__title"><a href="#">Конспект книги “Тонкое искусство пофигизма”</a>
                   </div>
@@ -248,7 +293,7 @@
                         BYN
                       </div>
                     </div>
-                    <div class="col-auto"><a class="item-prod__btn" href="#"> 
+                    <div class="col-auto"><a class="item-prod__btn btn btn-secondary" href="#"> 
                       <svg class="icon icon-basket ">
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
@@ -256,19 +301,17 @@
                   </div>
                   <div class="item-prod__inform">
                     <div class="row">
-                      <div class="col-auto">
-                        ≈ 68 <span class="smaller">RUB</span></div>
-                      <div class="col-auto">
-                        ≈ 1 <span class="smaller">USD</span></div>
+                      <div class="col-auto">≈ 68 RUB</div>
+                      <div class="col-auto">≈ 1 USD</div>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- /+b.item-prod -->
             </div>
-            <!-- /+e.slide-->
-            <div class="s-catalog__slide">
-              <div class="item-prod"> <a class="item-prod__img-wrap img-bg" href="#"> <img class="res-i" src="#" data-lazy="img/prod-2.jpg" alt=""/></a>
+            <!-- /+e.col.col-lg-4.col-sm-6-->
+            <div class="s-catalog__col col-lg-4 col-sm-6">
+              <div class="item-prod"> <a class="item-prod__img-wrap img-bg lazy-bg" href="#" data-src="img/prod-2.jpg"> <img class="lazy res-i" src="#" data-srcset="img/prod-2.jpg" alt=""/></a>
                 <div class="item-prod__caption">
                   <div class="item-prod__title"><a href="#">Конспект книги “Не попади в ловушку тревог”</a>
                   </div>
@@ -280,7 +323,7 @@
                         BYN
                       </div>
                     </div>
-                    <div class="col-auto"><a class="item-prod__btn" href="#"> 
+                    <div class="col-auto"><a class="item-prod__btn btn btn-secondary" href="#"> 
                       <svg class="icon icon-basket ">
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
@@ -288,19 +331,17 @@
                   </div>
                   <div class="item-prod__inform">
                     <div class="row">
-                      <div class="col-auto">
-                        ≈ 68 <span class="smaller">RUB</span></div>
-                      <div class="col-auto">
-                        ≈ 1 <span class="smaller">USD</span></div>
+                      <div class="col-auto">≈ 68 RUB</div>
+                      <div class="col-auto">≈ 1 USD</div>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- /+b.item-prod -->
             </div>
-            <!-- /+e.slide-->
-            <div class="s-catalog__slide">
-              <div class="item-prod"> <a class="item-prod__img-wrap img-bg" href="#"> <img class="res-i" src="#" data-lazy="img/prod-3.jpg" alt=""/></a>
+            <!-- /+e.col.col-lg-4.col-sm-6-->
+            <div class="s-catalog__col col-lg-4 col-sm-6">
+              <div class="item-prod"> <a class="item-prod__img-wrap img-bg lazy-bg" href="#" data-src="img/prod-3.jpg"> <img class="lazy res-i" src="#" data-srcset="img/prod-3.jpg" alt=""/></a>
                 <div class="item-prod__caption">
                   <div class="item-prod__title"><a href="#">Конспект книги “Мастер времени”</a>
                   </div>
@@ -312,7 +353,7 @@
                         BYN
                       </div>
                     </div>
-                    <div class="col-auto"><a class="item-prod__btn" href="#"> 
+                    <div class="col-auto"><a class="item-prod__btn btn btn-secondary" href="#"> 
                       <svg class="icon icon-basket ">
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
@@ -320,19 +361,77 @@
                   </div>
                   <div class="item-prod__inform">
                     <div class="row">
-                      <div class="col-auto">
-                        ≈ 68 <span class="smaller">RUB</span></div>
-                      <div class="col-auto">
-                        ≈ 1 <span class="smaller">USD</span></div>
+                      <div class="col-auto">≈ 68 RUB</div>
+                      <div class="col-auto">≈ 1 USD</div>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- /+b.item-prod -->
             </div>
-            <!-- /+e.slide-->
-            <div class="s-catalog__slide">
-              <div class="item-prod"> <a class="item-prod__img-wrap img-bg" href="#"> <img class="res-i" src="#" data-lazy="img/prod-3.jpg" alt=""/></a>
+            <!-- /+e.col.col-lg-4.col-sm-6 -->
+            <div class="s-catalog__col col-lg-4 col-sm-6">
+              <div class="item-prod"> <a class="item-prod__img-wrap img-bg lazy-bg" href="#" data-src="img/prod-1.jpg"> <img class="lazy res-i" src="#" data-srcset="img/prod-1.jpg" alt=""/></a>
+                <div class="item-prod__caption">
+                  <div class="item-prod__title"><a href="#">Конспект книги “Тонкое искусство пофигизма”</a>
+                  </div>
+                  <div class="item-prod__author">Марк Мэнсон, Марк Мэнсон
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="item-prod__price"><span class="h5">2.20 </span> 
+                        BYN
+                      </div>
+                    </div>
+                    <div class="col-auto"><a class="item-prod__btn btn btn-secondary" href="#"> 
+                      <svg class="icon icon-basket ">
+                        <use xlink:href="img/svg/sprite.svg#basket"></use>
+                      </svg>В корзину</a>
+                    </div>
+                  </div>
+                  <div class="item-prod__inform">
+                    <div class="row">
+                      <div class="col-auto">≈ 68 RUB</div>
+                      <div class="col-auto">≈ 1 USD</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /+b.item-prod -->
+            </div>
+            <!-- /+e.col.col-lg-4.col-sm-6-->
+            <div class="s-catalog__col col-lg-4 col-sm-6">
+              <div class="item-prod"> <a class="item-prod__img-wrap img-bg lazy-bg" href="#" data-src="img/prod-2.jpg"> <img class="lazy res-i" src="#" data-srcset="img/prod-2.jpg" alt=""/></a>
+                <div class="item-prod__caption">
+                  <div class="item-prod__title"><a href="#">Конспект книги “Не попади в ловушку тревог”</a>
+                  </div>
+                  <div class="item-prod__author">Дэвид Карбонелл
+                  </div>
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <div class="item-prod__price"><span class="h5">12.20 </span> 
+                        BYN
+                      </div>
+                    </div>
+                    <div class="col-auto"><a class="item-prod__btn btn btn-secondary" href="#"> 
+                      <svg class="icon icon-basket ">
+                        <use xlink:href="img/svg/sprite.svg#basket"></use>
+                      </svg>В корзину</a>
+                    </div>
+                  </div>
+                  <div class="item-prod__inform">
+                    <div class="row">
+                      <div class="col-auto">≈ 68 RUB</div>
+                      <div class="col-auto">≈ 1 USD</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /+b.item-prod -->
+            </div>
+            <!-- /+e.col.col-lg-4.col-sm-6-->
+            <div class="s-catalog__col col-lg-4 col-sm-6">
+              <div class="item-prod"> <a class="item-prod__img-wrap img-bg lazy-bg" href="#" data-src="img/prod-3.jpg"> <img class="lazy res-i" src="#" data-srcset="img/prod-3.jpg" alt=""/></a>
                 <div class="item-prod__caption">
                   <div class="item-prod__title"><a href="#">Конспект книги “Мастер времени”</a>
                   </div>
@@ -344,7 +443,7 @@
                         BYN
                       </div>
                     </div>
-                    <div class="col-auto"><a class="item-prod__btn" href="#"> 
+                    <div class="col-auto"><a class="item-prod__btn btn btn-secondary" href="#"> 
                       <svg class="icon icon-basket ">
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
@@ -352,28 +451,38 @@
                   </div>
                   <div class="item-prod__inform">
                     <div class="row">
-                      <div class="col-auto">
-                        ≈ 68 <span class="smaller">RUB</span></div>
-                      <div class="col-auto">
-                        ≈ 1 <span class="smaller">USD</span></div>
+                      <div class="col-auto">≈ 68 RUB</div>
+                      <div class="col-auto">≈ 1 USD</div>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- /+b.item-prod -->
             </div>
-            <!-- /+e.slide-->
+            <!-- /+e.col.col-lg-4.col-sm-6 -->
           </div>
+          <button class="s-catalog__btn-more" type="button">Показать еще
+          </button>
         </div>
       </div>
       <!-- end s-catalog-->
       <!-- start s-selection-->
       <div class="s-selection section" id="s-selection">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-selection</h2>
+          <div class="section-title text-center text-white">
+            <h2>Подборки конспектов</h2>
           </div>
-          <div class="row"></div>
+          <div class="row no-gutters">
+                <div class="s-selection__col col-lg-4 col-md-6"><a class="s-selection__item img-bg lazy-bg" href="#" data-src="img/selection-1.jpg"><img class="lazy res-i" src="#" data-srcset="img/selection-1.jpg" alt=""/><span class="s-selection__title">Как ставить  цели</span></a>
+                </div>
+                <!-- /col.col-lg-4.col-md-6.img-bg.lazy-bg-->
+                <div class="s-selection__col col-lg-4 col-md-6"><a class="s-selection__item img-bg lazy-bg" href="#" data-src="img/selection-2.jpg"><img class="lazy res-i" src="#" data-srcset="img/selection-2.jpg" alt=""/><span class="s-selection__title">Учитесь мыслить масштабно</span></a>
+                </div>
+                <!-- /col.col-lg-4.col-md-6.img-bg.lazy-bg-->
+                <div class="s-selection__col col-lg-4 col-md-6"><a class="s-selection__item img-bg lazy-bg" href="#" data-src="img/selection-3.jpg"><img class="lazy res-i" src="#" data-srcset="img/selection-3.jpg" alt=""/><span class="s-selection__title">Как повысить личную эффективность</span></a>
+                </div>
+                <!-- /col.col-lg-4.col-md-6.img-bg.lazy-bg-->
+          </div>
         </div>
       </div>
       <!-- end s-selection-->
@@ -381,24 +490,70 @@
       <div class="s-soc section" id="s-soc">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-soc</h2>
+            <h2>Проекты в соц. сетях</h2>
           </div>
-          <div class="row"></div>
+          <div class="row">
+                <div class="s-soc__col col-md"><a class="s-soc__item" href="#"> <img class="lazy res-i" src="#" data-srcset="img/soc-1.png" alt=""/></a>
+                </div>
+                <!-- /+e.col.col-md-->
+                <div class="s-soc__col col-md"><a class="s-soc__item" href="#"> <img class="lazy res-i" src="#" data-srcset="img/soc-2.png" alt=""/></a>
+                </div>
+                <!-- /+e.col.col-md-->
+                <div class="s-soc__col col-md"><a class="s-soc__item" href="#"> <img class="lazy res-i" src="#" data-srcset="img/soc-3.png" alt=""/></a>
+                </div>
+                <!-- /+e.col.col-md-->
+          </div>
         </div>
       </div>
       <!-- end s-soc-->
-      <!-- start s-contact-->
-      <div class="s-contact section" id="s-contact">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-contact</h2>
-          </div>
-          <div class="row"></div>
-        </div>
-      </div>
-      <!-- end s-contact-->
       <footer class="footer">
-        <div class="container">footer</div>
+        <div class="footer__head">
+          <div class="container">
+            <div class="row">
+              <div class="footer__col col-5"><a class="footer__logo" href="#"><img class="res-i lazy res-i" src="#" data-srcset="img/logo-foot.png" alt=""/></a>
+              </div>
+              <div class="footer__col col-3">ИП Шурханов Ю.А.<br/>УНП 490675479
+              </div>
+              <div class="footer__col col">Время обработки сообщений
+                <div class="strong">Будние дни с 9:00 до 17:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__foot">
+          <div class="container">
+            <div class="row">
+              <div class="footer__col col-5">
+                <div class="row">
+                  <div class="col-auto">
+                    <div class="footer__text"> Платежи принимаются  через
+                    </div>
+                  </div>
+                  <div class="col-auto"><img class="lazy res-i" src="#" data-srcset="img/pay-1.png" alt=""/></div>
+                  <div class="col-auto"><img class="lazy res-i" src="#" data-srcset="img/pay-2.png" alt=""/></div>
+                </div>
+              </div>
+              <div class="footer__col col-3">
+                <div class="soc"><a class="soc__item" href="" target="_blank">
+                  <svg class="icon icon-vk ">
+                    <use xlink:href="img/svg/sprite.svg#vk"></use>
+                  </svg></a><a class="soc__item" href="" target="_blank">
+                  <svg class="icon icon-instagram ">
+                    <use xlink:href="img/svg/sprite.svg#instagram"></use>
+                  </svg></a><a class="soc__item" href="" target="_blank">
+                  <svg class="icon icon-telegram ">
+                    <use xlink:href="img/svg/sprite.svg#telegram"></use>
+                  </svg></a><a class="soc__item" href="" target="_blank">
+                  <svg class="icon icon-youtube ">
+                    <use xlink:href="img/svg/sprite.svg#youtube"></use>
+                  </svg></a>
+                </div>
+              </div>
+              <div class="footer__col col"> <img class="lazy res-i" src="#" data-srcset="img/card-1.png" alt=""/><img class="lazy res-i" src="#" data-srcset="img/card-2.png" alt=""/><img class="lazy res-i" src="#" data-srcset="img/card-3.png" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">

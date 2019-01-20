@@ -114,7 +114,7 @@ jQuery(document).ready(function ($) {
 
 
 
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="43" viewBox="0 0 22 43"><defs><path id="2vrqa" d="M344.991 1308.282l-.709.71-21.274-21.275.218-.217-.218-.218 21.274-21.274.71.71-20.783 20.782z"/></defs><g><g transform="translate(-323 -1266)"><use fill="#817a72" xlink:href="#2vrqa"/></g></g></svg>';
 
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
@@ -140,12 +140,12 @@ jQuery(document).ready(function ($) {
 		slidesToScroll: 1,
 		dots: true,
 		speed: 600,
-		loop: true,
+		loop: false,
+		infinite: true,
 		arrows: true,
 		mobileFirst: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
-		infinite: false,
 
 		// the magic
 		responsive: [{
@@ -241,31 +241,34 @@ jQuery(document).ready(function ($) {
 
 	});
 
+
+	
+	
 });
 
 
-// Для лэзи загрузки
 
 
+// Для лэзи загрузки изображений
 document.addEventListener("DOMContentLoaded", function () {
 	let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 	let active = false;
-
+	
 	const lazyLoad = function () {
 		if (active === false) {
 			active = true;
-
+			
 			setTimeout(function () {
 				lazyImages.forEach(function (lazyImage) {
 					if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
 						lazyImage.src = lazyImage.dataset.src;
 						lazyImage.srcset = lazyImage.dataset.srcset;
 						lazyImage.classList.remove("lazy");
-
+						
 						lazyImages = lazyImages.filter(function (image) {
 							return image !== lazyImage;
 						});
-
+						
 						if (lazyImages.length === 0) {
 							document.removeEventListener("scroll", lazyLoad);
 							window.removeEventListener("resize", lazyLoad);
@@ -273,22 +276,65 @@ document.addEventListener("DOMContentLoaded", function () {
 						}
 					}
 				});
-
+				
 				active = false;
 			}, 200);
 		}
 	};
+	
+	document.addEventListener("scroll", lazyLoad);
+	window.addEventListener("resize", lazyLoad);
+	window.addEventListener("orientationchange", lazyLoad);
+});
+// /Для лэзи загрузки изображений
 
+// Для лэзи загрузки инлайн фона
+
+document.addEventListener("DOMContentLoaded", function () {
+	let lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
+	let active = false;
+	
+	const lazyLoad = function () {
+		if (active === false) {
+			active = true;
+			
+			setTimeout(function () {
+				lazyImages.forEach(function (lazyImage) {
+					if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") { 
+						lazyImage.style.backgroundImage = 'url(' + lazyImage.dataset.src + ')';
+						// lazyImage.css('background-image', 'url(' + lazyImage.dataset.src + ')');
+						lazyImage.classList.remove("lazy-bg");
+						
+						
+						lazyImages = lazyImages.filter(function (image) {
+							return image !== lazyImage;
+						});
+						
+						if (lazyImages.length === 0) {
+							document.removeEventListener("scroll", lazyLoad);
+							window.removeEventListener("resize", lazyLoad);
+							window.removeEventListener("orientationchange", lazyLoad);
+						}
+					}
+				});
+				
+				active = false;
+			}, 200);
+		}
+	};
+	
 	document.addEventListener("scroll", lazyLoad);
 	window.addEventListener("resize", lazyLoad);
 	window.addEventListener("orientationchange", lazyLoad);
 });
 
+// /Для лэзи загрузки инлайн фона
 
+// /Для лэзи загрузки   фона
 
 document.addEventListener("DOMContentLoaded", function () {
 	var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
-
+	
 	if ("IntersectionObserver" in window) {
 		let lazyBackgroundObserver = new IntersectionObserver(function (entries, observer) {
 			entries.forEach(function (entry) {
@@ -298,9 +344,10 @@ document.addEventListener("DOMContentLoaded", function () {
 				}
 			});
 		});
-
+		
 		lazyBackgrounds.forEach(function (lazyBackground) {
 			lazyBackgroundObserver.observe(lazyBackground);
 		});
 	}
 });
+// /Для лэзи загрузки   фона
