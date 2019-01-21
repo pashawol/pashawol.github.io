@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Корзина</title>
+    <title>Оформление заказа</title>
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
@@ -66,127 +66,67 @@
       <!-- end HEADER.header-->
       <div class="header-block header-block--page">
         <div class="container">
-          <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная </a><span class="breadcrumb-item active">Корзина</span>
+          <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная </a><span class="breadcrumb-item active">Оформление заказа</span>
           </nav>
           <div class="section-title text-center page-title">
-            <h1>Корзина</h1>
+            <h1>Оформление заказа</h1>
           </div>
         </div>
       </div>
-      <!-- start s-basket-->
-      <div class="s-basket section section section--page">
+      <!-- start s-order-->
+      <div class="s-order section section section--page" id="s-order">
         <div class="container">
-          <table class="w-100"> 
-            <tbody>
-              <tr>
-                <td><a class="s-basket__img-wrap" href="#"><img class="res-i" src="img/prod-1.jpg" alt=""/></a>
-                </td>
-                <td>
-                  <div class="s-basket__title mb-1"><a class="text-primary strong h6" href="#">Конспект книги  <br/>“Тонкое искусство пофигизма”</a>
-                  </div>
-                  <div class="s-basket__smallest text-gray strong">Марк Мэнсон, Марк Мэнсон
-                  </div>
-                </td>
-                <td> 
-                  <div class="h6 text-primary strong"><span class="h5">2.20 </span> 
-                    BYN 
-                  </div>
-                </td>
-                <td>
-                  <div class="s-basket__smallest text-gray strong mb-1">Справочно
-                  </div>
-                  <div class="text-gray strong mb-1">≈ <span class="s-basket__bigger">
-                    68
-                     RUB</span>
-                  </div>
-                  <div class="text-gray strong mb-1">≈ <span class="s-basket__bigger">
-                    1
-                     USD</span>
-                  </div><a class="s-basket__delete tdu" href="#">
-                  <svg class="icon icon-close ">
-                    <use xlink:href="img/svg/sprite.svg#close"></use>
-                  </svg></a>
-                </td>
-              </tr>
-              <tr>
-                <td><a class="s-basket__img-wrap" href="#"><img class="res-i" src="img/prod-2.jpg" alt=""/></a>
-                </td>
-                <td>
-                  <div class="s-basket__title mb-1"><a class="text-primary strong h6" href="#">Конспект книги  <br/>“Тонкое искусство пофигизма”</a>
-                  </div>
-                  <div class="s-basket__smallest text-gray strong">Марк Мэнсон, Марк Мэнсон
-                  </div>
-                </td>
-                <td> 
-                  <div class="h6 text-primary strong"><span class="h5">2.20 </span> 
-                    BYN 
-                  </div>
-                </td>
-                <td>
-                  <div class="s-basket__smallest text-gray strong mb-1">Справочно
-                  </div>
-                  <div class="text-gray strong mb-1">≈ <span class="s-basket__bigger">
-                    68
-                     RUB</span>
-                  </div>
-                  <div class="text-gray strong mb-1">≈ <span class="s-basket__bigger">
-                    1
-                     USD</span>
-                  </div><a class="s-basket__delete tdu" href="#">
-                  <svg class="icon icon-close ">
-                    <use xlink:href="img/svg/sprite.svg#close"></use>
-                  </svg></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="s-basket__foot">
-            <div class="form-wrap">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-wrap__input-group input-group"><input class="form-wrap__input form-control" type="text" placeholder="Есть промокод?"/>
-                    <div class="input-group-append">
-                      <button class="form-wrap__btn form-wrap__btn--group" type="button">
-                        <svg class="icon icon-arr2-right ">
-                          <use xlink:href="img/svg/sprite.svg#arr2-right"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-wrap__right-block">
-                    <div class="s-basket__smallest text-gray strong mb-1">Итого:</div>
-                    <div class="h6 text-primary strong"><span class="h5">4.40  </span> 
-                      BYN 
-                    </div>
-                    <div class="form-wrap__right-block-foot">
-                      <div class="row align-items-center">
-                        <div class="col">
-                          <div class="form-wrap__polite">
-                            <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text">Я принимаю условия договора оферты</small>
-                            </label>
-                            <div class="form-wrap__alert">Вам необходимо принять условия договора оферты
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-auto">
-                          <button class="form-wrap__btn" type="button">Далее
-                            <svg class="icon icon-arr2-right ">
-                              <use xlink:href="img/svg/sprite.svg#arr2-right"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+          <div class="s-order__inner">
+            <div class="s-order__alert">
+              <div class="s-order__alert-inner">Внимание! Нажав кнопку Далее Вы&nbsp;будете перенаправлены на&nbsp;страницу оплаты. Если Ваша корзина содержит только бесплатные материалы, они будут отправлены Вам на&nbsp;почту сразу после нажатия кнопки Далее.
               </div>
+            </div>
+            <div class="form-wrap">
+              <form>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-wrap__input-wrap form-group">
+                      <label><span class="form-wrap__title">Ваш e-mail: *</span><input class="form-wrap__input form-control" type="email" placeholder="Адрес эл. почты"/>
+                      </label>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__input-wrap form-group">
+                      <label><span class="form-wrap__title">Ваше имя: *</span><input class="form-wrap__input form-control" type="text" placeholder="Как Вас зовут?"/>
+                      </label>
+                    </div>
+                    <!-- +e.input-wrap-->
+                    <div class="form-wrap__input-wrap form-group">
+                      <label><span class="form-wrap__title">Комментарий к заказу:</span><textarea class="form-wrap__input form-control" placeholder="Если нужно, оставьте комментарий к заказу"></textarea>
+                      </label>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col"><span class="form-wrap__title">Выберите способ оплаты:</span>
+                    <div class="form-wrap__pay-block">
+                      <label class="custom-input"><input class="custom-input__input" type="radio" name="pay"/><span class="custom-input__lab"></span><span class="custom-input__img-wrap"><img src="img/order.png" alt=""/></span><span class="custom-input__text">Оплата банковской картой  MasterCard, Visa </span>
+                      </label>
+                      <label class="custom-input"><input class="custom-input__input" type="radio" name="pay"/><span class="custom-input__lab"></span><span class="custom-input__img-wrap"><img src="img/order.png" alt=""/></span><span class="custom-input__text">Оплата банковской картой Visa,  MasterCard, </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-wrap__foot text-center">
+                  <div class="small text-gray strong mb-1">Итого к оплате:</div>
+                  <div class="h6 text-primary strong"><span class="h5">4.40  </span> 
+                    BYN 
+                  </div>
+                  <button class="form-wrap__btn" type="button">
+                    <svg class="icon icon-cash ">
+                      <use xlink:href="img/svg/sprite.svg#cash"></use>
+                    </svg>Далее
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <!-- end s-basket-->
       </div>
+      <!-- end s-order-->
       <footer class="footer">
         <div class="footer__head">
           <div class="container">
