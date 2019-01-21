@@ -64,7 +64,7 @@ jQuery(document).ready(function ($) {
 	// листалка по стр
 	$(" .top-nav a").click(function () {
 	       var elementClick = $(this).attr("href");
-	       var destination = $(elementClick).offset().top;
+	       var destination = $(elementClick).offset().top - $('.top-nav').height() * .9;
 
 	           $('html, body').animate({ scrollTop: destination }, 1100);
 
@@ -247,16 +247,14 @@ $('.s-gal__slider--js')
 
 
 			$(".s-prod__btn--more").click(function(){
-				$(".s-prod__btn--more").toggleClass('active');
-				$(this).parents('.s-prod__item').find(".s-prod__hidden-block").slideToggle();
+				var parent = $(this).parents('.s-prod__item');
+				parent.find(".s-prod__btn--more").toggleClass('active');
+				parent.find(".s-prod__hidden-block").slideToggle();
 			}) 
 			$(".s-prod__btn--back-js").click(function(){
-				$(".s-prod__btn--more").removeClass('active');
-				$(this).parents('.s-prod__item').find(".s-prod__hidden-block").slideUp(function(){
-					var destination = $(this).parents('.s-prod__item').offset().top;
-
-					$('html, body').animate({ scrollTop: destination }, 1100);
-				}); 
+				var parent = $(this).parents('.s-prod__item');
+				parent.find(".s-prod__btn--more").removeClass('active');
+				parent.find(".s-prod__hidden-block").slideUp(); 
 			})
 				if (window.matchMedia("(min-width: 768px)").matches && $("div").is("#map1")) {
 					$.getScript('//api-maps.yandex.ru/2.1/?lang=ru_RU', function(){
@@ -305,10 +303,10 @@ $('.s-gal__slider--js')
  
 	 
 			
-				var wow = new WOW({
-					mobile: false
-				});
-				wow.init();
+				// var wow = new WOW({
+				// 	mobile: false
+				// });
+				// wow.init();
 				
 });
 
