@@ -119,22 +119,7 @@ jQuery(document).ready(function ($) {
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// карусель
-	$('.s-team__slider').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		dots: false,
-		speed: 450,
-		infinite: true,
-		loop: true,
-		arrows: true,
-		mobileFirst: true,
-		// centerMode: true,
-		// focusOnSelect: true ,
-		// variableWidth: true,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
-	});
-
+ 
 	$('.s-catalog__slider--js').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
