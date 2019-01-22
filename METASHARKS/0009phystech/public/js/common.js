@@ -1021,8 +1021,8 @@ jQuery(document).ready(function ($) {
 			}
 	 */
 	
-	window.animateSVGPath ( { path, selector: '.animate-js', offsetX: 100, offsetY: 100 } );
-
+	// window.animateSVGPath ( { path, selector: '.animate-js', offsetX: 100, offsetY: 100 } );
+	window.animateSVGPath ( { path, selector: '.animate-js', paddingVertical: 100, paddingHorizontal: 100 } );
 });
 
 
