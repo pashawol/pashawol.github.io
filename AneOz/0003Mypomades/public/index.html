@@ -1,0 +1,64 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru-RU">
+  <head></head>
+  <body class="login login-action-login wp-core-ui locale-ru-ru">
+    <!--if IE 8-->
+    <!-- [if !(IE 8) ] <!-->
+    <!-- <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Войти ‹ Такси — Люкс — WordPress</title>
+    <link rel="dns-prefetch" href="//s.w.org"/>
+    <link id="dashicons-css" rel="stylesheet" href="http://taxiluks.ru/wp-includes/css/dashicons.min.css?ver=5.0.3" type="text/css" media="all"/>
+    <link id="buttons-css" rel="stylesheet" href="http://taxiluks.ru/wp-includes/css/buttons.min.css?ver=5.0.3" type="text/css" media="all"/>
+    <link id="forms-css" rel="stylesheet" href="http://taxiluks.ru/wp-admin/css/forms.min.css?ver=5.0.3" type="text/css" media="all"/>
+    <link id="l10n-css" rel="stylesheet" href="http://taxiluks.ru/wp-admin/css/l10n.min.css?ver=5.0.3" type="text/css" media="all"/>
+    <link id="login-css" rel="stylesheet" href="http://taxiluks.ru/wp-admin/css/login.min.css?ver=5.0.3" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/main.min.css" type="text/css" media="all"/>
+    <meta name="robots" content="noindex,noarchive"/>
+    <meta name="referrer" content="strict-origin-when-cross-origin"/>
+    <meta name="viewport" content="width=device-width"/>
+    <div id="login">
+      <h1><a href="#" title="Сайт работает на WordPress" tabindex="-1">Сайт работает на WordPress</a></h1>
+      <div class="login__text">Лучшие цены от барберов, для барберов</div>
+      <form id="loginform" name="loginform" action="http://taxiluks.ru/wp-login.php" method="post">
+        <p>
+          <label for="user_login">Имя пользователя или e-mail<br/>
+            <input class="input" id="user_login" type="text" name="log" value="" size="20"/>
+          </label>
+        </p>
+        <p>
+          <label for="user_pass">Пароль<br/>
+            <input class="input" id="user_pass" type="password" name="pwd" value="" size="20"/>
+          </label>
+        </p>
+        <p>Login form protected by <a href="http://www.bad-neighborhood.com/login-lockdown.html" rel="nofollow">Login LockDown</a>.<br/><br/><br/></p>
+        <p class="forgetmenot">
+          <label for="rememberme">
+            <input id="rememberme" name="rememberme" type="checkbox" value="forever"/> Запомнить меня
+          </label>
+        </p>
+        <p class="submit">
+          <input class="button button-primary button-large" id="wp-submit" type="submit" name="wp-submit" value="Войти"/>
+          <input type="hidden" name="redirect_to" value="http://taxiluks.ru/wp-admin/"/>
+          <input type="hidden" name="testcookie" value="1"/>
+        </p>
+      </form>
+      <p id="nav"><a href="http://taxiluks.ru/wp-login.php?action=lostpassword">Забыли пароль?</a></p>
+      <script type="text/javascript">
+        function wp_attempt_focus(){
+        setTimeout( function(){ try{
+        d = document.getElementById('user_login');
+        d.focus();
+        d.select();
+        } catch(e){}
+        }, 200);
+        }
+        wp_attempt_focus();
+        if(typeof wpOnload=='function')wpOnload();
+      </script>
+      <p id="backtoblog"><a href="http://taxiluks.ru/">← Назад к сайту «Такси — Люкс»</a></p>
+      <div class="polite"><a href="#">Политика конфиденциальности</a></div>
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>
