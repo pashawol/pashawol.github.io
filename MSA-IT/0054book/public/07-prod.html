@@ -54,6 +54,12 @@
                   </li>
                 </ul>
               </div>
+              <div class="col-auto"><a class="top-nav__btn" href="#"> 
+                <svg class="icon icon-basket ">
+                  <use xlink:href="img/svg/sprite.svg#basket"></use>
+                </svg>
+                <div class="d-none d-sm-inline">Корзина</div><span class="top-nav__btn-label">1</span></a>
+              </div>
               <div class="col-auto d-lg-none">
                 <div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
                 </div>
@@ -111,7 +117,10 @@
                 <div class="col-lg-5 col-sm-auto order-sm-0 order-last"><a class="s-content__btn btn" href="#"> 
                   <svg class="icon icon-basket ">
                     <use xlink:href="img/svg/sprite.svg#basket"></use>
-                  </svg>В корзину</a>
+                  </svg>В корзину</a><a class="s-content__btn s-content__btn--active" href="#"> 
+                  <svg class="icon icon-check-basket ">
+                    <use xlink:href="img/svg/sprite.svg#check-basket"></use>
+                  </svg>В корзине</a>
                 </div>
                 <div class="col-xl-2 col-auto">
                   <div class="s-content__price h5 strong text-primary"><span class="h2">2.20 </span> 
@@ -233,7 +242,7 @@
                         BYN
                       </div>
                     </div>
-                    <div class="col-auto"><a class="item-prod__btn" href="#"> 
+                    <div class="col-auto"><a class="item-prod__btn popup-with-move-anim" href="#modal-basket"> 
                       <svg class="icon icon-basket ">
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
@@ -265,7 +274,7 @@
                         BYN
                       </div>
                     </div>
-                    <div class="col-auto"><a class="item-prod__btn" href="#"> 
+                    <div class="col-auto"><a class="item-prod__btn popup-with-move-anim" href="#modal-basket"> 
                       <svg class="icon icon-basket ">
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
@@ -297,7 +306,7 @@
                         BYN
                       </div>
                     </div>
-                    <div class="col-auto"><a class="item-prod__btn" href="#"> 
+                    <div class="col-auto"><a class="item-prod__btn popup-with-move-anim" href="#modal-basket"> 
                       <svg class="icon icon-basket ">
                         <use xlink:href="img/svg/sprite.svg#basket"></use>
                       </svg>В корзину</a>
@@ -390,6 +399,20 @@
         </div>
       </footer>
     </div>
+    <div class="modal-win zoom-anim-dialog mfp-hide modal-form" id="modal-basket"><a class="modal-win__img-wrap img-bg" href="#" style=" background-image: url(img/prod-1.jpg);"> <img class="res-i" src="img/prod-1.jpg" alt=""/></a>
+      <div class="modal-win__caption">
+        <div class="modal-win__title"><a href="#">Конспект книги “Тонкое искусство пофигизма”</a>
+        </div><a class="modal-win__btn" href="#"> 
+        <svg class="icon icon-basket ">
+          <use xlink:href="img/svg/sprite.svg#basket"></use>
+        </svg>Перейти в корзину</a><a class="modal-win__btn" href="#">
+        <svg class="icon icon-arr-back ">
+          <use xlink:href="img/svg/sprite.svg#arr-back"></use>
+        </svg>Продолжить покупки</a>
+      </div>
+    </div>
+    <!-- #modal-basket-->
+    <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <!-- modal libs-->
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>

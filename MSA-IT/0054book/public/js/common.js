@@ -87,31 +87,7 @@ jQuery(document).ready(function ($) {
 
 	heightses();
 
-
-
-	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
-
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
-
-	//        return false;
-	//    });
-
-
-	// табы  . 
-	function tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
-		});
-	};
-	tabscostume('tabs');
-
+ 
 
 
 	var icon = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="43" viewBox="0 0 22 43"><defs><path id="2vrqa" d="M344.991 1308.282l-.709.71-21.274-21.275.218-.217-.218-.218 21.274-21.274.71.71-20.783 20.782z"/></defs><g><g transform="translate(-323 -1266)"><use fill="#817a72" xlink:href="#2vrqa"/></g></g></svg>';
