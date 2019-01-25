@@ -10,37 +10,76 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#3361d8">
+    <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-      </div>
       <div class="menu-mobile menu-mobile--js d-lg-none">
-        <div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-        </div>
         <div class="menu-mobile__inner">
-          <ul class="menu-mobile__nav">
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Продукция </a>
+          <div class="top-line"> 
+            <div class="row align-items-center">
+              <div class="col-xl-6 col-lg-auto col"><a class="top-line__logo" href="#">
+                <div class="row align-items-center align-items-lg-start">
+                  <div class="col-auto"><img src="img/logo.png" alt=""/></div>
+                  <div class="col"><span class="top-line__text">МОРОсО <span class="d-lg-block d-none"><img class="res-i" src="img/top-img.png" alt=""/></span></span> <strong>Федерация современного пятиборья</strong>
+                  </div>
+                </div></a>
+              </div>
+              <div class="col-auto">
+                <div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="menu">
+            <li class="menu-item menu-item-has-children"><a href="#">О пятиборье</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-has-children"><a href="#">Дисциплины</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="#">Рекорды</a></li>
+                    <li class="menu-item"><a href="#">Современное пятиборье</a></li>
+                    <li class="menu-item"><a href="#">Четырехборье</a></li>
+                    <li class="menu-item"><a href="#">Троеборье</a></li>
+                    <li class="menu-item"><a href="#">Триатлон</a></li>
+                    <li class="menu-item"><a href="#">Биатлон</a></li>
+                    <li class="menu-item"><a href="#">Лазер-ран</a></li>
+                    <li class="menu-item"><a href="#">Ветеранское пятиборье</a></li>
+                    <li class="menu-item"><a href="#">Пара-пятиборье</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a href="#">Рекорды</a></li>
+                <li class="menu-item"><a href="#">История</a></li>
+              </ul>
             </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Услуги  </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Акции </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> О компании  </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Контакты </a>
-            </li>
+            <li class="menu-item"><a href="#">Федерация</a></li>
+            <li class="menu-item"><a href="#">Медиацентр</a></li>
+            <li class="menu-item"><a href="#">Соревнования</a></li>
+            <li class="menu-item"><a href="#">Школы</a></li>
+            <li class="menu-item"><a href="#">Спортсмены</a></li>
+            <li class="menu-item"><a href="#">Контакты</a></li>
           </ul>
-          <div class="text-right"></div>
+          <div class="search-block">
+            <form>
+              <div class="search-block__input-wrap"><input class="search-block__input" type="text" placeholder="Введите ваш запрос"/>
+              </div>
+              <button class="search-block__btn search-block__btn--search" type="button"> 
+                <svg class="icon icon-search ">
+                  <use xlink:href="img/svg/sprite.svg#search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="menu-mobile__group">
+            <div><a class="menu-mobile__tel h3 text-white" href="tel:+7(495)660-22-84">+7 (495) 660-22-84</a>
+            </div>
+            <div class="text-secondary">Пн.-Пт. с 10:00 до 18:00</div>
+          </div>
+          <div class="menu-mobile__group">
+            <div><a class="menu-mobile__mail h3 text-white" href="mailto:info@fspmo.ru">info@fspmo.ru</a>
+            </div><a class="tdu text-secondary" href="#">Связаться с нами </a>
+          </div>
         </div>
       </div>
       <!--  мобильное меню-->
@@ -48,31 +87,89 @@
       <header class="header">
         <!-- start .top-line-->
         <div class="top-line">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-6 col-lg-auto col"><a class="top-line__logo" href="#">
+                <div class="row align-items-center align-items-lg-start">
+                  <div class="col-auto"><img src="img/logo.png" alt=""/></div>
+                  <div class="col"><span class="top-line__text">МОРОсО <span class="d-lg-block d-none"><img class="res-i" src="img/top-img.png" alt=""/></span></span> <strong>Федерация современного пятиборья</strong>
+                  </div>
+                </div></a>
+              </div>
+              <div class="col d-none d-lg-block">
+                <div><a class="top-line__mail" href="mailto:info@fspmo.ru">info@fspmo.ru</a>
+                </div><a class="tdu text-danger" href="#">Связаться с нами</a>
+              </div>
+              <div class="col-auto d-none d-md-block">
+                <div><a class="top-line__tel" href="tel:+7(495)660-22-84">+7 (495) 660-22-84</a>
+                </div>
+                <div class="text-secondary">Пн.-Пт. с 10:00 до 18:00</div>
+              </div>
+              <div class="col-auto d-lg-none">
+                <div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- end .top-line-->
         <!-- start top-nav-->
         <div class="top-nav">
           <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-              </li>
-            </ul>
+            <div class="row">
+              <div class="col">
+                <ul class="menu">
+                  <li class="menu-item menu-item-has-children"><a href="#">О пятиборье</a>
+                    <ul class="sub-menu">
+                      <li class="menu-item menu-item-has-children"><a href="#">Дисциплины</a>
+                        <ul class="sub-menu">
+                          <li class="menu-item"><a href="#">Рекорды</a></li>
+                          <li class="menu-item"><a href="#">Современное пятиборье</a></li>
+                          <li class="menu-item"><a href="#">Четырехборье</a></li>
+                          <li class="menu-item"><a href="#">Троеборье</a></li>
+                          <li class="menu-item"><a href="#">Триатлон</a></li>
+                          <li class="menu-item"><a href="#">Биатлон</a></li>
+                          <li class="menu-item"><a href="#">Лазер-ран</a></li>
+                          <li class="menu-item"><a href="#">Ветеранское пятиборье</a></li>
+                          <li class="menu-item"><a href="#">Пара-пятиборье</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item"><a href="#">Рекорды</a></li>
+                      <li class="menu-item"><a href="#">История</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item"><a href="#">Федерация</a></li>
+                  <li class="menu-item"><a href="#">Медиацентр</a></li>
+                  <li class="menu-item"><a href="#">Соревнования</a></li>
+                  <li class="menu-item"><a href="#">Школы</a></li>
+                  <li class="menu-item"><a href="#">Спортсмены</a></li>
+                  <li class="menu-item"><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="col-auto">
+                <button class="top-nav__btn top-nav__btn--search top-nav__btn--js" type="button">
+                  <svg class="icon icon-search ">
+                    <use xlink:href="img/svg/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="search-block">
+              <form>
+                <div class="search-block__input-wrap"><input class="search-block__input" type="text" placeholder="Введите ваш запрос"/>
+                  <button class="search-block__btn-close search-block__btn-close--js" type="button">
+                    <svg class="icon icon-close ">
+                      <use xlink:href="img/svg/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <button class="search-block__btn search-block__btn--search" type="button">Поиск
+                  <svg class="icon icon-search ">
+                    <use xlink:href="img/svg/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
         <!-- end top-nav-->
@@ -80,34 +177,550 @@
       <!-- end HEADER.header-->
       <!-- start header-block-->
       <div class="header-block" id="header-block">
-        <div class="container">
-          <h1></h1>
-          <div class="row"></div>
+        <div class="header-block__slider header-block__slider--js">
+          <div class="header-block__slide">
+            <div class="header-block__img-wrap img-bg" style="background-image: url(img/header-bg.jpg);"><img class="res-i" src="img/header-bg.jpg" alt=""/>
+              <div class="container">
+                <div class="header-block__title">ЮОИ-2018
+                </div>
+                <div class="header-block__text">Егор Громадский выиграл <br/>турнир по фехтованию
+                </div><a class="header-block__link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="header-block__slide">
+            <div class="header-block__img-wrap img-bg" style="background-image: url(img/header-bg.jpg);"><img class="res-i" src="img/header-bg.jpg" alt=""/>
+              <div class="container">
+                <div class="header-block__title">ЮОИ-2018
+                </div>
+                <div class="header-block__text">Егор Громадский выиграл <br/>турнир по фехтованию
+                </div><a class="header-block__link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="header-block__slide">
+            <div class="header-block__img-wrap img-bg" style="background-image: url(img/header-bg.jpg);"><img class="res-i" src="img/header-bg.jpg" alt=""/>
+              <div class="container">
+                <div class="header-block__title">ЮОИ-2018
+                </div>
+                <div class="header-block__text">Егор Громадский выиграл <br/>турнир по фехтованию
+                </div><a class="header-block__link" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-block__foot d-">
+          <div class="header-block__img-wrapnone d-sm-block">
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xxl-5 col-xl-4 col-auto">
+                <div class="header-block__control">
+                  <div class="header-block__arrows">
+                  </div>
+                  <div class="header-block__dots"> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end header-block-->
-      <!-- start s-form-->
-      <div class="s-form section" id="s-form">
+      <!-- start s-category-->
+      <div class="s-category">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-form</h2>
+          <div class="s-category__row row">
+            <div class="s-category__col col-lg-4 col-md-6"><a class="s-category__item img-bg" href="#" style="background-image: url(img/sport-1.jpg);"><img src="img/sport-1.jpg" alt=""/><span class="s-category__title">современное пятиборье</span></a>
+            </div>
+            <!-- /+e.col.col-4-->
+            <div class="s-category__col col-lg-4 col-md-6"><a class="s-category__item img-bg" href="#" style="background-image: url(img/sport-2.jpg);"><img src="img/sport-2.jpg" alt=""/><span class="s-category__title">четырехборье</span></a>
+            </div>
+            <!-- /+e.col.col-4-->
+            <div class="s-category__col col-lg-4 col-md-6"><a class="s-category__item img-bg" href="#" style="background-image: url(img/sport-3.jpg);"><img src="img/sport-3.jpg" alt=""/><span class="s-category__title">троеборье</span></a>
+            </div>
+            <!-- /+e.col.col-4-->
+            <div class="s-category__col col-lg-4 col-md-6"><a class="s-category__item img-bg" href="#" style="background-image: url(img/sport-4.jpg);"><img src="img/sport-4.jpg" alt=""/><span class="s-category__title">триатлон</span></a>
+            </div>
+            <!-- /+e.col.col-4-->
+            <div class="s-category__col col-lg-4 col-md-6"><a class="s-category__item img-bg" href="#" style="background-image: url(img/sport-5.jpg);"><img src="img/sport-5.jpg" alt=""/><span class="s-category__title">биатлон</span></a>
+            </div>
+            <!-- /+e.col.col-4-->
+            <div class="s-category__col col-lg-4 col-md-6"><a class="s-category__item img-bg" href="#" style="background-image: url(img/sport-6.jpg);"><img src="img/sport-6.jpg" alt=""/><span class="s-category__title">лазер-ран</span></a>
+            </div>
+            <!-- /+e.col.col-4-->
+            <div class="s-category__col col-lg-4 col-md-6"><a class="s-category__item img-bg" href="#" style="background-image: url(img/sport-7.jpg);"><img src="img/sport-7.jpg" alt=""/><span class="s-category__title">ветеранское пятиборье</span></a>
+            </div>
+            <!-- /+e.col.col-4-->
+            <div class="s-category__col col-lg-4 order-xl-0 order-last">
+              <div class="form-wrap">
+                <form>
+                  <div class="form-wrap__title">Связаться с нами
+                  </div>
+                  <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Как к вам обращаться? *"/>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _*"/>
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="E-mail *"/>
+                      </div>
+                      <!-- +e.input-wrap-->
+                    </div>
+                  </div>
+                  <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Вы можете добавить комментарий"></textarea>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="row align-items-center">
+                    <div class="col-xl-6">
+                      <div class="form-wrap__polite">
+                        <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-primary">
+                          Согласие на обработку <a class="tdu" href="#">персональных данных</a></small>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <button class="form-wrap__btn" type="submit">отправить заявку
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- /+e.col.col-4-->
+            </div>
+            <div class="s-category__col col-lg-4 col-md-6"><a class="s-category__item img-bg" href="#" style="background-image: url(img/sport-8.jpg);"><img src="img/sport-8.jpg" alt=""/><span class="s-category__title">парапятиборье</span></a>
+            </div>
+            <!-- /+e.col.col-4-->
           </div>
-          <div class="row"></div>
         </div>
       </div>
-      <!-- end s-form-->
-      <!-- start s-contact-->
-      <div class="s-contact section" id="s-contact">
+      <!-- end s-category-->
+      <!-- start s-calendar-->
+      <div class="s-calendar s-calendar--main section lazy-background" id="s-calendar">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-contact</h2>
+          <div class="section-title">
+            <h2>календарь соревнований</h2>
           </div>
-          <div class="row"></div>
+          <div class="row">
+            <div class="col-xl-7 col-lg-6">
+              <div class="s-calendar__head"><a class="s-calendar__arrow s-calendar__arrow--left" href="#">
+                <svg class="icon icon-chevron-left ">
+                  <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+                </svg></a>
+                <div class="s-calendar__month">Октябрь 2018
+                </div><a class="s-calendar__arrow s-calendar__arrow--right" href="#">
+                <svg class="icon icon-chevron-right ">
+                  <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+                </svg></a>
+              </div>
+              <div class="s-calendar__body s-calendar__body--main">
+                <table class="NewsCalTable">
+                  <tbody>
+                    <tr>
+                      <td class="NewsCalHeader"> Пн</td>
+                      <td class="NewsCalHeader"> Вт</td>
+                      <td class="NewsCalHeader"> Ср</td>
+                      <td class="NewsCalHeader">Чт</td>
+                      <td class="NewsCalHeader"> Пт</td>
+                      <td class="NewsCalHeader"> Сб</td>
+                      <td class="NewsCalHeader"> Вс</td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault"><span>1</span></td>
+                      <td class="NewsCalDefault"><span>2</span></td>
+                      <td class="NewsCalDefault"><span>3 </span></td>
+                      <td class="NewsCalDefault bg-success"><span>4</span></td>
+                      <td class="NewsCalDefault bg-success"><span>5</span></td>
+                      <td class="NewsCalWeekend"><span>6</span></td>
+                      <td class="NewsCalWeekend"><span>7</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalToday"><span>8</span></td>
+                      <td class="NewsCalDefault"><span>9</span></td>
+                      <td class="NewsCalDefault"><span>10</span></td>
+                      <td class="NewsCalDefault bg-danger"><span>11</span></td>
+                      <td class="NewsCalDefault bg-danger"><span>12</span></td>
+                      <td class="NewsCalWeekend bg-danger"><span>13</span></td>
+                      <td class="NewsCalWeekend bg-danger"><span>14</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault bg-danger"><span>15 </span></td>
+                      <td class="NewsCalDefault"><span>16</span></td>
+                      <td class="NewsCalDefault"><span>17</span></td>
+                      <td class="NewsCalDefault"><span>18</span></td>
+                      <td class="NewsCalDefault"><span>19</span></td>
+                      <td class="NewsCalWeekend bg-blur"><span>20</span></td>
+                      <td class="NewsCalWeekend bg-blur"><span>21</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault"><span>22</span></td>
+                      <td class="NewsCalDefault"><span>23</span></td>
+                      <td class="NewsCalDefault"><span>24</span></td>
+                      <td class="NewsCalDefault"><span>25</span></td>
+                      <td class="NewsCalDefault"><span>26</span></td>
+                      <td class="NewsCalWeekend"><span>27</span></td>
+                      <td class="NewsCalWeekend"><span>28</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault"><span>29</span></td>
+                      <td class="NewsCalDefault"><span>30</span></td>
+                      <td class="NewsCalDefault"><span>31</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="col">
+              <div class="s-calendar__caption">
+                <div class="s-calendar__caption-title bg-danger">троеборье
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород 
+                    </div>
+                  </div>
+                  <div class="row justify-content-between">
+                    <div class="col-auto"><a class="s-calendar__arrow-foot s-calendar__arrow-foot--left row" href="#">
+                      <div class="col-auto">
+                        <svg class="icon icon-chevron-left ">
+                          <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+                        </svg>
+                      </div>
+                      <div class="col"><small>Предыдущая дисциплина</small></div></a>
+                    </div>
+                    <div class="col-auto"><a class="s-calendar__arrow-foot s-calendar__arrow-foot--right row" href="#">
+                      <div class="col"><small>Следующая дисциплина</small></div>
+                      <div class="col-auto">
+                        <svg class="icon icon-chevron-right ">
+                          <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+                        </svg>
+                      </div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- end s-contact-->
+      <!-- end s-calendar-->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-7">
+            <!-- start s-rating-->
+            <div class="s-rating section pb-0" id="s-rating">
+              <div class="section-title">
+                <h2>рейтинг спортсменов</h2>
+              </div>
+              <div class="s-rating__group">
+                <div class="s-rating__group-head">
+                  <div class="row">
+                    <div class="col-auto"> 
+                      <div class="h6 strong ttu">мужчины</div>
+                    </div>
+                    <div class="col">
+                      <div class="small text-gray">от 24.02.2018</div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="s-rating__arrows">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-rating__slider s-rating__slider--js">
+                  <div class="s-rating__slide">
+                    <div class="s-rating__item">
+                      <div class="s-rating__img-wrap img-bg"><img src="#" data-lazy="img/raiting-1.jpg" alt=""/>
+                        <div class="s-rating__rating lazy-background">130.50
+                        </div>
+                      </div>
+                      <div class="s-rating__title">Лифанов Александр
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /+e.slide-->
+                  <div class="s-rating__slide">
+                    <div class="s-rating__item">
+                      <div class="s-rating__img-wrap img-bg"><img src="#" data-lazy="img/raiting-2.jpg" alt=""/>
+                        <div class="s-rating__rating lazy-background">123.25
+                        </div>
+                      </div>
+                      <div class="s-rating__title">Беляков Кирилл
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /+e.slide-->
+                  <div class="s-rating__slide">
+                    <div class="s-rating__item">
+                      <div class="s-rating__img-wrap img-bg"><img src="#" data-lazy="img/raiting-3.jpg" alt=""/>
+                        <div class="s-rating__rating lazy-background">108.00
+                        </div>
+                      </div>
+                      <div class="s-rating__title">Лесун Александр
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /+e.slide-->
+                  <div class="s-rating__slide">
+                    <div class="s-rating__item">
+                      <div class="s-rating__img-wrap img-bg"><img src="#" data-lazy="img/raiting-4.jpg" alt=""/>
+                        <div class="s-rating__rating lazy-background">91.50
+                        </div>
+                      </div>
+                      <div class="s-rating__title">Баранов Сергей
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /+e.slide-->
+                </div>
+              </div>
+              <div class="s-rating__group">
+                <div class="s-rating__group-head">
+                  <div class="row">
+                    <div class="col-auto"> 
+                      <div class="h6 strong ttu">Женщины</div>
+                    </div>
+                    <div class="col">
+                      <div class="small text-gray">от 24.02.2018</div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="s-rating__arrows">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="s-rating__slider s-rating__slider--js">
+                  <div class="s-rating__slide">
+                    <div class="s-rating__item">
+                      <div class="s-rating__img-wrap img-bg"><img src="#" data-lazy="img/raiting-5.jpg" alt=""/>
+                        <div class="s-rating__rating lazy-background">294.00
+                        </div>
+                      </div>
+                      <div class="s-rating__title">Баташова Ульяна
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /+e.slide-->
+                  <div class="s-rating__slide">
+                    <div class="s-rating__item">
+                      <div class="s-rating__img-wrap img-bg"><img src="#" data-lazy="img/raiting-6.jpg" alt=""/>
+                        <div class="s-rating__rating lazy-background">265.50
+                        </div>
+                      </div>
+                      <div class="s-rating__title">Губайдуллина Гульназ
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /+e.slide-->
+                  <div class="s-rating__slide">
+                    <div class="s-rating__item">
+                      <div class="s-rating__img-wrap img-bg"><img src="#" data-lazy="img/raiting-7.jpg" alt=""/>
+                        <div class="s-rating__rating lazy-background">221.00
+                        </div>
+                      </div>
+                      <div class="s-rating__title">Хураськина Екатерина
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /+e.slide-->
+                  <div class="s-rating__slide">
+                    <div class="s-rating__item">
+                      <div class="s-rating__img-wrap img-bg"><img src="#" data-lazy="img/raiting-8.jpg" alt=""/>
+                        <div class="s-rating__rating lazy-background">101.00
+                        </div>
+                      </div>
+                      <div class="s-rating__title">Васильева Анастасия
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /+e.slide-->
+                </div>
+              </div>
+            </div>
+            <!-- end s-rating-->
+          </div>
+          <div class="col">
+            <!-- start s-logo-->
+            <div class="s-logo section pb-0 d-none d-md-block">
+              <div class="section-title"> 
+                <h2>наши партнеры</h2>
+              </div>
+              <div class="s-logo__group">
+                <div class="s-logo__title"> ГЕНЕРАЛЬНЫЕ СПОНСОРЫ
+                </div>
+                <div class="row align-items-center">
+                  <div class="s-logo__img-wrap col text-center"><img class="res-i lazy" src="#" data-src="img/logo-1.png" alt=""/>
+                  </div>
+                  <div class="s-logo__img-wrap col text-center"><img class="res-i lazy" src="#" data-src="img/logo-2.png" alt=""/>
+                  </div>
+                  <div class="s-logo__img-wrap col text-center"><img class="res-i lazy" src="#" data-src="img/logo-3.png" alt=""/>
+                  </div>
+                </div>
+              </div>
+              <div class="s-logo__group">
+                <div class="s-logo__title">НАЦИОНАЛЬНЫЕ ПАРТНЕРЫ
+                </div>
+                <div class="row align-items-center">
+                  <div class="s-logo__img-wrap col"><img class="res-i lazy" src="#" data-src="img/logo-4.png" alt=""/>
+                  </div>
+                  <div class="s-logo__img-wrap col"><img class="res-i lazy" src="#" data-src="img/logo-5.png" alt=""/>
+                  </div>
+                  <div class="s-logo__img-wrap col"><img class="res-i lazy" src="#" data-src="img/logo-6.png" alt=""/>
+                  </div>
+                </div>
+              </div>
+              <div class="s-logo__group">
+                <div class="s-logo__title">МЕЖДУНАРОДНЫЕ ПАРТНЕРЫ
+                </div>
+                <div class="row align-items-center">
+                  <div class="s-logo__img-wrap col"><img class="res-i lazy" src="#" data-src="img/logo-7.png" alt=""/>
+                  </div>
+                  <div class="s-logo__img-wrap col"><img class="res-i lazy" src="#" data-src="img/logo-8.png" alt=""/>
+                  </div>
+                  <div class="s-logo__img-wrap col"><img class="res-i lazy" src="#" data-src="img/logo-9.png" alt=""/>
+                  </div>
+                </div>
+              </div>
+              <div class="s-logo__group">
+                <div class="s-logo__title">ИНФОРМАЦИОННЫЕ ПАРТНЕРЫ
+                </div>
+                <div class="row align-items-center">
+                  <div class="s-logo__img-wrap col"><img class="res-i lazy" src="#" data-src="img/logo-10.png" alt=""/>
+                  </div>
+                  <div class="s-logo__img-wrap col"><img class="res-i lazy" src="#" data-src="img/logo-11.png" alt=""/>
+                  </div>
+                  <div class="s-logo__img-wrap col"><img class="res-i lazy" src="#" data-src="img/logo-12.png" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end s-logo-->
+          </div>
+        </div>
+      </div>
+      <!-- start s-about-->
+      <div class="s-about section" id="s-about">
+        <div class="container">
+          <div class="section-title"> 
+            <h2>о федерации </h2>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>Родиной современного пятиборья считается греческий остров Лемнос. По мифологии, когда аргонавты во главе с Ясоном во время своего похода за Золотым Руном прибыли на остров Лемнос, управляемый женщинами, царица Гипсипила хотела напасть на них с оружием, но её убедили принять их с миром. В честь прибытия героев Гипсипила учредила состязания по пентатлону.</p>
+              <p>Комплексные состязания по спортивно-прикладным умениям и навыкам, необходимым воину, известны с древнейших времён (например, пентатлон в программе древнегреческих Олимпийских игр). Впервые соревнования по современному пятиборью начали проводиться во 2-й половине XIX века в Швеции. Затем и в других странах стали проводиться соревнования по офицерскому пятиборью — спортивному комплексу, состоящему из нескольких  ...</p><a class="s-about__btn" href="#">подробнее</a>
+            </div>
+            <div class="col-lg-5 order-lg-first">
+              <div class="s-about__slider s-about__slider--js">
+                <div class="s-about__slide">
+                  <div class="s-about__img-wrap img-bg"><img class="res-i" src="#" data-lazy="img/about.jpg" alt=""/>
+                  </div>
+                </div>
+                <div class="s-about__slide">
+                  <div class="s-about__img-wrap img-bg"><img class="res-i" src="#" data-lazy="img/about.jpg" alt=""/>
+                  </div>
+                </div>
+                <div class="s-about__slide">
+                  <div class="s-about__img-wrap img-bg"><img class="res-i" src="#" data-lazy="img/about.jpg" alt=""/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end s-about-->
+      <!-- start s-news-->
+      <div class="s-news section" id="s-news">
+        <div class="container"> 
+          <div class="section-title"> 
+            <h2>новости федерации</h2>
+          </div>
+          <div class="s-news__slider s-news__slider--js">
+            <div class="s-news__slide">
+              <div class="s-news__item"><a class="s-news__img-wrap img-bg" href="#"><img src="#" data-lazy="img/news-1.jpg" alt=""/></a>
+                <div class="s-news__title h6"><a href="#">Республиканский Чемпионат  Laser-Run</a>
+                </div>
+                <div class="small text-secondary">24.02.2018</div>
+                <div class="s-news__text">Родиной современного пятиборья считается греческий остров Лемнос. По мифологии, когда аргонавты во главе с Ясоном во время своего похода за Золотым Руном прибыли на остров ...
+                </div>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+            <div class="s-news__slide">
+              <div class="s-news__item"><a class="s-news__img-wrap img-bg" href="#"><img src="#" data-lazy="img/news-2.jpg" alt=""/></a>
+                <div class="s-news__title h6"><a href="#">Республиканский Чемпионат  Laser-Run</a>
+                </div>
+                <div class="small text-secondary">24.02.2018</div>
+                <div class="s-news__text">Родиной современного пятиборья считается греческий остров Лемнос. По мифологии, когда аргонавты во главе с Ясоном во время своего похода за Золотым Руном прибыли на остров ...
+                </div>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+            <div class="s-news__slide">
+              <div class="s-news__item"><a class="s-news__img-wrap img-bg" href="#"><img src="#" data-lazy="img/news-3.jpg" alt=""/></a>
+                <div class="s-news__title h6"><a href="#">Республиканский Чемпионат  Laser-Run</a>
+                </div>
+                <div class="small text-secondary">24.02.2018</div>
+                <div class="s-news__text">Родиной современного пятиборья считается греческий остров Лемнос. По мифологии, когда аргонавты во главе с Ясоном во время своего похода за Золотым Руном прибыли на остров ...
+                </div>
+              </div>
+            </div>
+            <!-- /+e.slide-->
+          </div>
+        </div>
+      </div>
+      <!-- end s-news-->
       <footer class="footer">
-        <div class="container">footer</div>
+        <div class="container">
+          <div class="row">
+            <div class="footer__col col-xl-4 col-lg-auto order-lg-0 order-last">
+              <div class="row">
+                <div class="col-auto"><a class="footer__logo" href="#"><img class="res-i lazy" src="#" data-srcset="img/logo.png" alt=""/></a>
+                </div>
+                <div class="col">
+                  <div class="small text-white mb-3 mt-1">Copyright © 2018 МОРОСО <br/>«Федерация современного пятиборья»</div><a class="small text-secondary tdu" href="#">Карта сайта</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="h6"><a class="text-white strong" href="tel:+7(495)660-22-84">+7 (495) 660-22-84</a></div>
+              <div class="small text-white mb-2">127349, г. Москва, Липкинское шоссе, 2-й километр, с8</div>
+              <div class="footer__text small text-secondary">Пн.-Пт. с 10:00 до 18:00
+              </div>
+            </div>
+            <div class="col-sm-auto">
+              <div class="row">
+                <div class="col-sm-12 col-auto">
+                  <div class="small text-secondary mb-3">Поделиться:</div>
+                </div>
+                <div class="col-sm-12 col mb-2">
+                  <div class="soc"><a class="soc__item" href="" target="_blank"><img src="img/soc-1.png" alt=""/></a><a class="soc__item" href="" target="_blank"><img src="img/soc-2.png" alt=""/></a><a class="soc__item" href="" target="_blank"><img src="img/soc-3.png" alt=""/></a><a class="soc__item" href="" target="_blank"><img src="img/soc-4.png" alt=""/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
@@ -117,18 +730,15 @@
           </div>
           <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
         </div>
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">text</span><input class="form-wrap__input form-control" type="Ваше Имя" required="required"/>
-          </label>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" required="required"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Ваш телефон" required="required"/>
-          </label>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
         </div>
         <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
         <div class="form-wrap__polite">
-          <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-primary">
+            Согласие на обработку <a class="tdu" href="#">персональных данных</a></small>
           </label>
         </div>
       </form>

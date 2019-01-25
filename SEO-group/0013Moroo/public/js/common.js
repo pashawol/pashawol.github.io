@@ -4,24 +4,17 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
+	// показать /скрыть поиск
+	$('.search-block__btn-close--js, .top-nav__btn--js').click(function (e) {
+		e.preventDefault();
+		$(".search-block").fadeToggle().find("input").focus();
+	})
 
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			}
-
-		};
-
-	});
-
+	$(".menu-mobile--js .menu-item-has-children>a").click(function () {
+		var th = $(this);
+		th.toggleClass('active').next().slideToggle();
+		return false;
+	})
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-menu-mobile--js").click(function () {
 
@@ -132,7 +125,7 @@ jQuery(document).ready(function ($) {
 
 
 
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<svg   width="7" height="11" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 7 11"><defs><path d="M2405.34031,3298.86633l4.09574,4.09473c0.36709,0.33278 0.36709,0.90914 0,1.25776l-4.09574,4.049c-0.36709,0.3785 -0.85641,0.46951 -1.22265,0.09055l-0.15363,-0.15167c-0.32041,-0.33323 -0.38152,-0.69725 -0.06111,-1.00014c1.00919,-0.9861 2.03323,-1.9867 3.04242,-2.98774c0.33569,-0.34862 0.33569,-0.92498 0,-1.25776c-1.00919,-1.01644 -2.03323,-2.01703 -3.04242,-3.03302c-0.32041,-0.27301 -0.2593,-0.66691 0.06111,-0.97026l0.15363,-0.15167c0.36624,-0.36356 0.85556,-0.27347 1.22265,0.06022z" id="Path-0"/></defs><desc>Generated with Avocode.</desc><g transform="matrix(1,0,0,1,-2403,-3298)"><g><use xlink:href="#Path-0" fill="#899ba3" fill-opacity="1"/></g></g></svg>';
 
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
@@ -143,7 +136,7 @@ jQuery(document).ready(function ($) {
 		dots: false,
 		speed: 450,
 		infinite: true,
-		loop: true,
+		loop: false,
 		arrows: true,
 		mobileFirst: true,
 		// centerMode: true,
@@ -153,35 +146,104 @@ jQuery(document).ready(function ($) {
 		nextArrow: arrl2,
 	});
 
-	$('.s-gal__slider,'+
-	' .s-project__slider--js ,'+
-	' .slider-for ,'+
-	' .slider-for2 ')
-.on('lazyLoaded', function(event, slick, image, imageSource){
-	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-});
-	// slider
-	// var swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
 
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
+	$('.header-block__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 450,
+		infinite: true,
+		loop: false,
+		// adaptiveHeight: true,
+		arrows: false,
+		appendArrows: '.header-block__arrows',
+		appendDots: '.header-block__dots',
+	});
 
-	// });
+	$('.s-about__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 450,
+		infinite: true,
+		loop: false,
+		// adaptiveHeight: true,
+		arrows: false,
+		// appendArrows:'.header-block__arrows',
+		// appendDots:  '.header-block__dots',
+	});
+
+	$('.s-rating__group').each(function () {
+
+		$(this).find('.s-rating__slider--js').slick({
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			dots: false,
+			speed: 450,
+			infinite: true,
+			loop: false,
+			arrows: true,
+			mobileFirst: true,
+			prevArrow: arrr2,
+			nextArrow: arrl2,
+			appendArrows: $(this).find('.s-rating__arrows'),
+			// the magic
+			responsive: [{
+
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4,
+				}
+
+			}, {
+
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 2,
+				}
+
+			}]
+		});
+
+	})
+	$('.s-news__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 450,
+		infinite: true,
+		loop: false,
+		arrows: false,
+		mobileFirst: true,
+		// centerMode: true,
+		// focusOnSelect: true ,
+		// variableWidth: true,
+
+		responsive: [{
+
+			breakpoint: 992,
+			settings: {
+				slidesToShow: 3,
+			}
+
+		}, {
+
+			breakpoint: 576,
+			settings: {
+				slidesToShow: 2,
+			}
+
+		}]
+	});
+
+	$('.s-rating__slider--js,' +
+			'.s-about__slider--js ,' +
+			'.s-news__slider--js ,' +
+			' .slider-for2 ')
+		.on('lazyLoaded', function (event, slick, image, imageSource) {
+			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+		});
+
 	// modal window
 	$('.popup-with-move-anim').magnificPopup({
 		type: 'inline',
@@ -224,31 +286,7 @@ jQuery(document).ready(function ($) {
 	})
 	// /modal галерея
 
-	// form
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			$.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-			}, 4000);
-		});
-		return false;
-	});
-	// /form
+
 
 	// mask for input
 	var customOptions = {
@@ -266,86 +304,6 @@ jQuery(document).ready(function ($) {
 	// / mask for input
 
 
-	//Replace all SVG images with inline SVG
-	$('img.img-svg').each(function () {
-		var $img = $(this);
-		var imgClass = $img.attr('class');
-		var imgURL = $img.attr('src');
-
-		$.get(imgURL, function (data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = $(data).find('svg');
-
-			// Add replaced image's classes to the new SVG
-			if (typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass + ' replaced-svg');
-			}
-
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a');
-
-			// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-			}
-
-
-			// Replace image with new SVG
-			$img.replaceWith($svg);
-
-		}, 'xml');
-
-	});
-
-
-	// кастомный инпут файл
-
-	var file = $(".add-file input[type=file]");
-	file.change(function () {
-		var filename = $(this).val().replace(/.*\\/, "");
-		var name = $(".add-file__filename  ");
-		name.text(filename);
-
-	});
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
-
-	$(".pretty-embed__bg").each(function () {
-		// загрузка фона видео
-		$(this).css("background-image", 'url(http://img.youtube.com/vi/' + $(this).data("src") + '/0.jpg)')
-		// включение видео при клике по блоку
-		$(this).click(function () {
-			$(this).removeClass("on").next()
-				.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
-		})
-	})
-
-	// убираем пробелы в телефоне
-	// убираем пробелы в телефоне
-	$('[href^="tel:"]').each(function () {
-		var str = $(this).attr('href');
-		$(this).attr('href', str.replace(/\s/g, ''));
-	})
-	// $(".wow-wrap").each(function () {
-	// var wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
-
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	// });
-	// });
-
 
 });
 
@@ -353,60 +311,60 @@ jQuery(document).ready(function ($) {
 // Для лэзи загрузки
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-  let active = false;
+document.addEventListener("DOMContentLoaded", function () {
+	let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+	let active = false;
 
-  const lazyLoad = function() {
-    if (active === false) {
-      active = true;
+	const lazyLoad = function () {
+		if (active === false) {
+			active = true;
 
-      setTimeout(function() {
-        lazyImages.forEach(function(lazyImage) {
-          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-            lazyImage.src = lazyImage.dataset.src;
-            lazyImage.srcset = lazyImage.dataset.srcset;
-            lazyImage.classList.remove("lazy");
+			setTimeout(function () {
+				lazyImages.forEach(function (lazyImage) {
+					if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+						lazyImage.src = lazyImage.dataset.src;
+						lazyImage.srcset = lazyImage.dataset.srcset;
+						lazyImage.classList.remove("lazy");
 
-            lazyImages = lazyImages.filter(function(image) {
-              return image !== lazyImage;
-            });
+						lazyImages = lazyImages.filter(function (image) {
+							return image !== lazyImage;
+						});
 
-            if (lazyImages.length === 0) {
-              document.removeEventListener("scroll", lazyLoad);
-              window.removeEventListener("resize", lazyLoad);
-              window.removeEventListener("orientationchange", lazyLoad);
-            }
-          }
-        });
+						if (lazyImages.length === 0) {
+							document.removeEventListener("scroll", lazyLoad);
+							window.removeEventListener("resize", lazyLoad);
+							window.removeEventListener("orientationchange", lazyLoad);
+						}
+					}
+				});
 
-        active = false;
-      }, 200);
-    }
-  };
+				active = false;
+			}, 200);
+		}
+	};
 
-  document.addEventListener("scroll", lazyLoad);
-  window.addEventListener("resize", lazyLoad);
-  window.addEventListener("orientationchange", lazyLoad);
+	document.addEventListener("scroll", lazyLoad);
+	window.addEventListener("resize", lazyLoad);
+	window.addEventListener("orientationchange", lazyLoad);
 });
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+document.addEventListener("DOMContentLoaded", function () {
+	var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
 
-  if ("IntersectionObserver" in window) {
-    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          lazyBackgroundObserver.unobserve(entry.target);
-        }
-      });
-    });
+	if ("IntersectionObserver" in window) {
+		let lazyBackgroundObserver = new IntersectionObserver(function (entries, observer) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("visible");
+					lazyBackgroundObserver.unobserve(entry.target);
+				}
+			});
+		});
 
-    lazyBackgrounds.forEach(function(lazyBackground) {
-      lazyBackgroundObserver.observe(lazyBackground);
-    });
-  }
+		lazyBackgrounds.forEach(function (lazyBackground) {
+			lazyBackgroundObserver.observe(lazyBackground);
+		});
+	}
 });

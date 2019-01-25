@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Календарь соревнований</title>
+    <meta name="description" content="о чем страница">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
+    <!-- Custom Browsers Color-->
+    <meta name="theme-color" content="#3361d8">
+    <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="menu-mobile menu-mobile--js d-lg-none">
+        <div class="menu-mobile__inner">
+          <div class="top-line"> 
+            <div class="row align-items-center">
+              <div class="col-xl-6 col-lg-auto col"><a class="top-line__logo" href="#">
+                <div class="row align-items-center align-items-lg-start">
+                  <div class="col-auto"><img src="img/logo.png" alt=""/></div>
+                  <div class="col"><span class="top-line__text">МОРОсО <span class="d-lg-block d-none"><img class="res-i" src="img/top-img.png" alt=""/></span></span> <strong>Федерация современного пятиборья</strong>
+                  </div>
+                </div></a>
+              </div>
+              <div class="col-auto">
+                <div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="menu">
+            <li class="menu-item menu-item-has-children"><a href="#">О пятиборье</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-has-children"><a href="#">Дисциплины</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="#">Рекорды</a></li>
+                    <li class="menu-item"><a href="#">Современное пятиборье</a></li>
+                    <li class="menu-item"><a href="#">Четырехборье</a></li>
+                    <li class="menu-item"><a href="#">Троеборье</a></li>
+                    <li class="menu-item"><a href="#">Триатлон</a></li>
+                    <li class="menu-item"><a href="#">Биатлон</a></li>
+                    <li class="menu-item"><a href="#">Лазер-ран</a></li>
+                    <li class="menu-item"><a href="#">Ветеранское пятиборье</a></li>
+                    <li class="menu-item"><a href="#">Пара-пятиборье</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a href="#">Рекорды</a></li>
+                <li class="menu-item"><a href="#">История</a></li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="#">Федерация</a></li>
+            <li class="menu-item"><a href="#">Медиацентр</a></li>
+            <li class="menu-item"><a href="#">Соревнования</a></li>
+            <li class="menu-item"><a href="#">Школы</a></li>
+            <li class="menu-item"><a href="#">Спортсмены</a></li>
+            <li class="menu-item"><a href="#">Контакты</a></li>
+          </ul>
+          <div class="search-block">
+            <form>
+              <div class="search-block__input-wrap"><input class="search-block__input" type="text" placeholder="Введите ваш запрос"/>
+              </div>
+              <button class="search-block__btn search-block__btn--search" type="button"> 
+                <svg class="icon icon-search ">
+                  <use xlink:href="img/svg/sprite.svg#search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="menu-mobile__group">
+            <div><a class="menu-mobile__tel h3 text-white" href="tel:+7(495)660-22-84">+7 (495) 660-22-84</a>
+            </div>
+            <div class="text-secondary">Пн.-Пт. с 10:00 до 18:00</div>
+          </div>
+          <div class="menu-mobile__group">
+            <div><a class="menu-mobile__mail h3 text-white" href="mailto:info@fspmo.ru">info@fspmo.ru</a>
+            </div><a class="tdu text-secondary" href="#">Связаться с нами </a>
+          </div>
+        </div>
+      </div>
+      <!--  мобильное меню-->
+      <!-- start HEADER.header-->
+      <header class="header">
+        <!-- start .top-line-->
+        <div class="top-line">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-6 col-lg-auto col"><a class="top-line__logo" href="#">
+                <div class="row align-items-center align-items-lg-start">
+                  <div class="col-auto"><img src="img/logo.png" alt=""/></div>
+                  <div class="col"><span class="top-line__text">МОРОсО <span class="d-lg-block d-none"><img class="res-i" src="img/top-img.png" alt=""/></span></span> <strong>Федерация современного пятиборья</strong>
+                  </div>
+                </div></a>
+              </div>
+              <div class="col d-none d-lg-block">
+                <div><a class="top-line__mail" href="mailto:info@fspmo.ru">info@fspmo.ru</a>
+                </div><a class="tdu text-danger" href="#">Связаться с нами</a>
+              </div>
+              <div class="col-auto d-none d-md-block">
+                <div><a class="top-line__tel" href="tel:+7(495)660-22-84">+7 (495) 660-22-84</a>
+                </div>
+                <div class="text-secondary">Пн.-Пт. с 10:00 до 18:00</div>
+              </div>
+              <div class="col-auto d-lg-none">
+                <div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end .top-line-->
+        <!-- start top-nav-->
+        <div class="top-nav">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <ul class="menu">
+                  <li class="menu-item menu-item-has-children"><a href="#">О пятиборье</a>
+                    <ul class="sub-menu">
+                      <li class="menu-item menu-item-has-children"><a href="#">Дисциплины</a>
+                        <ul class="sub-menu">
+                          <li class="menu-item"><a href="#">Рекорды</a></li>
+                          <li class="menu-item"><a href="#">Современное пятиборье</a></li>
+                          <li class="menu-item"><a href="#">Четырехборье</a></li>
+                          <li class="menu-item"><a href="#">Троеборье</a></li>
+                          <li class="menu-item"><a href="#">Триатлон</a></li>
+                          <li class="menu-item"><a href="#">Биатлон</a></li>
+                          <li class="menu-item"><a href="#">Лазер-ран</a></li>
+                          <li class="menu-item"><a href="#">Ветеранское пятиборье</a></li>
+                          <li class="menu-item"><a href="#">Пара-пятиборье</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item"><a href="#">Рекорды</a></li>
+                      <li class="menu-item"><a href="#">История</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-item"><a href="#">Федерация</a></li>
+                  <li class="menu-item"><a href="#">Медиацентр</a></li>
+                  <li class="menu-item"><a href="#">Соревнования</a></li>
+                  <li class="menu-item"><a href="#">Школы</a></li>
+                  <li class="menu-item"><a href="#">Спортсмены</a></li>
+                  <li class="menu-item"><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="col-auto">
+                <button class="top-nav__btn top-nav__btn--search top-nav__btn--js" type="button">
+                  <svg class="icon icon-search ">
+                    <use xlink:href="img/svg/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="search-block">
+              <form>
+                <div class="search-block__input-wrap"><input class="search-block__input" type="text" placeholder="Введите ваш запрос"/>
+                  <button class="search-block__btn-close search-block__btn-close--js" type="button">
+                    <svg class="icon icon-close ">
+                      <use xlink:href="img/svg/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <button class="search-block__btn search-block__btn--search" type="button">Поиск
+                  <svg class="icon icon-search ">
+                    <use xlink:href="img/svg/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- end top-nav-->
+      </header>
+      <!-- end HEADER.header-->
+      <div class="header-block--page">
+        <div class="container">
+          <nav class="breadcrumb"><a class="breadcrumb-item" href="#">Главная</a><span class="breadcrumb-item active">Календарь соревнований</span>
+          </nav>
+          <h1 class="h2 strong text-dark ttu">Календарь соревнований</h1>
+        </div>
+      </div>
+      <!-- start s-calendar-->
+      <div class="s-calendar section lazy-background" id="s-calendar">
+        <div class="container">
+          <div class="row">
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__head text-white bg-primary">
+                <div class="s-calendar__month">Октябрь 2018
+                </div>
+              </div>
+              <div class="s-calendar__body s-calendar__body--page">
+                <table class="NewsCalTable">
+                  <tbody>
+                    <tr>
+                      <td class="NewsCalHeader"> Пн</td>
+                      <td class="NewsCalHeader"> Вт</td>
+                      <td class="NewsCalHeader"> Ср</td>
+                      <td class="NewsCalHeader">Чт</td>
+                      <td class="NewsCalHeader"> Пт</td>
+                      <td class="NewsCalHeader"> Сб</td>
+                      <td class="NewsCalHeader"> Вс</td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault"><span>1</span></td>
+                      <td class="NewsCalDefault"><span>2</span></td>
+                      <td class="NewsCalDefault"><span>3 </span></td>
+                      <td class="NewsCalDefault bg-success"><span>4</span></td>
+                      <td class="NewsCalDefault bg-success"><span>5</span></td>
+                      <td class="NewsCalWeekend"><span>6</span></td>
+                      <td class="NewsCalWeekend"><span>7</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalToday"><span>8</span></td>
+                      <td class="NewsCalDefault"><span>9</span></td>
+                      <td class="NewsCalDefault"><span>10</span></td>
+                      <td class="NewsCalDefault bg-danger"><span>11</span></td>
+                      <td class="NewsCalDefault bg-danger"><span>12</span></td>
+                      <td class="NewsCalWeekend bg-danger"><span>13</span></td>
+                      <td class="NewsCalWeekend bg-danger"><span>14</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault bg-danger"><span>15 </span></td>
+                      <td class="NewsCalDefault"><span>16</span></td>
+                      <td class="NewsCalDefault bg-purple"><span>17</span></td>
+                      <td class="NewsCalDefault bg-purple"><span>18</span></td>
+                      <td class="NewsCalDefault bg-purple"><span>19</span></td>
+                      <td class="NewsCalWeekend bg-blur"><span>20</span></td>
+                      <td class="NewsCalWeekend bg-blur"><span>21</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault"><span>22</span></td>
+                      <td class="NewsCalDefault"><span>23</span></td>
+                      <td class="NewsCalDefault"><span>24</span></td>
+                      <td class="NewsCalDefault bg-orange"><span>25</span></td>
+                      <td class="NewsCalDefault bg-orange"><span>26</span></td>
+                      <td class="NewsCalWeekend bg-orange"><span>27</span></td>
+                      <td class="NewsCalWeekend bg-orange"><span>28</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault"><span>29</span></td>
+                      <td class="NewsCalDefault"><span>30</span></td>
+                      <td class="NewsCalDefault"><span>31</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__caption s-calendar__caption--page">
+                <div class="s-calendar__caption-title bg-success">современное пятиборье
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__caption s-calendar__caption--page">
+                <div class="s-calendar__caption-title bg-danger">троеборье
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__caption s-calendar__caption--page">
+                <div class="s-calendar__caption-title bg-purple">лазер - ран
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__caption s-calendar__caption--page">
+                <div class="s-calendar__caption-title bg-primary">Биатлон
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__caption s-calendar__caption--page">
+                <div class="s-calendar__caption-title bg-orange">парапятиборье
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__head text-white bg-primary">
+                <div class="s-calendar__month">ноябрь 2018
+                </div>
+              </div>
+              <div class="s-calendar__body s-calendar__body--page">
+                <table class="NewsCalTable">
+                  <tbody>
+                    <tr>
+                      <td class="NewsCalHeader"> Пн</td>
+                      <td class="NewsCalHeader"> Вт</td>
+                      <td class="NewsCalHeader"> Ср</td>
+                      <td class="NewsCalHeader">Чт</td>
+                      <td class="NewsCalHeader"> Пт</td>
+                      <td class="NewsCalHeader"> Сб</td>
+                      <td class="NewsCalHeader"> Вс</td>
+                    </tr>
+                    <tr>
+                      <td class="bg-white"></td>
+                      <td class="bg-white"></td>
+                      <td class="bg-white"></td>
+                      <td class="NewsCalDefault bg-success"><span>1</span></td>
+                      <td class="NewsCalDefault bg-success"><span>2</span></td>
+                      <td class="NewsCalDefault bg-success"><span>3 </span></td>
+                      <td class="NewsCalDefault bg-success"><span>4</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault bg-warning"><span>5</span></td>
+                      <td class="NewsCalWeekend bg-warning"><span>6</span></td>
+                      <td class="NewsCalWeekend bg-warning"><span>7</span></td>
+                      <td class="NewsCalToday"><span>8</span></td>
+                      <td class="NewsCalDefault"><span>9</span></td>
+                      <td class="NewsCalDefault"><span>10</span></td>
+                      <td class="NewsCalDefault bg-blur-light"><span>11</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault bg-blur-light"><span>12</span></td>
+                      <td class="NewsCalWeekend bg-blur-light"><span>13</span></td>
+                      <td class="NewsCalWeekend bg-blur-light"><span>14</span></td>
+                      <td class="NewsCalDefault bg-blur-light"><span>15 </span></td>
+                      <td class="NewsCalDefault"><span>16</span></td>
+                      <td class="NewsCalDefault"><span>17</span></td>
+                      <td class="NewsCalDefault"><span>18</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault"> <span>19</span></td>
+                      <td class="NewsCalWeekend"><span>20</span></td>
+                      <td class="NewsCalWeekend"><span>21</span></td>
+                      <td class="NewsCalDefault"><span>22</span></td>
+                      <td class="NewsCalDefault"><span>23</span></td>
+                      <td class="NewsCalDefault bg-blur"><span>24</span></td>
+                      <td class="NewsCalDefault bg-blur"><span>25</span></td>
+                    </tr>
+                    <tr>
+                      <td class="NewsCalDefault"><span>26</span></td>
+                      <td class="NewsCalWeekend bg-orange"><span>27</span></td>
+                      <td class="NewsCalWeekend bg-orange"><span>28</span></td>
+                      <td class="NewsCalDefault bg-orange"><span>29</span></td>
+                      <td class="NewsCalDefault bg-orange"><span>30 </span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__caption s-calendar__caption--page">
+                <div class="s-calendar__caption-title bg-success">современное пятиборье
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__caption s-calendar__caption--page">
+                <div class="s-calendar__caption-title bg-danger">троеборье
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__caption s-calendar__caption--page">
+                <div class="s-calendar__caption-title bg-purple">лазер - ран
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__caption s-calendar__caption--page">
+                <div class="s-calendar__caption-title bg-primary">Биатлон
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+            <div class="s-calendar__col col-lg-4 col-md-6">
+              <div class="s-calendar__caption s-calendar__caption--page">
+                <div class="s-calendar__caption-title bg-orange">парапятиборье
+                </div>
+                <div class="s-calendar__caption-body">
+                  <div class="mb-3">
+                    <div class="h2 strong text-primary ttu pb-1">  Первенство ПФО</div>
+                    <div class="h4 text-secondary">Кадеты В (до 17 лет)</div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-calendar ">
+                          <use xlink:href="img/svg/sprite.svg#calendar"></use>
+                        </svg>
+                      </div>10 – 14 октября 2018 г.
+                    </div>
+                    <div class="s-calendar__text">
+                      <div class="s-calendar__icon-wrap">
+                        <svg class="icon icon-mark ">
+                          <use xlink:href="img/svg/sprite.svg#mark"></use>
+                        </svg>
+                      </div>Нижний Новгород  
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /+e.col.col-lg-4.col-md-6-->
+          </div>
+        </div>
+        <nav aria-label="...">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"> 
+                <svg class="icon icon-chevron-left ">
+                  <use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+                </svg></a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item active"><a class="page-link" href="#">3 </a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link page-link-more" href="#">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">15</a></li>
+            <li class="page-item"><a class="page-link" href="#"> 
+                <svg class="icon icon-chevron-right ">
+                  <use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+                </svg></a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- end s-calendar-->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer__col col-xl-4 col-lg-auto order-lg-0 order-last">
+              <div class="row">
+                <div class="col-auto"><a class="footer__logo" href="#"><img class="res-i lazy" src="#" data-srcset="img/logo.png" alt=""/></a>
+                </div>
+                <div class="col">
+                  <div class="small text-white mb-3 mt-1">Copyright © 2018 МОРОСО <br/>«Федерация современного пятиборья»</div><a class="small text-secondary tdu" href="#">Карта сайта</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="h6"><a class="text-white strong" href="tel:+7(495)660-22-84">+7 (495) 660-22-84</a></div>
+              <div class="small text-white mb-2">127349, г. Москва, Липкинское шоссе, 2-й километр, с8</div>
+              <div class="footer__text small text-secondary">Пн.-Пт. с 10:00 до 18:00
+              </div>
+            </div>
+            <div class="col-sm-auto">
+              <div class="row">
+                <div class="col-sm-12 col-auto">
+                  <div class="small text-secondary mb-3">Поделиться:</div>
+                </div>
+                <div class="col-sm-12 col mb-2">
+                  <div class="soc"><a class="soc__item" href="" target="_blank"><img src="img/soc-1.png" alt=""/></a><a class="soc__item" href="" target="_blank"><img src="img/soc-2.png" alt=""/></a><a class="soc__item" href="" target="_blank"><img src="img/soc-3.png" alt=""/></a><a class="soc__item" href="" target="_blank"><img src="img/soc-4.png" alt=""/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
+      <form>
+        <div class="text-center">
+          <div class="form-wrap__title h3 ttu">Обратный звонок
+          </div>
+          <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
+        </div>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" required="required"/>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" required="required"/>
+        </div>
+        <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
+        <div class="form-wrap__polite">
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-primary">
+            Согласие на обработку <a class="tdu" href="#">персональных данных</a></small>
+          </label>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-call-->
+    <!-- modal-->
+    <script src="js/jquery.min.js"></script>
+    <!-- modal libs-->
+    <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
+    <!-- modal libs-->
+    <!-- slider libs-->
+    <script src="libs/slick/slick.min.js"></script>
+    <!-- /slider libs-->
+    <!-- for svg libs-->
+    <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
+    <!-- /for svg libs-->
+    <script src="libs/jquery.touchSwipe.min.js"></script>
+    <script src="libs/jquery.mask.min.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
