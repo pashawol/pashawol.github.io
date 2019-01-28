@@ -15,42 +15,45 @@ jQuery(document).ready(function ($) {
 	});
 
 	// закрыть/открыть мобильное меню
-	var toggMnu = $(".toggle-menu-mobile--js").click(function () {
+	 $(".toggle-menu-mobile--js ").click(function () {
 
-		$(".toggle-menu-mobile--js").toggleClass("on");
-		// $("body").toggleClass("fixed");
-		$(".menu-mobile--js").toggleClass("active");
-		$("body, html").toggleClass("fixed");
+		$(".toggle-menu-mobile--js").addClass("hid"); 
+		$(".menu-mobile--js ").addClass("active");  
+	
+		setTimeout(function () {
+			$(".menu-mobile--js li a").addClass("up");   
+		}, 1000);
+		
+		setTimeout(function () { 
+      $(".close_btn").addClass("active")
+		}, 500);
+		
+		$("body, html").addClass("fixed");
 		return false;
 	});
-	$('.menu-mobile--js ul li a').on('click', function () {
-		$(".menu-mobile--js .toggle-mnu").click();
+	
+	 $(".close_btn ").click(function () {
+
+		$(this).toggleClass("active"); 
+		$(".menu-mobile--js li a").addClass("down");  
+		
+		setTimeout(function () {
+			
+			$(".menu-mobile--js ").removeClass("active");  
+      $(".toggle-menu-mobile--js").removeClass("hid");
+		}, 1000);
+		
+		setTimeout(function () {
+			
+			$(".menu-mobile--js li a").removeClass("up").removeClass("down");  
+		}, 1500);
+		
+		$("body, html").removeClass("fixed");
+		return false;
 	});
-	// $(document).mouseup(function (e) {
-	// 	var container = $(".menu-mobile--js.active");
-	// 	if (container.has(e.target).length === 0) {
-	// 		$(".toggle-menu-mobile--js").removeClass("on");
-	// 		// $("body").toggleClass("fixed");
-	// 		$(".menu-mobile--js").removeClass("active");
-	// 		$("body, html").removeClass("fixed");
-	// 	}
-	// });
-	// закрыть меню при горизонтальном свайпе
-	$('.menu-mobile--js.active').swipe({
-		swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-			if (direction == 'left') {
-				$(".toggle-menu-mobile--js").removeClass("on");
-				$(".menu-mobile--js.active").removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-			if (direction == 'right') {
-				$(".toggle-menu-mobile--js").removeClass("on");
-				$(".menu-mobile--js.active").removeClass("active");
-				$("body, html").removeClass("fixed");
-			}
-		},
-		triggerOnTouchEnd: false,
-	});
+
+
+  
 	// / закрыть меню при горизонтальном свайпе
 	// /закрыть/открыть мобильное меню
 
