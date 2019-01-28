@@ -6,10 +6,9 @@
     <meta name="description" content="о чем страница">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width">
-    <meta property="og:image" content="path/to/image.jpg">
-    <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon/favicon.ico">
     <!-- Custom Browsers Color-->
-    <meta name="theme-color" content="#3361d8">
+    <meta name="theme-color" content="#4700c4">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -55,7 +54,7 @@
         </div>
       </div>
       <!-- end top-nav-->
-      <div class="page-head">
+      <div class="page-head page-head--servises">
         <div class="container">
           <h1>Предложить проект</h1>
           <div class="page-head__text page-head__text--form">
@@ -63,8 +62,108 @@
           </div>
         </div>
       </div>
-      <div class="s-form">
-        <div class="container"></div>
+      <div class="form-wrap">
+        <form> 
+          <div class="container">
+              <div class="form-wrap__group">
+                <div class="form-wrap__title">выберите услугу
+                </div>
+                <div class="form-wrap__row row">
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name="servises[]" value="разработка сайтов" checked="checked"/><span class="custom-input__lab">разработка сайтов</span>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name="servises[]" value="брендинг"/><span class="custom-input__lab">брендинг</span>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name="servises[]" value="презентации"/><span class="custom-input__lab">презентации</span>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name="servises[]" value="упаковка"/><span class="custom-input__lab">упаковка</span>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name="servises[]" value="навигация"/><span class="custom-input__lab">навигация</span>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name="servises[]" value="приложения"/><span class="custom-input__lab">приложения</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- /+e.group-->
+              <div class="form-wrap__group form-wrap__group form-wrap__group--input">
+                <div class="form-wrap__title">задача (коротко)
+                </div>
+                <div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="text" placeholder="Описание" style="height:0;"></textarea>
+                </div>
+                <!-- +e.input-wrap-->
+              </div>
+              <!-- /+e.group-->
+              <div class="form-wrap__group form-wrap__group form-wrap__group--input">
+                <div class="form-wrap__title">контактные данные
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Имя" name="name"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Телефон" name="tel"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Электронная почта" name="email"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Компания" name="company"/>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                </div>
+              </div>
+              <!-- /+e.group-->
+              <div class="form-wrap__group">
+                <div class="form-wrap__title">откуда вы узнали о нас?
+                </div>
+                <div class="form-wrap__row row">
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="know[]" value=" рекомендации"/><span class="custom-input__lab"> рекомендации</span>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="know[]" value=" портфолио"/><span class="custom-input__lab"> портфолио</span>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="know[]" value=" Соцсети"/><span class="custom-input__lab"> Соцсети</span>
+                    </label>
+                  </div>
+                  <div class="col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="radio" name="know[]" value=" рейтинги"/><span class="custom-input__lab"> рейтинги</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- /+e.group-->
+            <button class="form-wrap__btn" type="submit"> Отправить
+              <svg class="icon icon-arrow ">
+                <use xlink:href="img/svg/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <div class="form-wrap__polite">
+              Нажимая на&nbsp;кнопку, вы&nbsp;даете согласие на&nbsp;обработку персональных данных и&nbsp;соглашаетесь сайтов <a class="tdn" href="#">политикой конфиденциальности.</a>
+            </div>
+          </div>
+        </form>
       </div>
       <footer class="footer">
         <div class="container">
@@ -84,18 +183,14 @@
           </div>
           <p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
         </div>
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">text</span><input class="form-wrap__input form-control" type="Ваше Имя" required="required"/>
-          </label>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" name="Ваше Имя" required="required"/>
         </div>
         <!-- +e.input-wrap-->
-        <div class="form-wrap__input-wrap form-group">
-          <label><span class="form-wrap__title">tel</span><input class="form-wrap__input form-control" type="Ваш телефон" required="required"/>
-          </label>
+        <div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" name="Ваш телефон" required="required"/>
         </div>
         <!-- +e.input-wrap--><input class="form-wrap__btn btn btn-block btn-warning mb-4" type="submit" value="Рассчитать"/>
         <div class="form-wrap__polite">
-          <label class="custom-input"><input class="custom-input__input" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="checked" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
           </label>
         </div>
       </form>
