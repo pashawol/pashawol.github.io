@@ -12,14 +12,12 @@ $mail->CharSet = 'utf-8';
 ///от кого письмо  
 $mail->setFrom('info@info.com');
 
- $mail->addAddress('wol1414@gmail.com');
- // $mail->addAddress('horenkova369@gmail.com');
-// $mail->addAddress('stab@inbox.support');
-
+ $mail->addAddress('origin-lp@yandex.ru');
+ $mail->addAddress('mikhail@ishmetov.studio'); 
 
 
 //Субъект
-$mail->Subject = 'Заявка с сайта';
+$mail->Subject = 'Заявка с сайта ISHMETOV.STUDIO';
 
 $time = date('d.m.Y в H:i');
 $html = '
@@ -29,22 +27,32 @@ $html = '
         $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;">Вид формы:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['order'] . '</b></td></tr>';
     }
 
-    if (!empty($_POST['user_name'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Name:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['user_name'] . '</b></td></tr>';
+    if (!empty($_POST['name'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;">Имя:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['name'] . '</b></td></tr>';
     }
     if (!empty($_POST['tel'])) {
         $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Телефон:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['tel'] . '</b></td></tr>';
     }
     if (!empty($_POST['text'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вопрос:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['text'] . '</b></td>';
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Описание задачи:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['text'] . '</b></td>';
+    }
+    
+    if (!empty($_POST['email'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Email:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['email'] . '</b></td>';
+    }
+    
+    if (!empty($_POST['company'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Компания:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['company'] . '</b></td>';
     }
 
-    if (!empty($_POST['comment'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Отзыв:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td>';
-    }
 
-    if (!empty($_POST['tech'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Техника:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['tech']) . '</b></td></tr>';
+ 
+    if (!empty($_POST['servises'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Услуга:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['servises']) . '</b></td></tr>';
+    }
+    
+    if (!empty($_POST['know'])) {
+        $html .= ' <tr style="background-color: #f8f8f8;">  <td style="padding: 10px; border: #e9e9e9 1px solid;"> Откуда  узнали о нас?:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . implode(", ",$_POST['know']) . '</b></td></tr>';
     }
 
    

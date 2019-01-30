@@ -7362,6 +7362,10 @@ body {
   background-color: transparent;
 }
 
+.fw-300 {
+  font-weight: 300;
+}
+
 .mono {
   font-family: monospace;
 }
@@ -8750,6 +8754,58 @@ select.form-control:focus::-ms-value {
   font-size: 0.88889rem;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.s-motive__item {
+  display: block;
+  margin-bottom: 36px;
+  text-decoration: none !important;
+}
+
+.s-motive__row {
+  margin-left: -0.22222rem;
+  margin-right: -0.22222rem;
+}
+
+.s-motive__row > * {
+  padding-left: 0.22222rem;
+  padding-right: 0.22222rem;
+}
+
+.s-motive__img-wrap {
+  background-color: #f5f5f5;
+  display: block;
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  border-bottom: 2px solid #b5b7b9;
+}
+
+.s-motive__img-wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.s-type__item {
+  display: block;
+  margin-bottom: 36px;
+  text-decoration: none !important;
+}
+
+.s-type__row {
+  margin-left: -0.22222rem;
+  margin-right: -0.22222rem;
+}
+
+.s-type__row > * {
+  padding-left: 0.22222rem;
+  padding-right: 0.22222rem;
 }
 
 .s-contact {
