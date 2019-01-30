@@ -213,6 +213,71 @@ jQuery(document).ready(function ($) {
 	$(".aside__btn--js").click(function () {
 		$(this).toggleClass("active").next().slideToggle().parent().toggleClass("active");
 	})
+
+
+	var icon = '<svg class="icon icon-arr-right "><use  xlink:href="img/svg/sprite.svg#arr-right"></use> </svg>',
+	arrr2 = (' <div class="l">' + icon),
+	arrl2 = (' <div class="r">' + icon);
+	// Добавил
+		// карусель
+		$('.s-gal-img__slider--js').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			speed: 450,
+			infinite: true,
+			loop: true,
+			arrows: true,
+			mobileFirst: true,
+			prevArrow: arrr2,
+			nextArrow: arrl2,
+			responsive: [ 
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2,
+					}
+				} 
+			]
+		});
+
+			// срабытывает при lazy  загрузке изображений. Ставит картинки  фоном блок
+	$('.s-gal-img__slider--js')
+	.on('lazyLoaded', function (event, slick, image, imageSource) {
+		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+	});
+	$('.s-content__slider--js2').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: true,
+		loop: true,
+		arrows: true,
+		mobileFirst: true,
+		prevArrow: arrr2,
+		nextArrow: arrl2,
+		// appendArrows:'.slide-count-wrap',
+		responsive: [{
+				breakpoint: 1280,
+				settings: {
+					slidesToShow: 5,
+				}
+			},
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 3,
+				}
+			}
+		]
+	});
 });
 
 
