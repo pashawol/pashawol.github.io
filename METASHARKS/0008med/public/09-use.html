@@ -180,9 +180,7 @@
               <div class="col d-none d-lg-block">
                 <div class="top-nav__nav">
                   <div class="top-nav__item">
-                    <div class="dropdown-cat">
-                      <div class="dropdown-cat__link dropdown-cat__link--toggle-js">Продукция 
-                      </div>
+                    <div class="dropdown-cat"><a class="dropdown-cat__link dropdown-cat__link--toggle-js" href="#">Продукция </a>
                       <div class="dropdown-cat__menu">
                         <div class="d-none d-lg-block">
                           <div class="dropdown-cat-has-children custom-scroll-js"> 
@@ -798,7 +796,7 @@
             <div class="col-auto"><a class="footer__youtube-link" href="#"><img src="img/youtube.svg" alt=""/></a>
             </div>
           </div>
-        </div>
+        </div><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-reg">регистрация</a><a class="footer__btn btn btn-danger popup-with-move-anim" href="#modal-hello">#modal-hello</a>
       </footer>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-inner">
@@ -906,8 +904,15 @@
         <button class="form-wrap__btn btn btn-block btn-primary mb-4" type="submit">Зарегистрироваться
         </button>
         <div class="form-wrap__foot small text-center">
-          или   <a class="popup-with-move-anim" href="#modal-inner">Войдите</a>, если у вас уже есть аккаунт
+           или   <a class="popup-with-move-anim" href="#modal-inner">Войдите</a>, если у вас уже есть аккаунт
         </div>
+        <!-- добавил-->
+        <div class="policy-block mb-0">
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="inner" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text small">
+            Отправляя форму, я даю <a href="#">согласие на обработку персональных данных</a></span>
+          </label>
+        </div>
+        <!-- /добавил-->
       </form>
     </div>
     <!-- #modal-reg-->
@@ -1090,6 +1095,17 @@
       <!-- end prod-head-->
     </div>
     <!-- #modal-prod-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-hello">
+      <form>
+        <div class="text-center">
+          <div class="form-wrap__img-wrap mb-3"><img src="img/logo.png" alt=""/>
+          </div>
+          <div class="h4 pb-3">Добро пожаловать!</div>
+          <p class="pb-3">Вы успешно зарегистрировали <br/>Ваш личный кабинет</p>
+        </div><a class="form-wrap__btn btn btn-block btn-primary popup-with-move-anim" href="#modal-inner">Войти в личный кабинет</a>
+      </form>
+    </div>
+    <!-- #modal-hello-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/popper.min.js"></script>

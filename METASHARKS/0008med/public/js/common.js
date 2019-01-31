@@ -144,21 +144,21 @@ jQuery(document).ready(function ($) {
 		}
 	);
 	// показывает скрытый блок в миниатюрах
-	$(".item-prod").each(function () {
-		var item = $(this).find(".item-prod__toggle-block");
-		$(this).hover(
+	// $(".item-prod").each(function () {
+	// 	var item = $(this).find(".item-prod__toggle-block");
+	// 	$(this).hover(
 
-			function () {
-				hovertimer = setTimeout(function () {
-					item.slideDown(100);
-				}, 500);
-			},
-			function () {
-				clearTimeout(hovertimer);
-				item.slideUp(100);
-			}
-		)
-	})
+	// 		function () {
+	// 			hovertimer = setTimeout(function () {
+	// 				item.slideDown(100);
+	// 			}, 500);
+	// 		},
+	// 		function () {
+	// 			clearTimeout(hovertimer);
+	// 			item.slideUp(100);
+	// 		}
+	// 	)
+	// })
 
 	var icon = '<svg   viewBox="0 0 49 95" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M48 0.5L1 47.5L48 94.5" stroke="black"/> </svg>';
 
@@ -530,4 +530,10 @@ jQuery(document).ready(function ($) {
 		prevArrow: arrl2,
 		nextArrow: arrr2,
 	});
+
+
+	$('.btn-input').popover({
+		html: true,
+		placement: 'top', 
+	})
 });

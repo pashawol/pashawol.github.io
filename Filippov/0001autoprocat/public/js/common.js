@@ -495,4 +495,31 @@ $(".data-modal").click(function(){
         swiper: galleryThumbs,
       },
     });
+
+
+
+
+   // добавил
+function heightses2() {
+
+  var w = $(window).width();  
+  var topH = $(".header ").height();
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > topH) {
+      $('.s-catalog-filter  ').addClass('fixed');
+    } else {
+      $('.s-catalog-filter  ').removeClass('fixed');
+    }
+  });
+  // конец добавил
+} 
+
+$(window).resize(function() {
+  heightses2();
+});
+
+heightses2();
+
+
 });
