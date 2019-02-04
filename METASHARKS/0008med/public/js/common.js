@@ -536,4 +536,10 @@ jQuery(document).ready(function ($) {
 		html: true,
 		placement: 'top', 
 	})
+	
+	$('.s-po__label-status--js').popover({
+		// html: true,
+		placement: 'top', 
+	})
+
 });

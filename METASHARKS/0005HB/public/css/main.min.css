@@ -5757,6 +5757,40 @@ a.btn.disabled,fieldset:disabled a.btn {
           box-shadow: 0 0 0 0.2rem rgba(0, 133, 160, 0.5);
 }
 
+.btn-purple {
+  color: #212529;
+  background-color: #CEB6F5;
+  border-color: #CEB6F5;
+}
+
+.btn-purple:hover {
+  color: #212529;
+  background-color: #b794f0;
+  border-color: #b089ef;
+}
+
+.btn-purple:focus,.btn-purple.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 182, 245, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(206, 182, 245, 0.5);
+}
+
+.btn-purple.disabled,.btn-purple:disabled {
+  color: #212529;
+  background-color: #CEB6F5;
+  border-color: #CEB6F5;
+}
+
+.btn-purple:not(:disabled):not(.disabled):active,.btn-purple:not(:disabled):not(.disabled).active,.show > .btn-purple.dropdown-toggle {
+  color: #212529;
+  background-color: #b089ef;
+  border-color: #a87eed;
+}
+
+.btn-purple:not(:disabled):not(.disabled):active:focus,.btn-purple:not(:disabled):not(.disabled).active:focus,.show > .btn-purple.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 182, 245, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(206, 182, 245, 0.5);
+}
+
 .btn-info-light {
   color: #212529;
   background-color: #f8fbfd;
@@ -5993,6 +6027,40 @@ a.btn.disabled,fieldset:disabled a.btn {
 .btn-outline-info:not(:disabled):not(.disabled):active:focus,.btn-outline-info:not(:disabled):not(.disabled).active:focus,.show > .btn-outline-info.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 133, 160, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(0, 133, 160, 0.5);
+}
+
+.btn-outline-purple {
+  color: #CEB6F5;
+  background-color: transparent;
+  background-image: none;
+  border-color: #CEB6F5;
+}
+
+.btn-outline-purple:hover {
+  color: #212529;
+  background-color: #CEB6F5;
+  border-color: #CEB6F5;
+}
+
+.btn-outline-purple:focus,.btn-outline-purple.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 182, 245, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(206, 182, 245, 0.5);
+}
+
+.btn-outline-purple.disabled,.btn-outline-purple:disabled {
+  color: #CEB6F5;
+  background-color: transparent;
+}
+
+.btn-outline-purple:not(:disabled):not(.disabled):active,.btn-outline-purple:not(:disabled):not(.disabled).active,.show > .btn-outline-purple.dropdown-toggle {
+  color: #212529;
+  background-color: #CEB6F5;
+  border-color: #CEB6F5;
+}
+
+.btn-outline-purple:not(:disabled):not(.disabled):active:focus,.btn-outline-purple:not(:disabled):not(.disabled).active:focus,.show > .btn-outline-purple.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 182, 245, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(206, 182, 245, 0.5);
 }
 
 .btn-outline-info-light {
@@ -6869,6 +6937,14 @@ a.bg-info:hover,a.bg-info:focus,button.bg-info:hover,button.bg-info:focus {
   background-color: #005b6d !important;
 }
 
+.bg-purple {
+  background-color: #CEB6F5 !important;
+}
+
+a.bg-purple:hover,a.bg-purple:focus,button.bg-purple:hover,button.bg-purple:focus {
+  background-color: #b089ef !important;
+}
+
 .bg-info-light {
   background-color: #f8fbfd !important;
 }
@@ -6955,6 +7031,10 @@ a.bg-danger:hover,a.bg-danger:focus,button.bg-danger:hover,button.bg-danger:focu
 
 .border-info {
   border-color: #0085a0 !important;
+}
+
+.border-purple {
+  border-color: #CEB6F5 !important;
 }
 
 .border-info-light {
@@ -7748,6 +7828,14 @@ a.text-info:hover,a.text-info:focus {
   color: #005b6d !important;
 }
 
+.text-purple {
+  color: #CEB6F5 !important;
+}
+
+a.text-purple:hover,a.text-purple:focus {
+  color: #b089ef !important;
+}
+
 .text-info-light {
   color: #f8fbfd !important;
 }
@@ -8332,6 +8420,11 @@ strong,.strong {
 .icon-arr-right {
   font-size: 2.07rem;
   width: 1.37005em;
+}
+
+.icon-arrow-right {
+  font-size: 0.8rem;
+  width: 1.375em;
 }
 
 .icon-basket {
@@ -11937,6 +12030,33 @@ a {
 
 .polite .link :hover {
   display: none;
+}
+
+.s-404 .row {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.s-404__btn .icon {
+  stroke: #000000;
+  margin-right: 5px;
+  font-size: 8px;
+}
+
+.s-404__row {
+  margin-left: -0.4rem;
+  margin-right: -0.4rem;
+}
+
+.s-404__row > * {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+.s-404__col {
+  padding-bottom: 20px;
 }/*==========  Mobile First  ==========*//*==========  Desktop First  ==========*//* Large Devices, Wide Screens *//* Medium Devices, Desktops *//* Small Devices, Tablets *//* Extra Small Devices, Phones *//* Custom, iPhone Retina */@font-face {
   font-family:'Font Awesome 5 Brands';font-style:normal;font-weight:normal;src:url("../fonts/fontawesome-pro-5.0.8/webfonts//fa-brands-400.eot");src:url("../fonts/fontawesome-pro-5.0.8/webfonts//fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome-pro-5.0.8/webfonts//fa-brands-400.woff2") format("woff2"), url("../fonts/fontawesome-pro-5.0.8/webfonts//fa-brands-400.woff") format("woff"), url("../fonts/fontawesome-pro-5.0.8/webfonts//fa-brands-400.ttf") format("truetype"), url("../fonts/fontawesome-pro-5.0.8/webfonts//fa-brands-400.svg#fontawesome") format("svg");
 }

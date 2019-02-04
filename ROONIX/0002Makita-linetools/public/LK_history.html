@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Корзина шаг 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#025f98">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/style-bosch.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dop-style-11-18.css">
+  </head>
+  <body>
+    <div class="main-wrap">
+      <div class="top-line"></div>
+      <header class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-3">
+              <div class="header_top"><a class="header-burger visible-xs" href="javascript:void(0);"></a><a class="header-logo" href="javascript:void(0);"><img src="images/logo-new.png" alt=""></a><a class="visible-xs header_busket" href="javascript:void(0);"><img src="images/busket.svg" alt=""></a></div>
+            </div>
+            <div class="col-sm-9 hidden-xs">
+              <div class="header_links"><a class="link-alter header_links__item" href="javascript:void(0);" data-toggle="modal" data-target="#modal-call">Связаться с нами</a><a class="link-alter header_links__item js-header-phones header-phones" href="javascript:void(0);">
+                  <div class="header-phones_block">
+                    <div class="header-phones_block__phone">8 (800) 50-5000</div>
+                    <div class="header-phones_block__link">
+                      <!-- <img src="images/contact.png" alt="">--><img src="images/group.svg" alt=""> Связаться с нами
+                    </div>
+                  </div> Служба клиентской поддержки<span>8 (800) 50-5000</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <defs>
+                      <path id="a" d="M8.833 0L5 3.73 1.167 0 0 1.135 5 6l5-4.865z"></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" transform="translate(3 5)">
+                      <mask id="b" fill="#fff">
+                        <use xlink:href="#a"></use>
+                      </mask>
+                      <use fill="#000" fill-rule="nonzero" xlink:href="#a"></use>
+                      <g class="svg-color" fill="#025F98" mask="url(#b)">
+                        <path d="M-2-6h15V9H-2z"></path>
+                      </g>
+                    </g>
+                  </svg></a>
+                <div class="dropdown dropdown--js"><a class="link d-inline dropdown-toggle-js link-alter header_links__item" href="#" role="button"> <img src="images/user.png" alt="">Константин
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+                    <defs>
+                      <path id="a" d="M8.833 0L5 3.73 1.167 0 0 1.135 5 6l5-4.865z"></path>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd" transform="translate(3 5)">
+                      <mask id="b" fill="#fff">
+                        <use xlink:href="#a"></use>
+                      </mask>
+                      <use fill="#000" fill-rule="nonzero" xlink:href="#a"></use>
+                      <g class="svg-color" fill="#025F98" mask="url(#b)">
+                        <path d="M-2-6h15V9H-2z"></path>
+                      </g>
+                    </g>
+                  </svg></a>
+                  <div class="dropdown-menu dropdown-menu--js">
+                    <div class="arrow"></div><a class="dropdown-item" href="#">История заказов</a><a class="dropdown-item" href="#">Реквизиты организации</a><a class="dropdown-item" href="#">Адреса доставки</a><a class="dropdown-item" href="#">Контактная информация</a>
+                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Выйти из профиля</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-nav-wrap hidden-sm hidden-xs">
+          <div class="container">
+            <div class="main-search">
+              <form action="POST">
+                <div class="main-search_wrap">
+                  <div class="input-box">
+                    <input type="text" placeholder="Поиск комплектующих для инструментов Bosch">
+                    <div class="main-search_close js-search-close"><img src="images/lose.svg" alt=""></div>
+                  </div>
+                  <div class="select-box">
+                    <select class="nice-select" id="search-select" name="search-select">
+                      <option value="По моделям и деталям">По моделям и деталям</option>
+                      <option value="По моделям и деталям">По моделям и деталям</option>
+                      <option value="По моделям и деталям">По моделям и деталям</option>
+                      <option value="По моделям и деталям">По моделям и деталям</option>
+                    </select>
+                  </div>
+                  <button class="main-search_submit" type="submit"><img src="images/search.png" alt=""></button>
+                </div>
+              </form>
+            </div>
+            <div class="row">
+              <div class="col-md-10">
+                <div class="menu">
+                  <ul>
+                    <li class="active-menu-item"><a href="javascript:void(0);">Комплектующие</a></li>
+                    <li><a href="javascript:void(0);">Информация</a>
+                      <ul>
+                        <li><a href="javascript:void(0);">Как купить</a></li>
+                        <li><a href="javascript:void(0);">Доставка</a></li>
+                        <li><a href="javascript:void(0);">Скидки</a></li>
+                        <li><a href="javascript:void(0);">Контакты</a></li>
+                        <li><a href="javascript:void(0);">Сервисный центр</a></li>
+                        <li><a href="javascript:void(0);">Статьи</a></li>
+                        <li><a href="javascript:void(0);">Ремонт инструмента</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="javascript:void(0);">Новые инструменты</a></li>
+                  </ul>
+                </div>
+                <div class="header-search hidden-sm">
+                  <div class="header-search_btn">
+                    <div class="header-search__input hidden-md">Поиск комплектующих для инструментов Bosch</div>
+                    <div class="header-search__input visible-md">Поиск</div>
+                    <button class="header-search__submit"><img src="images/search.png" alt=""></button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2"><a class="header-busket link-secondary" href="javascript:void(0);"><span>5</span><img src="images/busket.svg" alt=""> Корзина</a></div>
+            </div>
+          </div>
+          <div class="search-results js-search-results main-search-results">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7"><a class="search-results_item" href="javascript:void(0);">
+                    <div class="search-results_item__text">Аккумуляторная ударная дрель-шуруповёрт Bosch 9413D</div>
+                    <div class="search-results_item__price">10 р</div></a><a class="search-results_item" href="javascript:void(0);">
+                    <div class="search-results_item__text">Аккумуляторная ударная дрель-шуруповёрт Bosch 9413D</div>
+                    <div class="search-results_item__price">10 р</div></a><a class="search-results_item" href="javascript:void(0);">
+                    <div class="search-results_item__text">Аккумуляторная ударная дрель-шуруповёрт Bosch 9413D</div>
+                    <div class="search-results_item__price">10 р</div></a>
+                  <div class="search-results_all"><a class="btn-secondary btn-large" href="javascript:void(0);">Все результаты<img src="images/blue-arrow.svg" alt=""></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container no-padding-xs">
+          <div class="main-search visible-sm visible-xs">
+            <form action="POST">
+              <div class="main-search_wrap">
+                <div class="input-box">
+                  <input class="hidden-xs" type="text" placeholder="Поиск комплектующих для инструментов Bosch">
+                  <input class="visible-xs" type="text" placeholder="Поиск">
+                  <div class="main-search_close js-search-close hidden-xs"><img src="images/lose.svg" alt=""></div>
+                </div>
+                <div class="select-box">
+                  <select class="nice-select" id="mobile-search-select" name="mobile-search-select">
+                    <option value="По моделямя и деталям">По моделям</option>
+                    <option value="По моделямя и деталям">По моделям</option>
+                    <option value="По моделямя и деталям">По моделям</option>
+                    <option value="По моделямя и деталям">По моделям</option>
+                  </select>
+                </div>
+                <button class="main-search_submit" type="submit"><img src="images/search.png" alt=""></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="mobile-nav">
+          <ul>
+            <li><a href="#">Комплектующие</a></li>
+            <li class="level"><a href="#">Информация</a>
+              <ul>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Информация</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Новые инструменты</a></li>
+          </ul>
+          <div class="mobile-nav_cabinet"><a href="#"><img src="images/user.png" alt=""> Войти в личный кабинет</a></div>
+          <div class="mobile-nav_footer"><a class="link-alter" href="#">Связаться с нами</a><a class="link-alter" href="#">Служба клиентской поддержки</a><a class="link-secondary" href="#">8 (800) 50-5000</a></div>
+        </div>
+      </header>
+      <div class="container">
+        <div class="breadcrumbs hidden-xs">
+          <div class="breadcrumbs_item"><a class="link-alter" href="javascript:void(0);">Главная</a></div>
+          <div class="breadcrumbs_item"><a class="link-alter" href="javascript:void(0);">Комплектующие Bosch</a></div>
+          <div class="breadcrumbs_item"><a class="link-alter" href="javascript:void(0);">Комплектующие Bosch</a></div>
+          <div class="breadcrumbs_item"><a class="link-alter" href="javascript:void(0);">Комплектующие Bosch</a></div>
+        </div>
+        <div class="breadcrumbs breadcrumbs-mobile visible-xs">
+          <div class="breadcrumbs_item"><a class="link-alter" href="javascript:void(0);">Комплектующие Bosch</a></div>
+        </div>
+      </div>
+      <div class="catalog-start repair">
+        <div class="container">
+          <h1>Личный кабинет</h1>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="catalog-sidebar_select visible-xs visible-sm">
+                <select id="catalogSidebarSelect" name="catalogSidebarSelect">
+                  <option value="Ремонт болгарок">История заказов</option>
+                  <option value="Ремонт болгарок">Реквизиты организации</option>
+                  <option value="Ремонт болгарок">Адреса доставки</option>
+                  <option value="Ремонт болгарок">Контактная информация</option>
+                </select>
+              </div>
+              <div class="catalog-sidebar hidden-sm hidden-xs">
+                <div class="catalog-sidebar_item catalog-sidebar_item--active"><a class="link-primary" href="#">История заказов</a></div>
+                <div class="catalog-sidebar_item"><a class="link-primary" href="javascript:void(0);">Реквизиты организации</a></div>
+                <div class="catalog-sidebar_item"><a class="link-primary" href="javascript:void(0);">Адреса доставки</a></div>
+                <div class="catalog-sidebar_item"><a class="link-primary" href="javascript:void(0);">Контактная информация</a></div>
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="s-po section pt-0">
+                <div class="tabs-po">
+                  <div class="tabs-po__caption">
+                    <div class="tabs-po__btn active">Магазин 1 
+                    </div>
+                    <div class="tabs-po__btn">Магазин длинное название
+                    </div>
+                    <div class="tabs-po__btn">Магазин 3
+                    </div>
+                    <div class="tabs-po__btn">Магазин очень очень длинное название
+                    </div>
+                  </div>
+                  <div class="tabs-po__wrap">
+                    <div class="tabs-po__content active">
+                      <div class="lk-history_clear"><img src="images/loupe.svg" alt="">
+                        <h3>Еще не оформлено ни одного заказа</h3><a class="btn-secondary btn-large" href="javascript:void(0);">Искать детали в магазине</a>
+                      </div>
+                    </div>
+                    <!-- +e.content-->
+                    <div class="tabs-po__content">
+                      <div class="tabs-po__date-block date-picker-block-js">
+                        <div class="flex-row flex-row--small align-items-center">
+                          <div class="col-sm-auto">
+                            <div class="h4 strong pr-3">Даты: </div>
+                          </div>
+                          <div class="col-sm-auto col-6">
+                            <div class="input-wrap-date form-group"><span>C</span>
+                              <input class="form-control form-wrap__input startDate" type="text">
+                            </div>
+                          </div>
+                          <div class="col-sm-auto col-6">
+                            <div class="input-wrap-date form-group"><span>По</span>
+                              <input class="form-control form-wrap__input endDate" type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs-po__table-wrap">
+                        <table class="table-history">
+                          <thead>
+                            <tr class="table-history__head">
+                              <td>№ заказа</td>
+                              <td>Дата заказа</td>
+                              <td>Статус заказа</td>
+                              <td>Сумма</td>
+                              <td>Скидка</td>
+                              <td>Доставка</td>
+                              <td>Итого</td>
+                            </tr>
+                          </thead>
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Ожидает подтверждения<img src="img/svg/hourglass.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Доставлен<img src="img/svg/mask.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Ожидает подтверждения<img src="img/svg/hourglass.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Отменен
+                                <svg class="icon icon-close ">
+                                  <use xlink:href="img/svg/sprite.svg#close"></use>
+                                </svg></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                        </table>
+                      </div>
+                    </div>
+                    <!-- +e.content-->
+                    <div class="tabs-po__content">
+                      <div class="tabs-po__date-block date-picker-block-js">
+                        <div class="flex-row flex-row--small align-items-center">
+                          <div class="col-sm-auto">
+                            <div class="h4 strong pr-3">Даты: </div>
+                          </div>
+                          <div class="col-sm-auto col-6">
+                            <div class="input-wrap-date form-group"><span>C</span>
+                              <input class="form-control form-wrap__input startDate" type="text">
+                            </div>
+                          </div>
+                          <div class="col-sm-auto col-6">
+                            <div class="input-wrap-date form-group"><span>По</span>
+                              <input class="form-control form-wrap__input endDate" type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs-po__table-wrap">
+                        <table class="table-history">
+                          <thead>
+                            <tr class="table-history__head">
+                              <td>№ заказа</td>
+                              <td>Дата заказа</td>
+                              <td>Статус заказа</td>
+                              <td>Сумма</td>
+                              <td>Скидка</td>
+                              <td>Доставка</td>
+                              <td>Итого</td>
+                            </tr>
+                          </thead>
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Ожидает подтверждения<img src="img/svg/hourglass.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Доставлен<img src="img/svg/mask.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Ожидает подтверждения<img src="img/svg/hourglass.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Отменен
+                                <svg class="icon icon-close ">
+                                  <use xlink:href="img/svg/sprite.svg#close"></use>
+                                </svg></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                        </table>
+                      </div>
+                    </div>
+                    <!-- +e.content-->
+                    <div class="tabs-po__content">
+                      <div class="tabs-po__date-block date-picker-block-js">
+                        <div class="flex-row flex-row--small align-items-center">
+                          <div class="col-sm-auto">
+                            <div class="h4 strong pr-3">Даты: </div>
+                          </div>
+                          <div class="col-sm-auto col-6">
+                            <div class="input-wrap-date form-group"><span>C</span>
+                              <input class="form-control form-wrap__input startDate" type="text">
+                            </div>
+                          </div>
+                          <div class="col-sm-auto col-6">
+                            <div class="input-wrap-date form-group"><span>По</span>
+                              <input class="form-control form-wrap__input endDate" type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs-po__table-wrap">
+                        <table class="table-history">
+                          <thead>
+                            <tr class="table-history__head">
+                              <td>№ заказа</td>
+                              <td>Дата заказа</td>
+                              <td>Статус заказа</td>
+                              <td>Сумма</td>
+                              <td>Скидка</td>
+                              <td>Доставка</td>
+                              <td>Итого</td>
+                            </tr>
+                          </thead>
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Ожидает подтверждения<img src="img/svg/hourglass.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Доставлен<img src="img/svg/mask.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Ожидает подтверждения<img src="img/svg/hourglass.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Отменен
+                                <svg class="icon icon-close ">
+                                  <use xlink:href="img/svg/sprite.svg#close"></use>
+                                </svg></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                        </table>
+                      </div>
+                    </div>
+                    <!-- +e.content-->
+                    <div class="tabs-po__content">
+                      <div class="tabs-po__date-block date-picker-block-js">
+                        <div class="flex-row flex-row--small align-items-center">
+                          <div class="col-sm-auto">
+                            <div class="h4 strong pr-3">Даты: </div>
+                          </div>
+                          <div class="col-sm-auto col-6">
+                            <div class="input-wrap-date form-group"><span>C</span>
+                              <input class="form-control form-wrap__input startDate" type="text">
+                            </div>
+                          </div>
+                          <div class="col-sm-auto col-6">
+                            <div class="input-wrap-date form-group"><span>По</span>
+                              <input class="form-control form-wrap__input endDate" type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs-po__table-wrap">
+                        <table class="table-history">
+                          <thead>
+                            <tr class="table-history__head">
+                              <td>№ заказа</td>
+                              <td>Дата заказа</td>
+                              <td>Статус заказа</td>
+                              <td>Сумма</td>
+                              <td>Скидка</td>
+                              <td>Доставка</td>
+                              <td>Итого</td>
+                            </tr>
+                          </thead>
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Ожидает подтверждения<img src="img/svg/hourglass.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Доставлен<img src="img/svg/mask.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Ожидает подтверждения<img src="img/svg/hourglass.svg" alt=""></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                          <tr class="table-history__tr table-history__tr--js">
+                            <td data-title="№ заказа">4433</td>
+                            <td data-title="Дата заказа">21.02.2018</td>
+                            <td data-title="Статус заказа"><span>Отменен
+                                <svg class="icon icon-close ">
+                                  <use xlink:href="img/svg/sprite.svg#close"></use>
+                                </svg></span>
+                            </td>
+                            <td data-title="Сумма">33 388.53 ₽</td>
+                            <td data-title="Скидка">0.00%</td>
+                            <td data-title="Доставка">300 ₽</td>
+                            <td data-title="Итого">33 688.53 ₽</td>
+                          </tr>
+                          <!-- +e.TR.tr-->
+                          <tr class="table-history__toggle">
+                            <td colspan="7"> 
+                              <div class="table-history__wrap">
+                                <div class="table-history__inner-block table-history__inner-block--js">
+                                  <table>
+                                    <thead>
+                                      <tr>
+                                        <td>Наименование</td>
+                                        <td>Артикул</td>
+                                        <td>Кол-во</td>
+                                        <td>Цена за шт.</td>
+                                        <td>Скидка</td>
+                                        <td>Цена со скидкой</td>
+                                        <td>Итого</td>
+                                      </tr>
+                                    </thead>
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                    <tr>
+                                      <td data-title="Наименование"><a class="text-body" href="#">Аккумуляторные листовые ножницы по металлу Makita gsc 12v-13</a></td>
+                                      <td data-title="Артикул">KW00000500</td>
+                                      <td data-title="Кол-во">1</td>
+                                      <td data-title="Цена за шт.">13 688.53 ₽</td>
+                                      <td data-title="Скидка">0.00%</td>
+                                      <td data-title="Цена со скидкой">13 688.53 ₽</td>
+                                      <td data-title="Итого">13 688.53 ₽</td>
+                                    </tr>
+                                    <!-- tr-->
+                                  </table>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <!-- +e.TR.toggle-->
+                        </table>
+                      </div>
+                    </div>
+                    <!-- +e.content-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .main-col.col-lg-9-->
+          </div>
+        </div>
+        <div class="po-foot bg-light-2">
+          <div class="container">
+            <div class="po-foot__block">
+              <div class="po-foot__block-inner">
+                <div class="flex-row">
+                  <div class="col-sm-auto">
+                    <div class="po-foot__img-wrap"><img class="res-i" src="img/manager.jpg" alt="">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="smallest text-gray">Ваш персональный менеджер</div>
+                    <div class="h2 strong">Андрей Васильев</div>
+                    <div>
+                      <div class="small">
+                        Телефон:  <a href="tel:495530-70-07">495 530-70-07</a></div>
+                      <div class="small">Почта: <a class="text-body" href="mailto:manager@gmail.com">manager@gmail.com</a></div>
+                    </div><a class="po-foot__btn btn btn-secondary" href="#">Отправить сообщение</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer_top">
+            <div class="row">
+              <div class="col-md-4 col-sm-6 hidden-xs">
+                <div class="footer_col">
+                  <div class="footer_col__header">Комплектующие BOSH</div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-4 col-sm-6 hidden-xs">
+                <div class="footer_col">
+                  <div class="footer_col__header">Информация</div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Беспроводной инструмент</a></div>
+                  <div class="footer_col__item"><a class="link-secondary" href="javascript:void(0);">Работа по дереву</a></div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-12">
+                <div class="footer_col">
+                  <div class="footer_col__header">Связаться с нами</div>
+                  <div class="footer_col__text base-text">
+                    <p>Мы с нетерпением ждем вашего запроса!</p><a class="link-secondary footer_col__phone" href="tel:8800505000">8 (800) 50-5000</a>
+                    <p>Официальные сообщества</p>
+                  </div>
+                  <div class="footer_social">
+                    <div class="footer_social__item"><a href="javascript:void(0);"><img src="images/vk.png" alt=""></a></div>
+                    <div class="footer_social__item"><a href="javascript:void(0);"><img src="images/fb.png" alt=""></a></div>
+                    <div class="footer_social__item"><a href="javascript:void(0);"><img src="images/twitter.png" alt=""></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer_bottom">
+            <div class="base-text"><span>
+                © 2015-2017. "Интернет-магазин комплектующих для электроинструментов BOSH, продажа запчастей BOSH" Все
+                права защищены.</span><a class="link-primary" href="javascript:void(0);">Политика конфиденциальности</a><a class="btn-secondary btn-small js-to-top" href="javascript:void(0);">Наверх<img src="images/to-top.png" alt=""></a></div>
+          </div>
+        </div>
+      </footer>
+      <!-- добави модалку  Обратный звонок-->
+      <div class="modal" id="modal-call">
+        <div class="modal-dialog">
+          <div class="modal-content"><img class="modal-close" src="images/close-blue.svg" data-dismiss="modal">
+            <div class="modal-name">Обратный звонок </div>
+            <!-- <a class="link-secondary modal-go-to" href="javascript:void(0);">-->
+            <!-- Создать личный кабинет-->
+            <!-- </a>-->
+            <form class="validated-form" id="reg-formalin">
+              <p id="error1" style="color: red;"></p>
+              <p id="error2" style="color: red;"></p>
+              <div class="input-box">
+                <label>Ваше имя</label>
+                <input type="text" name="regname" placeholder="Имя">
+              </div>
+              <div class="input-box">
+                <label>Номер телефона</label>
+                <input type="tel" name="regphone" placeholder="Телефон">
+              </div>
+              <div class="modal-captcha"><img src="images/recaptcha.gif"></div>
+              <input type="hidden" value="Registration" name="action">
+              <input class="btn-form btn btn-large btn-primary btn-block" type="submit" value="Заказать обратный звонок  ">
+              <!--
+              <div class="modal-grey-text">
+              Нажимая на кнопку "Зарегистрироваться", я даю согласие на обработку персональных данных
+              </div>
+              -->
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- / добави модалку   Обратный звонок-->
+      <div class="top-line"></div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/costume.js"></script>
+    <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
+    <script src="libs/popper.min.js"></script>
+    <script src="libs/bootstrap/util.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/parsleyjs/parsley.min.js"></script>
+    <script src="libs/parsleyjs/i18n/ru.js"></script>
+    <script src="libs/parsleyjs/i18n/ru.extra.js"></script>
+    <script src="libs/gijgo-master/js/gijgo.js"></script>
+    <script src="libs/gijgo-master/js/messages/messages.ru-ru.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>

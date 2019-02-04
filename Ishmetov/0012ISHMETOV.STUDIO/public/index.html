@@ -12,7 +12,48 @@
     <meta name="theme-color" content="#4700c4">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
-  <body>
+  <body><!--[if !IE]-->
+    <style>
+      body {overflow: hidden;
+      			position: absolute;
+      			width: 100%;
+      			height: 100vh;
+      			left: 0;
+      			top: 0;
+      			z-index: 999; }  
+    </style>
+    <div class="ie-block section">
+      <div class="container">
+        <div class="ie-block__top"><a class="ie-block__logo" href="/">ISHMETOV.STUDIO</a>
+        </div>
+        <div class="ie-block__body">
+          <div class="ie-block__title">Внимание!
+          </div>
+          <div class="ie-block__sub-title">Вы используете устаревший браузер Internet Explorer.
+          </div>
+          <div class="ie-block__text">
+            Данный сайт построен на современных технологиях и не поддерживает Internet Explorer.<br/>Настоятельно Вам рекомендуем выбрать из списка ниже и установить любой из современных браузеров.
+            <br/>Это бесплатно и займет всего несколько минут.
+          </div>
+          <div class="row">
+            <div class="col-auto"><a href="https://www.google.com/intl/ru_ALL/chrome/">
+                <div class="ie-block__img-wrap"> <img src="ie/google.png" alt=""/>
+                </div>
+                <div class="text">Google Chrome</div></a></div>
+            <div class="col-auto"><a href="https://www.mozilla.org/ru/firefox/new/">
+                <div class="ie-block__img-wrap"> <img src="ie/yandex.png" alt=""/>
+                </div>
+                <div class="text">Яндекс.Браузер</div></a></div>
+            <div class="col-auto"><a href="https://browser.yandex.by/">
+                <div class="ie-block__img-wrap"> <img src="ie/mozila.png" alt=""/>
+                </div>
+                <div class="text">Mozilla Firefox</div></a></div>
+          </div>
+        </div>
+        <div class="ie-block__footer">После установки современного браузера,<br/>возвращайтесь на наш сайт! 
+        </div>
+      </div>
+    </div><!--[endif]-->
     <div class="main-wrapper">
       <div class="preloader">
         <div class="preloader__item">I
