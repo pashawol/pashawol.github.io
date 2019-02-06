@@ -96,29 +96,38 @@ jQuery(document).ready(function ($) {
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// карусель
-	$('.s-gal__slider--js').slick({
+	$('.card-head__slider-big').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		dots: true,
+		dots: false,
 		speed: 450,
-		infinite: true,
-		loop: true,
-		arrows: true,
-		mobileFirst: true,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
-		responsive: [ 
-			{
-				breakpoint: 992,
-				settings: {
-					slidesToShow: 2,
-				}
-			} 
-		]
+		asNavFor: '.card-head__slider-small',
+		infinite: false,
+		loop: false,
+		arrows: false,
+
+	});
+	$('.card-head__slider-small').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 450,
+		infinite: false,
+		loop: false,
+		arrows: false,
+
+		// prevArrow: arrr2,
+		// nextArrow: arrl2,
+		// centerMode: true,
+
+		focusOnSelect: true,
+		asNavFor: '.card-head__slider-big',
+
+		// swipeToSlide: false
 	});
 
 		// срабытывает при lazy  загрузке изображений. Ставит картинки  фоном блок
-$('.s-gal__slider--js')
+$('.card-head__slider-small, .card-head__slider-big ')
 .on('lazyLoaded', function (event, slick, image, imageSource) {
 	image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 });

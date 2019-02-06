@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <meta name="description" content="о чем страница">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
+    <!-- Custom Browsers Color-->
+    <meta name="theme-color" content="#343639">
+    <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/slick/slick.css">
+    <link rel="stylesheet" href="libs/fullPage.js-master/fullpage.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+  </head>
+  <body>
+    
+    <!--[if !IE]-->
+    <style>
+      .ie-block {
+        display: none;
+      }
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        body {
+          overflow: hidden;
+          position: absolute;
+          width: 100%;
+          height: 100vh;
+          left: 0;
+          top: 0;
+          z-index: 999;
+        }
+
+        .ie-block {
+          text-align: center !important;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow-y: auto;
+          z-index: 10000;
+          background-color: #fff;
+          text-align: center;
+          color: #231f20;
+          font-family: "Arial";
+        }
+
+        .ie-block__top {
+          text-align: center;
+        }
+
+        .ie-block__logo {
+          display: inline-block;
+          text-decoration: none !important;
+          font-family: "PF Din Text Cond Pro";
+          font-size: 23px;
+          font-weight: 700;
+          line-height: 1;
+          text-transform: uppercase;
+          letter-spacing: 4.32px;
+          text-align: center;
+        }
+
+        .ie-block__title {
+          color: #231f20;
+          font-size: 52px;
+          font-weight: 400;
+          line-height: 62.52px;
+        }
+
+        .ie-block__sub-title {
+          color: #676767;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 62.52px;
+          margin-bottom: 2rem;
+        }
+
+        .ie-block__text {
+          font-size: 16px;
+          margin-bottom: 2rem;
+        }
+
+        .ie-block .row {
+          -webkit-box-pack: center;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+        }
+
+        .ie-block .row a {
+          display: block;
+          color: #1d67a4 !important;
+        }
+
+        .ie-block .row .text {
+          margin-top: 1rem;
+        }
+
+        .ie-block__img-wrap {
+          width: 80px;
+          height: 80px;
+          display: inline-block;
+          margin-bottom: 1rem;
+        }
+
+        .ie-block__img-wrap img {
+          position: absolute;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+              -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+        }
+
+        .ie-block__top {
+          padding-bottom: 40px;
+        }
+
+        .ie-block__footer {
+          color: #9e9e9e;
+          font-size: 22px;
+          padding-top: 40px;
+        }
+
+        .ie-block .container {
+          height: 100%;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+        }
+      }
+    </style>
+     
+    <div class="ie-block section">
+      <div class="container">
+        <div class="ie-block__top"><a href="/"><img class="res-i" src="ie/logo.png" alt=""/></a>
+        </div>
+        <div class="ie-block__body">
+          <div class="ie-block__title">Внимание!
+          </div>
+          <div class="ie-block__sub-title">Вы используете устаревший браузер Internet Explorer.
+          </div>
+          <div class="ie-block__text">
+            Данный сайт построен на современных технологиях и не поддерживает Internet Explorer.<br/>Настоятельно Вам рекомендуем выбрать из списка ниже и установить любой из современных браузеров.
+            <br/>Это бесплатно и займет всего несколько минут.
+          </div>
+          <div class="row">
+            <div class="col-auto"><a href="https://www.google.com/intl/ru_ALL/chrome/">
+                <div class="ie-block__img-wrap"> <img src="ie/google.png" alt=""/>
+                </div>
+                <div class="text">Google Chrome</div></a></div>
+            <div class="col-auto"><a href="https://www.mozilla.org/ru/firefox/new/">
+                <div class="ie-block__img-wrap"> <img src="ie/yandex.png" alt=""/>
+                </div>
+                <div class="text">Яндекс.Браузер</div></a></div>
+            <div class="col-auto"><a href="https://browser.yandex.by/">
+                <div class="ie-block__img-wrap"> <img src="ie/mozila.png" alt=""/>
+                </div>
+                <div class="text">Mozilla Firefox</div></a></div>
+          </div>
+        </div>
+        <div class="ie-block__footer">После установки современного браузера,<br/>возвращайтесь на наш сайт! 
+        </div>
+      </div>
+    </div><!--[endif]-->
+     
+  </body>
+</html>
