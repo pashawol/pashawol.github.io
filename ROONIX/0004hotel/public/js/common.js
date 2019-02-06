@@ -4,24 +4,7 @@ jQuery(document).ready(function ($) {
 	svg4everybody({});
 	// Custom JS
 
-
-	var url = document.location.href;
-	$.each($(".top-nav__nav a "), function () {
-
-		if (this.href == url) {
-			if ($(this).hasClass("top-nav__link") == true) {
-
-				$(this).addClass('top-nav__link-active');
-			}
-			if ($(this).hasClass("footer__link") == true) {
-
-				$(this).addClass('footer__link-active');
-			}
-
-		};
-
-	});
-
+ 
 	// закрыть/открыть мобильное меню
 	var toggMnu = $(".toggle-menu-mobile--js").click(function () {
 
@@ -85,7 +68,7 @@ jQuery(document).ready(function ($) {
 		// конец добавил
 	}
 
-	if (window.matchMedia("(min-width: 992px)").matches) {
+	if (window.matchMedia("(min-width: 576px)").matches) {
 
 		$(".toggle-menu-mobile--js").removeClass("on");
 		// $("body").removeClass("fixed");
@@ -105,60 +88,39 @@ jQuery(document).ready(function ($) {
 
 	heightses();
 
+ 
 
 
-	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
-
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
-
-	//        return false;
-	//    });
-
-
-	// табы  . 
-	function tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
-
-		});
-	};
-	tabscostume('tabs');
-
-
-
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<svg   width="44" height="82" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 44 82"><defs><path d="M155,3381.00403l-38.00407,-38.00391l38.00407,-38.00418" id="Path-0"/><clipPath id="ClipPath1027"><use xlink:href="#Path-0" fill="#ffffff"/></clipPath></defs><desc>Generated with Avocode.</desc><g transform="matrix(1,0,0,1,-114,-3302)"><g><title>Прямоугольник 4</title><use xlink:href="#Path-0" fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-dasharray="" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#714195" stroke-miterlimit="50" stroke-width="10" clip-path="url(&quot;#ClipPath1027&quot;)"/></g></g></svg>';
 
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
 	// карусель
-	$('.s-team__slider').slick({
-		slidesToShow: 3,
+	$('.s-gal__slider--js').slick({
+		slidesToShow: 1,
 		slidesToScroll: 1,
-		dots: false,
-		speed: 600,
+		dots: true,
+		speed: 450,
 		infinite: true,
 		loop: true,
 		arrows: true,
 		mobileFirst: true,
-		// centerMode: true,
-		// focusOnSelect: true ,
-		// variableWidth: true,
 		prevArrow: arrr2,
 		nextArrow: arrl2,
+		responsive: [ 
+			{
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+				}
+			} 
+		]
 	});
 
-	$('.s-gal__slider,'+
-	' .s-project__slider--js ,'+
-	' .slider-for ,'+
-	' .slider-for2 ')
-.on('lazyLoaded', function(event, slick, image, imageSource){
-	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+		// срабытывает при lazy  загрузке изображений. Ставит картинки  фоном блок
+$('.s-gal__slider--js')
+.on('lazyLoaded', function (event, slick, image, imageSource) {
+	image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 });
 	// slider
 	// var swiper4 = new Swiper('.color-slider', {
@@ -223,32 +185,7 @@ jQuery(document).ready(function ($) {
 		});
 	})
 	// /modal галерея
-
-	// form
-	$("form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: 'action.php', //Change
-			data: th.serialize()
-		}).success(function () {
-			$.magnificPopup.close();
-			$.magnificPopup.open({
-				items: {
-					src: '#thanks', // can be a HTML string, jQuery object, or CSS selector
-					type: 'inline'
-				}
-			})
-			// window.location.replace("/thanks.html");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-			}, 4000);
-		});
-		return false;
-	});
-	// /form
+ 
 
 	// mask for input
 	var customOptions = {
@@ -264,150 +201,55 @@ jQuery(document).ready(function ($) {
 	$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").mask("+7(000)000-00-00", customOptions);
 
 	// / mask for input
+  
 
-
-	//Replace all SVG images with inline SVG
-	$('img.img-svg').each(function () {
-		var $img = $(this);
-		var imgClass = $img.attr('class');
-		var imgURL = $img.attr('src');
-
-		$.get(imgURL, function (data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = $(data).find('svg');
-
-			// Add replaced image's classes to the new SVG
-			if (typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass + ' replaced-svg');
-			}
-
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a');
-
-			// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-			}
-
-
-			// Replace image with new SVG
-			$img.replaceWith($svg);
-
-		}, 'xml');
-
-	});
-
-
-	// кастомный инпут файл
-
-	var file = $(".add-file input[type=file]");
-	file.change(function () {
-		var filename = $(this).val().replace(/.*\\/, "");
-		var name = $(".add-file__filename  ");
-		name.text(filename);
-
-	});
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
-
-	$(".pretty-embed__bg").each(function () {
-		// загрузка фона видео
-		$(this).css("background-image", 'url(http://img.youtube.com/vi/' + $(this).data("src") + '/0.jpg)')
-		// включение видео при клике по блоку
-		$(this).click(function () {
-			$(this).removeClass("on").next()
-				.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
-		})
+	$(".s-nomer__col").hover(function(){
+		$(this).find(".s-nomer__toogle-block").toggle();
+		$(this).find(".s-nomer__caption--js").toggleClass('active');
 	})
 
-	// убираем пробелы в телефоне
-	// убираем пробелы в телефоне
-	$('[href^="tel:"]').each(function () {
-		var str = $(this).attr('href');
-		$(this).attr('href', str.replace(/\s/g, ''));
-	})
-	// $(".wow-wrap").each(function () {
-	// var wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
 
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
+	if ( $("div").is("#map1")) {
+		$.getScript('//api-maps.yandex.ru/2.1/?lang=ru_RU', function(){
+				// alert('script loaded');
+		
+			ymaps.ready(function () {
+			var myMap = new ymaps.Map('map1', {
+					center: [44.945660074568785,37.30175149999996],
+					zoom: 17,
+					behaviors: ['drag'],
+	
+					// controls: ["zoomControl", "fullscreenControl"]
+				}, {
+					searchControlProvider: 'yandex#search'
+				}),
+	
+	
+				myPlacemark = new ymaps.Placemark([44.945660074568785,37.30175149999996], {
+					hintContent: 'г. Новосибирск,  Большевистская 101, оф. 902',
+					balloonContent: 'г. Новосибирск,  Большевистская 101, оф. 902 '
+				}, {
+					// Опции.
+					// Необходимо указать данный тип макета.
+					iconLayout: 'default#image',
+					// Своё изображение иконки метки.
+					iconImageHref: $("#map1").data("img"),
+					// Размеры метки.
+					iconImageSize: [29, 40],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-42, -90]
+				})
+	
+			myMap.geoObjects
+				.add(myPlacemark)
+	
+	
+	
+		});
+	}); 
 
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	// });
-	// });
-
-
+}
 });
 
-
-// Для лэзи загрузки
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-  let active = false;
-
-  const lazyLoad = function() {
-    if (active === false) {
-      active = true;
-
-      setTimeout(function() {
-        lazyImages.forEach(function(lazyImage) {
-          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-            lazyImage.src = lazyImage.dataset.src;
-            lazyImage.srcset = lazyImage.dataset.srcset;
-            lazyImage.classList.remove("lazy");
-
-            lazyImages = lazyImages.filter(function(image) {
-              return image !== lazyImage;
-            });
-
-            if (lazyImages.length === 0) {
-              document.removeEventListener("scroll", lazyLoad);
-              window.removeEventListener("resize", lazyLoad);
-							window.removeEventListener("orientationchange", lazyLoad);
-							window.addEventListener("DOMContentLoaded", lazyLoad);
-            }
-          }
-        });
-
-        active = false;
-      }, 200);
-    }
-  };
-
-  document.addEventListener("scroll", lazyLoad);
-  window.addEventListener("resize", lazyLoad);
-  window.addEventListener("orientationchange", lazyLoad);
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          lazyBackgroundObserver.unobserve(entry.target);
-        }
-      });
-    });
-
-    lazyBackgrounds.forEach(function(lazyBackground) {
-      lazyBackgroundObserver.observe(lazyBackground);
-    });
-  }
-});
+ 
