@@ -1023,6 +1023,9 @@ jQuery(document).ready(function ($) {
 	
 // 	// window.animateSVGPath ( { path, selector: '.animate-js', offsetX: 100, offsetY: 100 } );
 // 	window.animateSVGPath ( { path, selector: '.animate-js', paddingVertical: 100, paddingHorizontal: 100 } );
+$('.s-price-servise__item').hover(function(){
+	$(this).find(".s-price-servise__text").slideToggle(100);
+})
 });
 
 
