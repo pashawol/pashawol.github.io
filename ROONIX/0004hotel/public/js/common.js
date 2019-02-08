@@ -126,6 +126,39 @@ jQuery(document).ready(function ($) {
 		// swipeToSlide: false
 	});
 
+
+	// var icon = '<svg class="icon icon-arr-right "><use  xlink:href="img/svg/sprite.svg#arr-right"></use> </svg>',
+	// arrr2 = (' <div class="l">' + icon),
+	// arrl2 = (' <div class="r">' + icon);
+	// Добавил
+		// карусель
+		$('.s-gal__slider--js').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			dots: false,
+			speed: 450,
+			infinite: true,
+			loop: true,
+			arrows: true,
+			mobileFirst: true,
+			prevArrow: arrr2,
+			nextArrow: arrl2,
+			responsive: [ 
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2,
+					}
+				} 
+			]
+		});
+
+			// срабытывает при lazy  загрузке изображений. Ставит картинки  фоном блок
+	$('.s-gal__slider--js')
+	.on('lazyLoaded', function (event, slick, image, imageSource) {
+		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+	});
+
 		// срабытывает при lazy  загрузке изображений. Ставит картинки  фоном блок
 $('.card-head__slider-small, .card-head__slider-big ')
 .on('lazyLoaded', function (event, slick, image, imageSource) {
@@ -259,6 +292,20 @@ $('.card-head__slider-small, .card-head__slider-big ')
 	}); 
 
 }
+
+// листалка по стр
+	$(" .top-nav__link").click(function () {
+				 var elementClick = $(this).attr("href");
+				//  if ($('div').is(elementClick) == true){
+	       var destination = $(elementClick).offset().top - 80;
+
+					 
+					 $('html, body').animate({ scrollTop: destination }, 1100);
+					 return false;
+					// }
+
+	   });
+
 });
 
  

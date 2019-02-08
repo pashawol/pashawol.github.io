@@ -92,14 +92,14 @@
                 </div>
                 <!-- /правки//- +search()
                 -->
-                <div class="col-auto">
+                <!-- 08.02 добавил класс -->
+                <div class="col-auto d-none d-lg-block">
                   <div class="top_line__link top_line__link--work text-body"> <a class="link-body d-block link-body" href="#modal-po"> 
-                      <div class="d-xl-none">
-                        <svg class="icon icon-user ">
-                          <use xlink:href="img/svg/sprite.svg#user"></use>
-                        </svg>
-                      </div>
-                      <div class="d-none d-xl-inline">Работа на своем авто</div></a>
+                      <!-- 08.02 убрал-->
+                      <!-- .d-xl-none+icon("user")
+                      -->
+                      <!-- 08.02 убрал классы-->
+                      <div>Работа на своем авто</div></a>
                   </div>
                 </div>
                 <div class="col-auto d-none d-sm-block"><a class="top_line__btn popup-with-move-anim" href="#modal-pay"> <img src="img/i-car.png" alt=""/>Сдать свой авто</a>
@@ -202,7 +202,8 @@
                               </select>
                             </div>
                           </div>
-                          <div class="col-auto">
+                          <!-- 08.02 изменил классы-->
+                          <div class="col-xl-auto col">
                             <div class="form-group m-0">
                               <select class="s-catalog-filter__select form-control form-control--auto">
                                 <option class="d-none" value="" selected="selected" disabled="disabled">Автомобиль</option>
@@ -229,7 +230,8 @@
                               </select>
                             </div>
                           </div>
-                          <div class="col-auto d-sm-none d-lg-block">
+                          <!-- 08.02 изменил классы-->
+                          <div class="col-xl-auto col">
                             <div class="form-group form-group--kpp m-0">
                               <select class="s-catalog-filter__select form-control">
                                 <option class="d-none" value="" selected="selected" disabled="disabled">КПП</option>
