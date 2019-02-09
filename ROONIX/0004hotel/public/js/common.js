@@ -91,7 +91,7 @@ jQuery(document).ready(function ($) {
  
 
 
-	var icon = '<svg   width="44" height="82" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 44 82"><defs><path d="M155,3381.00403l-38.00407,-38.00391l38.00407,-38.00418" id="Path-0"/><clipPath id="ClipPath1027"><use xlink:href="#Path-0" fill="#ffffff"/></clipPath></defs><desc>Generated with Avocode.</desc><g transform="matrix(1,0,0,1,-114,-3302)"><g><title>Прямоугольник 4</title><use xlink:href="#Path-0" fill-opacity="0" fill="#ffffff" stroke-dashoffset="0" stroke-dasharray="" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#714195" stroke-miterlimit="50" stroke-width="10" clip-path="url(&quot;#ClipPath1027&quot;)"/></g></g></svg>';
+	var icon = '<img src="img/arrow-left.png" alt=""/>';
 
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
@@ -135,8 +135,8 @@ jQuery(document).ready(function ($) {
 		$('.s-gal__slider--js').slick({
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			dots: false,
-			speed: 450,
+			dots: true,
+						speed: 450,
 			infinite: true,
 			loop: true,
 			arrows: true,
