@@ -14,58 +14,28 @@
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-      </div>
-      <div class="menu-mobile menu-mobile--js d-lg-none">
-        <div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-        </div>
-        <div class="menu-mobile__inner">
-          <ul class="menu-mobile__nav">
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Продукция </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Услуги  </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Акции </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> О компании  </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Контакты </a>
-            </li>
-          </ul>
-          <div class="text-right"></div>
-        </div>
-      </div>
-      <!--  мобильное меню-->
       <!-- start HEADER.header-->
       <header class="header">
         <!-- start .top-line-->
         <div class="top-line">
           <div class="container">
             <div class="row">
-              <div class="col-auto">
+              <div class="col-xl-auto col">
                 <div class="top-line__logo"><img class="res-i" src="img/logo.png" alt=""/>
                 </div>
               </div>
-              <div class="col">
+              <div class="col d-none d-xl-block">
                 <div class="top-line__text">Узкопрофильный медицинский центр диагностики и&nbsp;лечения заболеваний молочной железы в&nbsp;Харькове.
                 </div>
               </div>
-              <div class="col-auto">
+              <div class="col-auto d-none d-md-block">
                 <addr class="top-line__addr">
                   <svg class="icon icon-mark ">
                     <use xlink:href="img/svg/sprite.svg#mark"></use>
                   </svg>г. Харьков. Ул. Пушкинская 14-А
                 </addr>
               </div>
-              <div class="col-auto">
+              <div class="col-auto d-none d-lg-block">
                 <div class="top-line__working-hours">Пн-пт: 09.00 - 19.00<br/>Суббота: 09.00 - 16.00<br/><span class="text-primary">Воскресенье: выходной.</span>
                 </div>
               </div>
@@ -83,23 +53,23 @@
               </div>
               <h1>Пройдите консультацию у&nbsp;наших внимательных маммологов. Точная и&nbsp;быстрая диагностика.</h1>
               <div class="row">
-                  <div class="header-block__col col-6">
+                  <div class="header-block__col col-md-6">
                     <div class="header-block__item">
-                      <div class="header-block__img-wrap"><img class="res-i" src="img/head-i-1.png" alt=""/>
+                      <div class="header-block__img-wrap"><img class="res-i lazy" src="#" data-srcset="img/head-i-1.png" alt=""/>
                       </div>
                       <p>Для диагностики используем редкое оборудование последнего поколения.</p>
                     </div>
                   </div>
-                  <div class="header-block__col col-6">
+                  <div class="header-block__col col-md-6">
                     <div class="header-block__item">
-                      <div class="header-block__img-wrap"><img class="res-i" src="img/head-i-2.png" alt=""/>
+                      <div class="header-block__img-wrap"><img class="res-i lazy" src="#" data-srcset="img/head-i-2.png" alt=""/>
                       </div>
                       <p>Хирургическое вмешательство используем только тогда, когда  без этого уже не обойтись.</p>
                     </div>
                   </div>
-                  <div class="header-block__col col-6">
+                  <div class="header-block__col col-md-6">
                     <div class="header-block__item">
-                      <div class="header-block__img-wrap"><img class="res-i" src="img/head-i-3.png" alt=""/>
+                      <div class="header-block__img-wrap"><img class="res-i lazy" src="#" data-srcset="img/head-i-3.png" alt=""/>
                       </div>
                       <p>Лечение назначаем по современным европейским стандартам.</p>
                     </div>
@@ -107,18 +77,25 @@
               </div>
             </div>
             <div class="row align-items-center">
-              <div class="col-6"><a class="header-block__btn" href="#">Пройти консультацию</a>
+              <div class="col-lg-6"><a class="header-block__btn" href="#">Пройти консультацию</a>
               </div>
-              <div class="col-6">
-                <div class="header-block__slider-wrap">
-                  <div class="header-block__slider-wrap-head">
+              <div class="col-lg-6">
+                <div class="header-block__slider-wrap"> 
+                  <div class="header-block__counter">
+                    <div class="slideCount2"></div>
+                  </div>
+                  <div class="header-block__counter-text"> <span class="text-primary">Следующий отзыв  </span> 
+                    (
+                    <div class="slideCount"></div>)
+                    <div class="header-block__arrow-wrap">
+                    </div>
                   </div>
                   <div class="header-block__slider header-block__slider--js">
-                    <div class="header-block__slide"><img src="#" data-lazy="img/rew.jpg" alt=""/>
+                    <div class="header-block__slide text-center"><img class="res-i" src="#" data-lazy="img/rew.jpg" alt=""/>
                     </div>
-                    <div class="header-block__slide"><img src="#" data-lazy="img/rew.jpg" alt=""/>
+                    <div class="header-block__slide text-center"><img class="res-i" src="#" data-lazy="img/rew.jpg" alt=""/>
                     </div>
-                    <div class="header-block__slide"><img src="#" data-lazy="img/rew.jpg" alt=""/>
+                    <div class="header-block__slide text-center"><img class="res-i" src="#" data-lazy="img/rew.jpg" alt=""/>
                     </div>
                   </div>
                 </div>
@@ -130,62 +107,670 @@
       </header>
       <!-- end HEADER.header-->
       <!-- start s-look-->
-      <div class="s-look section" id="s-look">
+      <div class="s-look section lazy-background" id="s-look">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-look</h2>
+          <div class="s-look__text-block">
+            <div class="section-title">
+              <h2>Посмотрите, эти заболевания мы лечим чаще всего. Иногда за&nbsp;1&nbsp;день.</h2>
+            </div>
+            <div class="s-look__list">
+              <div class="s-look__list-item"><a class="s-look__link" href="#">Мастопатия</a>
+              </div>
+              <div class="s-look__list-item"><a class="s-look__link" href="#">Фиброаденома</a>
+              </div>
+              <div class="s-look__list-item"><a class="s-look__link" href="#">Киста</a>
+              </div>
+              <div class="s-look__list-item"><a class="s-look__link" href="#">Мастит</a>
+              </div>
+              <div class="s-look__list-item"><a class="s-look__link" href="#">Лактостаз</a>
+              </div>
+              <div class="s-look__list-item"><a class="s-look__link" href="#">Внутрипротоковая папиллома</a>
+              </div>
+              <div class="s-look__list-item"><a class="s-look__link" href="#">Липома</a>
+              </div>
+              <div class="s-look__list-item"><a class="s-look__link" href="#">Гинекомастия у мужчин</a>
+              </div>
+            </div>
           </div>
-          <div class="row"></div>
         </div>
       </div>
       <!-- end s-look-->
       <!-- start s-60-min-->
-      <div class="s-60-min section" id="s-60-min">
+      <div class="s-60-min section lazy-background" id="s-60-min">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-60-min</h2>
+            <h2>Удивительно,но потратив всего 60минут в&nbsp;год на&nbsp;общение с&nbsp;маммологом, вы&nbsp;можете спасти себе жизнь</h2>
+            <div class="section-title__text">Если вы&nbsp;всё ещё в&nbsp;этом сомневаетесь, то, возможно, просто не&nbsp;знаете эти страшные факты:
+            </div>
           </div>
-          <div class="row"></div>
+          <div class="row">
+                <div class="s-60-min__col col-lg-4 col-md-6">
+                  <div class="s-60-min__item">
+                    <div class="s-60-min__img-wrap"><img class="res-i lazy" src="#" data-srcset="img/60-min-i-1.png" alt=""/>
+                    </div>
+                    <p>Рак молочной железы далеко не всегда вызывает какие-либо жалобы и симптомы на ранних стадиях.</p>
+                  </div>
+                </div>
+                <!-- /+e.col.col-lg-4.col-md-6-->
+                <div class="s-60-min__col col-lg-4 col-md-6">
+                  <div class="s-60-min__item">
+                    <div class="s-60-min__img-wrap"><img class="res-i lazy" src="#" data-srcset="img/60-min-i-2.png" alt=""/>
+                    </div>
+                    <p>У большинства женщин с раком молочной железы не было в семье случаев этого заболевания</p>
+                  </div>
+                </div>
+                <!-- /+e.col.col-lg-4.col-md-6-->
+                <div class="s-60-min__col col-lg-4 col-md-6">
+                  <div class="s-60-min__item">
+                    <div class="s-60-min__img-wrap"><img class="res-i lazy" src="#" data-srcset="img/60-min-i-3.png" alt=""/>
+                    </div>
+                    <p>Около 30% заболевших раком груди моложе 30-35 лет</p>
+                  </div>
+                </div>
+                <!-- /+e.col.col-lg-4.col-md-6-->
+          </div>
+          <div class="s-60-min__text-block lazy-background">
+            <div class="s-60-min__text">Единственный способ ранней диагностики рака молочной железы&nbsp;&mdash; регулярные профосмотры.
+            </div><a class="s-60-min__btn" href="#">Исключить рак</a>
+          </div>
         </div>
       </div>
       <!-- end s-60-min-->
       <!-- start s-5-reasons-->
       <div class="s-5-reasons section" id="s-5-reasons">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-5-reasons</h2>
+        <div class="s-5-reasons__slider s-5-reasons__slider--js">
+          <div class="s-5-reasons__slide img-bg"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="s-5-reasons__text-block">
+                <div class="h5 text-primary">И, если вам это кажется недостаточным, то</div>
+                <div class="s-5-reasons__title h3">Есть 5&nbsp;причин прямо сейчас  присоединиться к&nbsp;17&nbsp;500&nbsp;женщин, которые доверили нам своё  здоровье
+                </div>
+                <div class="h5">1. Специализируемся исключительно на&nbsp;болезнях молочной железы уже 33&nbsp;года</div>
+                <p>Внедряем в&nbsp;украинскую медицинскую практику лучшие международные методы лечения и&nbsp;диагностики заболеваний.</p><a class="s-5-reasons__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+              </div>
+            </div>
           </div>
-          <div class="row"></div>
+          <div class="s-5-reasons__slide img-bg"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="s-5-reasons__text-block">
+                <div class="s-5-reasons__title h3">Есть 5&nbsp;причин прямо сейчас  присоединиться к&nbsp;17&nbsp;500&nbsp;женщин, которые доверили нам своё  здоровье
+                </div>
+                <div class="h5">2. Быстро и&nbsp;точно ставим диагноз, благодаря оборудованию последнего поколения</div>
+                <p> <small>Например, японский УЗИ аппарат ТОSHIВА экспертого класса помогает увидеть крошечные уплотнения от&nbsp;4-5мм. А&nbsp;c&nbsp;помощью итальянской автоматической биопсийной системы Biocut-M&nbsp;мы проводим процедуру взятия биопсии безболезненно и&nbsp;получаем высокое качество материала для гистологических исследований.</small></p><a class="s-5-reasons__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+              </div>
+            </div>
+          </div>
+          <div class="s-5-reasons__slide img-bg"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="s-5-reasons__text-block">
+                <div class="s-5-reasons__title h3">Есть 5&nbsp;причин прямо сейчас  присоединиться к&nbsp;17&nbsp;500&nbsp;женщин, которые доверили нам своё  здоровье
+                </div>
+                <div class="h5">3. Оказываем весь комплекс работ по&nbsp;диагностике и&nbsp;лечению молочных желез</div>
+                <p> <small>Кроме диагностического оборудования и&nbsp;возможности сдать необходимые анализы, у&nbsp;нас есть хирургический блок, где выполняются сложные операции. А&nbsp;ещё у&nbsp;нас можно проконсультироваться со&nbsp;смежными специалистами.</small></p><a class="s-5-reasons__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+              </div>
+            </div>
+          </div>
+          <div class="s-5-reasons__slide img-bg"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="s-5-reasons__text-block">
+                <div class="s-5-reasons__title h3">Есть 5&nbsp;причин прямо сейчас  присоединиться к&nbsp;17&nbsp;500&nbsp;женщин, которые доверили нам своё  здоровье
+                </div>
+                <div class="h5">4. Выявляем&nbsp;99% злокачественных опухолей на&nbsp;самых ранних стадиях</div>
+                <p>Мы&nbsp;стремимся превратить нынешнюю&nbsp;NN% смертности от&nbsp;рака молочной железы в&nbsp;NN% выживаемости.</p><a class="s-5-reasons__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+              </div>
+            </div>
+          </div>
+          <div class="s-5-reasons__slide img-bg"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="s-5-reasons__text-block">
+                <div class="h5 text-primary">И, если вам это кажется недостаточным, то</div>
+                <div class="s-5-reasons__title h3">Есть 5&nbsp;причин прямо сейчас  присоединиться к&nbsp;17&nbsp;500&nbsp;женщин, которые доверили нам своё  здоровье
+                </div>
+                <div class="h5">5. Экононим деньги пациентов, избавив  	их&nbsp;от&nbsp;ненужных анализов</div>
+                <p>
+                  Если наш врач назначает дополнительные исследования, он указывает в карте пациента  <strong>вескую причину.</strong>
+                  Главрач лично каждую неделю делает ревизии амбулаторных карт.
+                </p><a class="s-5-reasons__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="s-5-reasons__container container">
+          <div class="s-5-reasons__dots-wrap">
+          </div>
+          <div class="slider-nav-wrap d-none d-md-block">
+            <div class="slider-nav slider-nav--js">
+              <div class="slider-nav__slide">
+                <div class="slider-nav__item">
+                  <div class="slider-nav__img-wrap"><img src="" data-lazy="img/slide-i-1.png" alt=""/>
+                  </div>
+                  <div class="slider-nav__text">Узкая специализация на болезнях молочной железы
+                  </div>
+                </div>
+              </div>
+              <!-- /+e.slide-->
+              <div class="slider-nav__slide">
+                <div class="slider-nav__item">
+                  <div class="slider-nav__img-wrap"><img src="" data-lazy="img/slide-i-2.png" alt=""/>
+                  </div>
+                  <div class="slider-nav__text">Быстрая и точная диагностика
+                  </div>
+                </div>
+              </div>
+              <!-- /+e.slide-->
+              <div class="slider-nav__slide">
+                <div class="slider-nav__item">
+                  <div class="slider-nav__img-wrap"><img src="" data-lazy="img/slide-i-3.png" alt=""/>
+                  </div>
+                  <div class="slider-nav__text">Лечение заболеваний молочной железы в одном месте
+                  </div>
+                </div>
+              </div>
+              <!-- /+e.slide-->
+              <div class="slider-nav__slide">
+                <div class="slider-nav__item">
+                  <div class="slider-nav__img-wrap"><img src="" data-lazy="img/slide-i-4.png" alt=""/>
+                  </div>
+                  <div class="slider-nav__text">Обнаружение рака груди на самых ранних стадиях
+                  </div>
+                </div>
+              </div>
+              <!-- /+e.slide-->
+              <div class="slider-nav__slide">
+                <div class="slider-nav__item">
+                  <div class="slider-nav__img-wrap"><img src="" data-lazy="img/slide-i-5.png" alt=""/>
+                  </div>
+                  <div class="slider-nav__text">Защита от ненужных анализов
+                  </div>
+                </div>
+              </div>
+              <!-- /+e.slide-->
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-5-reasons-->
       <!-- start s-servises-->
       <div class="s-servises section" id="s-servises">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-servises</h2>
+        <div class="s-servises__slider s-servises__slider--js">
+          <div class="s-servises__slide img-bg" data-slide="0"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="s-servises__text-block">
+                    <div class="h5 text-primary">Итак, лучшее, что можно сделать прямо сейчас, это</div>
+                    <div class="s-servises__title h3">Записаться к&nbsp;маммологу на&nbsp;осмотр и&nbsp;консультацию.
+                    </div>
+                    <div class="h5">Уверяем, вы не выйдете из кабинета доктора, пока у вас остался хотя бы один вопрос.</div>
+                    <div class="h5">Эти услуги мы можем вам предложить</div>
+                    <div class="s-servises__list">
+                      <div class="s-servises__list-item"><a class="js-link-item active" data-slide="0">Консультация, осмотр</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="1">Узи молочной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="2">Биопсия грудной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="3">Консультация по грудному вскармливанию, расцеживанию, лактостазу.</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="4">Хирургическое лечение</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="5">Генетическая диагностика</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-auto align-self-end">
+                  <div class="s-servises__caption">
+                    <p>Если у вас нет острых симптомов, лучше посетить маммолога в период с 6 по 12 день менструального цикла.</p>
+                    <p>Руки наших опытных маммологов обнаруживали крохотные новообразования в 2-3 миллиметра. Даже на УЗИ такое не увидеть.</p><a class="s-servises__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row"></div>
+          <div class="s-servises__slide img-bg" data-slide="1"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="s-servises__text-block"> 
+                    <div class="s-servises__title h3">Узи молочной железы абсолютно безопасен даже для беременных и&nbsp;кормящих женщин
+                    </div>
+                    <div class="h5">Благодаря новейшему японскому УЗИ аппарату ТОSHIВА АPLIO XG&nbsp;и&nbsp;портативному УЗИ аппарату SONOSCAPE, мы&nbsp;видим крошечные уплотнения от&nbsp;4мм. И&nbsp;пункцию делаем не&nbsp;&laquo;в&nbsp;слепую&raquo;, а&nbsp;с&nbsp;точнейшей навигацией.</div>
+                    <div class="h5">Эти услуги мы можем вам предложить</div>
+                    <div class="s-servises__list">
+                      <div class="s-servises__list-item"><a class="js-link-item active" data-slide="0">Консультация, осмотр</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="1">Узи молочной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="2">Биопсия грудной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="3">Консультация по грудному вскармливанию, расцеживанию, лактостазу.</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="4">Хирургическое лечение</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="5">Генетическая диагностика</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-auto align-self-end">
+                  <div class="s-servises__caption">
+                    <p>Узи рекомендуется в возрасте от 20 лет и старше.</p>
+                    <p>Позволяет детально визуализировать лимфатические узлы, изучить кровоток в груди и диагностировать кисту, липому, фиброаденому, мастит, атерому и разные виды рака.</p><a class="s-servises__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-servises__slide img-bg" data-slide="2"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="s-servises__text-block">
+                    <div class="s-servises__title h3">Делаем пункционную биопсию, трепан-биосию и&nbsp;инцизионную биопсию молочной железы
+                    </div>
+                    <div class="h5">Процедура безболезненна и&nbsp;даёт высочайшее качество биоматериала благодаря уникальному оборудованию&nbsp;&mdash; итальянской биопсийной системе Biocut-M. При биопсии берут образец клеток из&nbsp;пораженного участка груди, который затем исследуеют на&nbsp;клеточном уровне.</div>
+                    <div class="h5">Эти услуги мы можем вам предложить</div>
+                    <div class="s-servises__list">
+                      <div class="s-servises__list-item"><a class="js-link-item active" data-slide="0">Консультация, осмотр</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="1">Узи молочной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="2">Биопсия грудной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="3">Консультация по грудному вскармливанию, расцеживанию, лактостазу.</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="4">Хирургическое лечение</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="5">Генетическая диагностика</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-auto align-self-end">
+                  <div class="s-servises__caption">
+                    <p>Сотрудничаем с первой в Украине сертифицированной патоморфологической лабораторией CSD.</p>
+                    <p>Вы можете в любой момент забрать гистологический материал и получить альтернативное мнение в любой другой лаборатории. Храним материал 3 года.</p><a class="s-servises__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-servises__slide img-bg" data-slide="3"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="s-servises__text-block"> 
+                    <div class="s-servises__title h3">Консультация по грудному вскармливанию, расцеживанию, лактостазу.
+                    </div>
+                    <div class="h5">
+                      Мы уважаем, любим и ценим кормящих мам, поэтому всегда  
+                      <strong>принимаем их без записи и без очереди.</strong>
+                    </div>
+                    <div class="h5">Эти услуги мы можем вам предложить</div>
+                    <div class="s-servises__list">
+                      <div class="s-servises__list-item"><a class="js-link-item active" data-slide="0">Консультация, осмотр</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="1">Узи молочной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="2">Биопсия грудной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="3">Консультация по грудному вскармливанию, расцеживанию, лактостазу.</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="4">Хирургическое лечение</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="5">Генетическая диагностика</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-auto align-self-end">
+                  <div class="s-servises__caption">
+                    <p>	Расскажем, как ухаживать за грудью во время кормления, как продлить период лактации, сохранив грудь здоровой и красивой. И как безопасно прекратить кормить грудью без первобытных «перевязываний груди» и огромных доз гормонов.</p>
+                    <p>Научим бороться с лактостазом и маститом.</p>
+                    <p>Также проводим процедуру «расцеживания» груди</p><a class="s-servises__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-servises__slide img-bg" data-slide="4"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="s-servises__text-block"> 
+                    <div class="s-servises__title h3">Предлагаем хирургическое лечение только тогда, когда без него никак не&nbsp;обойтись
+                    </div>
+                    <div class="h5">Чаще всего мы&nbsp;удаляем только само доброкачественное новообразование. Молочная железа остаётся не&nbsp;затронутой.</div>
+                    <div class="h5">Эти услуги мы можем вам предложить</div>
+                    <div class="s-servises__list">
+                      <div class="s-servises__list-item"><a class="js-link-item active" data-slide="0">Консультация, осмотр</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="1">Узи молочной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="2">Биопсия грудной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="3">Консультация по грудному вскармливанию, расцеживанию, лактостазу.</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="4">Хирургическое лечение</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="5">Генетическая диагностика</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-auto align-self-end">
+                  <div class="s-servises__caption">
+                    <p>Некрасивые шрамы ушли в далёкое прошлое. Сегодня при хирургическом вмешательстве применяются опыт пластической хирургии, поэтому остаётся минимум следов.</p><a class="s-servises__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s-servises__slide img-bg" data-slide="5"><img src="#" data-lazy="img/slide-1.jpg" alt=""/>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="s-servises__text-block"> 
+                    <div class="s-servises__title h3">Оцените свои риски — генетическая диагностика рака молочной железы
+                    </div>
+                    <div class="h5">Поиск мутаций в генах BRCA1 и BRCA2.</div>
+                    <div class="h5">Эти услуги мы можем вам предложить</div>
+                    <div class="s-servises__list">
+                      <div class="s-servises__list-item"><a class="js-link-item active" data-slide="0">Консультация, осмотр</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="1">Узи молочной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="2">Биопсия грудной железы</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="3">Консультация по грудному вскармливанию, расцеживанию, лактостазу.</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="4">Хирургическое лечение</a>
+                      </div>
+                      <div class="s-servises__list-item"><a class="js-link-item" data-slide="5">Генетическая диагностика</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-auto align-self-end">
+                  <div class="s-servises__caption">
+                    <p>Если мутация есть, то риск развивия рака груди в течение жизни увеличивается до 90%.</p>
+                    <p>Но положительтый результат  — не диагноз!</p>
+                    <p>Просто потребуется тщательнее следить за здоровьем, чтобы обнаружить болезнь на самых ранних стадиях — ежемесячные самообследования, регулярное посещение маммолога и гикеколога, ежегодное МРТ.</p>
+                    <p>Вы будете готовы и предотвратите развитие болезни.</p><a class="s-servises__btn" href="#">Записаться на приём к маммологу  (360 грн)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-servises-->
       <!-- start s-content-->
-      <div class="s-content section" id="s-content">
+      <div class="s-content section lazy-background" id="s-content">
         <div class="container">
           <div class="section-title text-center">
-            <h2>s-content</h2>
+            <h2> <span class="text-primary">Но, несмотря на&nbsp;чудовищные риски, </span><br/>многие женщины боятся пойти к&nbsp;маммологу. <br/>Терпят боль, пытаются не&nbsp;думать о&nbsp;найденном уплотнении.</h2>
           </div>
-          <div class="row"></div>
+          <div class="s-content__text-block">
+            <div class="h5 text-primary">Будьте уверены, мы сделали всё, чтобы в нашей клинике вам было психологически комфортно.</div>
+            <p>Для этого сохраняем правдивость и искренность во всём, что делаем. Воспринимаем пациентов в процессе лечения, как партнёров. Даём полный доступ к информации о характере заболевания, диагностике и лечении.</p>
+            <p>Ободрить и поддержать пациентов стараются ещё администраторы на ресепшене.  	Посмотрите, какие удивительные истории рассказывает наш администратор Антонина.  </p>
+            <p>Никакого запугивания! Наоборот, 38% страшных диагнозов, которые огульно и бездоказательно поставили женщинам в других клиниках, мы обоснованно опровергаем.</p>
+            <p>Даём рекомендации, назначаем лечение в приятной обстановке.</p>
+          </div><a class="s-content__btn" href="#">Узнать о страшных диагнозах, которых никогда не было</a>
         </div>
       </div>
       <!-- end s-content-->
       <!-- start s-team-->
       <div class="s-team section" id="s-team">
         <div class="container">
-          <div class="section-title text-center">
-            <h2>s-team</h2>
+          <div class="section-title">
+            <div class="h5 text-primary">Совсем забыли вас познакомить...</div>
+            <h2>Осмотр и&nbsp;консультацию проведут опытные маммологи, которые никуда не&nbsp;торопятся </h2>
+            <div class="h5">Наши доктора</div>
           </div>
-          <div class="row"></div>
+          <div class="row">
+            <div class="col-4">
+              <div class="s-team__slider-sm s-team__slider-sm--js">
+                <div class="s-team__slide-sm">
+                  <div class="s-team__item-sm">
+                    <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-sm-1.jpg" alt=""/>
+                    </div>
+                    <div class="s-team__caption-sm">
+                      <div>Чепурко Антон Юрьевич</div>
+                      <div class="small">Ведущий маммолог</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-sm-->
+                <div class="s-team__slide-sm">
+                  <div class="s-team__item-sm">
+                    <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-sm-1.jpg" alt=""/>
+                    </div>
+                    <div class="s-team__caption-sm">
+                      <div>Щербина Александр Иванович</div>
+                      <div class="small">Главный врач, онколог маммолог</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-sm-->
+                <div class="s-team__slide-sm">
+                  <div class="s-team__item-sm">
+                    <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-sm-1.jpg" alt=""/>
+                    </div>
+                    <div class="s-team__caption-sm">
+                      <div>Лозан Юрий Юрьевич</div>
+                      <div class="small">Маммолог</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-sm-->
+                <div class="s-team__slide-sm">
+                  <div class="s-team__item-sm">
+                    <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-sm-1.jpg" alt=""/>
+                    </div>
+                    <div class="s-team__caption-sm">
+                      <div>Онищенко Татьяна Борисовна</div>
+                      <div class="small">Врач акушер-гинеколог</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-sm-->
+                <div class="s-team__slide-sm">
+                  <div class="s-team__item-sm">
+                    <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-sm-1.jpg" alt=""/>
+                    </div>
+                    <div class="s-team__caption-sm">
+                      <div>Беседина Ольга Ивановна</div>
+                      <div class="small">Врач ультразвуковой диагностика</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-sm-->
+                <div class="s-team__slide-sm">
+                  <div class="s-team__item-sm">
+                    <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-sm-1.jpg" alt=""/>
+                    </div>
+                    <div class="s-team__caption-sm">
+                      <div>Бельская Елена Александровна</div>
+                      <div class="small">Врач дерматовенеролог</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-sm-->
+                <div class="s-team__slide-sm">
+                  <div class="s-team__item-sm">
+                    <div class="s-team__img-wrap"><img src="#" data-lazy="img/team-sm-1.jpg" alt=""/>
+                    </div>
+                    <div class="s-team__caption-sm">
+                      <div>Резюкин Алексей Васильевич</div>
+                      <div class="small">Врач хирург, ведущий маммолог</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-sm-->
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="s-team__slider-lg s-team__slider-lg--js">
+                <div class="s-team__slide-lg">
+                  <div class="s-team__item-lg">
+                    <div class="row">
+                      <div class="col">
+                        <div class="s-team__img-wrap"><img class="res-i" src="#" data-lazy="img/team-1.png" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="s-team__caption-lg">
+                          <div class="s-team__title">Чепурко Антон Юрьевич
+                          </div>
+                          <div class="small">Ведущий маммолог</div>
+                          <div><a class="s-team__link" href="#">Видео -презентация доктора Чепурко</a>
+                          </div>
+                          <div><a class="s-team__link" href="#">Видео-отзывы о докторе Чепурко</a>
+                          </div><a class="s-team__btn" href="#">Записаться на приём</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-lg-->
+                <div class="s-team__slide-lg">
+                  <div class="s-team__item-lg">
+                    <div class="row">
+                      <div class="col">
+                        <div class="s-team__img-wrap"><img class="res-i" src="#" data-lazy="img/team-1.png" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="s-team__caption-lg">
+                          <div class="s-team__title">Щербина Александр Иванович
+                          </div>
+                          <div class="small">Главный врач, онколог маммолог</div>
+                          <div><a class="s-team__link" href="#">Видео -презентация доктора Щербина</a>
+                          </div>
+                          <div><a class="s-team__link" href="#">Видео-отзывы о докторе Щербина</a>
+                          </div><a class="s-team__btn" href="#">Записаться на приём</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-lg-->
+                <div class="s-team__slide-lg">
+                  <div class="s-team__item-lg">
+                    <div class="row">
+                      <div class="col">
+                        <div class="s-team__img-wrap"><img class="res-i" src="#" data-lazy="img/team-1.png" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="s-team__caption-lg">
+                          <div class="s-team__title">Лозан Юрий Юрьевич
+                          </div>
+                          <div class="small">Маммолог</div>
+                          <div><a class="s-team__link" href="#">Видео -презентация доктора Лозан</a>
+                          </div>
+                          <div><a class="s-team__link" href="#">Видео-отзывы о докторе Лозан</a>
+                          </div><a class="s-team__btn" href="#">Записаться на приём</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-lg-->
+                <div class="s-team__slide-lg">
+                  <div class="s-team__item-lg">
+                    <div class="row">
+                      <div class="col">
+                        <div class="s-team__img-wrap"><img class="res-i" src="#" data-lazy="img/team-1.png" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="s-team__caption-lg">
+                          <div class="s-team__title">Онищенко Татьяна Борисовна
+                          </div>
+                          <div class="small">Врач акушер-гинеколог</div>
+                          <div><a class="s-team__link" href="#">Видео -презентация доктора Онищенко</a>
+                          </div>
+                          <div><a class="s-team__link" href="#">Видео-отзывы о докторе Онищенко</a>
+                          </div><a class="s-team__btn" href="#">Записаться на приём</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-lg-->
+                <div class="s-team__slide-lg">
+                  <div class="s-team__item-lg">
+                    <div class="row">
+                      <div class="col">
+                        <div class="s-team__img-wrap"><img class="res-i" src="#" data-lazy="img/team-1.png" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="s-team__caption-lg">
+                          <div class="s-team__title">Беседина Ольга Ивановна
+                          </div>
+                          <div class="small">Врач ультразвуковой диагностика</div> 
+                          <div><a class="s-team__link" href="#">Видео -презентация доктора Бесединой</a>
+                          </div>
+                          <div><a class="s-team__link" href="#">Видео-отзывы о докторе Бесединой</a>
+                          </div><a class="s-team__btn" href="#">Записаться на приём</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-lg-->
+                <div class="s-team__slide-lg">
+                  <div class="s-team__item-lg">
+                    <div class="row">
+                      <div class="col">
+                        <div class="s-team__img-wrap"><img class="res-i" src="#" data-lazy="img/team-1.png" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="s-team__caption-lg">
+                          <div class="s-team__title">Бельская Елена Александровна
+                          </div>
+                          <div class="small">Врач дерматовенеролог</div>
+                          <div><a class="s-team__link" href="#">Видео -презентация доктора Бельской</a>
+                          </div>
+                          <div><a class="s-team__link" href="#">Видео-отзывы о докторе Бельской</a>
+                          </div><a class="s-team__btn" href="#">Записаться на приём</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-lg-->
+                <div class="s-team__slide-lg">
+                  <div class="s-team__item-lg">
+                    <div class="row">
+                      <div class="col">
+                        <div class="s-team__img-wrap"><img class="res-i" src="#" data-lazy="img/team-1.png" alt=""/>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="s-team__caption-lg">
+                          <div class="s-team__title">Резюкин Алексей Васильевич
+                          </div>
+                          <div class="small">Врач хирург, ведущий маммолог</div> 
+                          <div><a class="s-team__link" href="#">Видео -презентация доктора Резюкин</a>
+                          </div>
+                          <div><a class="s-team__link" href="#">Видео-отзывы о докторе Резюкин</a>
+                          </div><a class="s-team__btn" href="#">Записаться на приём</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /+e.slide-lg-->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- end s-team-->

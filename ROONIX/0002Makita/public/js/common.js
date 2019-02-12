@@ -536,7 +536,20 @@ jQuery(document).ready(function ($) {
 	// 	}
 	// });
 
-
+	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').each(function(){
+		if ($(this).val() !== '') {
+			$(this).closest('label').removeClass('empty');
+		} else {
+			$(this).closest('label').addClass('empty');
+		}
+		$(this).on('.keyup', function () {
+			if ($(this).val() !== '') {
+				$(this).closest('label').removeClass('empty');
+			} else {
+				$(this).closest('label').addClass('empty');
+			}
+		});
+	})
 
 	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').on('keyup change click input cut copy paste', function () {
 

@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
 
 
 
-	var icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
+	var icon = '<img src="img/arrow-left.svg" alt=""/>';
 
 	var arrl2 = (' <div class="r">' + icon),
 		arrr2 = (' <div class="l">' + icon);
@@ -77,10 +77,30 @@ jQuery(document).ready(function ($) {
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 	});
+	
 
 
+			//custom code
+			var slideCount = $('.slideCount');
+			var slideCount2 = $('.slideCount2');
+			var slickSlide = $('.header-block__slider--js');
+			
+			slickSlide.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+				//currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+				var i = (currentSlide ? currentSlide : 0) + 1;
+				$('.slideCount').html('<span class="slideCountItem">' + i + '</span> ' + 'из' + ' <span class="slideCountAll">' + slick.slideCount + '</span>');
+				$('.slideCount2').html(i);
 
-	$('.header-block__slider--js').slick({
+			});
+			
+			
+			// slickSlide
+			// .on('lazyLoaded', function(event, slick, image, imageSource){
+			// 	image.parent().css('background-image', 'url(' + image.attr('src') + ')');
+			// });
+			
+			slickSlide.slick({
+	// $('.header-block__slider--js').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
@@ -89,6 +109,7 @@ jQuery(document).ready(function ($) {
 		loop: true,
 		arrows: true,
 		mobileFirst: true,
+		appendArrows: '.header-block__arrow-wrap',
 		// centerMode: true,
 		// focusOnSelect: true ,
 		// variableWidth: true,
@@ -96,9 +117,146 @@ jQuery(document).ready(function ($) {
 		nextArrow: arrl2,
 	});
 
+	$('.s-5-reasons__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		adaptiveHeight: true,
+		speed: 600,
+		// infinite: false,
+		// loop: false,
+		appendDots: '.s-5-reasons__dots-wrap',
+		// loop: true,
+		arrows: false,
+		// mobileFirst: true,
+		asNavFor: '.slider-nav--js'
+		 
+	});
+	
+
+	
+	$('.slider-nav--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 600,
+		// infinite: false,
+		// loop: false,
+		// appendDots: '.s-5-reasons__dots-wrap',
+		// loop: true,
+		arrows: false,
+		mobileFirst: true,
+		focusOnSelect: true,
+		asNavFor: '.s-5-reasons__slider--js',
+		responsive: [
+			{
+
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 5
+      }
+
+		} 
+
+	 ]
+		 
+	});
+
+	$('.s-servises__slider--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 600,
+		infinite: false,
+		loop: false,
+		adaptiveHeight: true,
+		// loop: true,
+		arrows: false,
+		// mobileFirst: true,
+		 
+	});
+
+	$('.js-link-item[data-slide]').click(function (e) {
+		e.preventDefault();
+		var th = $(this),
+			thAttr = +(th.data('slide'));
+			if (+thAttr >= 0  && ($(".slick-active").data("slide") != thAttr) ){
+				console.log(thAttr);
+				$('.js-link-item').removeClass('active')
+				$('.js-link-item[data-slide='+thAttr+']').addClass('active');
+				$(".s-servises__slider--js").slick('slickGoTo', thAttr);
+			}
+		//   data-id-elem="9148"
+		// return false;
+	})
+	$('.s-servises__slider--js').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		// console.log(nextSlide);
+		
+		$('.js-link-item').removeClass('active')
+				$('.js-link-item[data-slide='+nextSlide+']').addClass('active');
+	});
+
+
+
+	$('.s-team__slider-lg--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		// adaptiveHeight: true,
+		speed: 600, 
+		appendDots: '.s-5-reasons__dots-wrap', 
+		arrows: false, 
+		asNavFor: '.s-team__slider-sm--js'
+		 
+	});
+	
+
+	
+	$('.s-team__slider-sm--js').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		speed: 600,
+		// infinite: false,
+		// loop: false,
+		// appendDots: '.s-5-reasons__dots-wrap',
+		// loop: true,
+		arrows: false,
+		mobileFirst: true,
+		focusOnSelect: true,
+		vertical: true,
+		verticalSwiping: true,
+		asNavFor: '.s-team__slider-lg--js',
+		responsive: [
+			{
+
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 7
+      }
+
+		} 
+
+	 ]
+		 
+	});
+
+
+	// $('.s-servises__slider--js').slick({
+	// 	slidesToShow: 1, 
+	// 	dots: false,
+	// 	infinite: false,
+	// 	adaptiveHeight: true,
+	// 	speed: 600, 
+	// 	arrows: false, 
+	// });
+
+
 	$('.s-gal__slider,'+
+	' .s-5-reasons__slider--js ,'+
+	' .s-servises__slider--js ,'+
 	' .s-project__slider--js ,'+
-	' .slider-for ,'+
+	' .s-servises__slider--js ,'+ 
 	' .slider-for2 ')
 .on('lazyLoaded', function(event, slick, image, imageSource){
 	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
@@ -307,8 +465,7 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(function() {
         lazyImages.forEach(function(lazyImage) {
           if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-            lazyImage.src = lazyImage.dataset.src;
-            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.src = lazyImage.dataset.srcset;
             lazyImage.classList.remove("lazy");
 
             lazyImages = lazyImages.filter(function(image) {
@@ -331,7 +488,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.addEventListener("scroll", lazyLoad);
   window.addEventListener("resize", lazyLoad);
-  window.addEventListener("orientationchange", lazyLoad);
+	window.addEventListener("orientationchange", lazyLoad);
+	window.addEventListener("DOMContentLoaded", lazyLoad);
 });
 
 
