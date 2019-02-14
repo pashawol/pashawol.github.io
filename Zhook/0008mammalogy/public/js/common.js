@@ -33,14 +33,14 @@ jQuery(document).ready(function ($) {
 
 
 	// листалка по стр
-	// $(" .top-nav a").click(function () {
-	//        var elementClick = $(this).attr("href");
-	//        var destination = $(elementClick).offset().top;
+	$(" .footer__link").click(function () {
+	       var elementClick = $(this).attr("href");
+	       var destination = $(elementClick).offset().top;
 
-	//            $('html, body').animate({ scrollTop: destination }, 1100);
+	           $('html, body').animate({ scrollTop: destination }, 1100);
 
-	//        return false;
-	//    });
+	       return false;
+	   });
 
 
 	// табы  . 
@@ -202,7 +202,7 @@ jQuery(document).ready(function ($) {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
-		// adaptiveHeight: true,
+		adaptiveHeight: true,
 		speed: 600, 
 		appendDots: '.s-5-reasons__dots-wrap', 
 		arrows: false, 
@@ -213,7 +213,7 @@ jQuery(document).ready(function ($) {
 
 	
 	$('.s-team__slider-sm--js').slick({
-		slidesToShow: 1,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		dots: false,
 		speed: 600,
@@ -224,18 +224,51 @@ jQuery(document).ready(function ($) {
 		arrows: false,
 		mobileFirst: true,
 		focusOnSelect: true,
-		vertical: true,
-		verticalSwiping: true,
 		asNavFor: '.s-team__slider-lg--js',
 		responsive: [
 			{
-
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 7
+				
+				breakpoint: 1200,
+				settings: {
+					slidesToShow: 7,
+					vertical: true,
+					verticalSwiping: true,
+				}
+				
+			} ,
+			
+			{
+				
+				breakpoint: 768,
+				settings: {
+					vertical: true,
+					verticalSwiping: true,
+				}
+				
+			} ,
+			
+			{
+				
+				breakpoint: 475,
+				settings: {
+					// slidesToShow: 4, 
+					slidesToShow: 5,
       }
 
-		} 
+		} ,
+		
+			{
+				
+				breakpoint: 375,
+				settings: {
+					slidesToShow: 4, 
+					// slidesToShow: 5,
+      }
+
+		} ,
+
+
+
 
 	 ]
 		 
@@ -352,101 +385,9 @@ jQuery(document).ready(function ($) {
 	// /form
 
 	// mask for input
-	var customOptions = {
-		onKeyPress: function (val, e, field, options) {
-
-			if (val.replace(/\D/g, '').length === 2) {
-				val = val.replace('8', '');
-				field.val(val);
-			}
-			field.mask("+7(000)000-00-00", options);
-		}
-	};
-	$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").mask("+7(000)000-00-00", customOptions);
-
-	// / mask for input
-
-
-	//Replace all SVG images with inline SVG
-	$('img.img-svg').each(function () {
-		var $img = $(this);
-		var imgClass = $img.attr('class');
-		var imgURL = $img.attr('src');
-
-		$.get(imgURL, function (data) {
-			// Get the SVG tag, ignore the rest
-			var $svg = $(data).find('svg');
-
-			// Add replaced image's classes to the new SVG
-			if (typeof imgClass !== 'undefined') {
-				$svg = $svg.attr('class', imgClass + ' replaced-svg');
-			}
-
-			// Remove any invalid XML tags as per http://validator.w3.org
-			$svg = $svg.removeAttr('xmlns:a');
-
-			// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
-			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-			}
-
-
-			// Replace image with new SVG
-			$img.replaceWith($svg);
-
-		}, 'xml');
-
-	});
-
-
-	// кастомный инпут файл
-
-	var file = $(".add-file input[type=file]");
-	file.change(function () {
-		var filename = $(this).val().replace(/.*\\/, "");
-		var name = $(".add-file__filename  ");
-		name.text(filename);
-
-	});
-	// или
-	// $(".dropzone").dropzone({
-	//  url: "/file/post",
-	//  addRemoveLinks: true,
-	//      acceptedFiles: 'image/*',
-	//      uploadMultiple: true,
-	//   });
-
-
-	$(".pretty-embed__bg").each(function () {
-		// загрузка фона видео
-		$(this).css("background-image", 'url(http://img.youtube.com/vi/' + $(this).data("src") + '/0.jpg)')
-		// включение видео при клике по блоку
-		$(this).click(function () {
-			$(this).removeClass("on").next()
-				.attr("src", 'https://www.youtube.com/embed/' + $(this).data("src") + '?autoplay=1').addClass("on");
-		})
-	})
-
-	// убираем пробелы в телефоне
-	// убираем пробелы в телефоне
-	$('[href^="tel:"]').each(function () {
-		var str = $(this).attr('href');
-		$(this).attr('href', str.replace(/\s/g, ''));
-	})
-	// $(".wow-wrap").each(function () {
-	// var wowAnim = $(this).find(".s-dop__col," +
-	//                 ".s-pick__col," +
-	//                 ".s-condition__col");
-	// wowAnim.each(function(i){
-
-	// wowAnim.eq(i).attr("data-wow-delay", i*.1*2 + "s");
-
-	//    var wow = new WOW({ mobile: false });
-	//         wow.init();
-
-	// });
-	// });
-
+ 
+ 
+	$("input[type='tel']").attr("pattern", "[+]38[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask({"mask": "+38(999)999-99-99"});
 
 });
 
