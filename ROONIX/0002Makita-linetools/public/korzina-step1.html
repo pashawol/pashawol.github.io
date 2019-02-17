@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#025f98">
+    <link rel="stylesheet" href="css/style-bitrix.css">
     <link rel="stylesheet" href="css/main.min.css">
     <link rel="stylesheet" href="css/style-bosch.min.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -708,6 +709,20 @@
                                 </label>
                               </div>
                               <!-- +e.input-wrap-->
+                              <div class="form-wrap__input-wrap form-wrap__input-wrap--city form-group">
+                                <div class="bx-sls" id="sls-78051">
+                                  <div class="dropdown-block bx-ui-sls-input-block"><span class="dropdown-icon"></span>
+                                    <input class="dropdown-field" type="text" autocomplete="off" name="CITY_TPR" value="" placeholder="Введите название ..." style="display: none;"/>
+                                    <div class="bx-ui-sls-container" style="margin: 0px; padding: 0px; border: none; position: relative;">
+                                      <input class="bx-ui-sls-route" type="text" disabled="disabled" autocomplete="off" style="padding: 0px; margin: 0px;"/>
+                                      <input class="bx-ui-sls-fake" type="text" autocomplete="off" value="" placeholder="Введите название ..."/>
+                                    </div>
+                                    <div class="dropdown-fade2white"></div>
+                                    <div class="bx-ui-sls-loader"></div>
+                                    <div class="bx-ui-sls-clear" title="Отменить выбор"> </div>
+                                  </div>
+                                </div><span class="form-wrap__title-label">Город</span>
+                              </div>
                               <div class="form-wrap__input-wrap form-group">
                                 <label><input class="form-wrap__input form-control" type="tel" required="required" pattern=".{3,}"/><span class="form-wrap__title-label">Контактный телефон*</span>
                                 </label> 
@@ -1233,9 +1248,12 @@
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
     <script src="libs/popper.min.js"></script>
     <script src="libs/bootstrap/util.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
     <script src="libs/parsleyjs/parsley.min.js"></script>
     <script src="libs/parsleyjs/i18n/ru.js"></script>
     <script src="libs/parsleyjs/i18n/ru.extra.js"></script>
+    <script src="libs/gijgo-master/js/gijgo.js"></script>
+    <script src="libs/gijgo-master/js/messages/messages.ru-ru.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

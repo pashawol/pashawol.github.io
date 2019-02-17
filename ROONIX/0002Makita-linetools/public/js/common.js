@@ -15,13 +15,14 @@ jQuery(document).ready(function ($) {
 	// для плаваюещего label
 	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').closest('label').addClass('empty');
 
-	// $('input, textarea').keyup(function () {
-	// 	if ($(this).val().trim() !== '') {
-	// 		$(this).closest('label').removeClass('empty');
-	// 	} else {
-	// 		$(this).closest('label').addClass('empty');
-	// 	}
-	// });
+	
+	$('input:empty, textarea:empty').not('[type="radio"]').not('[type="checkbox"]').on('keyup change click input cut copy paste', function () {
+		if ($(this).val().trim() !== '') {
+			$(this).closest('label').removeClass('empty');
+		} else {
+			$(this).closest('label').addClass('empty');
+		}
+	});
 
 
 
