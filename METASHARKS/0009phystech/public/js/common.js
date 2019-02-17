@@ -1026,6 +1026,120 @@ jQuery(document).ready(function ($) {
 $('.s-price-servise__item').hover(function(){
 	$(this).find(".s-price-servise__text").slideToggle(100);
 })
+
+
+$('.btn-popover').popover({
+	html: true,
+	offset: 100,
+	placement: 'bottom', 
+	// placement: 'left', 
+})
+
+
+// custom slider range
+$(".js-range-slider").ionRangeSlider({
+	skin: "round",
+	type: "double",
+	min: 0,
+	max: 100,
+});
+
+	//Replace all SVG images with inline SVG
+	$('img.img-svg').each(function () {
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+
+		$.get(imgURL, function (data) {
+			// Get the SVG tag, ignore the rest
+			var $svg = $(data).find('svg');
+
+			// Add replaced image's classes to the new SVG
+			if (typeof imgClass !== 'undefined') {
+				$svg = $svg.attr('class', imgClass + ' replaced-svg');
+			}
+
+			// Remove any invalid XML tags as per http://validator.w3.org
+			$svg = $svg.removeAttr('xmlns:a');
+
+			// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+			if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+			}
+
+
+			// Replace image with new SVG
+			$img.replaceWith($svg);
+
+		}, 'xml');
+
+	});
+
+});
+
+
+
+
+// Для лэзи загрузки
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  let active = false;
+
+  const lazyLoad = function() {
+    if (active === false) {
+      active = true;
+
+      setTimeout(function() {
+        lazyImages.forEach(function(lazyImage) {
+          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+            lazyImage.src = lazyImage.dataset.src;
+            // lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.classList.remove("lazy");
+
+            lazyImages = lazyImages.filter(function(image) {
+              return image !== lazyImage;
+            });
+
+            if (lazyImages.length === 0) {
+              document.removeEventListener("scroll", lazyLoad);
+              window.removeEventListener("resize", lazyLoad);
+							window.removeEventListener("orientationchange", lazyLoad);
+							window.addEventListener("DOMContentLoaded", lazyLoad);
+            }
+          }
+        });
+
+        active = false;
+      }, 200);
+    }
+  };
+
+  document.addEventListener("scroll", lazyLoad);
+  window.addEventListener("resize", lazyLoad);
+  window.addEventListener("orientationchange", lazyLoad);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
 });
 
 

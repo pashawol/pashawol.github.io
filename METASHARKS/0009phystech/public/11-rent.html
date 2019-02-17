@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css">
     <link rel="stylesheet" href="libs/gijgo-master/css/gijgo.min.css">
     <link rel="stylesheet" href="libs/gijgo-master/css/demo.min.css">
+    <!-- добавил-->
+    <link rel="stylesheet" href="libs/ion.rangeSlider/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -162,6 +164,71 @@
               </div>
             </div>
           </div>
+          <div class="s-offices__head">
+            <div class="form-wrap">
+              <form class="js-form-validate">
+                <div class="row">
+                  <div class="form-wrap__head-col col-xxl-2 col-md-4">
+                    <div class="form-wrap__input-wrap form-group">
+                      <div class="form-wrap__head-title">Тип помещения
+                      </div>
+                      <label>
+                        <select class="form-wrap__input form-control" required="required"> 
+                          <option>Офисы</option>
+                          <option>Офисы </option>
+                        </select>
+                      </label>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="form-wrap__head-col col-xxl-2 col-md-4">
+                    <div class="form-wrap__input-wrap form-group">
+                      <div class="form-wrap__head-title">Секция
+                      </div>
+                      <label>
+                        <select class="form-wrap__input form-control" required="required"> 
+                          <option>Южная башня</option>
+                          <option>Южная башня </option>
+                        </select>
+                      </label>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="form-wrap__head-col col-xxl-2 col-md-4">
+                    <div class="form-wrap__input-wrap form-group">
+                      <div class="form-wrap__head-title">Этаж
+                      </div>
+                      <label>
+                        <select class="form-wrap__input form-control" required="required"> 
+                          <option>2</option>
+                          <option>2</option>
+                        </select>
+                      </label>
+                    </div>
+                    <!-- +e.input-wrap-->
+                  </div>
+                  <div class="form-wrap__head-col col-xxl-3 col-md-6">
+                    <div class="form-wrap__head-title">Площадь, кв м
+                    </div>
+                    <input class="js-range-slider" type="text"/>
+                  </div>
+                  <div class="form-wrap__head-col col-xxl-3 col-md-6">
+                    <div class="form-wrap__head-title">Стоимость, руб. в месяц
+                    </div>
+                    <input class="js-range-slider" type="text"/>
+                  </div>
+                  <div class="form-wrap__head-col col-xxl-2 col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">С мебелью</span>
+                    </label>
+                  </div>
+                  <div class="form-wrap__head-col col-xxl-2 col-auto">
+                    <label class="custom-input"><input class="custom-input__input" type="checkbox" name=""/><span class="custom-input__lab"></span><span class="custom-input__text">С готовой отделкой</span>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
           <div class="s-offices__row row">
             <div class="s-offices__col col-xl-4 col-md-6">
               <div class="s-offices__item"><a class="s-offices__img-wrap img-bg" href="#" style="background-image: url(img/office-1.jpg);"><img src="img/office-1.jpg" alt=""/></a>
@@ -195,7 +262,7 @@
                   <div class="row align-items-center row--sm">
                     <div class="col">
                       <div class="s-offices__price">50 000 ₽/м
-                        <div class="s-offices__popover">?
+                        <div class="s-offices__popover btn-popover" data-toggle="popover" data-trigger="hover" data-content="&lt;div class=&quot;popover__title &quot;&gt;В стоимость входит:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Эксплуатационные и коммунальные расходы&lt;/li&gt;&lt;li&gt;Юридический адрес&lt;/li&gt;&lt;li&gt;Пропускная система &lt;/li&gt; &lt;li&gt;Приточно-вытяжная вентиляция   &lt;/li&gt;&lt;/ul&gt;">?
                         </div>
                       </div>
                     </div>
@@ -238,7 +305,7 @@
                   <div class="row align-items-center row--sm">
                     <div class="col">
                       <div class="s-offices__price">20 000 ₽/м
-                        <div class="s-offices__popover">?
+                        <div class="s-offices__popover btn-popover" data-toggle="popover" data-trigger="hover" data-content="&lt;div class=&quot;popover__title &quot;&gt;В стоимость входит:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Эксплуатационные и коммунальные расходы&lt;/li&gt;&lt;li&gt;Юридический адрес&lt;/li&gt;&lt;li&gt;Пропускная система &lt;/li&gt; &lt;li&gt;Приточно-вытяжная вентиляция   &lt;/li&gt;&lt;/ul&gt;">?
                         </div>
                       </div>
                     </div>
@@ -281,7 +348,7 @@
                   <div class="row align-items-center row--sm">
                     <div class="col">
                       <div class="s-offices__price">150 000 ₽/мес.
-                        <div class="s-offices__popover">?
+                        <div class="s-offices__popover btn-popover" data-toggle="popover" data-trigger="hover" data-content="&lt;div class=&quot;popover__title &quot;&gt;В стоимость входит:&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Эксплуатационные и коммунальные расходы&lt;/li&gt;&lt;li&gt;Юридический адрес&lt;/li&gt;&lt;li&gt;Пропускная система &lt;/li&gt; &lt;li&gt;Приточно-вытяжная вентиляция   &lt;/li&gt;&lt;/ul&gt;">?
                         </div>
                       </div>
                     </div>
@@ -292,20 +359,22 @@
               </div>
             </div>
             <!-- +e.col.col-xl-4.col-md-6-->
-          </div>
+          </div><a class="s-offices__btn s-offices__btn--more" href="#"> Показать еще</a>
         </div>
       </div>
       <!-- end s-offices-->
       <!-- start s-price-servise-->
-      <div class="s-price-servise section" id="s-price-servise">
+      <!-- добавил классы 17.02-->
+      <div class="s-price-servise s-price-servise--dark lazy-background section" id="s-price-servise">
         <div class="container">
           <div class="section-title">
             <h2>Услуги</h2>
           </div>
           <div class="row">
-                <div class="s-price-servise__col col-lg-3 col-md-4 col-sm-6">
+                <div class="s-price-servise__col col-md-4 col-sm-6">
                   <div class="s-price-servise__item">
-                    <div class="s-price-servise__img-wrap"><img src="img/servise-1.svg" alt=""/>
+                    <div class="s-price-servise__img-wrap">
+                      <!-- добавил классы 17.02--><img class="img-svg" src="img/rent-i-1.svg" alt=""/>
                     </div>
                     <div class="s-price-servise__title">Аренда компьютера
                     </div>
@@ -319,9 +388,10 @@
                   </div>
                 </div>
                 <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
-                <div class="s-price-servise__col col-lg-3 col-md-4 col-sm-6">
+                <div class="s-price-servise__col col-md-4 col-sm-6">
                   <div class="s-price-servise__item">
-                    <div class="s-price-servise__img-wrap"><img src="img/servise-2.svg" alt=""/>
+                    <div class="s-price-servise__img-wrap">
+                      <!-- добавил классы 17.02--><img class="img-svg" src="img/rent-i-2.svg" alt=""/>
                     </div>
                     <div class="s-price-servise__title">Аренда дополнительного МФУ
                     </div>
@@ -335,11 +405,12 @@
                   </div>
                 </div>
                 <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
-                <div class="s-price-servise__col col-lg-3 col-md-4 col-sm-6">
+                <div class="s-price-servise__col col-md-4 col-sm-6">
                   <div class="s-price-servise__item">
-                    <div class="s-price-servise__img-wrap"><img src="img/servise-3.svg" alt=""/>
+                    <div class="s-price-servise__img-wrap">
+                      <!-- добавил классы 17.02--><img class="img-svg" src="img/rent-i-3.svg" alt=""/>
                     </div>
-                    <div class="s-price-servise__title">Размещение промо-ролика на мониторах технопарка
+                    <div class="s-price-servise__title">Уборка
                     </div>
                     <!-- 08.02 переделал-->
                     <div class="s-price-servise__item-foot">
@@ -351,41 +422,27 @@
                   </div>
                 </div>
                 <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
-                <div class="s-price-servise__col col-lg-3 col-md-4 col-sm-6">
+                <div class="s-price-servise__col col-md-4 col-sm-6">
                   <div class="s-price-servise__item">
-                    <div class="s-price-servise__img-wrap"><img src="img/servise-4.svg" alt=""/>
+                    <div class="s-price-servise__img-wrap">
+                      <!-- добавил классы 17.02--><img class="img-svg" src="img/rent-i-4.svg" alt=""/>
                     </div>
-                    <div class="s-price-servise__title">Брошюратор
+                    <div class="s-price-servise__title">Паркинг
                     </div>
                     <!-- 08.02 переделал-->
                     <div class="s-price-servise__item-foot">
                       <div class="s-price-servise__text">Мы постоянно развиваем сервисы и добавляем новые услуги для гостей и резидентов Технопарка. В скором времени тут появиться что то новенькое
                       </div>
-                      <div class="s-price-servise__price">300 ₽
+                      <div class="s-price-servise__price">3 000 ₽/мес
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
-                <div class="s-price-servise__col col-lg-3 col-md-4 col-sm-6">
+                <div class="s-price-servise__col col-md-4 col-sm-6">
                   <div class="s-price-servise__item">
-                    <div class="s-price-servise__img-wrap"><img src="img/servise-5.svg" alt=""/>
-                    </div>
-                    <div class="s-price-servise__title">Аренда шкафа
-                    </div>
-                    <!-- 08.02 переделал-->
-                    <div class="s-price-servise__item-foot">
-                      <div class="s-price-servise__text">Мы постоянно развиваем сервисы и добавляем новые услуги для гостей и резидентов Технопарка. В скором времени тут появиться что то новенькое
-                      </div>
-                      <div class="s-price-servise__price">500 ₽/мес
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
-                <div class="s-price-servise__col col-lg-3 col-md-4 col-sm-6">
-                  <div class="s-price-servise__item">
-                    <div class="s-price-servise__img-wrap"><img src="img/servise-6.svg" alt=""/>
+                    <div class="s-price-servise__img-wrap">
+                      <!-- добавил классы 17.02--><img class="img-svg" src="img/rent-i-6.svg" alt=""/>
                     </div>
                     <div class="s-price-servise__title">Аренда переговорной комнаты
                     </div>
@@ -399,27 +456,12 @@
                   </div>
                 </div>
                 <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
-                <div class="s-price-servise__col col-lg-3 col-md-4 col-sm-6">
+                <div class="s-price-servise__col col-md-4 col-sm-6">
                   <div class="s-price-servise__item">
-                    <div class="s-price-servise__img-wrap"><img src="img/servise-7.svg" alt=""/>
+                    <div class="s-price-servise__img-wrap">
+                      <!-- добавил классы 17.02--><img class="img-svg" src="img/rent-i-5.svg" alt=""/>
                     </div>
-                    <div class="s-price-servise__title">Аренда конференц-зала
-                    </div>
-                    <!-- 08.02 переделал-->
-                    <div class="s-price-servise__item-foot">
-                      <div class="s-price-servise__text">Мы постоянно развиваем сервисы и добавляем новые услуги для гостей и резидентов Технопарка. В скором времени тут появиться что то новенькое
-                      </div>
-                      <div class="s-price-servise__price">цена договорная
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- /+e.col.col-lg-3.col-md-4.col-sm-6-->
-                <div class="s-price-servise__col col-lg-3 col-md-4 col-sm-6">
-                  <div class="s-price-servise__item">
-                    <div class="s-price-servise__img-wrap"><img src="img/servise-8.svg" alt=""/>
-                    </div>
-                    <div class="s-price-servise__title">Кейтеринг
+                    <div class="s-price-servise__title">Размещение промо-ролика на мониторах технопарка
                     </div>
                     <!-- 08.02 переделал-->
                     <div class="s-price-servise__item-foot">
@@ -514,9 +556,15 @@
               <div class="row">
                 <div class="col">
                   <div class="section-title">
-                    <h2 class="ttu">Запишитесь  <br/>на бесплатный<br/> пробный день</h2>
+                    <h2 class="ttu">Индивидуальный запрос<br/> на планировку<img class="res-i lazy" src="#" data-src="img/arrow-right-white.svg" alt=""/></h2>
+                    <p>В&nbsp;рамках каждого этажа возможно арендовать необходимую площадь от&nbsp;50 кв.м., или организовать оптимальную конфигурацию и&nbsp;отделку по&nbsp;запросу арендатора</p>
                   </div>
-                  <div class="s-form__text s-form__text--page d-none d-sm-block">заполните личную <br/>информацию
+                  <div class="s-form__stock"> <img class="res-i lazy" src="#" data-src="img/user.svg" alt=""/>
+                    <div class="s-form__stock-text">
+                      <div class="s-form__inner"> Специально для студентов и&nbsp;выпускников МФТИ(ГУ) существует скидка в&nbsp;размере 
+                        <div class="h4 strong">10% от&nbsp;суммы аренды.</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-xl-5 col-lg-6">
@@ -527,22 +575,11 @@
                         </label>
                       </div>
                       <!-- +e.input-wrap-->
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-wrap__input-wrap form-group">
-                            <label><input class="form-wrap__input form-control" type="tel"/><span class="form-wrap__title-label">Ваше Номер телефона</span>
-                            </label>
-                          </div>
-                          <!-- +e.input-wrap-->
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-wrap__input-wrap form-group">
-                            <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title-label">Желаемая дата посещения</span>
-                            </label>
-                          </div>
-                          <!-- +e.input-wrap-->
-                        </div>
+                      <div class="form-wrap__input-wrap form-group">
+                        <label><input class="form-wrap__input form-control" type="tel"/><span class="form-wrap__title-label">Ваше Номер телефона</span>
+                        </label> 
                       </div>
+                      <!-- +e.input-wrap-->
                       <div class="form-wrap__input-wrap form-group">
                         <label><input class="form-wrap__input form-control" type="email"/><span class="form-wrap__title-label">Ваш e-mail (необязательно)</span>
                         </label> 
@@ -940,6 +977,7 @@
     <!-- +-->
     <script src="libs/gijgo-master/js/gijgo.js"></script>
     <script src="libs/gijgo-master/js/messages/messages.ru-ru.js"></script>
+    <script src="libs/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
