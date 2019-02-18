@@ -11,6 +11,7 @@
     <!-- Custom Browsers Color-->
     <meta name="theme-color" content="#0c95ed">
     <link rel="stylesheet" href="libs/magnificPopup/magnific-popup.css">
+    <link rel="stylesheet" href="libs/swiper-4.2.0/swiper.min.css">
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css">
     <link rel="stylesheet" href="libs/gijgo-master/css/gijgo.min.css">
@@ -415,7 +416,7 @@
           <div class="row no-gutters">
                 <div class="s-block__col col-xl-3 col-md-6 under-canvas">
                   <div class="s-block__item">
-                    <div class="s-block__img-bg" style="background-image: url(img/beside-1.jpg)">
+                    <div class="s-block__img-bg img-bg"><img class="lazy-bg" src="#" data-src="img/beside-1.jpg" alt=""/>
                     </div>
                     <div class="s-block__item-head">
                       <div class="s-block__item-title"><span>Кафе</span>
@@ -430,7 +431,7 @@
                 <!-- +e.col.col-xl-3.col-md-6.under-canvas-->
                 <div class="s-block__col col-xl-3 col-md-6 under-canvas">
                   <div class="s-block__item">
-                    <div class="s-block__img-bg" style="background-image: url(img/beside-2.jpg)">
+                    <div class="s-block__img-bg img-bg"><img class="lazy-bg" src="#" data-src="img/beside-2.jpg" alt=""/>
                     </div>
                     <div class="s-block__item-head">
                       <div class="s-block__item-title"><span>Столовая</span>
@@ -445,7 +446,7 @@
                 <!-- +e.col.col-xl-3.col-md-6.under-canvas-->
                 <div class="s-block__col col-xl-3 col-md-6 under-canvas">
                   <div class="s-block__item">
-                    <div class="s-block__img-bg" style="background-image: url(img/beside-3.jpg)">
+                    <div class="s-block__img-bg img-bg"><img class="lazy-bg" src="#" data-src="img/beside-3.jpg" alt=""/>
                     </div>
                     <div class="s-block__item-head">
                       <div class="s-block__item-title"><span>Спорт зал</span>
@@ -460,7 +461,7 @@
                 <!-- +e.col.col-xl-3.col-md-6.under-canvas-->
                 <div class="s-block__col col-xl-3 col-md-6 under-canvas">
                   <div class="s-block__item">
-                    <div class="s-block__img-bg" style="background-image: url(img/beside-4.jpg)">
+                    <div class="s-block__img-bg img-bg"><img class="lazy-bg" src="#" data-src="img/beside-4.jpg" alt=""/>
                     </div>
                     <div class="s-block__item-head">
                       <div class="s-block__item-title"><span>Play-spaсe</span>
@@ -777,7 +778,7 @@
             </div>
             <div class="col">
               <div class="s-get-to__map-wrap-wrap">
-                <div class="s-get-to__map-wrap"><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae745f50e4e17c129b2a674d9bdd9c42c73e112878eab9b62397585392dee41ad&amp;width=926&amp;height=664&amp;lang=ru_RU&amp;scroll=false"></script>
+                <div class="s-get-to__map-wrap"><script   async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae745f50e4e17c129b2a674d9bdd9c42c73e112878eab9b62397585392dee41ad&amp;width=926&amp;height=664&amp;lang=ru_RU&amp;scroll=false"></script>
                 </div>
               </div>
             </div>
@@ -992,6 +993,43 @@
       </form>
     </div>
     <!-- #modal-call-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-rent">
+      <form class="js-form-validate"> 
+        <div class="h4 text-primary ttu strong pb-3">Заполните форму и мы свяжемся с Вами в течении суток</div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title-label">Ваше имя</span>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="email"/><span class="form-wrap__title-label">Ваш e-mail (необязательно)</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title-label">Текст сообщения</span>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="row row--sm align-items-center">
+          <div class="col-sm">
+            <div class="politic"> 
+              <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite" checked="checked"/><span class="custom-input__lab"></span>
+              </label>Принимаю условия 
+              
+              <a class="form-wrap__link" href="Soglasie.pdf" target="_blank">пользовательского соглашения </a> 
+              и 
+               <a class="form-wrap__link" href="Soglasie.pdf" target="_blank">политики конфиденциальности </a>
+            </div>
+          </div>
+          <div class="col">
+            <button class="form-wrap__btn" type="submit">Отправить
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-rent-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/popper.min.js"></script>
@@ -1003,8 +1041,8 @@
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <script src="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.js"></script>
     <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/swiper-4.2.0/swiper.min.js"></script>
     <script src="libs/svg4everybody-master/svg4everybody.min.js"></script>
-    <script src="libs/equalHeights/equalHeights.min.js"></script>
     <script src="libs/jquery.touchSwipe.min.js"></script>
     <script src="libs/sticky-kit.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
@@ -1016,6 +1054,7 @@
     <script src="libs/gijgo-master/js/gijgo.js"></script>
     <script src="libs/gijgo-master/js/messages/messages.ru-ru.js"></script>
     <script src="libs/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+    <script src="libs/equalHeights/equalHeights.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

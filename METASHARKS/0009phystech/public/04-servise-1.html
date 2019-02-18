@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.css">
     <link rel="stylesheet" href="libs/gijgo-master/css/gijgo.min.css">
     <link rel="stylesheet" href="libs/gijgo-master/css/demo.min.css">
+    <!-- добавил-->
+    <link rel="stylesheet" href="libs/ion.rangeSlider/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -36,7 +38,8 @@
             <div class="nav__item"><a class="nav__link" href="#">Контакты </a>
             </div>
           </div>
-          <div class="text-right"></div>
+          <div class="pl-2"><a class="trop__tel h4 strong text-white" href="tel:">+7 (495) 114-50-12</a>
+          </div>
         </div>
       </div>
       <!--  мобильное меню-->
@@ -54,8 +57,7 @@
                   </div>
                   <div class="col-auto d-none d-md-block d-lg-none d-xxl-block">
                     <div class="top-nav__title">
-                      МЕЖДУНАРОДНЫЙ   
-                      <nobr>НАУЧНО-ОБРАЗОВАТЕЛЬНЫЙ </nobr> КЛАСТЕР
+                      МЕЖДУНАРОДНЫЙ   <span class="d-block">НАУЧНО-ОБРАЗОВАТЕЛЬНЫЙ </span> КЛАСТЕР
                     </div>
                   </div>
                 </div>
@@ -232,7 +234,7 @@
                         <div class="row row--sm align-items-center">
                           <div class="col-sm">
                             <div class="politic"> 
-                              <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite"/><span class="custom-input__lab"></span>
+                              <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite" checked="checked"/><span class="custom-input__lab"></span>
                               </label>Принимаю условия 
                               
                               <a class="form-wrap__link" href="Soglasie.pdf" target="_blank">пользовательского соглашения </a> 
@@ -254,58 +256,48 @@
           </div>
         </section>
         <!-- end s-form-->
-        <footer class="footer section">
+        <footer class="footer bg-primary">
           <div class="container">
             <div class="row">
-              <div class="col-md-auto order-md-0 order-last">
-                <div class="row align-items-end">
-                  <div class="col-md-12 col">
-                    <div class="footer__logo"><a href="#"><img src="img/logo-white.svg" alt=""/></a>
-                    </div>
-                  </div>
-                  <div class="col-md-12 col-auto">
-                    <div class="footer__copy">© Phystechpark
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-auto">
+              <div class="col-xl-3 col-lg-auto"><a class="footer__logo" href="#"><img class="res-i" src="img/logo-foot-white.svg" alt=""/></a>
                 <div class="soc"><a class="soc__item" href="#" target="_blank"><i class="fab fa-instagram"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab  fa-facebook-f"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab  fa-vk"></i></a><a class="soc__item" href="#" target="_blank"><i class="fab  fa-youtube"></i></a>
                 </div>
               </div>
-              <div class="col-xl col-md-auto col-7 d-md-none d-lg-block order-md-0 order-first">
-                <div class="footer__item"><a class="footer__link ttu" href="#">ТЕХНОПАРК</a>
-                </div>
-                <div class="footer__item"><a class="footer__link ttu" href="#">ИНФРАСТРУКТУРА</a>
-                </div>
-                <div class="footer__item"><a class="footer__link ttu" href="#">СЕРВИСЫ</a>
-                </div>
-                <div class="footer__item"><a class="footer__link ttu" href="#">МЕРОПРИЯТИЯ</a>
-                </div>
-                <div class="footer__item"><a class="footer__link ttu" href="#">КОНТАКТЫ</a>
+              <div class="col-xl-3 col-sm-auto col-6">
+                <div class="footer__list">
+                  <div class="footer__list-item h4"><a href="#">Новости</a>
+                  </div>
+                  <div class="footer__list-item h4"><a href="#">Инвесторам</a>
+                  </div>
+                  <div class="footer__list-item h4"><a href="#">Компаниям и стартапам</a>
+                  </div>
+                  <div class="footer__list-item h4"><a href="#">Посетителям</a>
+                  </div>
+                  <div class="footer__list-item h4"><a href="#">Мероприятия</a>
+                  </div>
+                  <div class="footer__list-item h4"><a href="#">Контакты </a>
+                  </div>
                 </div>
               </div>
-              <div class="col-xl">
-                <div class="row">
-                  <div class="col-xl col-md-auto col-sm col">
-                    <div class="footer__item">Перечень возможностей: 
-                    </div>
-                    <div class="footer__item"><a class="footer__link" href="#">Венчурная площадка </a>
-                    </div>
-                    <div class="footer__item"><a class="footer__link" href="#">Аренда </a>
-                    </div>
+              <div class="col-xl-3 col-sm-auto col-6">
+                <div class="footer__list">
+                  <div class="footer__list-item"><span class="h4">Услуги и сервисы: </span>
                   </div>
-                  <div class="col-xl col-md-auto col-sm-auto col">
-                    <div class="footer__item"> Целевая аудитория: 
-                    </div>
-                    <div class="footer__item"><a class="footer__link" href="#">Стартапы</a>
-                    </div>
-                    <div class="footer__item"><a class="footer__link" href="#">Арендаторы </a>
-                    </div>
-                    <div class="footer__item"><a class="footer__link" href="#">Инвесторы</a>
-                    </div>
-                    <div class="footer__item"><a class="footer__link" href="#">Партнеры </a>
-                    </div>
+                  <div class="footer__list-item"><a href="#">Аренда</a>
+                  </div>
+                  <div class="footer__list-item"><a href="#">Коворкинг</a>
+                  </div>
+                  <div class="footer__list-item"><a href="#">Фитнес-зал</a>
+                  </div>
+                  <div class="footer__list-item"><a href="#">Парковка</a>
+                  </div>
+                  <div class="footer__list-item"><a href="#">Кафе</a>
+                  </div>
+                  <div class="footer__list-item"><a href="#">Столовая</a>
+                  </div>
+                  <div class="footer__list-item"><a href="#">Кофейня</a>
+                  </div>
+                  <div class="footer__list-item"><a href="#">Организация мероприятий</a>
                   </div>
                 </div>
               </div>
@@ -335,7 +327,7 @@
         <div class="row row--sm align-items-center">
           <div class="col-sm">
             <div class="politic"> 
-              <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite"/><span class="custom-input__lab"></span>
+              <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite" checked="checked"/><span class="custom-input__lab"></span>
               </label>Принимаю условия 
               
               <a class="form-wrap__link" href="Soglasie.pdf" target="_blank">пользовательского соглашения </a> 
@@ -374,6 +366,102 @@
       </form>
     </div>
     <!-- #modal-call-->
+    <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-event">
+      <form class="js-form-validate"> 
+        <div class="h4 text-primary ttu strong pb-5"> Заполните форму и мы свяжемся с Вами в ближайщее время</div>
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title-label">Ваше имя, фамилия</span>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="email"/><span class="form-wrap__title-label">Ваш e-mail (необязательно)</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="tel"/><span class="form-wrap__title-label">Ваш телефон</span>
+          </label> 
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="form-wrap__input-wrap form-group">
+          <label><input class="form-wrap__input form-control" type="text"/><span class="form-wrap__title-label">Тема мероприятия</span>
+          </label>
+        </div>
+        <!-- +e.input-wrap-->
+        <div class="row row--sm align-items-center date-picker-block-js">
+          <div class="col-sm">
+            <div class="form-wrap__input-wrap form-group">
+              <label><input class="form-wrap__input form-control datepicker-date-input startDate" type="text"/><span class="form-wrap__title-label">Даты проведения</span>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-sm">
+            <div class="form-wrap__input-wrap form-group">
+              <label><input class="form-wrap__input form-control datepicker-date-input endDate" type="text" disabled="disabled"/><span class="form-wrap__title-label">Даты проведения</span>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+        </div>
+        <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite"/><span class="custom-input__lab"></span><span class="custom-input__text">Мероприятие длится несколько дней</span>
+        </label>
+        <div class="row row--sm align-items-center time-picker-block-js">
+          <div class="col-sm">
+            <div class="form-wrap__input-wrap form-group">
+              <label><input class="form-wrap__input form-control datepicker-date-input time-picker" type="text"/><span class="form-wrap__title-label">Время проведения</span>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-sm">
+            <div class="form-wrap__input-wrap form-group">
+              <label><input class="form-wrap__input form-control datepicker-date-input time-picker" type="text"/><span class="form-wrap__title-label">Время проведения</span>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+          <div class="col-sm-5">
+            <div class="form-wrap__input-wrap form-group">
+              <label><input class="form-wrap__input form-control" type="number"/><span class="form-wrap__title-label">Количество гостей</span>
+              </label>
+            </div>
+            <!-- +e.input-wrap-->
+          </div>
+        </div>
+        <div class="form-group ttu strong">Дополнительная информация</div>
+        <div class="form-group">
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite"/><span class="custom-input__lab"></span><span class="custom-input__text">Акустическая система</span>
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite"/><span class="custom-input__lab"></span><span class="custom-input__text">Флипчарты</span>
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite"/><span class="custom-input__lab"></span><span class="custom-input__text">Фуршет</span>
+          </label>
+        </div>
+        <div class="row row--sm align-items-center">
+          <div class="col-sm">
+            <div class="politic"> 
+              <label class="custom-input"><input class="custom-input__input" type="checkbox" name="polite" checked="checked"/><span class="custom-input__lab"></span>
+              </label>Принимаю условия 
+              
+              <a class="form-wrap__link" href="Soglasie.pdf" target="_blank">пользовательского соглашения </a> 
+              и 
+               <a class="form-wrap__link" href="Soglasie.pdf" target="_blank">политики конфиденциальности </a>
+            </div>
+          </div>
+          <div class="col">
+            <button class="form-wrap__btn" type="submit">ЗАбронировать
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- #modal-call-->
     <!-- modal-->
     <script src="js/jquery.min.js"></script>
     <script src="libs/popper.min.js"></script>
@@ -381,6 +469,7 @@
     <script src="libs/bootstrap/dropdown.js"></script>
     <script src="libs/bootstrap/tooltip.js"></script>
     <script src="libs/bootstrap/popover.js"></script>
+    <script src="libs/bootstrap/carousel.js"></script>
     <script src="libs/magnificPopup/jquery.magnific-popup.min.js"></script>
     <script src="libs/Easy-Responsive-Tab-Accordion-Control-Plugin-For-jQuery/easy-responsive-tabs.js"></script>
     <script src="libs/slick/slick.min.js"></script>
@@ -388,12 +477,15 @@
     <script src="libs/jquery.touchSwipe.min.js"></script>
     <script src="libs/sticky-kit.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
+    <script src="libs/animateSVGPath.js"></script>
     <script src="libs/particles.min.js"></script>
     <script src="libs/readmore.min.js"></script>
     <script src="libs/jquery.mask.min.js"></script>
     <!-- +-->
     <script src="libs/gijgo-master/js/gijgo.js"></script>
     <script src="libs/gijgo-master/js/messages/messages.ru-ru.js"></script>
+    <script src="libs/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+    <script src="libs/equalHeights/equalHeights.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>
