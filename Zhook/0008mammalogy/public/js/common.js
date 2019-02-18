@@ -1,3 +1,66 @@
+// import { setTimeout } from "timers";
+
+// Для лэзи загрузки
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+	let active = false;
+
+	const lazyLoad = function () {
+		if (active === false) {
+			active = true;
+
+			setTimeout(function () {
+				lazyImages.forEach(function (lazyImage) {
+					if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+						lazyImage.src = lazyImage.dataset.srcset;
+						lazyImage.classList.remove("lazy");
+
+						lazyImages = lazyImages.filter(function (image) {
+							return image !== lazyImage;
+						});
+
+						if (lazyImages.length === 0) {
+							document.removeEventListener("scroll", lazyLoad);
+							window.removeEventListener("resize", lazyLoad);
+							window.removeEventListener("orientationchange", lazyLoad);
+							window.addEventListener("DOMContentLoaded", lazyLoad);
+						}
+					}
+				});
+
+				active = false;
+			}, 200);
+		}
+	};
+
+	document.addEventListener("scroll", lazyLoad);
+	window.addEventListener("resize", lazyLoad);
+	window.addEventListener("orientationchange", lazyLoad);
+	window.addEventListener("DOMContentLoaded", lazyLoad);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+	var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+
+	if ("IntersectionObserver" in window) {
+		let lazyBackgroundObserver = new IntersectionObserver(function (entries, observer) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("visible");
+					lazyBackgroundObserver.unobserve(entry.target);
+				}
+			});
+		});
+
+		lazyBackgrounds.forEach(function (lazyBackground) {
+			lazyBackgroundObserver.observe(lazyBackground);
+		});
+	}
+});
 jQuery(document).ready(function ($) {
 
 	// для свг
@@ -280,81 +343,94 @@ jQuery(document).ready(function ($) {
 		"mask": "+38(999)999-99-99"
 	});
 
-	$('[data-target="#modal-win"]').click(function(){
-			$('#modal-win .title-js').html($(this).data('title'));
+	$('[data-target="#modal-win"]').click(function () {
+		$('#modal-win .title-js').html($(this).data('title'));
 	})
 
 	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-	 
+
 		type: 'iframe',
 		mainClass: 'mfp-fade',
 		removalDelay: 160,
 		preloader: false,
 
+		loop: true,
 		fixedContentPos: false
 	});
+	
+	
+	var galleryThumbs = new Swiper('.carusel-text--js', {
+		init: false,
+		slidesPerView: 1,
+		// loop: true,
+		loopedSlides: 5, //looped slides should be the same
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		observer: true,
+		observeParents: true, 
+		slideToClickedSlide: true,
+		centeredSlides: true,
+		breakpointsInverse: true,
+		breakpoints: {
+			// when window width is <= 320px
+			768: {
+				
+				freeMode: true,
+				spaceBetween: 10,
+				slidesPerView: 8,
+				direction: 'vertical',
+			} ,
+			
+		576: {
+				
+				 
+				slidesPerView: 2, 
+			} ,
 
-});
-
-
-// Для лэзи загрузки
-
-
-document.addEventListener("DOMContentLoaded", function () {
-	let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-	let active = false;
-
-	const lazyLoad = function () {
-		if (active === false) {
-			active = true;
-
-			setTimeout(function () {
-				lazyImages.forEach(function (lazyImage) {
-					if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-						lazyImage.src = lazyImage.dataset.srcset;
-						lazyImage.classList.remove("lazy");
-
-						lazyImages = lazyImages.filter(function (image) {
-							return image !== lazyImage;
-						});
-
-						if (lazyImages.length === 0) {
-							document.removeEventListener("scroll", lazyLoad);
-							window.removeEventListener("resize", lazyLoad);
-							window.removeEventListener("orientationchange", lazyLoad);
-							window.addEventListener("DOMContentLoaded", lazyLoad);
-						}
-					}
-				});
-
-				active = false;
-			}, 200);
-		}
-	};
-
-	document.addEventListener("scroll", lazyLoad);
-	window.addEventListener("resize", lazyLoad);
-	window.addEventListener("orientationchange", lazyLoad);
-	window.addEventListener("DOMContentLoaded", lazyLoad);
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-	var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
-
-	if ("IntersectionObserver" in window) {
-		let lazyBackgroundObserver = new IntersectionObserver(function (entries, observer) {
-			entries.forEach(function (entry) {
-				if (entry.isIntersecting) {
-					entry.target.classList.add("visible");
-					lazyBackgroundObserver.unobserve(entry.target);
-				}
-			});
+			}
+		});
+		
+		
+		var galleryTop = new Swiper('.pink-block__slider--js', {
+			init: false,
+			spaceBetween: 10,
+			// loop: true,
+			navigation: {
+				nextEl: '.pink-block__btn-control--next',
+				// prevEl: '.swiper-button-prev',
+			},
+			thumbs: {
+				swiper: galleryThumbs,
+			},
 		});
 
-		lazyBackgrounds.forEach(function (lazyBackground) {
-			lazyBackgroundObserver.observe(lazyBackground);
-		});
-	}
+	$('.s-look__link').click(function(){
+		var $index = $(this).parent().index();
+		setTimeout(() => {
+			
+			galleryThumbs.init();
+			galleryTop.init();
+		}, 200);
+		
+		setTimeout(() => { 
+			galleryThumbs.slideTo($index); 
+			galleryTop.slideTo($index); 
+			console.log($index);
+		//  $(".carusel-text__slide").eq($index).click();
+		  
+		}, 300);
+
+	});
+ 
+
+
+
+	// })
+	$(".accordion__btn").click(function () {
+		$(this).toggleClass('active').next().slideToggle().siblings('.accordion__toggle-block').slideUp();
+		// $(this).next().siblings().slideUp();
+		$(this).siblings().removeClass('active');
+	})
+
+
 });
