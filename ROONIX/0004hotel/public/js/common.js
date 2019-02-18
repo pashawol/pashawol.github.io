@@ -68,7 +68,7 @@ jQuery(document).ready(function ($) {
 		// конец добавил
 	}
 
-	if (window.matchMedia("(min-width: 576px)").matches) {
+	if (window.matchMedia("(min-width: 768px)").matches) {
 
 		$(".toggle-menu-mobile--js").removeClass("on");
 		// $("body").removeClass("fixed");
@@ -257,7 +257,7 @@ $('.card-head__slider-small, .card-head__slider-big ')
 		
 			ymaps.ready(function () {
 			var myMap = new ymaps.Map('map1', {
-					center: [44.945660074568785,37.30175149999996],
+					center: [44.94566007456,37.303],
 					zoom: 17,
 					behaviors: ['drag'],
 	
