@@ -358,6 +358,9 @@ jQuery(document).ready(function ($) {
 		modal.find('img').attr('src', thPar.data('img'));
 		modal.find('.text-primary.h6').text(thPar.find('.text-primary.h6').text());
 		modal.find('.text-gray').text(thPar.find('.text-gray').text());
+		// добавил
+		modal.find('.s-team__text-block').html(thPar.find('.text-js').html());
+		// /добавил
 		if ((thParLeft + modal.width()) > $(window).width()) {
 			modal.css({
 				"left": 0,
