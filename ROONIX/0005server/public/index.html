@@ -9,103 +9,258 @@
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
     <!-- Custom Browsers Color-->
-    <meta name="theme-color" content="#3361d8">
+    <meta name="theme-color" content="#3395ff"><link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
     <div class="main-wrapper">
-      <div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+      <!-- start top-nav-->
+      <div class="top-nav"><a class="top-nav__item" href="#">Файл</a><a class="top-nav__item" href="#">Вид</a><a class="top-nav__item top-nav__item--active" href="#">Режим</a><a class="top-nav__item" href="#">Схема</a><a class="top-nav__item" href="#">Окно</a><a class="top-nav__item" href="#">Помощь</a>
       </div>
-      <div class="menu-mobile menu-mobile--js d-lg-none">
-        <div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+      <!-- end top-nav-->
+      <div class="row no-gutters">
+        <div class="col-auto">
+          <!-- start s-left-->
+          <div class="s-left">
+            <div class="s-left__head group">
+              <div class="row">
+                <div class="col align-self-center">
+                  <div class="small strong">
+                    Станция  <span class="text-primary">SERVER</span></div>
+                </div>
+                <div class="col">
+                  <div class="s-left__head-block">
+                    <div class="s-left__title">Локально
+                    </div>
+                    <div>
+                      <div> <img class="res-i" src="img/calendar.png" alt=""/> 
+                        14.06.2016
+                      </div>
+                      <div class="strong small"> <img class="res-i" src="img/clock.png" alt=""/> 
+                        23:06:30
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="s-left__head-block">
+                    <div class="s-left__title">UTC
+                    </div>
+                    <div>
+                      <div> <img class="res-i" src="img/calendar.png" alt=""/> 
+                        14.06.2016
+                      </div>
+                      <div class="strong small">  <img class="res-i" src="img/clock.png" alt=""/> 
+                         23:06:30
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-wrap"> 
+              <div class="group">
+                <div class="ttu strong text-secondary mb-1"> Типовая операция</div>
+                <div class="form-wrap__input-wrap form-wrap__input-wrap--search form-group mb-0"> <input class="form-wrap__input form-control" type="text" value="Поляризация ПРД: Правая"/>
+                  <div class="form-wrap__btn-wrap-search">
+                    <button class="btn" type="button">Просмотр</button>
+                    <button class="btn btn-blue" type="button">Очистить</button>
+                  </div>
+                </div>
+                <!-- +e.input-wrap-->
+              </div>
+              <div class="group">
+                <div class="group-top">
+                  <div class="group-top__btn"><img src="img/icon-1.png" alt=""/>
+                  </div>
+                  <div class="group-top__btn"><img src="img/move.png" alt=""/>
+                  </div>
+                </div>
+                <div class="row row--small">
+                  <div class="col-4">
+                    <div class="form-wrap__input-wrap form-wrap__input-wrap--search form-group mb-0"> 
+                      <label><span class="d-block text-primary"> КА</span>
+                        <select class="form-wrap__input form-control">
+                          <option value="#">Исходное состояние</option>
+                          <option value="#">Исходное состояние</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-wrap__input-wrap form-wrap__input-wrap--search form-group mb-0"> 
+                      <label><span class="d-block text-primary">Режим</span>
+                        <select class="form-wrap__input form-control">
+                          <option value="#">Калибровка</option>
+                          <option value="#">Калибровка</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-wrap__input-wrap form-wrap__input-wrap--search form-group mb-0"> 
+                      <label><span class="d-block text-primary"> Режим АС</span>
+                        <select class="form-wrap__input form-control">
+                          <option value="#">Исходное состояние</option>
+                          <option value="#">Исходное состояние</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-8">
+                    <table class="w-100">
+                      <tr>
+                        <td class="border-0 text-center"> </td>
+                        <td class="border-0 text-center">АЗ</td>
+                        <td class="border-0 text-center">УМ</td>
+                      </tr>
+                      <tr>
+                        <td>Текущий % ЦУ</td>
+                        <td>244°07'12"</td>
+                        <td>025°07'12"</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="col-4">
+                    <div class="text-center">
+                      <div class="my-3">Загрузить ЦУ</div>
+                      <div class="btn-group mb-3">
+                        <button class="btn" type="button">#1</button>
+                        <button class="btn btn-blue" type="button"> #2</button>
+                      </div><br/>
+                      <div class="form-wrap__label"> 
+                        <div class="form-wrap__green">
+                        </div>Наличие ЦУ
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="group">
+                <div class="row">
+                  <div class="col-8"> 
+                    <div class="ttu strong text-secondary mb-1">
+                       Передача <img src="img/right_arrow.png" alt=""/></div>
+                  </div>
+                  <div class="col-4">
+                    <div class="row"> 
+                      <div class="col ttu strong text-secondary mb-1">
+                         Прием<img src="img/right_arrow_copy.png" alt=""/></div>
+                      <div class="col-auto">
+                        <div class="group-top">
+                          <div class="group-top__btn"><img src="img/icon-1.png" alt=""/>
+                          </div>
+                          <div class="group-top__btn"><img src="img/move.png" alt=""/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row--small">
+                  <div class="col-4">
+                    <div class="form-wrap__input-wrap form-group mb-0"> 
+                      <label><strong class="d-block">Поляр. ПРД</strong>
+                        <select class="form-wrap__input form-control">
+                          <option value="#">Исходное состояние</option>
+                          <option value="#">Исходное состояние</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-wrap__input-wrap form-group mb-0"> 
+                      <label><strong class="d-block">Положение УМ</strong>
+                        <select class="form-wrap__input form-control">
+                          <option value="#">Исходное состояние</option>
+                          <option value="#">Исходное состояние</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-wrap__input-wrap form-group mb-0"> 
+                      <label><strong class="d-block">Конв. вниз</strong>
+                        <select class="form-wrap__input form-wrap__input--warning form-control">
+                          <option value="#">Исходное состояние</option>
+                          <option value="#">Исходное состояние</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-wrap__input-wrap form-group mb-0"> 
+                      <label><strong class="d-block">Мощность УМ</strong>
+                        <select class="form-wrap__input form-wrap__input--success form-control">
+                          <option value="#">Исходное состояние</option>
+                          <option value="#">Исходное состояние</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-wrap__input-wrap form-group mb-0"> 
+                      <label><strong class="d-block">Атт. УМ</strong>
+                        <select class="form-wrap__input form-control">
+                          <option value="#">Исходное состояние</option>
+                          <option value="#">Исходное состояние</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4"></div>
+                  <div class="col-4">
+                    <div class="form-wrap__input-wrap form-group mb-0"> 
+                      <label><strong class="d-block">Частота</strong>
+                        <select class="form-wrap__input form-wrap__input--warning form-control">
+                          <option value="#">Исходное состояние</option>
+                          <option value="#">Исходное состояние</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="form-wrap__input-wrap form-group mb-0"> 
+                      <label><strong class="d-block">Излучение</strong>
+                        <select class="form-wrap__input form-control">
+                          <option value="#">Исходное состояние</option>
+                          <option value="#">Исходное состояние</option>
+                        </select>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end s-left-->
         </div>
-        <div class="menu-mobile__inner">
-          <ul class="menu-mobile__nav">
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Продукция </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Услуги  </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Подбор септика   </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Акции </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> О компании  </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Доставка и оплата </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Клиентам  </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#"> Наши работы   </a>
-            </li>
-            <li class="menu-mobile__item"><a class="menu-mobile__link" href="#">Контакты </a>
-            </li>
-          </ul>
-          <div class="text-right"></div>
-        </div>
-      </div>
-      <!--  мобильное меню-->
-      <!-- start HEADER.header-->
-      <header class="header">
-        <!-- start .top-line-->
-        <div class="top-line">
-        </div>
-        <!-- end .top-line-->
-        <!-- start top-nav-->
-        <div class="top-nav">
-          <div class="container">
-            <ul class="top-nav__nav">
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Продукция </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Услуги  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Подбор септика   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Акции </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> О компании  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Доставка и оплата </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Клиентам  </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#"> Наши работы   </a>
-              </li>
-              <li class="top-nav__item"><a class="top-nav__link" href="#">Контакты </a>
-              </li>
-            </ul>
+        <div class="col">
+          <div class="row no-gutters">
+            <div class="col">
+              <div class="top-line text-center">Схема</div>
+              <!-- start s-main-->
+              <div class="s-main"><img class="res-i" src="img/schema.png" alt=""/>
+              </div>
+              <!-- end s-main-->
+            </div>
+            <div class="col-auto">
+              <div class="top-line">Объекты</div>
+              <!-- start s-right-->
+              <div class="s-right section lazy-background" id="s-right">
+                <div class="container">
+                  <div class="section-title text-center">
+                    <h2>s-right</h2>
+                  </div>
+                  <div class="row"></div>
+                </div>
+              </div>
+              <!-- end s-right-->
+            </div>
           </div>
         </div>
-        <!-- end top-nav-->
-      </header>
-      <!-- end HEADER.header-->
-      <!-- start header-block-->
-      <div class="header-block" id="header-block">
-        <div class="container">
-          <h1></h1>
-          <div class="row"></div>
-        </div>
       </div>
-      <!-- end header-block-->
-      <!-- start s-form-->
-      <div class="s-form section" id="s-form">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-form</h2>
-          </div>
-          <div class="row"></div>
-        </div>
-      </div>
-      <!-- end s-form-->
-      <!-- start s-contact-->
-      <div class="s-contact section" id="s-contact">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>s-contact</h2>
-          </div>
-          <div class="row"></div>
-        </div>
-      </div>
-      <!-- end s-contact-->
       <footer class="footer">
         <div class="container">footer</div>
       </footer>
