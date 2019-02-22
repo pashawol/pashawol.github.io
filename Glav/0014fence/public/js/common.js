@@ -341,4 +341,201 @@ jQuery(document).ready(function ($) {
 			$("html, .top-nav.fixed").removeClass("fixed-brand");
 		}
 	);
+
+	
+	// 22.02
+
+
+	$('.slider-for2').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false, 
+		 // infinite: false,
+		 //  loop: false,   
+	
+		asNavFor: '.slider-nav2',
+		arrows: true,  
+					prevArrow: arrl2,
+					nextArrow: arrr2, 
+		 
+	});
+	$('.slider-nav2').slick({
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for2',
+		dots: false,
+		arrows: false, 
+			//  infinite: false,
+			// loop: false,  
+			focusOnSelect: true,
+		// centerMode: true,
+		 // vertical: true,
+		
+			vertical: true,
+					verticalSwiping: true,
+			responsive: [
+			
+			{
+				breakpoint: 1440,
+				settings: {
+					slidesToShow: 5,
+				 // vertical: false,
+				 //  verticalSwiping: false,
+				 
+				}
+	
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 4,
+				 // vertical: false,
+				 //  verticalSwiping: false,
+				 
+				}
+	
+			},
+	
+			 {
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+					
+				}
+	
+			},
+			 {
+				breakpoint: 576,
+				settings: {
+				 slidesToShow: 3, 
+				 vertical: false,
+					verticalSwiping: false,
+				 
+				}
+	
+			},
+	
+	
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
+	
+	});
+	$('.s-gal__slider,'+
+	' .slider-for ,'+
+	' .slider-for2 ')
+.on('lazyLoaded', function(event, slick, image, imageSource){
+	 image.parent().css('background-image', 'url(' + image.attr('src') + ')');
 });
+});
+
+
+// Для лэзи загрузки
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  let active = false;
+
+  const lazyLoad = function() {
+    if (active === false) {
+      active = true;
+
+      setTimeout(function() {
+        lazyImages.forEach(function(lazyImage) {
+          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+            lazyImage.src = lazyImage.dataset.src;
+            // lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.classList.remove("lazy");
+
+            lazyImages = lazyImages.filter(function(image) {
+              return image !== lazyImage;
+            });
+
+            if (lazyImages.length === 0) {
+              document.removeEventListener("scroll", lazyLoad);
+              window.removeEventListener("resize", lazyLoad);
+							window.removeEventListener("orientationchange", lazyLoad);
+							window.addEventListener("DOMContentLoaded", lazyLoad);
+            }
+          }
+        });
+
+        active = false;
+      }, 200);
+    }
+  };
+
+  document.addEventListener("scroll", lazyLoad);
+  window.addEventListener("resize", lazyLoad);
+	window.addEventListener("orientationchange", lazyLoad);
+	window.addEventListener("DOMContentLoaded", lazyLoad);
+});
+
+
+// лэзи 
+document.addEventListener("DOMContentLoaded", function() {
+  let lazyImages = [].slice.call(document.querySelectorAll(".lazy-bg"));
+  let active = false;
+
+  const lazyLoad = function() {
+    if (active === false) {
+      active = true;
+
+      setTimeout(function() {
+        lazyImages.forEach(function(lazyImage) {
+          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+            lazyImage.parentElement.style.backgroundImage = 'url(' + lazyImage.dataset.src +')';
+            lazyImage.src = lazyImage.dataset.src;
+            // lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.classList.remove("lazy");
+
+            lazyImages = lazyImages.filter(function(image) {
+              return image !== lazyImage;
+            });
+
+            if (lazyImages.length === 0) {
+              document.removeEventListener("scroll", lazyLoad);
+              window.removeEventListener("resize", lazyLoad);
+							window.removeEventListener("orientationchange", lazyLoad);
+							window.addEventListener("DOMContentLoaded", lazyLoad);
+            }
+          }
+        });
+
+        active = false;
+      }, 200);
+    }
+  };
+
+  document.addEventListener("scroll", lazyLoad);
+  window.addEventListener("resize", lazyLoad);
+	window.addEventListener("orientationchange", lazyLoad);
+	window.addEventListener("DOMContentLoaded", lazyLoad);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
+});
+jQuery(document).ready(function ($) {
+
+	
+})
