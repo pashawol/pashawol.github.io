@@ -8039,6 +8039,7 @@ body.fixed-drop::before,body.fixed::before {
 .mfp-with-zoom .mfp-container,.mfp-with-zoom.mfp-bg {
   opacity: 0;
   -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -8408,6 +8409,10 @@ strong,.strong {
 .accordion__content {
   display: none;
   padding-bottom: 30px;
+}
+
+body .confirm_coo_data__close {
+  top: 0;
 }
 
 .icon {
