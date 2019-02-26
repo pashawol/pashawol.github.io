@@ -818,6 +818,23 @@ $(".js-range-slider").ionRangeSlider({
 				// 	clickable: true,
 				// },
 			});
+
+			// timer jqueryscript.net/time-clock/Minimal-jQuery-Countdown-Plugin-with-Custom-Timezone-Countdown-Clock.html
+			$('.example-timer').countdown({
+				date: '03/26/2019 16:20:59',
+				offset: 5,
+				// Countdown text
+				day: 'День',
+				days: 'Дней',
+				hour: 'Час',
+				hours: 'Часов',
+				minute: 'Минута',
+				minutes: 'Минут',
+				second: 'Секунда',
+				seconds: 'Секунд'
+				}, function () {
+					alert('Merry Christmas!');
+				});
 });
 
 
