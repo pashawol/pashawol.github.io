@@ -25,5 +25,14 @@ jQuery(document).ready(function ($) {
 		mainClass: 'my-mfp-zoom-in',
 		tClose: 'Закрыть (Esc)',
 	});
+	$('.accordion-toggle-js').click(function(){
+		$(this).toggleClass("active")
+		.parents('.accordion-parent').find('.accordion-toggle-block-js').toggle().toggleClass("active");
+	})
+	
+	$('.s-right__title').click(function(){
+		$(this).next().slideToggle();
+	})
+
 });
  
