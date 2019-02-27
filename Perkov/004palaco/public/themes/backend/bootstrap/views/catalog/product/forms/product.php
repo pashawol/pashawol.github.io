@@ -1,0 +1,150 @@
+<?php
+
+return array(
+    'attributes'=>array(
+        'class'=>'well',
+        'enctype'=>'multipart/form-data',
+    ),
+    'elements'=>array(
+        'file'=>array(
+            'type'=>'file',
+            'visible'=>true,
+        ),
+        'short_text'=>array(
+            'type'=>\Siix::module('base')->textEditor,
+            'hint'=>'Клавиша <strong>Enter</strong> создает новый абзац.<br />Чтобы просто перейти на новую строку, используйте сочетание клавиш <strong>Shift+Enter</strong>.',
+            'htmlOptions'=>array(
+                'style'=>'width: 100%; height: 300px;',
+            ),
+        ),
+        'page'=>array(
+            'type'=>'form',
+            'elements'=>array(
+                'title'=>array(
+                    'type'=>'text',
+                    'maxlength'=>255,
+                    'attributes'=>array(
+                        'label'=>'Название',
+                        'class'=>'span6',
+                    ),
+                ),
+                'orderPosition'=>array(
+                    'type'=>'\sii\web\widgets\PositionSelector',
+                    'titleField'=>'title',
+                ),
+                'seo'=>array(
+                    'type'=>'form',
+                    'skipEmpty'=>true,
+                    'elements'=>array(
+                        'title'=>array(
+                            'type'=>'text',
+                            'maxlength'=>255,
+                            'attributes'=>array(
+                                'class'=>'span6',
+                            ),
+                        ),
+                        'description'=>array(
+                            'type'=>'text',
+                            'attributes'=>array(
+                                'class'=>'span6',
+                            ),
+                        ),
+                        'keywords'=>array(
+                            'type'=>'text',
+                            'hint'=>'Теги страницы через запятую.',
+                            'attributes'=>array(
+                                'class'=>'span6',
+                            ),
+                        ),
+                        'header'=>array(
+                            'type'=>'text',
+                            'maxlength'=>255,
+                            'attributes'=>array(
+                                'class'=>'span6',
+                            ),
+                        ),
+                    ),
+                ),
+                'url'=>array(
+                    'type'=>'form',
+                    'skipEmpty'=>true,
+                    'elements'=>array(
+                        'slug'=>array(
+                            'type'=>'text',
+                            'maxlength'=>100,
+                            'attributes'=>array(
+                                'class'=>'span6',
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+        ),
+        'tabs'=>array(
+            'type'=>'\sii\web\form\HasManyRelationForm',
+            'elements'=>array(
+                'name'=>array(
+                    'type'=>'text',
+                ),
+                'description'=>array(
+                    'type'=>\Siix::module('base')->textEditor,
+                    'hint'=>'Клавиша <strong>Enter</strong> создает новый абзац.<br />Чтобы просто перейти на новую строку, используйте сочетание клавиш <strong>Shift+Enter</strong>.',
+                    'htmlOptions'=>array(
+                        'style'=>'width: 100%; height: 300px;',
+                    ),
+                ),
+                'order'=>array(
+                    'type'=>'text',
+                    'maxlength'=>2,
+                    'attributes'=>array(
+                        'class'=>'span1',
+                    ),
+                ),
+            ),
+        ),
+        'params'=>array(
+            'type'=>'\sii\web\form\HasManyRelationForm',
+            'title'=>'Характеристики <a href="#" title="Добавить характеристику" class="add" id="add-param"></a>',
+            'elements'=>array(
+                'icon'=>array(
+                    'class'=>'icon_id',
+                    'type'=>'dropdownlist',
+                    'items'=>\Siix::model('catalog:ProductParam')->getIcons(),
+                ),
+                'name'=>array(
+                    'type'=>'text',
+                ),
+                'value'=>array(
+                    'type'=>'text',
+                ),
+			/*'haracter'=>array(
+                    'type'=>'text',
+                ),*/
+                'haracter'=>array(
+                    'type'=>\Siix::module('base')->textEditor,
+                    'hint'=>'Клавиша <strong>Enter</strong> создает новый абзац.<br />Чтобы просто перейти на новую строку, используйте сочетание клавиш <strong>Shift+Enter</strong>.',
+                    'htmlOptions'=>array(
+                        'style'=>'width: 100%; height: 70px;',
+                    ),
+                ),
+            ),
+            'renderer'=>array(
+                'class'=>'\sii\web\form\renderers\TableRenderer',
+                'addButtonSelector'=>'#add-param',
+            ),
+            'setModelAttributes'=>function($model, $data, $index) {
+                    $model->setAttributes($data);
+                    return empty($model->value) || empty($model->name) ? null : $model;
+            },
+        ),
+    ),
+    'buttons'=>array(
+        'save'=>array(
+            'type'=>'submit',
+            'label'=>'Сохранить',
+            'attributes'=>array(
+                'class'=>'btn btn-large',
+            ),
+        ),
+    ),
+);

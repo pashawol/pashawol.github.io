@@ -1,0 +1,68 @@
+body {
+    background: #eee;
+    font-family: Calibri, Arial, sans-serif;
+    color: #333;
+}
+
+#login {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    background: #fff url('lock.png') right top no-repeat;
+}
+
+form { margin: 0; padding: 0; font-size: 14px; }
+form p.error { color: #FF0000; }
+form div { margin-bottom: 10px; }
+form div label { display: block; margin-bottom: 2px; font-weight: bold; }
+form input.text {
+    width: 160px;
+    padding: 2px;
+    border: 1px solid #ccc;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+}
+form div.captcha {}
+form div.captcha img { display: block; float: left; margin: 0 10px 10px 0; cursor: pointer; }
+form div.captcha span { display: inline-block; width: 150px; font-size: 11px; line-height: 110%; color: #666; }
+form div.captcha input { width: 100px; }
+form div.buttons { margin-top: 20px; }
+form div.buttons input {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5f5f5), color-stop(1, #e3e3e3) );
+    background:-moz-linear-gradient( center top, #f5f5f5 5%, #e3e3e3 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#e3e3e3');
+    background-color:#f5f5f5;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+    border:1px solid #dbdbdb;
+    display:inline-block;
+    color:#444;
+    font-size:14px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #ffffff;
+    cursor: pointer;
+}
+form div.buttons input:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e3e3e3), color-stop(1, #f5f5f5) );
+    background:-moz-linear-gradient( center top, #e3e3e3 5%, #f5f5f5 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e3e3e3', endColorstr='#f5f5f5');
+    background-color:#e3e3e3;
+}
+form div.buttons input:active {
+    position:relative;
+    top:1px;
+}
+
+.errorSummary { color: red; }
+.errorSummary li { margin-left: -40px; list-style-type: none; }

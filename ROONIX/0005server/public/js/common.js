@@ -31,7 +31,7 @@ jQuery(document).ready(function ($) {
 	})
 	
 	$('.s-right__title').click(function(){
-		$(this).next().slideToggle();
+		$(this).toggleClass("active").next().slideToggle();
 	})
 
 });

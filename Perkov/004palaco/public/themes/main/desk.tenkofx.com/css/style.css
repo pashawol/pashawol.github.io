@@ -1,0 +1,1617 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-weight:100;
+}
+body {
+    line-height: 1;
+    background: #fff;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+
+    border-spacing: 0;
+}
+/* MAIN CSS */
+.clr {
+    clear:both;
+    height: 0;
+}
+
+header, footer, nav, article, section {display: block;}
+
+/* ------------------------------ */
+
+body{background: transparent url("../images/body-bg.png") repeat; font-family: Tahoma, Geneva, sans-serif; font-size: 12px; color: #191919;  min-width: 960px;}
+
+
+header{width: 100%; border-top: 2px solid #be1e2d; border-bottom: 2px solid #e1e1e1; background-color: #fff; z-index: 2; position: relative;}
+
+header > div.container{width: 960px; height: 90px; position: relative; margin: 0 auto;}
+
+header > div.container > div.logo{position: absolute; top: 33px; left: 0;}
+
+header > div.container > div.menu{position: absolute; top: 35px; left: 267px;}
+header > div.container > div.menu li{float: left;  padding-left: 28px; padding-right: 26px; height: 17px; line-height: 16px; border-right: 1px solid #d9d9d9;}
+header > div.container > div.menu li.last{border: none;}
+header > div.container > div.menu li > a,
+header > div.container > div.menu li > span{color: #3c84b7; text-decoration: none; display: inline-block; padding-bottom: 1px;}
+header > div.container > div.menu li a.tosite{font-weight: bold;}
+header > div.container > div.menu li > span{cursor: pointer;}
+header > div.container > div.menu li > a:hover,
+header > div.container > div.menu li > span:hover{text-decoration: underline;}
+header > div.container > div.menu li.liveChat a{background: transparent url("../images/live-chat-ico.png") no-repeat 0 4px; padding-left: 22px;}
+
+header > div.container > div.select{width: 107px; height: 24px; position: absolute; top: 33px; right: 0; z-index: 1; background: transparent url("../images/head-select-bg.png") no-repeat 0 0; font-size: 11px; color: #646464; cursor: default;}
+header > div.container > div.select p{padding-top: 6px; padding-left: 30px; position: relative; padding-bottom: 6px;}
+header > div.container > div.select p span{position: absolute; top: 5px; left: 5px; width: 16px; height: 14px; display: block;}
+header > div.container > div.select p span.ru{background: transparent url("../images/lang-flag.png") no-repeat 0 0;}
+header > div.container > div.select p span.en{background: transparent url("../images/lang-flag.png") no-repeat 0 -14px;}
+header > div.container > div.select > div.clickMenu{display: none; background:#e2e2e2; border:1px solid #ccc; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+header > div.container > div.select > div.clickMenu.active{display: block;}
+header > div.container > div.select > div.clickMenu ul { min-width:100%;}
+header > div.container > div.select > div.clickMenu ul li {white-space:nowrap;}
+header > div.container > div.select > div.clickMenu ul li:hover{background-color:#d1d1d1}
+
+
+nav{width: 100%; background: transparent url("../images/nav-bg.png") repeat-x 0 0; margin-top: -2px; margin-bottom: -9px; z-index: 1; position: relative;}
+nav > div.container{width: 960px; margin: 0 auto; height: 44px; position: relative;}
+nav > div.container ul{top: -3px; position: relative; padding-left: 2px;}
+nav > div.container ul > li{float: left; background: transparent url("../images/nav-menu-border.png") no-repeat right 17px; margin-left: -2px;}
+nav > div.container ul > li.last{background: none;}
+nav > div.container ul > li.home{width: 44px; text-align: center;}
+nav > div.container ul > li > a{display: block; padding: 17px 32px 19px 31px; color: #232323; text-decoration: none; position: relative; margin-right: -1px; background: transparent url("../images/nav-active.png") no-repeat -1000px -1000px; font-size: 14px;}
+nav > div.container ul > li > a:before{content: ''; display: block; width: 4px; height: 50px; position: absolute; top: 0; left: -4px; background: transparent url("../images/nav-active.png") no-repeat -1000px -1000px;}
+nav > div.container ul > li > a:after{content: ''; display: block; background: transparent url("../images/nav-active.png") no-repeat -1000px -1000px; position: absolute; bottom: -5px; left: 50%; margin-left: -20px; width: 40px; height: 8px;}
+nav > div.container ul > li.home a{padding: 19px 3px 0 0; width: 42px; height: 31px;}
+nav > div.container ul > li.home a > span{background: transparent url("../images/home-ico.png") no-repeat 0 0; display: inline-block; width: 15px; height: 12px;}
+nav > div.container ul > li.active a{background-position: right -50px; cursor: default;}
+nav > div.container ul > li.active a:before{background-position: 0 0;}
+nav > div.container ul > li.active a:after{background-position: right 0;}
+nav > div.container ul > li.home a:after{margin-left: -22px;}
+nav > div.container ul > li:hover{margin-left: -2px;}
+nav > div.container ul > li > a:hover{border-top: 2px solid #de8e96; top: 1px; padding-top: 14px;}
+nav > div.container ul > li.active a:hover{border-top: none; top: 0; padding-top: 17px;}
+nav > div.container ul > li.home a:hover{border-top: none; padding-top: 19px; top: 0; }
+nav > div.container ul > li.home a:hover span,
+nav > div.container ul > li.home.active a span{background-position: 0 -12px;}
+nav > div.container ul > li.home.active a span{cursor: default;}
+nav > div.container ul > li.active > ul{position: absolute; top: 48px; left: 0; z-index: 2;}
+nav > div.container ul > li.active > ul > li{background: none;}
+nav > div.container ul > li.active > ul > li > a{padding-bottom: 16px; padding-top: 14px; font-size: 12px; top: 1px; background: none; cursor: pointer;}
+nav > div.container ul > li.active > ul > li.first > a{padding-left: 10px;}
+nav > div.container ul > li.active > ul > li > a:hover,
+nav > div.container ul > li.active > ul > li.active > a{border-top: none; border-bottom: 2px solid #be1e2d; padding-bottom: 14px; padding-top: 14px;}
+nav > div.container ul > li.active > ul > li.active > a:hover,
+nav > div.container ul > li.active > ul > li > a:hover{padding-top: 15px;}
+nav > div.container ul > li.active > ul > li.active > a{cursor: default;}
+nav > div.container ul > li.active > ul > li.active > a:before,
+nav > div.container ul > li.active > ul > li > a:before{background: none;}
+nav > div.container ul > li.active > ul > li.active > a:after,
+nav > div.container ul > li.active > ul > li > a:after{background: none;}
+nav > div.container-2lvl{height: 45px;}
+nav > div.container ul > li.mail{padding: 15px 30px;}
+nav > div.container ul > li.mail a{display: block; width: 16px; height: 17px; background: transparent url("../images/nav-mail-bg.png") no-repeat; padding: 0;}
+nav > div.container ul > li.mail a:before{display: none;}
+nav > div.container ul > li.mail a:after{display: none;}
+nav > div.container ul > li.mail.mailUnactive a{background-position: 0 0;}
+nav > div.container ul > li.mail.mailActive a{background-position: 0 -17px;}
+nav > div.container ul > li.mail a:hover{border: none; top: 0;}
+nav > div.container ul > li.mail.mailActive a:hover{background-position: 0 -34px;}
+nav > div.container ul > li.mail.mailActive-hover a{background-position: 0 -34px;}
+
+section#body{width: 960px; margin: 0 auto; padding-top: 33px; padding-bottom: 48px;}
+
+/*  левый блок в личном кабинете  */
+aside#privateOffice-left{width: 210px; float: left; margin-right: 30px; z-index: 11; position: relative;}
+
+aside#privateOffice-left > section{margin-bottom: 30px; background-color: #f5f5f5; border: 1px solid #d3d3d3; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php"); -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow:0 1px 1px rgba(0, 0, 0, 0.1);}
+aside#privateOffice-left > section > div.title{border-top: 1px solid #fff; -khtml-border-radius: 3px 3px 0 0; -moz-border-radius:  3px 3px 0 0; -webkit-border-radius:  3px 3px 0 0; border-radius:  3px 3px 0 0; behavior: url("/PIE.php");}
+aside#privateOffice-left > section > div.title > a{color: #898989; text-decoration: none; display: block; position: relative; background:  transparent url("../images/aside-privateOffice-title-bg.png") repeat-x 0 0; padding: 6px 0 8px 9px; border-bottom: 2px solid #bbb;}
+aside#privateOffice-left > section > div.title > a:before{content: ''; display: block; width: 9px; height: 7px; background: transparent url("../images/drop-block-arrow.png") no-repeat 0 -7px; position: absolute; top: 11px; right: 10px;}
+aside#privateOffice-left > section > div.title > a:hover:before{background-position: 0 -21px;}
+aside#privateOffice-left > section.close > div.title > a:before{background-position: 0 0;}
+aside#privateOffice-left > section.close > div.title > a:hover:before{background-position: 0 -14px;}
+aside#privateOffice-left > section > div.title > a > span{color: #000; font-size: 14px;}
+aside#privateOffice-left > section > div.title > a > em{color: #000; font-style: normal;}
+aside#privateOffice-left > section.active > div.title > a{border-bottom: 2px solid #98b411;}
+aside#privateOffice-left > section.unactive > div.title > a{border-bottom: 2px solid #b91c2a;}
+aside#privateOffice-left > section.status > div.container{border-top: 1px solid #fcfcfc; padding-left: 33px; padding-right: 10px; padding-top: 7px; margin-bottom: -4px;}
+aside#privateOffice-left > section.status > div.container > p{font-size: 13px; line-height: 14px; color: #000; margin-bottom: 14px; position: relative;}
+aside#privateOffice-left > section.status > div.container > p:before{background: transparent url("../images/privateOffice-action-icons.png") no-repeat; content: ''; display: block; position: absolute;}
+aside#privateOffice-left > section.status > div.container > p.name:before{width: 11px; height: 13px; top: 2px; left: -20px; background-position: 0 0;}
+aside#privateOffice-left > section.status > div.container > p.date:before{width: 14px; height: 14px; top: 1px; left: -23px; background-position: 0 -13px;}
+aside#privateOffice-left > section.status > div.container > p.status:before{width: 15px; height: 16px; top: -1px; left: -24px; background-position: 0 -27px;}
+aside#privateOffice-left > section.status > div.container > p.country:before{width: 16px; height: 17px; top: -1px; left: -24px; background-position: 0 -43px;}
+aside#privateOffice-left > section.status > div.container > p.email:before{width: 16px; height: 17px; top: -1px; left: -24px; background-position: 0 -60px;}
+aside#privateOffice-left > section.status > div.container > p.tel:before{width: 16px; height: 17px; top: -1px; left: -24px; background-position: 0 -78px;}
+aside#privateOffice-left > section.status > div.container > p a{color: inherit; text-decoration: underline;}
+aside#privateOffice-left > section.status > div.container > p a:hover{text-decoration: none;}
+aside#privateOffice-left > section.status.unactive > div.container > p.dialogStatus:before{width: 13px; height: 17px; top: -1px; left: -24px; background-position: 0 -95px;}
+aside#privateOffice-left > section.status.active > div.container > p.dialogStatus:before{width: 13px; height: 17px; top: -1px; left: -24px; background-position: 0 -112px;}
+aside#privateOffice-left > section.status.active > div.container > p.status,
+aside#privateOffice-left > section.status.active > div.container > p.dialogStatus{color: #768d04;}
+aside#privateOffice-left > section.status.unactive > div.container > p.status,
+aside#privateOffice-left > section.status.unactive > div.container > p.dialogStatus{color: #b91c2a;}
+aside#privateOffice-left > section.counters{}
+aside#privateOffice-left > section.counters > div.container > ul > li{background: transparent url("../images/privateOffice-counters-border.png") repeat-x left bottom; padding: 10px 11px 9px 9px; color: #8f5700; position: relative;}
+aside#privateOffice-left > section.counters > div.container > ul > li.last{background: none;}
+aside#privateOffice-left > section.counters > div.container > ul > li > span{color: #6d6d6d; float: right;}
+aside#privateOffice-left > section.counters > div.container > ul > li > b{color: #878A13;}
+aside#privateOffice-left > section.counters > div.container > ul > li > b > em{position: relative; top: -8px; left: -1px; font-size: 9px; color: #c1c1c1; font-style: normal;}
+aside#privateOffice-left > section.counters > div.container > ul > li:hover{background-color: #f0f0f0;}
+aside#privateOffice-left > section.counters > div.container > ul > li > div.actions{display: none; z-index: 2; position: absolute; top: -3px; left: 207px; padding-left: 10px; background: transparent url("../images/privateOffice-footnote-bg.png") no-repeat 0 0; width: 300px; height: 36px;}
+aside#privateOffice-left > section.counters > div.container > ul > li > div.actions > ul{position: absolute; top: 0; left: 10px; background: transparent url("../images/privateOffice-footnote-bg.png") no-repeat right -36px; height: 36px; padding: 3px 0;}
+aside#privateOffice-left > section.counters > div.container > ul > li > div.actions > ul > li{float: left; width: 30px; height: 36px;  background: transparent url("../images/privateOffice-footnote-bg.png") no-repeat right 0; padding-right: 2px; margin-left: -1px; margin-right: 1px; text-align: center; padding-top: 1px; overflow: hidden; height: 28px;}
+aside#privateOffice-left > section.counters > div.container > ul > li > div.actions > ul > li.last{background: none;}
+aside#privateOffice-left > section.counters > div.container > ul > li > div.actions > ul > li > a{text-align: center; display: block; width: 30px; height: 25px; padding-top: 3px;}
+aside#privateOffice-left > section.counters > div.container > ul > li:hover > div.actions{display: block;}
+aside#privateOffice-left > section.close > div.title > a{border: none;}
+aside#privateOffice-left > section.close > div.container{display: none;}
+aside#privateOffice-left > div.actionBtns{margin-top: -10px;}
+aside#privateOffice-left > div.actionBtns div.btn{float: none; margin-right: 0; margin-bottom: 8px;}
+/*  -------------------------------------------------------------------------------  */
+
+/*  правый блок в личном кабинете  */
+section#privateOffice-right{width: 720px; float: left; margin-top: -2px; position: relative;}
+section#privateOffice-right a{color: #3C84B7; text-decoration: underline;}
+section#privateOffice-right a:hover{text-decoration: none;}
+
+/*  редактирование профиля  */
+section#privateOffice-right > h2{font-size: 18px; color: #161616; margin-bottom: 23px;}
+section#privateOffice-right > h2 span{color: #8C4600;}
+section#privateOffice-right > div.form{padding-top: 21px;}
+section#privateOffice-right > div.form fieldset > div.container{background-color: #fff;}
+section#privateOffice-right > div.form fieldset > div.container div.row > div.left{width: 200px;}
+section#privateOffice-right > div.form fieldset > div.container div.row > div.left div.backLink{padding-right: 20px; text-align: right; padding-top: 10px;}
+section#privateOffice-right > div.form fieldset > div.container div.row > div.left a{display: inline-block; color: #3C84B7; text-decoration: underline;}
+section#privateOffice-right > div.form fieldset > div.container div.row > div.left a:hover{text-decoration: none;}
+section#privateOffice-right > div.form fieldset > div.container div.row > div.right{width: 490px;}
+section#privateOffice-right > div.form fieldset > div.container div.row > div.right > div.codeBtn{padding-top: 10px;}
+section#privateOffice-right > div.form fieldset > div.container div.row > div.right > div.noAccess > span{font-size: 11px; color: #3C84B7; text-decoration: none; display: inline-block; padding-bottom: 1px; border-bottom: 1px dashed #3C84B7; padding-top: 10px; cursor: pointer; margin-bottom: 10px;}
+section#privateOffice-right > div.form fieldset > div.container div.row > div.right > div.noAccess > p{background: #F5F5F5; color: #555; padding: 5px 10px; line-height: 18px; width: 470px;}
+section#privateOffice-right > div.form fieldset > div.container div.row form.newcard{padding-top: 20px;}
+section#privateOffice-right > div.form fieldset > div.container div.row form.newcard div.row.btns div.right{width: 640px; text-align: center; float: none; padding-right: 19px;}
+section#privateOffice-right > div.form fieldset > div.container div.row form.newcard div.row.btns div.right div.btn{float: none; display: inline-block;}
+section#privateOffice-right .forget_tpsw{color: #3C84B7; border-bottom: 1px dashed #3C84B7; cursor: pointer; display: inline-block; margin: 10px 0 0 200px;}
+section#privateOffice-right .pswtnote{color: #468C00; display: inline-block; line-height: 18px; margin: 0 0 10px 19px;}
+/*  --------------------------------  */
+/*  список жалоб  */
+section#privateOffice-right > section.bigContent > h4{font-size: 14px; color: #292929; padding-bottom: 15px;}
+section#privateOffice-right > section.bigContent > h4 a{color: #0059B2; text-decoration: underline; font-size: 11px; margin-left: 10px}
+section#privateOffice-right > section.bigContent > h4 a:hover{text-decoration: none}
+section#privateOffice-right > section.bigContent{position: relative; padding: 10px 10px 25px; margin-bottom: 10px; background-color: #fff; border: 1px solid #d3d3d3; -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); behavior: url("/PIE.php"); -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+section#privateOffice-right > section.bigContent > div.addAbuse{padding-bottom: 15px;}
+section#privateOffice-right > section.bigContent > div.addAbuse span{color: #3c84b7; text-decoration: none; display: inline-block; margin-left: 20px; padding-bottom: 2px; border-bottom: 1px dashed #3c84b7; position: relative; cursor: pointer;}
+section#privateOffice-right > section.bigContent > div.addAbuse span:before{content: ''; display: block; background: transparent url("../images/input-actions-btns.png") no-repeat; background-position: 0 -26px; width: 13px; height: 13px; position: absolute; top: 1px; left: -20px; }
+section#privateOffice-right > section.bigContent > div.addForm{margin: 2px; background-color: #F9F9F9; padding: 15px; margin-bottom: 20px;}
+section#privateOffice-right > section.bigContent > div.addForm form:last-of-type{/*text-align: right; margin-bottom: -49px;*/}
+section#privateOffice-right > section.bigContent > div.addForm div.row{padding-bottom: 15px;}
+section#privateOffice-right > section.bigContent > div.addForm div.row.last{padding-bottom: 0;}
+section#privateOffice-right > section.bigContent > div.addForm div.row > div.left{width: 120px; float: left;}
+section#privateOffice-right > section.bigContent > div.addForm div.row > div.left > label{height: 29px; line-height: 29px; display: block; color: #666;}
+section#privateOffice-right > section.bigContent > div.addForm div.row > div.right{width: 510px; float: left;}
+section#privateOffice-right > section.bigContent > div.addForm div.row > div.right div.cusel{width: 406px !important;}
+section#privateOffice-right > section.bigContent > div.addForm form:last-of-type div.btn{display: inline-block; float: none; margin-right: 0; position: relative; /*top: -49px;*/}
+
+section#privateOffice-right > section.bigContent > div.abuseList{}
+section#privateOffice-right > section.bigContent > div.abuseList > table tr th:first-child,
+section#privateOffice-right > section.bigContent > div.abuseList > table tr td:first-child{width: 130px;}
+section#privateOffice-right > section.bigContent > div.abuseList > table tr .last{width: 60px;}
+section#privateOffice-right > section.bigContent > div.abuseList > table td span.close{display: block; width: 11px; height: 14px; background: transparent url("../images/close-abuse-ico.png") no-repeat;}
+section#privateOffice-right > section.bigContent > div.abuseList > table tr.new td,
+section#privateOffice-right > section.bigContent > div.abuseList > table tr.new td a{font-weight: bold;}
+section#privateOffice-right > section.bigContent > div.chatList{overflow: hidden;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block{width: 580px; padding-bottom: 10px; clear: both;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block > div.message{background-color: #F3F3F3; border: 1px solid #E3E3E3; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php"); color: #444; min-height: 25px; padding: 10px; position: relative;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block > div.message:before{content: ''; display: block; width: 18px; height: 18px; position: absolute; bottom: -18px; left: 20px; background: transparent url("../images/chats-arrow.gif") no-repeat 0 0;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block > div.message p{margin-top: 18px; line-height: 18px;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block > div.message p:first-child{margin-top: 0;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block > div.message > div.actions{position: absolute; top: 10px; right: 10px;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block > div.message > div.actions > span.edit{display: block; background: transparent url("../images/comment-edit-ico.png") no-repeat; width: 8px; height: 8px; cursor: pointer; float: left; margin-left: 4px;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block > div.message > div.actions > span.del{display: block; background: transparent url("../images/comment-del-ico.png") no-repeat; width: 8px; height: 9px; cursor: pointer; float: left; margin-left: 4px;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block > div.author{padding: 0 40px; color: #aaa; font-size: 11px; line-height: 22px;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block.user{float: right;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block.user > div.message{background-color: #F8F1D1; border: 1px solid #E5DFC5;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block.user > div.message:before{content: ''; display: block; width: 18px; height: 18px; position: absolute; bottom: -18px; left: auto; right: 20px; background: transparent url("../images/chats-arrow.gif") no-repeat 0 -22px;}
+section#privateOffice-right > section.bigContent > div.chatList > div.block.user > div.author{text-align: right;}
+
+section#privateOffice-right > section.bigContent > div.developmentsSort{padding-bottom: 20px;}
+section#privateOffice-right > section.bigContent > div.developmentsSort div.block{width: 349px; float: left;}
+section#privateOffice-right > section.bigContent > div.developmentsSort div.block div.cusel{width: 200px !important;}
+section#privateOffice-right > section.bigContent > div.developmentsSort div.block label{line-height: 29px; color: #666; display: block;}
+section#privateOffice-right > section.bigContent > div.developmentsSort div.block > div.container{width: 141px; float: left; margin-right: 10px;}
+section#privateOffice-right > section.bigContent > div.developmentsSort div.block > div.container.right{width: 140px;}
+section#privateOffice-right > section.bigContent > div.developmentsSort div.block > div.container label{float: left;}
+section#privateOffice-right > section.bigContent > div.developmentsSort div.block > div.container.left label{width: 30px;}
+section#privateOffice-right > section.bigContent > div.developmentsSort div.block > div.container.right label{width: 25px;}
+section#privateOffice-right > section.bigContent > div.developmentsSort div.block > div.container div.input{width: 94px; float: left;}
+section#privateOffice-right > section.bigContent > div.developmentsList > table tr td:first-child{color: #A4A4A4;}
+
+section#privateOffice-right > div.lastOperations{width: 458px; float: left; margin-right: 30px; margin-bottom: 29px; height: 145px; float: left; border: 1px solid #a9b9a3; position: relative; background-color: #f1f6ef; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php"); }
+section#privateOffice-right > div.lastOperations:before{content: ''; display: block; width: 460px; height: 5px; background: transparent url("../images/last-operations-bottom-bg.png") no-repeat 0 0; position: absolute; bottom: -6px; left: 0;}
+section#privateOffice-right > div.lastOperations > div.title{line-height: 32px; padding: 0 10px; background: transparent url("../images/last-operations-title-bg.png") repeat-x 0 0; height: 32px; -khtml-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; behavior: url("/PIE.php");}
+section#privateOffice-right > div.lastOperations > div.title > h5{color: #3d5334; float: left;}
+section#privateOffice-right > div.lastOperations > div.title > a{float: right; color: #3c84b7; text-decoration: none; background: transparent url("../images/more-ico.png") no-repeat right 9px; padding-right: 16px; margin-right: 3px; font-size: 11px;}
+section#privateOffice-right > div.lastOperations > div.title > a:hover{text-decoration: underline;}
+section#privateOffice-right > div.lastOperations > div.content{}
+section#privateOffice-right > div.lastOperations > div.content ul{padding: 0 10px;}
+section#privateOffice-right > div.lastOperations > div.content ul li{background: transparent url("../images/last-operations-border.png") repeat-x left bottom; padding: 9px 0 11px; overflow: hidden; line-height: 17px; height: 17px;}
+section#privateOffice-right > div.lastOperations > div.content ul li.last{background: none;}
+section#privateOffice-right > div.lastOperations > div.content ul li > span{color: #99b28f; text-shadow: 0 1px 0 #fff; float: left;}
+section#privateOffice-right > div.lastOperations > div.content ul li > span.day{margin-right: 13px;}
+section#privateOffice-right > div.lastOperations > div.content ul li > span.time{margin-right: 15px;}
+section#privateOffice-right > div.lastOperations > div.content ul li > p{text-shadow: 0 1px 0 #fff; width: 314px; float: left; height: 19px; overflow: hidden; position: relative;}
+section#privateOffice-right > div.lastOperations > div.content ul li > p:before{content: ''; display: block; background: transparent url("../images/lastOperations-gradient.png") repeat-y top right; width: 15px; height: 19px; position: absolute; top: 0; right: 0;}
+section#privateOffice-right > div.lastOperations > div.content ul li > p a{color: #3C84B7; text-decoration: none;}
+section#privateOffice-right > div.lastOperations > div.content ul li > p a:hover{text-decoration: underline;}
+
+section#privateOffice-right > div.userAppeal{width: 210px; height: 139px; margin-bottom: 29px; padding: 5px 9px; float: left; background-color: #fff; border: 1px solid #d3d3d3; -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); behavior: url("/PIE.php"); -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+section#privateOffice-right > div.userAppeal > h3{font-size: 16px; line-height: 19px; color: #161616; margin-bottom: 12px;}
+section#privateOffice-right > div.userAppeal > p{color: #5d5d5d; line-height: 15px;}
+section#privateOffice-right > div.userAppeal > p > a{background: transparent url("../images/more-ico.png") no-repeat 0 0; display: inline-block; width: 12px; height: 12px; position: relative; top: 2px;}
+
+section#privateOffice-right > div.opportunityList{width: 722px; height: 157px; margin-bottom: 28px; background: transparent url("../images/opportunityList-bg.png") no-repeat 0 0; margin-left: -1px; position: relative;}
+section#privateOffice-right > div.opportunityList > a.settings{display: block; background: transparent url("../images/opportunity-settings-ico.png") no-repeat 0 0; width: 16px; height: 17px; position: absolute; top: 1px; right: 2px;}
+section#privateOffice-right > div.opportunityList > ul{padding-top: 26px; padding-left: 28px; overflow: hidden;}
+section#privateOffice-right > div.opportunityList > ul li{float: left; margin: 0 37px 26px 0; padding: 0 32px 0 42px; width: 120px; font-size: 15px; line-height: 18px;}
+section#privateOffice-right > div.opportunityList > ul li > a{position: relative; color: #3c84b7; text-decoration: none;}
+section#privateOffice-right > div.opportunityList > ul li > a:before{content: ''; display: block; width: 32px; height: 26px; position: absolute; top: 4px; left: -43px; background-color: #3c84b7;}
+section#privateOffice-right > div.opportunityList > ul li.item4{width: 100px; margin-right: 57px;}
+section#privateOffice-right > div.opportunityList > ul li.item5 > a{line-height: 30px;}
+section#privateOffice-right > div.opportunityList > ul li.item5 > a:before{top: -2px;}
+section#privateOffice-right > div.opportunityList > ul li > a:hover{text-decoration: underline;}
+
+section#privateOffice-right > section.bigContent > div.controlList{}
+section#privateOffice-right > section.bigContent > div.controlList table .title{width: 212px;}
+section#privateOffice-right > section.bigContent > div.controlList table th.first{width: 7px;}
+section#privateOffice-right > section.bigContent > div.controlList.bestBill table th.first{width: auto;}
+
+/*  ввод средств  */
+div.formTabs{height: 32px; position: relative; margin-top: -20px;}
+div.formTabs ul{position: absolute; top: 1px; z-index: 1;}
+div.formTabs li{float: left; margin-right: 2px;}
+div.formTabs li > a{background-color: #f5f5f5; border: 1px solid #d5d5d5; position: relative; display: block; padding: 9px 15px 9px 34px; color: #000; text-decoration: none; -khtml-border-radius: 3px 3px 0 0; -moz-border-radius: 3px 3px 0 0; -webkit-border-radius: 3px 3px 0 0; border-radius: 3px 3px 0 0; behavior: url("/PIE.php");}
+div.formTabs.std li > a{padding-left: 15px;}
+div.formTabs li > a:before{content: ''; display: block; width: 16px; height: 16px; background: transparent url("../images/tabs-ico.png") no-repeat; position: absolute; top: 8px; left: 10px;}
+div.formTabs.std li > a:before{display: none;}
+div.formTabs li.add > a:before{background-position: 0 0;}
+div.formTabs li.withdrawal > a:before{background-position: 0 -16px;}
+div.formTabs li.active > a{background-color: #fff; border-bottom: none; padding-bottom: 10px;}
+
+section#privateOffice-right > div.form fieldset.addMoney > div.container{padding-top: 28px;}
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row > div.left{width: 180px;}
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row > div.right{width: 485px;}
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row > div.right div.formSelect{width: 308px;}
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row > div.right div.radio{background: transparent url("../images/grey-border-3px.png") repeat-x left bottom; padding-bottom: 15px; width: 458px;}
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row > div.right div.radio > label{display: block; margin-bottom: 10px;}
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row.system > div.right div.formSelect{width: 208px !important;}
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row > div.right > p{ height: 25px;
+    line-height: 15px;
+    padding-top: 5px;
+    position: relative;}
+section#privateOffice-right > div.form fieldset.addMoney .qiwiPurse{font-size: 11px;}
+section#privateOffice-right > div.form fieldset.addMoney .qiwiPurse__tel{font-size: 12px; font-weight: bold; margin-right: 5px;}
+div.questionList{padding-top: 11px; padding-bottom: 19px;}
+div.questionLink{padding-top: 13px;}
+div.questionLink a{display: inline-block; background: transparent url("../images/q-ico.png") no-repeat left top; color: #3c84b7; text-decoration: underline; padding: 0px 0 4px 24px; font-size: 11px;}
+div.questionLink a:hover{text-decoration: none;}
+div.formSelect div.questionLink{position: absolute; right: -25px; top: 7px; padding: 0;}
+div.formSelect div.questionLink a{position: absolute; left: 0; white-space: nowrap;}
+
+div.bankDetail{background-color: #f9f9f9; height: 150px; border-top: 1px solid #eaeaea; padding: 18px 70px 12px 25px; overflow-y: scroll; margin-top: 6px; position: relative;}
+div.bankDetail:before{content: ''; display: block; width: 100%; height: 15px; background-color: #f9f9f9; position: absolute; top: 0; left: 0;}
+div.bankDetail h5{font-weight: bold;color: #be1e2d; padding-bottom: 18px;}
+div.bankDetail p{color: #666; line-height: 15px; margin-bottom: 13px;}
+div.bankDetail b,
+div.bankDetail strong{font-weight: bold;}
+div.bankDetail a{color: #3C84B7; text-decoration: underline;}
+div.bankDetail a:hover{text-decoration: none;}
+
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row.addMoneySmall > div.right div.formSelect{width: 98px;}
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row.addMoneySmall > div.right div.input{width: 86px;}
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row.addMoneySmall > div.right div.codeBtn{padding-top: 26px; padding-bottom: 6px;}
+/*  -------------------------------------------------------------------------------  */
+
+/*  Отдел менеджера  */
+section.managerContainer{background-color: #fff; margin-bottom: 20px; padding: 16px 11px 35px 12px; margin-top: -4px; border: 1px solid #d3d3d3; -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); behavior: url("/PIE.php"); -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: px; border-radius: 3px; behavior: url("/PIE.php");}
+section.managerContainer h5{color: #000; font-size: 13px; padding-bottom: 10px;}
+section.managerContainer > div.filter,
+section#privateOffice-right section.bigContent > div.filter{padding-top: 11px; padding-bottom: 19px; text-align: center;}
+section.managerContainer > div.filter.userList{text-align: left;}
+section#privateOffice-right section.bigContent > div.filter{padding-top: 4px; width: 700px; overflow: hidden;}
+section.managerContainer > div.filter form,
+section#privateOffice-right section.bigContent > div.filter form{display: inline-block;}
+section#privateOffice-right section.bigContent > div.filter form{width: 900px;}
+section.managerContainer > div.filter div.block,
+section#privateOffice-right section.bigContent > div.filter div.block{float: left; padding-right: 45px;}
+section#privateOffice-right section.bigContent > div.filter div.block{padding-right: 30px;}
+section.managerContainer > div.filter div.block.date,
+section#privateOffice-right section.bigContent > div.filter div.block.date{padding-left: 59px; padding-right: 37px;}
+section#privateOffice-right section.bigContent > div.filter div.block.date{padding-left: 25px; padding-right: 30px;}
+section.managerContainer > div.filter div.block > p,
+section#privateOffice-right section.bigContent > div.filter div.block > p{color: #444; padding-bottom: 7px; text-align: left;}
+section.managerContainer > div.filter div.block.date > p,
+section#privateOffice-right section.bigContent > div.filter div.block.date > p{padding-left: 21px;}
+section#privateOffice-right section.bigContent > div.filter div.block.date > p{padding-left: 33px;}
+section.managerContainer > div.filter div.block.date > div.row,
+section#privateOffice-right section.bigContent > div.filter div.block.date > div.row{padding-bottom: 8px;}
+section.managerContainer > div.filter div.block.date > div.row > p,
+section#privateOffice-right section.bigContent > div.filter div.block.date > div.row > p{color: #444; float: left; line-height: 30px; width: 21px;}
+section#privateOffice-right section.bigContent > div.filter div.block.date > div.row > p{width: 33px;}
+section.managerContainer > div.filter div.block.date > div.row.first > p,
+section#privateOffice-right section.bigContent > div.filter div.block.date > div.row.first > p{padding-left: 3px; width: 18px;}
+section#privateOffice-right section.bigContent > div.filter div.block.date > div.row.first > p{width: 30px;}
+section.managerContainer > div.filter div.block div.input,
+section#privateOffice-right section.bigContent > div.filter div.block div.input{width: 96px; float: left;}
+section.managerContainer > div.filter div.block select,
+section#privateOffice-right section.bigContent > div.filter div.block select{border: 1px solid #b8b8b8; font-size: 12px; height: 67px; width: 185px; padding-left: 7px; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: px; border-radius: 3px; behavior: url("/PIE.php"); overflow: hidden; position: relative;}
+section.managerContainer > div.filter div.block.currency select{width: 135px;}
+section#privateOffice-right section.bigContent > div.filter div.block select{width: 150px;}
+section#privateOffice-right section.bigContent > div.filter div.block.last select{width: 130px;}
+section.managerContainer > div.filter div.block select option,
+section#privateOffice-right section.bigContent > div.filter div.block select option{display: block; height: 16px;}
+section.managerContainer > div.newLsList table td{padding-bottom: 5px; padding-top: 5px;}
+section.managerContainer > div.newLsList table td div.btn.small{margin-bottom: -2px; margin-right: -18px;}
+section.managerContainer > div.newLsList table th.first{width: 55px;}
+section.managerContainer > div.newLsList table td.first{text-align: center;}
+section.managerContainer > div.newLsList table tr.own td{background-color: #EEF9E8;}
+div.historyLsList tr.add td{background-color: #eef9e8;}
+div.historyLsList tr.add:hover td{background-color: #d9e6d2;}
+div.historyLsList tr.withdraw td{background-color: #fbeeee;}
+div.historyLsList tr td.first{color: #A4A4A4;}
+div.historyLsList tr.withdraw:hover td{background-color: #ebd3d3;}
+div.historyLsList td.last{color: #468C00;}
+div.historyLsList tr.withdraw td.last{color: #BE1E2D;}
+div.historyLsList tr.proces td.last{color: #bababa;}
+div.historyLsList td.last span{color: #468C00; padding-right: 24px; margin-right: -5px; padding-top: 2px; padding-bottom: 2px; display: inline-block; background: transparent url("../images/history-status-ico.png") no-repeat right center;}
+section.managerContainer > div.statistics{padding-left: 12px; margin-bottom: -15px;}
+section.managerContainer > div.statistics > div.block{width: 242px; float: left; padding-left: 55px; padding-top: 15px; color: #666;}
+section.managerContainer > div.statistics > div.block li{margin-bottom: 10px;}
+section.managerContainer > div.filter .block.additionalSettings{padding-top: 19px; text-align: left;}
+section.managerContainer > div.filter .block.additionalSettings label{margin-bottom: 17px; display: block;}
+section.managerContainer > div.filter .block.additionalSettings div.btn{position: relative;}
+section.managerContainer > div.filter .block.additionalSettings input.btnTag{opacity: 0; filter: alpha(opacity: 0); position: absolute; top: 0; left: 0; margin-left: 0;}
+.userMail-filter{margin-bottom: 30px; height: auto !important;}
+.userMail-filter.textarea > textarea{width: 921px; height: 240px;}
+
+div.historyMore{margin-top: -20px; padding-bottom: 45px;}
+div.historyMore.quotes{padding-bottom: 16px; margin-top: 0; padding-top: 9px; padding-left: 5px;}
+div.historyMore.quotes.browsing{float: left; margin-right: 20px;}
+div.historyMore > span,
+div.historyMore > a{display: inline-block; position: relative; margin-left: 18px; color: #3C84B7; text-decoration: none; padding-bottom: 2px; border-bottom: 1px dashed #3C84B7; cursor: pointer;}
+div.historyMore > a{text-decoration: underline; border-bottom: none;}
+div.historyMore > a:hover{text-decoration: none;}
+div.historyMore > span:before,
+div.historyMore > a:before{content: ''; display: block; background: transparent url("../images/history-hide-ico.png") no-repeat 0 0; width: 19px; height: 20px; position: absolute; top: 0; left: -23px;}
+div.historyMore.historyMore2 > span:before{background-image: url("../images/history-hide-ico2.png");}
+
+section#privateOffice-right > div.form fieldset.review legend{width: 270px;}
+section#privateOffice-right > div.form fieldset div.reviewAddComment{background-color: #F9F9F9; border-top: 1px solid #EAEAEA; padding: 18px 10px 23px 26px; margin-top: 10px;}
+section#privateOffice-right > div.form fieldset div.reviewAddComment > h6{color: #BE1E2C; font-weight: bold; padding-bottom: 15px;}
+section#privateOffice-right > div.form fieldset div.reviewAddComment > div.textarea{width: 352px; padding-bottom: 17px;}
+section#privateOffice-right > div.form fieldset div.reviewAddComment > div.textarea > textarea{width: 352px; height: 75px;}
+section#privateOffice-right > div.form fieldset div.reviewAddComment > div.btn span{padding-left: 41px; padding-right: 50px;}
+section#privateOffice-right > div.form fieldset.historyHide{}
+section#privateOffice-right > div.form fieldset.historyHide div.historyLsList{padding: 0 10px 20px;}
+
+section.managerContainer > div.search,
+section.managerContainer > div.date{padding-bottom: 21px; padding-top: 5px;}
+section.managerContainer > div.search p,
+section.managerContainer > div.date p{float: left; line-height: 30px; padding-right: 12px; color: #444;}
+section.managerContainer > div.date p{padding-right: 7px;}
+section.managerContainer > div.search div.input{width: 271px; float: left; padding-left: 25px;}
+section.managerContainer > div.search div.input:after{content: ''; display: block; width: 17px; height: 16px; background: transparent url("../images/search-ico.png") no-repeat; position: absolute; top: 7px; left: 3px;}
+section.managerContainer > div.date div.input{width: 96px; float: left;}
+section.managerContainer > div.search div.addBtn{float: right; margin-top: -2px;}
+section.managerContainer > div.search div.addBtn > div.btn{margin-right: 0;}
+
+section.managerContainer > div.userList table th.first{width: 55px;}
+section.managerContainer > div.userList table td.fio p{position: relative; margin-left: 20px;}
+section.managerContainer > div.userList table td.fio p:before{background: transparent url("../images/privateOffice-action-icons.png") no-repeat; content: ''; display: block; position: absolute; width: 11px; height: 13px; top: 2px; left: -20px; background-position: 0 0;}
+section.managerContainer > div.userList table td.first{color: #a4a4a4;}
+section.managerContainer > div.userList.managerList td.last{text-align: center;}
+
+section.managerContainer div.courseBtn{padding-bottom: 15px;}
+section.managerContainer div.courseBtn span{display: inline-block; padding: 0 17px 0 7px; margin-left: 7px; position: relative; background: transparent url("../images/course-bg.png") no-repeat right -45px; height: 45px; line-height: 44px; font-size: 20px; color: #BF202E;}
+section.managerContainer div.courseBtn span b{color: #777; font-size: 13px; display: inline-block; height: 45px; line-height: 44px; position: relative; top: -3px; margin-right: 7px;}
+section.managerContainer div.courseBtn span:before{content: ''; display: block; width: 7px; height: 45px; background: transparent url("../images/course-bg.png") no-repeat 0 0; position: absolute; top: 0; left: -7px;}
+
+section.managerContainer > div.currencyRates{padding-top: 5px;}
+section.managerContainer > div.currencyRates th{width: 25%;}
+section.managerContainer > div.currencyRates td p{margin-bottom: -4px;}
+section.managerContainer > div.currencyRates td span.course{display: block; margin-bottom: 4px;}
+section.managerContainer > div.currencyRates td{vertical-align: top;}
+
+section.managerContainer.refreshContainer{margin-top: 30px;}
+section.managerContainer > div.refreshCourse{padding-top: 14px; padding-left: 20px; padding-bottom: 29px;}
+section.managerContainer > div.refreshCourse div.row{padding-bottom: 20px;}
+section.managerContainer > div.refreshCourse div.row label{width: 97px; float: left; color: #525252; line-height: 30px;}
+section.managerContainer > div.refreshCourse div.row div.input{width: 86px; margin-right: 20px; float: left;}
+section.managerContainer > div.refreshCourse div.btn{margin-left: 96px;}
+
+section#privateOffice-right div.financialActivities{position: relative; margin-top: 2px; overflow: hidden; padding: 26px 0 29px 84px; margin-bottom: 22px; background-color: #fff; border: 1px solid #d3d3d3; -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); behavior: url("/PIE.php"); -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+section#privateOffice-right div.financialActivities a{float: left; margin-right: 114px; color: #3B84B7; text-decoration: underline; padding-left: 57px; padding-top: 12px; padding-bottom: 20px; background: transparent no-repeat left center;}
+section#privateOffice-right div.financialActivities a.add{background-image: url("../images/financialActivities-add.png");}
+section#privateOffice-right div.financialActivities a.withdraw{background-image: url("../images/financialActivities-withdraw.png");}
+section#privateOffice-right div.financialActivities a:hover{text-decoration: none;}
+
+section#privateOffice-right div.historyLsList.small th.summ{padding-right: 20px;}
+section#privateOffice-right div.historyLsList.small th.last{width: 90px;}
+section#privateOffice-right div.historyLsList.small td.last span{color: #468C00; padding-right: 24px; margin-right: -10px; padding-top: 2px; padding-bottom: 2px; display: inline-block; background: transparent url("../images/history-status-ico.png") no-repeat right center;}
+
+section.managerContainer > div.activeClientsList table td{padding-bottom: 8px; padding-top: 8px;}
+section.managerContainer > div.activeClientsList table td.first{color: #A4A4A4;}
+section.managerContainer > div.activeClientsList table td.last{width: 75px;}
+section.managerContainer > div.activeClientsList table td.fio p{position: relative; margin-left: 20px;}
+section.managerContainer > div.activeClientsList table td.fio p:before{background: transparent url("../images/privateOffice-action-icons.png") no-repeat; content: ''; display: block; position: absolute; width: 11px; height: 13px; top: 2px; left: -20px; background-position: 0 0;}
+section.managerContainer table td span.ico{display: block; background: transparent url("../images/active-clients-info-icons.png") no-repeat; height: 17px; float: left;}
+section.managerContainer table td span.info{width: 15px; background-position: 0 -34px; margin-right: 8px;}
+section.managerContainer table td span.info.active{background-position: 0 -51px;}
+section.managerContainer table td span.tel{width: 16px; background-position: 0 0; margin-right: 11px;}
+section.managerContainer table td span.tel.active{background-position: 0 -17px;}
+section.managerContainer table td span.file{width: 17px; background-position: 0 -68px;}
+section.managerContainer table td span.file.active{background-position: 0 -85px;}
+
+section.managerContainer > div.newClientsList table td{padding-bottom: 5px; padding-top: 5px;}
+section.managerContainer > div.newClientsList table td.last{width: 75px;}
+section.managerContainer > div.newClientsList table td.fio p{position: relative; margin-left: 20px;}
+section.managerContainer > div.newClientsList table td.fio p:before{background: transparent url("../images/privateOffice-action-icons.png") no-repeat; content: ''; display: block; position: absolute; width: 11px; height: 13px; top: 2px; left: -20px; background-position: 0 0;}
+section.managerContainer > div.newClientsList table td.last div.btn.small{margin-bottom: -2px;}
+
+section.managerContainer > div.ownClientsList table td{padding-bottom: 5px; padding-top: 5px;}
+section.managerContainer > div.ownClientsList table td.fio p{position: relative; margin-left: 20px;}
+section.managerContainer > div.ownClientsList table td.fio p:before{background: transparent url("../images/privateOffice-action-icons.png") no-repeat; content: ''; display: block; position: absolute; width: 11px; height: 13px; top: 2px; left: -20px; background-position: 0 0;}
+section.managerContainer > div.ownClientsList table td.last div.btn.small{margin-bottom: -2px;}
+section.managerContainer > div.ownClientsList table td.last div.btn.small span{padding: 0 7px 0 0; width: 61px; text-align: center;}
+section.managerContainer > div.ownClientsList table td.last div.btn.small.red{margin-right: 2px;}
+
+section.userDetail-left{width: 581px; float: left; margin-right: 26px; padding: 16px 0 20px 19px;}
+section.userDetail-left > h4{font-size: 14px; color: #000; padding-bottom: 15px;}
+section.userDetail-left > div.form{padding-top: 12px;}
+section.userDetail-left > div.form fieldset{background: no-repeat; border: none; padding: 0; border: none; -moz-box-shadow: none; -ms-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; margin-bottom: 0;}
+section.userDetail-left > div.form fieldset > div.container{padding-top: 0;}
+section.userDetail-left > div.form fieldset > div.container div.row{padding-left: 0;}
+section.userDetail-left > div.form fieldset > div.container div.row > div.left{width: 175px;}
+section.userDetail-left > div.form fieldset > div.container div.row > div.right{width: 310px;}
+section.userDetail-left > div.form fieldset > div.container div.row.addMoneySmall > div.right div.input{width: 86px;}
+section.userDetail-left > div.form fieldset > div.container div.row div.links{padding-top: 7px; /*border-bottom: 1px solid #ddd;*/ padding-bottom: 3px; margin-bottom: 2px;}
+section.userDetail-left > div.form fieldset > div.container div.row div.links li{margin-bottom: 14px;}
+section.userDetail-left > div.form fieldset > div.container div.row div.links li a{color: #216A9D; text-decoration: underline; padding-left: 29px; position: relative; display: inline-block;}
+section.userDetail-left > div.form fieldset > div.container div.row div.links li a:before{content: ''; display: block; width: 17px; height: 17px; background: transparent url("../images/active-clients-info-icons.png") no-repeat 0 -68px; position: absolute; top: -1px; left: 2px;}
+section.userDetail-left > div.form fieldset > div.container div.row div.links li a:hover{text-decoration: none;}
+section.userDetail-left > div.form fieldset > div.container div.row div.checkboxesList{padding-top: 4px;  border-bottom: 1px solid #ddd; /*margin-bottom: 19px;*/}
+section.userDetail-left > div.form fieldset > div.container div.row div.checkboxesList > label{display: block; margin-bottom: 9px;}
+section.userDetail-left > div.form fieldset > div.container div.row .emailNotice{}
+section.userDetail-left > div.form fieldset > div.container div.row .emailNotice label{margin-bottom: 10px; font-size: 12px; display: block;}
+section.userDetail-left > div.form fieldset > div.container div.row .emailNotice .textarea{margin-bottom: 20px;}
+section.userDetail-left > div.form fieldset > div.container div.row .emailNotice textarea{width: 300px; height: 78px;}
+
+section.userDetail-right{width: 292px; padding: 16px 18px 26px 20px; float: left;}
+section.userDetail-right > h4{font-size: 14px; color: #000; padding-bottom: 10px;}
+section.userDetail-right > div.commentsList{}
+section.userDetail-right > div.commentsList > div.block{background: transparent url("../images/grey-border-1px.png") repeat-x left bottom; padding: 17px 0 19px 0; position: relative;}
+section.userDetail-right > div.commentsList > div.block > span{font-size: 11px; color: #AAA; display: inline-block; padding-bottom: 8px;}
+section.userDetail-right > div.commentsList > div.block > p{line-height: 14px; color: #000;}
+section.userDetail-right > div.commentsList > div.block > span.del{display: block; background: transparent url("../images/comment-del-ico.png") no-repeat; width: 8px; height: 9px; position: absolute; top: 20px; right: 0; cursor: pointer;}
+section.userDetail-right > div.commentsList > div.textarea{margin-top: 19px; margin-bottom: 15px;}
+section.userDetail-right > div.commentsList > div.textarea > textarea{width: 281px; height: 75px;}
+section.userDetail-right .check{padding-bottom: 10px;}
+section.userDetail-right .check label{font-size: 11px; margin: 10px 0; display: block;}
+
+section.managerContainer > div.closedMsgList table td.first{color: #A4A4A4;}
+section.managerContainer > div.closedMsgList table td.last{width: 50px; text-align: center;}
+section.managerContainer > div.closedMsgList table td.last span.close{display: inline-block; background: transparent url("../images/closed-msg-ico.png") no-repeat; width: 13px; height: 17px;}
+section.managerContainer > div.closedMsgList table td.fio p{position: relative; margin-left: 20px;}
+section.managerContainer > div.closedMsgList table td.fio p:before{background: transparent url("../images/privateOffice-action-icons.png") no-repeat; content: ''; display: block; position: absolute; width: 11px; height: 13px; top: 2px; left: -20px; background-position: 0 0;}
+
+section.managerContainer > div.myMsgList table td.first{color: #A4A4A4;}
+section.managerContainer > div.myMsgList table td.fio p{position: relative; margin-left: 20px;}
+section.managerContainer > div.myMsgList table td.fio p:before{background: transparent url("../images/privateOffice-action-icons.png") no-repeat; content: ''; display: block; position: absolute; width: 11px; height: 13px; top: 2px; left: -20px; background-position: 0 0;}
+section.managerContainer > div.myMsgList table tr.unread td,
+section.managerContainer > div.myMsgList table tr.unread td p,
+section.managerContainer > div.myMsgList table tr.unread td p a{font-weight: bold;}
+
+section#privateOffice-right div.financialActivitiesV2{position: relative; margin-top: 2px; overflow: hidden;  margin-bottom: 22px; background-color: #fff; border: 1px solid #d3d3d3; -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); behavior: url("/PIE.php"); -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+section#privateOffice-right div.financialActivitiesV2 > div.title{background-color: #f5f5f5; padding: 19px 0 21px 13px;}
+section#privateOffice-right div.financialActivitiesV2 > div.title > span{float: left; position: relative; cursor: pointer; margin-right: 36px; color: #3B84B7; text-decoration: none; border-bottom: 1px dashed #3B84B7; margin-left: 39px; background: transparent no-repeat left center;}
+section#privateOffice-right div.financialActivitiesV2 > div.title > span.active{border-bottom: none; font-weight: bold; cursor: default;}
+section#privateOffice-right div.financialActivitiesV2 > div.title > span:before{content: ''; display: block; width: 29px; height: 28px; position: absolute; top: -6px; left: -39px; background: transparent url("../images/financialActivities-icons.png") no-repeat 0 0;}
+section#privateOffice-right div.financialActivitiesV2 > div.title > span.add:before{background-position: 0 0;}
+section#privateOffice-right div.financialActivitiesV2 > div.title > span.withdraw:before{background-position: 0 -28px;}
+section#privateOffice-right div.financialActivitiesV2 > div.form{padding-top: 0; padding-bottom: 6px;}
+section#privateOffice-right div.financialActivitiesV2 > div.form fieldset{background: no-repeat; border: none; padding: 0; border: none; -moz-box-shadow: none; -ms-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; margin-bottom: 0;}
+section#privateOffice-right div.financialActivitiesV2 > div.form fieldset > div.container{padding-top: 18px;}
+section#privateOffice-right div.financialActivitiesV2 > div.form fieldset > div.container div.row > div.left{width: 179px;}
+section#privateOffice-right div.financialActivitiesV2 > div.form fieldset > div.container div.row > div.right{width: 520px;}
+section#privateOffice-right div.financialActivitiesV2 > div.form fieldset > div.container div.row.addMoneySmall > div.right div.input{width: 86px;}
+section#privateOffice-right div.financialActivitiesV2 > div.form fieldset > div.container div.row > div.right div.textarea{width: 317px; height: 72px;}
+section#privateOffice-right div.financialActivitiesV2 > div.form fieldset > div.container div.row > div.right div.textarea textarea{width: 305px; height: 57px;}
+
+section.addManager > div.form{padding-top: 25px;}
+section.addManager > div.form fieldset{background-color: #fff;}
+
+section.managerContainer.clientEx{margin-top: 2px;}
+
+section#privateOffice-right div.opportunityRubber{margin-bottom: 27px; margin-left: -1px; position: relative;}
+section#privateOffice-right div.opportunityRubber > div.top{background: transparent url("../images/opportunity-rubber-n.png") no-repeat left top; width: 722px; height: 151px;}
+section#privateOffice-right div.opportunityRubber > div.bottom{background: transparent url("../images/opportunity-rubber-n.png") no-repeat right bottom; width: 722px; height: 5px;}
+section#privateOffice-right div.opportunityRubber > div.center{background: transparent url("../images/opportunity-rubber-n.png") repeat-y -722px top; width: 722px; padding: 15px 11px 10px 30px;}
+section#privateOffice-right div.opportunityRubber.noSettings > div.top{background-position: left -151px;}
+section#privateOffice-right div.opportunityRubber > div.center > div.list{margin-bottom: -151px;}
+section#privateOffice-right div.opportunityRubber a.settings{display: block; background: transparent url("../images/opportunity-settings-ico.png") no-repeat 0 0; width: 16px; height: 17px; position: absolute; top: 1px; right: 1px;}
+section#privateOffice-right div.opportunityRubber ul{padding-top: 28px; padding-left: 28px; position: relative; top: -151px;}
+section#privateOffice-right div.opportunityRubber ul li{display: inline-block; margin: 0 0 34px 0; width: 218px; font-size: 12px; line-height: 16px; height: 34px;}
+section#privateOffice-right div.opportunityRubber ul li a{position: relative; color: #3c84b7; text-decoration: none; display: inline-block; overflow: hidden; height: 100%;}
+section#privateOffice-right div.opportunityRubber ul li a span.ico{width: 40px; height: 34px; float: left; line-height: 30px;}
+section#privateOffice-right div.opportunityRubber ul li a span.ico img{vertical-align: middle;}
+section#privateOffice-right div.opportunityRubber ul li a span.text{width: 120px; float: left;}
+section#privateOffice-right div.opportunityRubber ul li a:hover span{text-decoration: underline;}
+section#privateOffice-right div.opportunityRubber ul li a span.text span.f{display: table; width:120px; height: 34px; position: relative;}
+section#privateOffice-right div.opportunityRubber ul li a span.text span.f span.s{display:table-cell; vertical-align: middle;}
+
+div.textContainer{padding: 14px 12px 0 19px; margin-bottom: -12px;}
+div.textContainer h3{font-size: 14px; color: #B41926; padding-bottom: 21px;}
+div.textContainer p{color: #111111; line-height: 14px; margin-bottom: 15px;}
+
+section.popup{position: absolute; top: 235px; left: 127px; background-color: #eee; margin-bottom: 20px; z-index: 99; border: 1px solid #d3d3d3; -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); behavior: url("/PIE.php"); -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: px; border-radius: 3px; behavior: url("/PIE.php");}
+section.popup.standart{width: 500px;}
+section.popup.promo{width: 550px;}
+section.popup.small275{width: 275px;}
+section.popup div.title,
+section.popup2 div.title{padding: 6px 7px 10px 7px; margin: 0 2px; border-top: 1px solid #fff; color: #111; position: relative;}
+section.popup div.title span.close,
+section.popup2 div.title span.close{position: absolute; top: 10px; right: 11px; display: block; width: 8px; height: 9px; background: transparent url("../images/popup-close-ico.png"); cursor: pointer;}
+section.popup div.content,
+section.popup2 div.content{border-top: 2px solid #bbb; padding: 30px 0 29px 28px; background-color: #f5f5f5;}
+section.popup div.content > div.checkboxesList > label,
+section.popup2 div.content > div.checkboxesList > label{display: inline-block; margin-right: -4px; margin-bottom: 12px; width: 220px;}
+
+
+
+section.pop_promo{height:100%; width:100%; position:fixed; top:0; left:0; text-align:center; background: none;}
+section.pop_promo:before{content: ""; display:inline-block; height:100%; vertical-align:middle;}
+section.pop_promo div.popupC{display: inline-block; vertical-align:middle; text-align:left; min-width: 350px; position:relative; left:auto; margin-left:0; background-color: #eee; margin-bottom: 20px; z-index: 99; border: 1px solid #d3d3d3; -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); behavior: url("/PIE.php"); -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: px; border-radius: 3px; behavior: url("/PIE.php");}
+section.pop_promo div.popupC.standart{width: 500px;}
+section.pop_promo div.content{padding-right: 28px;}
+section.pop_promo div.content{background-color: #fff; padding: 20px 20px 24px;}
+section.pop_promo div.content > div.img{text-align: center; padding-bottom: 20px;}
+section.pop_promo div.content > div.code{background-color: #eee; padding: 11px 11px 15px 9px; color: #545454; font-size: 11px; line-height: 14px; margin-bottom: 11px;}
+section.pop_promo div.content > div.code textarea{background: none; width: 100%; height: 100px; border: none; resize: none; overflow: auto;}
+section.pop_promo div.content div.options p{overflow: hidden;}
+section.pop_promo div.content div.options p span{color: #0059B2; border-bottom: 1px dashed #0059B2; float: left; padding-bottom: 2px; cursor: pointer;}
+section.pop_promo div.content div.options p a{color: #6C6C6C; text-decoration: underline; float: right; position: relative; z-index: 100;}
+section.pop_promo div.content div.options p a:hover{text-decoration: none;}
+section.pop_promo div.content div.options div.flashCopy{margin-top: -17px;}
+.en section.pop_promo div.content div.options div.flashCopy embed{width: 80px !important;}
+.ru section.pop_promo div.content div.options div.flashCopy embed{width: 155px !important;}
+
+section.settingsBlocks{overflow: hidden;}
+section#privateOffice-right div.managerSettings-list{padding-top: 6px; width: 780px; overflow: hidden;}
+section#privateOffice-right div.managerSettings-list > div.container{width: 312px; float: left; margin-right: 30px; padding: 16px 11px 25px 20px; margin-bottom: 34px;}
+section#privateOffice-right div.managerSettings-list > div.container div.checkboxesList{padding-left: 18px; padding-top: 25px;}
+section#privateOffice-right div.managerSettings-list > div.container div.checkboxesList label{display: block; width: 140px; float: left; margin-bottom: 12px;}
+section#privateOffice-right div.managerSettings-list > div.container.top-fixed{height: 159px;}
+section#privateOffice-right div.managerSettings-list > div.container.type{}
+section#privateOffice-right div.managerSettings-list > div.container.type div.checkboxesList label{float: none; width: 250px;}
+section#privateOffice-right div.managerSettings-list > div.container > div.commentsList{padding-top: 2px; width: 300px;}
+section#privateOffice-right div.managerSettings-list > div.container div.block{background: transparent url("../images/grey-border-1px.png") repeat-x left bottom; padding: 17px 0 19px 0; position: relative;}
+section#privateOffice-right div.managerSettings-list > div.container div.block > span{font-size: 11px; color: #AAA; display: inline-block; padding-bottom: 8px;}
+section#privateOffice-right div.managerSettings-list > div.container div.block > p{line-height: 14px; color: #000;}
+section#privateOffice-right div.managerSettings-list > div.container div.block > span.del{display: block; background: transparent url("../images/comment-del-ico.png") no-repeat; width: 8px; height: 9px; position: absolute; top: 20px; right: 0; cursor: pointer;}
+section#privateOffice-right div.managerSettings-list > div.container div.textarea{margin-top: 19px; margin-bottom: 15px;}
+section#privateOffice-right div.managerSettings-list > div.container div.textarea > textarea{width: 281px; height: 75px;}
+
+section#privateOffice-right div.applicationOutput{margin-top: 2px; padding: 20px 11px 12px 21px;}
+section#privateOffice-right div.standartBlock h4{color: #B41926; font-size: 14px;}
+section#privateOffice-right div.applicationOutput h4{padding-bottom: 17px;}
+section#privateOffice-right div.applicationOutput > div.form{padding-top: 12px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset{background: no-repeat; border: none; padding: 0; border: none; -moz-box-shadow: none; -ms-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; margin-bottom: 0;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container{padding-top: 0;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row{padding-left: 0;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row > div.left{width: 175px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row > div.right{width: 310px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row.addMoneySmall > div.right div.input{width: 86px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row div.links{padding-top: 7px; border-bottom: 1px solid #ddd; padding-bottom: 3px; margin-bottom: 2px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row div.links li{margin-bottom: 14px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row div.links li a{color: #216A9D; text-decoration: underline; padding-left: 29px; position: relative; display: inline-block;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row div.links li a:before{content: ''; display: block; width: 17px; height: 17px; background: transparent url("../images/active-clients-info-icons.png") no-repeat 0 -68px; position: absolute; top: -1px; left: 2px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row div.links li a:hover{text-decoration: none;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row div.checkboxesList{padding-top: 4px;  border-bottom: 1px solid #ddd; margin-bottom: 19px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row div.checkboxesList > label{display: block; margin-bottom: 9px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row.managerComment div.commentContainer{border-left: 2px solid #be1e2d; margin-left: 3px; font-style: italic; width: 435px; color: #525252; line-height: 18px; padding-left: 15px; margin-top: 24px;}
+/*section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row.managerComment div.commentContainer > div.block{top: -4px; position: relative; margin-bottom: 4px;}*/
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row.managerComment > div.left > label{margin-top: 24px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row div.backJournal-btn{padding-top: 30px; padding-bottom: 9px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row div.backJournal-btn a{background: transparent url("../images/back-link-ico.png") no-repeat left center; padding-left: 27px; color: #206A9D; text-decoration: underline; display: inline-block; padding-top: 3px; padding-bottom: 3px;}
+section#privateOffice-right div.applicationOutput > div.form fieldset > div.container div.row div.backJournal-btn a:hover{text-decoration: none;}
+
+section#privateOffice-right section.bigContent.openAccountBlock{margin-bottom: 30px; padding-bottom: 14px;}
+section#privateOffice-right div.openAccount{width: 680px; padding-top: 7px;}
+section#privateOffice-right div.openAccount > div.block{width: 302px; height: 122px; float: left; margin-left: 29px; margin-right: 7px; background: transparent url("../images/open-account-block-bg.png") no-repeat 0 0; margin-bottom: 28px;}
+section#privateOffice-right div.openAccount > div.block > div.title{border-bottom: 1px solid #e8e8e8; padding: 16px 14px 11px 12px; overflow: hidden;}
+section#privateOffice-right div.openAccount > div.block > div.title > p.number{color: #BE1E2C; font-size: 14px; float: left; position: relative;}
+section#privateOffice-right div.openAccount > div.block > div.title > p.number img{float: left; margin-right: 8px; position: relative; top: -2px;}
+section#privateOffice-right div.openAccount > div.block > div.title > p.money{float: right; color: #000; font-size: 14px;}
+section#privateOffice-right div.openAccount > div.block > div.title > p.money > span{color: #98B311;}
+section#privateOffice-right div.openAccount > div.block > div.container{border-top: 1px solid #fff; padding-top: 14px; padding-left: 21px;}
+section#privateOffice-right div.openAccount > div.block > div.container div.left{width: 149px; float: left;}
+section#privateOffice-right div.openAccount > div.block > div.container div.right{width: 130px; float: left;}
+section#privateOffice-right div.openAccount > div.block > div.container li{margin-bottom: 16px;}
+section#privateOffice-right div.openAccount > div.block > div.container li a{color: #0059B2; font-size: 11px; text-decoration: underline; position: relative; margin-left: 20px;}
+section#privateOffice-right div.openAccount > div.block > div.container li a:before{content: ''; display: block; width: 16px; height: 16px; position: absolute; top: 1px; left: -24px; background: transparent url("../images/action-icons.png") no-repeat left top;}
+section#privateOffice-right div.openAccount > div.block > div.container li a:hover{text-decoration: none;}
+section#privateOffice-right div.openAccount > div.block > div.container div.left li.item1 a:before{background-position: 0 0;}
+section#privateOffice-right div.openAccount > div.block > div.container div.left li.item2 a:before{background-position: 0 -16px; top: 0;}
+section#privateOffice-right div.openAccount > div.block > div.container div.right li.item1 a:before{background-position: 0 -32px;}
+section#privateOffice-right div.openAccount > div.block > div.container div.right li.item2 span{background-position: 0 -32px;}
+section#privateOffice-right div.openAccount > div.block > div.container div.right li.item2 span{display: inline-block; position: relative; margin-left: 20px; color: #0059B2; font-size: 11px; text-decoration: none; padding-bottom: 2px; border-bottom: 1px dashed #3C84B7; cursor: pointer;}
+section#privateOffice-right div.openAccount > div.block > div.container div.right li.item2 span:before{content: ''; display: block; background: transparent url("../images/history-hide-ico.png") no-repeat 0 0; width: 19px; height: 20px; position: absolute; top: -1px; left: -23px;}
+section#privateOffice-right div.openAccount > div.block > a.openNewAccount{display: block; text-align: center; padding-top: 37px; padding-bottom: 42px; color: #ccc; font-size: 16px; text-decoration: underline; line-height: 21px;}
+section#privateOffice-right div.openAccount > div.block > a.openNewAccount:hover{text-decoration: none;}
+
+section#privateOffice-right div.successfulOpening{}
+section#privateOffice-right div.successfulOpening > div.successfulOpening-msg{width: 470px; float: left; margin-right: 30px;}
+section#privateOffice-right div.successfulOpening > div.terminal{width: 187px; float: left; margin-top: 0; background-color: #f5f5f5; padding: 17px 11px 5px 20px;}
+section#privateOffice-right div.successfulOpening > div.terminal > h5{font-weight: bold; color: #b41926; padding-bottom: 15px;}
+section#privateOffice-right div.successfulOpening > div.terminal li{margin-bottom: 16px;}
+section#privateOffice-right div.successfulOpening > div.terminal li > a{display: inline-block; padding-left: 25px; color: #1063b6; text-decoration: underline; line-height: 18px; position: relative;}
+section#privateOffice-right div.successfulOpening > div.terminal li > a:before{content: ''; display: block; position: absolute; background: transparent url("../images/functions-icon.png") no-repeat;}
+section#privateOffice-right div.successfulOpening > div.terminal li.item1 > a:before{background-position: 0 0; width: 16px; height: 16px; left: -1px; top: 3px;}
+section#privateOffice-right div.successfulOpening > div.terminal li.item2 > a:before{background-position: 0 -16px; width: 15px; height: 21px; left: -1px; top: 4px;}
+section#privateOffice-right div.successfulOpening > div.terminal li > a:hover{text-decoration: none;}
+section#privateOffice-right div.successfulOpening > div.form{padding-top: 12px;}
+section#privateOffice-right div.successfulOpening > div.form legend{width: 250px;}
+section#privateOffice-right div.successfulOpening > div.form fieldset{background-color: #fff;}
+section#privateOffice-right div.successfulOpening > div.form div.btnConf{padding-top: 22px; padding-bottom: 58px;}
+
+section#privateOffice-right div.createNewAccount{}
+section#privateOffice-right div.createNewAccount > div.newBlock{margin-top: -7px; padding-bottom: 35px;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block{width: 302px; height: 87px; float: left; background: transparent url("../images/create-new-account-bg.png") no-repeat; padding: 25px 20px 10px 20px; text-align: center;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block.item1{margin-right: 36px;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block.active{background-position: 0 -122px;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block a{font-size: 15px; color: #0059B2; text-decoration: none; border-bottom: 1px dashed #0059B2; margin-left: 23px; position: relative;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block a:before{content: ''; display: block; position: absolute; background: transparent no-repeat;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block.active a{color: #62A213; border: none; cursor: default;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block.item1 a:before{background-image: url("../images_dummy/ico-img.png"); width: 27px; height: 24px; left: -38px; top: -2px;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block.item2 a:before{background-image: url("../images_dummy/ico-img.png"); width: 27px; height: 24px; left: -38px; top: -2px;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block.item1.active a:before{background-image: url("../images_dummy/ico-img-green.png"); width: 27px; height: 24px; left: -38px; top: -2px;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block.item2.active a:before{background-image: url("../images_dummy/ico-img-green.png"); width: 27px; height: 24px; left: -38px; top: -2px;}
+section#privateOffice-right div.createNewAccount > div.newBlock > div.block p{background: transparent url("../images/h1-border.png") repeat-x top left; padding-top: 20px; margin-top: 25px; color: #878787;}
+section#privateOffice-right div.createNewAccount div.form{padding-top: 12px;}
+section#privateOffice-right div.createNewAccount div.form fieldset{background-color: #fff;}
+section#privateOffice-right div.createNewAccount div.form div.btnConf{padding-bottom: 58px;}
+
+section#privateOffice-right > section.personalAccounts{padding: 17px 6px 20px 10px;}
+section#privateOffice-right > section.personalAccounts > h5{font-size: 13px; color: #000; padding-bottom: 18px;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table{}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table td.first a{text-decoration: underline;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table td.first a:hover{text-decoration: none;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table td.currency{color: #8C4600;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table td.balans{color: #4C597F;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table td{height: 68px; padding-top: 0; padding-bottom: 0;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table tr.withdraw td{background-color: #f8f8f8;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table td li.delete a{color: #BE1E2D;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table tr.withGraph td{background-color: #ebf2e3; border-bottom: none;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table tr.graph{display: none;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table tr.graph.active{display: table-row;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table tr.graph td{background-color: #ebf2e3; padding-bottom: 10px;}
+section#privateOffice-right > section.personalAccounts div.personalAccounts-table tr.graph td div.graphImg{border: 1px solid #d4d4d4; width: 676px; height: 199px; margin: 0 auto;}
+
+section.inputOutput-history div.filter{text-align: left;}
+section.inputOutput-history div.filter div.block.fio div.input{width: 235px !important;}
+section.inputOutput-history > div.inputOutputList table td{padding-bottom: 5px; padding-top: 5px;}
+div.inputOutputList table td.first{color: #A4A4A4;}
+section.inputOutput-history > div.inputOutputList table td.last{width: 75px;}
+section.inputOutput-history > div.inputOutputList table td.last div.btn.small{margin-bottom: -2px;}
+div.inputOutputList table td.personalAccount{color: #8C4600;}
+div.inputOutputList table td.tradingAccount{color: #9284C6;}
+div.inputOutputList table td.summ{color: #4D5980;}
+section.inputOutput-history > div.inputOutputList.inputOutputList-history table td{padding-bottom: 8px; padding-top: 9px;}
+div.inputOutputList.inputOutputList-history table td.last span{width: 65px; padding-right: 24px; margin-right: -10px; padding-top: 2px; padding-bottom: 2px; display: inline-block; background: transparent url("../images/history-status-ico.png") no-repeat right center;}
+div.inputOutputList.inputOutputList-history table td.last span.good{color: #468C00;}
+div.inputOutputList.inputOutputList-history table td.last span.notGood{color: #BE1E2D;}
+section.inputOutput-history > div.inputOutputList.inputOutputList-history table td.last{width: 90px;}
+div.inputOutputList.inputOutputList-history table tr.in td{background-color: #EEF9E8;}
+div.inputOutputList.inputOutputList-history table tr.out td{background-color: #FBEEEE;}
+div.inputOutputList.inputOutputList-history table tr.in:hover td{background-color: #d9e6d2;}
+div.inputOutputList.inputOutputList-history table tr.out:hover td{background-color: #ebd3d3;}
+fieldset.historyHide div.inputOutputList-history{padding: 0 10px 20px;}
+
+section#privateOffice-right > div.form fieldset.addMoney > div.container div.row > div.right div.formNotice{width: 475px;}
+
+section#privateOffice-right > div.form.notices{padding-top: 50px;}
+section#privateOffice-right > div.form.notices div.userNotices-settings{padding-bottom: 19px;}
+section#privateOffice-right > div.form.notices div.formNotice{margin-right: 19px;}
+section#privateOffice-right div.btnInCenter{text-align: center;}
+section#privateOffice-right div.btnInCenter div.btn{float: none; display: inline-block;}
+section#privateOffice-right div.currencyPairs{padding-bottom: 22px; padding-right: 19px;}
+section#privateOffice-right div.currencyPairs p{color: #666; margin-bottom: 17px;}
+section#privateOffice-right div.currencyPairs span.add{display: inline-block; position: relative; margin-left: 21px; color: #3C84B7; text-decoration: none; padding-bottom: 2px; border-bottom: 1px dashed #3C84B7; cursor: pointer; font-size: 11px;}
+section#privateOffice-right div.currencyPairs span.add:before{content: ''; display: block; background: transparent url("../images/currencyPairs-actions-ico.png") no-repeat 0 0; width: 14px; height: 14px; position: absolute; top: 0; left: -23px;}
+section#privateOffice-right div.currencyPairs div.block{background-color: #f5f5f5; padding: 15px 19px; position: relative; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+section#privateOffice-right div.currencyPairs div.block > span.delete{display: block; background: transparent url("../images/currencyPairs-actions-ico.png") no-repeat 0 -14px; width: 14px; height: 14px; position: absolute; top: 23px; right: 18px; cursor: pointer;}
+section#privateOffice-right div.currencyPairs div.block > div.left{height: 30px; float: left; width: 258px;}
+section#privateOffice-right div.currencyPairs div.block p{height: 30px; line-height: 27px; color: #525252; float: left; margin-bottom: 0;}
+section#privateOffice-right div.currencyPairs div.block > div.left p{width: 103px;}
+section#privateOffice-right div.currencyPairs div.block > div.right p{width: 45px;}
+section#privateOffice-right div.currencyPairs div.block div.formSelect{width: 118px; float: left;}
+section#privateOffice-right div.currencyPairs div.block > div.right{width: 170px; float: left;}
+section#privateOffice-right div.currencyPairs div.block div.input{width: 106px; float: left;}
+
+section#privateOffice-right section.historyTradingAccounts{padding: 19px 14px 18px 14px;}
+section#privateOffice-right section.historyTradingAccounts h3{font-size: 13px; color: #000; padding-bottom: 10px;}
+section#privateOffice-right section.historyTradingAccounts div.content{padding: 15px 15px 12px 15px;}
+section#privateOffice-right section.historyTradingAccounts div.content.edit{padding-bottom: 5px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.terms{background: transparent url("../images/grey-border-3px.png") repeat-x left bottom; padding-bottom: 20px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.terms div.left{width: 290px; float: left; margin-right: 28px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.terms p{float: left; height: 30px; line-height: 27px; color: #444; margin-bottom: 0; margin-right: 10px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.terms p span{margin-left: 8px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.terms div.left div.formSelect{width: 180px; float: left;}
+section#privateOffice-right section.historyTradingAccounts div.content div.terms div.right{width: 340px; float: left; margin-right: 28px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.terms div.right div.input{width: 97px; float: left; margin-right: 5px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.terms div.center{width: 340px; float: left; margin-left: -16px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.terms div.center p{color: #8C4600;}
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics{background: transparent url("../images/grey-border-3px.png") repeat-x left bottom; padding-top: 20px; padding-bottom: 11px;}
+section#privateOffice-right section.historyTradingAccounts div.content.edit div.statistics{background: none; padding-bottom: 0;}
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics > div.container{width: 200px; float: left; margin-right: 30px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics > div.container > div.block{background-color: #efefef; margin-bottom: 10px; padding: 8px 11px 10px 13px; color: #666; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics > div.container > div.block p{padding-left: 8px; position: relative;}
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics > div.container > div.block p:before{content: ''; display: block; width: 7px; height: 9px; background: transparent url("../images/TradingAccounts-statistics-ico.png"); position: absolute; top: 2px; left: -6px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics > div.container > div.block p span{float: right;}
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics > div.container > div.block.green p span{color: #468C00; font-weight: bold;}
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics > div.container.green,
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics > div.container.last{margin-right: 0;}
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics > div.container.green p span{color: #468C00; font-weight: bold;}
+section#privateOffice-right section.historyTradingAccounts div.content div.statistics div.historyMore{float: right; padding: 7px 2px 16px 5px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.save{padding-top: 14px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.save a{display: inline-block; padding-left: 26px; color: #1063b6; text-decoration: underline; line-height: 18px; position: relative;}
+section#privateOffice-right section.historyTradingAccounts div.content div.save a:before{content: ''; display: block; position: absolute; background: transparent url("../images/functions-icon.png") no-repeat 0 0; width: 16px; height: 16px; left: 2px; top: 4px;}
+section#privateOffice-right section.historyTradingAccounts div.content div.save a:hover{text-decoration: none;}
+
+section#privateOffice-right section.ddHistory{padding-top: 9px; padding-bottom: 30px;}
+section#privateOffice-right section.ddHistory div.block{padding-bottom: 10px;}
+section#privateOffice-right section.ddHistory div.block.open{}
+section#privateOffice-right section.ddHistory div.block > span.switch{color: #0059B2; text-decoration: none; display: inline-block; margin-left: 22px; padding-bottom: 2px; border-bottom: 1px dashed #0059B2; position: relative; cursor: pointer;}
+section#privateOffice-right section.ddHistory div.block > span.switch:before{content: ''; display: block; background: transparent url("../images/lastOperations-open-close-ico.png") no-repeat; width: 14px; height: 14px; position: absolute; top: 1px; left: -22px; }
+section#privateOffice-right section.ddHistory div.block.open > span.switch:before{background-position: 0 -14px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock{margin-top: 11px; display: none; padding-bottom: 40px;}
+section#privateOffice-right section.ddHistory.tradeOfferStat div.block div.standartBlock{display: block;}
+section#privateOffice-right section.ddHistory div.block.open div.standartBlock{display: block;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock h3{font-size: 13px; color: #000; padding-bottom: 19px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.content{padding-bottom: 20px; overflow: hidden;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.content div.right p{float: left; height: 30px; line-height: 27px; color: #444; margin-bottom: 0; margin-right: 10px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.content div.right p span{margin-left: 8px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.content div.right{width: 340px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.content div.right div.input{width: 97px; float: left; margin-right: 5px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock table td.first{color: #A4A4A4;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock table td.price{color: #4D5980;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.blocksList{padding: 3px 10px 0 10px; margin-bottom: -14px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.blocksList div.top{background: transparent url("../images/grey-border-3px.png") repeat-x left bottom; padding-bottom: 11px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.blocksList div.center{background: transparent url("../images/grey-border-3px.png") repeat-x left bottom; padding-top: 19px; padding-bottom: 11px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.blocksList div.bottom{padding-top: 19px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.blocksList div.container{width: 230px; float: left; margin-left: 19px;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.blocksList div.container.first{width: 180px; margin-left: 0;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.blocksList div.container > div.block{background-color: #efefef; font-size: 11px; margin-bottom: 10px; padding: 9px 6px 10px 8px; color: #666; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.blocksList div.container > div.block span{float: right; color: #000;}
+section#privateOffice-right section.ddHistory div.block div.standartBlock div.blocksList div.container > p{font-size: 11px; color: #666; text-align: right; padding: 10px 0; margin-bottom: 9px;}
+section#privateOffice-right section.ddHistory div.saveDetails{background: transparent url("../images/title-shadow.png") no-repeat center 2px; padding-bottom: 19px;}
+section#privateOffice-right section.ddHistory div.saveDetails:before{content: ''; display: block; background: transparent url("../images/h1-border.png") repeat-x left bottom; height: 2px; width: 100%;}
+section#privateOffice-right section.ddHistory div.saveDetails a{display: inline-block; padding-left: 26px; color: #1063b6; text-decoration: underline; line-height: 18px; position: relative; margin-top: 17px;}
+section#privateOffice-right section.ddHistory div.saveDetails a:before{content: ''; display: block; position: absolute; background: transparent url("../images/functions-icon.png") no-repeat 0 0; width: 16px; height: 16px; left: 2px; top: 4px;}
+section#privateOffice-right section.ddHistory div.saveDetails a:hover{text-decoration: none;}
+
+section#privateOffice-right section.listConnectedClients{padding: 14px 14px 18px 12px;}
+section#privateOffice-right section.listConnectedClients table{width: 690px;}
+section#privateOffice-right section.listConnectedClients h3,
+section#privateOffice-right section.connectedClientsTotal h3{font-size: 13px; color: #000; padding-bottom: 10px;}
+section#privateOffice-right section.listConnectedClients div.filter{padding-top: 9px; padding-bottom: 19px;}
+section#privateOffice-right section.listConnectedClients div.filter form{display: inline-block;}
+section#privateOffice-right section.listConnectedClients div.filter div.block{float: left; padding-right: 39px;}
+section#privateOffice-right section.listConnectedClients div.filter div.block > p{color: #444; padding-bottom: 5px; text-align: left; padding-left: 0 !important;}
+section#privateOffice-right section.listConnectedClients div.filter div.block.search{width: 202px;}
+section#privateOffice-right section.listConnectedClients div.filter div.block.search > div.row{padding-bottom: 14px;}
+section#privateOffice-right section.listConnectedClients div.filter div.block.search div.input{width: 185px;}
+section#privateOffice-right section.listConnectedClients div.filter div.block.country{width: 198px; padding-right: 40px;}
+section#privateOffice-right section.listConnectedClients div.filter div.block.date{padding-right: 37px;}
+section#privateOffice-right section.listConnectedClients div.filter div.block.date > p{padding-left: 21px;}
+section#privateOffice-right section.listConnectedClients div.filter div.block.date > div.row{padding-bottom: 8px;}
+section#privateOffice-right section.listConnectedClients div.filter div.block.date > div.row > p{color: #444; float: left; line-height: 30px; width: 32px;}
+/*section#privateOffice-right section.listConnectedClients div.filter div.block.date > div.row.first > p{padding-left: 3px; width: 18px;}*/
+section#privateOffice-right section.listConnectedClients div.filter div.block.date div.input{width: 96px; float: left;}
+section#privateOffice-right section.listConnectedClients table td.first{color: #A4A4A4;}
+section#privateOffice-right section.listConnectedClients table td.country{color: #8E5700;}
+section#privateOffice-right section.listConnectedClients table td.price{color: #4D5980;}
+section#privateOffice-right section.listConnectedClients div.qualification{padding-top: 30px; padding-bottom: 10px; color: #a4a4a4; font-size: 11px;}
+section#privateOffice-right section.listConnectedClients div.qualification p{margin-bottom: 10px;}
+section#privateOffice-right section.listConnectedClients div.qualification p span{position: relative; top: -3px;}
+section#privateOffice-right section.connectedClientsTotal{padding: 14px 14px 18px 12px; margin-bottom: 20px; margin-top: 30px;}
+section#privateOffice-right section.connectedClientsTotal div.statistics{padding: 13px 11px 12px 18px;}
+section#privateOffice-right section.connectedClientsTotal div.statistics > div.container{width: 315px; float: left; margin-right: 30px;}
+section#privateOffice-right section.connectedClientsTotal div.statistics > div.container > div.block{background-color: #efefef; margin-bottom: 10px; padding: 8px 11px 10px 13px; color: #666; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+section#privateOffice-right section.connectedClientsTotal div.statistics > div.container > div.block p{padding-left: 8px; position: relative; color: #666;}
+section#privateOffice-right section.connectedClientsTotal div.statistics > div.container > div.block p:before{content: ''; display: block; width: 7px; height: 9px; background: transparent url("../images/TradingAccounts-statistics-ico.png"); position: absolute; top: 2px; left: -6px;}
+section#privateOffice-right section.connectedClientsTotal div.statistics > div.container > div.block p span{float: right; color: #000;}
+section#privateOffice-right section.connectedClientsTotal div.statistics > div.container.right{margin-right: 0;}
+section#privateOffice-right section.ddHistory.listConnectedClients-history{padding-bottom: 24px;}
+
+section#privateOffice-right section.promoList{margin-top: -9px;}
+section#privateOffice-right section.promoList fieldset > div.container{background-color: #fff;}
+section#privateOffice-right section.promoList fieldset > div.container div.promoText{padding: 1px 28px 22px 22px; line-height: 15px;}
+section#privateOffice-right section.promoList fieldset > div.container div.promoText p{margin-bottom: 15px;}
+section#privateOffice-right section.promoList fieldset.promoBanners{z-index: 10;}
+section#privateOffice-right section.promoList fieldset.promoBanners div.container{padding-bottom: 15px;}
+section#privateOffice-right section.promoList fieldset.promoBanners div.block{margin-left: 49px; margin-right: 49px; padding-bottom: 8px; border-bottom: 1px solid #e8e8e8; margin-bottom: 40px;}
+section#privateOffice-right section.promoList fieldset.promoBanners div.block > div.img{margin-bottom: 15px;}
+section#privateOffice-right section.promoList fieldset.promoBanners div.block > p{padding-left: 15px; position: relative; color: #6C6C6C; margin-bottom: 12px;}
+section#privateOffice-right section.promoList fieldset.promoBanners div.block > p:before{content: ''; display: block; width: 7px; height: 9px; background: transparent url("../images/TradingAccounts-statistics-ico.png"); position: absolute; top: 6px; left: 0;}
+section#privateOffice-right section.promoList fieldset.promoBanners div.block > p em{font-style: normal; color: #000; width: 112px; display: inline-block;}
+section#privateOffice-right section.promoList fieldset.promoBanners div.block > p span{color: #0059B2; border-bottom: 1px dashed #0059B2; display: inline-block; margin-left: 13px; padding: 4px 0 1px 0; cursor: pointer;}
+section#privateOffice-right section.promoList fieldset.promoBanners div.block > p span.active{color: #666; border-bottom: none; background-color: #eee; padding: 4px 8px 4px 8px; cursor: text; margin-left: 5px; margin-right: -8px; margin-bottom: -3px; -khtml-border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; behavior: url("/PIE.php");}
+section#privateOffice-right section.promoList fieldset.promoPattern div.container{padding-bottom: 41px;}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list{margin-top: -4px; padding-left: 39px;}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block{background-color: #f4f4f4; width: 282px; display: inline-block; margin-right: 17px; margin-bottom: 20px; vertical-align: top; padding: 13px 14px;  -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php")}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block > p{padding-left: 14px; padding-bottom: 1px; position: relative; color: #6C6C6C; margin-bottom: 12px; padding-top: 1px;}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block > p:before{content: ''; display: block; width: 7px; height: 9px; background: transparent url("../images/TradingAccounts-statistics-ico.png"); position: absolute; top: 4px; left: 0;}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block > p a{color: #0059B2; text-decoration: underline;}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block > p a:hover{text-decoration: none;}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block > div.img{border: 1px solid #ddd; background-color: #fff; padding: 1px;}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block > div.img a{display: block; text-decoration: none; font-size: 1px; line-height: 1px; position: relative;}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block > div.img a:before{content: ''; display: block; width: 50px; height: 50px; position: absolute;; bottom: 0; right: 0; background-color: #000; opacity: 0; filter: alpha(opacity: 0);}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block > div.img a:after{content: ''; display: block; width: 30px; height: 34px; background: transparent url("../images/mail-zoom-ico.png"); position: absolute; bottom: 7px; right: 9px; opacity: 0; filter: alpha(opacity: 0);}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block > div.img a:hover:before{ opacity: 0.5; filter: alpha(opacity: 50);}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block > div.img a:hover:after{ opacity: 1; filter: alpha(opacity: 100);}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block div.copy2buffer{padding-top: 10px;}
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoPattern-list > div.block div.copy2buffer span{color: #0059B2; border-bottom: 1px dashed #0059B2; padding-bottom: 2px; cursor: pointer;}
+
+section#privateOffice-right section.promoList fieldset.promoPattern div.promoNotice{padding: 17px 20px 10px 22px; color: #aaa; font-size: 11px; line-height: 15px;}
+section#privateOffice-right section.promoList fieldset.promoBranbook{}
+section#privateOffice-right section.promoList fieldset.promoBranbook div.container{padding-bottom: 1px;}
+section#privateOffice-right section.promoList fieldset.promoBranbook div.branbookList{margin-top: -5px;}
+section#privateOffice-right section.promoList fieldset.promoBranbook div.block{margin-left: 49px; margin-right: 49px; padding-bottom: 29px; border-bottom: 1px solid #e8e8e8; margin-bottom: 24px;}
+section#privateOffice-right section.promoList fieldset.promoBranbook div.block.last{border-bottom: none; margin-bottom: 10px;}
+section#privateOffice-right section.promoList fieldset.promoBranbook div.block h5{font-size: 14px; color: #B21926; margin-bottom: 25px;}
+section#privateOffice-right section.promoList fieldset.promoBranbook div.block img{padding-left: 4px;}
+section#privateOffice-right section.promoList fieldset.promoBranbook div.block ul{margin-top: 22px;}
+section#privateOffice-right section.promoList fieldset.promoBranbook div.block li{display: inline-block; margin-right: 16px;}
+section#privateOffice-right section.promoList fieldset.promoBranbook div.block li a{color: #0059B2; text-decoration: underline;}
+section#privateOffice-right section.promoList fieldset.promoBranbook div.block li a:hover{text-decoration: none;}
+
+section#privateOffice-right section.documents-4-download fieldset > div.container{background-color: #fff; padding-bottom: 20px;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.links{padding-top: 28px; padding-bottom: 58px; overflow: hidden;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.links ul{padding-left: 34px;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.links li{float: left; padding-left: 54px; margin-right: 33px;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.links li a{color: #0059B2; text-decoration: underline; font-size: 14px; position: relative;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.links li a:hover{text-decoration: none;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.links li a:before{content: ''; display: block; position: absolute;  background: transparent url("../images/documents-4-download.png");}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.links li.item1 a:before{width: 43px; height: 32px; top: -7px; left: -54px; background-position: 0 0;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.links li.item2 a:before{width: 44px; height: 41px; top: -7px; left: -55px; background-position: 0 -32px;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.links li.item3 a:before{width: 44px; height: 31px; top: -5px; left: -56px; background-position: 0 -73px;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.formNotice{margin-left: 20px; margin-right: 50px; margin-bottom: 34px;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.formNotice span.text{width: 570px;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.navigation{width: 300px; margin: 0 auto; overflow: hidden;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.navigation > span{float: left; margin-right: 20px; padding-top: 9px; color: #3C84B7; text-decoration: none; padding-bottom: 2px; border-bottom: 1px dashed #3C84B7; cursor: pointer;}
+section#privateOffice-right section.documents-4-download fieldset > div.container div.btn{width: 170px;}
+
+section#privateOffice-right section.pammAbout{margin-top: 2px; width: 388px; padding: 20px 0 20px 22px; float: left; margin-right: 28px;}
+section#privateOffice-right section.pammAbout > h4{font-size: 14px; color: #000; padding-bottom: 15px;}
+section#privateOffice-right section.pammAbout > div.form{padding-top: 12px;}
+section#privateOffice-right section.pammAbout > div.form fieldset{background: no-repeat; border: none; padding: 0; border: none; -moz-box-shadow: none; -ms-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; margin-bottom: 0;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container{padding-top: 0;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.row{padding-left: 0;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.row > div.left{width: 175px;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.row > div.right{width: 180px;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails{background: transparent url("../images/grey-border-3px.png") repeat-x left top; padding-top: 28px; margin-top: 9px; margin-right: 28px; width: 360px;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails h4{color: #BE1E2C; font-size: 14px; padding-bottom: 21px;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails table{margin-top: 5px; margin-bottom: 30px;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails td{padding-top: 11px; padding-bottom: 11px;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails td.lvl{text-align: center; color: #4D5980;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails td.tick{text-align: center;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails > div.formNotice{width: 334px;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails > div.formNotice label span.text{width: 300px; margin-top: 0;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails > div.reviewAddComment{background-color: #F9F9F9; width: 374px; margin-left: -22px; margin-bottom: -20px; border-top: 1px solid #EAEAEA; padding: 18px 10px 23px 26px; margin-top: 10px;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails > div.reviewAddComment > h6{color: #BE1E2C; font-weight: bold; padding-bottom: 15px;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails > div.reviewAddComment > div.textarea{width: 342px; padding-bottom: 17px;}
+section#privateOffice-right section.pammAbout > div.form fieldset > div.container div.offerDetails > div.reviewAddComment > div.textarea > textarea{width: 342px; height: 75px;}
+section#privateOffice-right section.pammAbout-comments{margin-top: 2px; width: 240px;}
+section#privateOffice-right section.pammAbout-comments div.commentsList > div.textarea > textarea{width: 231px;}
+
+section#privateOffice-right div.form.pammAccountOpen{padding-top: 0;}
+section#privateOffice-right div.form.pammAccountOpen h2{font-size: 18px; color: #161616; margin-bottom: 40px;}
+
+section#privateOffice-right section.pammAccountDetails h3{font-size: 14px; color: #000; padding-bottom: 10px; padding-left: 20px;}
+section#privateOffice-right section.pammAccountDetails div.content div.terms div.left{width: 300px;}
+section#privateOffice-right section.pammAccountDetails div.content div.terms div.left p{width: 89px; text-align: right;}
+section#privateOffice-right section.pammAccountDetails div.content div.terms div.left div.formSelect{width: 185px;}
+section#privateOffice-right section.pammAccountDetails div.content div.statistics{background: transparent url("../images/grey-border-3px.png") repeat-x left bottom; padding-bottom: 13px;}
+section#privateOffice-right section.pammAccountDetails div.content div.incomeTable{padding-top: 19px; padding-bottom: 28px;}
+section#privateOffice-right section.pammAccountDetails div.content div.incomeTable h4{color: #BE1E2C; font-size: 14px; padding-bottom: 10px;}
+section#privateOffice-right section.pammAccountDetails div.content div.incomeTable td{padding-top: 11px; padding-bottom: 11px; text-align: center;}
+section#privateOffice-right section.pammAccountDetails div.content div.incomeTable th{text-align: center;}
+section#privateOffice-right section.pammAccountDetails div.content div.incomeTable td.lvl{ color: #4D5980;}
+section#privateOffice-right section.pammAccountDetails div.content div.incomeTable td.tick{text-align: center;}
+
+section#privateOffice-right > div.form.investPamm{padding-top: 0;}
+section#privateOffice-right > div.form.investPamm fieldset div.container{padding-top: 15px; padding-bottom: 16px;}
+section#privateOffice-right > div.form.investPamm fieldset div.container div.formNotice{margin-bottom: 30px; margin-top: 20px;}
+section#privateOffice-right > div.form.investPamm fieldset div.container div.questionLink{padding-bottom: 0;}
+
+section#privateOffice-right > section.myInvestment{margin-bottom: 30px; padding-bottom: 45px;}
+section#privateOffice-right > section.myInvestment h5{font-size: 14px; padding-top: 7px; padding-bottom: 15px;}
+
+div.pammDetails-operations{overflow: hidden; padding-bottom: 20px;}
+div.pammDetails-operations div.btn{margin-right: 19px;}
+div.pammDetails-operations div.btn span{width: 130px;}
+div.pammDetails-operations a{color: #0059B2; text-decoration: underline; margin-top: 8px; float: left;}
+div.pammDetails-operations a:hover{text-decoration: none;}
+div.pammDetails-operations div.counter{float: right; height: 34px; line-height: 32px;}
+
+section#privateOffice-right section.tradeOffer,
+section#privateOffice-right section.tradeOfferStat{margin-top: -17px; padding: 19px 35px 17px 22px; margin-bottom: 30px;}
+section#privateOffice-right section.tradeOffer div.tradeOffer-title{padding-bottom: 25px;}
+section#privateOffice-right section.tradeOffer div.tradeOffer-title > p{color: #525252; float: left; height: 30px; line-height: 27px; margin-right: 10px;}
+section#privateOffice-right section.tradeOffer div.tradeOffer-title div.input{width: 100px; float: left;}
+section#privateOffice-right section.tradeOffer div.tradeOffer-title div.btn{float: right; margin-right: 0;}
+section#privateOffice-right section.tradeOffer div.tradeOffer-title div.btn span{width: 130px;}
+section#privateOffice-right section.tradeOffer div.tradeOfferTable{padding-bottom: 40px;}
+section#privateOffice-right section.tradeOffer div.tradeOfferTable h4{color: #BE1E2C; font-size: 14px; padding-bottom: 10px;}
+section#privateOffice-right section.tradeOffer div.tradeOfferTable td{padding-top: 11px; padding-bottom: 11px; text-align: center;}
+section#privateOffice-right section.tradeOffer div.tradeOfferTable th{text-align: center;}
+section#privateOffice-right section.tradeOffer div.tradeOfferTable td.lvl{ color: #4D5980;}
+section#privateOffice-right section.tradeOffer div.tradeOfferTable td.tick{text-align: center;}
+section#privateOffice-right section.tradeOfferStat{margin-top: 0; padding: 19px 20px 17px 22px;}
+section#privateOffice-right section.tradeOfferStat div.statistics{padding-top: 7px;}
+section#privateOffice-right section.tradeOfferStat div.statistics > div.container{width: 323px; float: left; margin-right: 30px;}
+section#privateOffice-right section.tradeOfferStat div.statistics > div.container > div.block{background-color: #efefef; margin-bottom: 10px; padding: 8px 11px 10px 13px; color: #666; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+section#privateOffice-right section.tradeOfferStat div.statistics > div.container > div.block p{padding-left: 8px; position: relative;}
+section#privateOffice-right section.tradeOfferStat div.statistics > div.container > div.block p:before{content: ''; display: block; width: 7px; height: 9px; background: transparent url("../images/TradingAccounts-statistics-ico.png"); position: absolute; top: 2px; left: -6px;}
+section#privateOffice-right section.tradeOfferStat div.statistics > div.container > div.block p span{float: right;}
+section#privateOffice-right section.tradeOfferStat div.statistics > div.container > div.block.green p span{color: #468C00; font-weight: bold;}
+section#privateOffice-right section.tradeOfferStat div.statistics > div.container.last{margin-right: 0;}
+section#privateOffice-right section.tradeOfferStat div.statistics > div.container.green p span{color: #468C00; font-weight: bold;}
+section#privateOffice-right section.tradeOfferStat div.statistics div.historyMore{float: right; padding: 7px 2px 16px 5px;}
+section#privateOffice-right section.tradeOfferStat div.detailedStatistics{background: transparent url("../images/grey-border-3px.png") repeat-x left top; padding-top: 20px; padding-bottom: 11px; margin-top: 13px;}
+section#privateOffice-right section.tradeOfferStat div.window_taccount_history_money.cont.ajaxw div.standartBlock{background-color: #fff; margin-bottom: 20px; padding: 10px 0; margin-top: 15px; border: none; -moz-box-shadow: none; -ms-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; behavior: url("/PIE.php");}
+
+section#authorization{padding-bottom: 97px;}
+section#authorization > div.left{margin-right: 50px;}
+section#authorization > div.left > div.form fieldset > div.container{padding-top: 28px;}
+section#authorization > div.left > div.form fieldset > div.container{background-color: #fff;}
+section#authorization > div.left > div.form fieldset > div.container div.row > div.left{width: 220px;}
+section#authorization > div.left > div.form fieldset > div.container div.row > div.right{width: 212px;}
+section#authorization > div.left > div.form fieldset > div.container div.row div.btn{width: 170px;}
+section#authorization div.authMenu{padding-top: 20px; clear: both; padding-bottom: 13px;}
+section#authorization div.authMenu li{margin-bottom: 12px; font-size: 11px;}
+section#authorization div.authMenu li a{color: #0059B2; text-decoration: underline;}
+section#authorization div.authMenu li a:hover{text-decoration: none;}
+section#authorization > div.right{width: 410px; float: left; padding-top: 54px;}
+section#authorization > div.right h1{padding-bottom: 16px;}
+section#authorization > div.right ul{padding-top: 12px;}
+section#authorization > div.right ul li{background: transparent url("../images/auth-benefits-marker.png") no-repeat 0 0; padding-left: 33px; padding-bottom: 26px;}
+section#authorization > div.right ul li span.title{display: block; padding-bottom: 12px; color: #000;}
+section#authorization > div.right ul li span.text{color: #525252; line-height: 15px; padding-right: 20px;}
+section#authorization input.btnTag{opacity: 0; filter: alpha(opacity: 0); position: absolute; top: 0; left: 0; margin-left: 0;}
+
+section#privateOffice-right > section.ratingPammAccounts{padding: 13px 6px 20px 18px; margin-top: 28px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter{padding-bottom: 8px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content{}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers{float: left; margin-right: 47px; padding-bottom: 4px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container{width: 252px; position: relative; margin-bottom: 35px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container h5,
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.currency h5{font-size: 12px; color: #000; padding-bottom: 24px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider{height: 1px; z-index: 1; cursor: pointer; border: 1px solid #cbcbcb; background: #efefef none no-repeat; border-radius: 0; position: relative;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider div.ui-slider-range{height: 1px; border: 1px solid #be1e2d; background-color: #ff2626; top: -1px; left: -1px; position: absolute;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider.noRange a.ui-slider-handle{display: block; border: none; cursor: pointer; border-radius: 0 !important; width: 13px; height: 18px; background: transparent url("../images/creepers-images.png") no-repeat 0 0; position: relative; top: -11px; margin-left: -6px; z-index: 2;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider.range a.ui-slider-handle{display: block; border: none; cursor: pointer; border-radius: 0 !important; width: 7px; height: 18px; background: transparent url("../images/creepers-images.png") no-repeat; position: absolute; top: -11px; margin-left: -5px; z-index: 2;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider.range a.ui-slider-handle.leftHandle{background-position: 0 -18px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider.range a.ui-slider-handle.rightHandle{background-position: -7px -18px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider a.ui-slider-handle span.slider_val{cursor: pointer; text-shadow: none; width: 40px; position: absolute; top: -13px; color: #000; font-size: 11px; margin-left: -14px; text-align: center;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider a.ui-slider-handle.rightHandle span.slider_val{margin-left: -19px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider div.interval{text-align: center; cursor: default; position: absolute; top: 3px; z-index: 0; color: #999; font-size: 11px; min-width: 10px; width: 40px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider div.interval > span{display: inline-block; cursor: pointer; position: relative; top: -7px; margin-bottom: 3px; width: 1px; height: 9px; background: transparent url("../images/creepers-images.png") -13px 0;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider div.interval b{display: block; margin-top: -7px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider div.interval b span{cursor: pointer;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider div.interval.interval1{left: -19px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider div.interval.interval2{left: 46px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider div.interval.interval3{left: 106px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider div.interval.interval4{left: 166px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.creepers div.container div.slider div.interval.interval5{left: 231px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.currency{width: 80px; float: left; margin-left: -7px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.currency label{display: block; margin-bottom: 18px; margin-top: -6px;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.filter{background: transparent url("../images/grey-border-3px.png") repeat-x top left; padding-top: 22px; overflow: hidden; text-align: center;}
+section#privateOffice-right > section.ratingPammAccounts div.filter div.content div.filter div.btn{float: none; display: inline-block;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table{margin-left: -10px;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table > h5{font-size: 14px; color: #000; padding-bottom: 18px;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table th{text-align: right;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table td{text-align: right;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table .first{text-align: left;1}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table td.first a{text-decoration: underline;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table td.first a:hover{text-decoration: none;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table td.currency{color: #8C4600;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table td.balans{color: #4C597F;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table td{height: 34px; padding-top: 0; padding-bottom: 0;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table tr.withdraw td{background-color: #f8f8f8;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table td li.delete a{color: #BE1E2D;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table tr.withGraph td{background-color: #f8f8f8; border-bottom: none;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table tr.graph{display: none;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table tr.graph.active{display: table-row;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table tr.graph td{background-color: #f8f8f8; padding-bottom: 10px;}
+section#privateOffice-right > section.ratingPammAccounts div.personalAccounts-table tr.graph td div.graphImg{border: 1px solid #d4d4d4; width: 676px; height: 199px; margin: 0 auto;}
+
+.opener{cursor: pointer;}
+
+div.block.historyMore.quotes div.standartBlock{background-color: #fff; margin-bottom: 20px; padding: 20px 0; margin-top: 0; border: none; -moz-box-shadow: none; -ms-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; behavior: url("/PIE.php");}
+
+
+div.partnersStat{padding-top: 14px;}
+div.partnersStat fieldset{ margin-bottom: 40px; background: #fff;}
+div.partnersStat div.form{padding-top: 10px !important;}
+div.partnersStat fieldset legend{width: auto !important; display: inline-block; padding-right: 10px;}
+div.partnersStat fieldset > div.container{background-color: #fff; padding: 10px 10px 10px 20px;}
+div.partnersStat fieldset h3{font-size: 13px; font-weight: bold; padding-bottom: 21px;}
+div.partnersStat fieldset p{line-height: 20px; color: #000; margin-bottom: 23px; width: 475px;}
+div.partnersStat div.date > p{color: #444; padding-bottom: 5px; margin-bottom: 0; line-height: 30px; text-align: left; float: left; width: auto; margin-right: 20px;}
+div.partnersStat div.date{padding-right: 37px;}
+div.partnersStat div.date div.row{float: left; margin-right: 10px; padding: 0 !important;}
+div.partnersStat div.date div.row > p{color: #444; float: left; line-height: 30px; width: 28px;}
+div.partnersStat div.date div.input{width: 96px; float: left;}
+div.partnersStat div.graph{margin-bottom: 20px; padding: 0 !important;}
+div.partnersStat div.graphDescription div.container{margin-right: 30px; display: inline-block;}
+div.partnersStat div.graphDescription div.container div.block{background-color: #efefef; margin-bottom: 10px; padding: 8px 11px 10px 13px; color: #666; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+div.partnersStat div.graphDescription div.container div.block p{padding-left: 8px; position: relative; color: #666; line-height: normal; width: auto; margin-bottom: 0;}
+div.partnersStat div.graphDescription div.container div.block p:before{content: ''; display: block; width: 7px; height: 9px; background: transparent url("../images/TradingAccounts-statistics-ico.png"); position: absolute; top: 2px; left: -6px;}
+div.partnersStat div.graphDescription div.container div.block p span{float: right; margin-left: 20px;}
+
+.error.pay_error{background: #FFFFFF; color: #B21926; padding: 19px 19px 0;}
+
+.sdelaiKakHochesh{width: 920px !important;}
+.sdelaiKakHochesh .review.addMoney{width: 560px; float: left;}
+.sdelaiKakHochesh__comment{width: 330px; float: right}
+section#privateOffice-right.sdelaiKakHochesh > div.form fieldset.addMoney > div.container div.row > div.right{width: 265px;}
+section#privateOffice-right.sdelaiKakHochesh > div.form fieldset.addMoney > div.container div.row > div.right.input{width: 250px;}
+.sdelaiKakHochesh__comment section.userDetail-right{margin-top: 0;}
+
+.partnerLvl .form{padding-top: 20px;}
+.partnerLvl div.container{background-color: #fff;}
+.partnerLvl div.container div.promoText{padding: 1px 28px 22px 22px; line-height: 15px;}
+.partnerLvl div.container div.promoText p{margin-bottom: 15px;}
+.partnerLvl__stat{padding: 1px 28px 10px 22px; width: 480px;}
+.partnerLvl__stat_float{float: left;}
+.partnerLvl__block{background-color: #efefef; overflow: hidden; margin-bottom: 10px; padding: 8px 11px 10px 13px; color: #666; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+.partnerLvl__item{padding-left: 8px; position: relative;}
+.partnerLvl__item:before{content: ''; display: block; width: 7px; height: 9px; background: transparent url("../images/TradingAccounts-statistics-ico.png"); position: absolute; top: 2px; left: -6px;}
+.partnerLvl__item_value{float: right; text-align: right;}
+.partnerLvl__block.green .partnerLvl__item_value{color: #468C00; font-weight: bold;}
+.partnerLvl__block.red .partnerLvl__item_value{color: #B21926; font-weight: bold;}
+.partnerLvl__item_value_item{font-weight: bold; display: block; margin-bottom: 3px;}
+.partnerLvl__progress{padding: 0 28px 39px 22px;}
+.partnerLvl__progress_container{position: relative;}
+.partnerLvl__progress_block{border: 1px solid #d5d5d5; height: 30px;background: #eeeeee; position: relative; overflow: hidden; -khtml-border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px; behavior: url("/PIE.php");}
+.partnerLvl__progress_block_progress{position: absolute; top: 0; left: 0; height: 30px; border-right: 1px solid #d5d5d5; -khtml-border-radius: 6px 0 0 6px; -moz-border-radius:  6px 0 0 6px; -webkit-border-radius:  6px 0 0 6px; border-radius:  6px 0 0 6px; behavior: url("/PIE.php");}
+.partnerLvl__progress_block.green .partnerLvl__progress_block_progress{background: #6aa84f;}
+.partnerLvl__progress_block.red .partnerLvl__progress_block_progress{background: #be1e2d;}
+.partnerLvl__progress_block_label{position: absolute; top: -19px; font-weight: bold; color: #B21926;}
+.partnerLvl__progress_block_label-first,
+.partnerLvl__progress_block_label_bottom-first{left: 0; text-align: left !important; width: 30% !important;}
+.partnerLvl__progress_block_label-last,
+.partnerLvl__progress_block_label_bottom-last{right: 0; text-align: right !important; width: 30% !important;}
+.partnerLvl__progress_block_label_bottom{position: absolute; bottom: -22px; width: 100%; text-align: center; font-weight: bold; color: #468C00;}
+.partnerLvl__progress_block_border{width: 2px; height: 30px; background: #be1e2d; position: absolute; top: 1px; border-left: 1px solid #d5d5d5; border-right: 1px solid #d5d5d5;}
+.partnerLvl__progress_block_border .partnerLvl__progress_block_label,
+.partnerLvl__progress_block_border .partnerLvl__progress_block_label_bottom{width: 200px; text-align: center; left: -100px;}
+.partnerLvl__progress_block_border_last{border-right: none;   -khtml-border-radius: 0 2px 2px 0; -moz-border-radius: 0 2px 2px 0; -webkit-border-radius: 0 2px 2px 0; border-radius: 0 2px 2px 0; behavior: url("/PIE.php");}
+.partnerLvl__progress_block_border_fill{background: #fff;}
+.partnerLvl__progress_block_border_last .partnerLvl__progress_block_label,
+.partnerLvl__progress_block_border_last .partnerLvl__progress_block_label_bottom{right: 0; text-align: right; left: auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footnote{font-size: 10px; color: #3C84B7; text-decoration: none; position: relative; top: -5px; margin-left: 2px; line-height: 18px;}
+.footnote:hover{text-decoration: underline;}
+
+/*  -------------------------------------------------------------------------------  */
+
+
+div.input .telPlus{position: absolute; top: 4px; left: 5px; display: none; height: 18px; padding: 1px 0; line-height: 20px; color: #191919; font-family:Tahoma, Geneva, sans-serif; font-size: 12px;}
+input.active{margin-left: 8px;}
+
+/*  блок добавления уровней вознаграждения для инвесторов */
+div.invesrtotReward-add{padding-top: 7px; width: 490px; padding-bottom: 20px;}
+div.invesrtotReward-add > div.title{color: #525252; padding-bottom: 10px;}
+div.invesrtotReward-add > div.title span{float: left;}
+div.invesrtotReward-add > div.title span a{font-size: 10px; color: #BE1E2D; text-decoration: none; position: relative; top: -5px; margin-left: 2px;}
+div.invesrtotReward-add > div.title span a:hover{text-decoration: underline;}
+div.invesrtotReward-add > div.title span.balance{padding-left: 20px; width: 106px;}
+div.invesrtotReward-add > div.title span.percent{width: 106px;}
+div.invesrtotReward-add > div.title span.percent2{width: 88px;}
+div.invesrtotReward-add > div.title span.history{width: 63px; text-align: center;}
+div.invesrtotReward-add > div.title span.open{width: 85px; text-align: center;}
+div.invesrtotReward-add > div.content{background-color: #f5f5f5; padding: 19px 20px; position: relative;}
+div.row div.invesrtotReward-add > div.content > div.input{float: left; width: 60px; margin-right: 30px;}
+div.invesrtotReward-add > div.content > div.checkboxesList{width: 125px; float: left; padding-left: 5px; padding-top: 7px;}
+div.invesrtotReward-add > div.content > div.checkboxesList > span{padding-right: 40px;}
+div.invesrtotReward-add > div.content > span.delete{display: block; background: transparent url("../images/currencyPairs-actions-ico.png") no-repeat 0 -14px; width: 14px; height: 14px; position: absolute; top: 27px; right: 17px; cursor: pointer;}
+/*  -------------------------------------------------------------------------------  */
+
+
+.ui-sortable-placeholder{margin: 0 !important;}
+
+
+
+
+.standartBlock{background-color: #fff; margin-bottom: 20px; padding: 10px; margin-top: -4px; border: 1px solid #d3d3d3; -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); behavior: url("/PIE.php"); -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+
+h4.stdZag{font-size: 14px; color: #000; padding-bottom: 15px;}
+
+/*  логотипы платежек  */
+div.servicesLogos{padding-top: 26px; width: 360px; margin-bottom: -8px;}
+div.servicesLogos ul{overflow: hidden;}
+div.servicesLogos li{margin-right: 14px; margin-bottom: 14px; display: inline-block; cursor: pointer;}
+div.servicesLogos li > a{display: block; background-position: 0 0; background-repeat: no-repeat; text-decoration: none;}
+div.servicesLogos li.act > a{cursor: default;}
+div.servicesLogos li > a span.default{}
+div.servicesLogos li > a span.hover{display: none;}
+div.servicesLogos li > a:hover span.default,
+div.servicesLogos li.act > a span.default{display: none;}
+div.servicesLogos li > a:hover span.hover,
+div.servicesLogos li.act > a span.hover{display: block;}
+/*  -------------------------------------------------------------------------------  */
+
+/*  лоадер  */
+div.loader{width: 22px; height: 22px; background: transparent url("../images/loader-bg.png") no-repeat; position: fixed; top: 50%; left: 50%; margin-top: -55px; margin-left: -55px; z-index: 11111; padding: 43px;}
+/*  -------------------------------------------------------------------------------  */
+
+/*  попап комментария  */
+div.commentPopup{position: absolute; top: -59px; right: 95px; display: none; border: 1px solid #dcdcde; z-index: 2; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php"); background-color: #fff; min-width: 250px;}
+div.commentPopup:before{content: ''; display: block; width: 8px; height: 13px; background: transparent url("../images/comment-popup-angle.png"); position: absolute; top: 60px; right: -7px;}
+div.commentPopup > div.title{background-color: #eee; border-bottom: 2px solid #ddd; color: #111; padding: 8px 11px 9px 12px;}
+div.commentPopup > div.content{color: #000; padding: 13px 5px 4px 11px; line-height: 17px;}
+div.commentPopup > div.content p{margin-bottom: 17px;}
+div.statusContainer:hover div.commentPopup{display: block;}
+/*  -------------------------------------------------------------------------------  */
+
+/*  информационный блок  */
+div.infoBlock{padding: 19px 25px 10px 108px; margin-bottom: 30px; background: transparent url("../images/info-block-msg-ico.png") no-repeat 29px 29px; background-color: #f5f5f5; border: 1px solid #d3d3d3; -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); behavior: url("/PIE.php"); -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: px; border-radius: 3px; behavior: url("/PIE.php");}
+div.infoBlock.afterForm{margin-top: -17px;}
+div.infoBlock > h6{color: #B21926; font-size: 13px; font-weight: bold; padding-bottom: 18px;}
+div.infoBlock > p{color: #525252; line-height: 15px; margin-bottom: 15px;}
+div.infoBlock a{color: #0059B2; text-decoration: underline;}
+div.infoBlock a:hover{text-decoration: none;}
+div.infoBlock.info{background-image: url("../images/info-block-info-ico.png"); background-color: #fff;}
+div.infoBlock.info > h6{color: #61A112;}
+div.infoBlock.info > p{color: #5C9722;}
+/*  -------------------- */
+
+/*  промо меню  */
+div.promoMenu{background: transparent url("../images/promoMenu-bg.png") no-repeat; width: 724px; height: 43px; margin-left: -2px; margin-top: 34px;}
+div.promoMenu ul{padding: 7px 11px 12px 5px;}
+div.promoMenu ul li{float: left; padding: 5px 14px 3px 15px; border-right: 1px solid #e8e8e8; border-left: 1px solid #fff;}
+div.promoMenu ul li.first{border-left: none;}
+div.promoMenu ul li.last{border-right: none;}
+div.promoMenu ul li span{color: #0059B2; border-bottom: 1px dashed #0059B2; display: block; padding-bottom: 2px; cursor: pointer;}
+/*  -------------------- */
+
+/*  пейджер  */
+div.pager{padding-top: 30px;}
+div.pager li{float: left; margin: 0 2px;}
+div.pager li a{display: block; background: transparent url("../images/pager-icons.png") no-repeat; border: 1px solid #fff; width: 23px; height: 23px;}
+div.pager li.first a{background-position: 0 0;}
+div.pager li.prev a{background-position: 0 -23px;}
+div.pager li.next a{background-position: 0 -46px;}
+div.pager li.last a{background-position: 0 -69px;}
+div.pager li a:hover{border: 1px solid #ddd;}
+div.pager li input{border: none; background: none; color: #000; height: 23px; line-height: 23px; padding: 0 5px; text-align: center; width: 35px;}
+/*  -------------------------------------------------------------------------------  */
+
+/*  регистрация  */
+div.mainTitle{background: transparent url("../images/title-shadow.png") no-repeat bottom center; padding-bottom: 17px;}
+div.mainTitle.small{background: transparent url("../images/title-shadow-410.png") no-repeat bottom center;}
+div.mainTitle > h1{font-size: 18px; color: #161616; background: transparent url("../images/h1-border.png") repeat-x left bottom; padding-bottom: 19px;}
+div.mainTitle > h1 span{color: #8C4600;}
+div.mainTitle > h1 b{color: #BE1E2C;}
+div.pageDescription{padding-top: 0;}
+div.pageDescription > p{line-height: 15px; color: #000; margin-bottom: 16px;}
+div.pageDescription > p.referralLink{background-color: #eee; color: #545454; padding: 11px 16px 13px 16px; display: inline-block; -khtml-border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; behavior: url("/PIE.php");}
+div.pageDescription > p.referralLink span{color: #BE1E2C; margin-left: 3px; text-decoration: underline; cursor: pointer;}
+div.pageDescription > p.referralLink span:hover{text-decoration: none;}
+div.pageDescription > ul{padding-left: 19px; margin-top: -2px; padding-bottom: 9px;}
+div.pageDescription > ul > li{background: transparent url("../images/page-description-marker.png") no-repeat 0 6px; padding-left: 15px; line-height: 16px; color: #000; margin-bottom: 5px;}
+div.pageDescription a{color: #0059B2; text-decoration: underline;}
+div.pageDescription a:hover{text-decoration: none;}
+/*  -------------------------------------------------------------------------------  */
+
+div.leftLink a{color: #3C84B7; text-decoration: underline;}
+div.leftLink a:hover{text-decoration: none;}
+/*  таблица  */
+table{width: 100%; border-spacing: 2px 0  !important;}
+table tr th{background-color: #E8E8E8; border-top: 2px solid #BE1E2D; padding: 7px 11px 9px; text-align: left;}
+table tr th a{color: #4C4C4C; text-decoration: underline;}
+table tr th a:hover{text-decoration: none;}
+table tr th.sort{cursor: pointer; padding-right: 25px;}
+table tr th p{display: inline-block; position: relative;}
+table tr th p:before{content: ''; display: block; width: 9px; height: 8px; background: transparent url("../images/sort-direction-ico.png") no-repeat -1000px -1000px; position: absolute; top: 3px; right: -24px;}
+table tr th p:after{content: ''; display: block; width: 9px; height: 8px; background: transparent url("../images/sort-direction-ico.png") no-repeat -1000px -1000px; position: absolute; top: 3px; right: -13px;}
+table tr th p em{font-style: normal; font-size: 10px; color: #777; position: absolute; top: -5px; right: -10px;}
+table tr th.sort:hover{background-color: #dadada;}
+table tr th.sort.up{background-color: #DBE0C0; padding-right: 15px;}
+table tr th.sort.down{background-color: #d79fa4; padding-right: 15px;}
+table tr th.sort:hover p:before,
+table tr th.sort.up > p:before{background-position: 0 0;}
+table tr th.sort:hover p:after,
+table tr th.sort.down p:after{background-position: 0 -8px;}
+table tr th.sort.up > p:before{right: -13px;}
+table tr th.sort.up:hover > p:after{background-position: -1000px -1000px;}
+table tr th.sort.down:hover > p:before{background-position: -1000px -1000px;}
+table td{border-bottom: 1px solid #F0F0F0; padding: 9px 6px 10px 11px; vertical-align: middle;}
+table tr.last td{border-bottom: 2px solid #F0F0F0;}
+table td a{color: #3C84B7; text-decoration: none; line-height: 14px;}
+table td > span{white-space: nowrap;}
+table td a:hover{text-decoration: underline;}
+table td.up,
+table td.up a{color: #748A0D;}
+table td.down,
+table td.down a{color: #D79FA4;}
+table tr:hover td{background-color: #f7f7f7;}
+table td ul li{margin-bottom: 2px;}
+table td ul li a{font-size: 11px; text-decoration: underline;}
+table td ul li a:hover{text-decoration: none;}
+table td.date-time{color: #666;}
+table td.date-time em{color: #868686; font-style: normal;}
+table td.last div.statusContainer{position: relative;}
+table td.percentPlus{color: #468C00;}
+table td.percentMinus{color: #BE1E2C;}
+table td.currency{color: #8C4600;}
+.alignClass th,
+.alignClass td{text-align: right !important;}
+.alignClass tr th:first-of-type,
+.alignClass tr td:first-of-type{text-align: left !important;}
+.alignClass tr th:nth-child(2),
+.alignClass tr td:nth-child(2){text-align: left !important;}
+/*  -------------------------------------------------------------------------------  */
+
+/*  элементы формы  */
+div.form{padding-top: 57px;}
+
+div.form fieldset{position: relative; margin-bottom: 47px; background-color: #f5f5f5; border: 1px solid #d3d3d3; -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -ms-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.1); box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); behavior: url("/PIE.php"); -khtml-border-radius: 0 3px 3px 3px; -moz-border-radius: 0 3px 3px 3px; -webkit-border-radius: 0 3px 3px 3px; border-radius: 0 3px 3px 3px; behavior: url("/PIE.php");}
+div.form fieldset > legend{position: absolute; top: -21px; left: -1px; font-size: 14px; color: #000; width: 200px; padding-bottom: 5px; border-bottom: 2px solid #be1e2d;}
+div.form fieldset > div.container{border-top: 1px solid #fff; -khtml-border-radius: 0 3px 3px 3px; -moz-border-radius: 0 3px 3px 3px; -webkit-border-radius: 0 3px 3px 3px; border-radius: 0 3px 3px 3px; behavior: url("/PIE.php"); padding-top: 20px;}
+div.form fieldset.c1 > div.container{background: transparent url("../images/fieldset-container-bg-1.png") no-repeat bottom right;}
+div.form fieldset.c2 > div.container{background: transparent url("../images/fieldset-container-bg-2.png") no-repeat bottom right;}
+div.form fieldset.c4 > div.container{background: transparent url("../images/fieldset-container-bg-4.png") no-repeat bottom right;}
+div.form fieldset > div.container div.row{padding-bottom: 19px; padding-left: 19px;}
+div.form fieldset > div.container div.row > div.left{width: 161px; float: left; height: 30px;}
+div.form fieldset > div.container div.row > div.left > label{color: #7e7e7e; height: 25px; line-height: 15px; padding-top: 5px; position: relative; display: inline-block;}
+div.form fieldset > div.container div.row > div.left > label > span{display: inline-block; width: 4px; height: 4px; position: relative; top: 2px; right: -4px; background-color: #be1e2d;}
+div.form fieldset > div.container div.row > div.left > label em{font-style: normal;}
+/*div.form fieldset > div.container div.row > div.left > label.bigLabel{display: inline;}*/
+/*div.form fieldset > div.container div.row > div.left > label.bigLabel span{right: -15px;}*/
+div.form fieldset > div.container div.row > div.left > span.open{display: inline-block; margin-top: 6px; color: #3C84B7; text-decoration: none; padding-bottom: 1px; border-bottom: 1px dashed #3C84B7; cursor: pointer;}
+div.form fieldset > div.container div.row > div.right{width: 530px; float: left;}
+div.form fieldset > div.container div.row > div.right > p.controlName{height: 30px; line-height: 25px; color: #8C4600; font-weight: bold;}
+div.form fieldset > div.container div.row.password div.passwordComplexity{position: absolute; top: 11px; left: 205px; width: 120px;}
+div.form fieldset > div.container div.row.password div.passwordComplexity > span{display: block; width: 18px; height: 8px; float: left; margin-right: 4px; background: transparent url("../images/password-complexity.png") no-repeat 0 0;}
+div.form fieldset > div.container div.row.password div.passwordComplexity > span.green{background-position: 0 0;}
+div.form fieldset > div.container div.row.password div.passwordComplexity > span.yellow{background-position: 0 -8px;}
+div.form fieldset > div.container div.row.password div.passwordComplexity > span.red{background-position: 0 -16px;}
+div.form fieldset > div.container div.row.password div.passwordComplexity > span.grey{background-position: 0 -24px;}
+div.form fieldset > div.container div.checkboxes{display: block; padding-left: 15px; padding-top: 5px; overflow: hidden; margin-bottom: -12px;}
+div.form fieldset > div.container div.checkboxes label{display: block; overflow: hidden; margin-bottom: 30px;}
+div.form fieldset > div.container div.checkboxes input{margin-right: 10px; float: left;}
+div.form fieldset > div.container div.checkboxes span{display: block; float: left; width: 830px; padding-top: 1px; line-height: 16px;}
+div.form fieldset > div.container div.checkboxes span > a{color: #3c84b7; text-decoration: none;}
+div.form fieldset > div.container div.checkboxes span > a:hover{text-decoration: underline;}
+div.form fieldset > div.container div.row > div.right > div.captcha{float: left; width: 148px; height: 45px;}
+div.form fieldset > div.container div.row > div.right > div.captchaText{color: #191919; line-height: 16px; width: 480px; padding-top: 17px; padding-bottom: 8px;}
+div.form fieldset > div.container div.row > div.right > div.codeBtn{padding-top: 20px;}
+div.form fieldset > div.container div.row > div.right span.dash{color: #3C84B7; text-decoration: none; display: inline-block; padding-bottom: 1px; border-bottom: 1px dashed #3C84B7; padding-top: 8px; cursor: pointer;}
+div.form fieldset > div.container div.row > div.right > div.btnContainer{padding-top: 22px;}
+div.form fieldset > div.container div.row.btns{padding-top: 22px;}
+div.form fieldset > div.container div.row > div.right div.formSelect{width: 192px;}
+div.form fieldset > div.container div.row.greenText input{color: #98B411;}
+div.form fieldset > div.container div.row.redText input{color: #BE1E2D;}
+div.form fieldset > div.container div.row.orangeText input{color: #D96D00;}
+div.form fieldset > div.container div.row.notice{line-height: 16px; padding-right: 20px; margin-top: -1px; padding-bottom: 32px;}
+div.form fieldset > div.container div.row.notice.red{color: #BE1E2D;}
+.checkbox{vertical-align: middle; width: 17px; height: 18px; background: url(../images/checkbox-img.png) no-repeat; cursor: pointer; margin-right: 2px;}
+.checkbox.checked{background-position: 0 -18px;}
+.checkbox.disabled{background-position: 0 -36px; cursor: default;}
+.checkbox.checked.disabled{background-position: 0 -54px; cursor: default;}
+div.form fieldset > div.container div.hiddenBlock{padding-bottom: 10px;}
+div.form fieldset > div.container div.hiddenBlock div.btn{width: 170px;}
+div.form fieldset > div.container div.graph{padding: 0 20px 20px 20px;}
+div.form fieldset > div.container div.graph .chartdiv{height: 520px !important;}
+div.form p.formNote{font-size: 11px; line-height: 14px; color: #7E7E7E; padding-top: 5px;}
+
+g.highcharts-scrollbar g{display: none !important;}
+g.highcharts-button{display: none !important;}
+div.highcharts-container > svg > text > tspan{display: none !important;}
+
+div.addNew{padding-bottom: 20px;}
+div.addNew > span.add{display: inline-block; position: relative; margin-left: 21px; color: #3C84B7; text-decoration: none; padding-bottom: 2px; border-bottom: 1px dashed #3C84B7; cursor: pointer; font-size: 11px;}
+div.addNew > span.add:before{content: ''; display: block; background: transparent url("../images/currencyPairs-actions-ico.png") no-repeat 0 0; width: 14px; height: 14px; position: absolute; top: 0; left: -23px;}
+
+.del{cursor:pointer}
+.coralNote{background: #be1e2d; font-size: 12px; color: #fff; line-height: 18px; padding: 10px; margin-right: 19px; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+p.documentCheck-notice{font-weight: bold; color: #78b617; display: none;}
+/*  -------------------------------------------------------------------------------  */
+
+/*  одиночные элементы форм  */
+div.input{background: transparent url("../images/input-bg.png") no-repeat right -30px; height: 20px; position: relative; padding: 5px 8px 5px 4px; position: relative; margin-left: 4px;}
+div.input:before{content: ''; display: block; width: 4px; height: 30px; background: transparent url("../images/input-bg.png") no-repeat 0 0; position: absolute; top: 0; left: -4px;}
+
+div.correctly div.input:before{background-position: -4px 0;}
+div.wrong div.input:before{background-position: -8px 0;}
+div.input.std:before{background-position: -12px 0;}
+div.input.correctly:before{background-position: -4px 0;}
+div.input.wrong:before{background-position: -8px 0;}
+div.row div.input{width: 300px;}
+div.birthday div.input{width: 110px;}
+div.tel div.input{width: 180px;}
+div.email div.input{width: 210px;}
+div.password div.input{width: 180px;}
+div.code div.input{width: 70px;}
+div.imgCode div.input{width: 100px; float: left; margin-right: 20px;}
+.ie div.input > div.right{padding-top: 3px; padding-bottom: 7px;}
+div.input > img{position: absolute; top: 7px; right: 8px; cursor: default;}
+div.input > input{background: none; border: none; width: 100%; height: 18px; padding: 1px 0; line-height: 20px; color: #191919; font-family:Tahoma, Geneva, sans-serif; font-size: 12px;}
+div.input.disable{background-position: right -90px; opacity: 0.8}
+div.input.disable:before{background-position: 0 0;}
+/*  если поля заполнены  */
+div.filled div.input{background: none; border-bottom: 1px solid #ddd; margin-bottom: -1px;}
+div.filled div.input:before{background: none;  margin-bottom: -1px;}
+
+div.inputfile{background: transparent url("../images/input-bg.png") no-repeat right -30px; height: 30px; line-height: 30px; position: relative; padding: 0 8px 0 4px; position: relative; margin-left: 4px;}
+div.inputfile:before{content: ''; display: block; width: 4px; height: 30px; background: transparent url("../images/input-bg.png") no-repeat 0 0; position: absolute; top: 0; left: -4px;}
+div.row div.inputfile{width: 300px;}
+.ie divinput.file{line-height: 36px;}
+div.inputfile > input{height: auto; width: auto;}
+
+div.alert{position: absolute; top: 0; right: -11px; background: transparent url("../images/alert-bg.png") no-repeat 0 0; padding-left: 7px; height: 30px; display: none; z-index: 2;}
+div.formSelect div.alert{right: -15px;}
+div.alert.active{display: block;}
+div.alert.wrong{background-position: -7px 0;}
+div.alert.correctly{background-position: -14px 0;}
+div.alert > div.right{position: absolute; top: 0; left: 7px; white-space: nowrap; background: transparent url("../images/alert-bg.png") no-repeat right -30px; display: inline-block; height: 30px; line-height: 27px; padding: 0 13px 0 9px; font-size: 11px; color: #555;}
+div.alert.wrong > div.right{background-position: right -60px; color: #be1e2d;}
+div.alert.correctly > div.right{background-position: right -90px; color: #26650c;}
+
+div.input > div.moneyTitle{position: absolute; top: 8px; right: -10px;}
+div.input > div.moneyTitle p{position: absolute; left: 0; width: 200px;}
+div.symbolsTitle{position: absolute; top: 2px; right: -25px; font-size: 11px; color: #999;}
+div.symbolsTitle > p{position: absolute; left: 0; width: 200px;}
+
+div.input > div.actions{position: absolute; top: 9px; right: -20px;}
+div.input > div.actions > div.container{position: absolute; top: 0; left: 0; width: 100px;}
+div.input > div.actions span{background: transparent url("../images/input-actions-btns.png") no-repeat; float: left; margin-right: 20px; cursor: pointer;}
+div.input > div.actions span.save{background-position: 0 0; width: 14px; height: 12px;}
+div.input > div.actions span.cancel{background-position: 0 -12px; width: 13px; height: 14px; margin-top: -1px;}
+div.input > div.actions span.edit{background-position: 0 -26px; width: 13px; height: 13px; margin-top: -1px; display: none;}
+div.filled div.input > div.actions span.save,
+div.filled div.input > div.actions span.cancel{display: none;}
+div.filled div.input > div.actions span.edit{display: block;}
+div.filled.fillededit div.input > div.actions span.save,
+div.filled.fillededit div.input > div.actions span.cancel{display: block;}
+div.filled.fillededit div.input > div.actions span.edit{display: none;}
+div.row.input100 > div.right div.input{width: 96px;}
+div.row.input120 > div.right div.input{width: 104px;}
+div.row.select120 > div.right div.formSelect{width: 116px !important;}
+div.row.input170 > div.right div.input{width: 154px;}
+div.row.select170 > div.right div.formSelect{width: 166px !important;}
+div.row.select200 > div.right div.formSelect{width: 196px !important;}
+div.row.input212 > div.right div.input{width: 197px;}
+div.row.input252 > div.right div.input{width: 237px;}
+div.row.input252 > div.right div.textarea{width: 254px; height: 57px;}
+div.row.input252 > div.right div.textarea textarea{width: 242px; height: 42px;}
+
+
+
+div.input > div.questionIco{position: absolute; top: 7px; right: -25px;}
+div.input > div.questionIco > span{display: block; background: transparent url("../images/q-ico.png") no-repeat 0 0; width: 16px; height: 14px; cursor: pointer;}
+
+div.formNotice,
+div.formNotice2{background-color: #f5f5f5; padding: 10px 11px 10px 13px; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php"); margin-bottom: 20px; margin-right: 32px; overflow: hidden;}
+div.formNotice span.check2,
+div.formNotice2 span.check2{width: 17px; height: 18px; margin-right: 13px;}
+div.formNotice span.text,
+div.formNotice2 span.text{width: 390px; margin-top: -2px;}
+div.formNotice span.text span.titleText,
+div.formNotice2 span.text span.titleText{color: #BE1E2C; line-height: 16px; display: block; font-weight: bold; padding-bottom: 5px;}
+div.formNotice span.text span.mainText,
+div.formNotice2 span.text span.mainText{color: #666; line-height: 16px;}
+div.formNotice label span.check2,
+div.formNotice2 label span.check2{float: left;}
+div.formNotice label span.text,
+div.formNotice2 label span.text{float: left;}
+div.notices div.formNotice label span.text,
+div.notices div.formNotice2 label span.text{width: 590px;}
+
+div.textarea{width: 510px; height: 90px; position: relative;}
+div.textarea > textarea{background: #fff url("../images/bg_input.png") repeat-x 0 0; border: 1px solid #B7B7B7; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php"); box-shadow: 0 1px 0 #fff; color: #191919; font-family:Tahoma, Geneva, sans-serif; font-size: 12px; height: 80px; line-height: 16px; padding: 6px 2px 6px 7px; width: 500px; resize: none; overflow: auto;}
+
+div.radio{padding-top: 3px;}
+div.radio > label{margin-right: 33px;}
+div.radio input{margin-left: 0; margin-right: 10px; position: relative; top: 1px;}
+
+div.formSelect{position: relative;}
+.cusel{width: 100% !important;}
+div.correctly div.cuselFrameRight{background-position: -4px 0;}
+div.wrong div.cuselFrameRight{background-position: -8px 0;}
+.cusel,
+.cuselFrameRight,
+.jScrollPaneDrag,
+.jScrollArrowUp,
+.jScrollArrowDown{background: url(../images/input-bg.png) no-repeat;}
+.cusel{height: 30px; background-position: right -60px; display: block; position: relative; cursor: pointer; font-size: 12px; z-index: 1; margin-left: 4px;}
+.cuselFrameRight{position: absolute; z-index: 2; top: 0; left: -4px; height: 100%; width: 4px; background-position: 0 0;}
+.std .cuselFrameRight{background-position: -12px 0;}
+.cuselText{height: 14px; padding: 8px 0 0 5px; cursor: pointer; z-index: 1; position: absolute; top: 0; left: 0;}
+* html .cuselText{height: 22px;}
+.cusel span{display: block; cursor: pointer; white-space: nowrap; padding: 5px 15px 5px 9px; zoom: 1;}
+.cusel span:hover{background-color: #eeeeee;}
+.cusel .cusel-scroll-wrap{display: block; visibility: hidden; position: absolute; left: -4px; top: 100%; min-width: 100%; padding-right: 4px; width: auto; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+.cusel .jScrollPaneContainer{position: relative; overflow: hidden; background: #fff; z-index: 5; border: 1px solid #999; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+.cusel .cuselActive{background-color: #eee; cursor: default;}
+div.withGroup .cusel div.cusel-scroll-pane > span{padding-left: 15px;}
+div.withGroup .cusel div.cusel-scroll-pane span.label{padding-left: 9px; font-weight: bold; padding-top: 10px;}
+div.withGroup .cusel div.cusel-scroll-pane span.label:hover{background-color: #fff; cursor: default;}
+.cusel.classDisCusel{background-position: right -120px;}
+/*
+	styles for scrollbar
+*/
+.cusel .jScrollPaneTrack{height: 100%; width: 13px !important; background: #f0f0f0; position: absolute; top: 0; right: 1px;}
+.cusel .jScrollPaneDrag{position: absolute; background-position: -424px 0; cursor: pointer; width: 13px !important; height: 23px !important; right: 0;}
+.cusel .jScrollPaneDragTop{position: absolute; top: 0; left: 0; overflow: hidden;}
+.cusel .jScrollPaneDragBottom{position: absolute; bottom: 0; left: 0; overflow: hidden;}
+.cusel .jScrollArrowUp{position: absolute; top: 0; right: 1px; width: 13px !important; height: 14px; cursor: pointer; background-position: right top; background-color: #f0f0f0; overflow: hidden;}
+.cusel .jScrollArrowDown{width: 13px !important; height: 14px; position: absolute; top: auto; bottom: 0; right: 1px; cursor: pointer; background-position: right -14px; background-color: #f0f0f0; overflow: hidden;}
+
+/*  file input  */
+.jInputFile-input{position: absolute;}
+.jInputFile-customFile{position: absolute; width: 219px; margin-left: -118px; cursor: default; height: 19px; z-index: 2; font: 13px Verdana; filter: alpha(opacity: 0); opacity: 0; cursor: pointer;}
+.jInputFile-fakeButton{position: absolute; z-index: 1;  width: 103px; height: 19px; background: url(../images/file-btn.png) no-repeat left top; float: left; cursor: pointer;}
+.jInputFile-blocker{position: absolute; z-index: 3; width: 150px; height: 19px; background: url(../images/transparent.gif); margin-left: -155px;}
+.jInputFile-fileName{position: absolute; height: 15px; line-height: 18px; margin-left: 100px; padding-left: 10px;}
+
+div.loadFile-list{padding-top: 10px;}
+div.loadFile-list h6{font-size: 11px; color: #757575; padding-bottom: 11px;}
+div.loadFile-list li{background: transparent url("../images/load-file-ico.png") no-repeat left 4px; padding-left: 9px; margin-bottom: 9px;}
+div.loadFile-list li span.del{display: inline-block; background: transparent url("../images/comment-del-ico.png") no-repeat; width: 8px; height: 9px; cursor: pointer; position: relative; top: 4px; margin-left: 6px;}
+div.loadFile-list li span.size{color: #adadad; font-size: 11px;}
+div.loadFile-list li a{color: #5c95ce; text-decoration: underline; font-size: 11px;}
+div.loadFile-list li a:hover{text-decoration: none;}
+
+div.dateBg{background: transparent url("../images/application-date-bg.png") no-repeat right -30px; display: inline-block; margin-left: 9px; height: 18px; position: relative; padding: 6px 3px;}
+div.dateBg:before{content: ''; background: transparent url("../images/application-date-bg.png") no-repeat 0 0; display: block; width: 6px; height: 30px; position: absolute; top: 0; left: -6px;}
+div.dateBg p{float: left; border-right: 1px solid #d8d8d8; color: #BF202E; text-shadow: -1px -1px 0 #fafafa; padding-top: 3px; padding-bottom: 3px; padding-right: 7px;}
+div.dateBg span{float: left; border-left: 1px solid #fff; color: #8C0000; text-shadow: -1px -1px 0 #fafafa; padding: 3px 7px 3px 6px;}
+
+.jq-selectbox{width: 107px; height: 24px; position: absolute; top: 0; right: 0; background: transparent url("../images/head-select-bg.png") no-repeat 0 0; font-size: 11px; color: #646464; cursor: pointer;}
+.jq-selectbox .select{width: 95px; height: 12px; padding-top: 6px; padding-left: 12px; position: relative; padding-bottom: 6px;}
+.jq-selectbox .dropdown{width: 105px; top: 23px !important; background:#e2e2e2; border:1px solid #ccc; -khtml-border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; behavior: url("/PIE.php");}
+.jq-selectbox .dropdown li{padding: 3px 0 4px 5px;}
+.jq-selectbox .dropdown li:hover{background: #c6c6c6;}
+
+/*  -------------------------------------------------------------------------------  */
+
+div.btn{float: left; margin-right: 15px;}
+div.btn > span,
+div.btn .btnTag{display: block;  text-align: center; background: transparent url("../images/big-btns.png") no-repeat right -102px; color: #808080; text-shadow: 0 1px 0 #eee; height: 34px; line-height: 29px; font-size: 14px;  padding-left: 17px; padding-right: 21px; position: relative; margin-left: 4px; cursor: default; text-decoration: none; border: none;}
+div.btn > span:before,
+div.btn .btnTag:before{content: ''; display: block; width: 4px; height: 34px; text-decoration: none; position: absolute; top: 0; left: -4px; background: transparent url("../images/big-btns.png") no-repeat -8px 0; cursor: default;}
+div.btn.green > span,
+div.btn.green .btnTag{background: transparent url("../images/big-btns.png") no-repeat right -68px; padding-left: 17px; padding-right: 26px; color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); cursor: pointer;}
+div.btn.green > span:before,
+div.btn.green .btnTag:before{background: transparent url("../images/big-btns.png") no-repeat -4px 0;}
+div.btn.red > span,
+div.btn.red .btnTag{background: transparent url("../images/big-btns.png") no-repeat right -34px; padding-left: 17px; padding-right: 21px; color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); cursor: pointer;}
+div.btn.red > span:before,
+div.btn.red .btnTag:before{background: transparent url("../images/big-btns.png") no-repeat 0 0;}
+div.btn.greenStd > span,
+div.btn.greenStd .btnTag{background: transparent url("../images/big-btns.png") no-repeat right -136px; padding-left: 17px; padding-right: 22px; color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); cursor: pointer;}
+div.btn.greenStd > span:before,
+div.btn.greenStd .btnTag:before{background: transparent url("../images/big-btns.png") no-repeat -4px 0;}
+div.btn.orange > span,
+div.btn.orange .btnTag{background: transparent url("../images/big-btns.png") no-repeat right -170px; padding-left: 17px; padding-right: 22px; color: #fff; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); cursor: pointer;}
+div.btn.orange > span:before,
+div.btn.orange .btnTag:before{background: transparent url("../images/big-btns.png") no-repeat -12px 0;}
+
+div.btn.small{margin-right: -10px; display: inline-block;}
+div.btn.small > span{display: block; background: transparent url("../images/small-btns.png") no-repeat right -25px; color: #fff; text-shadow: 1px 1px 0 #478619; height: 25px; line-height: 20px; font-size: 13px;  padding-left: 17px; padding-right: 21px; position: relative; margin-left: 6px; cursor: pointer;}
+div.btn.small > span:before{content: ''; display: block; width: 6px; height: 25px; text-decoration: none; position: absolute; top: 0; left: -6px; background: transparent url("../images/small-btns.png") no-repeat 0 0;}
+div.btn.small.red > span{text-shadow: 1px 1px 0 #7e302f; background-position: right -50px;}
+div.btn.small.red > span:before{background-position: -6px 0;}
+div.btn.small.orange > span{text-shadow: 1px 1px 0 #ca6118; background-position: right -75px;}
+div.btn.small.orange > span:before{background-position: -12px 0;}
+
+footer{width: 100%; border-top: 2px solid #be1e2d;}
+footer > div.block{width: 100%; border-top: 1px solid #fff; background-color: #e8e8e8;}
+footer > div.block > div.container{width: 960px; height: 102px; margin: 0 auto; position: relative; color: #979797; font-size: 11px;}
+footer > div.block > div.container > p{position: absolute; top: 49px;}
+footer > div.block > div.container > ul{position: absolute; top: 49px; left: 93px;}
+footer > div.block > div.container > ul > li{float: left; height: 12px; background: transparent url("../images/footer-menu-border.png") no-repeat left 2px; padding: 0 3px 0 5px;}
+footer > div.block > div.container > ul > li > a{color: #979797; text-decoration: none;}
+footer > div.block > div.container > ul > li > a:hover{text-decoration: underline;}
+
+footer#big > div.block > div.container{height: 454px;}
+footer#big > div.block > div.container > section.copy{position: absolute; top: 28px; left: 0;}
+footer#big > div.block > div.container > section.copy > div.logo{padding-bottom: 27px;}
+footer#big > div.block > div.container > section.copy > p{color: #544a4b; font-size: 11px; padding-left: 24px; padding-bottom: 12px; position: relative;}
+footer#big > div.block > div.container > section.copy > p:before{content: ''; display: block; background: transparent url("../images/footer-icons.png") no-repeat; position: absolute;}
+footer#big > div.block > div.container > section.copy > p.tel:before{background-position: 0 0; width: 13px; height: 14px; top: 0; left: 3px;}
+footer#big > div.block > div.container > section.copy > p.mail:before{background-position: 0 -14px; width: 15px; height: 12px; top: 1px; left: 1px;}
+footer#big > div.block > div.container > section.copy > ul{padding-top: 8px;}
+footer#big > div.block > div.container > section.copy > ul > li{float: left; padding-right: 20px; margin-right: 20px; border-right: 1px solid #bdbdbd; padding-bottom: 2px;}
+footer#big > div.block > div.container > section.copy > ul > li.last{border: none;}
+footer#big > div.block > div.container > section.copy > ul > li > a{color: #3c84b7; text-decoration: none; font-size: 11px;}
+footer#big > div.block > div.container > section.copy > ul > li > a:hover{text-decoration: underline;}
+
+footer#big > div.block > div.container > section.menu{position: absolute; top: 26px;}
+footer#big > div.block > div.container > section.menu.menu1{left: 239px;}
+footer#big > div.block > div.container > section.menu.menu2{left: 428px;}
+footer#big > div.block > div.container > section.menu.menu3{left: 616px;}
+footer#big > div.block > div.container > section.menu.menu4{left: 802px;}
+footer#big > div.block > div.container > section.menu ul{margin-bottom: 23px;}
+footer#big > div.block > div.container > section.menu li{font-size: 11px; margin-bottom: 7px;}
+footer#big > div.block > div.container > section.menu li > a{color: #818080; text-decoration: none;}
+footer#big > div.block > div.container > section.menu li.first{margin-bottom: 12px; font-size: 14px;}
+footer#big > div.block > div.container > section.menu li.first > a{font-weight: bold; color: #be1e2d;}
+footer#big > div.block > div.container > section.menu li a:hover{text-decoration: underline;}
+footer#big > div.block > div.container > section.text{background: transparent url("../images/footer-text-bg.png") no-repeat top center; width: 960px; position: absolute; top: 290px; left: 0; padding-top: 19px;}
+footer#big > div.block > div.container > section.text > p{color: #949494; line-height: 15px; margin-bottom: 15px;}
