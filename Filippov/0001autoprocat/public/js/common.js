@@ -522,4 +522,8 @@ $(window).resize(function() {
 heightses2();
 
 
+
+ // маска на инпут
+ $(".input-time").attr("pattern","([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?").inputmask("99:99");;
+	
 });

@@ -1059,7 +1059,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="d-block d-xl-none"><a class="card-head__btn btn btn-primary btn-block popup-with-move-anim" href="#modal-zakaz">	Арендовать </a>
+                  <div class="d-block d-xl-none"><a class="card-head__btn btn btn-primary btn-block popup-with-move-anim" href="#modal-order-with-driver">Арендовать </a>
                   </div>
                   <div class="card-head__slider card-head__slider--main swiper-container gallery-top">
                     <div class="swiper-wrapper gal"> 
@@ -1193,57 +1193,34 @@
                       </div>
                       <div class="text-gray-700">
                          Включенный километраж: <span class="text-body">25 км на 1 час аренды</span></div>
-                      <div class="text-gray-700">
+                      <div class="text-gray-700 mb-3">
                          Стоимость 1 км сверх лимита:<span class="text-body"> 6 ₽</span></div>
-                      <div class="card-head__label card-head__label--gray h4">Без залога
-                      </div>
-                      <div class="alert alert-primary">
+                      <div class="alert alert-primary h6">
                         Платная парковка <strong>за ваш счет</strong></div>
-                      <div class="row">
-                        <div class="col">
-                          <div class="card-head__title-table h5 strong">Условия аренды
-                          </div>
-                        </div>
-                        <div class="col-auto"><a class="tdu text-gray-700" href="#">Все условия</a></div>
-                      </div>
+                      <div class="alert alert-primary h6 mb-3">
+                        При круглосуточной аренде гостиница/питание водителя <strong>за ваш счет</strong></div>
                     </div>
                     <div class="col-xl-12 col-lg-6">
-                      <div class="card-head__table no-gutters"> 
-                        <div class="card-head__table-item">
-                          <div class="row no-gutters">
-                            <div class="col">
-                              <div class="row row--small">
-                                <div class="card-head__col-title col-auto">
-                                  <div class="card-head__td-inner"> Возраст
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-auto strong"> от 23 лет</div>
-                          </div>
-                        </div>
-                        <div class="card-head__table-item">
-                          <div class="row no-gutters">
-                            <div class="col">
-                              <div class="row row--small">
-                                <div class="card-head__col-title col-auto">
-                                  <div class="card-head__td-inner"> Стаж
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-auto strong"> от 3 лет</div>
-                          </div>
-                        </div>
+                      <div class="card-head__label card-head__label--gray h5 mb-4">Выберите тариф
                       </div>
-                      <div class="card-head__label card-head__label--gray h4">Без ограничения по территории
+                      <div class="mb-3">
+                              <label class="radio-block"><input class="radio-block__input" type="radio" name="radio"/><span class="radio-block__lab"></span><span class="radio-block__text">Трансфер с аэропорта</span><strong class="radio-block__price">3500 ₽</strong>
+                              </label>
+                              <label class="radio-block"><input class="radio-block__input" type="radio" name="radio"/><span class="radio-block__lab"></span><span class="radio-block__text">4 часа (100 км)</span><strong class="radio-block__price">6000 ₽</strong>
+                              </label>
+                              <label class="radio-block"><input class="radio-block__input" type="radio" name="radio"/><span class="radio-block__lab"></span><span class="radio-block__text">8 часов (200 км)</span><strong class="radio-block__price">7500 ₽</strong>
+                              </label>
+                              <label class="radio-block"><input class="radio-block__input" type="radio" name="radio"/><span class="radio-block__lab"></span><span class="radio-block__text">12 часов (300 км)</span><strong class="radio-block__price">10000 ₽</strong>
+                              </label>
+                              <label class="radio-block"><input class="radio-block__input" type="radio" name="radio"/><span class="radio-block__lab"></span><span class="radio-block__text">24 часа (600 км)</span><strong class="radio-block__price">17500 ₽</strong>
+                              </label>
+                              <label class="radio-block"><input class="radio-block__input" type="radio" name="radio"/><span class="radio-block__lab"></span><span class="radio-block__text">Неделя (1250 км)</span><strong class="radio-block__price">107500 ₽</strong>
+                              </label>
+                              <label class="radio-block"><input class="radio-block__input" type="radio" name="radio"/><span class="radio-block__lab"></span><span class="radio-block__text">Месяц (5500 км)</span><strong class="radio-block__price">320000 ₽</strong>
+                              </label>
                       </div>
                       <div class="card-head__foot text-center">
-                        <div class="card-head__title-table h5 strong">Авто находится на стоянке:
-                        </div>
-                        <div class="h6">м. Технопарк / ТЦ Мегаполис</div>
-                        <div class="text-gray-700">Ежедневно с 10:00 до 22:00</div>
-                        <div class="h30 mono"><a class="text-body tdn" href="tel:+7(495)120-40-24">+7 (495) 120-40-24</a></div><a class="card-head__btn btn btn-primary btn-block popup-with-move-anim" href="#modal-zakaz">	Арендовать </a>
+                        <div class="h6 text-success">Автомобиль свободен и прибудет<br/>точно ко времени</div><a class="card-head__btn btn btn-primary btn-block popup-with-move-anim" href="#modal-order-with-driver">	Арендовать </a>
                         <div><a class="tdu text-gray-700 popup-with-move-anim" href="#modal-offer">	Получить коммерческое предложение</a></div>
                       </div>
                     </div>
@@ -3873,6 +3850,42 @@
         </div>
       </div>
       <!-- end #modal-tarif-->
+      <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-order-with-driver">
+        <form action="#"> 
+          <div class="text-center">
+            <div class="form-wrap__title mono">аренда volkswagen tiguan<br/>с водителем
+            </div>
+            <div class="h6 mw-100 pb-3">Введите свои данные, выберите дату и дополнительные опции: </div>
+          </div>
+          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center" type="text" placeholder="Введите имя"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center" type="tel" placeholder="Введите телефон"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="dop-block">
+            <div class="date-picker-block-js"> 
+              <div class="form-group">
+                <label class="d-block label-date-picker-js">
+                  <input class="form-control datepicker startDate" type="text" placeholder="Дата аренды"/>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-wrap__input-wrap form-group"> <input class="form-wrap__input form-control text-center input-time" type="text" placeholder="Введите время" required="required"/>
+          </div>
+          <!-- +e.input-wrap-->
+          <div class="form-wrap__btn-wrap">
+            <button class="form-wrap__btn btn btn-primary btn-block" type="submit">Завершить заказ
+            </button>
+            <div class="wrap-polite">
+              <label class="custom-input polite"><input class="custom-input__input custom-input__input-checkbox" type="checkbox" checked="checked" name="polite" required="required" value=""/><span class="custom-input__lab custom-input__lab-lg"></span><span class="small text-gray-700">Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;Условиями</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- end #modal-order-with-driver-->
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
