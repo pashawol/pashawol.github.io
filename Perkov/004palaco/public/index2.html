@@ -4,12 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/18C24A87-EDF7-0E40-9E90-F43123E95DC6/main.js" charset="UTF-8"></script>
     <link rel="stylesheet" type="text/css" href="themes/main/css/skitter.css">
+    <link rel="stylesheet" type="text/css" href="/themes/main/css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="/themes/main/css/owl.carousel.min.css">
     <script src="themes/main/js/jquery2_01.js"></script>
     <script src="themes/main/js/jquery.BlackAndWhite.min.js"></script>
     <script src="themes/main/js/jquery.countdown.min.js"></script>
     <script src="themes/main/js/site.scripts.min.js?v4"></script>
     <script src="themes/main/js/jquery.fancybox.min.js"></script>
     <script src="themes/main/js/jquery.skitter.min.js"></script>
+    <script src="/themes/main/js/owl.carousel.min.js"></script>
     <title>title</title>
     <!-- <script>(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-222639-8lkU';</script>-->
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -36,6 +39,7 @@
     <script src="jquery.inputmask.bundle.js" defer=""></script>
     <script src="themes/main/js/calc/jquery.filer.min.js" defer=""></script>
     <script src="themes/main/js/calc/jquery.nouislider.min.js" defer=""></script>
+    <script src="jquery.inputmask.bundle.js"></script>
     <script src="themes/main/js/calc/configure.min.js" defer=""> </script>
     <script>
       $(document).ready(function () {
@@ -132,15 +136,55 @@
             </div>
             <div id="catalogList">
               <div class="filter-block clearfix">
-                <ul class="main-blocks">
-                  <li><a class="bwWrapper" href="/kuhni-iz-massiva-rossii"><span class="img"><img src="/uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span><span class="text">Кухни из массива России</span></a></li>
-                  <li><a class="bwWrapper" href="/kuhni-iz-massiva-italii"><span class="img"><img src="/uploads/catalog/products/157_s.jpg" alt="Кухни из массива Италии" title="Кухни из массива Италии"></span><span class="text">Кухни из массива Италии</span></a></li>
-                  <li><a class="bwWrapper" href="/kuhni-kraska"><span class="img"><img src="/uploads/catalog/products/471_s.jpg" alt="Венеция" title="Венеция"></span><span class="text">Кухни крашенные МДФ</span></a></li>
-                  <li><a class="bwWrapper" href="/kuhni-iz-shpona"><span class="img"><img src="/uploads/catalog/products/481_s.jpg" alt="Модель 1" title="Модель 1"></span><span class="text">Кухни шпонированный МДФ</span></a></li>
-                </ul>
+                <div class="tabs">
+                  <div class="row align-items-center">
+                    <div class="col-md-auto">
+                      <div class="tabs__title ttu my-2">Выбрать:
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="tabs__caption">
+                        <div class="tabs__btn active"> Стиль
+                        </div>
+                        <div class="tabs__btn">Форму
+                        </div>
+                        <div class="tabs__btn">Материал
+                        </div>
+                        <div class="tabs__btn">Цвет
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__wrap">
+                    <div class="tabs__content active">
+                      <ul class="main-blocks">
+                        <li><a class="bwWrapper" href="/kuhni-iz-massiva-rossii"><span class="img"><img src="uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span><span class="text">Кухни из массива России</span></a></li>
+                        <li><a class="bwWrapper" href="/kuhni-iz-massiva-rossii"><span class="img"><img src="uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span><span class="text">Кухни из массива России</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="tabs__content">
+                      <ul class="main-blocks">
+                        <li><a class="bwWrapper" href="/kuhni-iz-massiva-rossii"><span class="img"><img src="uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span><span class="text">Кухни из массива России</span></a></li>
+                        <li><a class="bwWrapper" href="/kuhni-iz-massiva-rossii"><span class="img"><img src="uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span><span class="text">Кухни из массива России</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="tabs__content">
+                      <ul class="main-blocks">
+                        <li><a class="bwWrapper" href="/kuhni-iz-massiva-rossii"><span class="img"><img src="uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span><span class="text">Кухни из массива России</span></a></li>
+                        <li><a class="bwWrapper" href="/kuhni-iz-massiva-rossii"><span class="img"><img src="uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span><span class="text">Кухни из массива России</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="tabs__content">
+                      <ul class="main-blocks">
+                        <li><a class="bwWrapper" href="/kuhni-iz-massiva-rossii"><span class="img"><img src="uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span><span class="text">Кухни из массива России</span></a></li>
+                        <li><a class="bwWrapper" href="/kuhni-iz-massiva-rossii"><span class="img"><img src="uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span><span class="text">Кухни из массива России</span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
               <ul class="ur1">
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/afina"><span class="img"><img src="/uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/afina"><span class="img"><img src="uploads/catalog/products/455_s.jpg" alt="Афина" title="Афина"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Афина</span></a>
@@ -164,7 +208,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/verdi"><span class="img"><img src="/uploads/catalog/products/456_s.jpg" alt="Верди" title="Верди"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/verdi"><span class="img"><img src="uploads/catalog/products/456_s.jpg" alt="Верди" title="Верди"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Верди</span></a>
@@ -188,7 +232,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/verona"><span class="img"><img src="/uploads/catalog/products/457_s.jpg" alt="Верона" title="Верона"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/verona"><span class="img"><img src="uploads/catalog/products/457_s.jpg" alt="Верона" title="Верона"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Верона</span></a>
@@ -212,7 +256,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/versal"><span class="img"><img src="/uploads/catalog/products/458_s.jpg" alt="Версаль" title="Версаль"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/versal"><span class="img"><img src="uploads/catalog/products/458_s.jpg" alt="Версаль" title="Версаль"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Версаль</span></a>
@@ -236,7 +280,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/gaudi"><span class="img"><img src="/uploads/catalog/products/459_s.jpg" alt="Гауди" title="Гауди"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/gaudi"><span class="img"><img src="uploads/catalog/products/459_s.jpg" alt="Гауди" title="Гауди"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Гауди</span></a>
@@ -260,7 +304,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/klassika"><span class="img"><img src="/uploads/catalog/products/460_s.jpg" alt="Классика" title="Классика"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/klassika"><span class="img"><img src="uploads/catalog/products/460_s.jpg" alt="Классика" title="Классика"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Классика</span></a>
@@ -284,7 +328,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/korsira"><span class="img"><img src="/uploads/catalog/products/461_s.jpg" alt="Корсика" title="Корсика"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/korsira"><span class="img"><img src="uploads/catalog/products/461_s.jpg" alt="Корсика" title="Корсика"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Корсика</span></a>
@@ -308,7 +352,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/loft"><span class="img"><img src="/uploads/catalog/products/462_s.jpg" alt="Лофт" title="Лофт"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/loft"><span class="img"><img src="uploads/catalog/products/462_s.jpg" alt="Лофт" title="Лофт"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Лофт</span></a>
@@ -332,7 +376,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/monblan"><span class="img"><img src="/uploads/catalog/products/463_s.jpg" alt="Монблан" title="Монблан"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/monblan"><span class="img"><img src="uploads/catalog/products/463_s.jpg" alt="Монблан" title="Монблан"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Монблан</span></a>
@@ -356,7 +400,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/prada"><span class="img"><img src="/uploads/catalog/products/464_s.jpg" alt="Прада" title="Прада"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/prada"><span class="img"><img src="uploads/catalog/products/464_s.jpg" alt="Прада" title="Прада"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Прада</span></a>
@@ -380,7 +424,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/provans"><span class="img"><img src="/uploads/catalog/products/465_s.jpg" alt="Прованс" title="Прованс"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/provans"><span class="img"><img src="uploads/catalog/products/465_s.jpg" alt="Прованс" title="Прованс"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Прованс</span></a>
@@ -404,7 +448,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/siena"><span class="img"><img src="/uploads/catalog/products/466_s.jpg" alt="Сиена" title="Сиена"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/siena"><span class="img"><img src="uploads/catalog/products/466_s.jpg" alt="Сиена" title="Сиена"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Сиена</span></a>
@@ -428,7 +472,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/tizian"><span class="img"><img src="/uploads/catalog/products/467_s.jpg" alt="Тициан" title="Тициан"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/tizian"><span class="img"><img src="uploads/catalog/products/467_s.jpg" alt="Тициан" title="Тициан"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Тициан</span></a>
@@ -452,7 +496,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/toskana"><span class="img"><img src="/uploads/catalog/products/468_s.jpg" alt="Тоскана" title="Тоскана"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/toskana"><span class="img"><img src="uploads/catalog/products/468_s.jpg" alt="Тоскана" title="Тоскана"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Тоскана</span></a>
@@ -476,7 +520,7 @@
                     </script>
                   </div>
                 </li>
-                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/turin"><span class="img"><img src="/uploads/catalog/products/469_s.jpg" alt="Турин" title="Турин"></span>
+                <li class="product"><a class="bwWrapper" href="/kuhni-iz-massiva-rossii/turin"><span class="img"><img src="uploads/catalog/products/469_s.jpg" alt="Турин" title="Турин"></span>
                     <div class="item__show">
                       <input class="item__btn" type="button" value="Посмотреть">
                     </div><span class="text">Турин</span></a>
@@ -853,6 +897,7 @@
       });
       
     </script>
+    <script src="site.js"></script>
     <!-- add sripts-->
     <script src="js/common.js"></script>
     <!-- /add sripts-->
