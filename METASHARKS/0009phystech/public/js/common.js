@@ -821,7 +821,7 @@ $(".js-range-slider").ionRangeSlider({
 
 			// timer jqueryscript.net/time-clock/Minimal-jQuery-Countdown-Plugin-with-Custom-Timezone-Countdown-Clock.html
 			$('.example-timer').countdown({
-				date: '03/26/2019 16:20:59',
+				date: '04/22/2019 16:20:59',
 				offset: 5,
 				// Countdown text
 				day: 'День',
