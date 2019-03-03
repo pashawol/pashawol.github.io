@@ -13,13 +13,14 @@ $mail->CharSet = 'utf-8';
 $mail->setFrom('info@info.com');
 
  $mail->addAddress('wol1414@gmail.com');
- // $mail->addAddress('horenkova369@gmail.com');
+//  $mail->addAddress('origin-lp@yandex.ru');
+//  $mail->addAddress('tkn.context@yandex.ru');
 // $mail->addAddress('stab@inbox.support');
 
 
 
 //Субъект
-$mail->Subject = 'Заявка с сайта';
+$mail->Subject = 'Заявка с сайта трубная-компания.рф';
 
 $time = date('d.m.Y в H:i');
 $html = '
@@ -45,7 +46,7 @@ $html = '
     }
 
     if (!empty($_POST['text'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Вопрос:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['text'] . '</b></td>';
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Комментарий:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['text'] . '</b></td>';
     }
 
     if (!empty($_POST['comment'])) {
@@ -69,9 +70,9 @@ if ($_FILES['file1']['tmp_name']) {
     $mail->addAttachment($_FILES['file1']['tmp_name'],$_FILES['file1']['name']);
 }
 
-if ($_FILES['file2']['tmp_name']) {    
-    $mail->addAttachment($_FILES['file2']['tmp_name'],$_FILES['file2']['name']);
-}
+// if ($_FILES['file2']['tmp_name']) {    
+//     $mail->addAttachment($_FILES['file2']['tmp_name'],$_FILES['file2']['name']);
+// }
 
 //send the message, check for errors
 if (!$mail->send()) {
@@ -79,8 +80,8 @@ if (!$mail->send()) {
 } else {
     echo "Message sent!";
 }
-if (!empty($uploadfile))unlink($uploadfile);
-if (!empty($uploadfile2))unlink($uploadfile2);
+if (isset($uploadfile))unlink($uploadfile);
+// if (isset($uploadfile2))unlink($uploadfile2);
 
 ?>
 

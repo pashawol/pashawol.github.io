@@ -64,7 +64,8 @@
                 </ul>
               </div>
               <div class="col-auto text-right">
-                <div class="top-nav__small"><b>trubnaya.kompaniya@yandex.ru</b></div><a class="top-nav__tel mono" href="tel:8(913)377-29-59">+7 (383) 375-14-04</a>
+                <div class="link-wrap"><a class="top-nav__small text-gray" href="mailto:trubnaya.kompaniya@yandex.ru">trubnaya.kompaniya@yandex.ru</a>
+                </div><a class="top-nav__tel mono" href="tel:8(913)377-29-59">+7 (383) 375-14-04</a>
               </div>
               <div class="col-auto d-none d-md-block"><a class="top-nav__btn popup-with-move-anim" href="#modal-call" data-title="заказать звонок" data-btn="Отправить заявку" data-order="заказать звонок  в  шапке">Заказать звонок</a></div>
             </div>
@@ -322,12 +323,12 @@
               <div class="s-prod__form-wrap">
                 <div class="s-prod__form-wrap-title"><span class="text-brown">оставьте заявку на расчет </span> и получите все варианты стоимости по вашему запросу уже сегодня</div>
                 <div class="form-wrap">
-                  <form>
+                  <form enctype="multipart/form-data">
                     <input class="order" type="hidden" name="order">
                     <div class="form-wrap__title-sub">Заполните форму и наш менеджер свяжется с Вами в ближайшее время</div>
                     <input class="prod" type="hidden" name="prod" value="Заявка на расчет Трубы в ППУ изоляции">
                     <div class="row">
-                      <div class="col-6">
+                      <div class="col-md-6 pb-0">
                         <div class="form-wrap__input-wrap form-group">
                           <input class="form-wrap__input form-control" type="text" name="name" placeholder="Имя" required="required">
                         </div>
@@ -341,15 +342,13 @@
                         </div>
                         <!-- +e.input-wrap-->
                       </div>
-                      <div class="col-6">
+                      <div class="col-md-6 pb-0">
                         <div class="form-wrap__input-wrap form-group">
                           <textarea class="form-wrap__input form-control" name="text" placeholder="Комментарий к заявке"></textarea>
                         </div>
                         <!-- +e.input-wrap-->
-                        <div class="add-file">
-                          <label><input class="add-file__input" name="file" type="file"/><span class="add-file__btn"> </span><span class="add-file__text">  Прикрепить резюме</span>
-                          </label><span class="add-file__filename"> </span>
-                        </div>
+                        <label class="add-file"> <input class="add-file__input" name="file" type="file"/><span class="add-file__filename">Загрузить файл (до 6 МБ)</span>
+                        </label>
                       </div>
                     </div>
                     <div class="form-wrap__btn-wrap">
@@ -359,6 +358,9 @@
                           <input class="custom-input__input" type="checkbox" checked="checked"><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
                         </label>
                       </div>
+                    </div>
+                    <div class="form-wrap__foot">
+                      Вы можете отправить ваш запрос на почту: <a href="mailto:trubnaya.kompaniya@yandex.ru">trubnaya.kompaniya@yandex.ru</a>
                     </div>
                   </form>
                 </div>
@@ -469,28 +471,44 @@
               <div class="s-prod__form-wrap">
                 <div class="s-prod__form-wrap-title"><span class="text-brown">оставьте заявку на расчет </span> и получите все варианты стоимости по вашему запросу уже сегодня</div>
                 <div class="form-wrap">
-                  <form>
+                  <form enctype="multipart/form-data">
                     <input class="order" type="hidden" name="order">
                     <div class="form-wrap__title-sub">Заполните форму и наш менеджер свяжется с Вами в ближайшее время</div>
                     <input class="prod" type="hidden" name="prod" value="Заявка на расчет Трубы в ппм изоляции">
-                    <div class="form-wrap__input-wrap form-group">
-                      <input class="form-wrap__input form-control" type="text" name="name" placeholder="Имя" required="required">
+                    <div class="row">
+                      <div class="col-md-6 pb-0">
+                        <div class="form-wrap__input-wrap form-group">
+                          <input class="form-wrap__input form-control" type="text" name="name" placeholder="Имя" required="required">
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <input class="form-wrap__input form-control" type="email" name="email" placeholder="Электронная почта" required="required">
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Контактный телефон" required="required">
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="col-md-6 pb-0">
+                        <div class="form-wrap__input-wrap form-group">
+                          <textarea class="form-wrap__input form-control" name="text" placeholder="Комментарий к заявке"></textarea>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <label class="add-file"> <input class="add-file__input" name="file" type="file"/><span class="add-file__filename">Загрузить файл (до 6 МБ)</span>
+                        </label>
+                      </div>
                     </div>
-                    <!-- +e.input-wrap-->
-                    <div class="form-wrap__input-wrap form-group">
-                      <input class="form-wrap__input form-control" type="email" name="email" placeholder="Электронная почта" required="required">
+                    <div class="form-wrap__btn-wrap">
+                      <button class="form-wrap__btn" type="submit">Отправить заявку</button>
+                      <div class="form-wrap__polite">
+                        <label class="custom-input">
+                          <input class="custom-input__input" type="checkbox" checked="checked"><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+                        </label>
+                      </div>
                     </div>
-                    <!-- +e.input-wrap-->
-                    <div class="form-wrap__input-wrap form-group">
-                      <input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Контактный телефон" required="required">
-                    </div>
-                    <!-- +e.input-wrap-->
-                    <button class="form-wrap__btn" type="submit">Отправить заявку</button>
-                    <div class="form-wrap__polite">
-                      <label class="custom-input">
-                        <input class="custom-input__input" type="checkbox" checked="checked"><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-                      </label>
-                    </div>
+                    <div class="form-wrap__foot">
+                      Вы можете отправить ваш запрос на почту: <a href="mailto:trubnaya.kompaniya@yandex.ru">trubnaya.kompaniya@yandex.ru</a></div>
                   </form>
                 </div>
               </div>
@@ -637,28 +655,44 @@
               <div class="s-prod__form-wrap">
                 <div class="s-prod__form-wrap-title"><span class="text-brown">оставьте заявку на расчет </span> и получите все варианты стоимости по вашему запросу уже сегодня</div>
                 <div class="form-wrap">
-                  <form>
+                  <form enctype="multipart/form-data">
                     <input class="order" type="hidden" name="order">
                     <div class="form-wrap__title-sub">Заполните форму и наш менеджер свяжется с Вами в ближайшее время</div>
                     <input class="prod" type="hidden" name="prod" value="Заявка на расчет Трубы в вус изоляции">
-                    <div class="form-wrap__input-wrap form-group">
-                      <input class="form-wrap__input form-control" type="text" name="name" placeholder="Имя" required="required">
+                    <div class="row">
+                      <div class="col-md-6 pb-0">
+                        <div class="form-wrap__input-wrap form-group">
+                          <input class="form-wrap__input form-control" type="text" name="name" placeholder="Имя" required="required">
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <input class="form-wrap__input form-control" type="email" name="email" placeholder="Электронная почта" required="required">
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <div class="form-wrap__input-wrap form-group">
+                          <input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Контактный телефон" required="required">
+                        </div>
+                        <!-- +e.input-wrap-->
+                      </div>
+                      <div class="col-md-6 pb-0">
+                        <div class="form-wrap__input-wrap form-group">
+                          <textarea class="form-wrap__input form-control" name="text" placeholder="Комментарий к заявке"></textarea>
+                        </div>
+                        <!-- +e.input-wrap-->
+                        <label class="add-file"> <input class="add-file__input" name="file" type="file"/><span class="add-file__filename">Загрузить файл (до 6 МБ)</span>
+                        </label>
+                      </div>
                     </div>
-                    <!-- +e.input-wrap-->
-                    <div class="form-wrap__input-wrap form-group">
-                      <input class="form-wrap__input form-control" type="email" name="email" placeholder="Электронная почта" required="required">
+                    <div class="form-wrap__btn-wrap">
+                      <button class="form-wrap__btn" type="submit">Отправить заявку</button>
+                      <div class="form-wrap__polite">
+                        <label class="custom-input">
+                          <input class="custom-input__input" type="checkbox" checked="checked"><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+                        </label>
+                      </div>
                     </div>
-                    <!-- +e.input-wrap-->
-                    <div class="form-wrap__input-wrap form-group">
-                      <input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Контактный телефон" required="required">
-                    </div>
-                    <!-- +e.input-wrap-->
-                    <button class="form-wrap__btn" type="submit">Отправить заявку</button>
-                    <div class="form-wrap__polite">
-                      <label class="custom-input">
-                        <input class="custom-input__input" type="checkbox" checked="checked"><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-                      </label>
-                    </div>
+                    <div class="form-wrap__foot">
+                      Вы можете отправить ваш запрос на почту: <a href="mailto:trubnaya.kompaniya@yandex.ru">trubnaya.kompaniya@yandex.ru</a></div>
                   </form>
                 </div>
               </div>
@@ -935,26 +969,42 @@
             <h2><span class="text-primary">Оставьте заявку на расчет </span> и получите все варианты цен по Вашему запросу уже сегодня</h2>
           </div>
           <div class="form-wrap animate-block wow fadeInUp" data-wow-offset="40">
-            <form>
+            <form enctype="multipart/form-data">
               <input class="order" type="hidden" name="order">
-              <div class="form-wrap__input-wrap form-group">
-                <input class="form-wrap__input form-control" type="text" name="name" placeholder="Имя" required="required">
+              <div class="row">
+                <div class="col-md-6 pb-0">
+                  <div class="form-wrap__input-wrap form-group">
+                    <input class="form-wrap__input form-control" type="text" name="name" placeholder="Имя" required="required">
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap form-group">
+                    <input class="form-wrap__input form-control" type="email" name="email" placeholder="Электронная почта" required="required">
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <div class="form-wrap__input-wrap form-group">
+                    <input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Контактный телефон" required="required">
+                  </div>
+                  <!-- +e.input-wrap-->
+                </div>
+                <div class="col-md-6 pb-0">
+                  <div class="form-wrap__input-wrap form-group">
+                    <textarea class="form-wrap__input form-control" name="text" placeholder="Комментарий к заявке"></textarea>
+                  </div>
+                  <!-- +e.input-wrap-->
+                  <label class="add-file"> <input class="add-file__input" name="file" type="file"/><span class="add-file__filename">Загрузить файл (до 6 МБ)</span>
+                  </label>
+                </div>
               </div>
-              <!-- +e.input-wrap-->
-              <div class="form-wrap__input-wrap form-group">
-                <input class="form-wrap__input form-control" type="email" name="email" placeholder="Электронная почта" required="required">
+              <div class="form-wrap__btn-wrap">
+                <button class="form-wrap__btn" type="submit">Отправить заявку</button>
+                <div class="form-wrap__polite">
+                  <label class="custom-input">
+                    <input class="custom-input__input" type="checkbox" checked="checked"><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+                  </label>
+                </div>
               </div>
-              <!-- +e.input-wrap-->
-              <div class="form-wrap__input-wrap form-group">
-                <input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Контактный телефон" required="required">
-              </div>
-              <!-- +e.input-wrap-->
-              <button class="form-wrap__btn" type="submit">Отправить заявку</button>
-              <div class="form-wrap__polite">
-                <label class="custom-input">
-                  <input class="custom-input__input" type="checkbox" checked="checked"><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-                </label>
-              </div>
+              <div class="form-wrap__foot">
+                Вы можете отправить ваш запрос на почту: <a href="mailto:trubnaya.kompaniya@yandex.ru">trubnaya.kompaniya@yandex.ru</a></div>
             </form>
           </div>
         </div>
@@ -998,7 +1048,7 @@
       </footer>
     </div>
     <div class="form-wrap zoom-anim-dialog mfp-hide modal-win modal-form" id="modal-call">
-      <form>
+      <form enctype="multipart/form-data">
         <input class="order" type="hidden" name="order">
         <div class="text-center">
           <div class="form-wrap__title form-wrap__title--js"></div>
@@ -1009,19 +1059,29 @@
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
+          <input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Контактный телефон" required="required">
+        </div>
+        <!-- +e.input-wrap -->
+        <div class="form-wrap__input-wrap form-group">
           <input class="form-wrap__input form-control" type="email" name="email" placeholder="Электронная почта" required="required">
         </div>
         <!-- +e.input-wrap-->
         <div class="form-wrap__input-wrap form-group">
-          <input class="form-wrap__input form-control" type="tel" name="tel" placeholder="Контактный телефон" required="required">
+          <textarea class="form-wrap__input form-control" name="text" placeholder="Комментарий к заявке"></textarea>
         </div>
         <!-- +e.input-wrap-->
-        <button class="form-wrap__btn" type="submit"></button>
-        <div class="form-wrap__polite">
-          <label class="custom-input">
-            <input class="custom-input__input" type="checkbox" checked="checked"><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-          </label>
+        <label class="add-file"> <input class="add-file__input" name="file" type="file"/><span class="add-file__filename">Загрузить файл (до 6 МБ)</span>
+        </label>
+        <div class="form-wrap__btn-wrap">
+          <button class="form-wrap__btn" type="submit">Отправить заявку</button>
+          <div class="form-wrap__polite">
+            <label class="custom-input">
+              <input class="custom-input__input" type="checkbox" checked="checked"><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+            </label>
+          </div>
         </div>
+        <div class="form-wrap__foot">
+          Вы можете отправить ваш запрос на почту: <a href="mailto:trubnaya.kompaniya@yandex.ru">trubnaya.kompaniya@yandex.ru</a></div>
       </form>
     </div>
     <!-- #modal-call-->

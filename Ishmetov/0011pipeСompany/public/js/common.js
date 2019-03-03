@@ -1,3 +1,62 @@
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  let active = false;
+
+  const lazyLoad = function() {
+    if (active === false) {
+      active = true;
+
+      setTimeout(function() {
+        lazyImages.forEach(function(lazyImage) {
+          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+            lazyImage.src =   lazyImage.dataset.srcset;
+            lazyImage.classList.remove("lazy");
+
+            lazyImages = lazyImages.filter(function(image) {
+              return image !== lazyImage;
+            });
+
+            if (lazyImages.length === 0) {
+              document.removeEventListener("scroll", lazyLoad);
+              window.removeEventListener("resize", lazyLoad);
+              window.removeEventListener("orientationchange", lazyLoad);
+            }
+          }
+        });
+
+        active = false;
+      }, 200);
+    }
+  };
+
+  document.addEventListener("scroll", lazyLoad);
+  window.addEventListener("resize", lazyLoad);
+  window.addEventListener("orientationchange", lazyLoad);
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          lazyBackgroundObserver.unobserve(entry.target);
+        }
+      });
+    });
+
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackgroundObserver.observe(lazyBackground);
+    });
+  }
+});
+
 jQuery(document).ready(function ($) {
 
 	// для свг
@@ -172,40 +231,7 @@ $('.s-gal__slider--js')
 		$(th.attr('href')).find(".form-wrap__btn").text(th.data('btn')); 
 	})
 
-		// form
-		$("form").submit(function () { //Change
-			var th = $(this);
-			$.ajax({
-				type: "POST",
-				url: 'action.php', //Change
-				data: th.serialize()
-			}).success(function () {
-				// $.magnificPopup.close();
-				$.magnificPopup.open({
-					items: {
-						src: '#thanks', 
-						type: 'inline', 
-						fixedContentPos: true,
-						fixedBgPos: true, 
-						overflowY: 'auto', 
-						closeBtnInside: true,
-						preloader: false, 
-						midClick: true,
-						removalDelay: 300,
-						mainClass: 'my-mfp-zoom-in'
-					}
-				})
-				// window.location.replace("/thanks.html");
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset");
-					// $.magnificPopup.close();
-				}, 4000);
-				ym(51692438, 'reachGoal', 'zakaz');
-			});
-			return false;
-		});
-		// /form
+	
 	// mask for input
 	var customOptions = {
 		onKeyPress: function (val, e, field, options) {
@@ -307,63 +333,49 @@ $('.s-gal__slider--js')
 				// 	mobile: false
 				// });
 				// wow.init();
-				
-});
+				var file = $(".add-file input[type=file]");
+				file.change(function () {
+					var filename = $(this).val().replace(/.*\\/, "");
+					var name = $(".add-file__filename  ");
+					name.text(filename);
+			
+				});
 
-
-document.addEventListener("DOMContentLoaded", function() {
-  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-  let active = false;
-
-  const lazyLoad = function() {
-    if (active === false) {
-      active = true;
-
-      setTimeout(function() {
-        lazyImages.forEach(function(lazyImage) {
-          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-            lazyImage.src =   lazyImage.dataset.srcset;
-            lazyImage.classList.remove("lazy");
-
-            lazyImages = lazyImages.filter(function(image) {
-              return image !== lazyImage;
-            });
-
-            if (lazyImages.length === 0) {
-              document.removeEventListener("scroll", lazyLoad);
-              window.removeEventListener("resize", lazyLoad);
-              window.removeEventListener("orientationchange", lazyLoad);
-            }
-          }
-        });
-
-        active = false;
-      }, 200);
-    }
-  };
-
-  document.addEventListener("scroll", lazyLoad);
-  window.addEventListener("resize", lazyLoad);
-  window.addEventListener("orientationchange", lazyLoad);
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyBackgrounds = [].slice.call(document.querySelectorAll(".lazy-background"));
-
-  if ("IntersectionObserver" in window) {
-    let lazyBackgroundObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          lazyBackgroundObserver.unobserve(entry.target);
-        }
-      });
-    });
-
-    lazyBackgrounds.forEach(function(lazyBackground) {
-      lazyBackgroundObserver.observe(lazyBackground);
-    });
-  }
+					// form
+		$("form").submit(function () { //Change
+			var th = $(this);
+			$.ajax({
+				type: "POST",
+				url: 'action.php', //Change
+				// data: th.serialize(),
+				data: new FormData($form[0]),
+				processData: false,
+				contentType: false
+			}).success(function () {
+				// $.magnificPopup.close();
+				$.magnificPopup.open({
+					items: {
+						src: '#thanks', 
+						type: 'inline', 
+						fixedContentPos: true,
+						fixedBgPos: true, 
+						overflowY: 'auto', 
+						closeBtnInside: true,
+						preloader: false, 
+						midClick: true,
+						removalDelay: 300,
+						mainClass: 'my-mfp-zoom-in'
+					}
+				})
+				// window.location.replace("/thanks.html");
+				setTimeout(function () {
+					// Done Functions
+					th.trigger("reset");
+					// $.magnificPopup.close();
+				}, 4000);
+				ym(51692438, 'reachGoal', 'zakaz');
+			});
+			return false;
+		});
+		// /form
 });
