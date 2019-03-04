@@ -513,20 +513,6 @@ jQuery(document).ready(function ($) {
 	// });
 
 
-	var $li = $('.nav__item--has-children').hover(
-		function () {
-			var self = this;
-			hovertimer = setTimeout(function () {
-				$(self).addClass('hover-block');
-				// $("html, .top-nav.fixed").addClass("fixed-brand");
-			}, 500);
-		},
-		function () {
-			clearTimeout(hovertimer);
-			$li.removeClass('hover-block');
-			// $("html, .top-nav.fixed").removeClass("fixed-brand");
-		}
-	);
 
 
 	// для плаваюещего label
@@ -844,7 +830,25 @@ $(".js-range-slider").ionRangeSlider({
 	           $('html, body').animate({ scrollTop: destination }, 1100);
 
 	       return false;
-	   });
+		 });
+		 
+
+
+		 var $li = $('.nav__item--has-children').hover(
+			function () {
+				var self = this;
+				hovertimer = setTimeout(function () {
+					$(self).addClass('hover-block');
+					// $("html, .top-nav.fixed").addClass("fixed-brand");
+				}, 500);
+			},
+			// function () {
+			// 	clearTimeout(hovertimer);
+			// 	$li.removeClass('hover-block');
+			// 	// $("html, .top-nav.fixed").removeClass("fixed-brand");
+			// }
+		);
+	
 });
 
 
