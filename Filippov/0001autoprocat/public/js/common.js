@@ -234,9 +234,11 @@ $('.popover-js').popover({
 var swiperCard = new Swiper('.carusel-slider', {
       // loop: true ,
 			speed: 450,
-      // init: false,
-      // slidesPerView: 3,
-      // slidesPerColumn: 3,
+ 
+      watchSlidesVisibility: true,
+      lazy: {
+        loadPrevNext: true,
+      },
       slidesPerView: 'auto',
       navigation: {
         nextEl: '.swiper-button-next',
@@ -586,11 +588,17 @@ $(".data-modal").click(function(){
       loopedSlides: 5, //looped slides should be the same
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
+      lazy: {
+    loadPrevNext: true,
+  },
     });
     var galleryTop = new Swiper('.gallery-top', {
       spaceBetween: 10,
       loop:true,
       loopedSlides: 5, //looped slides should be the same
+      lazy: {
+    loadPrevNext: true,
+  },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

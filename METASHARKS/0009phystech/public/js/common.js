@@ -840,13 +840,13 @@ $(".js-range-slider").ionRangeSlider({
 				hovertimer = setTimeout(function () {
 					$(self).addClass('hover-block');
 					// $("html, .top-nav.fixed").addClass("fixed-brand");
-				}, 500);
+				}, 100);
 			},
-			// function () {
-			// 	clearTimeout(hovertimer);
-			// 	$li.removeClass('hover-block');
-			// 	// $("html, .top-nav.fixed").removeClass("fixed-brand");
-			// }
+			function () {
+				clearTimeout(hovertimer);
+				$li.removeClass('hover-block');
+				// $("html, .top-nav.fixed").removeClass("fixed-brand");
+			}
 		);
 	
 });
