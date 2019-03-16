@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="libs/slick/slick.css">
     <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css">
     <link rel="stylesheet" href="libs/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css">
+    <link rel="stylesheet" href="css/page.css">
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
@@ -3006,13 +3007,30 @@
                       <label class="d-block" for="name">ФИО</label>
                     </div>
                     <!-- +e.input-wrap-->
-                    <div class="form-wrap__title form-wrap__title--sub strong">Доставка
-                    </div>
-                    <div class="form-wrap__input-wrap form-wrap__input-wrap--addr form-wrap__input-wrap--invalid form-group"><input class="form-wrap__input form-wrap__input--addr form-control" type="text" placeholder="Населенный пункт"/>
-                      <button class="form-wrap__btn-addr btn btn-sm btn-outline-primary" type="button">Изменить
-                      </button>
-                      <div class="form-wrap__alert form-wrap__alert--invalid">Возможно неправильное название
+                    <div class="form-wrap__input-wrap form-wrap__input-wrap--addr form-group">
+                      <input id="js_frm_sale_order_ajax_old_city_code_val" type="hidden" value="00607"/>
+                      <div class="bx-sls" id="sls-95076">
+                        <div class="dropdown-block bx-ui-sls-input-block"><span class="dropdown-icon"></span>
+                          <input class="dropdown-field" type="text" autocomplete="off" name="ORDER_PROP_20" value="00607" placeholder="Введите название ..." style="display: none;"/>
+                          <div class="bx-ui-sls-container" style="margin: 0px; padding: 0px; border: none; position: relative;">
+                            <input class="bx-ui-sls-route" type="text" disabled="disabled" autocomplete="off" style="padding: 0px; margin: 0px;"/>
+                            <input class="bx-ui-sls-fake" type="text" autocomplete="off" value="00607" placeholder="Введите название ..." title="Гомель, Беларусь Республика, Россия"/>
+                          </div>
+                          <div class="dropdown-fade2white"></div>
+                          <div class="bx-ui-sls-loader"></div>
+                          <div class="bx-ui-sls-clear" title="Отменить выбор" style="display: block;"></div>
+                          <div class="bx-ui-sls-pane" style="overflow: hidden auto; display: none;">
+                            <div class="bx-ui-sls-variants"></div>
+                          </div>
+                        </div>
+                        <div class="bx-ui-sls-error-message"></div>
                       </div>
+                      <script>
+                        if (!window.BX && top.BX)
+                        window.BX = top.BX;
+                        new BX.Sale.component.location.selector.search({'scope':'sls-95076','source':'/bitrix/components/bitrix/sale.location.selector.search/get.php','query':{'FILTER':{'EXCLUDE_ID':0,'SITE_ID':''},'BEHAVIOUR':{'SEARCH_BY_PRIMARY':'0','LANGUAGE_ID':'ru'}},'selectedItem':129,'knownItems':{'129':{'CODE':'00607','TYPE_ID':'3','PATH':[10,1],'VALUE':129,'DISPLAY':'Гомель'},'1':{'CODE':'0000028023','TYPE_ID':'1','PATH':[1],'VALUE':1,'DISPLAY':'Россия'},'10':{'CODE':'000000090','TYPE_ID':'2','PATH':[],'VALUE':10,'DISPLAY':'Беларусь Республика'}},'provideLinkBy':'code','messages':{'nothingFound':'К сожалению, ничего не найдено','error':'К сожалению, произошла внутренняя ошибка'},'callback':'locationUpdated','useSpawn':false,'usePopup':false,'initializeByGlobalEvent':'','globalEventScope':'','pathNames':{'1':'Россия','10':'Беларусь Республика','129':'Гомель'},'types':{'1':{'CODE':'COUNTRY'},'4':{'CODE':'COUNTRY_DISTRICT'},'2':{'CODE':'REGION'},'5':{'CODE':'SUBREGION'},'3':{'CODE':'CITY'},'6':{'CODE':'VILLAGE'},'7':{'CODE':'STREET'}}});
+                      </script>
+                      <div class="form-wrap__alert form-wrap__alert--invalid" id="js_sale_order_ajax_cc_dbadres_select_error" style="display: none;">Выберете населенный пункт из списка</div>
                     </div>
                     <div class="delivary-method">
                       <div class="row">

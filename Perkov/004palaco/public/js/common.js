@@ -118,6 +118,11 @@ jQuery(document).ready(function ($) {
 		});
 	};
   tabscostume('tabs');
- 
+  $('.main-blocks-slider--js').owlCarousel({
+        
+        margin:20,
+        nav:true, 
+        autoWidth:true,
+    })
 });
  
