@@ -421,17 +421,7 @@ jQuery(document).ready(function ($) {
 
 
 
-	// mask for input
-	var customOptions = {
-		onKeyPress: function (val, e, field, options) {
-
-			if (val.replace(/\D/g, '').length === 2) {
-				val = val.replace('8', '');
-				field.val(val);
-			}
-			field.mask("+7(000)000-00-00", options);
-		}
-	};
+ 
 	// mask for input
 	$('input[type="tel"]').attr("pattern", "[+]7[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+7(999)999-99-99");
 
