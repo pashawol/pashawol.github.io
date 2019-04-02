@@ -479,4 +479,13 @@ var galleryThumb = new Swiper('.swiper-container-text', {
   
 	// }());
  
- 
+	jQuery(document).ready(function ($) {
+		$(window).on("load",function(){
+
+			$('.scroll-content__text-block').mCustomScrollbar({
+				theme: 'rounded-dark',
+				mouseWheel: false,
+				alwaysShowScrollbar: 2
+			});
+		})
+		})
