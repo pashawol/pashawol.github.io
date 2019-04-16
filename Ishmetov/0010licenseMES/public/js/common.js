@@ -277,4 +277,7 @@ jQuery(document).ready(function ($) {
 		$(".header-block__bot").click(function(){
 			$('html, body').animate({ scrollTop: ($('.header-block').height() - $('.top-nav').height() +30) }, 1100);
 		})
+
+		var date = new Date();
+		$('.year-js ').text(date.getFullYear());
 });
